@@ -1,0 +1,896 @@
+{
+  "db_id": "kb_23b82b00ade4844ff839da51cfde3299",
+  "nodes": {
+    "paper:1806.05491v1": {
+      "id": "paper:1806.05491v1",
+      "type": "Paper",
+      "label": "Dynamical masses of M-dwarf binaries in young moving groups: I - The case of TWA 22 and GJ 2060",
+      "norm_label": "dynamical masses of m-dwarf binaries in young moving groups i - the case of twa 22 and gj 2060"
+    },
+    "task:尽管演化模型在年轻恒星和低质量天体（ 200 myr 1 m☉）上的预测不够可靠，但twa 22和gj 2060两地理移动小组的m矮星双星系统能够提供直接测量其动力学质量的机会，用于校准这些演化轨": {
+      "id": "task:尽管演化模型在年轻恒星和低质量天体（ 200 myr 1 m☉）上的预测不够可靠，但twa 22和gj 2060两地理移动小组的m矮星双星系统能够提供直接测量其动力学质量的机会，用于校准这些演化轨",
+      "type": "Task",
+      "label": "尽管演化模型在年轻恒星和低质量天体（<200 Myr, <1 M☉）上的预测不够可靠，但TWA 22和GJ 2060两地理移动小组的M矮星双星系统能够提供直接测量其动力学质量的机会，用于校准这些演化轨",
+      "norm_label": "尽管演化模型在年轻恒星和低质量天体（ 200 myr 1 m☉）上的预测不够可靠，但twa 22和gj 2060两地理移动小组的m矮星双星系统能够提供直接测量其动力学质量的机会，用于校准这些演化轨"
+    },
+    "finding:测量了twa 22和gj 2060两地理移动小组的m矮星双星系统的动力学质量，用于校准年轻恒星和低质量天体的演化模型。": {
+      "id": "finding:测量了twa 22和gj 2060两地理移动小组的m矮星双星系统的动力学质量，用于校准年轻恒星和低质量天体的演化模型。",
+      "type": "Finding",
+      "label": "测量了TWA 22和GJ 2060两地理移动小组的M矮星双星系统的动力学质量，用于校准年轻恒星和低质量天体的演化模型。",
+      "norm_label": "测量了twa 22和gj 2060两地理移动小组的m矮星双星系统的动力学质量，用于校准年轻恒星和低质量天体的演化模型。"
+    },
+    "finding:发现了twa 22的动力学质量符合beta pic移动组的年龄预测，而gj 2060的动力学质量与模型预测不符。": {
+      "id": "finding:发现了twa 22的动力学质量符合beta pic移动组的年龄预测，而gj 2060的动力学质量与模型预测不符。",
+      "type": "Finding",
+      "label": "发现了TWA 22的动力学质量符合Beta Pic移动组的年龄预测，而GJ 2060的动力学质量与模型预测不符。",
+      "norm_label": "发现了twa 22的动力学质量符合beta pic移动组的年龄预测，而gj 2060的动力学质量与模型预测不符。"
+    },
+    "finding:使用多种方法估算了gj 2060 a和b星的光谱类型和有效温度，提供了详细的数据支持。": {
+      "id": "finding:使用多种方法估算了gj 2060 a和b星的光谱类型和有效温度，提供了详细的数据支持。",
+      "type": "Finding",
+      "label": "使用多种方法估算了GJ 2060 A和B星的光谱类型和有效温度，提供了详细的数据支持。",
+      "norm_label": "使用多种方法估算了gj 2060 a和b星的光谱类型和有效温度，提供了详细的数据支持。"
+    },
+    "paper:2110.00366v1": {
+      "id": "paper:2110.00366v1",
+      "type": "Paper",
+      "label": "Galactic model with a phase transition from dark matter to dark energy",
+      "norm_label": "galactic model with a phase transition from dark matter to dark energy"
+    },
+    "task:尽管存在传统的暗物质均匀模型，但为了探索暗物质向暗能量相变的不同机制，在银河系中心区域径向发射暗物质粒子的背景下，提出了非均匀模型。": {
+      "id": "task:尽管存在传统的暗物质均匀模型，但为了探索暗物质向暗能量相变的不同机制，在银河系中心区域径向发射暗物质粒子的背景下，提出了非均匀模型。",
+      "type": "Task",
+      "label": "尽管存在传统的暗物质均匀模型，但为了探索暗物质向暗能量相变的不同机制，在银河系中心区域径向发射暗物质粒子的背景下，提出了非均匀模型。",
+      "norm_label": "尽管存在传统的暗物质均匀模型，但为了探索暗物质向暗能量相变的不同机制，在银河系中心区域径向发射暗物质粒子的背景下，提出了非均匀模型。"
+    },
+    "finding:提出了一个非均匀暗物质模型，与传统的均匀模型有所不同。": {
+      "id": "finding:提出了一个非均匀暗物质模型，与传统的均匀模型有所不同。",
+      "type": "Finding",
+      "label": "提出了一个非均匀暗物质模型，与传统的均匀模型有所不同。",
+      "norm_label": "提出了一个非均匀暗物质模型，与传统的均匀模型有所不同。"
+    },
+    "finding:探索了暗物质在银河系内部的径向发射与均匀背景热力学平衡的条件。": {
+      "id": "finding:探索了暗物质在银河系内部的径向发射与均匀背景热力学平衡的条件。",
+      "type": "Finding",
+      "label": "探索了暗物质在银河系内部的径向发射与均匀背景热力学平衡的条件。",
+      "norm_label": "探索了暗物质在银河系内部的径向发射与均匀背景热力学平衡的条件。"
+    },
+    "finding:表明了暗物质到暗能量相变的可能性": {
+      "id": "finding:表明了暗物质到暗能量相变的可能性",
+      "type": "Finding",
+      "label": "表明了暗物质到暗能量相变的可能性",
+      "norm_label": "表明了暗物质到暗能量相变的可能性"
+    },
+    "paper:1706.08338v1": {
+      "id": "paper:1706.08338v1",
+      "type": "Paper",
+      "label": "The (11-22) and (-12-16) twinning modes modelled by obliquity correction of a (58deg, a+2b) prototype stretch twin",
+      "norm_label": "the 11-22 and -12-16 twinning modes modelled by obliquity correction of a 58deg a 2b prototype stretch twin"
+    },
+    "method:null": {
+      "id": "method:null",
+      "type": "Method",
+      "label": "null",
+      "norm_label": "null"
+    },
+    "task:尽管ostapovets等（phil. mag 2017）提出了（11-22）和（11-26）孪生模式并将其解释为由两个孪生剪切同时作用形成的（101-2）- 101-2 双孪生，但提出了另一种基于": {
+      "id": "task:尽管ostapovets等（phil. mag 2017）提出了（11-22）和（11-26）孪生模式并将其解释为由两个孪生剪切同时作用形成的（101-2）- 101-2 双孪生，但提出了另一种基于",
+      "type": "Task",
+      "label": "尽管Ostapovets等（Phil. Mag, 2017）提出了（11-22）和（11-26）孪生模式并将其解释为由两个孪生剪切同时作用形成的（101-2）-{101-2}双孪生，但提出了另一种基于",
+      "norm_label": "尽管ostapovets等（phil. mag 2017）提出了（11-22）和（11-26）孪生模式并将其解释为由两个孪生剪切同时作用形成的（101-2）- 101-2 双孪生，但提出了另一种基于"
+    },
+    "finding:提出了另一种解释模式（11-22）和（11-26）孪生模式的方法，基于同一拉伸孪生原型。": {
+      "id": "finding:提出了另一种解释模式（11-22）和（11-26）孪生模式的方法，基于同一拉伸孪生原型。",
+      "type": "Finding",
+      "label": "提出了另一种解释模式（11-22）和（11-26）孪生模式的方法，基于同一拉伸孪生原型。",
+      "norm_label": "提出了另一种解释模式（11-22）和（11-26）孪生模式的方法，基于同一拉伸孪生原型。"
+    },
+    "finding:与经典的孪生理论和westlake-rosenbaum模型中的（11-22）孪生模式进行了比较。": {
+      "id": "finding:与经典的孪生理论和westlake-rosenbaum模型中的（11-22）孪生模式进行了比较。",
+      "type": "Finding",
+      "label": "与经典的孪生理论和Westlake-Rosenbaum模型中的（11-22）孪生模式进行了比较。",
+      "norm_label": "与经典的孪生理论和westlake-rosenbaum模型中的（11-22）孪生模式进行了比较。"
+    },
+    "finding:分析了基于同一原型孪生的一个非常规孪生模式，但该结果将在另外一篇文章中详细讨论。": {
+      "id": "finding:分析了基于同一原型孪生的一个非常规孪生模式，但该结果将在另外一篇文章中详细讨论。",
+      "type": "Finding",
+      "label": "分析了基于同一原型孪生的一个非常规孪生模式，但该结果将在另外一篇文章中详细讨论。",
+      "norm_label": "分析了基于同一原型孪生的一个非常规孪生模式，但该结果将在另外一篇文章中详细讨论。"
+    },
+    "paper:2001.06087v3": {
+      "id": "paper:2001.06087v3",
+      "type": "Paper",
+      "label": "First direct measurement of $^{22}$Mg($α$,p)$^{25}$Al and implications for X-ray burst model-observation comparisons",
+      "norm_label": "first direct measurement of 22 mg α p 25 al and implications for x-ray burst model-observation comparisons"
+    },
+    "method:第一直接测量 22 mg alpha ，p 25 al": {
+      "id": "method:第一直接测量 22 mg alpha ，p 25 al",
+      "type": "Method",
+      "label": "第一直接测量$^{22}$Mg($\\alpha$，p)$^{25}$Al",
+      "norm_label": "第一直接测量 22 mg alpha ，p 25 al"
+    },
+    "task:尽管x射线暴（xrb）光曲线受核输入模型的影响，需要改进核反应速率以提高模型与观测的对比度， 22 mg alpha ，p 25 al反应是直接影响xrb光曲线的关键反应。": {
+      "id": "task:尽管x射线暴（xrb）光曲线受核输入模型的影响，需要改进核反应速率以提高模型与观测的对比度， 22 mg alpha ，p 25 al反应是直接影响xrb光曲线的关键反应。",
+      "type": "Task",
+      "label": "尽管X射线暴（XRB）光曲线受核输入模型的影响，需要改进核反应速率以提高模型与观测的对比度，$^{22}$Mg($\\alpha$，p)$^{25}$Al反应是直接影响XRB光曲线的关键反应。",
+      "norm_label": "尽管x射线暴（xrb）光曲线受核输入模型的影响，需要改进核反应速率以提高模型与观测的对比度， 22 mg alpha ，p 25 al反应是直接影响xrb光曲线的关键反应。"
+    },
+    "finding:提供了第一手的 22 mg alpha ，p 25 al直接测量数据，": {
+      "id": "finding:提供了第一手的 22 mg alpha ，p 25 al直接测量数据，",
+      "type": "Finding",
+      "label": "提供了第一手的$^{22}$Mg($\\alpha$，p)$^{25}$Al直接测量数据，",
+      "norm_label": "提供了第一手的 22 mg alpha ，p 25 al直接测量数据，"
+    },
+    "finding:改善了xrb模型计算中的重要不确定性，": {
+      "id": "finding:改善了xrb模型计算中的重要不确定性，",
+      "type": "Finding",
+      "label": "改善了XRB模型计算中的重要不确定性，",
+      "norm_label": "改善了xrb模型计算中的重要不确定性，"
+    },
+    "finding:有助于更准确地评估中子星的紧凑性": {
+      "id": "finding:有助于更准确地评估中子星的紧凑性",
+      "type": "Finding",
+      "label": "有助于更准确地评估中子星的紧凑性",
+      "norm_label": "有助于更准确地评估中子星的紧凑性"
+    },
+    "task:twa 22": {
+      "id": "task:twa 22",
+      "type": "Task",
+      "label": "TWA 22",
+      "norm_label": "twa 22"
+    },
+    "task:gj 2060": {
+      "id": "task:gj 2060",
+      "type": "Task",
+      "label": "GJ 2060",
+      "norm_label": "gj 2060"
+    },
+    "concept:beta pic moving group": {
+      "id": "concept:beta pic moving group",
+      "type": "Concept",
+      "label": "Beta Pic moving group",
+      "norm_label": "beta pic moving group"
+    },
+    "concept:ab doradus moving group": {
+      "id": "concept:ab doradus moving group",
+      "type": "Concept",
+      "label": "AB Doradus moving group",
+      "norm_label": "ab doradus moving group"
+    },
+    "method:dynamical mass measurement": {
+      "id": "method:dynamical mass measurement",
+      "type": "Method",
+      "label": "Dynamical mass measurement",
+      "norm_label": "dynamical mass measurement"
+    },
+    "model:evolutionary models": {
+      "id": "model:evolutionary models",
+      "type": "Model",
+      "label": "Evolutionary models",
+      "norm_label": "evolutionary models"
+    },
+    "model:bcah15": {
+      "id": "model:bcah15",
+      "type": "Model",
+      "label": "BCAH15",
+      "norm_label": "bcah15"
+    },
+    "model:parsec": {
+      "id": "model:parsec",
+      "type": "Model",
+      "label": "PARSEC",
+      "norm_label": "parsec"
+    },
+    "method:galactic model with a phase transition": {
+      "id": "method:galactic model with a phase transition",
+      "type": "Method",
+      "label": "Galactic model with a phase transition",
+      "norm_label": "galactic model with a phase transition"
+    },
+    "concept:homogeneous model": {
+      "id": "concept:homogeneous model",
+      "type": "Concept",
+      "label": "Homogeneous model",
+      "norm_label": "homogeneous model"
+    },
+    "concept:inhomogeneous model": {
+      "id": "concept:inhomogeneous model",
+      "type": "Concept",
+      "label": "Inhomogeneous model",
+      "norm_label": "inhomogeneous model"
+    },
+    "concept:λcdm": {
+      "id": "concept:λcdm",
+      "type": "Concept",
+      "label": "ΛCDM",
+      "norm_label": "λcdm"
+    },
+    "concept:dark matter stars": {
+      "id": "concept:dark matter stars",
+      "type": "Concept",
+      "label": "Dark matter stars",
+      "norm_label": "dark matter stars"
+    },
+    "concept:radial emission": {
+      "id": "concept:radial emission",
+      "type": "Concept",
+      "label": "Radial emission",
+      "norm_label": "radial emission"
+    },
+    "concept:hydrostatic equilibrium": {
+      "id": "concept:hydrostatic equilibrium",
+      "type": "Concept",
+      "label": "Hydrostatic equilibrium",
+      "norm_label": "hydrostatic equilibrium"
+    },
+    "concept:dark energy state equation": {
+      "id": "concept:dark energy state equation",
+      "type": "Concept",
+      "label": "Dark energy state equation",
+      "norm_label": "dark energy state equation"
+    },
+    "concept:bose-einstein condensation": {
+      "id": "concept:bose-einstein condensation",
+      "type": "Concept",
+      "label": "Bose-Einstein condensation",
+      "norm_label": "bose-einstein condensation"
+    },
+    "paper:ostapovets et al.": {
+      "id": "paper:ostapovets et al.",
+      "type": "Paper",
+      "label": "Ostapovets et al.",
+      "norm_label": "ostapovets et al."
+    },
+    "task:the 11-22 and -12-16 twinning modes model": {
+      "id": "task:the 11-22 and -12-16 twinning modes model",
+      "type": "Task",
+      "label": "The (11-22) and (-12-16) twinning modes model",
+      "norm_label": "the 11-22 and -12-16 twinning modes model"
+    },
+    "concept:obliquity correction": {
+      "id": "concept:obliquity correction",
+      "type": "Concept",
+      "label": "Obliquity correction",
+      "norm_label": "obliquity correction"
+    },
+    "concept:stretch twin": {
+      "id": "concept:stretch twin",
+      "type": "Concept",
+      "label": "Stretch twin",
+      "norm_label": "stretch twin"
+    },
+    "concept:classical theory of twinning": {
+      "id": "concept:classical theory of twinning",
+      "type": "Concept",
+      "label": "Classical theory of twinning",
+      "norm_label": "classical theory of twinning"
+    },
+    "model:westlake-rosenbaum model": {
+      "id": "model:westlake-rosenbaum model",
+      "type": "Model",
+      "label": "Westlake-Rosenbaum model",
+      "norm_label": "westlake-rosenbaum model"
+    },
+    "finding:unconventional twinning mode in magnesium single crystal": {
+      "id": "finding:unconventional twinning mode in magnesium single crystal",
+      "type": "Finding",
+      "label": "Unconventional twinning mode in magnesium single crystal",
+      "norm_label": "unconventional twinning mode in magnesium single crystal"
+    },
+    "task:22 mg alpha ，p 25 al": {
+      "id": "task:22 mg alpha ，p 25 al",
+      "type": "Task",
+      "label": "$^{22}$Mg($\\alpha$，p)$^{25}$Al",
+      "norm_label": "22 mg alpha ，p 25 al"
+    },
+    "model:active target time projection chamber": {
+      "id": "model:active target time projection chamber",
+      "type": "Model",
+      "label": "Active Target Time Projection Chamber",
+      "norm_label": "active target time projection chamber"
+    },
+    "task:xrb模型计算": {
+      "id": "task:xrb模型计算",
+      "type": "Task",
+      "label": "XRB模型计算",
+      "norm_label": "xrb模型计算"
+    },
+    "concept:中子星紧凑性": {
+      "id": "concept:中子星紧凑性",
+      "type": "Concept",
+      "label": "中子星紧凑性",
+      "norm_label": "中子星紧凑性"
+    },
+    "dataset:gs 1826-24": {
+      "id": "dataset:gs 1826-24",
+      "type": "Dataset",
+      "label": "GS 1826-24",
+      "norm_label": "gs 1826-24"
+    }
+  },
+  "edges": [
+    {
+      "source": "paper:1806.05491v1",
+      "target": "task:尽管演化模型在年轻恒星和低质量天体（ 200 myr 1 m☉）上的预测不够可靠，但twa 22和gj 2060两地理移动小组的m矮星双星系统能够提供直接测量其动力学质量的机会，用于校准这些演化轨",
+      "type": "applied_to",
+      "weight": 0.8
+    },
+    {
+      "source": "paper:1806.05491v1",
+      "target": "finding:测量了twa 22和gj 2060两地理移动小组的m矮星双星系统的动力学质量，用于校准年轻恒星和低质量天体的演化模型。",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:1806.05491v1",
+      "target": "finding:发现了twa 22的动力学质量符合beta pic移动组的年龄预测，而gj 2060的动力学质量与模型预测不符。",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:1806.05491v1",
+      "target": "finding:使用多种方法估算了gj 2060 a和b星的光谱类型和有效温度，提供了详细的数据支持。",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:2110.00366v1",
+      "target": "task:尽管存在传统的暗物质均匀模型，但为了探索暗物质向暗能量相变的不同机制，在银河系中心区域径向发射暗物质粒子的背景下，提出了非均匀模型。",
+      "type": "applied_to",
+      "weight": 0.8
+    },
+    {
+      "source": "paper:2110.00366v1",
+      "target": "finding:提出了一个非均匀暗物质模型，与传统的均匀模型有所不同。",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:2110.00366v1",
+      "target": "finding:探索了暗物质在银河系内部的径向发射与均匀背景热力学平衡的条件。",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:2110.00366v1",
+      "target": "finding:表明了暗物质到暗能量相变的可能性",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:1706.08338v1",
+      "target": "method:null",
+      "type": "proposes",
+      "weight": 1.0
+    },
+    {
+      "source": "paper:1706.08338v1",
+      "target": "task:尽管ostapovets等（phil. mag 2017）提出了（11-22）和（11-26）孪生模式并将其解释为由两个孪生剪切同时作用形成的（101-2）- 101-2 双孪生，但提出了另一种基于",
+      "type": "applied_to",
+      "weight": 0.8
+    },
+    {
+      "source": "paper:1706.08338v1",
+      "target": "finding:提出了另一种解释模式（11-22）和（11-26）孪生模式的方法，基于同一拉伸孪生原型。",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:1706.08338v1",
+      "target": "finding:与经典的孪生理论和westlake-rosenbaum模型中的（11-22）孪生模式进行了比较。",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:1706.08338v1",
+      "target": "finding:分析了基于同一原型孪生的一个非常规孪生模式，但该结果将在另外一篇文章中详细讨论。",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:2001.06087v3",
+      "target": "method:第一直接测量 22 mg alpha ，p 25 al",
+      "type": "proposes",
+      "weight": 1.0
+    },
+    {
+      "source": "paper:2001.06087v3",
+      "target": "task:尽管x射线暴（xrb）光曲线受核输入模型的影响，需要改进核反应速率以提高模型与观测的对比度， 22 mg alpha ，p 25 al反应是直接影响xrb光曲线的关键反应。",
+      "type": "applied_to",
+      "weight": 0.8
+    },
+    {
+      "source": "paper:2001.06087v3",
+      "target": "finding:提供了第一手的 22 mg alpha ，p 25 al直接测量数据，",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:2001.06087v3",
+      "target": "finding:改善了xrb模型计算中的重要不确定性，",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:2001.06087v3",
+      "target": "finding:有助于更准确地评估中子星的紧凑性",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "method:dynamical mass measurement",
+      "target": "task:twa 22",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "method:dynamical mass measurement",
+      "target": "task:gj 2060",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "model:evolutionary models",
+      "target": "model:bcah15",
+      "type": "improves",
+      "weight": 0.95
+    },
+    {
+      "source": "model:evolutionary models",
+      "target": "model:parsec",
+      "type": "improves",
+      "weight": 0.95
+    },
+    {
+      "source": "method:dynamical mass measurement",
+      "target": "concept:beta pic moving group",
+      "type": "evaluates_on",
+      "weight": 0.9
+    },
+    {
+      "source": "method:dynamical mass measurement",
+      "target": "concept:ab doradus moving group",
+      "type": "evaluates_on",
+      "weight": 0.9
+    },
+    {
+      "source": "model:evolutionary models",
+      "target": "task:twa 22",
+      "type": "evaluates_on",
+      "weight": 0.9
+    },
+    {
+      "source": "model:evolutionary models",
+      "target": "task:gj 2060",
+      "type": "evaluates_on",
+      "weight": 0.9
+    },
+    {
+      "source": "method:dynamical mass measurement",
+      "target": "task:twa 22",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "method:dynamical mass measurement",
+      "target": "task:gj 2060",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "method:dynamical mass measurement",
+      "target": "model:evolutionary models",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "method:dynamical mass measurement",
+      "target": "model:bcah15",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "method:dynamical mass measurement",
+      "target": "model:parsec",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "method:galactic model with a phase transition",
+      "target": "concept:homogeneous model",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "method:galactic model with a phase transition",
+      "target": "concept:inhomogeneous model",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "method:galactic model with a phase transition",
+      "target": "concept:λcdm",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "method:galactic model with a phase transition",
+      "target": "concept:radial emission",
+      "type": "applied_to",
+      "weight": 0.8
+    },
+    {
+      "source": "method:galactic model with a phase transition",
+      "target": "concept:hydrostatic equilibrium",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "method:galactic model with a phase transition",
+      "target": "concept:dark energy state equation",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "method:galactic model with a phase transition",
+      "target": "concept:bose-einstein condensation",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:ostapovets et al.",
+      "target": "task:the 11-22 and -12-16 twinning modes model",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "task:the 11-22 and -12-16 twinning modes model",
+      "target": "concept:obliquity correction",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "task:the 11-22 and -12-16 twinning modes model",
+      "target": "concept:stretch twin",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "task:the 11-22 and -12-16 twinning modes model",
+      "target": "model:westlake-rosenbaum model",
+      "type": "compared_with",
+      "weight": 0.75
+    },
+    {
+      "source": "task:the 11-22 and -12-16 twinning modes model",
+      "target": "concept:classical theory of twinning",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "task:the 11-22 and -12-16 twinning modes model",
+      "target": "finding:unconventional twinning mode in magnesium single crystal",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "method:第一直接测量 22 mg alpha ，p 25 al",
+      "target": "task:22 mg alpha ，p 25 al",
+      "type": "evaluates_on",
+      "weight": 0.9
+    },
+    {
+      "source": "method:第一直接测量 22 mg alpha ，p 25 al",
+      "target": "model:active target time projection chamber",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "method:第一直接测量 22 mg alpha ，p 25 al",
+      "target": "task:xrb模型计算",
+      "type": "improves",
+      "weight": 0.95
+    },
+    {
+      "source": "method:第一直接测量 22 mg alpha ，p 25 al",
+      "target": "concept:中子星紧凑性",
+      "type": "achieves",
+      "weight": 0.85
+    },
+    {
+      "source": "method:第一直接测量 22 mg alpha ，p 25 al",
+      "target": "dataset:gs 1826-24",
+      "type": "applied_to",
+      "weight": 0.8
+    }
+  ],
+  "paper_entities": {
+    "1806.05491v1": [
+      "paper:1806.05491v1",
+      "task:尽管演化模型在年轻恒星和低质量天体（ 200 myr 1 m☉）上的预测不够可靠，但twa 22和gj 2060两地理移动小组的m矮星双星系统能够提供直接测量其动力学质量的机会，用于校准这些演化轨",
+      "finding:测量了twa 22和gj 2060两地理移动小组的m矮星双星系统的动力学质量，用于校准年轻恒星和低质量天体的演化模型。",
+      "finding:发现了twa 22的动力学质量符合beta pic移动组的年龄预测，而gj 2060的动力学质量与模型预测不符。",
+      "finding:使用多种方法估算了gj 2060 a和b星的光谱类型和有效温度，提供了详细的数据支持。",
+      "task:twa 22",
+      "task:gj 2060",
+      "concept:beta pic moving group",
+      "concept:ab doradus moving group",
+      "method:dynamical mass measurement",
+      "model:evolutionary models",
+      "model:bcah15",
+      "model:parsec"
+    ],
+    "2110.00366v1": [
+      "paper:2110.00366v1",
+      "task:尽管存在传统的暗物质均匀模型，但为了探索暗物质向暗能量相变的不同机制，在银河系中心区域径向发射暗物质粒子的背景下，提出了非均匀模型。",
+      "finding:提出了一个非均匀暗物质模型，与传统的均匀模型有所不同。",
+      "finding:探索了暗物质在银河系内部的径向发射与均匀背景热力学平衡的条件。",
+      "finding:表明了暗物质到暗能量相变的可能性",
+      "method:galactic model with a phase transition",
+      "concept:homogeneous model",
+      "concept:inhomogeneous model",
+      "concept:λcdm",
+      "concept:dark matter stars",
+      "concept:radial emission",
+      "concept:hydrostatic equilibrium",
+      "concept:dark energy state equation",
+      "concept:bose-einstein condensation"
+    ],
+    "1706.08338v1": [
+      "paper:1706.08338v1",
+      "method:null",
+      "task:尽管ostapovets等（phil. mag 2017）提出了（11-22）和（11-26）孪生模式并将其解释为由两个孪生剪切同时作用形成的（101-2）- 101-2 双孪生，但提出了另一种基于",
+      "finding:提出了另一种解释模式（11-22）和（11-26）孪生模式的方法，基于同一拉伸孪生原型。",
+      "finding:与经典的孪生理论和westlake-rosenbaum模型中的（11-22）孪生模式进行了比较。",
+      "finding:分析了基于同一原型孪生的一个非常规孪生模式，但该结果将在另外一篇文章中详细讨论。",
+      "paper:ostapovets et al.",
+      "task:the 11-22 and -12-16 twinning modes model",
+      "concept:obliquity correction",
+      "concept:stretch twin",
+      "concept:classical theory of twinning",
+      "model:westlake-rosenbaum model",
+      "finding:unconventional twinning mode in magnesium single crystal"
+    ],
+    "2001.06087v3": [
+      "paper:2001.06087v3",
+      "method:第一直接测量 22 mg alpha ，p 25 al",
+      "task:尽管x射线暴（xrb）光曲线受核输入模型的影响，需要改进核反应速率以提高模型与观测的对比度， 22 mg alpha ，p 25 al反应是直接影响xrb光曲线的关键反应。",
+      "finding:提供了第一手的 22 mg alpha ，p 25 al直接测量数据，",
+      "finding:改善了xrb模型计算中的重要不确定性，",
+      "finding:有助于更准确地评估中子星的紧凑性",
+      "task:22 mg alpha ，p 25 al",
+      "model:active target time projection chamber",
+      "task:xrb模型计算",
+      "concept:中子星紧凑性",
+      "dataset:gs 1826-24"
+    ]
+  },
+  "entity_aliases": {
+    "dynamical masses of m-dwarf binaries in young moving groups i - the case of twa 22 and gj 2060": "paper:1806.05491v1",
+    "尽管演化模型在年轻恒星和低质量天体（ 200 myr 1 m☉）上的预测不够可靠，但twa 22和gj 2060两地理移动小组的m矮星双星系统能够提供直接测量其动力学质量的机会，用于校准这些演化轨": "task:尽管演化模型在年轻恒星和低质量天体（ 200 myr 1 m☉）上的预测不够可靠，但twa 22和gj 2060两地理移动小组的m矮星双星系统能够提供直接测量其动力学质量的机会，用于校准这些演化轨",
+    "测量了twa 22和gj 2060两地理移动小组的m矮星双星系统的动力学质量，用于校准年轻恒星和低质量天体的演化模型。": "finding:测量了twa 22和gj 2060两地理移动小组的m矮星双星系统的动力学质量，用于校准年轻恒星和低质量天体的演化模型。",
+    "发现了twa 22的动力学质量符合beta pic移动组的年龄预测，而gj 2060的动力学质量与模型预测不符。": "finding:发现了twa 22的动力学质量符合beta pic移动组的年龄预测，而gj 2060的动力学质量与模型预测不符。",
+    "使用多种方法估算了gj 2060 a和b星的光谱类型和有效温度，提供了详细的数据支持。": "finding:使用多种方法估算了gj 2060 a和b星的光谱类型和有效温度，提供了详细的数据支持。",
+    "galactic model with a phase transition from dark matter to dark energy": "paper:2110.00366v1",
+    "尽管存在传统的暗物质均匀模型，但为了探索暗物质向暗能量相变的不同机制，在银河系中心区域径向发射暗物质粒子的背景下，提出了非均匀模型。": "task:尽管存在传统的暗物质均匀模型，但为了探索暗物质向暗能量相变的不同机制，在银河系中心区域径向发射暗物质粒子的背景下，提出了非均匀模型。",
+    "提出了一个非均匀暗物质模型，与传统的均匀模型有所不同。": "finding:提出了一个非均匀暗物质模型，与传统的均匀模型有所不同。",
+    "探索了暗物质在银河系内部的径向发射与均匀背景热力学平衡的条件。": "finding:探索了暗物质在银河系内部的径向发射与均匀背景热力学平衡的条件。",
+    "表明了暗物质到暗能量相变的可能性": "finding:表明了暗物质到暗能量相变的可能性",
+    "the 11-22 and -12-16 twinning modes modelled by obliquity correction of a 58deg a 2b prototype stretch twin": "paper:1706.08338v1",
+    "null": "method:null",
+    "尽管ostapovets等（phil. mag 2017）提出了（11-22）和（11-26）孪生模式并将其解释为由两个孪生剪切同时作用形成的（101-2）- 101-2 双孪生，但提出了另一种基于": "task:尽管ostapovets等（phil. mag 2017）提出了（11-22）和（11-26）孪生模式并将其解释为由两个孪生剪切同时作用形成的（101-2）- 101-2 双孪生，但提出了另一种基于",
+    "提出了另一种解释模式（11-22）和（11-26）孪生模式的方法，基于同一拉伸孪生原型。": "finding:提出了另一种解释模式（11-22）和（11-26）孪生模式的方法，基于同一拉伸孪生原型。",
+    "与经典的孪生理论和westlake-rosenbaum模型中的（11-22）孪生模式进行了比较。": "finding:与经典的孪生理论和westlake-rosenbaum模型中的（11-22）孪生模式进行了比较。",
+    "分析了基于同一原型孪生的一个非常规孪生模式，但该结果将在另外一篇文章中详细讨论。": "finding:分析了基于同一原型孪生的一个非常规孪生模式，但该结果将在另外一篇文章中详细讨论。",
+    "first direct measurement of 22 mg α p 25 al and implications for x-ray burst model-observation comparisons": "paper:2001.06087v3",
+    "第一直接测量 22 mg alpha ，p 25 al": "method:第一直接测量 22 mg alpha ，p 25 al",
+    "尽管x射线暴（xrb）光曲线受核输入模型的影响，需要改进核反应速率以提高模型与观测的对比度， 22 mg alpha ，p 25 al反应是直接影响xrb光曲线的关键反应。": "task:尽管x射线暴（xrb）光曲线受核输入模型的影响，需要改进核反应速率以提高模型与观测的对比度， 22 mg alpha ，p 25 al反应是直接影响xrb光曲线的关键反应。",
+    "提供了第一手的 22 mg alpha ，p 25 al直接测量数据，": "finding:提供了第一手的 22 mg alpha ，p 25 al直接测量数据，",
+    "改善了xrb模型计算中的重要不确定性，": "finding:改善了xrb模型计算中的重要不确定性，",
+    "有助于更准确地评估中子星的紧凑性": "finding:有助于更准确地评估中子星的紧凑性",
+    "twa 22": "task:twa 22",
+    "gj 2060": "task:gj 2060",
+    "beta pic moving group": "concept:beta pic moving group",
+    "ab doradus moving group": "concept:ab doradus moving group",
+    "dynamical mass measurement": "method:dynamical mass measurement",
+    "evolutionary models": "model:evolutionary models",
+    "bcah15": "model:bcah15",
+    "parsec": "model:parsec",
+    "galactic model with a phase transition": "method:galactic model with a phase transition",
+    "homogeneous model": "concept:homogeneous model",
+    "inhomogeneous model": "concept:inhomogeneous model",
+    "λcdm": "concept:λcdm",
+    "dark matter stars": "concept:dark matter stars",
+    "radial emission": "concept:radial emission",
+    "hydrostatic equilibrium": "concept:hydrostatic equilibrium",
+    "dark energy state equation": "concept:dark energy state equation",
+    "bose-einstein condensation": "concept:bose-einstein condensation",
+    "ostapovets et al.": "paper:ostapovets et al.",
+    "the 11-22 and -12-16 twinning modes model": "task:the 11-22 and -12-16 twinning modes model",
+    "obliquity correction": "concept:obliquity correction",
+    "stretch twin": "concept:stretch twin",
+    "classical theory of twinning": "concept:classical theory of twinning",
+    "westlake-rosenbaum model": "model:westlake-rosenbaum model",
+    "unconventional twinning mode in magnesium single crystal": "finding:unconventional twinning mode in magnesium single crystal",
+    "22 mg alpha ，p 25 al": "task:22 mg alpha ，p 25 al",
+    "active target time projection chamber": "model:active target time projection chamber",
+    "xrb模型计算": "task:xrb模型计算",
+    "中子星紧凑性": "concept:中子星紧凑性",
+    "gs 1826-24": "dataset:gs 1826-24"
+  },
+  "communities": {
+    "0": {
+      "nodes": [
+        "paper:1806.05491v1",
+        "task:尽管演化模型在年轻恒星和低质量天体（ 200 myr 1 m☉）上的预测不够可靠，但twa 22和gj 2060两地理移动小组的m矮星双星系统能够提供直接测量其动力学质量的机会，用于校准这些演化轨",
+        "finding:测量了twa 22和gj 2060两地理移动小组的m矮星双星系统的动力学质量，用于校准年轻恒星和低质量天体的演化模型。",
+        "finding:发现了twa 22的动力学质量符合beta pic移动组的年龄预测，而gj 2060的动力学质量与模型预测不符。",
+        "finding:使用多种方法估算了gj 2060 a和b星的光谱类型和有效温度，提供了详细的数据支持。"
+      ],
+      "key_entities": [
+        "Dynamical masses of M-dwarf binaries in young moving groups: I - The case of TWA 22 and GJ 2060",
+        "尽管演化模型在年轻恒星和低质量天体（<200 Myr, <1 M☉）上的预测不够可靠，但TWA 22和GJ 2060两地理移动小组的M矮星双星系统能够提供直接测量其动力学质量的机会，用于校准这些演化轨",
+        "测量了TWA 22和GJ 2060两地理移动小组的M矮星双星系统的动力学质量，用于校准年轻恒星和低质量天体的演化模型。",
+        "发现了TWA 22的动力学质量符合Beta Pic移动组的年龄预测，而GJ 2060的动力学质量与模型预测不符。",
+        "使用多种方法估算了GJ 2060 A和B星的光谱类型和有效温度，提供了详细的数据支持。"
+      ],
+      "summary": ""
+    },
+    "1": {
+      "nodes": [
+        "paper:2110.00366v1",
+        "task:尽管存在传统的暗物质均匀模型，但为了探索暗物质向暗能量相变的不同机制，在银河系中心区域径向发射暗物质粒子的背景下，提出了非均匀模型。",
+        "finding:提出了一个非均匀暗物质模型，与传统的均匀模型有所不同。",
+        "finding:探索了暗物质在银河系内部的径向发射与均匀背景热力学平衡的条件。",
+        "finding:表明了暗物质到暗能量相变的可能性"
+      ],
+      "key_entities": [
+        "Galactic model with a phase transition from dark matter to dark energy",
+        "尽管存在传统的暗物质均匀模型，但为了探索暗物质向暗能量相变的不同机制，在银河系中心区域径向发射暗物质粒子的背景下，提出了非均匀模型。",
+        "提出了一个非均匀暗物质模型，与传统的均匀模型有所不同。",
+        "探索了暗物质在银河系内部的径向发射与均匀背景热力学平衡的条件。",
+        "表明了暗物质到暗能量相变的可能性"
+      ],
+      "summary": ""
+    },
+    "2": {
+      "nodes": [
+        "paper:1706.08338v1",
+        "method:null",
+        "task:尽管ostapovets等（phil. mag 2017）提出了（11-22）和（11-26）孪生模式并将其解释为由两个孪生剪切同时作用形成的（101-2）- 101-2 双孪生，但提出了另一种基于",
+        "finding:提出了另一种解释模式（11-22）和（11-26）孪生模式的方法，基于同一拉伸孪生原型。",
+        "finding:与经典的孪生理论和westlake-rosenbaum模型中的（11-22）孪生模式进行了比较。",
+        "finding:分析了基于同一原型孪生的一个非常规孪生模式，但该结果将在另外一篇文章中详细讨论。"
+      ],
+      "key_entities": [
+        "The (11-22) and (-12-16) twinning modes modelled by obliquity correction of a (58deg, a+2b) prototype stretch twin",
+        "null",
+        "尽管Ostapovets等（Phil. Mag, 2017）提出了（11-22）和（11-26）孪生模式并将其解释为由两个孪生剪切同时作用形成的（101-2）-{101-2}双孪生，但提出了另一种基于",
+        "提出了另一种解释模式（11-22）和（11-26）孪生模式的方法，基于同一拉伸孪生原型。",
+        "与经典的孪生理论和Westlake-Rosenbaum模型中的（11-22）孪生模式进行了比较。",
+        "分析了基于同一原型孪生的一个非常规孪生模式，但该结果将在另外一篇文章中详细讨论。"
+      ],
+      "summary": ""
+    },
+    "3": {
+      "nodes": [
+        "paper:2001.06087v3",
+        "task:尽管x射线暴（xrb）光曲线受核输入模型的影响，需要改进核反应速率以提高模型与观测的对比度， 22 mg alpha ，p 25 al反应是直接影响xrb光曲线的关键反应。",
+        "finding:提供了第一手的 22 mg alpha ，p 25 al直接测量数据，",
+        "finding:改善了xrb模型计算中的重要不确定性，",
+        "finding:有助于更准确地评估中子星的紧凑性"
+      ],
+      "key_entities": [
+        "First direct measurement of $^{22}$Mg($α$,p)$^{25}$Al and implications for X-ray burst model-observation comparisons",
+        "尽管X射线暴（XRB）光曲线受核输入模型的影响，需要改进核反应速率以提高模型与观测的对比度，$^{22}$Mg($\\alpha$，p)$^{25}$Al反应是直接影响XRB光曲线的关键反应。",
+        "提供了第一手的$^{22}$Mg($\\alpha$，p)$^{25}$Al直接测量数据，",
+        "改善了XRB模型计算中的重要不确定性，",
+        "有助于更准确地评估中子星的紧凑性"
+      ],
+      "summary": ""
+    },
+    "4": {
+      "nodes": [
+        "method:第一直接测量 22 mg alpha ，p 25 al",
+        "task:22 mg alpha ，p 25 al",
+        "model:active target time projection chamber",
+        "task:xrb模型计算",
+        "concept:中子星紧凑性",
+        "dataset:gs 1826-24"
+      ],
+      "key_entities": [
+        "第一直接测量$^{22}$Mg($\\alpha$，p)$^{25}$Al",
+        "$^{22}$Mg($\\alpha$，p)$^{25}$Al",
+        "Active Target Time Projection Chamber",
+        "XRB模型计算",
+        "中子星紧凑性",
+        "GS 1826-24"
+      ],
+      "summary": ""
+    },
+    "5": {
+      "nodes": [
+        "task:twa 22",
+        "task:gj 2060",
+        "concept:beta pic moving group",
+        "concept:ab doradus moving group",
+        "method:dynamical mass measurement",
+        "model:evolutionary models",
+        "model:bcah15",
+        "model:parsec",
+        "concept:dark matter stars"
+      ],
+      "key_entities": [
+        "TWA 22",
+        "GJ 2060",
+        "Beta Pic moving group",
+        "AB Doradus moving group",
+        "Dynamical mass measurement",
+        "Evolutionary models",
+        "BCAH15",
+        "PARSEC",
+        "Dark matter stars"
+      ],
+      "summary": ""
+    },
+    "6": {
+      "nodes": [
+        "method:galactic model with a phase transition",
+        "concept:homogeneous model",
+        "concept:inhomogeneous model",
+        "concept:λcdm",
+        "concept:radial emission",
+        "concept:hydrostatic equilibrium",
+        "concept:dark energy state equation",
+        "concept:bose-einstein condensation"
+      ],
+      "key_entities": [
+        "Galactic model with a phase transition",
+        "Homogeneous model",
+        "Inhomogeneous model",
+        "ΛCDM",
+        "Radial emission",
+        "Hydrostatic equilibrium",
+        "Dark energy state equation",
+        "Bose-Einstein condensation"
+      ],
+      "summary": ""
+    },
+    "7": {
+      "nodes": [
+        "paper:ostapovets et al.",
+        "task:the 11-22 and -12-16 twinning modes model",
+        "concept:obliquity correction",
+        "concept:stretch twin",
+        "concept:classical theory of twinning",
+        "model:westlake-rosenbaum model",
+        "finding:unconventional twinning mode in magnesium single crystal"
+      ],
+      "key_entities": [
+        "Ostapovets et al.",
+        "The (11-22) and (-12-16) twinning modes model",
+        "Obliquity correction",
+        "Stretch twin",
+        "Classical theory of twinning",
+        "Westlake-Rosenbaum model",
+        "Unconventional twinning mode in magnesium single crystal"
+      ],
+      "summary": ""
+    }
+  },
+  "stats": {
+    "node_count": 51,
+    "edge_count": 49,
+    "node_type_count": {
+      "Paper": 5,
+      "Task": 9,
+      "Finding": 13,
+      "Method": 4,
+      "Concept": 14,
+      "Model": 5,
+      "Dataset": 1
+    },
+    "paper_count": 4,
+    "community_count": 0
+  }
+}

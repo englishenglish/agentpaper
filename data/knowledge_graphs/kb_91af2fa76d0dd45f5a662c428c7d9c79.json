@@ -1,0 +1,1142 @@
+{
+  "db_id": "kb_91af2fa76d0dd45f5a662c428c7d9c79",
+  "nodes": {
+    "paper:2506.00448v1": {
+      "id": "paper:2506.00448v1",
+      "type": "Paper",
+      "label": "Fact-Controlled Diagnosis of Hallucinations in Medical Text Summarization",
+      "norm_label": "fact-controlled diagnosis of hallucinations in medical text summarization"
+    },
+    "method:fact-controlled hallucination detection": {
+      "id": "method:fact-controlled hallucination detection",
+      "type": "Method",
+      "label": "fact-controlled hallucination detection",
+      "norm_label": "fact-controlled hallucination detection"
+    },
+    "dataset:fact-controlled leave-n-out dataset": {
+      "id": "dataset:fact-controlled leave-n-out dataset",
+      "type": "Dataset",
+      "label": "fact-controlled Leave-N-out dataset",
+      "norm_label": "fact-controlled leave-n-out dataset"
+    },
+    "dataset:natural hallucination dataset": {
+      "id": "dataset:natural hallucination dataset",
+      "type": "Dataset",
+      "label": "natural hallucination dataset",
+      "norm_label": "natural hallucination dataset"
+    },
+    "metric:null": {
+      "id": "metric:null",
+      "type": "Metric",
+      "label": "null",
+      "norm_label": "null"
+    },
+    "task:尽管hallucinations在llms中的医疗文本总结中对患者护理和临床决策构成重大风险，但该现象在临床领域仍研究不足，且普通领域幻觉检测器无法有效检测临床幻觉。": {
+      "id": "task:尽管hallucinations在llms中的医疗文本总结中对患者护理和临床决策构成重大风险，但该现象在临床领域仍研究不足，且普通领域幻觉检测器无法有效检测临床幻觉。",
+      "type": "Task",
+      "label": "尽管Hallucinations在LLMs中的医疗文本总结中对患者护理和临床决策构成重大风险，但该现象在临床领域仍研究不足，且普通领域幻觉检测器无法有效检测临床幻觉。",
+      "norm_label": "尽管hallucinations在llms中的医疗文本总结中对患者护理和临床决策构成重大风险，但该现象在临床领域仍研究不足，且普通领域幻觉检测器无法有效检测临床幻觉。"
+    },
+    "finding:开发了事实基于的方法来统计幻觉，提供了现有方法不具备的可解释性": {
+      "id": "finding:开发了事实基于的方法来统计幻觉，提供了现有方法不具备的可解释性",
+      "type": "Finding",
+      "label": "开发了事实基于的方法来统计幻觉，提供了现有方法不具备的可解释性",
+      "norm_label": "开发了事实基于的方法来统计幻觉，提供了现有方法不具备的可解释性"
+    },
+    "finding:构建了支持专家标注的数据集，用于推动可信临床摘要系统的进步": {
+      "id": "finding:构建了支持专家标注的数据集，用于推动可信临床摘要系统的进步",
+      "type": "Finding",
+      "label": "构建了支持专家标注的数据集，用于推动可信临床摘要系统的进步",
+      "norm_label": "构建了支持专家标注的数据集，用于推动可信临床摘要系统的进步"
+    },
+    "finding:我们基于事实控制幻觉开发的llm基于检测器泛化到检测真实世界临床幻觉表现出色": {
+      "id": "finding:我们基于事实控制幻觉开发的llm基于检测器泛化到检测真实世界临床幻觉表现出色",
+      "type": "Finding",
+      "label": "我们基于事实控制幻觉开发的LLM基于检测器泛化到检测真实世界临床幻觉表现出色",
+      "norm_label": "我们基于事实控制幻觉开发的llm基于检测器泛化到检测真实世界临床幻觉表现出色"
+    },
+    "paper:2509.21473v1": {
+      "id": "paper:2509.21473v1",
+      "type": "Paper",
+      "label": "Are Hallucinations Bad Estimations?",
+      "norm_label": "are hallucinations bad estimations"
+    },
+    "task:尽管生成模型往往是损失最小化的最优估计器，但它们仍然会产生幻觉，即未能将估计与任何可能的原因联系起来。": {
+      "id": "task:尽管生成模型往往是损失最小化的最优估计器，但它们仍然会产生幻觉，即未能将估计与任何可能的原因联系起来。",
+      "type": "Task",
+      "label": "尽管生成模型往往是损失最小化的最优估计器，但它们仍然会产生幻觉，即未能将估计与任何可能的原因联系起来。",
+      "norm_label": "尽管生成模型往往是损失最小化的最优估计器，但它们仍然会产生幻觉，即未能将估计与任何可能的原因联系起来。"
+    },
+    "finding:重新定义了幻觉为损失最小化与人类可接受输出之间的结构错位": {
+      "id": "finding:重新定义了幻觉为损失最小化与人类可接受输出之间的结构错位",
+      "type": "Finding",
+      "label": "重新定义了幻觉为损失最小化与人类可接受输出之间的结构错位",
+      "norm_label": "重新定义了幻觉为损失最小化与人类可接受输出之间的结构错位"
+    },
+    "finding:证明了即使是最优估计器也会产生幻觉": {
+      "id": "finding:证明了即使是最优估计器也会产生幻觉",
+      "type": "Finding",
+      "label": "证明了即使是最优估计器也会产生幻觉",
+      "norm_label": "证明了即使是最优估计器也会产生幻觉"
+    },
+    "finding:提出了幻觉率的一般性高概率下界": {
+      "id": "finding:提出了幻觉率的一般性高概率下界",
+      "type": "Finding",
+      "label": "提出了幻觉率的一般性高概率下界",
+      "norm_label": "提出了幻觉率的一般性高概率下界"
+    },
+    "paper:2507.20836v4": {
+      "id": "paper:2507.20836v4",
+      "type": "Paper",
+      "label": "First Hallucination Tokens Are Different from Conditional Ones",
+      "norm_label": "first hallucination tokens are different from conditional ones"
+    },
+    "dataset:ragtruth corpus": {
+      "id": "dataset:ragtruth corpus",
+      "type": "Dataset",
+      "label": "RAGTruth corpus",
+      "norm_label": "ragtruth corpus"
+    },
+    "task:尽管大型语言模型（llms）会产生幻觉，但检测这些情况对于确保信任至关重要，现有研究主要集中在响应或子序列级别，而忽略了幻觉信号在序列中不同位置的变化。": {
+      "id": "task:尽管大型语言模型（llms）会产生幻觉，但检测这些情况对于确保信任至关重要，现有研究主要集中在响应或子序列级别，而忽略了幻觉信号在序列中不同位置的变化。",
+      "type": "Task",
+      "label": "尽管大型语言模型（LLMs）会产生幻觉，但检测这些情况对于确保信任至关重要，现有研究主要集中在响应或子序列级别，而忽略了幻觉信号在序列中不同位置的变化。",
+      "norm_label": "尽管大型语言模型（llms）会产生幻觉，但检测这些情况对于确保信任至关重要，现有研究主要集中在响应或子序列级别，而忽略了幻觉信号在序列中不同位置的变化。"
+    },
+    "finding:首次显示首次hallucination token比晚期token更易被检测": {
+      "id": "finding:首次显示首次hallucination token比晚期token更易被检测",
+      "type": "Finding",
+      "label": "首次显示首次hallucination token比晚期token更易被检测",
+      "norm_label": "首次显示首次hallucination token比晚期token更易被检测"
+    },
+    "finding:该发现有助于提高token级幻觉检测的准确性": {
+      "id": "finding:该发现有助于提高token级幻觉检测的准确性",
+      "type": "Finding",
+      "label": "该发现有助于提高token级幻觉检测的准确性",
+      "norm_label": "该发现有助于提高token级幻觉检测的准确性"
+    },
+    "finding:提供新的检测策略": {
+      "id": "finding:提供新的检测策略",
+      "type": "Finding",
+      "label": "提供新的检测策略",
+      "norm_label": "提供新的检测策略"
+    },
+    "paper:1906.07008v1": {
+      "id": "paper:1906.07008v1",
+      "type": "Paper",
+      "label": "Hallucinated Adversarial Learning for Robust Visual Tracking",
+      "norm_label": "hallucinated adversarial learning for robust visual tracking"
+    },
+    "method:adversarial hallucinator （ah） hallucinated adversarial tracker hat": {
+      "id": "method:adversarial hallucinator （ah） hallucinated adversarial tracker hat",
+      "type": "Method",
+      "label": "adversarial 'hallucinator'（AH）; hallucinated adversarial tracker (HAT)",
+      "norm_label": "adversarial hallucinator （ah） hallucinated adversarial tracker hat"
+    },
+    "dataset:otb 100 videos": {
+      "id": "dataset:otb 100 videos",
+      "type": "Dataset",
+      "label": "OTB (100 videos)",
+      "norm_label": "otb 100 videos"
+    },
+    "dataset:vot 120 videos": {
+      "id": "dataset:vot 120 videos",
+      "type": "Dataset",
+      "label": "VOT (120 videos)",
+      "norm_label": "vot 120 videos"
+    },
+    "dataset:cd 600 videos": {
+      "id": "dataset:cd 600 videos",
+      "type": "Dataset",
+      "label": "CD (600 videos)",
+      "norm_label": "cd 600 videos"
+    },
+    "metric:accuracy": {
+      "id": "metric:accuracy",
+      "type": "Metric",
+      "label": "Accuracy",
+      "norm_label": "accuracy"
+    },
+    "metric:success rate": {
+      "id": "metric:success rate",
+      "type": "Metric",
+      "label": "Success Rate",
+      "norm_label": "success rate"
+    },
+    "task:尽管现有的视觉跟踪算法在高数据情况下表现良好，但在低数据情况下容易过度拟合，无法有效学习新概念。": {
+      "id": "task:尽管现有的视觉跟踪算法在高数据情况下表现良好，但在低数据情况下容易过度拟合，无法有效学习新概念。",
+      "type": "Task",
+      "label": "尽管现有的视觉跟踪算法在高数据情况下表现良好，但在低数据情况下容易过度拟合，无法有效学习新概念。",
+      "norm_label": "尽管现有的视觉跟踪算法在高数据情况下表现良好，但在低数据情况下容易过度拟合，无法有效学习新概念。"
+    },
+    "finding:我们提出了一个称为‘adversarial hallucinator’（ah）的有效对抗方法。": {
+      "id": "finding:我们提出了一个称为‘adversarial hallucinator’（ah）的有效对抗方法。",
+      "type": "Finding",
+      "label": "我们提出了一个称为‘adversarial hallucinator’（AH）的有效对抗方法。",
+      "norm_label": "我们提出了一个称为‘adversarial hallucinator’（ah）的有效对抗方法。"
+    },
+    "finding:ah与在线分类器（例如mdnet）结合，以端到端方式优化，增强了在线跟踪器的鲁棒性。": {
+      "id": "finding:ah与在线分类器（例如mdnet）结合，以端到端方式优化，增强了在线跟踪器的鲁棒性。",
+      "type": "Finding",
+      "label": "AH与在线分类器（例如MDNet）结合，以端到端方式优化，增强了在线跟踪器的鲁棒性。",
+      "norm_label": "ah与在线分类器（例如mdnet）结合，以端到端方式优化，增强了在线跟踪器的鲁棒性。"
+    },
+    "finding:提出了一种新颖的选择性变形转移（sdt）方法，提高了变形选择的有效性。": {
+      "id": "finding:提出了一种新颖的选择性变形转移（sdt）方法，提高了变形选择的有效性。",
+      "type": "Finding",
+      "label": "提出了一种新颖的选择性变形转移（SDT）方法，提高了变形选择的有效性。",
+      "norm_label": "提出了一种新颖的选择性变形转移（sdt）方法，提高了变形选择的有效性。"
+    },
+    "paper:2512.03107v1": {
+      "id": "paper:2512.03107v1",
+      "type": "Paper",
+      "label": "Detecting AI Hallucinations in Finance: An Information-Theoretic Method Cuts Hallucination Rate by 92%",
+      "norm_label": "detecting ai hallucinations in finance an information-theoretic method cuts hallucination rate by 92"
+    },
+    "method:eclipse": {
+      "id": "method:eclipse",
+      "type": "Method",
+      "label": "ECLIPSE",
+      "norm_label": "eclipse"
+    },
+    "dataset:金融领域控制幻觉问答数据集 n 200": {
+      "id": "dataset:金融领域控制幻觉问答数据集 n 200",
+      "type": "Dataset",
+      "label": "金融领域控制幻觉问答数据集 (n=200)",
+      "norm_label": "金融领域控制幻觉问答数据集 n 200"
+    },
+    "metric:roc auc": {
+      "id": "metric:roc auc",
+      "type": "Metric",
+      "label": "ROC AUC",
+      "norm_label": "roc auc"
+    },
+    "metric:平均准确率 average precision": {
+      "id": "metric:平均准确率 average precision",
+      "type": "Metric",
+      "label": "平均准确率 (Average Precision)",
+      "norm_label": "平均准确率 average precision"
+    },
+    "task:尽管大型语言模型（llms）生成流畅但缺乏支持的答案（ hallucinations），限制了其在高风险领域的安全部署。": {
+      "id": "task:尽管大型语言模型（llms）生成流畅但缺乏支持的答案（ hallucinations），限制了其在高风险领域的安全部署。",
+      "type": "Task",
+      "label": "尽管大型语言模型（LLMs）生成流畅但缺乏支持的答案（ hallucinations），限制了其在高风险领域的安全部署。",
+      "norm_label": "尽管大型语言模型（llms）生成流畅但缺乏支持的答案（ hallucinations），限制了其在高风险领域的安全部署。"
+    },
+    "finding:提出了 eclipse 框架，此框架通过结合熵估计和困惑度分解来检测幻觉观点。": {
+      "id": "finding:提出了 eclipse 框架，此框架通过结合熵估计和困惑度分解来检测幻觉观点。",
+      "type": "Finding",
+      "label": "提出了 ECLIPSE 框架，此框架通过结合熵估计和困惑度分解来检测幻觉观点。",
+      "norm_label": "提出了 eclipse 框架，此框架通过结合熵估计和困惑度分解来检测幻觉观点。"
+    },
+    "finding:证明了在温和条件下，所得熵-容量目标是严格凸的且具有唯一稳定的极小值。": {
+      "id": "finding:证明了在温和条件下，所得熵-容量目标是严格凸的且具有唯一稳定的极小值。",
+      "type": "Finding",
+      "label": "证明了在温和条件下，所得熵-容量目标是严格凸的且具有唯一稳定的极小值。",
+      "norm_label": "证明了在温和条件下，所得熵-容量目标是严格凸的且具有唯一稳定的极小值。"
+    },
+    "finding:实验证明困惑度分解特征展示了最大的系数，验证了对幻觉检测来说证据使用是关键因素。": {
+      "id": "finding:实验证明困惑度分解特征展示了最大的系数，验证了对幻觉检测来说证据使用是关键因素。",
+      "type": "Finding",
+      "label": "实验证明困惑度分解特征展示了最大的系数，验证了对幻觉检测来说证据使用是关键因素。",
+      "norm_label": "实验证明困惑度分解特征展示了最大的系数，验证了对幻觉检测来说证据使用是关键因素。"
+    },
+    "dataset:leave-n-out dataset": {
+      "id": "dataset:leave-n-out dataset",
+      "type": "Dataset",
+      "label": "Leave-N-out dataset",
+      "norm_label": "leave-n-out dataset"
+    },
+    "method:llm-based detectors": {
+      "id": "method:llm-based detectors",
+      "type": "Method",
+      "label": "LLM-based detectors",
+      "norm_label": "llm-based detectors"
+    },
+    "method:fact-based approaches": {
+      "id": "method:fact-based approaches",
+      "type": "Method",
+      "label": "fact-based approaches",
+      "norm_label": "fact-based approaches"
+    },
+    "task:clinical summarization systems": {
+      "id": "task:clinical summarization systems",
+      "type": "Task",
+      "label": "clinical summarization systems",
+      "norm_label": "clinical summarization systems"
+    },
+    "dataset:expert-annotated datasets": {
+      "id": "dataset:expert-annotated datasets",
+      "type": "Dataset",
+      "label": "expert-annotated datasets",
+      "norm_label": "expert-annotated datasets"
+    },
+    "method:general-domain detectors": {
+      "id": "method:general-domain detectors",
+      "type": "Method",
+      "label": "general-domain detectors",
+      "norm_label": "general-domain detectors"
+    },
+    "concept:hallucinations": {
+      "id": "concept:hallucinations",
+      "type": "Concept",
+      "label": "hallucinations",
+      "norm_label": "hallucinations"
+    },
+    "concept:optimal estimators": {
+      "id": "concept:optimal estimators",
+      "type": "Concept",
+      "label": "optimal estimators",
+      "norm_label": "optimal estimators"
+    },
+    "concept:high probability lower bound": {
+      "id": "concept:high probability lower bound",
+      "type": "Concept",
+      "label": "high probability lower bound",
+      "norm_label": "high probability lower bound"
+    },
+    "concept:hallucination token": {
+      "id": "concept:hallucination token",
+      "type": "Concept",
+      "label": "hallucination token",
+      "norm_label": "hallucination token"
+    },
+    "task:token-level hallucination detection": {
+      "id": "task:token-level hallucination detection",
+      "type": "Task",
+      "label": "token-level hallucination detection",
+      "norm_label": "token-level hallucination detection"
+    },
+    "concept:llms large language models": {
+      "id": "concept:llms large language models",
+      "type": "Concept",
+      "label": "LLMs (Large Language Models)",
+      "norm_label": "llms large language models"
+    },
+    "method:adversarial hallucinator ah": {
+      "id": "method:adversarial hallucinator ah",
+      "type": "Method",
+      "label": "adversarial 'hallucinator' (AH)",
+      "norm_label": "adversarial hallucinator ah"
+    },
+    "method:hallucinated adversarial tracker hat": {
+      "id": "method:hallucinated adversarial tracker hat",
+      "type": "Method",
+      "label": "hallucinated adversarial tracker (HAT)",
+      "norm_label": "hallucinated adversarial tracker hat"
+    },
+    "concept:online tracking-by-detection framework": {
+      "id": "concept:online tracking-by-detection framework",
+      "type": "Concept",
+      "label": "online tracking-by-detection framework",
+      "norm_label": "online tracking-by-detection framework"
+    },
+    "model:mdnet": {
+      "id": "model:mdnet",
+      "type": "Model",
+      "label": "MDNet",
+      "norm_label": "mdnet"
+    },
+    "dataset:otb": {
+      "id": "dataset:otb",
+      "type": "Dataset",
+      "label": "OTB",
+      "norm_label": "otb"
+    },
+    "dataset:vot": {
+      "id": "dataset:vot",
+      "type": "Dataset",
+      "label": "VOT",
+      "norm_label": "vot"
+    },
+    "dataset:cd": {
+      "id": "dataset:cd",
+      "type": "Dataset",
+      "label": "CD",
+      "norm_label": "cd"
+    },
+    "dataset:金融领域控制幻觉问答数据集": {
+      "id": "dataset:金融领域控制幻觉问答数据集",
+      "type": "Dataset",
+      "label": "金融领域控制幻觉问答数据集",
+      "norm_label": "金融领域控制幻觉问答数据集"
+    },
+    "metric:average precision": {
+      "id": "metric:average precision",
+      "type": "Metric",
+      "label": "Average Precision",
+      "norm_label": "average precision"
+    }
+  },
+  "edges": [
+    {
+      "source": "paper:2506.00448v1",
+      "target": "method:fact-controlled hallucination detection",
+      "type": "proposes",
+      "weight": 1.0
+    },
+    {
+      "source": "paper:2506.00448v1",
+      "target": "dataset:fact-controlled leave-n-out dataset",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "method:fact-controlled hallucination detection",
+      "target": "dataset:fact-controlled leave-n-out dataset",
+      "type": "evaluates_on",
+      "weight": 0.9
+    },
+    {
+      "source": "paper:2506.00448v1",
+      "target": "dataset:natural hallucination dataset",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "method:fact-controlled hallucination detection",
+      "target": "dataset:natural hallucination dataset",
+      "type": "evaluates_on",
+      "weight": 0.9
+    },
+    {
+      "source": "method:fact-controlled hallucination detection",
+      "target": "metric:null",
+      "type": "achieves",
+      "weight": 0.85
+    },
+    {
+      "source": "paper:2506.00448v1",
+      "target": "task:尽管hallucinations在llms中的医疗文本总结中对患者护理和临床决策构成重大风险，但该现象在临床领域仍研究不足，且普通领域幻觉检测器无法有效检测临床幻觉。",
+      "type": "applied_to",
+      "weight": 0.8
+    },
+    {
+      "source": "paper:2506.00448v1",
+      "target": "finding:开发了事实基于的方法来统计幻觉，提供了现有方法不具备的可解释性",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:2506.00448v1",
+      "target": "finding:构建了支持专家标注的数据集，用于推动可信临床摘要系统的进步",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:2506.00448v1",
+      "target": "finding:我们基于事实控制幻觉开发的llm基于检测器泛化到检测真实世界临床幻觉表现出色",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:2509.21473v1",
+      "target": "task:尽管生成模型往往是损失最小化的最优估计器，但它们仍然会产生幻觉，即未能将估计与任何可能的原因联系起来。",
+      "type": "applied_to",
+      "weight": 0.8
+    },
+    {
+      "source": "paper:2509.21473v1",
+      "target": "finding:重新定义了幻觉为损失最小化与人类可接受输出之间的结构错位",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:2509.21473v1",
+      "target": "finding:证明了即使是最优估计器也会产生幻觉",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:2509.21473v1",
+      "target": "finding:提出了幻觉率的一般性高概率下界",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:2507.20836v4",
+      "target": "dataset:ragtruth corpus",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "paper:2507.20836v4",
+      "target": "task:尽管大型语言模型（llms）会产生幻觉，但检测这些情况对于确保信任至关重要，现有研究主要集中在响应或子序列级别，而忽略了幻觉信号在序列中不同位置的变化。",
+      "type": "applied_to",
+      "weight": 0.8
+    },
+    {
+      "source": "paper:2507.20836v4",
+      "target": "finding:首次显示首次hallucination token比晚期token更易被检测",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:2507.20836v4",
+      "target": "finding:该发现有助于提高token级幻觉检测的准确性",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:2507.20836v4",
+      "target": "finding:提供新的检测策略",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:1906.07008v1",
+      "target": "method:adversarial hallucinator （ah） hallucinated adversarial tracker hat",
+      "type": "proposes",
+      "weight": 1.0
+    },
+    {
+      "source": "paper:1906.07008v1",
+      "target": "dataset:otb 100 videos",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "method:adversarial hallucinator （ah） hallucinated adversarial tracker hat",
+      "target": "dataset:otb 100 videos",
+      "type": "evaluates_on",
+      "weight": 0.9
+    },
+    {
+      "source": "paper:1906.07008v1",
+      "target": "dataset:vot 120 videos",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "method:adversarial hallucinator （ah） hallucinated adversarial tracker hat",
+      "target": "dataset:vot 120 videos",
+      "type": "evaluates_on",
+      "weight": 0.9
+    },
+    {
+      "source": "paper:1906.07008v1",
+      "target": "dataset:cd 600 videos",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "method:adversarial hallucinator （ah） hallucinated adversarial tracker hat",
+      "target": "dataset:cd 600 videos",
+      "type": "evaluates_on",
+      "weight": 0.9
+    },
+    {
+      "source": "method:adversarial hallucinator （ah） hallucinated adversarial tracker hat",
+      "target": "metric:accuracy",
+      "type": "achieves",
+      "weight": 0.85
+    },
+    {
+      "source": "method:adversarial hallucinator （ah） hallucinated adversarial tracker hat",
+      "target": "metric:success rate",
+      "type": "achieves",
+      "weight": 0.85
+    },
+    {
+      "source": "paper:1906.07008v1",
+      "target": "task:尽管现有的视觉跟踪算法在高数据情况下表现良好，但在低数据情况下容易过度拟合，无法有效学习新概念。",
+      "type": "applied_to",
+      "weight": 0.8
+    },
+    {
+      "source": "paper:1906.07008v1",
+      "target": "finding:我们提出了一个称为‘adversarial hallucinator’（ah）的有效对抗方法。",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:1906.07008v1",
+      "target": "finding:ah与在线分类器（例如mdnet）结合，以端到端方式优化，增强了在线跟踪器的鲁棒性。",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:1906.07008v1",
+      "target": "finding:提出了一种新颖的选择性变形转移（sdt）方法，提高了变形选择的有效性。",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:2512.03107v1",
+      "target": "method:eclipse",
+      "type": "proposes",
+      "weight": 1.0
+    },
+    {
+      "source": "paper:2512.03107v1",
+      "target": "dataset:金融领域控制幻觉问答数据集 n 200",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "method:eclipse",
+      "target": "dataset:金融领域控制幻觉问答数据集 n 200",
+      "type": "evaluates_on",
+      "weight": 0.9
+    },
+    {
+      "source": "method:eclipse",
+      "target": "metric:roc auc",
+      "type": "achieves",
+      "weight": 0.85
+    },
+    {
+      "source": "method:eclipse",
+      "target": "metric:平均准确率 average precision",
+      "type": "achieves",
+      "weight": 0.85
+    },
+    {
+      "source": "paper:2512.03107v1",
+      "target": "task:尽管大型语言模型（llms）生成流畅但缺乏支持的答案（ hallucinations），限制了其在高风险领域的安全部署。",
+      "type": "applied_to",
+      "weight": 0.8
+    },
+    {
+      "source": "paper:2512.03107v1",
+      "target": "finding:提出了 eclipse 框架，此框架通过结合熵估计和困惑度分解来检测幻觉观点。",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:2512.03107v1",
+      "target": "finding:证明了在温和条件下，所得熵-容量目标是严格凸的且具有唯一稳定的极小值。",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:2512.03107v1",
+      "target": "finding:实验证明困惑度分解特征展示了最大的系数，验证了对幻觉检测来说证据使用是关键因素。",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "method:fact-controlled hallucination detection",
+      "target": "dataset:leave-n-out dataset",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "method:fact-controlled hallucination detection",
+      "target": "dataset:natural hallucination dataset",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "method:llm-based detectors",
+      "target": "dataset:leave-n-out dataset",
+      "type": "evaluates_on",
+      "weight": 0.9
+    },
+    {
+      "source": "method:fact-based approaches",
+      "target": "task:clinical summarization systems",
+      "type": "applied_to",
+      "weight": 0.8
+    },
+    {
+      "source": "method:llm-based detectors",
+      "target": "dataset:expert-annotated datasets",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "method:fact-based approaches",
+      "target": "dataset:expert-annotated datasets",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "method:llm-based detectors",
+      "target": "dataset:natural hallucination dataset",
+      "type": "evaluates_on",
+      "weight": 0.9
+    },
+    {
+      "source": "method:llm-based detectors",
+      "target": "dataset:leave-n-out dataset",
+      "type": "compared_with",
+      "weight": 0.75
+    },
+    {
+      "source": "method:fact-based approaches",
+      "target": "dataset:natural hallucination dataset",
+      "type": "compared_with",
+      "weight": 0.75
+    },
+    {
+      "source": "concept:hallucinations",
+      "target": "concept:optimal estimators",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "concept:hallucinations",
+      "target": "concept:high probability lower bound",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "concept:hallucinations",
+      "target": "concept:optimal estimators",
+      "type": "achieves",
+      "weight": 0.85
+    },
+    {
+      "source": "concept:hallucination token",
+      "target": "dataset:ragtruth corpus",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "concept:llms large language models",
+      "target": "concept:hallucination token",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "concept:hallucination token",
+      "target": "task:token-level hallucination detection",
+      "type": "applied_to",
+      "weight": 0.8
+    },
+    {
+      "source": "method:adversarial hallucinator ah",
+      "target": "concept:online tracking-by-detection framework",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "method:hallucinated adversarial tracker hat",
+      "target": "method:adversarial hallucinator ah",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "method:hallucinated adversarial tracker hat",
+      "target": "model:mdnet",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "method:hallucinated adversarial tracker hat",
+      "target": "dataset:otb",
+      "type": "evaluates_on",
+      "weight": 0.9
+    },
+    {
+      "source": "method:hallucinated adversarial tracker hat",
+      "target": "dataset:vot",
+      "type": "evaluates_on",
+      "weight": 0.9
+    },
+    {
+      "source": "method:hallucinated adversarial tracker hat",
+      "target": "dataset:cd",
+      "type": "evaluates_on",
+      "weight": 0.9
+    },
+    {
+      "source": "method:hallucinated adversarial tracker hat",
+      "target": "metric:accuracy",
+      "type": "achieves",
+      "weight": 0.85
+    },
+    {
+      "source": "method:hallucinated adversarial tracker hat",
+      "target": "metric:success rate",
+      "type": "achieves",
+      "weight": 0.85
+    },
+    {
+      "source": "method:eclipse",
+      "target": "dataset:金融领域控制幻觉问答数据集",
+      "type": "evaluates_on",
+      "weight": 0.9
+    },
+    {
+      "source": "method:eclipse",
+      "target": "metric:average precision",
+      "type": "achieves",
+      "weight": 0.85
+    },
+    {
+      "source": "method:eclipse",
+      "target": "dataset:金融领域控制幻觉问答数据集",
+      "type": "uses",
+      "weight": 0.8
+    }
+  ],
+  "paper_entities": {
+    "2506.00448v1": [
+      "paper:2506.00448v1",
+      "method:fact-controlled hallucination detection",
+      "dataset:fact-controlled leave-n-out dataset",
+      "dataset:natural hallucination dataset",
+      "metric:null",
+      "task:尽管hallucinations在llms中的医疗文本总结中对患者护理和临床决策构成重大风险，但该现象在临床领域仍研究不足，且普通领域幻觉检测器无法有效检测临床幻觉。",
+      "finding:开发了事实基于的方法来统计幻觉，提供了现有方法不具备的可解释性",
+      "finding:构建了支持专家标注的数据集，用于推动可信临床摘要系统的进步",
+      "finding:我们基于事实控制幻觉开发的llm基于检测器泛化到检测真实世界临床幻觉表现出色",
+      "dataset:leave-n-out dataset",
+      "method:llm-based detectors",
+      "method:fact-based approaches",
+      "task:clinical summarization systems",
+      "dataset:expert-annotated datasets",
+      "method:general-domain detectors"
+    ],
+    "2509.21473v1": [
+      "paper:2509.21473v1",
+      "task:尽管生成模型往往是损失最小化的最优估计器，但它们仍然会产生幻觉，即未能将估计与任何可能的原因联系起来。",
+      "finding:重新定义了幻觉为损失最小化与人类可接受输出之间的结构错位",
+      "finding:证明了即使是最优估计器也会产生幻觉",
+      "finding:提出了幻觉率的一般性高概率下界",
+      "concept:hallucinations",
+      "concept:optimal estimators",
+      "concept:high probability lower bound"
+    ],
+    "2507.20836v4": [
+      "paper:2507.20836v4",
+      "dataset:ragtruth corpus",
+      "task:尽管大型语言模型（llms）会产生幻觉，但检测这些情况对于确保信任至关重要，现有研究主要集中在响应或子序列级别，而忽略了幻觉信号在序列中不同位置的变化。",
+      "finding:首次显示首次hallucination token比晚期token更易被检测",
+      "finding:该发现有助于提高token级幻觉检测的准确性",
+      "finding:提供新的检测策略",
+      "concept:hallucination token",
+      "task:token-level hallucination detection",
+      "concept:llms large language models"
+    ],
+    "1906.07008v1": [
+      "paper:1906.07008v1",
+      "method:adversarial hallucinator （ah） hallucinated adversarial tracker hat",
+      "dataset:otb 100 videos",
+      "dataset:vot 120 videos",
+      "dataset:cd 600 videos",
+      "metric:accuracy",
+      "metric:success rate",
+      "task:尽管现有的视觉跟踪算法在高数据情况下表现良好，但在低数据情况下容易过度拟合，无法有效学习新概念。",
+      "finding:我们提出了一个称为‘adversarial hallucinator’（ah）的有效对抗方法。",
+      "finding:ah与在线分类器（例如mdnet）结合，以端到端方式优化，增强了在线跟踪器的鲁棒性。",
+      "finding:提出了一种新颖的选择性变形转移（sdt）方法，提高了变形选择的有效性。",
+      "method:adversarial hallucinator ah",
+      "method:hallucinated adversarial tracker hat",
+      "concept:online tracking-by-detection framework",
+      "model:mdnet",
+      "dataset:otb",
+      "dataset:vot",
+      "dataset:cd"
+    ],
+    "2512.03107v1": [
+      "paper:2512.03107v1",
+      "method:eclipse",
+      "dataset:金融领域控制幻觉问答数据集 n 200",
+      "metric:roc auc",
+      "metric:平均准确率 average precision",
+      "task:尽管大型语言模型（llms）生成流畅但缺乏支持的答案（ hallucinations），限制了其在高风险领域的安全部署。",
+      "finding:提出了 eclipse 框架，此框架通过结合熵估计和困惑度分解来检测幻觉观点。",
+      "finding:证明了在温和条件下，所得熵-容量目标是严格凸的且具有唯一稳定的极小值。",
+      "finding:实验证明困惑度分解特征展示了最大的系数，验证了对幻觉检测来说证据使用是关键因素。",
+      "dataset:金融领域控制幻觉问答数据集",
+      "metric:average precision"
+    ]
+  },
+  "entity_aliases": {
+    "fact-controlled diagnosis of hallucinations in medical text summarization": "paper:2506.00448v1",
+    "fact-controlled hallucination detection": "method:fact-controlled hallucination detection",
+    "fact-controlled leave-n-out dataset": "dataset:fact-controlled leave-n-out dataset",
+    "natural hallucination dataset": "dataset:natural hallucination dataset",
+    "null": "metric:null",
+    "尽管hallucinations在llms中的医疗文本总结中对患者护理和临床决策构成重大风险，但该现象在临床领域仍研究不足，且普通领域幻觉检测器无法有效检测临床幻觉。": "task:尽管hallucinations在llms中的医疗文本总结中对患者护理和临床决策构成重大风险，但该现象在临床领域仍研究不足，且普通领域幻觉检测器无法有效检测临床幻觉。",
+    "开发了事实基于的方法来统计幻觉，提供了现有方法不具备的可解释性": "finding:开发了事实基于的方法来统计幻觉，提供了现有方法不具备的可解释性",
+    "构建了支持专家标注的数据集，用于推动可信临床摘要系统的进步": "finding:构建了支持专家标注的数据集，用于推动可信临床摘要系统的进步",
+    "我们基于事实控制幻觉开发的llm基于检测器泛化到检测真实世界临床幻觉表现出色": "finding:我们基于事实控制幻觉开发的llm基于检测器泛化到检测真实世界临床幻觉表现出色",
+    "are hallucinations bad estimations": "paper:2509.21473v1",
+    "尽管生成模型往往是损失最小化的最优估计器，但它们仍然会产生幻觉，即未能将估计与任何可能的原因联系起来。": "task:尽管生成模型往往是损失最小化的最优估计器，但它们仍然会产生幻觉，即未能将估计与任何可能的原因联系起来。",
+    "重新定义了幻觉为损失最小化与人类可接受输出之间的结构错位": "finding:重新定义了幻觉为损失最小化与人类可接受输出之间的结构错位",
+    "证明了即使是最优估计器也会产生幻觉": "finding:证明了即使是最优估计器也会产生幻觉",
+    "提出了幻觉率的一般性高概率下界": "finding:提出了幻觉率的一般性高概率下界",
+    "first hallucination tokens are different from conditional ones": "paper:2507.20836v4",
+    "ragtruth corpus": "dataset:ragtruth corpus",
+    "尽管大型语言模型（llms）会产生幻觉，但检测这些情况对于确保信任至关重要，现有研究主要集中在响应或子序列级别，而忽略了幻觉信号在序列中不同位置的变化。": "task:尽管大型语言模型（llms）会产生幻觉，但检测这些情况对于确保信任至关重要，现有研究主要集中在响应或子序列级别，而忽略了幻觉信号在序列中不同位置的变化。",
+    "首次显示首次hallucination token比晚期token更易被检测": "finding:首次显示首次hallucination token比晚期token更易被检测",
+    "该发现有助于提高token级幻觉检测的准确性": "finding:该发现有助于提高token级幻觉检测的准确性",
+    "提供新的检测策略": "finding:提供新的检测策略",
+    "hallucinated adversarial learning for robust visual tracking": "paper:1906.07008v1",
+    "adversarial hallucinator （ah） hallucinated adversarial tracker hat": "method:adversarial hallucinator （ah） hallucinated adversarial tracker hat",
+    "otb 100 videos": "dataset:otb 100 videos",
+    "vot 120 videos": "dataset:vot 120 videos",
+    "cd 600 videos": "dataset:cd 600 videos",
+    "accuracy": "metric:accuracy",
+    "success rate": "metric:success rate",
+    "尽管现有的视觉跟踪算法在高数据情况下表现良好，但在低数据情况下容易过度拟合，无法有效学习新概念。": "task:尽管现有的视觉跟踪算法在高数据情况下表现良好，但在低数据情况下容易过度拟合，无法有效学习新概念。",
+    "我们提出了一个称为‘adversarial hallucinator’（ah）的有效对抗方法。": "finding:我们提出了一个称为‘adversarial hallucinator’（ah）的有效对抗方法。",
+    "ah与在线分类器（例如mdnet）结合，以端到端方式优化，增强了在线跟踪器的鲁棒性。": "finding:ah与在线分类器（例如mdnet）结合，以端到端方式优化，增强了在线跟踪器的鲁棒性。",
+    "提出了一种新颖的选择性变形转移（sdt）方法，提高了变形选择的有效性。": "finding:提出了一种新颖的选择性变形转移（sdt）方法，提高了变形选择的有效性。",
+    "detecting ai hallucinations in finance an information-theoretic method cuts hallucination rate by 92": "paper:2512.03107v1",
+    "eclipse": "method:eclipse",
+    "金融领域控制幻觉问答数据集 n 200": "dataset:金融领域控制幻觉问答数据集 n 200",
+    "roc auc": "metric:roc auc",
+    "平均准确率 average precision": "metric:平均准确率 average precision",
+    "尽管大型语言模型（llms）生成流畅但缺乏支持的答案（ hallucinations），限制了其在高风险领域的安全部署。": "task:尽管大型语言模型（llms）生成流畅但缺乏支持的答案（ hallucinations），限制了其在高风险领域的安全部署。",
+    "提出了 eclipse 框架，此框架通过结合熵估计和困惑度分解来检测幻觉观点。": "finding:提出了 eclipse 框架，此框架通过结合熵估计和困惑度分解来检测幻觉观点。",
+    "证明了在温和条件下，所得熵-容量目标是严格凸的且具有唯一稳定的极小值。": "finding:证明了在温和条件下，所得熵-容量目标是严格凸的且具有唯一稳定的极小值。",
+    "实验证明困惑度分解特征展示了最大的系数，验证了对幻觉检测来说证据使用是关键因素。": "finding:实验证明困惑度分解特征展示了最大的系数，验证了对幻觉检测来说证据使用是关键因素。",
+    "leave-n-out dataset": "dataset:leave-n-out dataset",
+    "llm-based detectors": "method:llm-based detectors",
+    "fact-based approaches": "method:fact-based approaches",
+    "clinical summarization systems": "task:clinical summarization systems",
+    "expert-annotated datasets": "dataset:expert-annotated datasets",
+    "general-domain detectors": "method:general-domain detectors",
+    "hallucinations": "concept:hallucinations",
+    "optimal estimators": "concept:optimal estimators",
+    "high probability lower bound": "concept:high probability lower bound",
+    "hallucination token": "concept:hallucination token",
+    "token-level hallucination detection": "task:token-level hallucination detection",
+    "llms large language models": "concept:llms large language models",
+    "adversarial hallucinator ah": "method:adversarial hallucinator ah",
+    "hallucinated adversarial tracker hat": "method:hallucinated adversarial tracker hat",
+    "online tracking-by-detection framework": "concept:online tracking-by-detection framework",
+    "mdnet": "model:mdnet",
+    "otb": "dataset:otb",
+    "vot": "dataset:vot",
+    "cd": "dataset:cd",
+    "金融领域控制幻觉问答数据集": "dataset:金融领域控制幻觉问答数据集",
+    "average precision": "metric:average precision"
+  },
+  "communities": {
+    "0": {
+      "nodes": [
+        "paper:2506.00448v1",
+        "task:尽管hallucinations在llms中的医疗文本总结中对患者护理和临床决策构成重大风险，但该现象在临床领域仍研究不足，且普通领域幻觉检测器无法有效检测临床幻觉。",
+        "finding:开发了事实基于的方法来统计幻觉，提供了现有方法不具备的可解释性",
+        "finding:构建了支持专家标注的数据集，用于推动可信临床摘要系统的进步",
+        "finding:我们基于事实控制幻觉开发的llm基于检测器泛化到检测真实世界临床幻觉表现出色"
+      ],
+      "key_entities": [
+        "Fact-Controlled Diagnosis of Hallucinations in Medical Text Summarization",
+        "尽管Hallucinations在LLMs中的医疗文本总结中对患者护理和临床决策构成重大风险，但该现象在临床领域仍研究不足，且普通领域幻觉检测器无法有效检测临床幻觉。",
+        "开发了事实基于的方法来统计幻觉，提供了现有方法不具备的可解释性",
+        "构建了支持专家标注的数据集，用于推动可信临床摘要系统的进步",
+        "我们基于事实控制幻觉开发的LLM基于检测器泛化到检测真实世界临床幻觉表现出色"
+      ],
+      "summary": ""
+    },
+    "1": {
+      "nodes": [
+        "method:fact-controlled hallucination detection",
+        "dataset:fact-controlled leave-n-out dataset",
+        "dataset:natural hallucination dataset",
+        "metric:null"
+      ],
+      "key_entities": [
+        "fact-controlled hallucination detection",
+        "fact-controlled Leave-N-out dataset",
+        "natural hallucination dataset",
+        "null"
+      ],
+      "summary": ""
+    },
+    "2": {
+      "nodes": [
+        "paper:2509.21473v1",
+        "task:尽管生成模型往往是损失最小化的最优估计器，但它们仍然会产生幻觉，即未能将估计与任何可能的原因联系起来。",
+        "finding:重新定义了幻觉为损失最小化与人类可接受输出之间的结构错位",
+        "finding:证明了即使是最优估计器也会产生幻觉",
+        "finding:提出了幻觉率的一般性高概率下界"
+      ],
+      "key_entities": [
+        "Are Hallucinations Bad Estimations?",
+        "尽管生成模型往往是损失最小化的最优估计器，但它们仍然会产生幻觉，即未能将估计与任何可能的原因联系起来。",
+        "重新定义了幻觉为损失最小化与人类可接受输出之间的结构错位",
+        "证明了即使是最优估计器也会产生幻觉",
+        "提出了幻觉率的一般性高概率下界"
+      ],
+      "summary": ""
+    },
+    "3": {
+      "nodes": [
+        "paper:2507.20836v4",
+        "task:尽管大型语言模型（llms）会产生幻觉，但检测这些情况对于确保信任至关重要，现有研究主要集中在响应或子序列级别，而忽略了幻觉信号在序列中不同位置的变化。",
+        "finding:首次显示首次hallucination token比晚期token更易被检测",
+        "finding:该发现有助于提高token级幻觉检测的准确性",
+        "finding:提供新的检测策略"
+      ],
+      "key_entities": [
+        "First Hallucination Tokens Are Different from Conditional Ones",
+        "尽管大型语言模型（LLMs）会产生幻觉，但检测这些情况对于确保信任至关重要，现有研究主要集中在响应或子序列级别，而忽略了幻觉信号在序列中不同位置的变化。",
+        "首次显示首次hallucination token比晚期token更易被检测",
+        "该发现有助于提高token级幻觉检测的准确性",
+        "提供新的检测策略"
+      ],
+      "summary": ""
+    },
+    "4": {
+      "nodes": [
+        "dataset:ragtruth corpus",
+        "concept:hallucination token",
+        "task:token-level hallucination detection",
+        "concept:llms large language models"
+      ],
+      "key_entities": [
+        "RAGTruth corpus",
+        "hallucination token",
+        "token-level hallucination detection",
+        "LLMs (Large Language Models)"
+      ],
+      "summary": ""
+    },
+    "5": {
+      "nodes": [
+        "paper:1906.07008v1",
+        "method:adversarial hallucinator （ah） hallucinated adversarial tracker hat",
+        "dataset:otb 100 videos",
+        "dataset:vot 120 videos",
+        "dataset:cd 600 videos",
+        "task:尽管现有的视觉跟踪算法在高数据情况下表现良好，但在低数据情况下容易过度拟合，无法有效学习新概念。",
+        "finding:我们提出了一个称为‘adversarial hallucinator’（ah）的有效对抗方法。",
+        "finding:ah与在线分类器（例如mdnet）结合，以端到端方式优化，增强了在线跟踪器的鲁棒性。",
+        "finding:提出了一种新颖的选择性变形转移（sdt）方法，提高了变形选择的有效性。",
+        "method:general-domain detectors"
+      ],
+      "key_entities": [
+        "Hallucinated Adversarial Learning for Robust Visual Tracking",
+        "adversarial 'hallucinator'（AH）; hallucinated adversarial tracker (HAT)",
+        "OTB (100 videos)",
+        "VOT (120 videos)",
+        "CD (600 videos)",
+        "尽管现有的视觉跟踪算法在高数据情况下表现良好，但在低数据情况下容易过度拟合，无法有效学习新概念。",
+        "我们提出了一个称为‘adversarial hallucinator’（AH）的有效对抗方法。",
+        "AH与在线分类器（例如MDNet）结合，以端到端方式优化，增强了在线跟踪器的鲁棒性。",
+        "提出了一种新颖的选择性变形转移（SDT）方法，提高了变形选择的有效性。",
+        "general-domain detectors"
+      ],
+      "summary": ""
+    },
+    "6": {
+      "nodes": [
+        "metric:accuracy",
+        "metric:success rate",
+        "method:hallucinated adversarial tracker hat",
+        "model:mdnet",
+        "dataset:otb",
+        "dataset:vot",
+        "dataset:cd"
+      ],
+      "key_entities": [
+        "Accuracy",
+        "Success Rate",
+        "hallucinated adversarial tracker (HAT)",
+        "MDNet",
+        "OTB",
+        "VOT",
+        "CD"
+      ],
+      "summary": ""
+    },
+    "7": {
+      "nodes": [
+        "paper:2512.03107v1",
+        "task:尽管大型语言模型（llms）生成流畅但缺乏支持的答案（ hallucinations），限制了其在高风险领域的安全部署。",
+        "finding:提出了 eclipse 框架，此框架通过结合熵估计和困惑度分解来检测幻觉观点。",
+        "finding:证明了在温和条件下，所得熵-容量目标是严格凸的且具有唯一稳定的极小值。",
+        "finding:实验证明困惑度分解特征展示了最大的系数，验证了对幻觉检测来说证据使用是关键因素。"
+      ],
+      "key_entities": [
+        "Detecting AI Hallucinations in Finance: An Information-Theoretic Method Cuts Hallucination Rate by 92%",
+        "尽管大型语言模型（LLMs）生成流畅但缺乏支持的答案（ hallucinations），限制了其在高风险领域的安全部署。",
+        "提出了 ECLIPSE 框架，此框架通过结合熵估计和困惑度分解来检测幻觉观点。",
+        "证明了在温和条件下，所得熵-容量目标是严格凸的且具有唯一稳定的极小值。",
+        "实验证明困惑度分解特征展示了最大的系数，验证了对幻觉检测来说证据使用是关键因素。"
+      ],
+      "summary": ""
+    },
+    "8": {
+      "nodes": [
+        "method:eclipse",
+        "dataset:金融领域控制幻觉问答数据集 n 200",
+        "metric:roc auc",
+        "metric:平均准确率 average precision",
+        "dataset:金融领域控制幻觉问答数据集",
+        "metric:average precision"
+      ],
+      "key_entities": [
+        "ECLIPSE",
+        "金融领域控制幻觉问答数据集 (n=200)",
+        "ROC AUC",
+        "平均准确率 (Average Precision)",
+        "金融领域控制幻觉问答数据集",
+        "Average Precision"
+      ],
+      "summary": ""
+    },
+    "9": {
+      "nodes": [
+        "dataset:leave-n-out dataset",
+        "method:llm-based detectors"
+      ],
+      "key_entities": [
+        "Leave-N-out dataset",
+        "LLM-based detectors"
+      ],
+      "summary": ""
+    },
+    "10": {
+      "nodes": [
+        "method:fact-based approaches",
+        "task:clinical summarization systems",
+        "dataset:expert-annotated datasets"
+      ],
+      "key_entities": [
+        "fact-based approaches",
+        "clinical summarization systems",
+        "expert-annotated datasets"
+      ],
+      "summary": ""
+    },
+    "11": {
+      "nodes": [
+        "concept:hallucinations",
+        "concept:optimal estimators",
+        "concept:high probability lower bound"
+      ],
+      "key_entities": [
+        "hallucinations",
+        "optimal estimators",
+        "high probability lower bound"
+      ],
+      "summary": ""
+    },
+    "12": {
+      "nodes": [
+        "method:adversarial hallucinator ah",
+        "concept:online tracking-by-detection framework"
+      ],
+      "key_entities": [
+        "adversarial 'hallucinator' (AH)",
+        "online tracking-by-detection framework"
+      ],
+      "summary": ""
+    }
+  },
+  "stats": {
+    "node_count": 61,
+    "edge_count": 67,
+    "node_type_count": {
+      "Paper": 5,
+      "Method": 8,
+      "Dataset": 13,
+      "Metric": 6,
+      "Task": 7,
+      "Finding": 15,
+      "Concept": 6,
+      "Model": 1
+    },
+    "paper_count": 5,
+    "community_count": 0
+  }
+}

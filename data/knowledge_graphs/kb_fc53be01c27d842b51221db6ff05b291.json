@@ -1,0 +1,860 @@
+{
+  "db_id": "kb_fc53be01c27d842b51221db6ff05b291",
+  "nodes": {
+    "paper:2402.04936v1": {
+      "id": "paper:2402.04936v1",
+      "type": "Paper",
+      "label": "Quantum control by effective counterdiabatic driving",
+      "norm_label": "quantum control by effective counterdiabatic driving"
+    },
+    "method:反常非绝热驱动": {
+      "id": "method:反常非绝热驱动",
+      "type": "Method",
+      "label": "反常非绝热驱动",
+      "norm_label": "反常非绝热驱动"
+    },
+    "task:如何通过有效的反常非绝热驱动实现高保真的量子态传输和量子门操作。": {
+      "id": "task:如何通过有效的反常非绝热驱动实现高保真的量子态传输和量子门操作。",
+      "type": "Task",
+      "label": "如何通过有效的反常非绝热驱动实现高保真的量子态传输和量子门操作。",
+      "norm_label": "如何通过有效的反常非绝热驱动实现高保真的量子态传输和量子门操作。"
+    },
+    "contribution:开发了一种用于设计量子控制协议的方案，基于渐近绝热捷径在少量级量子系统中的应用。": {
+      "id": "contribution:开发了一种用于设计量子控制协议的方案，基于渐近绝热捷径在少量级量子系统中的应用。",
+      "type": "Contribution",
+      "label": "开发了一种用于设计量子控制协议的方案，基于渐近绝热捷径在少量级量子系统中的应用。",
+      "norm_label": "开发了一种用于设计量子控制协议的方案，基于渐近绝热捷径在少量级量子系统中的应用。"
+    },
+    "contribution:实现了在超导电路到rydberg原子等多个平台中高保真的量子态传输和量子门操作。": {
+      "id": "contribution:实现了在超导电路到rydberg原子等多个平台中高保真的量子态传输和量子门操作。",
+      "type": "Contribution",
+      "label": "实现了在超导电路到Rydberg原子等多个平台中高保真的量子态传输和量子门操作。",
+      "norm_label": "实现了在超导电路到rydberg原子等多个平台中高保真的量子态传输和量子门操作。"
+    },
+    "paper:2102.05843v1": {
+      "id": "paper:2102.05843v1",
+      "type": "Paper",
+      "label": "Driving Style Representation in Convolutional Recurrent Neural Network Model of Driver Identification",
+      "norm_label": "driving style representation in convolutional recurrent neural network model of driver identification"
+    },
+    "method:d-crnn": {
+      "id": "method:d-crnn",
+      "type": "Method",
+      "label": "D-CRNN",
+      "norm_label": "d-crnn"
+    },
+    "task:为了识别驾驶风格，分析驾驶员行为以区分不同的驾驶员，以满足各种应用程序的需求。": {
+      "id": "task:为了识别驾驶风格，分析驾驶员行为以区分不同的驾驶员，以满足各种应用程序的需求。",
+      "type": "Task",
+      "label": "为了识别驾驶风格，分析驾驶员行为以区分不同的驾驶员，以满足各种应用程序的需求。",
+      "norm_label": "为了识别驾驶风格，分析驾驶员行为以区分不同的驾驶员，以满足各种应用程序的需求。"
+    },
+    "dataset:null": {
+      "id": "dataset:null",
+      "type": "Dataset",
+      "label": "null",
+      "norm_label": "null"
+    },
+    "contribution:通过预处理输入数据去除偏差（采样不同的轨迹以防止空间记忆）": {
+      "id": "contribution:通过预处理输入数据去除偏差（采样不同的轨迹以防止空间记忆）",
+      "type": "Contribution",
+      "label": "通过预处理输入数据去除偏差（采样不同的轨迹以防止空间记忆）",
+      "norm_label": "通过预处理输入数据去除偏差（采样不同的轨迹以防止空间记忆）"
+    },
+    "contribution:分析了不同属性对驾驶员识别的贡献": {
+      "id": "contribution:分析了不同属性对驾驶员识别的贡献",
+      "type": "Contribution",
+      "label": "分析了不同属性对驾驶员识别的贡献",
+      "norm_label": "分析了不同属性对驾驶员识别的贡献"
+    },
+    "paper:2509.23922v1": {
+      "id": "paper:2509.23922v1",
+      "type": "Paper",
+      "label": "DriveE2E: Closed-Loop Benchmark for End-to-End Autonomous Driving through Real-to-Simulation",
+      "norm_label": "drivee2e closed-loop benchmark for end-to-end autonomous driving through real-to-simulation"
+    },
+    "task:尽管现有的闭合环路基准依赖于手动配置的交通场景，但这种做法可能与真实世界条件不符，限制了其反映实际驾驶性能的能力。": {
+      "id": "task:尽管现有的闭合环路基准依赖于手动配置的交通场景，但这种做法可能与真实世界条件不符，限制了其反映实际驾驶性能的能力。",
+      "type": "Task",
+      "label": "尽管现有的闭合环路基准依赖于手动配置的交通场景，但这种做法可能与真实世界条件不符，限制了其反映实际驾驶性能的能力。",
+      "norm_label": "尽管现有的闭合环路基准依赖于手动配置的交通场景，但这种做法可能与真实世界条件不符，限制了其反映实际驾驶性能的能力。"
+    },
+    "dataset:100小时视频数据集": {
+      "id": "dataset:100小时视频数据集",
+      "type": "Dataset",
+      "label": "100小时视频数据集",
+      "norm_label": "100小时视频数据集"
+    },
+    "contribution:提出了一个简单而具有挑战性的闭合环路评估框架，将真实世界驾驶场景与carla模拟器紧密结合。": {
+      "id": "contribution:提出了一个简单而具有挑战性的闭合环路评估框架，将真实世界驾驶场景与carla模拟器紧密结合。",
+      "type": "Contribution",
+      "label": "提出了一个简单而具有挑战性的闭合环路评估框架，将真实世界驾驶场景与CARLA模拟器紧密结合。",
+      "norm_label": "提出了一个简单而具有挑战性的闭合环路评估框架，将真实世界驾驶场景与carla模拟器紧密结合。"
+    },
+    "contribution:提供了100小时的视频数据集，从中提取了800个动态交通场景。": {
+      "id": "contribution:提供了100小时的视频数据集，从中提取了800个动态交通场景。",
+      "type": "Contribution",
+      "label": "提供了100小时的视频数据集，从中提取了800个动态交通场景。",
+      "norm_label": "提供了100小时的视频数据集，从中提取了800个动态交通场景。"
+    },
+    "contribution:为真实基础设施传感器创建了15个具有一致视觉外观的静态数字孪生资产。": {
+      "id": "contribution:为真实基础设施传感器创建了15个具有一致视觉外观的静态数字孪生资产。",
+      "type": "Contribution",
+      "label": "为真实基础设施传感器创建了15个具有一致视觉外观的静态数字孪生资产。",
+      "norm_label": "为真实基础设施传感器创建了15个具有一致视觉外观的静态数字孪生资产。"
+    },
+    "paper:2001.03908v2": {
+      "id": "paper:2001.03908v2",
+      "type": "Paper",
+      "label": "Self-Driving like a Human driver instead of a Robocar: Personalized comfortable driving experience for autonomous vehicles",
+      "norm_label": "self-driving like a human driver instead of a robocar personalized comfortable driving experience for autonomous vehicles"
+    },
+    "method:occupant s preference metric opm": {
+      "id": "method:occupant s preference metric opm",
+      "type": "Method",
+      "label": "Occupant's Preference Metric (OPM)",
+      "norm_label": "occupant s preference metric opm"
+    },
+    "task:为了提供个性化舒适的自动驾驶体验，针对用户个性化驾驶偏好制定舒适驾驶标准。": {
+      "id": "task:为了提供个性化舒适的自动驾驶体验，针对用户个性化驾驶偏好制定舒适驾驶标准。",
+      "type": "Task",
+      "label": "为了提供个性化舒适的自动驾驶体验，针对用户个性化驾驶偏好制定舒适驾驶标准。",
+      "norm_label": "为了提供个性化舒适的自动驾驶体验，针对用户个性化驾驶偏好制定舒适驾驶标准。"
+    },
+    "contribution:提出occupant s preference metric（opm）定义可接受的加速度和加速度变化率。": {
+      "id": "contribution:提出occupant s preference metric（opm）定义可接受的加速度和加速度变化率。",
+      "type": "Contribution",
+      "label": "提出Occupant's Preference Metric（OPM）定义可接受的加速度和加速度变化率。",
+      "norm_label": "提出occupant s preference metric（opm）定义可接受的加速度和加速度变化率。"
+    },
+    "contribution:提出一项基于偏好的人机混合自动驾驶控制器，实现舒适自动驾驶。": {
+      "id": "contribution:提出一项基于偏好的人机混合自动驾驶控制器，实现舒适自动驾驶。",
+      "type": "Contribution",
+      "label": "提出一项基于偏好的人机混合自动驾驶控制器，实现舒适自动驾驶。",
+      "norm_label": "提出一项基于偏好的人机混合自动驾驶控制器，实现舒适自动驾驶。"
+    },
+    "contribution:能够在自动驾驶过程中实现用户个性化的驾驶体验": {
+      "id": "contribution:能够在自动驾驶过程中实现用户个性化的驾驶体验",
+      "type": "Contribution",
+      "label": "能够在自动驾驶过程中实现用户个性化的驾驶体验",
+      "norm_label": "能够在自动驾驶过程中实现用户个性化的驾驶体验"
+    },
+    "concept:量子控制协议": {
+      "id": "concept:量子控制协议",
+      "type": "Concept",
+      "label": "量子控制协议",
+      "norm_label": "量子控制协议",
+      "description": ""
+    },
+    "task:量子态传输": {
+      "id": "task:量子态传输",
+      "type": "Task",
+      "label": "量子态传输",
+      "norm_label": "量子态传输",
+      "description": ""
+    },
+    "task:量子门": {
+      "id": "task:量子门",
+      "type": "Task",
+      "label": "量子门",
+      "norm_label": "量子门",
+      "description": ""
+    },
+    "concept:超导电路": {
+      "id": "concept:超导电路",
+      "type": "Concept",
+      "label": "超导电路",
+      "norm_label": "超导电路",
+      "description": ""
+    },
+    "concept:rydberg原子": {
+      "id": "concept:rydberg原子",
+      "type": "Concept",
+      "label": "Rydberg原子",
+      "norm_label": "rydberg原子",
+      "description": ""
+    },
+    "method:cnn": {
+      "id": "method:cnn",
+      "type": "Method",
+      "label": "CNN",
+      "norm_label": "cnn",
+      "description": ""
+    },
+    "method:rnn": {
+      "id": "method:rnn",
+      "type": "Method",
+      "label": "RNN",
+      "norm_label": "rnn",
+      "description": ""
+    },
+    "task:driver identification": {
+      "id": "task:driver identification",
+      "type": "Task",
+      "label": "driver identification",
+      "norm_label": "driver identification",
+      "description": ""
+    },
+    "concept:attribute analysis": {
+      "id": "concept:attribute analysis",
+      "type": "Concept",
+      "label": "attribute analysis",
+      "norm_label": "attribute analysis",
+      "description": ""
+    },
+    "concept:bias removal": {
+      "id": "concept:bias removal",
+      "type": "Concept",
+      "label": "bias removal",
+      "norm_label": "bias removal",
+      "description": ""
+    },
+    "method:drivee2e": {
+      "id": "method:drivee2e",
+      "type": "Method",
+      "label": "DriveE2E",
+      "norm_label": "drivee2e",
+      "description": ""
+    },
+    "concept:carla": {
+      "id": "concept:carla",
+      "type": "Concept",
+      "label": "CARLA",
+      "norm_label": "carla",
+      "description": ""
+    },
+    "concept:infrastructure": {
+      "id": "concept:infrastructure",
+      "type": "Concept",
+      "label": "Infrastructure",
+      "norm_label": "infrastructure",
+      "description": ""
+    },
+    "concept:800动态交通场景": {
+      "id": "concept:800动态交通场景",
+      "type": "Concept",
+      "label": "800动态交通场景",
+      "norm_label": "800动态交通场景",
+      "description": ""
+    },
+    "concept:15个静态数字孪生资产": {
+      "id": "concept:15个静态数字孪生资产",
+      "type": "Concept",
+      "label": "15个静态数字孪生资产",
+      "norm_label": "15个静态数字孪生资产",
+      "description": ""
+    },
+    "concept:human driver": {
+      "id": "concept:human driver",
+      "type": "Concept",
+      "label": "human driver",
+      "norm_label": "human driver",
+      "description": ""
+    },
+    "concept:robocar": {
+      "id": "concept:robocar",
+      "type": "Concept",
+      "label": "Robocar",
+      "norm_label": "robocar",
+      "description": ""
+    },
+    "task:autonomous vehicle": {
+      "id": "task:autonomous vehicle",
+      "type": "Task",
+      "label": "autonomous vehicle",
+      "norm_label": "autonomous vehicle",
+      "description": ""
+    }
+  },
+  "edges": [
+    {
+      "source": "paper:2402.04936v1",
+      "target": "method:反常非绝热驱动",
+      "type": "proposes",
+      "weight": 1.0
+    },
+    {
+      "source": "paper:2402.04936v1",
+      "target": "task:如何通过有效的反常非绝热驱动实现高保真的量子态传输和量子门操作。",
+      "type": "applied_to",
+      "weight": 0.8
+    },
+    {
+      "source": "method:反常非绝热驱动",
+      "target": "task:如何通过有效的反常非绝热驱动实现高保真的量子态传输和量子门操作。",
+      "type": "solves",
+      "weight": 0.95
+    },
+    {
+      "source": "paper:2402.04936v1",
+      "target": "contribution:开发了一种用于设计量子控制协议的方案，基于渐近绝热捷径在少量级量子系统中的应用。",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "method:反常非绝热驱动",
+      "target": "contribution:开发了一种用于设计量子控制协议的方案，基于渐近绝热捷径在少量级量子系统中的应用。",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:2402.04936v1",
+      "target": "contribution:实现了在超导电路到rydberg原子等多个平台中高保真的量子态传输和量子门操作。",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "method:反常非绝热驱动",
+      "target": "contribution:实现了在超导电路到rydberg原子等多个平台中高保真的量子态传输和量子门操作。",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:2102.05843v1",
+      "target": "method:d-crnn",
+      "type": "proposes",
+      "weight": 1.0
+    },
+    {
+      "source": "paper:2102.05843v1",
+      "target": "task:为了识别驾驶风格，分析驾驶员行为以区分不同的驾驶员，以满足各种应用程序的需求。",
+      "type": "applied_to",
+      "weight": 0.8
+    },
+    {
+      "source": "method:d-crnn",
+      "target": "task:为了识别驾驶风格，分析驾驶员行为以区分不同的驾驶员，以满足各种应用程序的需求。",
+      "type": "solves",
+      "weight": 0.95
+    },
+    {
+      "source": "paper:2102.05843v1",
+      "target": "dataset:null",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "method:d-crnn",
+      "target": "dataset:null",
+      "type": "evaluates_on",
+      "weight": 0.9
+    },
+    {
+      "source": "method:d-crnn",
+      "target": "dataset:null",
+      "type": "achieves",
+      "weight": 0.85
+    },
+    {
+      "source": "paper:2102.05843v1",
+      "target": "contribution:通过预处理输入数据去除偏差（采样不同的轨迹以防止空间记忆）",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "method:d-crnn",
+      "target": "contribution:通过预处理输入数据去除偏差（采样不同的轨迹以防止空间记忆）",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:2102.05843v1",
+      "target": "contribution:分析了不同属性对驾驶员识别的贡献",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "method:d-crnn",
+      "target": "contribution:分析了不同属性对驾驶员识别的贡献",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:2509.23922v1",
+      "target": "task:尽管现有的闭合环路基准依赖于手动配置的交通场景，但这种做法可能与真实世界条件不符，限制了其反映实际驾驶性能的能力。",
+      "type": "applied_to",
+      "weight": 0.8
+    },
+    {
+      "source": "paper:2509.23922v1",
+      "target": "dataset:100小时视频数据集",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "paper:2509.23922v1",
+      "target": "contribution:提出了一个简单而具有挑战性的闭合环路评估框架，将真实世界驾驶场景与carla模拟器紧密结合。",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "paper:2509.23922v1",
+      "target": "contribution:提供了100小时的视频数据集，从中提取了800个动态交通场景。",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "paper:2509.23922v1",
+      "target": "contribution:为真实基础设施传感器创建了15个具有一致视觉外观的静态数字孪生资产。",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "paper:2001.03908v2",
+      "target": "method:occupant s preference metric opm",
+      "type": "proposes",
+      "weight": 1.0
+    },
+    {
+      "source": "paper:2001.03908v2",
+      "target": "task:为了提供个性化舒适的自动驾驶体验，针对用户个性化驾驶偏好制定舒适驾驶标准。",
+      "type": "applied_to",
+      "weight": 0.8
+    },
+    {
+      "source": "method:occupant s preference metric opm",
+      "target": "task:为了提供个性化舒适的自动驾驶体验，针对用户个性化驾驶偏好制定舒适驾驶标准。",
+      "type": "solves",
+      "weight": 0.95
+    },
+    {
+      "source": "paper:2001.03908v2",
+      "target": "contribution:提出occupant s preference metric（opm）定义可接受的加速度和加速度变化率。",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "method:occupant s preference metric opm",
+      "target": "contribution:提出occupant s preference metric（opm）定义可接受的加速度和加速度变化率。",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:2001.03908v2",
+      "target": "contribution:提出一项基于偏好的人机混合自动驾驶控制器，实现舒适自动驾驶。",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "method:occupant s preference metric opm",
+      "target": "contribution:提出一项基于偏好的人机混合自动驾驶控制器，实现舒适自动驾驶。",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:2001.03908v2",
+      "target": "contribution:能够在自动驾驶过程中实现用户个性化的驾驶体验",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "method:occupant s preference metric opm",
+      "target": "contribution:能够在自动驾驶过程中实现用户个性化的驾驶体验",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "method:反常非绝热驱动",
+      "target": "concept:量子控制协议",
+      "type": "proposes",
+      "weight": 1.0
+    },
+    {
+      "source": "method:反常非绝热驱动",
+      "target": "task:量子态传输",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "method:反常非绝热驱动",
+      "target": "task:量子门",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "method:反常非绝热驱动",
+      "target": "concept:超导电路",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "method:反常非绝热驱动",
+      "target": "concept:rydberg原子",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "method:d-crnn",
+      "target": "method:cnn",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "method:d-crnn",
+      "target": "method:rnn",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "method:d-crnn",
+      "target": "task:driver identification",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "method:d-crnn",
+      "target": "concept:bias removal",
+      "type": "improves",
+      "weight": 0.95
+    },
+    {
+      "source": "method:d-crnn",
+      "target": "concept:attribute analysis",
+      "type": "achieves",
+      "weight": 0.85
+    },
+    {
+      "source": "method:drivee2e",
+      "target": "concept:carla",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "method:drivee2e",
+      "target": "concept:infrastructure",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "method:drivee2e",
+      "target": "dataset:100小时视频数据集",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "method:drivee2e",
+      "target": "concept:800动态交通场景",
+      "type": "achieves",
+      "weight": 0.85
+    },
+    {
+      "source": "method:drivee2e",
+      "target": "concept:15个静态数字孪生资产",
+      "type": "achieves",
+      "weight": 0.85
+    },
+    {
+      "source": "method:occupant s preference metric opm",
+      "target": "concept:human driver",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "method:occupant s preference metric opm",
+      "target": "concept:robocar",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "method:occupant s preference metric opm",
+      "target": "task:autonomous vehicle",
+      "type": "applied_to",
+      "weight": 0.8
+    }
+  ],
+  "paper_entities": {
+    "2402.04936v1": [
+      "paper:2402.04936v1",
+      "method:反常非绝热驱动",
+      "task:如何通过有效的反常非绝热驱动实现高保真的量子态传输和量子门操作。",
+      "contribution:开发了一种用于设计量子控制协议的方案，基于渐近绝热捷径在少量级量子系统中的应用。",
+      "contribution:实现了在超导电路到rydberg原子等多个平台中高保真的量子态传输和量子门操作。",
+      "concept:量子控制协议",
+      "task:量子态传输",
+      "task:量子门",
+      "concept:超导电路",
+      "concept:rydberg原子"
+    ],
+    "2102.05843v1": [
+      "paper:2102.05843v1",
+      "method:d-crnn",
+      "task:为了识别驾驶风格，分析驾驶员行为以区分不同的驾驶员，以满足各种应用程序的需求。",
+      "dataset:null",
+      "dataset:null",
+      "contribution:通过预处理输入数据去除偏差（采样不同的轨迹以防止空间记忆）",
+      "contribution:分析了不同属性对驾驶员识别的贡献",
+      "method:cnn",
+      "method:rnn",
+      "task:driver identification",
+      "concept:attribute analysis",
+      "concept:bias removal"
+    ],
+    "2509.23922v1": [
+      "paper:2509.23922v1",
+      "task:尽管现有的闭合环路基准依赖于手动配置的交通场景，但这种做法可能与真实世界条件不符，限制了其反映实际驾驶性能的能力。",
+      "dataset:100小时视频数据集",
+      "contribution:提出了一个简单而具有挑战性的闭合环路评估框架，将真实世界驾驶场景与carla模拟器紧密结合。",
+      "contribution:提供了100小时的视频数据集，从中提取了800个动态交通场景。",
+      "contribution:为真实基础设施传感器创建了15个具有一致视觉外观的静态数字孪生资产。",
+      "method:drivee2e",
+      "concept:carla",
+      "concept:infrastructure",
+      "concept:800动态交通场景",
+      "concept:15个静态数字孪生资产"
+    ],
+    "2001.03908v2": [
+      "paper:2001.03908v2",
+      "method:occupant s preference metric opm",
+      "task:为了提供个性化舒适的自动驾驶体验，针对用户个性化驾驶偏好制定舒适驾驶标准。",
+      "contribution:提出occupant s preference metric（opm）定义可接受的加速度和加速度变化率。",
+      "contribution:提出一项基于偏好的人机混合自动驾驶控制器，实现舒适自动驾驶。",
+      "contribution:能够在自动驾驶过程中实现用户个性化的驾驶体验",
+      "concept:human driver",
+      "concept:robocar",
+      "task:autonomous vehicle"
+    ]
+  },
+  "entity_aliases": {
+    "quantum control by effective counterdiabatic driving": "paper:2402.04936v1",
+    "反常非绝热驱动": "method:反常非绝热驱动",
+    "如何通过有效的反常非绝热驱动实现高保真的量子态传输和量子门操作。": "task:如何通过有效的反常非绝热驱动实现高保真的量子态传输和量子门操作。",
+    "开发了一种用于设计量子控制协议的方案，基于渐近绝热捷径在少量级量子系统中的应用。": "contribution:开发了一种用于设计量子控制协议的方案，基于渐近绝热捷径在少量级量子系统中的应用。",
+    "实现了在超导电路到rydberg原子等多个平台中高保真的量子态传输和量子门操作。": "contribution:实现了在超导电路到rydberg原子等多个平台中高保真的量子态传输和量子门操作。",
+    "driving style representation in convolutional recurrent neural network model of driver identification": "paper:2102.05843v1",
+    "d-crnn": "method:d-crnn",
+    "为了识别驾驶风格，分析驾驶员行为以区分不同的驾驶员，以满足各种应用程序的需求。": "task:为了识别驾驶风格，分析驾驶员行为以区分不同的驾驶员，以满足各种应用程序的需求。",
+    "null": "dataset:null",
+    "通过预处理输入数据去除偏差（采样不同的轨迹以防止空间记忆）": "contribution:通过预处理输入数据去除偏差（采样不同的轨迹以防止空间记忆）",
+    "分析了不同属性对驾驶员识别的贡献": "contribution:分析了不同属性对驾驶员识别的贡献",
+    "drivee2e closed-loop benchmark for end-to-end autonomous driving through real-to-simulation": "paper:2509.23922v1",
+    "尽管现有的闭合环路基准依赖于手动配置的交通场景，但这种做法可能与真实世界条件不符，限制了其反映实际驾驶性能的能力。": "task:尽管现有的闭合环路基准依赖于手动配置的交通场景，但这种做法可能与真实世界条件不符，限制了其反映实际驾驶性能的能力。",
+    "100小时视频数据集": "dataset:100小时视频数据集",
+    "提出了一个简单而具有挑战性的闭合环路评估框架，将真实世界驾驶场景与carla模拟器紧密结合。": "contribution:提出了一个简单而具有挑战性的闭合环路评估框架，将真实世界驾驶场景与carla模拟器紧密结合。",
+    "提供了100小时的视频数据集，从中提取了800个动态交通场景。": "contribution:提供了100小时的视频数据集，从中提取了800个动态交通场景。",
+    "为真实基础设施传感器创建了15个具有一致视觉外观的静态数字孪生资产。": "contribution:为真实基础设施传感器创建了15个具有一致视觉外观的静态数字孪生资产。",
+    "self-driving like a human driver instead of a robocar personalized comfortable driving experience for autonomous vehicles": "paper:2001.03908v2",
+    "occupant s preference metric opm": "method:occupant s preference metric opm",
+    "为了提供个性化舒适的自动驾驶体验，针对用户个性化驾驶偏好制定舒适驾驶标准。": "task:为了提供个性化舒适的自动驾驶体验，针对用户个性化驾驶偏好制定舒适驾驶标准。",
+    "提出occupant s preference metric（opm）定义可接受的加速度和加速度变化率。": "contribution:提出occupant s preference metric（opm）定义可接受的加速度和加速度变化率。",
+    "提出一项基于偏好的人机混合自动驾驶控制器，实现舒适自动驾驶。": "contribution:提出一项基于偏好的人机混合自动驾驶控制器，实现舒适自动驾驶。",
+    "能够在自动驾驶过程中实现用户个性化的驾驶体验": "contribution:能够在自动驾驶过程中实现用户个性化的驾驶体验",
+    "量子控制协议": "concept:量子控制协议",
+    "量子态传输": "task:量子态传输",
+    "量子门": "task:量子门",
+    "超导电路": "concept:超导电路",
+    "rydberg原子": "concept:rydberg原子",
+    "cnn": "method:cnn",
+    "convolutional neural network": "method:cnn",
+    "rnn": "method:rnn",
+    "recurrent neural network": "method:rnn",
+    "driver identification": "task:driver identification",
+    "attribute analysis": "concept:attribute analysis",
+    "bias removal": "concept:bias removal",
+    "drivee2e": "method:drivee2e",
+    "carla": "concept:carla",
+    "infrastructure": "concept:infrastructure",
+    "800动态交通场景": "concept:800动态交通场景",
+    "15个静态数字孪生资产": "concept:15个静态数字孪生资产",
+    "human driver": "concept:human driver",
+    "robocar": "concept:robocar",
+    "autonomous vehicle": "task:autonomous vehicle"
+  },
+  "communities": {
+    "0": {
+      "nodes": [
+        "paper:2402.04936v1",
+        "method:反常非绝热驱动",
+        "task:如何通过有效的反常非绝热驱动实现高保真的量子态传输和量子门操作。",
+        "contribution:开发了一种用于设计量子控制协议的方案，基于渐近绝热捷径在少量级量子系统中的应用。",
+        "contribution:实现了在超导电路到rydberg原子等多个平台中高保真的量子态传输和量子门操作。",
+        "concept:量子控制协议",
+        "task:量子态传输",
+        "task:量子门",
+        "concept:超导电路",
+        "concept:rydberg原子"
+      ],
+      "key_entities": [
+        "Quantum control by effective counterdiabatic driving",
+        "反常非绝热驱动",
+        "如何通过有效的反常非绝热驱动实现高保真的量子态传输和量子门操作。",
+        "开发了一种用于设计量子控制协议的方案，基于渐近绝热捷径在少量级量子系统中的应用。",
+        "实现了在超导电路到Rydberg原子等多个平台中高保真的量子态传输和量子门操作。",
+        "量子控制协议",
+        "量子态传输",
+        "量子门",
+        "超导电路",
+        "Rydberg原子"
+      ],
+      "key_papers": [
+        "Quantum control by effective counterdiabatic driving"
+      ],
+      "dominant_types": [
+        "Task",
+        "Concept",
+        "Contribution"
+      ],
+      "semantic_tag": "Task & Application Cluster",
+      "summary": "",
+      "community_name": "Task & Application Cluster"
+    },
+    "1": {
+      "nodes": [
+        "paper:2102.05843v1",
+        "task:为了识别驾驶风格，分析驾驶员行为以区分不同的驾驶员，以满足各种应用程序的需求。",
+        "contribution:通过预处理输入数据去除偏差（采样不同的轨迹以防止空间记忆）",
+        "contribution:分析了不同属性对驾驶员识别的贡献"
+      ],
+      "key_entities": [
+        "Driving Style Representation in Convolutional Recurrent Neural Network Model of Driver Identification",
+        "为了识别驾驶风格，分析驾驶员行为以区分不同的驾驶员，以满足各种应用程序的需求。",
+        "通过预处理输入数据去除偏差（采样不同的轨迹以防止空间记忆）",
+        "分析了不同属性对驾驶员识别的贡献"
+      ],
+      "key_papers": [
+        "Driving Style Representation in Convolutional Recurrent Neural Network Model of Driver Identification"
+      ],
+      "dominant_types": [
+        "Contribution",
+        "Paper",
+        "Task"
+      ],
+      "semantic_tag": "Research Contributions Cluster",
+      "summary": "",
+      "community_name": "Research Contributions Cluster"
+    },
+    "2": {
+      "nodes": [
+        "method:d-crnn",
+        "dataset:null",
+        "method:cnn",
+        "method:rnn",
+        "task:driver identification",
+        "concept:attribute analysis",
+        "concept:bias removal"
+      ],
+      "key_entities": [
+        "D-CRNN",
+        "null",
+        "CNN",
+        "RNN",
+        "driver identification",
+        "attribute analysis",
+        "bias removal"
+      ],
+      "key_papers": [],
+      "dominant_types": [
+        "Method",
+        "Concept",
+        "Dataset"
+      ],
+      "semantic_tag": "Computer Vision Cluster",
+      "summary": "",
+      "community_name": "Computer Vision Cluster"
+    },
+    "3": {
+      "nodes": [
+        "paper:2509.23922v1",
+        "task:尽管现有的闭合环路基准依赖于手动配置的交通场景，但这种做法可能与真实世界条件不符，限制了其反映实际驾驶性能的能力。",
+        "contribution:提出了一个简单而具有挑战性的闭合环路评估框架，将真实世界驾驶场景与carla模拟器紧密结合。",
+        "contribution:提供了100小时的视频数据集，从中提取了800个动态交通场景。",
+        "contribution:为真实基础设施传感器创建了15个具有一致视觉外观的静态数字孪生资产。"
+      ],
+      "key_entities": [
+        "DriveE2E: Closed-Loop Benchmark for End-to-End Autonomous Driving through Real-to-Simulation",
+        "尽管现有的闭合环路基准依赖于手动配置的交通场景，但这种做法可能与真实世界条件不符，限制了其反映实际驾驶性能的能力。",
+        "提出了一个简单而具有挑战性的闭合环路评估框架，将真实世界驾驶场景与CARLA模拟器紧密结合。",
+        "提供了100小时的视频数据集，从中提取了800个动态交通场景。",
+        "为真实基础设施传感器创建了15个具有一致视觉外观的静态数字孪生资产。"
+      ],
+      "key_papers": [
+        "DriveE2E: Closed-Loop Benchmark for End-to-End Autonomous Driving through Real-to-Simulation"
+      ],
+      "dominant_types": [
+        "Contribution",
+        "Paper",
+        "Task"
+      ],
+      "semantic_tag": "Research Contributions Cluster",
+      "summary": "",
+      "community_name": "Research Contributions Cluster"
+    },
+    "4": {
+      "nodes": [
+        "dataset:100小时视频数据集",
+        "method:drivee2e",
+        "concept:carla",
+        "concept:infrastructure",
+        "concept:800动态交通场景",
+        "concept:15个静态数字孪生资产"
+      ],
+      "key_entities": [
+        "100小时视频数据集",
+        "DriveE2E",
+        "CARLA",
+        "Infrastructure",
+        "800动态交通场景",
+        "15个静态数字孪生资产"
+      ],
+      "key_papers": [],
+      "dominant_types": [
+        "Concept",
+        "Dataset",
+        "Method"
+      ],
+      "semantic_tag": "Benchmark & Dataset Cluster",
+      "summary": "",
+      "community_name": "Benchmark & Dataset Cluster"
+    },
+    "5": {
+      "nodes": [
+        "paper:2001.03908v2",
+        "method:occupant s preference metric opm",
+        "task:为了提供个性化舒适的自动驾驶体验，针对用户个性化驾驶偏好制定舒适驾驶标准。",
+        "contribution:提出occupant s preference metric（opm）定义可接受的加速度和加速度变化率。",
+        "contribution:提出一项基于偏好的人机混合自动驾驶控制器，实现舒适自动驾驶。",
+        "contribution:能够在自动驾驶过程中实现用户个性化的驾驶体验",
+        "concept:human driver",
+        "concept:robocar",
+        "task:autonomous vehicle"
+      ],
+      "key_entities": [
+        "Self-Driving like a Human driver instead of a Robocar: Personalized comfortable driving experience for autonomous vehicles",
+        "Occupant's Preference Metric (OPM)",
+        "为了提供个性化舒适的自动驾驶体验，针对用户个性化驾驶偏好制定舒适驾驶标准。",
+        "提出Occupant's Preference Metric（OPM）定义可接受的加速度和加速度变化率。",
+        "提出一项基于偏好的人机混合自动驾驶控制器，实现舒适自动驾驶。",
+        "能够在自动驾驶过程中实现用户个性化的驾驶体验",
+        "human driver",
+        "Robocar",
+        "autonomous vehicle"
+      ],
+      "key_papers": [
+        "Self-Driving like a Human driver instead of a Robocar: Personalized comfortable driving experience for autonomous vehicles"
+      ],
+      "dominant_types": [
+        "Contribution",
+        "Task",
+        "Concept"
+      ],
+      "semantic_tag": "Research Contributions Cluster",
+      "summary": "",
+      "community_name": "Research Contributions Cluster"
+    }
+  },
+  "citation_graph": {},
+  "stats": {
+    "node_count": 41,
+    "edge_count": 49,
+    "node_type_count": {
+      "Paper": 4,
+      "Method": 6,
+      "Task": 8,
+      "Contribution": 10,
+      "Dataset": 2,
+      "Concept": 11
+    },
+    "paper_count": 4,
+    "community_count": 0,
+    "citation_edge_count": 0
+  }
+}

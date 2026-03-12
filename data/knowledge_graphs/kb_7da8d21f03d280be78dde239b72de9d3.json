@@ -1,0 +1,713 @@
+{
+  "db_id": "kb_7da8d21f03d280be78dde239b72de9d3",
+  "nodes": {
+    "paper:2402.04936v1": {
+      "id": "paper:2402.04936v1",
+      "type": "Paper",
+      "label": "Quantum control by effective counterdiabatic driving",
+      "norm_label": "quantum control by effective counterdiabatic driving"
+    },
+    "method:基于捷径到绝热性的方案": {
+      "id": "method:基于捷径到绝热性的方案",
+      "type": "Method",
+      "label": "基于捷径到绝热性的方案",
+      "norm_label": "基于捷径到绝热性的方案"
+    },
+    "task:在少能级量子系统中系统地设计量子控制协议。": {
+      "id": "task:在少能级量子系统中系统地设计量子控制协议。",
+      "type": "Task",
+      "label": "在少能级量子系统中系统地设计量子控制协议。",
+      "norm_label": "在少能级量子系统中系统地设计量子控制协议。"
+    },
+    "finding:提出了高效的量子状态传输和量子门实现方案。": {
+      "id": "finding:提出了高效的量子状态传输和量子门实现方案。",
+      "type": "Finding",
+      "label": "提出了高效的量子状态传输和量子门实现方案。",
+      "norm_label": "提出了高效的量子状态传输和量子门实现方案。"
+    },
+    "finding:适用于从超导电路到 rydberg 原子的不同平台。": {
+      "id": "finding:适用于从超导电路到 rydberg 原子的不同平台。",
+      "type": "Finding",
+      "label": "适用于从超导电路到 Rydberg 原子的不同平台。",
+      "norm_label": "适用于从超导电路到 rydberg 原子的不同平台。"
+    },
+    "paper:2102.05843v1": {
+      "id": "paper:2102.05843v1",
+      "type": "Paper",
+      "label": "Driving Style Representation in Convolutional Recurrent Neural Network Model of Driver Identification",
+      "norm_label": "driving style representation in convolutional recurrent neural network model of driver identification"
+    },
+    "method:d-crnn": {
+      "id": "method:d-crnn",
+      "type": "Method",
+      "label": "D-CRNN",
+      "norm_label": "d-crnn"
+    },
+    "dataset:null": {
+      "id": "dataset:null",
+      "type": "Dataset",
+      "label": "null",
+      "norm_label": "null"
+    },
+    "metric:null": {
+      "id": "metric:null",
+      "type": "Metric",
+      "label": "null",
+      "norm_label": "null"
+    },
+    "task:为了识别驾驶风格，即分析驾驶员行为以捕捉区分不同驾驶员的差异，以支持不同类型的应用，如使用费率保险，驾驶员指导，驾驶员行动预测，甚至在设计自动驾驶车辆时，因为驾驶风格包含了这些应用所需的关键信息。": {
+      "id": "task:为了识别驾驶风格，即分析驾驶员行为以捕捉区分不同驾驶员的差异，以支持不同类型的应用，如使用费率保险，驾驶员指导，驾驶员行动预测，甚至在设计自动驾驶车辆时，因为驾驶风格包含了这些应用所需的关键信息。",
+      "type": "Task",
+      "label": "为了识别驾驶风格，即分析驾驶员行为以捕捉区分不同驾驶员的差异，以支持不同类型的应用，如使用费率保险，驾驶员指导，驾驶员行动预测，甚至在设计自动驾驶车辆时，因为驾驶风格包含了这些应用所需的关键信息。",
+      "norm_label": "为了识别驾驶风格，即分析驾驶员行为以捕捉区分不同驾驶员的差异，以支持不同类型的应用，如使用费率保险，驾驶员指导，驾驶员行动预测，甚至在设计自动驾驶车辆时，因为驾驶风格包含了这些应用所需的关键信息。"
+    },
+    "finding:提出了d-crnn模型用于构建驾驶风格的高保真表示。": {
+      "id": "finding:提出了d-crnn模型用于构建驾驶风格的高保真表示。",
+      "type": "Finding",
+      "label": "提出了D-CRNN模型用于构建驾驶风格的高保真表示。",
+      "norm_label": "提出了d-crnn模型用于构建驾驶风格的高保真表示。"
+    },
+    "finding:展示了如何通过采样每个驾驶员的不相似轨迹来预处理输入数据，以防止空间记忆。": {
+      "id": "finding:展示了如何通过采样每个驾驶员的不相似轨迹来预处理输入数据，以防止空间记忆。",
+      "type": "Finding",
+      "label": "展示了如何通过采样每个驾驶员的不相似轨迹来预处理输入数据，以防止空间记忆。",
+      "norm_label": "展示了如何通过采样每个驾驶员的不相似轨迹来预处理输入数据，以防止空间记忆。"
+    },
+    "finding:分析了不同特征对驾驶员识别的贡献，发现发动机转速、速度和加速度是最佳特征组合。": {
+      "id": "finding:分析了不同特征对驾驶员识别的贡献，发现发动机转速、速度和加速度是最佳特征组合。",
+      "type": "Finding",
+      "label": "分析了不同特征对驾驶员识别的贡献，发现发动机转速、速度和加速度是最佳特征组合。",
+      "norm_label": "分析了不同特征对驾驶员识别的贡献，发现发动机转速、速度和加速度是最佳特征组合。"
+    },
+    "paper:2509.23922v1": {
+      "id": "paper:2509.23922v1",
+      "type": "Paper",
+      "label": "DriveE2E: Closed-Loop Benchmark for End-to-End Autonomous Driving through Real-to-Simulation",
+      "norm_label": "drivee2e closed-loop benchmark for end-to-end autonomous driving through real-to-simulation"
+    },
+    "method:drivee2e": {
+      "id": "method:drivee2e",
+      "type": "Method",
+      "label": "DriveE2E",
+      "norm_label": "drivee2e"
+    },
+    "dataset:100小时高举传感器获取的各类视图数据集": {
+      "id": "dataset:100小时高举传感器获取的各类视图数据集",
+      "type": "Dataset",
+      "label": "100小时高举传感器获取的各类视图数据集",
+      "norm_label": "100小时高举传感器获取的各类视图数据集"
+    },
+    "task:尽管现有的闭环基准依赖于手动配置的交通场景，与现实世界条件存在差异，限制了其评估自动驾驶实际表现的能力，为了更好地评估端到端自动驾驶模型的真实驾驶性能。": {
+      "id": "task:尽管现有的闭环基准依赖于手动配置的交通场景，与现实世界条件存在差异，限制了其评估自动驾驶实际表现的能力，为了更好地评估端到端自动驾驶模型的真实驾驶性能。",
+      "type": "Task",
+      "label": "尽管现有的闭环基准依赖于手动配置的交通场景，与现实世界条件存在差异，限制了其评估自动驾驶实际表现的能力，为了更好地评估端到端自动驾驶模型的真实驾驶性能。",
+      "norm_label": "尽管现有的闭环基准依赖于手动配置的交通场景，与现实世界条件存在差异，限制了其评估自动驾驶实际表现的能力，为了更好地评估端到端自动驾驶模型的真实驾驶性能。"
+    },
+    "finding:提出了端到端自动驾驶的闭环评估框架drivee2e。": {
+      "id": "finding:提出了端到端自动驾驶的闭环评估框架drivee2e。",
+      "type": "Finding",
+      "label": "提出了端到端自动驾驶的闭环评估框架DriveE2E。",
+      "norm_label": "提出了端到端自动驾驶的闭环评估框架drivee2e。"
+    },
+    "finding:结合基础设施合作，将现实世界中的多样行驶行为、地点、天气和时间等因素充分融入carla模拟器。": {
+      "id": "finding:结合基础设施合作，将现实世界中的多样行驶行为、地点、天气和时间等因素充分融入carla模拟器。",
+      "type": "Finding",
+      "label": "结合基础设施合作，将现实世界中的多样行驶行为、地点、天气和时间等因素充分融入CARLA模拟器。",
+      "norm_label": "结合基础设施合作，将现实世界中的多样行驶行为、地点、天气和时间等因素充分融入carla模拟器。"
+    },
+    "finding:创建了15个具有真实外观的交叉路口静态孪生资产，准确反映实际交叉路口的交通和环境特征。": {
+      "id": "finding:创建了15个具有真实外观的交叉路口静态孪生资产，准确反映实际交叉路口的交通和环境特征。",
+      "type": "Finding",
+      "label": "创建了15个具有真实外观的交叉路口静态孪生资产，准确反映实际交叉路口的交通和环境特征。",
+      "norm_label": "创建了15个具有真实外观的交叉路口静态孪生资产，准确反映实际交叉路口的交通和环境特征。"
+    },
+    "paper:2001.03908v2": {
+      "id": "paper:2001.03908v2",
+      "type": "Paper",
+      "label": "Self-Driving like a Human driver instead of a Robocar: Personalized comfortable driving experience for autonomous vehicles",
+      "norm_label": "self-driving like a human driver instead of a robocar personalized comfortable driving experience for autonomous vehicles"
+    },
+    "task:尽管现有的自动驾驶汽车只提供标准化的驾驶体验，但为了提供个性化的舒适驾驶体验给乘客。": {
+      "id": "task:尽管现有的自动驾驶汽车只提供标准化的驾驶体验，但为了提供个性化的舒适驾驶体验给乘客。",
+      "type": "Task",
+      "label": "尽管现有的自动驾驶汽车只提供标准化的驾驶体验，但为了提供个性化的舒适驾驶体验给乘客。",
+      "norm_label": "尽管现有的自动驾驶汽车只提供标准化的驾驶体验，但为了提供个性化的舒适驾驶体验给乘客。"
+    },
+    "finding:提出了occupant s preference metric opm 来定义乘客的偏好的横向和纵向加速度区域及最大允许冲击力。": {
+      "id": "finding:提出了occupant s preference metric opm 来定义乘客的偏好的横向和纵向加速度区域及最大允许冲击力。",
+      "type": "Finding",
+      "label": "提出了Occupant's Preference Metric (OPM) 来定义乘客的偏好的横向和纵向加速度区域及最大允许冲击力。",
+      "norm_label": "提出了occupant s preference metric opm 来定义乘客的偏好的横向和纵向加速度区域及最大允许冲击力。"
+    },
+    "finding:提出了基于乘客偏好的自动驾驶控制器来实现对车辆的横向和纵向控制。": {
+      "id": "finding:提出了基于乘客偏好的自动驾驶控制器来实现对车辆的横向和纵向控制。",
+      "type": "Finding",
+      "label": "提出了基于乘客偏好的自动驾驶控制器来实现对车辆的横向和纵向控制。",
+      "norm_label": "提出了基于乘客偏好的自动驾驶控制器来实现对车辆的横向和纵向控制。"
+    },
+    "finding:通过模拟和实验结果证明了该系统可以实现个性化的自动驾驶，使车辆驾驶行为像人类驾驶员。": {
+      "id": "finding:通过模拟和实验结果证明了该系统可以实现个性化的自动驾驶，使车辆驾驶行为像人类驾驶员。",
+      "type": "Finding",
+      "label": "通过模拟和实验结果证明了该系统可以实现个性化的自动驾驶，使车辆驾驶行为像人类驾驶员。",
+      "norm_label": "通过模拟和实验结果证明了该系统可以实现个性化的自动驾驶，使车辆驾驶行为像人类驾驶员。"
+    },
+    "concept:超导电路": {
+      "id": "concept:超导电路",
+      "type": "Concept",
+      "label": "超导电路",
+      "norm_label": "超导电路"
+    },
+    "concept:rydberg 原子": {
+      "id": "concept:rydberg 原子",
+      "type": "Concept",
+      "label": "Rydberg 原子",
+      "norm_label": "rydberg 原子"
+    },
+    "method:cnn": {
+      "id": "method:cnn",
+      "type": "Method",
+      "label": "CNN",
+      "norm_label": "cnn"
+    },
+    "method:rnn": {
+      "id": "method:rnn",
+      "type": "Method",
+      "label": "RNN",
+      "norm_label": "rnn"
+    },
+    "concept:driving style": {
+      "id": "concept:driving style",
+      "type": "Concept",
+      "label": "Driving Style",
+      "norm_label": "driving style"
+    },
+    "task:driver identification": {
+      "id": "task:driver identification",
+      "type": "Task",
+      "label": "Driver Identification",
+      "norm_label": "driver identification"
+    },
+    "concept:engine rpm": {
+      "id": "concept:engine rpm",
+      "type": "Concept",
+      "label": "Engine RPM",
+      "norm_label": "engine rpm"
+    },
+    "concept:speed": {
+      "id": "concept:speed",
+      "type": "Concept",
+      "label": "Speed",
+      "norm_label": "speed"
+    },
+    "concept:acceleration": {
+      "id": "concept:acceleration",
+      "type": "Concept",
+      "label": "Acceleration",
+      "norm_label": "acceleration"
+    },
+    "concept:carla": {
+      "id": "concept:carla",
+      "type": "Concept",
+      "label": "CARLA",
+      "norm_label": "carla"
+    },
+    "concept:occupant s preference metric opm": {
+      "id": "concept:occupant s preference metric opm",
+      "type": "Concept",
+      "label": "Occupant's Preference Metric (OPM)",
+      "norm_label": "occupant s preference metric opm"
+    },
+    "task:personalized comfortable driving experience": {
+      "id": "task:personalized comfortable driving experience",
+      "type": "Task",
+      "label": "personalized comfortable driving experience",
+      "norm_label": "personalized comfortable driving experience"
+    },
+    "task:autonomous vehicle": {
+      "id": "task:autonomous vehicle",
+      "type": "Task",
+      "label": "autonomous vehicle",
+      "norm_label": "autonomous vehicle"
+    },
+    "dataset:simulation and experimental results": {
+      "id": "dataset:simulation and experimental results",
+      "type": "Dataset",
+      "label": "Simulation and Experimental Results",
+      "norm_label": "simulation and experimental results"
+    },
+    "concept:admissible acceleration and jerk criteria": {
+      "id": "concept:admissible acceleration and jerk criteria",
+      "type": "Concept",
+      "label": "admissible acceleration and jerk criteria",
+      "norm_label": "admissible acceleration and jerk criteria"
+    }
+  },
+  "edges": [
+    {
+      "source": "paper:2402.04936v1",
+      "target": "method:基于捷径到绝热性的方案",
+      "type": "proposes",
+      "weight": 1.0
+    },
+    {
+      "source": "paper:2402.04936v1",
+      "target": "task:在少能级量子系统中系统地设计量子控制协议。",
+      "type": "applied_to",
+      "weight": 0.8
+    },
+    {
+      "source": "paper:2402.04936v1",
+      "target": "finding:提出了高效的量子状态传输和量子门实现方案。",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:2402.04936v1",
+      "target": "finding:适用于从超导电路到 rydberg 原子的不同平台。",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:2102.05843v1",
+      "target": "method:d-crnn",
+      "type": "proposes",
+      "weight": 1.0
+    },
+    {
+      "source": "paper:2102.05843v1",
+      "target": "dataset:null",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "method:d-crnn",
+      "target": "dataset:null",
+      "type": "evaluates_on",
+      "weight": 0.9
+    },
+    {
+      "source": "method:d-crnn",
+      "target": "metric:null",
+      "type": "achieves",
+      "weight": 0.85
+    },
+    {
+      "source": "paper:2102.05843v1",
+      "target": "task:为了识别驾驶风格，即分析驾驶员行为以捕捉区分不同驾驶员的差异，以支持不同类型的应用，如使用费率保险，驾驶员指导，驾驶员行动预测，甚至在设计自动驾驶车辆时，因为驾驶风格包含了这些应用所需的关键信息。",
+      "type": "applied_to",
+      "weight": 0.8
+    },
+    {
+      "source": "paper:2102.05843v1",
+      "target": "finding:提出了d-crnn模型用于构建驾驶风格的高保真表示。",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:2102.05843v1",
+      "target": "finding:展示了如何通过采样每个驾驶员的不相似轨迹来预处理输入数据，以防止空间记忆。",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:2102.05843v1",
+      "target": "finding:分析了不同特征对驾驶员识别的贡献，发现发动机转速、速度和加速度是最佳特征组合。",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:2509.23922v1",
+      "target": "method:drivee2e",
+      "type": "proposes",
+      "weight": 1.0
+    },
+    {
+      "source": "paper:2509.23922v1",
+      "target": "dataset:100小时高举传感器获取的各类视图数据集",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "method:drivee2e",
+      "target": "dataset:100小时高举传感器获取的各类视图数据集",
+      "type": "evaluates_on",
+      "weight": 0.9
+    },
+    {
+      "source": "paper:2509.23922v1",
+      "target": "task:尽管现有的闭环基准依赖于手动配置的交通场景，与现实世界条件存在差异，限制了其评估自动驾驶实际表现的能力，为了更好地评估端到端自动驾驶模型的真实驾驶性能。",
+      "type": "applied_to",
+      "weight": 0.8
+    },
+    {
+      "source": "paper:2509.23922v1",
+      "target": "finding:提出了端到端自动驾驶的闭环评估框架drivee2e。",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:2509.23922v1",
+      "target": "finding:结合基础设施合作，将现实世界中的多样行驶行为、地点、天气和时间等因素充分融入carla模拟器。",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:2509.23922v1",
+      "target": "finding:创建了15个具有真实外观的交叉路口静态孪生资产，准确反映实际交叉路口的交通和环境特征。",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:2001.03908v2",
+      "target": "task:尽管现有的自动驾驶汽车只提供标准化的驾驶体验，但为了提供个性化的舒适驾驶体验给乘客。",
+      "type": "applied_to",
+      "weight": 0.8
+    },
+    {
+      "source": "paper:2001.03908v2",
+      "target": "finding:提出了occupant s preference metric opm 来定义乘客的偏好的横向和纵向加速度区域及最大允许冲击力。",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:2001.03908v2",
+      "target": "finding:提出了基于乘客偏好的自动驾驶控制器来实现对车辆的横向和纵向控制。",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:2001.03908v2",
+      "target": "finding:通过模拟和实验结果证明了该系统可以实现个性化的自动驾驶，使车辆驾驶行为像人类驾驶员。",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "method:基于捷径到绝热性的方案",
+      "target": "concept:超导电路",
+      "type": "applied_to",
+      "weight": 0.8
+    },
+    {
+      "source": "method:基于捷径到绝热性的方案",
+      "target": "concept:rydberg 原子",
+      "type": "applied_to",
+      "weight": 0.8
+    },
+    {
+      "source": "method:d-crnn",
+      "target": "method:cnn",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "method:d-crnn",
+      "target": "method:rnn",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "method:d-crnn",
+      "target": "concept:driving style",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "method:d-crnn",
+      "target": "task:driver identification",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "method:d-crnn",
+      "target": "concept:engine rpm",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "method:d-crnn",
+      "target": "concept:speed",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "method:d-crnn",
+      "target": "concept:acceleration",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "method:drivee2e",
+      "target": "concept:carla",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "method:drivee2e",
+      "target": "dataset:100小时高举传感器获取的各类视图数据集",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "concept:occupant s preference metric opm",
+      "target": "task:personalized comfortable driving experience",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "concept:occupant s preference metric opm",
+      "target": "task:autonomous vehicle",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "concept:admissible acceleration and jerk criteria",
+      "target": "dataset:simulation and experimental results",
+      "type": "evaluates_on",
+      "weight": 0.9
+    }
+  ],
+  "paper_entities": {
+    "2402.04936v1": [
+      "paper:2402.04936v1",
+      "method:基于捷径到绝热性的方案",
+      "task:在少能级量子系统中系统地设计量子控制协议。",
+      "finding:提出了高效的量子状态传输和量子门实现方案。",
+      "finding:适用于从超导电路到 rydberg 原子的不同平台。",
+      "concept:超导电路",
+      "concept:rydberg 原子"
+    ],
+    "2102.05843v1": [
+      "paper:2102.05843v1",
+      "method:d-crnn",
+      "dataset:null",
+      "metric:null",
+      "task:为了识别驾驶风格，即分析驾驶员行为以捕捉区分不同驾驶员的差异，以支持不同类型的应用，如使用费率保险，驾驶员指导，驾驶员行动预测，甚至在设计自动驾驶车辆时，因为驾驶风格包含了这些应用所需的关键信息。",
+      "finding:提出了d-crnn模型用于构建驾驶风格的高保真表示。",
+      "finding:展示了如何通过采样每个驾驶员的不相似轨迹来预处理输入数据，以防止空间记忆。",
+      "finding:分析了不同特征对驾驶员识别的贡献，发现发动机转速、速度和加速度是最佳特征组合。",
+      "method:cnn",
+      "method:rnn",
+      "concept:driving style",
+      "task:driver identification",
+      "concept:engine rpm",
+      "concept:speed",
+      "concept:acceleration"
+    ],
+    "2509.23922v1": [
+      "paper:2509.23922v1",
+      "method:drivee2e",
+      "dataset:100小时高举传感器获取的各类视图数据集",
+      "task:尽管现有的闭环基准依赖于手动配置的交通场景，与现实世界条件存在差异，限制了其评估自动驾驶实际表现的能力，为了更好地评估端到端自动驾驶模型的真实驾驶性能。",
+      "finding:提出了端到端自动驾驶的闭环评估框架drivee2e。",
+      "finding:结合基础设施合作，将现实世界中的多样行驶行为、地点、天气和时间等因素充分融入carla模拟器。",
+      "finding:创建了15个具有真实外观的交叉路口静态孪生资产，准确反映实际交叉路口的交通和环境特征。",
+      "concept:carla"
+    ],
+    "2001.03908v2": [
+      "paper:2001.03908v2",
+      "task:尽管现有的自动驾驶汽车只提供标准化的驾驶体验，但为了提供个性化的舒适驾驶体验给乘客。",
+      "finding:提出了occupant s preference metric opm 来定义乘客的偏好的横向和纵向加速度区域及最大允许冲击力。",
+      "finding:提出了基于乘客偏好的自动驾驶控制器来实现对车辆的横向和纵向控制。",
+      "finding:通过模拟和实验结果证明了该系统可以实现个性化的自动驾驶，使车辆驾驶行为像人类驾驶员。",
+      "concept:occupant s preference metric opm",
+      "task:personalized comfortable driving experience",
+      "task:autonomous vehicle",
+      "dataset:simulation and experimental results",
+      "concept:admissible acceleration and jerk criteria"
+    ]
+  },
+  "entity_aliases": {
+    "quantum control by effective counterdiabatic driving": "paper:2402.04936v1",
+    "基于捷径到绝热性的方案": "method:基于捷径到绝热性的方案",
+    "在少能级量子系统中系统地设计量子控制协议。": "task:在少能级量子系统中系统地设计量子控制协议。",
+    "提出了高效的量子状态传输和量子门实现方案。": "finding:提出了高效的量子状态传输和量子门实现方案。",
+    "适用于从超导电路到 rydberg 原子的不同平台。": "finding:适用于从超导电路到 rydberg 原子的不同平台。",
+    "driving style representation in convolutional recurrent neural network model of driver identification": "paper:2102.05843v1",
+    "d-crnn": "method:d-crnn",
+    "null": "metric:null",
+    "为了识别驾驶风格，即分析驾驶员行为以捕捉区分不同驾驶员的差异，以支持不同类型的应用，如使用费率保险，驾驶员指导，驾驶员行动预测，甚至在设计自动驾驶车辆时，因为驾驶风格包含了这些应用所需的关键信息。": "task:为了识别驾驶风格，即分析驾驶员行为以捕捉区分不同驾驶员的差异，以支持不同类型的应用，如使用费率保险，驾驶员指导，驾驶员行动预测，甚至在设计自动驾驶车辆时，因为驾驶风格包含了这些应用所需的关键信息。",
+    "提出了d-crnn模型用于构建驾驶风格的高保真表示。": "finding:提出了d-crnn模型用于构建驾驶风格的高保真表示。",
+    "展示了如何通过采样每个驾驶员的不相似轨迹来预处理输入数据，以防止空间记忆。": "finding:展示了如何通过采样每个驾驶员的不相似轨迹来预处理输入数据，以防止空间记忆。",
+    "分析了不同特征对驾驶员识别的贡献，发现发动机转速、速度和加速度是最佳特征组合。": "finding:分析了不同特征对驾驶员识别的贡献，发现发动机转速、速度和加速度是最佳特征组合。",
+    "drivee2e closed-loop benchmark for end-to-end autonomous driving through real-to-simulation": "paper:2509.23922v1",
+    "drivee2e": "method:drivee2e",
+    "100小时高举传感器获取的各类视图数据集": "dataset:100小时高举传感器获取的各类视图数据集",
+    "尽管现有的闭环基准依赖于手动配置的交通场景，与现实世界条件存在差异，限制了其评估自动驾驶实际表现的能力，为了更好地评估端到端自动驾驶模型的真实驾驶性能。": "task:尽管现有的闭环基准依赖于手动配置的交通场景，与现实世界条件存在差异，限制了其评估自动驾驶实际表现的能力，为了更好地评估端到端自动驾驶模型的真实驾驶性能。",
+    "提出了端到端自动驾驶的闭环评估框架drivee2e。": "finding:提出了端到端自动驾驶的闭环评估框架drivee2e。",
+    "结合基础设施合作，将现实世界中的多样行驶行为、地点、天气和时间等因素充分融入carla模拟器。": "finding:结合基础设施合作，将现实世界中的多样行驶行为、地点、天气和时间等因素充分融入carla模拟器。",
+    "创建了15个具有真实外观的交叉路口静态孪生资产，准确反映实际交叉路口的交通和环境特征。": "finding:创建了15个具有真实外观的交叉路口静态孪生资产，准确反映实际交叉路口的交通和环境特征。",
+    "self-driving like a human driver instead of a robocar personalized comfortable driving experience for autonomous vehicles": "paper:2001.03908v2",
+    "尽管现有的自动驾驶汽车只提供标准化的驾驶体验，但为了提供个性化的舒适驾驶体验给乘客。": "task:尽管现有的自动驾驶汽车只提供标准化的驾驶体验，但为了提供个性化的舒适驾驶体验给乘客。",
+    "提出了occupant s preference metric opm 来定义乘客的偏好的横向和纵向加速度区域及最大允许冲击力。": "finding:提出了occupant s preference metric opm 来定义乘客的偏好的横向和纵向加速度区域及最大允许冲击力。",
+    "提出了基于乘客偏好的自动驾驶控制器来实现对车辆的横向和纵向控制。": "finding:提出了基于乘客偏好的自动驾驶控制器来实现对车辆的横向和纵向控制。",
+    "通过模拟和实验结果证明了该系统可以实现个性化的自动驾驶，使车辆驾驶行为像人类驾驶员。": "finding:通过模拟和实验结果证明了该系统可以实现个性化的自动驾驶，使车辆驾驶行为像人类驾驶员。",
+    "超导电路": "concept:超导电路",
+    "rydberg 原子": "concept:rydberg 原子",
+    "cnn": "method:cnn",
+    "rnn": "method:rnn",
+    "driving style": "concept:driving style",
+    "driver identification": "task:driver identification",
+    "engine rpm": "concept:engine rpm",
+    "speed": "concept:speed",
+    "acceleration": "concept:acceleration",
+    "carla": "concept:carla",
+    "occupant s preference metric opm": "concept:occupant s preference metric opm",
+    "personalized comfortable driving experience": "task:personalized comfortable driving experience",
+    "autonomous vehicle": "task:autonomous vehicle",
+    "simulation and experimental results": "dataset:simulation and experimental results",
+    "admissible acceleration and jerk criteria": "concept:admissible acceleration and jerk criteria"
+  },
+  "communities": {
+    "0": {
+      "nodes": [
+        "paper:2402.04936v1",
+        "method:基于捷径到绝热性的方案",
+        "task:在少能级量子系统中系统地设计量子控制协议。",
+        "finding:提出了高效的量子状态传输和量子门实现方案。",
+        "finding:适用于从超导电路到 rydberg 原子的不同平台。",
+        "concept:超导电路",
+        "concept:rydberg 原子"
+      ],
+      "key_entities": [
+        "Quantum control by effective counterdiabatic driving",
+        "基于捷径到绝热性的方案",
+        "在少能级量子系统中系统地设计量子控制协议。",
+        "提出了高效的量子状态传输和量子门实现方案。",
+        "适用于从超导电路到 Rydberg 原子的不同平台。",
+        "超导电路",
+        "Rydberg 原子"
+      ],
+      "summary": ""
+    },
+    "1": {
+      "nodes": [
+        "paper:2102.05843v1",
+        "dataset:null",
+        "task:为了识别驾驶风格，即分析驾驶员行为以捕捉区分不同驾驶员的差异，以支持不同类型的应用，如使用费率保险，驾驶员指导，驾驶员行动预测，甚至在设计自动驾驶车辆时，因为驾驶风格包含了这些应用所需的关键信息。",
+        "finding:提出了d-crnn模型用于构建驾驶风格的高保真表示。",
+        "finding:展示了如何通过采样每个驾驶员的不相似轨迹来预处理输入数据，以防止空间记忆。",
+        "finding:分析了不同特征对驾驶员识别的贡献，发现发动机转速、速度和加速度是最佳特征组合。"
+      ],
+      "key_entities": [
+        "Driving Style Representation in Convolutional Recurrent Neural Network Model of Driver Identification",
+        "null",
+        "为了识别驾驶风格，即分析驾驶员行为以捕捉区分不同驾驶员的差异，以支持不同类型的应用，如使用费率保险，驾驶员指导，驾驶员行动预测，甚至在设计自动驾驶车辆时，因为驾驶风格包含了这些应用所需的关键信息。",
+        "提出了D-CRNN模型用于构建驾驶风格的高保真表示。",
+        "展示了如何通过采样每个驾驶员的不相似轨迹来预处理输入数据，以防止空间记忆。",
+        "分析了不同特征对驾驶员识别的贡献，发现发动机转速、速度和加速度是最佳特征组合。"
+      ],
+      "summary": ""
+    },
+    "2": {
+      "nodes": [
+        "method:d-crnn",
+        "metric:null",
+        "method:cnn",
+        "method:rnn",
+        "concept:driving style",
+        "task:driver identification",
+        "concept:engine rpm",
+        "concept:speed",
+        "concept:acceleration"
+      ],
+      "key_entities": [
+        "D-CRNN",
+        "null",
+        "CNN",
+        "RNN",
+        "Driving Style",
+        "Driver Identification",
+        "Engine RPM",
+        "Speed",
+        "Acceleration"
+      ],
+      "summary": ""
+    },
+    "3": {
+      "nodes": [
+        "paper:2509.23922v1",
+        "task:尽管现有的闭环基准依赖于手动配置的交通场景，与现实世界条件存在差异，限制了其评估自动驾驶实际表现的能力，为了更好地评估端到端自动驾驶模型的真实驾驶性能。",
+        "finding:提出了端到端自动驾驶的闭环评估框架drivee2e。",
+        "finding:结合基础设施合作，将现实世界中的多样行驶行为、地点、天气和时间等因素充分融入carla模拟器。",
+        "finding:创建了15个具有真实外观的交叉路口静态孪生资产，准确反映实际交叉路口的交通和环境特征。"
+      ],
+      "key_entities": [
+        "DriveE2E: Closed-Loop Benchmark for End-to-End Autonomous Driving through Real-to-Simulation",
+        "尽管现有的闭环基准依赖于手动配置的交通场景，与现实世界条件存在差异，限制了其评估自动驾驶实际表现的能力，为了更好地评估端到端自动驾驶模型的真实驾驶性能。",
+        "提出了端到端自动驾驶的闭环评估框架DriveE2E。",
+        "结合基础设施合作，将现实世界中的多样行驶行为、地点、天气和时间等因素充分融入CARLA模拟器。",
+        "创建了15个具有真实外观的交叉路口静态孪生资产，准确反映实际交叉路口的交通和环境特征。"
+      ],
+      "summary": ""
+    },
+    "4": {
+      "nodes": [
+        "method:drivee2e",
+        "dataset:100小时高举传感器获取的各类视图数据集",
+        "concept:carla"
+      ],
+      "key_entities": [
+        "DriveE2E",
+        "100小时高举传感器获取的各类视图数据集",
+        "CARLA"
+      ],
+      "summary": ""
+    },
+    "5": {
+      "nodes": [
+        "paper:2001.03908v2",
+        "task:尽管现有的自动驾驶汽车只提供标准化的驾驶体验，但为了提供个性化的舒适驾驶体验给乘客。",
+        "finding:提出了occupant s preference metric opm 来定义乘客的偏好的横向和纵向加速度区域及最大允许冲击力。",
+        "finding:提出了基于乘客偏好的自动驾驶控制器来实现对车辆的横向和纵向控制。",
+        "finding:通过模拟和实验结果证明了该系统可以实现个性化的自动驾驶，使车辆驾驶行为像人类驾驶员。"
+      ],
+      "key_entities": [
+        "Self-Driving like a Human driver instead of a Robocar: Personalized comfortable driving experience for autonomous vehicles",
+        "尽管现有的自动驾驶汽车只提供标准化的驾驶体验，但为了提供个性化的舒适驾驶体验给乘客。",
+        "提出了Occupant's Preference Metric (OPM) 来定义乘客的偏好的横向和纵向加速度区域及最大允许冲击力。",
+        "提出了基于乘客偏好的自动驾驶控制器来实现对车辆的横向和纵向控制。",
+        "通过模拟和实验结果证明了该系统可以实现个性化的自动驾驶，使车辆驾驶行为像人类驾驶员。"
+      ],
+      "summary": ""
+    },
+    "6": {
+      "nodes": [
+        "concept:occupant s preference metric opm",
+        "task:personalized comfortable driving experience",
+        "task:autonomous vehicle"
+      ],
+      "key_entities": [
+        "Occupant's Preference Metric (OPM)",
+        "personalized comfortable driving experience",
+        "autonomous vehicle"
+      ],
+      "summary": ""
+    },
+    "7": {
+      "nodes": [
+        "dataset:simulation and experimental results",
+        "concept:admissible acceleration and jerk criteria"
+      ],
+      "key_entities": [
+        "Simulation and Experimental Results",
+        "admissible acceleration and jerk criteria"
+      ],
+      "summary": ""
+    }
+  },
+  "stats": {
+    "node_count": 40,
+    "edge_count": 37,
+    "node_type_count": {
+      "Paper": 4,
+      "Method": 5,
+      "Task": 7,
+      "Finding": 11,
+      "Dataset": 3,
+      "Metric": 1,
+      "Concept": 9
+    },
+    "paper_count": 4,
+    "community_count": 0
+  }
+}

@@ -1,0 +1,978 @@
+{
+  "db_id": "kb_3097b00559ab4f0c21a99a0bdfd33ccd",
+  "nodes": {
+    "paper:1111.2281v1": {
+      "id": "paper:1111.2281v1",
+      "type": "Paper",
+      "label": "IVOA Recommendation: Data Model for Astronomical DataSet Characterisation",
+      "norm_label": "ivoa recommendation data model for astronomical dataset characterisation"
+    },
+    "task:提供描述观测或模拟天体数据集的高层次元数据，以便于数据发现和科学解读。": {
+      "id": "task:提供描述观测或模拟天体数据集的高层次元数据，以便于数据发现和科学解读。",
+      "type": "Task",
+      "label": "提供描述观测或模拟天体数据集的高层次元数据，以便于数据发现和科学解读。",
+      "norm_label": "提供描述观测或模拟天体数据集的高层次元数据，以便于数据发现和科学解读。"
+    },
+    "finding:定义了用于描述观测或模拟天体数据集的高层次元数据模型。": {
+      "id": "finding:定义了用于描述观测或模拟天体数据集的高层次元数据模型。",
+      "type": "Finding",
+      "label": "定义了用于描述观测或模拟天体数据集的高层次元数据模型。",
+      "norm_label": "定义了用于描述观测或模拟天体数据集的高层次元数据模型。"
+    },
+    "finding:该模型可以用于创建任何相关数据的结构化描述，便于数据发现和科学解读。": {
+      "id": "finding:该模型可以用于创建任何相关数据的结构化描述，便于数据发现和科学解读。",
+      "type": "Finding",
+      "label": "该模型可以用于创建任何相关数据的结构化描述，便于数据发现和科学解读。",
+      "norm_label": "该模型可以用于创建任何相关数据的结构化描述，便于数据发现和科学解读。"
+    },
+    "finding:模型旨在促进任何vo框架或门户网站中的异构数据的处理。": {
+      "id": "finding:模型旨在促进任何vo框架或门户网站中的异构数据的处理。",
+      "type": "Finding",
+      "label": "模型旨在促进任何VO框架或门户网站中的异构数据的处理。",
+      "norm_label": "模型旨在促进任何vo框架或门户网站中的异构数据的处理。"
+    },
+    "paper:1711.08552v2": {
+      "id": "paper:1711.08552v2",
+      "type": "Paper",
+      "label": "Thetis coastal ocean model: discontinuous Galerkin discretization for the three-dimensional hydrostatic equations",
+      "norm_label": "thetis coastal ocean model discontinuous galerkin discretization for the three-dimensional hydrostatic equations"
+    },
+    "method:thetis沿海海洋模型": {
+      "id": "method:thetis沿海海洋模型",
+      "type": "Method",
+      "label": "Thetis沿海海洋模型",
+      "norm_label": "thetis沿海海洋模型"
+    },
+    "task:尽管现有的网格海洋模型在模拟沿海海洋和河流-河口-河口水体系统方面具有优势，但它们往往具有扩散性或计算成本高，这限制了它们在现实问题中的应用。": {
+      "id": "task:尽管现有的网格海洋模型在模拟沿海海洋和河流-河口-河口水体系统方面具有优势，但它们往往具有扩散性或计算成本高，这限制了它们在现实问题中的应用。",
+      "type": "Task",
+      "label": "尽管现有的网格海洋模型在模拟沿海海洋和河流-河口-河口水体系统方面具有优势，但它们往往具有扩散性或计算成本高，这限制了它们在现实问题中的应用。",
+      "norm_label": "尽管现有的网格海洋模型在模拟沿海海洋和河流-河口-河口水体系统方面具有优势，但它们往往具有扩散性或计算成本高，这限制了它们在现实问题中的应用。"
+    },
+    "finding:改进了模式分裂方法": {
+      "id": "finding:改进了模式分裂方法",
+      "type": "Finding",
+      "label": "改进了模式分裂方法",
+      "norm_label": "改进了模式分裂方法"
+    },
+    "finding:修正了粘度公式": {
+      "id": "finding:修正了粘度公式",
+      "type": "Finding",
+      "label": "修正了粘度公式",
+      "norm_label": "修正了粘度公式"
+    },
+    "finding:提出了新的二阶时间整合方案": {
+      "id": "finding:提出了新的二阶时间整合方案",
+      "type": "Finding",
+      "label": "提出了新的二阶时间整合方案",
+      "norm_label": "提出了新的二阶时间整合方案"
+    },
+    "paper:1708.04157v2": {
+      "id": "paper:1708.04157v2",
+      "type": "Paper",
+      "label": "A global scavenging and circulation ocean model of thorium-230 and protactinium-231 with realistic particle dynamics (NEMO-ProThorP 0.1)",
+      "norm_label": "a global scavenging and circulation ocean model of thorium-230 and protactinium-231 with realistic particle dynamics nemo-prothorp 0.1"
+    },
+    "method:nemo-prothorp 0.1": {
+      "id": "method:nemo-prothorp 0.1",
+      "type": "Method",
+      "label": "NEMO-ProThorP 0.1",
+      "norm_label": "nemo-prothorp 0.1"
+    },
+    "dataset:geotraces programme": {
+      "id": "dataset:geotraces programme",
+      "type": "Dataset",
+      "label": "GEOTRACES programme",
+      "norm_label": "geotraces programme"
+    },
+    "metric:null": {
+      "id": "metric:null",
+      "type": "Metric",
+      "label": "null",
+      "norm_label": "null"
+    },
+    "task:尽管利用钍-230和镤-231这两种放射性同位素来研究海洋颗粒物传输和重建过去海洋环流非常重要，但现有的颗粒物模型在表层颗粒物（尤其是边界浑浊层）的表现不足。为了改进钍-230和镤-231在海洋中的溶": {
+      "id": "task:尽管利用钍-230和镤-231这两种放射性同位素来研究海洋颗粒物传输和重建过去海洋环流非常重要，但现有的颗粒物模型在表层颗粒物（尤其是边界浑浊层）的表现不足。为了改进钍-230和镤-231在海洋中的溶",
+      "type": "Task",
+      "label": "尽管利用钍-230和镤-231这两种放射性同位素来研究海洋颗粒物传输和重建过去海洋环流非常重要，但现有的颗粒物模型在表层颗粒物（尤其是边界浑浊层）的表现不足。为了改进钍-230和镤-231在海洋中的溶",
+      "norm_label": "尽管利用钍-230和镤-231这两种放射性同位素来研究海洋颗粒物传输和重建过去海洋环流非常重要，但现有的颗粒物模型在表层颗粒物（尤其是边界浑浊层）的表现不足。为了改进钍-230和镤-231在海洋中的溶"
+    },
+    "finding:改进了钍-230和镤-231在海洋中的溶解浓度和颗粒物浓度模拟。": {
+      "id": "finding:改进了钍-230和镤-231在海洋中的溶解浓度和颗粒物浓度模拟。",
+      "type": "Finding",
+      "label": "改进了钍-230和镤-231在海洋中的溶解浓度和颗粒物浓度模拟。",
+      "norm_label": "改进了钍-230和镤-231在海洋中的溶解浓度和颗粒物浓度模拟。"
+    },
+    "finding:支持了镤-231对生物黏土的中等亲和性。": {
+      "id": "finding:支持了镤-231对生物黏土的中等亲和性。",
+      "type": "Finding",
+      "label": "支持了镤-231对生物黏土的中等亲和性。",
+      "norm_label": "支持了镤-231对生物黏土的中等亲和性。"
+    },
+    "finding:为未来模型开发提供了框架": {
+      "id": "finding:为未来模型开发提供了框架",
+      "type": "Finding",
+      "label": "为未来模型开发提供了框架",
+      "norm_label": "为未来模型开发提供了框架"
+    },
+    "paper:2402.11651v2": {
+      "id": "paper:2402.11651v2",
+      "type": "Paper",
+      "label": "Learning From Failure: Integrating Negative Examples when Fine-tuning Large Language Models as Agents",
+      "norm_label": "learning from failure integrating negative examples when fine-tuning large language models as agents"
+    },
+    "method:negative trajectories fine-tuning": {
+      "id": "method:negative trajectories fine-tuning",
+      "type": "Method",
+      "label": "negative trajectories fine-tuning",
+      "norm_label": "negative trajectories fine-tuning"
+    },
+    "dataset:null": {
+      "id": "dataset:null",
+      "type": "Dataset",
+      "label": "null",
+      "norm_label": "null"
+    },
+    "task:尽管大型语言模型（llms）在作为代理进行任务交互方面取得了一定成功，但它们在训练或对齐期间主要用于语言生成而非工具使用，限制了它们作为代理的有效性。": {
+      "id": "task:尽管大型语言模型（llms）在作为代理进行任务交互方面取得了一定成功，但它们在训练或对齐期间主要用于语言生成而非工具使用，限制了它们作为代理的有效性。",
+      "type": "Task",
+      "label": "尽管大型语言模型（LLMs）在作为代理进行任务交互方面取得了一定成功，但它们在训练或对齐期间主要用于语言生成而非工具使用，限制了它们作为代理的有效性。",
+      "norm_label": "尽管大型语言模型（llms）在作为代理进行任务交互方面取得了一定成功，但它们在训练或对齐期间主要用于语言生成而非工具使用，限制了它们作为代理的有效性。"
+    },
+    "finding:提出了通过添加前缀或后缀告知模型生成成功或失败轨迹的方法": {
+      "id": "finding:提出了通过添加前缀或后缀告知模型生成成功或失败轨迹的方法",
+      "type": "Finding",
+      "label": "提出了通过添加前缀或后缀告知模型生成成功或失败轨迹的方法",
+      "norm_label": "提出了通过添加前缀或后缀告知模型生成成功或失败轨迹的方法"
+    },
+    "finding:展示了失败轨迹在代理调优中的价值": {
+      "id": "finding:展示了失败轨迹在代理调优中的价值",
+      "type": "Finding",
+      "label": "展示了失败轨迹在代理调优中的价值",
+      "norm_label": "展示了失败轨迹在代理调优中的价值"
+    },
+    "finding:提供了更好的在失败轨迹中平衡有价值信息和错误的策略": {
+      "id": "finding:提供了更好的在失败轨迹中平衡有价值信息和错误的策略",
+      "type": "Finding",
+      "label": "提供了更好的在失败轨迹中平衡有价值信息和错误的策略",
+      "norm_label": "提供了更好的在失败轨迹中平衡有价值信息和错误的策略"
+    },
+    "paper:2503.21676v2": {
+      "id": "paper:2503.21676v2",
+      "type": "Paper",
+      "label": "How do language models learn facts? Dynamics, curricula and hallucinations",
+      "norm_label": "how do language models learn facts dynamics curricula and hallucinations"
+    },
+    "dataset:合成事实回忆任务": {
+      "id": "dataset:合成事实回忆任务",
+      "type": "Dataset",
+      "label": "合成事实回忆任务",
+      "norm_label": "合成事实回忆任务"
+    },
+    "task:尽管大型语言模型在预训练过程中积累大量知识，但学习动态机制仍不明确。": {
+      "id": "task:尽管大型语言模型在预训练过程中积累大量知识，但学习动态机制仍不明确。",
+      "type": "Task",
+      "label": "尽管大型语言模型在预训练过程中积累大量知识，但学习动态机制仍不明确。",
+      "norm_label": "尽管大型语言模型在预训练过程中积累大量知识，但学习动态机制仍不明确。"
+    },
+    "finding:揭示了语言模型学习事实的三个阶段": {
+      "id": "finding:揭示了语言模型学习事实的三个阶段",
+      "type": "Finding",
+      "label": "揭示了语言模型学习事实的三个阶段",
+      "norm_label": "揭示了语言模型学习事实的三个阶段"
+    },
+    "finding:发现了数据分布对学习动态的影响": {
+      "id": "finding:发现了数据分布对学习动态的影响",
+      "type": "Finding",
+      "label": "发现了数据分布对学习动态的影响",
+      "norm_label": "发现了数据分布对学习动态的影响"
+    },
+    "finding:阐明了幻觉与新知识学习之间的关系": {
+      "id": "finding:阐明了幻觉与新知识学习之间的关系",
+      "type": "Finding",
+      "label": "阐明了幻觉与新知识学习之间的关系",
+      "norm_label": "阐明了幻觉与新知识学习之间的关系"
+    },
+    "concept:characterisation data model": {
+      "id": "concept:characterisation data model",
+      "type": "Concept",
+      "label": "Characterisation data model",
+      "norm_label": "characterisation data model"
+    },
+    "dataset:ivoa note": {
+      "id": "dataset:ivoa note",
+      "type": "Dataset",
+      "label": "IVOA Note",
+      "norm_label": "ivoa note"
+    },
+    "dataset:utypelistcharacterisationdm": {
+      "id": "dataset:utypelistcharacterisationdm",
+      "type": "Dataset",
+      "label": "UtypeListCharacterisationDM",
+      "norm_label": "utypelistcharacterisationdm"
+    },
+    "model:xml schema": {
+      "id": "model:xml schema",
+      "type": "Model",
+      "label": "XML schema",
+      "norm_label": "xml schema"
+    },
+    "concept:非结构化网格": {
+      "id": "concept:非结构化网格",
+      "type": "Concept",
+      "label": "非结构化网格",
+      "norm_label": "非结构化网格"
+    },
+    "method:间断伽辽金（dg）有限元离散化方法": {
+      "id": "method:间断伽辽金（dg）有限元离散化方法",
+      "type": "Method",
+      "label": "间断伽辽金（DG）有限元离散化方法",
+      "norm_label": "间断伽辽金（dg）有限元离散化方法"
+    },
+    "concept:静水方程": {
+      "id": "concept:静水方程",
+      "type": "Concept",
+      "label": "静水方程",
+      "norm_label": "静水方程"
+    },
+    "finding:改进的新模型": {
+      "id": "finding:改进的新模型",
+      "type": "Finding",
+      "label": "改进的新模型",
+      "norm_label": "改进的新模型"
+    },
+    "model:nemo-pisces": {
+      "id": "model:nemo-pisces",
+      "type": "Model",
+      "label": "NEMO-PISCES",
+      "norm_label": "nemo-pisces"
+    },
+    "concept:th-230": {
+      "id": "concept:th-230",
+      "type": "Concept",
+      "label": "Th-230",
+      "norm_label": "th-230"
+    },
+    "concept:pa-231": {
+      "id": "concept:pa-231",
+      "type": "Concept",
+      "label": "Pa-231",
+      "norm_label": "pa-231"
+    },
+    "task:mathematical reasoning": {
+      "id": "task:mathematical reasoning",
+      "type": "Task",
+      "label": "Mathematical reasoning",
+      "norm_label": "mathematical reasoning"
+    },
+    "task:multi-hop question answering": {
+      "id": "task:multi-hop question answering",
+      "type": "Task",
+      "label": "Multi-hop question answering",
+      "norm_label": "multi-hop question answering"
+    },
+    "task:strategic question answering": {
+      "id": "task:strategic question answering",
+      "type": "Task",
+      "label": "Strategic question answering",
+      "norm_label": "strategic question answering"
+    },
+    "concept:large language models": {
+      "id": "concept:large language models",
+      "type": "Concept",
+      "label": "Large language models",
+      "norm_label": "large language models"
+    },
+    "concept:agent-tuning": {
+      "id": "concept:agent-tuning",
+      "type": "Concept",
+      "label": "Agent-tuning",
+      "norm_label": "agent-tuning"
+    },
+    "method:语言模型": {
+      "id": "method:语言模型",
+      "type": "Method",
+      "label": "语言模型",
+      "norm_label": "语言模型"
+    },
+    "finding:性能瓶颈": {
+      "id": "finding:性能瓶颈",
+      "type": "Finding",
+      "label": "性能瓶颈",
+      "norm_label": "性能瓶颈"
+    },
+    "concept:基于注意力的回溯电路": {
+      "id": "concept:基于注意力的回溯电路",
+      "type": "Concept",
+      "label": "基于注意力的回溯电路",
+      "norm_label": "基于注意力的回溯电路"
+    },
+    "finding:数据分布": {
+      "id": "finding:数据分布",
+      "type": "Finding",
+      "label": "数据分布",
+      "norm_label": "数据分布"
+    },
+    "finding:新知识学习": {
+      "id": "finding:新知识学习",
+      "type": "Finding",
+      "label": "新知识学习",
+      "norm_label": "新知识学习"
+    },
+    "finding:幻觉": {
+      "id": "finding:幻觉",
+      "type": "Finding",
+      "label": "幻觉",
+      "norm_label": "幻觉"
+    }
+  },
+  "edges": [
+    {
+      "source": "paper:1111.2281v1",
+      "target": "task:提供描述观测或模拟天体数据集的高层次元数据，以便于数据发现和科学解读。",
+      "type": "applied_to",
+      "weight": 0.8
+    },
+    {
+      "source": "paper:1111.2281v1",
+      "target": "finding:定义了用于描述观测或模拟天体数据集的高层次元数据模型。",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:1111.2281v1",
+      "target": "finding:该模型可以用于创建任何相关数据的结构化描述，便于数据发现和科学解读。",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:1111.2281v1",
+      "target": "finding:模型旨在促进任何vo框架或门户网站中的异构数据的处理。",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:1711.08552v2",
+      "target": "method:thetis沿海海洋模型",
+      "type": "proposes",
+      "weight": 1.0
+    },
+    {
+      "source": "paper:1711.08552v2",
+      "target": "task:尽管现有的网格海洋模型在模拟沿海海洋和河流-河口-河口水体系统方面具有优势，但它们往往具有扩散性或计算成本高，这限制了它们在现实问题中的应用。",
+      "type": "applied_to",
+      "weight": 0.8
+    },
+    {
+      "source": "paper:1711.08552v2",
+      "target": "finding:改进了模式分裂方法",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:1711.08552v2",
+      "target": "finding:修正了粘度公式",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:1711.08552v2",
+      "target": "finding:提出了新的二阶时间整合方案",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:1708.04157v2",
+      "target": "method:nemo-prothorp 0.1",
+      "type": "proposes",
+      "weight": 1.0
+    },
+    {
+      "source": "paper:1708.04157v2",
+      "target": "dataset:geotraces programme",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "method:nemo-prothorp 0.1",
+      "target": "dataset:geotraces programme",
+      "type": "evaluates_on",
+      "weight": 0.9
+    },
+    {
+      "source": "method:nemo-prothorp 0.1",
+      "target": "metric:null",
+      "type": "achieves",
+      "weight": 0.85
+    },
+    {
+      "source": "paper:1708.04157v2",
+      "target": "task:尽管利用钍-230和镤-231这两种放射性同位素来研究海洋颗粒物传输和重建过去海洋环流非常重要，但现有的颗粒物模型在表层颗粒物（尤其是边界浑浊层）的表现不足。为了改进钍-230和镤-231在海洋中的溶",
+      "type": "applied_to",
+      "weight": 0.8
+    },
+    {
+      "source": "paper:1708.04157v2",
+      "target": "finding:改进了钍-230和镤-231在海洋中的溶解浓度和颗粒物浓度模拟。",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:1708.04157v2",
+      "target": "finding:支持了镤-231对生物黏土的中等亲和性。",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:1708.04157v2",
+      "target": "finding:为未来模型开发提供了框架",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:2402.11651v2",
+      "target": "method:negative trajectories fine-tuning",
+      "type": "proposes",
+      "weight": 1.0
+    },
+    {
+      "source": "paper:2402.11651v2",
+      "target": "dataset:null",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "method:negative trajectories fine-tuning",
+      "target": "dataset:null",
+      "type": "evaluates_on",
+      "weight": 0.9
+    },
+    {
+      "source": "method:negative trajectories fine-tuning",
+      "target": "metric:null",
+      "type": "achieves",
+      "weight": 0.85
+    },
+    {
+      "source": "paper:2402.11651v2",
+      "target": "task:尽管大型语言模型（llms）在作为代理进行任务交互方面取得了一定成功，但它们在训练或对齐期间主要用于语言生成而非工具使用，限制了它们作为代理的有效性。",
+      "type": "applied_to",
+      "weight": 0.8
+    },
+    {
+      "source": "paper:2402.11651v2",
+      "target": "finding:提出了通过添加前缀或后缀告知模型生成成功或失败轨迹的方法",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:2402.11651v2",
+      "target": "finding:展示了失败轨迹在代理调优中的价值",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:2402.11651v2",
+      "target": "finding:提供了更好的在失败轨迹中平衡有价值信息和错误的策略",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:2503.21676v2",
+      "target": "dataset:合成事实回忆任务",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "paper:2503.21676v2",
+      "target": "task:尽管大型语言模型在预训练过程中积累大量知识，但学习动态机制仍不明确。",
+      "type": "applied_to",
+      "weight": 0.8
+    },
+    {
+      "source": "paper:2503.21676v2",
+      "target": "finding:揭示了语言模型学习事实的三个阶段",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:2503.21676v2",
+      "target": "finding:发现了数据分布对学习动态的影响",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:2503.21676v2",
+      "target": "finding:阐明了幻觉与新知识学习之间的关系",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:1111.2281v1",
+      "target": "concept:characterisation data model",
+      "type": "proposes",
+      "weight": 1.0
+    },
+    {
+      "source": "paper:1111.2281v1",
+      "target": "dataset:ivoa note",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "paper:1111.2281v1",
+      "target": "dataset:utypelistcharacterisationdm",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "paper:1111.2281v1",
+      "target": "model:xml schema",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "method:thetis沿海海洋模型",
+      "target": "concept:非结构化网格",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "method:thetis沿海海洋模型",
+      "target": "method:间断伽辽金（dg）有限元离散化方法",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "method:thetis沿海海洋模型",
+      "target": "concept:静水方程",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "method:间断伽辽金（dg）有限元离散化方法",
+      "target": "finding:改进的新模型",
+      "type": "proposes",
+      "weight": 1.0
+    },
+    {
+      "source": "method:nemo-prothorp 0.1",
+      "target": "model:nemo-pisces",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "method:nemo-prothorp 0.1",
+      "target": "concept:th-230",
+      "type": "evaluates_on",
+      "weight": 0.9
+    },
+    {
+      "source": "method:nemo-prothorp 0.1",
+      "target": "concept:pa-231",
+      "type": "evaluates_on",
+      "weight": 0.9
+    },
+    {
+      "source": "method:nemo-prothorp 0.1",
+      "target": "dataset:geotraces programme",
+      "type": "compared_with",
+      "weight": 0.75
+    },
+    {
+      "source": "method:nemo-prothorp 0.1",
+      "target": "concept:th-230",
+      "type": "achieves",
+      "weight": 0.85
+    },
+    {
+      "source": "method:nemo-prothorp 0.1",
+      "target": "concept:pa-231",
+      "type": "achieves",
+      "weight": 0.85
+    },
+    {
+      "source": "method:negative trajectories fine-tuning",
+      "target": "task:mathematical reasoning",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "method:negative trajectories fine-tuning",
+      "target": "task:multi-hop question answering",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "method:negative trajectories fine-tuning",
+      "target": "task:strategic question answering",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "method:negative trajectories fine-tuning",
+      "target": "concept:large language models",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "method:negative trajectories fine-tuning",
+      "target": "concept:agent-tuning",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "method:negative trajectories fine-tuning",
+      "target": "concept:large language models",
+      "type": "improves",
+      "weight": 0.95
+    },
+    {
+      "source": "method:语言模型",
+      "target": "dataset:合成事实回忆任务",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "method:语言模型",
+      "target": "finding:性能瓶颈",
+      "type": "achieves",
+      "weight": 0.85
+    },
+    {
+      "source": "method:语言模型",
+      "target": "concept:基于注意力的回溯电路",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "method:语言模型",
+      "target": "finding:数据分布",
+      "type": "evaluates_on",
+      "weight": 0.9
+    },
+    {
+      "source": "method:语言模型",
+      "target": "finding:新知识学习",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "method:语言模型",
+      "target": "finding:幻觉",
+      "type": "related_to",
+      "weight": 0.5
+    }
+  ],
+  "paper_entities": {
+    "1111.2281v1": [
+      "paper:1111.2281v1",
+      "task:提供描述观测或模拟天体数据集的高层次元数据，以便于数据发现和科学解读。",
+      "finding:定义了用于描述观测或模拟天体数据集的高层次元数据模型。",
+      "finding:该模型可以用于创建任何相关数据的结构化描述，便于数据发现和科学解读。",
+      "finding:模型旨在促进任何vo框架或门户网站中的异构数据的处理。",
+      "concept:characterisation data model",
+      "dataset:ivoa note",
+      "dataset:utypelistcharacterisationdm",
+      "model:xml schema"
+    ],
+    "1711.08552v2": [
+      "paper:1711.08552v2",
+      "method:thetis沿海海洋模型",
+      "task:尽管现有的网格海洋模型在模拟沿海海洋和河流-河口-河口水体系统方面具有优势，但它们往往具有扩散性或计算成本高，这限制了它们在现实问题中的应用。",
+      "finding:改进了模式分裂方法",
+      "finding:修正了粘度公式",
+      "finding:提出了新的二阶时间整合方案",
+      "concept:非结构化网格",
+      "method:间断伽辽金（dg）有限元离散化方法",
+      "concept:静水方程",
+      "finding:改进的新模型"
+    ],
+    "1708.04157v2": [
+      "paper:1708.04157v2",
+      "method:nemo-prothorp 0.1",
+      "dataset:geotraces programme",
+      "metric:null",
+      "task:尽管利用钍-230和镤-231这两种放射性同位素来研究海洋颗粒物传输和重建过去海洋环流非常重要，但现有的颗粒物模型在表层颗粒物（尤其是边界浑浊层）的表现不足。为了改进钍-230和镤-231在海洋中的溶",
+      "finding:改进了钍-230和镤-231在海洋中的溶解浓度和颗粒物浓度模拟。",
+      "finding:支持了镤-231对生物黏土的中等亲和性。",
+      "finding:为未来模型开发提供了框架",
+      "model:nemo-pisces",
+      "concept:th-230",
+      "concept:pa-231"
+    ],
+    "2402.11651v2": [
+      "paper:2402.11651v2",
+      "method:negative trajectories fine-tuning",
+      "dataset:null",
+      "metric:null",
+      "task:尽管大型语言模型（llms）在作为代理进行任务交互方面取得了一定成功，但它们在训练或对齐期间主要用于语言生成而非工具使用，限制了它们作为代理的有效性。",
+      "finding:提出了通过添加前缀或后缀告知模型生成成功或失败轨迹的方法",
+      "finding:展示了失败轨迹在代理调优中的价值",
+      "finding:提供了更好的在失败轨迹中平衡有价值信息和错误的策略",
+      "task:mathematical reasoning",
+      "task:multi-hop question answering",
+      "task:strategic question answering",
+      "concept:large language models",
+      "concept:agent-tuning"
+    ],
+    "2503.21676v2": [
+      "paper:2503.21676v2",
+      "dataset:合成事实回忆任务",
+      "task:尽管大型语言模型在预训练过程中积累大量知识，但学习动态机制仍不明确。",
+      "finding:揭示了语言模型学习事实的三个阶段",
+      "finding:发现了数据分布对学习动态的影响",
+      "finding:阐明了幻觉与新知识学习之间的关系",
+      "method:语言模型",
+      "finding:性能瓶颈",
+      "concept:基于注意力的回溯电路",
+      "finding:数据分布",
+      "finding:新知识学习",
+      "finding:幻觉"
+    ]
+  },
+  "entity_aliases": {
+    "ivoa recommendation data model for astronomical dataset characterisation": "paper:1111.2281v1",
+    "提供描述观测或模拟天体数据集的高层次元数据，以便于数据发现和科学解读。": "task:提供描述观测或模拟天体数据集的高层次元数据，以便于数据发现和科学解读。",
+    "定义了用于描述观测或模拟天体数据集的高层次元数据模型。": "finding:定义了用于描述观测或模拟天体数据集的高层次元数据模型。",
+    "该模型可以用于创建任何相关数据的结构化描述，便于数据发现和科学解读。": "finding:该模型可以用于创建任何相关数据的结构化描述，便于数据发现和科学解读。",
+    "模型旨在促进任何vo框架或门户网站中的异构数据的处理。": "finding:模型旨在促进任何vo框架或门户网站中的异构数据的处理。",
+    "thetis coastal ocean model discontinuous galerkin discretization for the three-dimensional hydrostatic equations": "paper:1711.08552v2",
+    "thetis沿海海洋模型": "method:thetis沿海海洋模型",
+    "尽管现有的网格海洋模型在模拟沿海海洋和河流-河口-河口水体系统方面具有优势，但它们往往具有扩散性或计算成本高，这限制了它们在现实问题中的应用。": "task:尽管现有的网格海洋模型在模拟沿海海洋和河流-河口-河口水体系统方面具有优势，但它们往往具有扩散性或计算成本高，这限制了它们在现实问题中的应用。",
+    "改进了模式分裂方法": "finding:改进了模式分裂方法",
+    "修正了粘度公式": "finding:修正了粘度公式",
+    "提出了新的二阶时间整合方案": "finding:提出了新的二阶时间整合方案",
+    "a global scavenging and circulation ocean model of thorium-230 and protactinium-231 with realistic particle dynamics nemo-prothorp 0.1": "paper:1708.04157v2",
+    "nemo-prothorp 0.1": "method:nemo-prothorp 0.1",
+    "geotraces programme": "dataset:geotraces programme",
+    "null": "metric:null",
+    "尽管利用钍-230和镤-231这两种放射性同位素来研究海洋颗粒物传输和重建过去海洋环流非常重要，但现有的颗粒物模型在表层颗粒物（尤其是边界浑浊层）的表现不足。为了改进钍-230和镤-231在海洋中的溶": "task:尽管利用钍-230和镤-231这两种放射性同位素来研究海洋颗粒物传输和重建过去海洋环流非常重要，但现有的颗粒物模型在表层颗粒物（尤其是边界浑浊层）的表现不足。为了改进钍-230和镤-231在海洋中的溶",
+    "改进了钍-230和镤-231在海洋中的溶解浓度和颗粒物浓度模拟。": "finding:改进了钍-230和镤-231在海洋中的溶解浓度和颗粒物浓度模拟。",
+    "支持了镤-231对生物黏土的中等亲和性。": "finding:支持了镤-231对生物黏土的中等亲和性。",
+    "为未来模型开发提供了框架": "finding:为未来模型开发提供了框架",
+    "learning from failure integrating negative examples when fine-tuning large language models as agents": "paper:2402.11651v2",
+    "negative trajectories fine-tuning": "method:negative trajectories fine-tuning",
+    "尽管大型语言模型（llms）在作为代理进行任务交互方面取得了一定成功，但它们在训练或对齐期间主要用于语言生成而非工具使用，限制了它们作为代理的有效性。": "task:尽管大型语言模型（llms）在作为代理进行任务交互方面取得了一定成功，但它们在训练或对齐期间主要用于语言生成而非工具使用，限制了它们作为代理的有效性。",
+    "提出了通过添加前缀或后缀告知模型生成成功或失败轨迹的方法": "finding:提出了通过添加前缀或后缀告知模型生成成功或失败轨迹的方法",
+    "展示了失败轨迹在代理调优中的价值": "finding:展示了失败轨迹在代理调优中的价值",
+    "提供了更好的在失败轨迹中平衡有价值信息和错误的策略": "finding:提供了更好的在失败轨迹中平衡有价值信息和错误的策略",
+    "how do language models learn facts dynamics curricula and hallucinations": "paper:2503.21676v2",
+    "合成事实回忆任务": "dataset:合成事实回忆任务",
+    "尽管大型语言模型在预训练过程中积累大量知识，但学习动态机制仍不明确。": "task:尽管大型语言模型在预训练过程中积累大量知识，但学习动态机制仍不明确。",
+    "揭示了语言模型学习事实的三个阶段": "finding:揭示了语言模型学习事实的三个阶段",
+    "发现了数据分布对学习动态的影响": "finding:发现了数据分布对学习动态的影响",
+    "阐明了幻觉与新知识学习之间的关系": "finding:阐明了幻觉与新知识学习之间的关系",
+    "characterisation data model": "concept:characterisation data model",
+    "ivoa note": "dataset:ivoa note",
+    "utypelistcharacterisationdm": "dataset:utypelistcharacterisationdm",
+    "xml schema": "model:xml schema",
+    "非结构化网格": "concept:非结构化网格",
+    "间断伽辽金（dg）有限元离散化方法": "method:间断伽辽金（dg）有限元离散化方法",
+    "静水方程": "concept:静水方程",
+    "改进的新模型": "finding:改进的新模型",
+    "nemo-pisces": "model:nemo-pisces",
+    "th-230": "concept:th-230",
+    "pa-231": "concept:pa-231",
+    "mathematical reasoning": "task:mathematical reasoning",
+    "multi-hop question answering": "task:multi-hop question answering",
+    "strategic question answering": "task:strategic question answering",
+    "large language models": "concept:large language models",
+    "agent-tuning": "concept:agent-tuning",
+    "语言模型": "method:语言模型",
+    "性能瓶颈": "finding:性能瓶颈",
+    "基于注意力的回溯电路": "concept:基于注意力的回溯电路",
+    "数据分布": "finding:数据分布",
+    "新知识学习": "finding:新知识学习",
+    "幻觉": "finding:幻觉"
+  },
+  "communities": {
+    "0": {
+      "nodes": [
+        "paper:1111.2281v1",
+        "task:提供描述观测或模拟天体数据集的高层次元数据，以便于数据发现和科学解读。",
+        "finding:定义了用于描述观测或模拟天体数据集的高层次元数据模型。",
+        "finding:该模型可以用于创建任何相关数据的结构化描述，便于数据发现和科学解读。",
+        "finding:模型旨在促进任何vo框架或门户网站中的异构数据的处理。",
+        "concept:characterisation data model",
+        "dataset:ivoa note",
+        "dataset:utypelistcharacterisationdm",
+        "model:xml schema"
+      ],
+      "key_entities": [
+        "IVOA Recommendation: Data Model for Astronomical DataSet Characterisation",
+        "提供描述观测或模拟天体数据集的高层次元数据，以便于数据发现和科学解读。",
+        "定义了用于描述观测或模拟天体数据集的高层次元数据模型。",
+        "该模型可以用于创建任何相关数据的结构化描述，便于数据发现和科学解读。",
+        "模型旨在促进任何VO框架或门户网站中的异构数据的处理。",
+        "Characterisation data model",
+        "IVOA Note",
+        "UtypeListCharacterisationDM",
+        "XML schema"
+      ],
+      "summary": ""
+    },
+    "1": {
+      "nodes": [
+        "paper:1711.08552v2",
+        "method:thetis沿海海洋模型",
+        "task:尽管现有的网格海洋模型在模拟沿海海洋和河流-河口-河口水体系统方面具有优势，但它们往往具有扩散性或计算成本高，这限制了它们在现实问题中的应用。",
+        "finding:改进了模式分裂方法",
+        "finding:修正了粘度公式",
+        "finding:提出了新的二阶时间整合方案",
+        "concept:非结构化网格",
+        "concept:静水方程"
+      ],
+      "key_entities": [
+        "Thetis coastal ocean model: discontinuous Galerkin discretization for the three-dimensional hydrostatic equations",
+        "Thetis沿海海洋模型",
+        "尽管现有的网格海洋模型在模拟沿海海洋和河流-河口-河口水体系统方面具有优势，但它们往往具有扩散性或计算成本高，这限制了它们在现实问题中的应用。",
+        "改进了模式分裂方法",
+        "修正了粘度公式",
+        "提出了新的二阶时间整合方案",
+        "非结构化网格",
+        "静水方程"
+      ],
+      "summary": ""
+    },
+    "2": {
+      "nodes": [
+        "paper:1708.04157v2",
+        "task:尽管利用钍-230和镤-231这两种放射性同位素来研究海洋颗粒物传输和重建过去海洋环流非常重要，但现有的颗粒物模型在表层颗粒物（尤其是边界浑浊层）的表现不足。为了改进钍-230和镤-231在海洋中的溶",
+        "finding:改进了钍-230和镤-231在海洋中的溶解浓度和颗粒物浓度模拟。",
+        "finding:支持了镤-231对生物黏土的中等亲和性。",
+        "finding:为未来模型开发提供了框架"
+      ],
+      "key_entities": [
+        "A global scavenging and circulation ocean model of thorium-230 and protactinium-231 with realistic particle dynamics (NEMO-ProThorP 0.1)",
+        "尽管利用钍-230和镤-231这两种放射性同位素来研究海洋颗粒物传输和重建过去海洋环流非常重要，但现有的颗粒物模型在表层颗粒物（尤其是边界浑浊层）的表现不足。为了改进钍-230和镤-231在海洋中的溶",
+        "改进了钍-230和镤-231在海洋中的溶解浓度和颗粒物浓度模拟。",
+        "支持了镤-231对生物黏土的中等亲和性。",
+        "为未来模型开发提供了框架"
+      ],
+      "summary": ""
+    },
+    "3": {
+      "nodes": [
+        "method:nemo-prothorp 0.1",
+        "dataset:geotraces programme",
+        "model:nemo-pisces",
+        "concept:th-230",
+        "concept:pa-231"
+      ],
+      "key_entities": [
+        "NEMO-ProThorP 0.1",
+        "GEOTRACES programme",
+        "NEMO-PISCES",
+        "Th-230",
+        "Pa-231"
+      ],
+      "summary": ""
+    },
+    "4": {
+      "nodes": [
+        "metric:null",
+        "method:negative trajectories fine-tuning",
+        "task:mathematical reasoning",
+        "task:multi-hop question answering",
+        "task:strategic question answering",
+        "concept:large language models",
+        "concept:agent-tuning"
+      ],
+      "key_entities": [
+        "null",
+        "negative trajectories fine-tuning",
+        "Mathematical reasoning",
+        "Multi-hop question answering",
+        "Strategic question answering",
+        "Large language models",
+        "Agent-tuning"
+      ],
+      "summary": ""
+    },
+    "5": {
+      "nodes": [
+        "paper:2402.11651v2",
+        "dataset:null",
+        "task:尽管大型语言模型（llms）在作为代理进行任务交互方面取得了一定成功，但它们在训练或对齐期间主要用于语言生成而非工具使用，限制了它们作为代理的有效性。",
+        "finding:提出了通过添加前缀或后缀告知模型生成成功或失败轨迹的方法",
+        "finding:展示了失败轨迹在代理调优中的价值",
+        "finding:提供了更好的在失败轨迹中平衡有价值信息和错误的策略"
+      ],
+      "key_entities": [
+        "Learning From Failure: Integrating Negative Examples when Fine-tuning Large Language Models as Agents",
+        "null",
+        "尽管大型语言模型（LLMs）在作为代理进行任务交互方面取得了一定成功，但它们在训练或对齐期间主要用于语言生成而非工具使用，限制了它们作为代理的有效性。",
+        "提出了通过添加前缀或后缀告知模型生成成功或失败轨迹的方法",
+        "展示了失败轨迹在代理调优中的价值",
+        "提供了更好的在失败轨迹中平衡有价值信息和错误的策略"
+      ],
+      "summary": ""
+    },
+    "6": {
+      "nodes": [
+        "paper:2503.21676v2",
+        "dataset:合成事实回忆任务",
+        "task:尽管大型语言模型在预训练过程中积累大量知识，但学习动态机制仍不明确。",
+        "finding:揭示了语言模型学习事实的三个阶段",
+        "finding:发现了数据分布对学习动态的影响",
+        "finding:阐明了幻觉与新知识学习之间的关系"
+      ],
+      "key_entities": [
+        "How do language models learn facts? Dynamics, curricula and hallucinations",
+        "合成事实回忆任务",
+        "尽管大型语言模型在预训练过程中积累大量知识，但学习动态机制仍不明确。",
+        "揭示了语言模型学习事实的三个阶段",
+        "发现了数据分布对学习动态的影响",
+        "阐明了幻觉与新知识学习之间的关系"
+      ],
+      "summary": ""
+    },
+    "7": {
+      "nodes": [
+        "method:间断伽辽金（dg）有限元离散化方法",
+        "finding:改进的新模型"
+      ],
+      "key_entities": [
+        "间断伽辽金（DG）有限元离散化方法",
+        "改进的新模型"
+      ],
+      "summary": ""
+    },
+    "8": {
+      "nodes": [
+        "method:语言模型",
+        "finding:性能瓶颈",
+        "concept:基于注意力的回溯电路",
+        "finding:数据分布",
+        "finding:新知识学习",
+        "finding:幻觉"
+      ],
+      "key_entities": [
+        "语言模型",
+        "性能瓶颈",
+        "基于注意力的回溯电路",
+        "数据分布",
+        "新知识学习",
+        "幻觉"
+      ],
+      "summary": ""
+    }
+  },
+  "stats": {
+    "node_count": 54,
+    "edge_count": 56,
+    "node_type_count": {
+      "Paper": 5,
+      "Task": 8,
+      "Finding": 20,
+      "Method": 5,
+      "Dataset": 5,
+      "Metric": 1,
+      "Concept": 8,
+      "Model": 2
+    },
+    "paper_count": 5,
+    "community_count": 0
+  }
+}

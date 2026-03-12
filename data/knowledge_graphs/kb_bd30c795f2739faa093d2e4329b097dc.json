@@ -1,0 +1,893 @@
+{
+  "db_id": "kb_bd30c795f2739faa093d2e4329b097dc",
+  "nodes": {
+    "paper:1610.00031v1": {
+      "id": "paper:1610.00031v1",
+      "type": "Paper",
+      "label": "Discriminating Similar Languages: Evaluations and Explorations",
+      "norm_label": "discriminating similar languages evaluations and explorations"
+    },
+    "dataset:discriminating between similar languages dsl shared task 两个版本": {
+      "id": "dataset:discriminating between similar languages dsl shared task 两个版本",
+      "type": "Dataset",
+      "label": "Discriminating between Similar Languages (DSL) shared task (两个版本)",
+      "norm_label": "discriminating between similar languages dsl shared task 两个版本"
+    },
+    "task:尽管在机器学习分类器的评估中，有研究针对相似语言和语言变体之间的区分进行过分析，但不明确从一个版本到另一个版本具体取得了什么进展。": {
+      "id": "task:尽管在机器学习分类器的评估中，有研究针对相似语言和语言变体之间的区分进行过分析，但不明确从一个版本到另一个版本具体取得了什么进展。",
+      "type": "Task",
+      "label": "尽管在机器学习分类器的评估中，有研究针对相似语言和语言变体之间的区分进行过分析，但不明确从一个版本到另一个版本具体取得了什么进展。",
+      "norm_label": "尽管在机器学习分类器的评估中，有研究针对相似语言和语言变体之间的区分进行过分析，但不明确从一个版本到另一个版本具体取得了什么进展。"
+    },
+    "finding:估计了一个可能的上限性能": {
+      "id": "finding:估计了一个可能的上限性能",
+      "type": "Finding",
+      "label": "估计了一个可能的上限性能",
+      "norm_label": "估计了一个可能的上限性能"
+    },
+    "finding:提供了帮助理解哪些语言更具挑战性的学习曲线": {
+      "id": "finding:提供了帮助理解哪些语言更具挑战性的学习曲线",
+      "type": "Finding",
+      "label": "提供了帮助理解哪些语言更具挑战性的学习曲线",
+      "norm_label": "提供了帮助理解哪些语言更具挑战性的学习曲线"
+    },
+    "finding:进一步研究和标注了一些难以区分的句子": {
+      "id": "finding:进一步研究和标注了一些难以区分的句子",
+      "type": "Finding",
+      "label": "进一步研究和标注了一些难以区分的句子",
+      "norm_label": "进一步研究和标注了一些难以区分的句子"
+    },
+    "paper:2409.11353v3": {
+      "id": "paper:2409.11353v3",
+      "type": "Paper",
+      "label": "THaMES: An End-to-End Tool for Hallucination Mitigation and Evaluation in Large Language Models",
+      "norm_label": "thames an end-to-end tool for hallucination mitigation and evaluation in large language models"
+    },
+    "method:thames": {
+      "id": "method:thames",
+      "type": "Method",
+      "label": "THaMES",
+      "norm_label": "thames"
+    },
+    "dataset:任何领域的语料库": {
+      "id": "dataset:任何领域的语料库",
+      "type": "Dataset",
+      "label": "任何领域的语料库",
+      "norm_label": "任何领域的语料库"
+    },
+    "task:尽管大型语言模型（llms）中的幻想（生成事实不符的内容）是一个日益增长的挑战，但现有的检测和缓解方法通常是孤立且不足的，无法满足特定领域的需要。": {
+      "id": "task:尽管大型语言模型（llms）中的幻想（生成事实不符的内容）是一个日益增长的挑战，但现有的检测和缓解方法通常是孤立且不足的，无法满足特定领域的需要。",
+      "type": "Task",
+      "label": "尽管大型语言模型（LLMs）中的幻想（生成事实不符的内容）是一个日益增长的挑战，但现有的检测和缓解方法通常是孤立且不足的，无法满足特定领域的需要。",
+      "norm_label": "尽管大型语言模型（llms）中的幻想（生成事实不符的内容）是一个日益增长的挑战，但现有的检测和缓解方法通常是孤立且不足的，无法满足特定领域的需要。"
+    },
+    "finding:thames提供了一种集成的检查和缓解幻想的方法。": {
+      "id": "finding:thames提供了一种集成的检查和缓解幻想的方法。",
+      "type": "Finding",
+      "label": "THaMES提供了一种集成的检查和缓解幻想的方法。",
+      "norm_label": "thames提供了一种集成的检查和缓解幻想的方法。"
+    },
+    "finding:通过自动化测试集生成和多方面基准测试，thames确保了高数据质量、多样性和成本效率。": {
+      "id": "finding:通过自动化测试集生成和多方面基准测试，thames确保了高数据质量、多样性和成本效率。",
+      "type": "Finding",
+      "label": "通过自动化测试集生成和多方面基准测试，THaMES确保了高数据质量、多样性和成本效率。",
+      "norm_label": "通过自动化测试集生成和多方面基准测试，thames确保了高数据质量、多样性和成本效率。"
+    },
+    "finding:thames提供了多种缓解策略，如上下文学习（icl）、检索增强生成（rag）和参数高效微调（peft）": {
+      "id": "finding:thames提供了多种缓解策略，如上下文学习（icl）、检索增强生成（rag）和参数高效微调（peft）",
+      "type": "Finding",
+      "label": "THaMES提供了多种缓解策略，如上下文学习（ICL）、检索增强生成（RAG）和参数高效微调（PEFT）",
+      "norm_label": "thames提供了多种缓解策略，如上下文学习（icl）、检索增强生成（rag）和参数高效微调（peft）"
+    },
+    "paper:2503.21676v2": {
+      "id": "paper:2503.21676v2",
+      "type": "Paper",
+      "label": "How do language models learn facts? Dynamics, curricula and hallucinations",
+      "norm_label": "how do language models learn facts dynamics curricula and hallucinations"
+    },
+    "method:synthetic factual recall task": {
+      "id": "method:synthetic factual recall task",
+      "type": "Method",
+      "label": "synthetic factual recall task",
+      "norm_label": "synthetic factual recall task"
+    },
+    "task:尽管大型语言模型在预训练过程中积累了大量的知识，但对其获取知识动态的理解仍然不足。": {
+      "id": "task:尽管大型语言模型在预训练过程中积累了大量的知识，但对其获取知识动态的理解仍然不足。",
+      "type": "Task",
+      "label": "尽管大型语言模型在预训练过程中积累了大量的知识，但对其获取知识动态的理解仍然不足。",
+      "norm_label": "尽管大型语言模型在预训练过程中积累了大量的知识，但对其获取知识动态的理解仍然不足。"
+    },
+    "finding:揭示了语言模型在学习上的三个阶段以及其背后的机制。": {
+      "id": "finding:揭示了语言模型在学习上的三个阶段以及其背后的机制。",
+      "type": "Finding",
+      "label": "揭示了语言模型在学习上的三个阶段以及其背后的机制。",
+      "norm_label": "揭示了语言模型在学习上的三个阶段以及其背后的机制。"
+    },
+    "finding:展示了数据分布不平衡对学习动态的影响。": {
+      "id": "finding:展示了数据分布不平衡对学习动态的影响。",
+      "type": "Finding",
+      "label": "展示了数据分布不平衡对学习动态的影响。",
+      "norm_label": "展示了数据分布不平衡对学习动态的影响。"
+    },
+    "finding:指出了在模型中整合新知识的挑战性。": {
+      "id": "finding:指出了在模型中整合新知识的挑战性。",
+      "type": "Finding",
+      "label": "指出了在模型中整合新知识的挑战性。",
+      "norm_label": "指出了在模型中整合新知识的挑战性。"
+    },
+    "paper:2506.22486v1": {
+      "id": "paper:2506.22486v1",
+      "type": "Paper",
+      "label": "Hallucination Detection with Small Language Models",
+      "norm_label": "hallucination detection with small language models"
+    },
+    "method:框架": {
+      "id": "method:框架",
+      "type": "Method",
+      "label": "框架",
+      "norm_label": "框架"
+    },
+    "dataset:超过100组问题、答案和上下文的数据集": {
+      "id": "dataset:超过100组问题、答案和上下文的数据集",
+      "type": "Dataset",
+      "label": "超过100组问题、答案和上下文的数据集",
+      "norm_label": "超过100组问题、答案和上下文的数据集"
+    },
+    "metric:f1": {
+      "id": "metric:f1",
+      "type": "Metric",
+      "label": "F1",
+      "norm_label": "f1"
+    },
+    "task:尽管大型语言模型（llms）在各种任务中表现出显著的实用性，但生成的回答中可能出现的幻觉可能削弱其在实际应用中的可靠性，特别是在问答场景中，由于缺乏真实数据，这些幻觉难以检测。": {
+      "id": "task:尽管大型语言模型（llms）在各种任务中表现出显著的实用性，但生成的回答中可能出现的幻觉可能削弱其在实际应用中的可靠性，特别是在问答场景中，由于缺乏真实数据，这些幻觉难以检测。",
+      "type": "Task",
+      "label": "尽管大型语言模型（LLMs）在各种任务中表现出显著的实用性，但生成的回答中可能出现的幻觉可能削弱其在实际应用中的可靠性，特别是在问答场景中，由于缺乏真实数据，这些幻觉难以检测。",
+      "norm_label": "尽管大型语言模型（llms）在各种任务中表现出显著的实用性，但生成的回答中可能出现的幻觉可能削弱其在实际应用中的可靠性，特别是在问答场景中，由于缺乏真实数据，这些幻觉难以检测。"
+    },
+    "finding:提出了一个框架，使用多个小型语言模型验证llm生成的回答": {
+      "id": "finding:提出了一个框架，使用多个小型语言模型验证llm生成的回答",
+      "type": "Finding",
+      "label": "提出了一个框架，使用多个小型语言模型验证LLM生成的回答",
+      "norm_label": "提出了一个框架，使用多个小型语言模型验证llm生成的回答"
+    },
+    "finding:通过分解回答并利用多个模型生成 yes 标记的概率来检测幻觉": {
+      "id": "finding:通过分解回答并利用多个模型生成 yes 标记的概率来检测幻觉",
+      "type": "Finding",
+      "label": "通过分解回答并利用多个模型生成'Yes'标记的概率来检测幻觉",
+      "norm_label": "通过分解回答并利用多个模型生成 yes 标记的概率来检测幻觉"
+    },
+    "finding:该方法在检测正确回答方面优于基准模型": {
+      "id": "finding:该方法在检测正确回答方面优于基准模型",
+      "type": "Finding",
+      "label": "该方法在检测正确回答方面优于基准模型",
+      "norm_label": "该方法在检测正确回答方面优于基准模型"
+    },
+    "task:discriminating between similar languages dsl shared task": {
+      "id": "task:discriminating between similar languages dsl shared task",
+      "type": "Task",
+      "label": "Discriminating between Similar Languages (DSL) shared task",
+      "norm_label": "discriminating between similar languages dsl shared task"
+    },
+    "method:machine learning classifiers": {
+      "id": "method:machine learning classifiers",
+      "type": "Method",
+      "label": "machine learning classifiers",
+      "norm_label": "machine learning classifiers"
+    },
+    "model:ensemble and oracle combination": {
+      "id": "model:ensemble and oracle combination",
+      "type": "Model",
+      "label": "ensemble and oracle combination",
+      "norm_label": "ensemble and oracle combination"
+    },
+    "concept:learning curves": {
+      "id": "concept:learning curves",
+      "type": "Concept",
+      "label": "learning curves",
+      "norm_label": "learning curves"
+    },
+    "concept:large language models": {
+      "id": "concept:large language models",
+      "type": "Concept",
+      "label": "Large Language Models",
+      "norm_label": "large language models"
+    },
+    "concept:hallucination": {
+      "id": "concept:hallucination",
+      "type": "Concept",
+      "label": "Hallucination",
+      "norm_label": "hallucination"
+    },
+    "method:in-context learning icl": {
+      "id": "method:in-context learning icl",
+      "type": "Method",
+      "label": "In-Context Learning (ICL)",
+      "norm_label": "in-context learning icl"
+    },
+    "method:retrieval augmented generation rag": {
+      "id": "method:retrieval augmented generation rag",
+      "type": "Method",
+      "label": "Retrieval Augmented Generation (RAG)",
+      "norm_label": "retrieval augmented generation rag"
+    },
+    "method:parameter-efficient fine-tuning peft": {
+      "id": "method:parameter-efficient fine-tuning peft",
+      "type": "Method",
+      "label": "Parameter-Efficient Fine-tuning (PEFT)",
+      "norm_label": "parameter-efficient fine-tuning peft"
+    },
+    "model:gpt-4o": {
+      "id": "model:gpt-4o",
+      "type": "Model",
+      "label": "GPT-4o",
+      "norm_label": "gpt-4o"
+    },
+    "model:llama-3.1-8b-instruct": {
+      "id": "model:llama-3.1-8b-instruct",
+      "type": "Model",
+      "label": "Llama-3.1-8B-Instruct",
+      "norm_label": "llama-3.1-8b-instruct"
+    },
+    "model:mistral-nemo": {
+      "id": "model:mistral-nemo",
+      "type": "Model",
+      "label": "Mistral-Nemo",
+      "norm_label": "mistral-nemo"
+    },
+    "dataset:any领域的语料库": {
+      "id": "dataset:any领域的语料库",
+      "type": "Dataset",
+      "label": "any领域的语料库",
+      "norm_label": "any领域的语料库"
+    },
+    "method:language models": {
+      "id": "method:language models",
+      "type": "Method",
+      "label": "language models",
+      "norm_label": "language models"
+    },
+    "concept:attention-based circuits": {
+      "id": "concept:attention-based circuits",
+      "type": "Concept",
+      "label": "attention-based circuits",
+      "norm_label": "attention-based circuits"
+    },
+    "concept:data distribution": {
+      "id": "concept:data distribution",
+      "type": "Concept",
+      "label": "data distribution",
+      "norm_label": "data distribution"
+    },
+    "finding:hallucinations": {
+      "id": "finding:hallucinations",
+      "type": "Finding",
+      "label": "hallucinations",
+      "norm_label": "hallucinations"
+    },
+    "finding:data scheduling strategies": {
+      "id": "finding:data scheduling strategies",
+      "type": "Finding",
+      "label": "data scheduling strategies",
+      "norm_label": "data scheduling strategies"
+    },
+    "concept:llm": {
+      "id": "concept:llm",
+      "type": "Concept",
+      "label": "LLM",
+      "norm_label": "llm"
+    },
+    "model:小型语言模型": {
+      "id": "model:小型语言模型",
+      "type": "Model",
+      "label": "小型语言模型",
+      "norm_label": "小型语言模型"
+    },
+    "dataset:实时数据集": {
+      "id": "dataset:实时数据集",
+      "type": "Dataset",
+      "label": "实时数据集",
+      "norm_label": "实时数据集"
+    }
+  },
+  "edges": [
+    {
+      "source": "paper:1610.00031v1",
+      "target": "dataset:discriminating between similar languages dsl shared task 两个版本",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "paper:1610.00031v1",
+      "target": "task:尽管在机器学习分类器的评估中，有研究针对相似语言和语言变体之间的区分进行过分析，但不明确从一个版本到另一个版本具体取得了什么进展。",
+      "type": "applied_to",
+      "weight": 0.8
+    },
+    {
+      "source": "paper:1610.00031v1",
+      "target": "finding:估计了一个可能的上限性能",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:1610.00031v1",
+      "target": "finding:提供了帮助理解哪些语言更具挑战性的学习曲线",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:1610.00031v1",
+      "target": "finding:进一步研究和标注了一些难以区分的句子",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:2409.11353v3",
+      "target": "method:thames",
+      "type": "proposes",
+      "weight": 1.0
+    },
+    {
+      "source": "paper:2409.11353v3",
+      "target": "dataset:任何领域的语料库",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "method:thames",
+      "target": "dataset:任何领域的语料库",
+      "type": "evaluates_on",
+      "weight": 0.9
+    },
+    {
+      "source": "paper:2409.11353v3",
+      "target": "task:尽管大型语言模型（llms）中的幻想（生成事实不符的内容）是一个日益增长的挑战，但现有的检测和缓解方法通常是孤立且不足的，无法满足特定领域的需要。",
+      "type": "applied_to",
+      "weight": 0.8
+    },
+    {
+      "source": "paper:2409.11353v3",
+      "target": "finding:thames提供了一种集成的检查和缓解幻想的方法。",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:2409.11353v3",
+      "target": "finding:通过自动化测试集生成和多方面基准测试，thames确保了高数据质量、多样性和成本效率。",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:2409.11353v3",
+      "target": "finding:thames提供了多种缓解策略，如上下文学习（icl）、检索增强生成（rag）和参数高效微调（peft）",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:2503.21676v2",
+      "target": "method:synthetic factual recall task",
+      "type": "proposes",
+      "weight": 1.0
+    },
+    {
+      "source": "paper:2503.21676v2",
+      "target": "task:尽管大型语言模型在预训练过程中积累了大量的知识，但对其获取知识动态的理解仍然不足。",
+      "type": "applied_to",
+      "weight": 0.8
+    },
+    {
+      "source": "paper:2503.21676v2",
+      "target": "finding:揭示了语言模型在学习上的三个阶段以及其背后的机制。",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:2503.21676v2",
+      "target": "finding:展示了数据分布不平衡对学习动态的影响。",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:2503.21676v2",
+      "target": "finding:指出了在模型中整合新知识的挑战性。",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:2506.22486v1",
+      "target": "method:框架",
+      "type": "proposes",
+      "weight": 1.0
+    },
+    {
+      "source": "paper:2506.22486v1",
+      "target": "dataset:超过100组问题、答案和上下文的数据集",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "method:框架",
+      "target": "dataset:超过100组问题、答案和上下文的数据集",
+      "type": "evaluates_on",
+      "weight": 0.9
+    },
+    {
+      "source": "method:框架",
+      "target": "metric:f1",
+      "type": "achieves",
+      "weight": 0.85
+    },
+    {
+      "source": "paper:2506.22486v1",
+      "target": "task:尽管大型语言模型（llms）在各种任务中表现出显著的实用性，但生成的回答中可能出现的幻觉可能削弱其在实际应用中的可靠性，特别是在问答场景中，由于缺乏真实数据，这些幻觉难以检测。",
+      "type": "applied_to",
+      "weight": 0.8
+    },
+    {
+      "source": "paper:2506.22486v1",
+      "target": "finding:提出了一个框架，使用多个小型语言模型验证llm生成的回答",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:2506.22486v1",
+      "target": "finding:通过分解回答并利用多个模型生成 yes 标记的概率来检测幻觉",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:2506.22486v1",
+      "target": "finding:该方法在检测正确回答方面优于基准模型",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "method:machine learning classifiers",
+      "target": "task:discriminating between similar languages dsl shared task",
+      "type": "evaluates_on",
+      "weight": 0.9
+    },
+    {
+      "source": "model:ensemble and oracle combination",
+      "target": "task:discriminating between similar languages dsl shared task",
+      "type": "achieves",
+      "weight": 0.85
+    },
+    {
+      "source": "model:ensemble and oracle combination",
+      "target": "task:discriminating between similar languages dsl shared task",
+      "type": "improves",
+      "weight": 0.95
+    },
+    {
+      "source": "concept:learning curves",
+      "target": "task:discriminating between similar languages dsl shared task",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "method:thames",
+      "target": "concept:large language models",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "method:thames",
+      "target": "concept:hallucination",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "method:thames",
+      "target": "method:in-context learning icl",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "method:thames",
+      "target": "method:retrieval augmented generation rag",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "method:thames",
+      "target": "method:parameter-efficient fine-tuning peft",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "method:thames",
+      "target": "model:gpt-4o",
+      "type": "compared_with",
+      "weight": 0.75
+    },
+    {
+      "source": "method:thames",
+      "target": "model:llama-3.1-8b-instruct",
+      "type": "compared_with",
+      "weight": 0.75
+    },
+    {
+      "source": "method:thames",
+      "target": "model:mistral-nemo",
+      "type": "compared_with",
+      "weight": 0.75
+    },
+    {
+      "source": "method:in-context learning icl",
+      "target": "model:gpt-4o",
+      "type": "improves",
+      "weight": 0.95
+    },
+    {
+      "source": "method:retrieval augmented generation rag",
+      "target": "model:llama-3.1-8b-instruct",
+      "type": "improves",
+      "weight": 0.95
+    },
+    {
+      "source": "method:parameter-efficient fine-tuning peft",
+      "target": "model:llama-3.1-8b-instruct",
+      "type": "improves",
+      "weight": 0.95
+    },
+    {
+      "source": "method:language models",
+      "target": "method:synthetic factual recall task",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "method:language models",
+      "target": "concept:attention-based circuits",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "method:language models",
+      "target": "concept:data distribution",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "concept:data distribution",
+      "target": "method:language models",
+      "type": "evaluates_on",
+      "weight": 0.9
+    },
+    {
+      "source": "method:language models",
+      "target": "finding:hallucinations",
+      "type": "achieves",
+      "weight": 0.85
+    },
+    {
+      "source": "method:language models",
+      "target": "finding:data scheduling strategies",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "method:框架",
+      "target": "concept:llm",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "method:框架",
+      "target": "model:小型语言模型",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "method:框架",
+      "target": "dataset:实时数据集",
+      "type": "evaluates_on",
+      "weight": 0.9
+    },
+    {
+      "source": "model:小型语言模型",
+      "target": "dataset:实时数据集",
+      "type": "evaluates_on",
+      "weight": 0.9
+    },
+    {
+      "source": "model:小型语言模型",
+      "target": "metric:f1",
+      "type": "related_to",
+      "weight": 0.5
+    }
+  ],
+  "paper_entities": {
+    "1610.00031v1": [
+      "paper:1610.00031v1",
+      "dataset:discriminating between similar languages dsl shared task 两个版本",
+      "task:尽管在机器学习分类器的评估中，有研究针对相似语言和语言变体之间的区分进行过分析，但不明确从一个版本到另一个版本具体取得了什么进展。",
+      "finding:估计了一个可能的上限性能",
+      "finding:提供了帮助理解哪些语言更具挑战性的学习曲线",
+      "finding:进一步研究和标注了一些难以区分的句子",
+      "task:discriminating between similar languages dsl shared task",
+      "method:machine learning classifiers",
+      "model:ensemble and oracle combination",
+      "concept:learning curves"
+    ],
+    "2409.11353v3": [
+      "paper:2409.11353v3",
+      "method:thames",
+      "dataset:任何领域的语料库",
+      "task:尽管大型语言模型（llms）中的幻想（生成事实不符的内容）是一个日益增长的挑战，但现有的检测和缓解方法通常是孤立且不足的，无法满足特定领域的需要。",
+      "finding:thames提供了一种集成的检查和缓解幻想的方法。",
+      "finding:通过自动化测试集生成和多方面基准测试，thames确保了高数据质量、多样性和成本效率。",
+      "finding:thames提供了多种缓解策略，如上下文学习（icl）、检索增强生成（rag）和参数高效微调（peft）",
+      "concept:large language models",
+      "concept:hallucination",
+      "method:in-context learning icl",
+      "method:retrieval augmented generation rag",
+      "method:parameter-efficient fine-tuning peft",
+      "model:gpt-4o",
+      "model:llama-3.1-8b-instruct",
+      "model:mistral-nemo",
+      "dataset:any领域的语料库"
+    ],
+    "2503.21676v2": [
+      "paper:2503.21676v2",
+      "method:synthetic factual recall task",
+      "task:尽管大型语言模型在预训练过程中积累了大量的知识，但对其获取知识动态的理解仍然不足。",
+      "finding:揭示了语言模型在学习上的三个阶段以及其背后的机制。",
+      "finding:展示了数据分布不平衡对学习动态的影响。",
+      "finding:指出了在模型中整合新知识的挑战性。",
+      "method:language models",
+      "concept:attention-based circuits",
+      "concept:data distribution",
+      "finding:hallucinations",
+      "finding:data scheduling strategies"
+    ],
+    "2506.22486v1": [
+      "paper:2506.22486v1",
+      "method:框架",
+      "dataset:超过100组问题、答案和上下文的数据集",
+      "metric:f1",
+      "task:尽管大型语言模型（llms）在各种任务中表现出显著的实用性，但生成的回答中可能出现的幻觉可能削弱其在实际应用中的可靠性，特别是在问答场景中，由于缺乏真实数据，这些幻觉难以检测。",
+      "finding:提出了一个框架，使用多个小型语言模型验证llm生成的回答",
+      "finding:通过分解回答并利用多个模型生成 yes 标记的概率来检测幻觉",
+      "finding:该方法在检测正确回答方面优于基准模型",
+      "concept:llm",
+      "model:小型语言模型",
+      "dataset:实时数据集"
+    ]
+  },
+  "entity_aliases": {
+    "discriminating similar languages evaluations and explorations": "paper:1610.00031v1",
+    "discriminating between similar languages dsl shared task 两个版本": "dataset:discriminating between similar languages dsl shared task 两个版本",
+    "尽管在机器学习分类器的评估中，有研究针对相似语言和语言变体之间的区分进行过分析，但不明确从一个版本到另一个版本具体取得了什么进展。": "task:尽管在机器学习分类器的评估中，有研究针对相似语言和语言变体之间的区分进行过分析，但不明确从一个版本到另一个版本具体取得了什么进展。",
+    "估计了一个可能的上限性能": "finding:估计了一个可能的上限性能",
+    "提供了帮助理解哪些语言更具挑战性的学习曲线": "finding:提供了帮助理解哪些语言更具挑战性的学习曲线",
+    "进一步研究和标注了一些难以区分的句子": "finding:进一步研究和标注了一些难以区分的句子",
+    "thames an end-to-end tool for hallucination mitigation and evaluation in large language models": "paper:2409.11353v3",
+    "thames": "method:thames",
+    "任何领域的语料库": "dataset:任何领域的语料库",
+    "尽管大型语言模型（llms）中的幻想（生成事实不符的内容）是一个日益增长的挑战，但现有的检测和缓解方法通常是孤立且不足的，无法满足特定领域的需要。": "task:尽管大型语言模型（llms）中的幻想（生成事实不符的内容）是一个日益增长的挑战，但现有的检测和缓解方法通常是孤立且不足的，无法满足特定领域的需要。",
+    "thames提供了一种集成的检查和缓解幻想的方法。": "finding:thames提供了一种集成的检查和缓解幻想的方法。",
+    "通过自动化测试集生成和多方面基准测试，thames确保了高数据质量、多样性和成本效率。": "finding:通过自动化测试集生成和多方面基准测试，thames确保了高数据质量、多样性和成本效率。",
+    "thames提供了多种缓解策略，如上下文学习（icl）、检索增强生成（rag）和参数高效微调（peft）": "finding:thames提供了多种缓解策略，如上下文学习（icl）、检索增强生成（rag）和参数高效微调（peft）",
+    "how do language models learn facts dynamics curricula and hallucinations": "paper:2503.21676v2",
+    "synthetic factual recall task": "method:synthetic factual recall task",
+    "尽管大型语言模型在预训练过程中积累了大量的知识，但对其获取知识动态的理解仍然不足。": "task:尽管大型语言模型在预训练过程中积累了大量的知识，但对其获取知识动态的理解仍然不足。",
+    "揭示了语言模型在学习上的三个阶段以及其背后的机制。": "finding:揭示了语言模型在学习上的三个阶段以及其背后的机制。",
+    "展示了数据分布不平衡对学习动态的影响。": "finding:展示了数据分布不平衡对学习动态的影响。",
+    "指出了在模型中整合新知识的挑战性。": "finding:指出了在模型中整合新知识的挑战性。",
+    "hallucination detection with small language models": "paper:2506.22486v1",
+    "框架": "method:框架",
+    "超过100组问题、答案和上下文的数据集": "dataset:超过100组问题、答案和上下文的数据集",
+    "f1": "metric:f1",
+    "尽管大型语言模型（llms）在各种任务中表现出显著的实用性，但生成的回答中可能出现的幻觉可能削弱其在实际应用中的可靠性，特别是在问答场景中，由于缺乏真实数据，这些幻觉难以检测。": "task:尽管大型语言模型（llms）在各种任务中表现出显著的实用性，但生成的回答中可能出现的幻觉可能削弱其在实际应用中的可靠性，特别是在问答场景中，由于缺乏真实数据，这些幻觉难以检测。",
+    "提出了一个框架，使用多个小型语言模型验证llm生成的回答": "finding:提出了一个框架，使用多个小型语言模型验证llm生成的回答",
+    "通过分解回答并利用多个模型生成 yes 标记的概率来检测幻觉": "finding:通过分解回答并利用多个模型生成 yes 标记的概率来检测幻觉",
+    "该方法在检测正确回答方面优于基准模型": "finding:该方法在检测正确回答方面优于基准模型",
+    "discriminating between similar languages dsl shared task": "task:discriminating between similar languages dsl shared task",
+    "machine learning classifiers": "method:machine learning classifiers",
+    "ensemble and oracle combination": "model:ensemble and oracle combination",
+    "learning curves": "concept:learning curves",
+    "large language models": "concept:large language models",
+    "hallucination": "concept:hallucination",
+    "in-context learning icl": "method:in-context learning icl",
+    "retrieval augmented generation rag": "method:retrieval augmented generation rag",
+    "parameter-efficient fine-tuning peft": "method:parameter-efficient fine-tuning peft",
+    "gpt-4o": "model:gpt-4o",
+    "llama-3.1-8b-instruct": "model:llama-3.1-8b-instruct",
+    "mistral-nemo": "model:mistral-nemo",
+    "any领域的语料库": "dataset:any领域的语料库",
+    "language models": "method:language models",
+    "attention-based circuits": "concept:attention-based circuits",
+    "data distribution": "concept:data distribution",
+    "hallucinations": "finding:hallucinations",
+    "data scheduling strategies": "finding:data scheduling strategies",
+    "llm": "concept:llm",
+    "小型语言模型": "model:小型语言模型",
+    "实时数据集": "dataset:实时数据集"
+  },
+  "communities": {
+    "0": {
+      "nodes": [
+        "paper:1610.00031v1",
+        "dataset:discriminating between similar languages dsl shared task 两个版本",
+        "task:尽管在机器学习分类器的评估中，有研究针对相似语言和语言变体之间的区分进行过分析，但不明确从一个版本到另一个版本具体取得了什么进展。",
+        "finding:估计了一个可能的上限性能",
+        "finding:提供了帮助理解哪些语言更具挑战性的学习曲线",
+        "finding:进一步研究和标注了一些难以区分的句子",
+        "dataset:any领域的语料库"
+      ],
+      "key_entities": [
+        "Discriminating Similar Languages: Evaluations and Explorations",
+        "Discriminating between Similar Languages (DSL) shared task (两个版本)",
+        "尽管在机器学习分类器的评估中，有研究针对相似语言和语言变体之间的区分进行过分析，但不明确从一个版本到另一个版本具体取得了什么进展。",
+        "估计了一个可能的上限性能",
+        "提供了帮助理解哪些语言更具挑战性的学习曲线",
+        "进一步研究和标注了一些难以区分的句子",
+        "any领域的语料库"
+      ],
+      "summary": ""
+    },
+    "1": {
+      "nodes": [
+        "paper:2409.11353v3",
+        "task:尽管大型语言模型（llms）中的幻想（生成事实不符的内容）是一个日益增长的挑战，但现有的检测和缓解方法通常是孤立且不足的，无法满足特定领域的需要。",
+        "finding:thames提供了一种集成的检查和缓解幻想的方法。",
+        "finding:通过自动化测试集生成和多方面基准测试，thames确保了高数据质量、多样性和成本效率。",
+        "finding:thames提供了多种缓解策略，如上下文学习（icl）、检索增强生成（rag）和参数高效微调（peft）"
+      ],
+      "key_entities": [
+        "THaMES: An End-to-End Tool for Hallucination Mitigation and Evaluation in Large Language Models",
+        "尽管大型语言模型（LLMs）中的幻想（生成事实不符的内容）是一个日益增长的挑战，但现有的检测和缓解方法通常是孤立且不足的，无法满足特定领域的需要。",
+        "THaMES提供了一种集成的检查和缓解幻想的方法。",
+        "通过自动化测试集生成和多方面基准测试，THaMES确保了高数据质量、多样性和成本效率。",
+        "THaMES提供了多种缓解策略，如上下文学习（ICL）、检索增强生成（RAG）和参数高效微调（PEFT）"
+      ],
+      "summary": ""
+    },
+    "2": {
+      "nodes": [
+        "method:thames",
+        "dataset:任何领域的语料库",
+        "concept:large language models",
+        "concept:hallucination",
+        "model:mistral-nemo"
+      ],
+      "key_entities": [
+        "THaMES",
+        "任何领域的语料库",
+        "Large Language Models",
+        "Hallucination",
+        "Mistral-Nemo"
+      ],
+      "summary": ""
+    },
+    "3": {
+      "nodes": [
+        "paper:2503.21676v2",
+        "method:synthetic factual recall task",
+        "task:尽管大型语言模型在预训练过程中积累了大量的知识，但对其获取知识动态的理解仍然不足。",
+        "finding:揭示了语言模型在学习上的三个阶段以及其背后的机制。",
+        "finding:展示了数据分布不平衡对学习动态的影响。",
+        "finding:指出了在模型中整合新知识的挑战性。"
+      ],
+      "key_entities": [
+        "How do language models learn facts? Dynamics, curricula and hallucinations",
+        "synthetic factual recall task",
+        "尽管大型语言模型在预训练过程中积累了大量的知识，但对其获取知识动态的理解仍然不足。",
+        "揭示了语言模型在学习上的三个阶段以及其背后的机制。",
+        "展示了数据分布不平衡对学习动态的影响。",
+        "指出了在模型中整合新知识的挑战性。"
+      ],
+      "summary": ""
+    },
+    "4": {
+      "nodes": [
+        "paper:2506.22486v1",
+        "dataset:超过100组问题、答案和上下文的数据集",
+        "task:尽管大型语言模型（llms）在各种任务中表现出显著的实用性，但生成的回答中可能出现的幻觉可能削弱其在实际应用中的可靠性，特别是在问答场景中，由于缺乏真实数据，这些幻觉难以检测。",
+        "finding:提出了一个框架，使用多个小型语言模型验证llm生成的回答",
+        "finding:通过分解回答并利用多个模型生成 yes 标记的概率来检测幻觉",
+        "finding:该方法在检测正确回答方面优于基准模型"
+      ],
+      "key_entities": [
+        "Hallucination Detection with Small Language Models",
+        "超过100组问题、答案和上下文的数据集",
+        "尽管大型语言模型（LLMs）在各种任务中表现出显著的实用性，但生成的回答中可能出现的幻觉可能削弱其在实际应用中的可靠性，特别是在问答场景中，由于缺乏真实数据，这些幻觉难以检测。",
+        "提出了一个框架，使用多个小型语言模型验证LLM生成的回答",
+        "通过分解回答并利用多个模型生成'Yes'标记的概率来检测幻觉",
+        "该方法在检测正确回答方面优于基准模型"
+      ],
+      "summary": ""
+    },
+    "5": {
+      "nodes": [
+        "method:框架",
+        "metric:f1",
+        "concept:llm",
+        "model:小型语言模型",
+        "dataset:实时数据集"
+      ],
+      "key_entities": [
+        "框架",
+        "F1",
+        "LLM",
+        "小型语言模型",
+        "实时数据集"
+      ],
+      "summary": ""
+    },
+    "6": {
+      "nodes": [
+        "task:discriminating between similar languages dsl shared task",
+        "method:machine learning classifiers",
+        "model:ensemble and oracle combination",
+        "concept:learning curves"
+      ],
+      "key_entities": [
+        "Discriminating between Similar Languages (DSL) shared task",
+        "machine learning classifiers",
+        "ensemble and oracle combination",
+        "learning curves"
+      ],
+      "summary": ""
+    },
+    "7": {
+      "nodes": [
+        "method:in-context learning icl",
+        "model:gpt-4o"
+      ],
+      "key_entities": [
+        "In-Context Learning (ICL)",
+        "GPT-4o"
+      ],
+      "summary": ""
+    },
+    "8": {
+      "nodes": [
+        "method:retrieval augmented generation rag",
+        "method:parameter-efficient fine-tuning peft",
+        "model:llama-3.1-8b-instruct"
+      ],
+      "key_entities": [
+        "Retrieval Augmented Generation (RAG)",
+        "Parameter-Efficient Fine-tuning (PEFT)",
+        "Llama-3.1-8B-Instruct"
+      ],
+      "summary": ""
+    },
+    "9": {
+      "nodes": [
+        "method:language models",
+        "concept:attention-based circuits",
+        "concept:data distribution",
+        "finding:hallucinations",
+        "finding:data scheduling strategies"
+      ],
+      "key_entities": [
+        "language models",
+        "attention-based circuits",
+        "data distribution",
+        "hallucinations",
+        "data scheduling strategies"
+      ],
+      "summary": ""
+    }
+  },
+  "stats": {
+    "node_count": 48,
+    "edge_count": 51,
+    "node_type_count": {
+      "Paper": 4,
+      "Dataset": 5,
+      "Task": 5,
+      "Finding": 14,
+      "Method": 8,
+      "Metric": 1,
+      "Model": 5,
+      "Concept": 6
+    },
+    "paper_count": 4,
+    "community_count": 0
+  }
+}

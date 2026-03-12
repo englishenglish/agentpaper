@@ -1,0 +1,1011 @@
+{
+  "db_id": "kb_476e5792d5d5cd088ae4b38fd29ff38b",
+  "nodes": {
+    "paper:2402.04936v1": {
+      "id": "paper:2402.04936v1",
+      "type": "Paper",
+      "label": "Quantum control by effective counterdiabatic driving",
+      "norm_label": "quantum control by effective counterdiabatic driving"
+    },
+    "task:null": {
+      "id": "task:null",
+      "type": "Task",
+      "label": "null",
+      "norm_label": "null"
+    },
+    "finding:提出了一种基于 shortcuts to adiabaticity 的量子控制方案。": {
+      "id": "finding:提出了一种基于 shortcuts to adiabaticity 的量子控制方案。",
+      "type": "Finding",
+      "label": "提出了一种基于 shortcuts to adiabaticity 的量子控制方案。",
+      "norm_label": "提出了一种基于 shortcuts to adiabaticity 的量子控制方案。"
+    },
+    "finding:通过引入高频率的控制哈密顿量的调制，模拟时间依赖的反差动校正，加速了量子动力学。": {
+      "id": "finding:通过引入高频率的控制哈密顿量的调制，模拟时间依赖的反差动校正，加速了量子动力学。",
+      "type": "Finding",
+      "label": "通过引入高频率的控制哈密顿量的调制，模拟时间依赖的反差动校正，加速了量子动力学。",
+      "norm_label": "通过引入高频率的控制哈密顿量的调制，模拟时间依赖的反差动校正，加速了量子动力学。"
+    },
+    "finding:展示了反差动驱动在从超导电路到 rydberg 原子平台中高效实现量子态转移和量子门的应用实例。": {
+      "id": "finding:展示了反差动驱动在从超导电路到 rydberg 原子平台中高效实现量子态转移和量子门的应用实例。",
+      "type": "Finding",
+      "label": "展示了反差动驱动在从超导电路到 Rydberg 原子平台中高效实现量子态转移和量子门的应用实例。",
+      "norm_label": "展示了反差动驱动在从超导电路到 rydberg 原子平台中高效实现量子态转移和量子门的应用实例。"
+    },
+    "paper:2305.18452v1": {
+      "id": "paper:2305.18452v1",
+      "type": "Paper",
+      "label": "Generating Driving Scenes with Diffusion",
+      "norm_label": "generating driving scenes with diffusion"
+    },
+    "method:scene diffusion": {
+      "id": "method:scene diffusion",
+      "type": "Method",
+      "label": "Scene Diffusion",
+      "norm_label": "scene diffusion"
+    },
+    "dataset:null": {
+      "id": "dataset:null",
+      "type": "Dataset",
+      "label": "null",
+      "norm_label": "null"
+    },
+    "metric:null": {
+      "id": "metric:null",
+      "type": "Metric",
+      "label": "null",
+      "norm_label": "null"
+    },
+    "task:为了模拟自动驾驶汽车感知系统输出的交通场景，生成现实且物理上可验证的车辆布局。": {
+      "id": "task:为了模拟自动驾驶汽车感知系统输出的交通场景，生成现实且物理上可验证的车辆布局。",
+      "type": "Task",
+      "label": "为了模拟自动驾驶汽车感知系统输出的交通场景，生成现实且物理上可验证的车辆布局。",
+      "norm_label": "为了模拟自动驾驶汽车感知系统输出的交通场景，生成现实且物理上可验证的车辆布局。"
+    },
+    "finding:提出了一种新颖的结合扩散模型和物体检测的方法，用于直接生成现实且物理上可验证的交通场景。": {
+      "id": "finding:提出了一种新颖的结合扩散模型和物体检测的方法，用于直接生成现实且物理上可验证的交通场景。",
+      "type": "Finding",
+      "label": "提出了一种新颖的结合扩散模型和物体检测的方法，用于直接生成现实且物理上可验证的交通场景。",
+      "norm_label": "提出了一种新颖的结合扩散模型和物体检测的方法，用于直接生成现实且物理上可验证的交通场景。"
+    },
+    "finding:该方法能够在不同的美国地区生成符合各地区细节特征的场景。": {
+      "id": "finding:该方法能够在不同的美国地区生成符合各地区细节特征的场景。",
+      "type": "Finding",
+      "label": "该方法能够在不同的美国地区生成符合各地区细节特征的场景。",
+      "norm_label": "该方法能够在不同的美国地区生成符合各地区细节特征的场景。"
+    },
+    "finding:展示了一种学习驱动的交通场景生成系统，用于模拟自动驾驶汽车感知系统的输出。": {
+      "id": "finding:展示了一种学习驱动的交通场景生成系统，用于模拟自动驾驶汽车感知系统的输出。",
+      "type": "Finding",
+      "label": "展示了一种学习驱动的交通场景生成系统，用于模拟自动驾驶汽车感知系统的输出。",
+      "norm_label": "展示了一种学习驱动的交通场景生成系统，用于模拟自动驾驶汽车感知系统的输出。"
+    },
+    "paper:2102.05843v1": {
+      "id": "paper:2102.05843v1",
+      "type": "Paper",
+      "label": "Driving Style Representation in Convolutional Recurrent Neural Network Model of Driver Identification",
+      "norm_label": "driving style representation in convolutional recurrent neural network model of driver identification"
+    },
+    "method:d-crnn": {
+      "id": "method:d-crnn",
+      "type": "Method",
+      "label": "D-CRNN",
+      "norm_label": "d-crnn"
+    },
+    "task:在轨迹数据中识别和表示驾驶风格以区分不同驾驶员。": {
+      "id": "task:在轨迹数据中识别和表示驾驶风格以区分不同驾驶员。",
+      "type": "Task",
+      "label": "在轨迹数据中识别和表示驾驶风格以区分不同驾驶员。",
+      "norm_label": "在轨迹数据中识别和表示驾驶风格以区分不同驾驶员。"
+    },
+    "finding:提出了d-crnn模型用以识别驾驶风格。": {
+      "id": "finding:提出了d-crnn模型用以识别驾驶风格。",
+      "type": "Finding",
+      "label": "提出了D-CRNN模型用以识别驾驶风格。",
+      "norm_label": "提出了d-crnn模型用以识别驾驶风格。"
+    },
+    "finding:展示了如何通过预处理输入数据来去除偏差，即通过采样每个驾驶员的不相似轨迹来防止空间记忆。": {
+      "id": "finding:展示了如何通过预处理输入数据来去除偏差，即通过采样每个驾驶员的不相似轨迹来防止空间记忆。",
+      "type": "Finding",
+      "label": "展示了如何通过预处理输入数据来去除偏差，即通过采样每个驾驶员的不相似轨迹来防止空间记忆。",
+      "norm_label": "展示了如何通过预处理输入数据来去除偏差，即通过采样每个驾驶员的不相似轨迹来防止空间记忆。"
+    },
+    "finding:分析了不同特征对驾驶员识别的贡献。": {
+      "id": "finding:分析了不同特征对驾驶员识别的贡献。",
+      "type": "Finding",
+      "label": "分析了不同特征对驾驶员识别的贡献。",
+      "norm_label": "分析了不同特征对驾驶员识别的贡献。"
+    },
+    "paper:2509.23922v1": {
+      "id": "paper:2509.23922v1",
+      "type": "Paper",
+      "label": "DriveE2E: Closed-Loop Benchmark for End-to-End Autonomous Driving through Real-to-Simulation",
+      "norm_label": "drivee2e closed-loop benchmark for end-to-end autonomous driving through real-to-simulation"
+    },
+    "method:drivee2e": {
+      "id": "method:drivee2e",
+      "type": "Method",
+      "label": "DriveE2E",
+      "norm_label": "drivee2e"
+    },
+    "dataset:未具体提到数据集规模": {
+      "id": "dataset:未具体提到数据集规模",
+      "type": "Dataset",
+      "label": "未具体提到数据集规模",
+      "norm_label": "未具体提到数据集规模"
+    },
+    "task:尽管现有的闭环基准依赖于手动配置的交通场景，但这些场景可能与现实世界条件不符，限制了它们反映实际驾驶性能的能力。": {
+      "id": "task:尽管现有的闭环基准依赖于手动配置的交通场景，但这些场景可能与现实世界条件不符，限制了它们反映实际驾驶性能的能力。",
+      "type": "Task",
+      "label": "尽管现有的闭环基准依赖于手动配置的交通场景，但这些场景可能与现实世界条件不符，限制了它们反映实际驾驶性能的能力。",
+      "norm_label": "尽管现有的闭环基准依赖于手动配置的交通场景，但这些场景可能与现实世界条件不符，限制了它们反映实际驾驶性能的能力。"
+    },
+    "finding:提出了一个与现实世界驾驶场景紧密集成的carla模拟器闭环评估框架。": {
+      "id": "finding:提出了一个与现实世界驾驶场景紧密集成的carla模拟器闭环评估框架。",
+      "type": "Finding",
+      "label": "提出了一个与现实世界驾驶场景紧密集成的CARLA模拟器闭环评估框架。",
+      "norm_label": "提出了一个与现实世界驾驶场景紧密集成的carla模拟器闭环评估框架。"
+    },
+    "finding:使用真实世界收集的基础设施传感器数据创建了动态交通场景和静态数字孪生资产。": {
+      "id": "finding:使用真实世界收集的基础设施传感器数据创建了动态交通场景和静态数字孪生资产。",
+      "type": "Finding",
+      "label": "使用真实世界收集的基础设施传感器数据创建了动态交通场景和静态数字孪生资产。",
+      "norm_label": "使用真实世界收集的基础设施传感器数据创建了动态交通场景和静态数字孪生资产。"
+    },
+    "finding:提供了端到端自动驾驶模型的全面闭环基准评估。": {
+      "id": "finding:提供了端到端自动驾驶模型的全面闭环基准评估。",
+      "type": "Finding",
+      "label": "提供了端到端自动驾驶模型的全面闭环基准评估。",
+      "norm_label": "提供了端到端自动驾驶模型的全面闭环基准评估。"
+    },
+    "paper:2001.03908v2": {
+      "id": "paper:2001.03908v2",
+      "type": "Paper",
+      "label": "Self-Driving like a Human driver instead of a Robocar: Personalized comfortable driving experience for autonomous vehicles",
+      "norm_label": "self-driving like a human driver instead of a robocar personalized comfortable driving experience for autonomous vehicles"
+    },
+    "task:为了提供个性化舒适的自驾车体验，本文提出了一个基于个人驾驶偏好的自驾车集成控制系统。": {
+      "id": "task:为了提供个性化舒适的自驾车体验，本文提出了一个基于个人驾驶偏好的自驾车集成控制系统。",
+      "type": "Task",
+      "label": "为了提供个性化舒适的自驾车体验，本文提出了一个基于个人驾驶偏好的自驾车集成控制系统。",
+      "norm_label": "为了提供个性化舒适的自驾车体验，本文提出了一个基于个人驾驶偏好的自驾车集成控制系统。"
+    },
+    "finding:提出了occupant s preference metric opm 来定义乘客的偏好加速度和加速度变化率区域。": {
+      "id": "finding:提出了occupant s preference metric opm 来定义乘客的偏好加速度和加速度变化率区域。",
+      "type": "Finding",
+      "label": "提出了Occupant's Preference Metric (OPM) 来定义乘客的偏好加速度和加速度变化率区域。",
+      "norm_label": "提出了occupant s preference metric opm 来定义乘客的偏好加速度和加速度变化率区域。"
+    },
+    "finding:设计了一种基于偏好参数的车辆控制器进行横向和纵向的集成控制。": {
+      "id": "finding:设计了一种基于偏好参数的车辆控制器进行横向和纵向的集成控制。",
+      "type": "Finding",
+      "label": "设计了一种基于偏好参数的车辆控制器进行横向和纵向的集成控制。",
+      "norm_label": "设计了一种基于偏好参数的车辆控制器进行横向和纵向的集成控制。"
+    },
+    "finding:实现了自动驾驶车辆驾驶行为的个性化": {
+      "id": "finding:实现了自动驾驶车辆驾驶行为的个性化",
+      "type": "Finding",
+      "label": "实现了自动驾驶车辆驾驶行为的个性化",
+      "norm_label": "实现了自动驾驶车辆驾驶行为的个性化"
+    },
+    "method:quantum control scheme": {
+      "id": "method:quantum control scheme",
+      "type": "Method",
+      "label": "Quantum control scheme",
+      "norm_label": "quantum control scheme"
+    },
+    "concept:shortcuts to adiabaticity": {
+      "id": "concept:shortcuts to adiabaticity",
+      "type": "Concept",
+      "label": "Shortcuts to adiabaticity",
+      "norm_label": "shortcuts to adiabaticity"
+    },
+    "task:high-fidelity quantum state transfers": {
+      "id": "task:high-fidelity quantum state transfers",
+      "type": "Task",
+      "label": "High-fidelity quantum state transfers",
+      "norm_label": "high-fidelity quantum state transfers"
+    },
+    "task:quantum gates": {
+      "id": "task:quantum gates",
+      "type": "Task",
+      "label": "Quantum gates",
+      "norm_label": "quantum gates"
+    },
+    "concept:superconducting circuits": {
+      "id": "concept:superconducting circuits",
+      "type": "Concept",
+      "label": "Superconducting circuits",
+      "norm_label": "superconducting circuits"
+    },
+    "concept:rydberg atoms": {
+      "id": "concept:rydberg atoms",
+      "type": "Concept",
+      "label": "Rydberg atoms",
+      "norm_label": "rydberg atoms"
+    },
+    "concept:diffusion": {
+      "id": "concept:diffusion",
+      "type": "Concept",
+      "label": "Diffusion",
+      "norm_label": "diffusion"
+    },
+    "concept:object detection": {
+      "id": "concept:object detection",
+      "type": "Concept",
+      "label": "Object Detection",
+      "norm_label": "object detection"
+    },
+    "task:traffic scene generation": {
+      "id": "task:traffic scene generation",
+      "type": "Task",
+      "label": "Traffic Scene Generation",
+      "norm_label": "traffic scene generation"
+    },
+    "concept:perception system": {
+      "id": "concept:perception system",
+      "type": "Concept",
+      "label": "Perception System",
+      "norm_label": "perception system"
+    },
+    "task:driver identification": {
+      "id": "task:driver identification",
+      "type": "Task",
+      "label": "Driver Identification",
+      "norm_label": "driver identification"
+    },
+    "concept:convolutional neural networks cnn": {
+      "id": "concept:convolutional neural networks cnn",
+      "type": "Concept",
+      "label": "Convolutional Neural Networks (CNN)",
+      "norm_label": "convolutional neural networks cnn"
+    },
+    "concept:recurrent neural networks rnn": {
+      "id": "concept:recurrent neural networks rnn",
+      "type": "Concept",
+      "label": "Recurrent Neural Networks (RNN)",
+      "norm_label": "recurrent neural networks rnn"
+    },
+    "concept:temporal dependencies": {
+      "id": "concept:temporal dependencies",
+      "type": "Concept",
+      "label": "Temporal Dependencies",
+      "norm_label": "temporal dependencies"
+    },
+    "concept:driving style": {
+      "id": "concept:driving style",
+      "type": "Concept",
+      "label": "Driving Style",
+      "norm_label": "driving style"
+    },
+    "concept:preprocessing": {
+      "id": "concept:preprocessing",
+      "type": "Concept",
+      "label": "Preprocessing",
+      "norm_label": "preprocessing"
+    },
+    "concept:carla": {
+      "id": "concept:carla",
+      "type": "Concept",
+      "label": "CARLA",
+      "norm_label": "carla"
+    },
+    "concept:infrastructure sensors": {
+      "id": "concept:infrastructure sensors",
+      "type": "Concept",
+      "label": "infrastructure sensors",
+      "norm_label": "infrastructure sensors"
+    },
+    "concept:realistic driving scenarios": {
+      "id": "concept:realistic driving scenarios",
+      "type": "Concept",
+      "label": "realistic driving scenarios",
+      "norm_label": "realistic driving scenarios"
+    },
+    "dataset:100-hour video dataset": {
+      "id": "dataset:100-hour video dataset",
+      "type": "Dataset",
+      "label": "100-hour video dataset",
+      "norm_label": "100-hour video dataset"
+    },
+    "concept:digital twin assets": {
+      "id": "concept:digital twin assets",
+      "type": "Concept",
+      "label": "digital twin assets",
+      "norm_label": "digital twin assets"
+    },
+    "concept:occupant s preference metric opm": {
+      "id": "concept:occupant s preference metric opm",
+      "type": "Concept",
+      "label": "Occupant's Preference Metric (OPM)",
+      "norm_label": "occupant s preference metric opm"
+    },
+    "method:vehicle controller": {
+      "id": "method:vehicle controller",
+      "type": "Method",
+      "label": "vehicle controller",
+      "norm_label": "vehicle controller"
+    },
+    "task:autonomous vehicles": {
+      "id": "task:autonomous vehicles",
+      "type": "Task",
+      "label": "autonomous vehicles",
+      "norm_label": "autonomous vehicles"
+    },
+    "task:self-driving vehicle": {
+      "id": "task:self-driving vehicle",
+      "type": "Task",
+      "label": "self-driving vehicle",
+      "norm_label": "self-driving vehicle"
+    }
+  },
+  "edges": [
+    {
+      "source": "paper:2402.04936v1",
+      "target": "task:null",
+      "type": "applied_to",
+      "weight": 0.8
+    },
+    {
+      "source": "paper:2402.04936v1",
+      "target": "finding:提出了一种基于 shortcuts to adiabaticity 的量子控制方案。",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:2402.04936v1",
+      "target": "finding:通过引入高频率的控制哈密顿量的调制，模拟时间依赖的反差动校正，加速了量子动力学。",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:2402.04936v1",
+      "target": "finding:展示了反差动驱动在从超导电路到 rydberg 原子平台中高效实现量子态转移和量子门的应用实例。",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:2305.18452v1",
+      "target": "method:scene diffusion",
+      "type": "proposes",
+      "weight": 1.0
+    },
+    {
+      "source": "paper:2305.18452v1",
+      "target": "dataset:null",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "method:scene diffusion",
+      "target": "dataset:null",
+      "type": "evaluates_on",
+      "weight": 0.9
+    },
+    {
+      "source": "method:scene diffusion",
+      "target": "metric:null",
+      "type": "achieves",
+      "weight": 0.85
+    },
+    {
+      "source": "paper:2305.18452v1",
+      "target": "task:为了模拟自动驾驶汽车感知系统输出的交通场景，生成现实且物理上可验证的车辆布局。",
+      "type": "applied_to",
+      "weight": 0.8
+    },
+    {
+      "source": "paper:2305.18452v1",
+      "target": "finding:提出了一种新颖的结合扩散模型和物体检测的方法，用于直接生成现实且物理上可验证的交通场景。",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:2305.18452v1",
+      "target": "finding:该方法能够在不同的美国地区生成符合各地区细节特征的场景。",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:2305.18452v1",
+      "target": "finding:展示了一种学习驱动的交通场景生成系统，用于模拟自动驾驶汽车感知系统的输出。",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:2102.05843v1",
+      "target": "method:d-crnn",
+      "type": "proposes",
+      "weight": 1.0
+    },
+    {
+      "source": "paper:2102.05843v1",
+      "target": "dataset:null",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "method:d-crnn",
+      "target": "dataset:null",
+      "type": "evaluates_on",
+      "weight": 0.9
+    },
+    {
+      "source": "method:d-crnn",
+      "target": "metric:null",
+      "type": "achieves",
+      "weight": 0.85
+    },
+    {
+      "source": "paper:2102.05843v1",
+      "target": "task:在轨迹数据中识别和表示驾驶风格以区分不同驾驶员。",
+      "type": "applied_to",
+      "weight": 0.8
+    },
+    {
+      "source": "paper:2102.05843v1",
+      "target": "finding:提出了d-crnn模型用以识别驾驶风格。",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:2102.05843v1",
+      "target": "finding:展示了如何通过预处理输入数据来去除偏差，即通过采样每个驾驶员的不相似轨迹来防止空间记忆。",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:2102.05843v1",
+      "target": "finding:分析了不同特征对驾驶员识别的贡献。",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:2509.23922v1",
+      "target": "method:drivee2e",
+      "type": "proposes",
+      "weight": 1.0
+    },
+    {
+      "source": "paper:2509.23922v1",
+      "target": "dataset:未具体提到数据集规模",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "method:drivee2e",
+      "target": "dataset:未具体提到数据集规模",
+      "type": "evaluates_on",
+      "weight": 0.9
+    },
+    {
+      "source": "paper:2509.23922v1",
+      "target": "task:尽管现有的闭环基准依赖于手动配置的交通场景，但这些场景可能与现实世界条件不符，限制了它们反映实际驾驶性能的能力。",
+      "type": "applied_to",
+      "weight": 0.8
+    },
+    {
+      "source": "paper:2509.23922v1",
+      "target": "finding:提出了一个与现实世界驾驶场景紧密集成的carla模拟器闭环评估框架。",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:2509.23922v1",
+      "target": "finding:使用真实世界收集的基础设施传感器数据创建了动态交通场景和静态数字孪生资产。",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:2509.23922v1",
+      "target": "finding:提供了端到端自动驾驶模型的全面闭环基准评估。",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:2001.03908v2",
+      "target": "task:为了提供个性化舒适的自驾车体验，本文提出了一个基于个人驾驶偏好的自驾车集成控制系统。",
+      "type": "applied_to",
+      "weight": 0.8
+    },
+    {
+      "source": "paper:2001.03908v2",
+      "target": "finding:提出了occupant s preference metric opm 来定义乘客的偏好加速度和加速度变化率区域。",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:2001.03908v2",
+      "target": "finding:设计了一种基于偏好参数的车辆控制器进行横向和纵向的集成控制。",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:2001.03908v2",
+      "target": "finding:实现了自动驾驶车辆驾驶行为的个性化",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "method:quantum control scheme",
+      "target": "concept:shortcuts to adiabaticity",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "method:quantum control scheme",
+      "target": "task:high-fidelity quantum state transfers",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "method:quantum control scheme",
+      "target": "task:quantum gates",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "method:quantum control scheme",
+      "target": "concept:superconducting circuits",
+      "type": "applied_to",
+      "weight": 0.8
+    },
+    {
+      "source": "method:quantum control scheme",
+      "target": "concept:rydberg atoms",
+      "type": "applied_to",
+      "weight": 0.8
+    },
+    {
+      "source": "method:scene diffusion",
+      "target": "concept:diffusion",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "method:scene diffusion",
+      "target": "concept:object detection",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "method:scene diffusion",
+      "target": "task:traffic scene generation",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "method:scene diffusion",
+      "target": "concept:perception system",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "method:d-crnn",
+      "target": "task:driver identification",
+      "type": "applied_to",
+      "weight": 0.8
+    },
+    {
+      "source": "method:d-crnn",
+      "target": "concept:convolutional neural networks cnn",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "method:d-crnn",
+      "target": "concept:recurrent neural networks rnn",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "concept:recurrent neural networks rnn",
+      "target": "concept:temporal dependencies",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "concept:convolutional neural networks cnn",
+      "target": "concept:driving style",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "method:d-crnn",
+      "target": "concept:driving style",
+      "type": "evaluates_on",
+      "weight": 0.9
+    },
+    {
+      "source": "method:d-crnn",
+      "target": "concept:preprocessing",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "concept:preprocessing",
+      "target": "concept:driving style",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "method:drivee2e",
+      "target": "concept:carla",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "method:drivee2e",
+      "target": "concept:infrastructure sensors",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "method:drivee2e",
+      "target": "dataset:100-hour video dataset",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "method:drivee2e",
+      "target": "concept:digital twin assets",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "method:drivee2e",
+      "target": "concept:realistic driving scenarios",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "concept:occupant s preference metric opm",
+      "target": "task:autonomous vehicles",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "concept:occupant s preference metric opm",
+      "target": "task:self-driving vehicle",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "method:vehicle controller",
+      "target": "task:autonomous vehicles",
+      "type": "uses",
+      "weight": 0.8
+    }
+  ],
+  "paper_entities": {
+    "2402.04936v1": [
+      "paper:2402.04936v1",
+      "task:null",
+      "finding:提出了一种基于 shortcuts to adiabaticity 的量子控制方案。",
+      "finding:通过引入高频率的控制哈密顿量的调制，模拟时间依赖的反差动校正，加速了量子动力学。",
+      "finding:展示了反差动驱动在从超导电路到 rydberg 原子平台中高效实现量子态转移和量子门的应用实例。",
+      "method:quantum control scheme",
+      "concept:shortcuts to adiabaticity",
+      "task:high-fidelity quantum state transfers",
+      "task:quantum gates",
+      "concept:superconducting circuits",
+      "concept:rydberg atoms"
+    ],
+    "2305.18452v1": [
+      "paper:2305.18452v1",
+      "method:scene diffusion",
+      "dataset:null",
+      "metric:null",
+      "task:为了模拟自动驾驶汽车感知系统输出的交通场景，生成现实且物理上可验证的车辆布局。",
+      "finding:提出了一种新颖的结合扩散模型和物体检测的方法，用于直接生成现实且物理上可验证的交通场景。",
+      "finding:该方法能够在不同的美国地区生成符合各地区细节特征的场景。",
+      "finding:展示了一种学习驱动的交通场景生成系统，用于模拟自动驾驶汽车感知系统的输出。",
+      "concept:diffusion",
+      "concept:object detection",
+      "task:traffic scene generation",
+      "concept:perception system"
+    ],
+    "2102.05843v1": [
+      "paper:2102.05843v1",
+      "method:d-crnn",
+      "dataset:null",
+      "metric:null",
+      "task:在轨迹数据中识别和表示驾驶风格以区分不同驾驶员。",
+      "finding:提出了d-crnn模型用以识别驾驶风格。",
+      "finding:展示了如何通过预处理输入数据来去除偏差，即通过采样每个驾驶员的不相似轨迹来防止空间记忆。",
+      "finding:分析了不同特征对驾驶员识别的贡献。",
+      "task:driver identification",
+      "concept:convolutional neural networks cnn",
+      "concept:recurrent neural networks rnn",
+      "concept:temporal dependencies",
+      "concept:driving style",
+      "concept:preprocessing"
+    ],
+    "2509.23922v1": [
+      "paper:2509.23922v1",
+      "method:drivee2e",
+      "dataset:未具体提到数据集规模",
+      "task:尽管现有的闭环基准依赖于手动配置的交通场景，但这些场景可能与现实世界条件不符，限制了它们反映实际驾驶性能的能力。",
+      "finding:提出了一个与现实世界驾驶场景紧密集成的carla模拟器闭环评估框架。",
+      "finding:使用真实世界收集的基础设施传感器数据创建了动态交通场景和静态数字孪生资产。",
+      "finding:提供了端到端自动驾驶模型的全面闭环基准评估。",
+      "concept:carla",
+      "concept:infrastructure sensors",
+      "concept:realistic driving scenarios",
+      "dataset:100-hour video dataset",
+      "concept:digital twin assets"
+    ],
+    "2001.03908v2": [
+      "paper:2001.03908v2",
+      "task:为了提供个性化舒适的自驾车体验，本文提出了一个基于个人驾驶偏好的自驾车集成控制系统。",
+      "finding:提出了occupant s preference metric opm 来定义乘客的偏好加速度和加速度变化率区域。",
+      "finding:设计了一种基于偏好参数的车辆控制器进行横向和纵向的集成控制。",
+      "finding:实现了自动驾驶车辆驾驶行为的个性化",
+      "concept:occupant s preference metric opm",
+      "method:vehicle controller",
+      "task:autonomous vehicles",
+      "task:self-driving vehicle"
+    ]
+  },
+  "entity_aliases": {
+    "quantum control by effective counterdiabatic driving": "paper:2402.04936v1",
+    "null": "metric:null",
+    "提出了一种基于 shortcuts to adiabaticity 的量子控制方案。": "finding:提出了一种基于 shortcuts to adiabaticity 的量子控制方案。",
+    "通过引入高频率的控制哈密顿量的调制，模拟时间依赖的反差动校正，加速了量子动力学。": "finding:通过引入高频率的控制哈密顿量的调制，模拟时间依赖的反差动校正，加速了量子动力学。",
+    "展示了反差动驱动在从超导电路到 rydberg 原子平台中高效实现量子态转移和量子门的应用实例。": "finding:展示了反差动驱动在从超导电路到 rydberg 原子平台中高效实现量子态转移和量子门的应用实例。",
+    "generating driving scenes with diffusion": "paper:2305.18452v1",
+    "scene diffusion": "method:scene diffusion",
+    "为了模拟自动驾驶汽车感知系统输出的交通场景，生成现实且物理上可验证的车辆布局。": "task:为了模拟自动驾驶汽车感知系统输出的交通场景，生成现实且物理上可验证的车辆布局。",
+    "提出了一种新颖的结合扩散模型和物体检测的方法，用于直接生成现实且物理上可验证的交通场景。": "finding:提出了一种新颖的结合扩散模型和物体检测的方法，用于直接生成现实且物理上可验证的交通场景。",
+    "该方法能够在不同的美国地区生成符合各地区细节特征的场景。": "finding:该方法能够在不同的美国地区生成符合各地区细节特征的场景。",
+    "展示了一种学习驱动的交通场景生成系统，用于模拟自动驾驶汽车感知系统的输出。": "finding:展示了一种学习驱动的交通场景生成系统，用于模拟自动驾驶汽车感知系统的输出。",
+    "driving style representation in convolutional recurrent neural network model of driver identification": "paper:2102.05843v1",
+    "d-crnn": "method:d-crnn",
+    "在轨迹数据中识别和表示驾驶风格以区分不同驾驶员。": "task:在轨迹数据中识别和表示驾驶风格以区分不同驾驶员。",
+    "提出了d-crnn模型用以识别驾驶风格。": "finding:提出了d-crnn模型用以识别驾驶风格。",
+    "展示了如何通过预处理输入数据来去除偏差，即通过采样每个驾驶员的不相似轨迹来防止空间记忆。": "finding:展示了如何通过预处理输入数据来去除偏差，即通过采样每个驾驶员的不相似轨迹来防止空间记忆。",
+    "分析了不同特征对驾驶员识别的贡献。": "finding:分析了不同特征对驾驶员识别的贡献。",
+    "drivee2e closed-loop benchmark for end-to-end autonomous driving through real-to-simulation": "paper:2509.23922v1",
+    "drivee2e": "method:drivee2e",
+    "未具体提到数据集规模": "dataset:未具体提到数据集规模",
+    "尽管现有的闭环基准依赖于手动配置的交通场景，但这些场景可能与现实世界条件不符，限制了它们反映实际驾驶性能的能力。": "task:尽管现有的闭环基准依赖于手动配置的交通场景，但这些场景可能与现实世界条件不符，限制了它们反映实际驾驶性能的能力。",
+    "提出了一个与现实世界驾驶场景紧密集成的carla模拟器闭环评估框架。": "finding:提出了一个与现实世界驾驶场景紧密集成的carla模拟器闭环评估框架。",
+    "使用真实世界收集的基础设施传感器数据创建了动态交通场景和静态数字孪生资产。": "finding:使用真实世界收集的基础设施传感器数据创建了动态交通场景和静态数字孪生资产。",
+    "提供了端到端自动驾驶模型的全面闭环基准评估。": "finding:提供了端到端自动驾驶模型的全面闭环基准评估。",
+    "self-driving like a human driver instead of a robocar personalized comfortable driving experience for autonomous vehicles": "paper:2001.03908v2",
+    "为了提供个性化舒适的自驾车体验，本文提出了一个基于个人驾驶偏好的自驾车集成控制系统。": "task:为了提供个性化舒适的自驾车体验，本文提出了一个基于个人驾驶偏好的自驾车集成控制系统。",
+    "提出了occupant s preference metric opm 来定义乘客的偏好加速度和加速度变化率区域。": "finding:提出了occupant s preference metric opm 来定义乘客的偏好加速度和加速度变化率区域。",
+    "设计了一种基于偏好参数的车辆控制器进行横向和纵向的集成控制。": "finding:设计了一种基于偏好参数的车辆控制器进行横向和纵向的集成控制。",
+    "实现了自动驾驶车辆驾驶行为的个性化": "finding:实现了自动驾驶车辆驾驶行为的个性化",
+    "quantum control scheme": "method:quantum control scheme",
+    "shortcuts to adiabaticity": "concept:shortcuts to adiabaticity",
+    "high-fidelity quantum state transfers": "task:high-fidelity quantum state transfers",
+    "quantum gates": "task:quantum gates",
+    "superconducting circuits": "concept:superconducting circuits",
+    "rydberg atoms": "concept:rydberg atoms",
+    "diffusion": "concept:diffusion",
+    "object detection": "concept:object detection",
+    "traffic scene generation": "task:traffic scene generation",
+    "perception system": "concept:perception system",
+    "driver identification": "task:driver identification",
+    "convolutional neural networks cnn": "concept:convolutional neural networks cnn",
+    "recurrent neural networks rnn": "concept:recurrent neural networks rnn",
+    "temporal dependencies": "concept:temporal dependencies",
+    "driving style": "concept:driving style",
+    "preprocessing": "concept:preprocessing",
+    "carla": "concept:carla",
+    "infrastructure sensors": "concept:infrastructure sensors",
+    "realistic driving scenarios": "concept:realistic driving scenarios",
+    "100-hour video dataset": "dataset:100-hour video dataset",
+    "digital twin assets": "concept:digital twin assets",
+    "occupant s preference metric opm": "concept:occupant s preference metric opm",
+    "vehicle controller": "method:vehicle controller",
+    "autonomous vehicles": "task:autonomous vehicles",
+    "self-driving vehicle": "task:self-driving vehicle"
+  },
+  "communities": {
+    "0": {
+      "nodes": [
+        "paper:2402.04936v1",
+        "task:null",
+        "finding:提出了一种基于 shortcuts to adiabaticity 的量子控制方案。",
+        "finding:通过引入高频率的控制哈密顿量的调制，模拟时间依赖的反差动校正，加速了量子动力学。",
+        "finding:展示了反差动驱动在从超导电路到 rydberg 原子平台中高效实现量子态转移和量子门的应用实例。"
+      ],
+      "key_entities": [
+        "Quantum control by effective counterdiabatic driving",
+        "null",
+        "提出了一种基于 shortcuts to adiabaticity 的量子控制方案。",
+        "通过引入高频率的控制哈密顿量的调制，模拟时间依赖的反差动校正，加速了量子动力学。",
+        "展示了反差动驱动在从超导电路到 Rydberg 原子平台中高效实现量子态转移和量子门的应用实例。"
+      ],
+      "summary": ""
+    },
+    "1": {
+      "nodes": [
+        "paper:2305.18452v1",
+        "dataset:null",
+        "task:为了模拟自动驾驶汽车感知系统输出的交通场景，生成现实且物理上可验证的车辆布局。",
+        "finding:提出了一种新颖的结合扩散模型和物体检测的方法，用于直接生成现实且物理上可验证的交通场景。",
+        "finding:该方法能够在不同的美国地区生成符合各地区细节特征的场景。",
+        "finding:展示了一种学习驱动的交通场景生成系统，用于模拟自动驾驶汽车感知系统的输出。"
+      ],
+      "key_entities": [
+        "Generating Driving Scenes with Diffusion",
+        "null",
+        "为了模拟自动驾驶汽车感知系统输出的交通场景，生成现实且物理上可验证的车辆布局。",
+        "提出了一种新颖的结合扩散模型和物体检测的方法，用于直接生成现实且物理上可验证的交通场景。",
+        "该方法能够在不同的美国地区生成符合各地区细节特征的场景。",
+        "展示了一种学习驱动的交通场景生成系统，用于模拟自动驾驶汽车感知系统的输出。"
+      ],
+      "summary": ""
+    },
+    "2": {
+      "nodes": [
+        "method:scene diffusion",
+        "metric:null",
+        "concept:diffusion",
+        "concept:object detection",
+        "task:traffic scene generation",
+        "concept:perception system"
+      ],
+      "key_entities": [
+        "Scene Diffusion",
+        "null",
+        "Diffusion",
+        "Object Detection",
+        "Traffic Scene Generation",
+        "Perception System"
+      ],
+      "summary": ""
+    },
+    "3": {
+      "nodes": [
+        "paper:2102.05843v1",
+        "task:在轨迹数据中识别和表示驾驶风格以区分不同驾驶员。",
+        "finding:提出了d-crnn模型用以识别驾驶风格。",
+        "finding:展示了如何通过预处理输入数据来去除偏差，即通过采样每个驾驶员的不相似轨迹来防止空间记忆。",
+        "finding:分析了不同特征对驾驶员识别的贡献。"
+      ],
+      "key_entities": [
+        "Driving Style Representation in Convolutional Recurrent Neural Network Model of Driver Identification",
+        "在轨迹数据中识别和表示驾驶风格以区分不同驾驶员。",
+        "提出了D-CRNN模型用以识别驾驶风格。",
+        "展示了如何通过预处理输入数据来去除偏差，即通过采样每个驾驶员的不相似轨迹来防止空间记忆。",
+        "分析了不同特征对驾驶员识别的贡献。"
+      ],
+      "summary": ""
+    },
+    "4": {
+      "nodes": [
+        "method:d-crnn",
+        "task:driver identification",
+        "concept:convolutional neural networks cnn",
+        "concept:recurrent neural networks rnn",
+        "concept:temporal dependencies",
+        "concept:driving style",
+        "concept:preprocessing"
+      ],
+      "key_entities": [
+        "D-CRNN",
+        "Driver Identification",
+        "Convolutional Neural Networks (CNN)",
+        "Recurrent Neural Networks (RNN)",
+        "Temporal Dependencies",
+        "Driving Style",
+        "Preprocessing"
+      ],
+      "summary": ""
+    },
+    "5": {
+      "nodes": [
+        "paper:2509.23922v1",
+        "task:尽管现有的闭环基准依赖于手动配置的交通场景，但这些场景可能与现实世界条件不符，限制了它们反映实际驾驶性能的能力。",
+        "finding:提出了一个与现实世界驾驶场景紧密集成的carla模拟器闭环评估框架。",
+        "finding:使用真实世界收集的基础设施传感器数据创建了动态交通场景和静态数字孪生资产。",
+        "finding:提供了端到端自动驾驶模型的全面闭环基准评估。"
+      ],
+      "key_entities": [
+        "DriveE2E: Closed-Loop Benchmark for End-to-End Autonomous Driving through Real-to-Simulation",
+        "尽管现有的闭环基准依赖于手动配置的交通场景，但这些场景可能与现实世界条件不符，限制了它们反映实际驾驶性能的能力。",
+        "提出了一个与现实世界驾驶场景紧密集成的CARLA模拟器闭环评估框架。",
+        "使用真实世界收集的基础设施传感器数据创建了动态交通场景和静态数字孪生资产。",
+        "提供了端到端自动驾驶模型的全面闭环基准评估。"
+      ],
+      "summary": ""
+    },
+    "6": {
+      "nodes": [
+        "method:drivee2e",
+        "dataset:未具体提到数据集规模",
+        "concept:carla",
+        "concept:infrastructure sensors",
+        "concept:realistic driving scenarios",
+        "dataset:100-hour video dataset",
+        "concept:digital twin assets"
+      ],
+      "key_entities": [
+        "DriveE2E",
+        "未具体提到数据集规模",
+        "CARLA",
+        "infrastructure sensors",
+        "realistic driving scenarios",
+        "100-hour video dataset",
+        "digital twin assets"
+      ],
+      "summary": ""
+    },
+    "7": {
+      "nodes": [
+        "paper:2001.03908v2",
+        "task:为了提供个性化舒适的自驾车体验，本文提出了一个基于个人驾驶偏好的自驾车集成控制系统。",
+        "finding:提出了occupant s preference metric opm 来定义乘客的偏好加速度和加速度变化率区域。",
+        "finding:设计了一种基于偏好参数的车辆控制器进行横向和纵向的集成控制。",
+        "finding:实现了自动驾驶车辆驾驶行为的个性化"
+      ],
+      "key_entities": [
+        "Self-Driving like a Human driver instead of a Robocar: Personalized comfortable driving experience for autonomous vehicles",
+        "为了提供个性化舒适的自驾车体验，本文提出了一个基于个人驾驶偏好的自驾车集成控制系统。",
+        "提出了Occupant's Preference Metric (OPM) 来定义乘客的偏好加速度和加速度变化率区域。",
+        "设计了一种基于偏好参数的车辆控制器进行横向和纵向的集成控制。",
+        "实现了自动驾驶车辆驾驶行为的个性化"
+      ],
+      "summary": ""
+    },
+    "8": {
+      "nodes": [
+        "method:quantum control scheme",
+        "concept:shortcuts to adiabaticity",
+        "task:high-fidelity quantum state transfers",
+        "task:quantum gates",
+        "concept:superconducting circuits",
+        "concept:rydberg atoms"
+      ],
+      "key_entities": [
+        "Quantum control scheme",
+        "Shortcuts to adiabaticity",
+        "High-fidelity quantum state transfers",
+        "Quantum gates",
+        "Superconducting circuits",
+        "Rydberg atoms"
+      ],
+      "summary": ""
+    },
+    "9": {
+      "nodes": [
+        "concept:occupant s preference metric opm",
+        "task:self-driving vehicle"
+      ],
+      "key_entities": [
+        "Occupant's Preference Metric (OPM)",
+        "self-driving vehicle"
+      ],
+      "summary": ""
+    },
+    "10": {
+      "nodes": [
+        "method:vehicle controller",
+        "task:autonomous vehicles"
+      ],
+      "key_entities": [
+        "vehicle controller",
+        "autonomous vehicles"
+      ],
+      "summary": ""
+    }
+  },
+  "stats": {
+    "node_count": 56,
+    "edge_count": 56,
+    "node_type_count": {
+      "Paper": 5,
+      "Task": 11,
+      "Finding": 15,
+      "Method": 5,
+      "Dataset": 3,
+      "Metric": 1,
+      "Concept": 16
+    },
+    "paper_count": 5,
+    "community_count": 0
+  }
+}

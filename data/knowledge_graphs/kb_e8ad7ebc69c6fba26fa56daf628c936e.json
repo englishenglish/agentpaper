@@ -1,0 +1,622 @@
+{
+  "db_id": "kb_e8ad7ebc69c6fba26fa56daf628c936e",
+  "nodes": {
+    "paper:2305.16307v3": {
+      "id": "paper:2305.16307v3",
+      "type": "Paper",
+      "label": "IndicTrans2: Towards High-Quality and Accessible Machine Translation Models for all 22 Scheduled Indian Languages",
+      "norm_label": "indictrans2 towards high-quality and accessible machine translation models for all 22 scheduled indian languages"
+    },
+    "dataset:bharat parallel corpus collection bpcc": {
+      "id": "dataset:bharat parallel corpus collection bpcc",
+      "type": "Dataset",
+      "label": "Bharat Parallel Corpus Collection (BPCC)",
+      "norm_label": "bharat parallel corpus collection bpcc"
+    },
+    "task:尽管存在丰富多样的印度语言，但缺乏支持所有22种印度官方语言的高质量和可访问的机器翻译系统。": {
+      "id": "task:尽管存在丰富多样的印度语言，但缺乏支持所有22种印度官方语言的高质量和可访问的机器翻译系统。",
+      "type": "Task",
+      "label": "尽管存在丰富多样的印度语言，但缺乏支持所有22种印度官方语言的高质量和可访问的机器翻译系统。",
+      "norm_label": "尽管存在丰富多样的印度语言，但缺乏支持所有22种印度官方语言的高质量和可访问的机器翻译系统。"
+    },
+    "finding:我们发布了bharat parallel corpus collection bpcc ，这是目前最大规模的公开可用的印度语言平行语料库。": {
+      "id": "finding:我们发布了bharat parallel corpus collection bpcc ，这是目前最大规模的公开可用的印度语言平行语料库。",
+      "type": "Finding",
+      "label": "我们发布了Bharat Parallel Corpus Collection (BPCC)，这是目前最大规模的公开可用的印度语言平行语料库。",
+      "norm_label": "我们发布了bharat parallel corpus collection bpcc ，这是目前最大规模的公开可用的印度语言平行语料库。"
+    },
+    "finding:我们发布了第一个涵盖所有22种印度语言的n-way平行基准。": {
+      "id": "finding:我们发布了第一个涵盖所有22种印度语言的n-way平行基准。",
+      "type": "Finding",
+      "label": "我们发布了第一个涵盖所有22种印度语言的n-way平行基准。",
+      "norm_label": "我们发布了第一个涵盖所有22种印度语言的n-way平行基准。"
+    },
+    "finding:我们提出indictrans2，这是第一个支持所有22种印度语言的模型，并在多个基准测试中表现出色。": {
+      "id": "finding:我们提出indictrans2，这是第一个支持所有22种印度语言的模型，并在多个基准测试中表现出色。",
+      "type": "Finding",
+      "label": "我们提出IndicTrans2，这是第一个支持所有22种印度语言的模型，并在多个基准测试中表现出色。",
+      "norm_label": "我们提出indictrans2，这是第一个支持所有22种印度语言的模型，并在多个基准测试中表现出色。"
+    },
+    "paper:2503.21676v2": {
+      "id": "paper:2503.21676v2",
+      "type": "Paper",
+      "label": "How do language models learn facts? Dynamics, curricula and hallucinations",
+      "norm_label": "how do language models learn facts dynamics curricula and hallucinations"
+    },
+    "dataset:合成事实回忆任务": {
+      "id": "dataset:合成事实回忆任务",
+      "type": "Dataset",
+      "label": "合成事实回忆任务",
+      "norm_label": "合成事实回忆任务"
+    },
+    "task:尽管大规模语言模型在预训练过程中积累了大量知识，但其知识获取的动力学机制仍然不甚明了；为了理解这一过程，本研究通过生成事实记忆任务来探究语言模型的学习动力学。": {
+      "id": "task:尽管大规模语言模型在预训练过程中积累了大量知识，但其知识获取的动力学机制仍然不甚明了；为了理解这一过程，本研究通过生成事实记忆任务来探究语言模型的学习动力学。",
+      "type": "Task",
+      "label": "尽管大规模语言模型在预训练过程中积累了大量知识，但其知识获取的动力学机制仍然不甚明了；为了理解这一过程，本研究通过生成事实记忆任务来探究语言模型的学习动力学。",
+      "norm_label": "尽管大规模语言模型在预训练过程中积累了大量知识，但其知识获取的动力学机制仍然不甚明了；为了理解这一过程，本研究通过生成事实记忆任务来探究语言模型的学习动力学。"
+    },
+    "finding:发现了语言模型学习过程中的三个阶段及其背后的机制": {
+      "id": "finding:发现了语言模型学习过程中的三个阶段及其背后的机制",
+      "type": "Finding",
+      "label": "发现了语言模型学习过程中的三个阶段及其背后的机制",
+      "norm_label": "发现了语言模型学习过程中的三个阶段及其背后的机制"
+    },
+    "finding:揭示了数据分布对学习动力学的关键影响": {
+      "id": "finding:揭示了数据分布对学习动力学的关键影响",
+      "type": "Finding",
+      "label": "揭示了数据分布对学习动力学的关键影响",
+      "norm_label": "揭示了数据分布对学习动力学的关键影响"
+    },
+    "finding:指出在微调过程中将新知识整合到模型中面临的挑战": {
+      "id": "finding:指出在微调过程中将新知识整合到模型中面临的挑战",
+      "type": "Finding",
+      "label": "指出在微调过程中将新知识整合到模型中面临的挑战",
+      "norm_label": "指出在微调过程中将新知识整合到模型中面临的挑战"
+    },
+    "paper:1610.00031v1": {
+      "id": "paper:1610.00031v1",
+      "type": "Paper",
+      "label": "Discriminating Similar Languages: Evaluations and Explorations",
+      "norm_label": "discriminating similar languages evaluations and explorations"
+    },
+    "dataset:discriminating between similar languages dsl 2014 2016": {
+      "id": "dataset:discriminating between similar languages dsl 2014 2016",
+      "type": "Dataset",
+      "label": "Discriminating between Similar Languages (DSL) 2014, 2016",
+      "norm_label": "discriminating between similar languages dsl 2014 2016"
+    },
+    "task:尽管已经有一系列任务致力于区分相似语言和语言变体，但需要进一步分析机器学习分类器在这些任务上的表现。": {
+      "id": "task:尽管已经有一系列任务致力于区分相似语言和语言变体，但需要进一步分析机器学习分类器在这些任务上的表现。",
+      "type": "Task",
+      "label": "尽管已经有一系列任务致力于区分相似语言和语言变体，但需要进一步分析机器学习分类器在这些任务上的表现。",
+      "norm_label": "尽管已经有一系列任务致力于区分相似语言和语言变体，但需要进一步分析机器学习分类器在这些任务上的表现。"
+    },
+    "finding:提供了dsl共享任务的结果分析": {
+      "id": "finding:提供了dsl共享任务的结果分析",
+      "type": "Finding",
+      "label": "提供了DSL共享任务的结果分析",
+      "norm_label": "提供了dsl共享任务的结果分析"
+    },
+    "finding:估计了使用组合和oracle组合的上限性能": {
+      "id": "finding:估计了使用组合和oracle组合的上限性能",
+      "type": "Finding",
+      "label": "估计了使用组合和oracle组合的上限性能",
+      "norm_label": "估计了使用组合和oracle组合的上限性能"
+    },
+    "finding:提供了学习曲线以帮助理解哪些语言更具挑战性": {
+      "id": "finding:提供了学习曲线以帮助理解哪些语言更具挑战性",
+      "type": "Finding",
+      "label": "提供了学习曲线以帮助理解哪些语言更具挑战性",
+      "norm_label": "提供了学习曲线以帮助理解哪些语言更具挑战性"
+    },
+    "paper:1501.03191v1": {
+      "id": "paper:1501.03191v1",
+      "type": "Paper",
+      "label": "Annotating Cognates and Etymological Origin in Turkic Languages",
+      "norm_label": "annotating cognates and etymological origin in turkic languages"
+    },
+    "task:尽管turkic语言中存在广泛且多样的同源词和词源关系，但如何标注这些信息仍未明确。": {
+      "id": "task:尽管turkic语言中存在广泛且多样的同源词和词源关系，但如何标注这些信息仍未明确。",
+      "type": "Task",
+      "label": "尽管Turkic语言中存在广泛且多样的同源词和词源关系，但如何标注这些信息仍未明确。",
+      "norm_label": "尽管turkic语言中存在广泛且多样的同源词和词源关系，但如何标注这些信息仍未明确。"
+    },
+    "finding:提出了标注turkic语言同源词和词源信息的方法": {
+      "id": "finding:提出了标注turkic语言同源词和词源信息的方法",
+      "type": "Finding",
+      "label": "提出了标注Turkic语言同源词和词源信息的方法",
+      "norm_label": "提出了标注turkic语言同源词和词源信息的方法"
+    },
+    "finding:平衡了注释者的劳动投入与支持改进自动翻译词汇库构建的作用": {
+      "id": "finding:平衡了注释者的劳动投入与支持改进自动翻译词汇库构建的作用",
+      "type": "Finding",
+      "label": "平衡了注释者的劳动投入与支持改进自动翻译词汇库构建的作用",
+      "norm_label": "平衡了注释者的劳动投入与支持改进自动翻译词汇库构建的作用"
+    },
+    "model:indictrans2": {
+      "id": "model:indictrans2",
+      "type": "Model",
+      "label": "IndicTrans2",
+      "norm_label": "indictrans2"
+    },
+    "dataset:n-way parallel benchmark": {
+      "id": "dataset:n-way parallel benchmark",
+      "type": "Dataset",
+      "label": "n-way parallel benchmark",
+      "norm_label": "n-way parallel benchmark"
+    },
+    "task:machine translation mt": {
+      "id": "task:machine translation mt",
+      "type": "Task",
+      "label": "Machine Translation (MT)",
+      "norm_label": "machine translation mt"
+    },
+    "method:语言模型": {
+      "id": "method:语言模型",
+      "type": "Method",
+      "label": "语言模型",
+      "norm_label": "语言模型"
+    },
+    "finding:学习过程中的三个阶段": {
+      "id": "finding:学习过程中的三个阶段",
+      "type": "Finding",
+      "label": "学习过程中的三个阶段",
+      "norm_label": "学习过程中的三个阶段"
+    },
+    "concept:注意力电路的建立": {
+      "id": "concept:注意力电路的建立",
+      "type": "Concept",
+      "label": "注意力电路的建立",
+      "norm_label": "注意力电路的建立"
+    },
+    "concept:数据分布": {
+      "id": "concept:数据分布",
+      "type": "Concept",
+      "label": "数据分布",
+      "norm_label": "数据分布"
+    },
+    "concept:学习动力学": {
+      "id": "concept:学习动力学",
+      "type": "Concept",
+      "label": "学习动力学",
+      "norm_label": "学习动力学"
+    },
+    "concept:微调过程": {
+      "id": "concept:微调过程",
+      "type": "Concept",
+      "label": "微调过程",
+      "norm_label": "微调过程"
+    },
+    "method:machine learning classifiers": {
+      "id": "method:machine learning classifiers",
+      "type": "Method",
+      "label": "Machine learning classifiers",
+      "norm_label": "machine learning classifiers"
+    },
+    "concept:oracle combination": {
+      "id": "concept:oracle combination",
+      "type": "Concept",
+      "label": "Oracle combination",
+      "norm_label": "oracle combination"
+    },
+    "method:annotating cognates and etymological origin": {
+      "id": "method:annotating cognates and etymological origin",
+      "type": "Method",
+      "label": "Annotating_cognates_and_etymological_origin",
+      "norm_label": "annotating cognates and etymological origin"
+    },
+    "concept:turkic languages": {
+      "id": "concept:turkic languages",
+      "type": "Concept",
+      "label": "Turkic_languages",
+      "norm_label": "turkic languages"
+    }
+  },
+  "edges": [
+    {
+      "source": "paper:2305.16307v3",
+      "target": "dataset:bharat parallel corpus collection bpcc",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "paper:2305.16307v3",
+      "target": "task:尽管存在丰富多样的印度语言，但缺乏支持所有22种印度官方语言的高质量和可访问的机器翻译系统。",
+      "type": "applied_to",
+      "weight": 0.8
+    },
+    {
+      "source": "paper:2305.16307v3",
+      "target": "finding:我们发布了bharat parallel corpus collection bpcc ，这是目前最大规模的公开可用的印度语言平行语料库。",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:2305.16307v3",
+      "target": "finding:我们发布了第一个涵盖所有22种印度语言的n-way平行基准。",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:2305.16307v3",
+      "target": "finding:我们提出indictrans2，这是第一个支持所有22种印度语言的模型，并在多个基准测试中表现出色。",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:2503.21676v2",
+      "target": "dataset:合成事实回忆任务",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "paper:2503.21676v2",
+      "target": "task:尽管大规模语言模型在预训练过程中积累了大量知识，但其知识获取的动力学机制仍然不甚明了；为了理解这一过程，本研究通过生成事实记忆任务来探究语言模型的学习动力学。",
+      "type": "applied_to",
+      "weight": 0.8
+    },
+    {
+      "source": "paper:2503.21676v2",
+      "target": "finding:发现了语言模型学习过程中的三个阶段及其背后的机制",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:2503.21676v2",
+      "target": "finding:揭示了数据分布对学习动力学的关键影响",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:2503.21676v2",
+      "target": "finding:指出在微调过程中将新知识整合到模型中面临的挑战",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:1610.00031v1",
+      "target": "dataset:discriminating between similar languages dsl 2014 2016",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "paper:1610.00031v1",
+      "target": "task:尽管已经有一系列任务致力于区分相似语言和语言变体，但需要进一步分析机器学习分类器在这些任务上的表现。",
+      "type": "applied_to",
+      "weight": 0.8
+    },
+    {
+      "source": "paper:1610.00031v1",
+      "target": "finding:提供了dsl共享任务的结果分析",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:1610.00031v1",
+      "target": "finding:估计了使用组合和oracle组合的上限性能",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:1610.00031v1",
+      "target": "finding:提供了学习曲线以帮助理解哪些语言更具挑战性",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:1501.03191v1",
+      "target": "task:尽管turkic语言中存在广泛且多样的同源词和词源关系，但如何标注这些信息仍未明确。",
+      "type": "applied_to",
+      "weight": 0.8
+    },
+    {
+      "source": "paper:1501.03191v1",
+      "target": "finding:提出了标注turkic语言同源词和词源信息的方法",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:1501.03191v1",
+      "target": "finding:平衡了注释者的劳动投入与支持改进自动翻译词汇库构建的作用",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "model:indictrans2",
+      "target": "dataset:bharat parallel corpus collection bpcc",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "model:indictrans2",
+      "target": "dataset:n-way parallel benchmark",
+      "type": "evaluates_on",
+      "weight": 0.9
+    },
+    {
+      "source": "dataset:bharat parallel corpus collection bpcc",
+      "target": "dataset:n-way parallel benchmark",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "model:indictrans2",
+      "target": "task:machine translation mt",
+      "type": "applied_to",
+      "weight": 0.8
+    },
+    {
+      "source": "method:语言模型",
+      "target": "dataset:合成事实回忆任务",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "method:语言模型",
+      "target": "finding:学习过程中的三个阶段",
+      "type": "achieves",
+      "weight": 0.85
+    },
+    {
+      "source": "finding:学习过程中的三个阶段",
+      "target": "concept:注意力电路的建立",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "method:语言模型",
+      "target": "concept:数据分布",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "concept:数据分布",
+      "target": "concept:学习动力学",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "method:语言模型",
+      "target": "concept:微调过程",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "method:machine learning classifiers",
+      "target": "dataset:discriminating between similar languages dsl 2014 2016",
+      "type": "evaluates_on",
+      "weight": 0.9
+    },
+    {
+      "source": "method:annotating cognates and etymological origin",
+      "target": "concept:turkic languages",
+      "type": "related_to",
+      "weight": 0.5
+    }
+  ],
+  "paper_entities": {
+    "2305.16307v3": [
+      "paper:2305.16307v3",
+      "dataset:bharat parallel corpus collection bpcc",
+      "task:尽管存在丰富多样的印度语言，但缺乏支持所有22种印度官方语言的高质量和可访问的机器翻译系统。",
+      "finding:我们发布了bharat parallel corpus collection bpcc ，这是目前最大规模的公开可用的印度语言平行语料库。",
+      "finding:我们发布了第一个涵盖所有22种印度语言的n-way平行基准。",
+      "finding:我们提出indictrans2，这是第一个支持所有22种印度语言的模型，并在多个基准测试中表现出色。",
+      "model:indictrans2",
+      "dataset:n-way parallel benchmark",
+      "task:machine translation mt"
+    ],
+    "2503.21676v2": [
+      "paper:2503.21676v2",
+      "dataset:合成事实回忆任务",
+      "task:尽管大规模语言模型在预训练过程中积累了大量知识，但其知识获取的动力学机制仍然不甚明了；为了理解这一过程，本研究通过生成事实记忆任务来探究语言模型的学习动力学。",
+      "finding:发现了语言模型学习过程中的三个阶段及其背后的机制",
+      "finding:揭示了数据分布对学习动力学的关键影响",
+      "finding:指出在微调过程中将新知识整合到模型中面临的挑战",
+      "method:语言模型",
+      "finding:学习过程中的三个阶段",
+      "concept:注意力电路的建立",
+      "concept:数据分布",
+      "concept:学习动力学",
+      "concept:微调过程"
+    ],
+    "1610.00031v1": [
+      "paper:1610.00031v1",
+      "dataset:discriminating between similar languages dsl 2014 2016",
+      "task:尽管已经有一系列任务致力于区分相似语言和语言变体，但需要进一步分析机器学习分类器在这些任务上的表现。",
+      "finding:提供了dsl共享任务的结果分析",
+      "finding:估计了使用组合和oracle组合的上限性能",
+      "finding:提供了学习曲线以帮助理解哪些语言更具挑战性",
+      "method:machine learning classifiers",
+      "concept:oracle combination"
+    ],
+    "1501.03191v1": [
+      "paper:1501.03191v1",
+      "task:尽管turkic语言中存在广泛且多样的同源词和词源关系，但如何标注这些信息仍未明确。",
+      "finding:提出了标注turkic语言同源词和词源信息的方法",
+      "finding:平衡了注释者的劳动投入与支持改进自动翻译词汇库构建的作用",
+      "method:annotating cognates and etymological origin",
+      "concept:turkic languages"
+    ]
+  },
+  "entity_aliases": {
+    "indictrans2 towards high-quality and accessible machine translation models for all 22 scheduled indian languages": "paper:2305.16307v3",
+    "bharat parallel corpus collection bpcc": "dataset:bharat parallel corpus collection bpcc",
+    "尽管存在丰富多样的印度语言，但缺乏支持所有22种印度官方语言的高质量和可访问的机器翻译系统。": "task:尽管存在丰富多样的印度语言，但缺乏支持所有22种印度官方语言的高质量和可访问的机器翻译系统。",
+    "我们发布了bharat parallel corpus collection bpcc ，这是目前最大规模的公开可用的印度语言平行语料库。": "finding:我们发布了bharat parallel corpus collection bpcc ，这是目前最大规模的公开可用的印度语言平行语料库。",
+    "我们发布了第一个涵盖所有22种印度语言的n-way平行基准。": "finding:我们发布了第一个涵盖所有22种印度语言的n-way平行基准。",
+    "我们提出indictrans2，这是第一个支持所有22种印度语言的模型，并在多个基准测试中表现出色。": "finding:我们提出indictrans2，这是第一个支持所有22种印度语言的模型，并在多个基准测试中表现出色。",
+    "how do language models learn facts dynamics curricula and hallucinations": "paper:2503.21676v2",
+    "合成事实回忆任务": "dataset:合成事实回忆任务",
+    "尽管大规模语言模型在预训练过程中积累了大量知识，但其知识获取的动力学机制仍然不甚明了；为了理解这一过程，本研究通过生成事实记忆任务来探究语言模型的学习动力学。": "task:尽管大规模语言模型在预训练过程中积累了大量知识，但其知识获取的动力学机制仍然不甚明了；为了理解这一过程，本研究通过生成事实记忆任务来探究语言模型的学习动力学。",
+    "发现了语言模型学习过程中的三个阶段及其背后的机制": "finding:发现了语言模型学习过程中的三个阶段及其背后的机制",
+    "揭示了数据分布对学习动力学的关键影响": "finding:揭示了数据分布对学习动力学的关键影响",
+    "指出在微调过程中将新知识整合到模型中面临的挑战": "finding:指出在微调过程中将新知识整合到模型中面临的挑战",
+    "discriminating similar languages evaluations and explorations": "paper:1610.00031v1",
+    "discriminating between similar languages dsl 2014 2016": "dataset:discriminating between similar languages dsl 2014 2016",
+    "尽管已经有一系列任务致力于区分相似语言和语言变体，但需要进一步分析机器学习分类器在这些任务上的表现。": "task:尽管已经有一系列任务致力于区分相似语言和语言变体，但需要进一步分析机器学习分类器在这些任务上的表现。",
+    "提供了dsl共享任务的结果分析": "finding:提供了dsl共享任务的结果分析",
+    "估计了使用组合和oracle组合的上限性能": "finding:估计了使用组合和oracle组合的上限性能",
+    "提供了学习曲线以帮助理解哪些语言更具挑战性": "finding:提供了学习曲线以帮助理解哪些语言更具挑战性",
+    "annotating cognates and etymological origin in turkic languages": "paper:1501.03191v1",
+    "尽管turkic语言中存在广泛且多样的同源词和词源关系，但如何标注这些信息仍未明确。": "task:尽管turkic语言中存在广泛且多样的同源词和词源关系，但如何标注这些信息仍未明确。",
+    "提出了标注turkic语言同源词和词源信息的方法": "finding:提出了标注turkic语言同源词和词源信息的方法",
+    "平衡了注释者的劳动投入与支持改进自动翻译词汇库构建的作用": "finding:平衡了注释者的劳动投入与支持改进自动翻译词汇库构建的作用",
+    "indictrans2": "model:indictrans2",
+    "n-way parallel benchmark": "dataset:n-way parallel benchmark",
+    "machine translation mt": "task:machine translation mt",
+    "语言模型": "method:语言模型",
+    "学习过程中的三个阶段": "finding:学习过程中的三个阶段",
+    "注意力电路的建立": "concept:注意力电路的建立",
+    "数据分布": "concept:数据分布",
+    "学习动力学": "concept:学习动力学",
+    "微调过程": "concept:微调过程",
+    "machine learning classifiers": "method:machine learning classifiers",
+    "oracle combination": "concept:oracle combination",
+    "annotating cognates and etymological origin": "method:annotating cognates and etymological origin",
+    "turkic languages": "concept:turkic languages"
+  },
+  "communities": {
+    "0": {
+      "nodes": [
+        "paper:2305.16307v3",
+        "task:尽管存在丰富多样的印度语言，但缺乏支持所有22种印度官方语言的高质量和可访问的机器翻译系统。",
+        "finding:我们发布了bharat parallel corpus collection bpcc ，这是目前最大规模的公开可用的印度语言平行语料库。",
+        "finding:我们发布了第一个涵盖所有22种印度语言的n-way平行基准。",
+        "finding:我们提出indictrans2，这是第一个支持所有22种印度语言的模型，并在多个基准测试中表现出色。"
+      ],
+      "key_entities": [
+        "IndicTrans2: Towards High-Quality and Accessible Machine Translation Models for all 22 Scheduled Indian Languages",
+        "尽管存在丰富多样的印度语言，但缺乏支持所有22种印度官方语言的高质量和可访问的机器翻译系统。",
+        "我们发布了Bharat Parallel Corpus Collection (BPCC)，这是目前最大规模的公开可用的印度语言平行语料库。",
+        "我们发布了第一个涵盖所有22种印度语言的n-way平行基准。",
+        "我们提出IndicTrans2，这是第一个支持所有22种印度语言的模型，并在多个基准测试中表现出色。"
+      ],
+      "summary": ""
+    },
+    "1": {
+      "nodes": [
+        "dataset:bharat parallel corpus collection bpcc",
+        "model:indictrans2",
+        "dataset:n-way parallel benchmark",
+        "task:machine translation mt"
+      ],
+      "key_entities": [
+        "Bharat Parallel Corpus Collection (BPCC)",
+        "IndicTrans2",
+        "n-way parallel benchmark",
+        "Machine Translation (MT)"
+      ],
+      "summary": ""
+    },
+    "2": {
+      "nodes": [
+        "paper:2503.21676v2",
+        "dataset:合成事实回忆任务",
+        "task:尽管大规模语言模型在预训练过程中积累了大量知识，但其知识获取的动力学机制仍然不甚明了；为了理解这一过程，本研究通过生成事实记忆任务来探究语言模型的学习动力学。",
+        "finding:发现了语言模型学习过程中的三个阶段及其背后的机制",
+        "finding:揭示了数据分布对学习动力学的关键影响",
+        "finding:指出在微调过程中将新知识整合到模型中面临的挑战",
+        "concept:oracle combination"
+      ],
+      "key_entities": [
+        "How do language models learn facts? Dynamics, curricula and hallucinations",
+        "合成事实回忆任务",
+        "尽管大规模语言模型在预训练过程中积累了大量知识，但其知识获取的动力学机制仍然不甚明了；为了理解这一过程，本研究通过生成事实记忆任务来探究语言模型的学习动力学。",
+        "发现了语言模型学习过程中的三个阶段及其背后的机制",
+        "揭示了数据分布对学习动力学的关键影响",
+        "指出在微调过程中将新知识整合到模型中面临的挑战",
+        "Oracle combination"
+      ],
+      "summary": ""
+    },
+    "3": {
+      "nodes": [
+        "paper:1610.00031v1",
+        "task:尽管已经有一系列任务致力于区分相似语言和语言变体，但需要进一步分析机器学习分类器在这些任务上的表现。",
+        "finding:提供了dsl共享任务的结果分析",
+        "finding:估计了使用组合和oracle组合的上限性能",
+        "finding:提供了学习曲线以帮助理解哪些语言更具挑战性"
+      ],
+      "key_entities": [
+        "Discriminating Similar Languages: Evaluations and Explorations",
+        "尽管已经有一系列任务致力于区分相似语言和语言变体，但需要进一步分析机器学习分类器在这些任务上的表现。",
+        "提供了DSL共享任务的结果分析",
+        "估计了使用组合和oracle组合的上限性能",
+        "提供了学习曲线以帮助理解哪些语言更具挑战性"
+      ],
+      "summary": ""
+    },
+    "4": {
+      "nodes": [
+        "dataset:discriminating between similar languages dsl 2014 2016",
+        "method:machine learning classifiers"
+      ],
+      "key_entities": [
+        "Discriminating between Similar Languages (DSL) 2014, 2016",
+        "Machine learning classifiers"
+      ],
+      "summary": ""
+    },
+    "5": {
+      "nodes": [
+        "paper:1501.03191v1",
+        "task:尽管turkic语言中存在广泛且多样的同源词和词源关系，但如何标注这些信息仍未明确。",
+        "finding:提出了标注turkic语言同源词和词源信息的方法",
+        "finding:平衡了注释者的劳动投入与支持改进自动翻译词汇库构建的作用"
+      ],
+      "key_entities": [
+        "Annotating Cognates and Etymological Origin in Turkic Languages",
+        "尽管Turkic语言中存在广泛且多样的同源词和词源关系，但如何标注这些信息仍未明确。",
+        "提出了标注Turkic语言同源词和词源信息的方法",
+        "平衡了注释者的劳动投入与支持改进自动翻译词汇库构建的作用"
+      ],
+      "summary": ""
+    },
+    "6": {
+      "nodes": [
+        "method:语言模型",
+        "finding:学习过程中的三个阶段",
+        "concept:注意力电路的建立",
+        "concept:数据分布",
+        "concept:学习动力学",
+        "concept:微调过程"
+      ],
+      "key_entities": [
+        "语言模型",
+        "学习过程中的三个阶段",
+        "注意力电路的建立",
+        "数据分布",
+        "学习动力学",
+        "微调过程"
+      ],
+      "summary": ""
+    },
+    "7": {
+      "nodes": [
+        "method:annotating cognates and etymological origin",
+        "concept:turkic languages"
+      ],
+      "key_entities": [
+        "Annotating_cognates_and_etymological_origin",
+        "Turkic_languages"
+      ],
+      "summary": ""
+    }
+  },
+  "stats": {
+    "node_count": 35,
+    "edge_count": 30,
+    "node_type_count": {
+      "Paper": 4,
+      "Dataset": 4,
+      "Task": 5,
+      "Finding": 12,
+      "Model": 1,
+      "Method": 3,
+      "Concept": 6
+    },
+    "paper_count": 4,
+    "community_count": 0
+  }
+}
