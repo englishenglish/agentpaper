@@ -1,6 +1,6 @@
 import { create } from 'zustand';
 import { persist } from 'zustand/middleware';
-import type { ChatSession, Message } from '@/types';
+import type { ChatSession, Message, UsedKb } from '@/types';
 import { generateId } from '@/lib/utils';
 
 interface ChatSettings {
@@ -27,6 +27,7 @@ interface ChatState {
   // Message actions
   addMessage: (sessionId: string, message: Omit<Message, 'id' | 'createdAt'>) => Message;
   updateLastAssistantMessage: (sessionId: string, content: string, isStreaming?: boolean) => void;
+  setLastMessageKbs: (sessionId: string, kbs: UsedKb[]) => void;
   clearMessages: (sessionId: string) => void;
 
   // UI actions
@@ -129,6 +130,19 @@ export const useChatStore = create<ChatState>()(
               msgs[lastIdx] = { ...msgs[lastIdx], content, isStreaming };
             }
             return { ...s, messages: msgs, updatedAt: Date.now() };
+          }),
+        })),
+
+      setLastMessageKbs: (sessionId, kbs) =>
+        set((state) => ({
+          sessions: state.sessions.map((s) => {
+            if (s.id !== sessionId) return s;
+            const msgs = [...s.messages];
+            const lastIdx = msgs.length - 1;
+            if (lastIdx >= 0 && msgs[lastIdx].role === 'assistant') {
+              msgs[lastIdx] = { ...msgs[lastIdx], usedKbs: kbs };
+            }
+            return { ...s, messages: msgs };
           }),
         })),
 

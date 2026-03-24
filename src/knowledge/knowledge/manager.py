@@ -388,6 +388,21 @@ class KnowledgeBaseManager:
         documents.sort(key=lambda x: x.get("created_at", ""), reverse=True)
         return documents
 
+    def register_file_records(self, db_id: str, records: list[dict]) -> None:
+        """将论文/外部文档批量注册为 files_meta 条目，使其出现在文档列表中。
+
+        每条 record 必须包含 ``file_id`` 字段；其余字段（filename, path,
+        file_type, status, created_at, database_id, source_type 等）可按需
+        提供，缺失字段不会导致错误。
+        """
+        kb_instance = self._get_kb_for_database(db_id)
+        for record in records:
+            file_id = record.get("file_id")
+            if not file_id:
+                continue
+            kb_instance.files_meta[file_id] = record
+        kb_instance._save_metadata()
+
     async def rebuild_database(self, db_id: str, params: dict | None = None) -> dict:
         """
         使用数据库内已记录的文件路径重新构建索引。

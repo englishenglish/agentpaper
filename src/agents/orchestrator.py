@@ -5,13 +5,26 @@ import os
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "..")))
 
 from typing import TypedDict, Annotated, Sequence, Dict, Any
-from langgraph.graph import StateGraph, END, START
+from langgraph.graph import StateGraph, END
 
 from src.core.state_models import PaperAgentState, ExecutionState, NodeError, BackToFrontData, State, ConfigSchema
 from src.agents.search_agent import search_node
 from src.agents.reading_agent import reading_node
 from src.agents.qa_agent import qa_node  # 引入我们刚写的 RAG 问答节点
+from src.agents.intent_agent import intent_node
+from src.agents.chat_agent import chat_node
 import asyncio
+
+
+def intent_router(state: State) -> str:
+    """意图路由：多轮追问直跳 qa；否则按意图分流。"""
+    current_state = state["value"]
+    cfg = getattr(current_state, "config", None) or {}
+    if cfg.get("bypass_to_qa"):
+        return "qa_node"
+    if cfg.get("intent_route") == "chat":
+        return "chat_node"
+    return "search_node"
 
 
 class PaperAgentOrchestrator:
@@ -48,23 +61,23 @@ class PaperAgentOrchestrator:
             return "handle_error_node"
 
     def _build_graph(self):
-        """构建 RAG 问答专属的 LangGraph 工作流"""
+        """构建 LangGraph：意图识别 → 闲聊 或 检索→阅读→问答"""
         builder = StateGraph(State, context_schema=ConfigSchema)
 
-        # 添加节点 (精简了 analyse, writing, report)
+        builder.add_node("intent_node", intent_node)
         builder.add_node("search_node", search_node)
         builder.add_node("reading_node", reading_node)
         builder.add_node("qa_node", qa_node)
+        builder.add_node("chat_node", chat_node)
         builder.add_node("handle_error_node", self.handle_error_node)
 
-        # 设置入口点
-        builder.set_entry_point("search_node")
+        builder.set_entry_point("intent_node")
 
-        # 定义工作流路径
-        builder.add_edge(START, "search_node")
+        builder.add_conditional_edges("intent_node", intent_router)
         builder.add_conditional_edges("search_node", self.condition_handler)
         builder.add_conditional_edges("reading_node", self.condition_handler)
         builder.add_conditional_edges("qa_node", self.condition_handler)
+        builder.add_conditional_edges("chat_node", self.condition_handler)
         builder.add_edge("handle_error_node", END)
 
         return builder.compile()
@@ -94,10 +107,19 @@ class PaperAgentOrchestrator:
 
         # 拿到图执行完毕后的结果
         result = await self.graph.ainvoke({"state_queue": self.state_queue, "value": initial_state})
+        final_state = result["value"]
+        # 首轮会话未经过 ask_question 时，补齐 assistant 消息，便于前端展示历史
+        ans = getattr(final_state, "qa_answer", None)
+        if ans and (
+            not final_state.chat_history
+            or final_state.chat_history[-1].get("role") != "assistant"
+        ):
+            final_state.chat_history.append({"role": "assistant", "content": ans})
+
         await self.state_queue.put(BackToFrontData(step=ExecutionState.FINISHED, state="finished", data=None))
 
         # 【新增这行】返回最终状态，供 main.py 保存到 session 中
-        return result["value"]
+        return final_state
 
     async def ask_question(
         self,
@@ -117,7 +139,7 @@ class PaperAgentOrchestrator:
         # 1. 变更当前问题
         current_state.current_question = new_question
 
-        # 2. 将状态重置为“刚读完文献”的状态，这样 condition_handler 会把它直接路由给 qa_node
+        # 2. 将状态重置为“刚读完文献”的状态，便于 condition_handler 在直跳时进入 qa_node
         current_state.current_step = ExecutionState.READING
 
         # 3. 记录用户的追问到历史对话
@@ -127,10 +149,14 @@ class PaperAgentOrchestrator:
         current_state.config = current_state.config or {}
         current_state.config["enable_web_search"] = enable_web_search
         current_state.config["retrieval_mode"] = retrieval_mode
-        current_state.config["selected_db_ids"] = selected_db_ids or []
-        current_state.config["auto_selected_db_ids"] = auto_selected_db_ids or []
+        if selected_db_ids is not None:
+            current_state.config["selected_db_ids"] = selected_db_ids
+        if auto_selected_db_ids is not None:
+            current_state.config["auto_selected_db_ids"] = auto_selected_db_ids
+        # 跳过多轮时的意图识别与检索，直接进入 qa_node（与原先「仅问答」行为一致）
+        current_state.config["bypass_to_qa"] = True
 
-        # 4. 再次触发工作流（这次只会执行 qa_node）
+        # 4. 再次触发工作流（intent_node 识别 bypass → qa_node）
         result = await self.graph.ainvoke({"state_queue": self.state_queue, "value": current_state})
 
         # 5. 将 AI 的回答追加到历史对话中，形成记忆闭环

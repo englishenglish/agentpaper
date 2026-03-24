@@ -1,0 +1,1092 @@
+{
+  "db_id": "kb_a9d0e1804b398e3f95f0772970b22458",
+  "nodes": {
+    "paper:2206.04564v6": {
+      "id": "paper:2206.04564v6",
+      "type": "Paper",
+      "label": "TwiBot-22: Towards Graph-Based Twitter Bot Detection",
+      "norm_label": "twibot-22 towards graph-based twitter bot detection"
+    },
+    "task:为了提供一个全面的图基twitter机器人检测基准，以解决现有数据集规模小、图结构不完整及注解质量低的问题，以促进新型图基机器人检测方法的发展和评价。": {
+      "id": "task:为了提供一个全面的图基twitter机器人检测基准，以解决现有数据集规模小、图结构不完整及注解质量低的问题，以促进新型图基机器人检测方法的发展和评价。",
+      "type": "Task",
+      "label": "为了提供一个全面的图基Twitter机器人检测基准，以解决现有数据集规模小、图结构不完整及注解质量低的问题，以促进新型图基机器人检测方法的发展和评价。",
+      "norm_label": "为了提供一个全面的图基twitter机器人检测基准，以解决现有数据集规模小、图结构不完整及注解质量低的问题，以促进新型图基机器人检测方法的发展和评价。"
+    },
+    "dataset:twibot-22": {
+      "id": "dataset:twibot-22",
+      "type": "Dataset",
+      "label": "TwiBot-22",
+      "norm_label": "twibot-22"
+    },
+    "contribution:提出了twibot-22，一个全面的图基twitter机器人检测基准，规模为目前最大。": {
+      "id": "contribution:提出了twibot-22，一个全面的图基twitter机器人检测基准，规模为目前最大。",
+      "type": "Contribution",
+      "label": "提出了TwiBot-22，一个全面的图基Twitter机器人检测基准，规模为目前最大。",
+      "norm_label": "提出了twibot-22，一个全面的图基twitter机器人检测基准，规模为目前最大。"
+    },
+    "contribution:提供了twitter网络中多样化的实体和关系。": {
+      "id": "contribution:提供了twitter网络中多样化的实体和关系。",
+      "type": "Contribution",
+      "label": "提供了Twitter网络中多样化的实体和关系。",
+      "norm_label": "提供了twitter网络中多样化的实体和关系。"
+    },
+    "contribution:提升了注解质量。": {
+      "id": "contribution:提升了注解质量。",
+      "type": "Contribution",
+      "label": "提升了注解质量。",
+      "norm_label": "提升了注解质量。"
+    },
+    "paper:2206.08029v1": {
+      "id": "paper:2206.08029v1",
+      "type": "Paper",
+      "label": "DIALOG-22 RuATD Generated Text Detection",
+      "norm_label": "dialog-22 ruatd generated text detection"
+    },
+    "method:ensemble method": {
+      "id": "method:ensemble method",
+      "type": "Method",
+      "label": "ensemble method",
+      "norm_label": "ensemble method"
+    },
+    "task:尽管文本生成模型 tgms 在生成符合人类语言风格的文本方面取得了显著进展，但现有的检测方法在分辨tgm生成的文本和真人撰写的文本方面效果有限，为了改善这一问题，研究提出了用于区分tgm生成文本和人类": {
+      "id": "task:尽管文本生成模型 tgms 在生成符合人类语言风格的文本方面取得了显著进展，但现有的检测方法在分辨tgm生成的文本和真人撰写的文本方面效果有限，为了改善这一问题，研究提出了用于区分tgm生成文本和人类",
+      "type": "Task",
+      "label": "尽管文本生成模型(TGMs)在生成符合人类语言风格的文本方面取得了显著进展，但现有的检测方法在分辨TGM生成的文本和真人撰写的文本方面效果有限，为了改善这一问题，研究提出了用于区分TGM生成文本和人类",
+      "norm_label": "尽管文本生成模型 tgms 在生成符合人类语言风格的文本方面取得了显著进展，但现有的检测方法在分辨tgm生成的文本和真人撰写的文本方面效果有限，为了改善这一问题，研究提出了用于区分tgm生成文本和人类"
+    },
+    "dataset:null": {
+      "id": "dataset:null",
+      "type": "Dataset",
+      "label": "null",
+      "norm_label": "null"
+    },
+    "metric:accuracy": {
+      "id": "metric:accuracy",
+      "type": "Metric",
+      "label": "Accuracy",
+      "norm_label": "accuracy"
+    },
+    "contribution:提出了基于注意力机制的预训练模型组合方法对于检测tgm生成的文本有提高效果。": {
+      "id": "contribution:提出了基于注意力机制的预训练模型组合方法对于检测tgm生成的文本有提高效果。",
+      "type": "Contribution",
+      "label": "提出了基于注意力机制的预训练模型组合方法对于检测TGM生成的文本有提高效果。",
+      "norm_label": "提出了基于注意力机制的预训练模型组合方法对于检测tgm生成的文本有提高效果。"
+    },
+    "paper:2207.08756v1": {
+      "id": "paper:2207.08756v1",
+      "type": "Paper",
+      "label": "A Scintillation Arc Survey of 22 Pulsars with Low to Moderate Dispersion Measures",
+      "norm_label": "a scintillation arc survey of 22 pulsars with low to moderate dispersion measures"
+    },
+    "method:动态谱、自相关函数和次级谱分析": {
+      "id": "method:动态谱、自相关函数和次级谱分析",
+      "type": "Method",
+      "label": "动态谱、自相关函数和次级谱分析",
+      "norm_label": "动态谱、自相关函数和次级谱分析"
+    },
+    "task:通过提供关于脉冲星视线（los）上散射物质位置的信息，散射弧是研究星际介质（ism）中电离物质分布的强大工具。": {
+      "id": "task:通过提供关于脉冲星视线（los）上散射物质位置的信息，散射弧是研究星际介质（ism）中电离物质分布的强大工具。",
+      "type": "Task",
+      "label": "通过提供关于脉冲星视线（LoS）上散射物质位置的信息，散射弧是研究星际介质（ISM）中电离物质分布的强大工具。",
+      "norm_label": "通过提供关于脉冲星视线（los）上散射物质位置的信息，散射弧是研究星际介质（ism）中电离物质分布的强大工具。"
+    },
+    "dataset:22低到中等dm脉冲星": {
+      "id": "dataset:22低到中等dm脉冲星",
+      "type": "Dataset",
+      "label": "22低到中等DM脉冲星",
+      "norm_label": "22低到中等dm脉冲星"
+    },
+    "contribution:展示了ism在不同尺度上的斑块状分布，包括沿视向约100pc的尺度和视线方向上的星子尺度。": {
+      "id": "contribution:展示了ism在不同尺度上的斑块状分布，包括沿视向约100pc的尺度和视线方向上的星子尺度。",
+      "type": "Contribution",
+      "label": "展示了ISM在不同尺度上的斑块状分布，包括沿视向约100pc的尺度和视线方向上的星子尺度。",
+      "norm_label": "展示了ism在不同尺度上的斑块状分布，包括沿视向约100pc的尺度和视线方向上的星子尺度。"
+    },
+    "contribution:没有在大多数视线路径上发现分布式散射的明显证据。": {
+      "id": "contribution:没有在大多数视线路径上发现分布式散射的明显证据。",
+      "type": "Contribution",
+      "label": "没有在大多数视线路径上发现分布式散射的明显证据。",
+      "norm_label": "没有在大多数视线路径上发现分布式散射的明显证据。"
+    },
+    "paper:2210.14336v2": {
+      "id": "paper:2210.14336v2",
+      "type": "Paper",
+      "label": "Understanding the cosmic abundance of $^{22}$Na: lifetime measurements in $^{23}$Mg",
+      "norm_label": "understanding the cosmic abundance of 22 na lifetime measurements in 23 mg"
+    },
+    "task:为了更准确地测量 22 na p γ 23 mg反应的关键状态的寿命和质子分支比，以降低对 22 na产额的不确定性，同时提高对其在超新星中的可检测性和观测频率。": {
+      "id": "task:为了更准确地测量 22 na p γ 23 mg反应的关键状态的寿命和质子分支比，以降低对 22 na产额的不确定性，同时提高对其在超新星中的可检测性和观测频率。",
+      "type": "Task",
+      "label": "为了更准确地测量$^{22}$Na(p, $γ$)$^{23}$Mg反应的关键状态的寿命和质子分支比，以降低对$^{22}$Na产额的不确定性，同时提高对其在超新星中的可检测性和观测频率。",
+      "norm_label": "为了更准确地测量 22 na p γ 23 mg反应的关键状态的寿命和质子分支比，以降低对 22 na产额的不确定性，同时提高对其在超新星中的可检测性和观测频率。"
+    },
+    "contribution:提供了关键状态的精确测量结果，并与壳模型计算进行了比较。": {
+      "id": "contribution:提供了关键状态的精确测量结果，并与壳模型计算进行了比较。",
+      "type": "Contribution",
+      "label": "提供了关键状态的精确测量结果，并与壳模型计算进行了比较。",
+      "norm_label": "提供了关键状态的精确测量结果，并与壳模型计算进行了比较。"
+    },
+    "contribution:改进了对 22 na p γ 23 mg反应率的评估。": {
+      "id": "contribution:改进了对 22 na p γ 23 mg反应率的评估。",
+      "type": "Contribution",
+      "label": "改进了对$^{22}$Na(p, $γ$)$^{23}$Mg反应率的评估。",
+      "norm_label": "改进了对 22 na p γ 23 mg反应率的评估。"
+    },
+    "contribution:提高了通过未来太空望远镜观测 22 na的可检测性和频率的前景。": {
+      "id": "contribution:提高了通过未来太空望远镜观测 22 na的可检测性和频率的前景。",
+      "type": "Contribution",
+      "label": "提高了通过未来太空望远镜观测$^{22}$Na的可检测性和频率的前景。",
+      "norm_label": "提高了通过未来太空望远镜观测 22 na的可检测性和频率的前景。"
+    },
+    "concept:twitter network": {
+      "id": "concept:twitter network",
+      "type": "Concept",
+      "label": "Twitter network",
+      "norm_label": "twitter network",
+      "description": ""
+    },
+    "task:graph-based twitter bot detection": {
+      "id": "task:graph-based twitter bot detection",
+      "type": "Task",
+      "label": "Graph-based Twitter bot detection",
+      "norm_label": "graph-based twitter bot detection",
+      "description": ""
+    },
+    "model:representative twitter bot detection baselines": {
+      "id": "model:representative twitter bot detection baselines",
+      "type": "Model",
+      "label": "representative Twitter bot detection baselines",
+      "norm_label": "representative twitter bot detection baselines",
+      "description": ""
+    },
+    "task:dialog-22 ruatd": {
+      "id": "task:dialog-22 ruatd",
+      "type": "Task",
+      "label": "DIALOG-22 RuATD",
+      "norm_label": "dialog-22 ruatd",
+      "description": ""
+    },
+    "task:binary classification task": {
+      "id": "task:binary classification task",
+      "type": "Task",
+      "label": "binary classification task",
+      "norm_label": "binary classification task",
+      "description": ""
+    },
+    "task:multiclass classification task": {
+      "id": "task:multiclass classification task",
+      "type": "Task",
+      "label": "multiclass classification task",
+      "norm_label": "multiclass classification task",
+      "description": ""
+    },
+    "dataset:private test set": {
+      "id": "dataset:private test set",
+      "type": "Dataset",
+      "label": "private test set",
+      "norm_label": "private test set",
+      "description": ""
+    },
+    "concept:tgm generation": {
+      "id": "concept:tgm generation",
+      "type": "Concept",
+      "label": "TGM generation",
+      "norm_label": "tgm generation",
+      "description": ""
+    },
+    "concept:attention mechanism": {
+      "id": "concept:attention mechanism",
+      "type": "Concept",
+      "label": "Attention mechanism",
+      "norm_label": "attention mechanism",
+      "description": ""
+    },
+    "concept:dynamic spectra": {
+      "id": "concept:dynamic spectra",
+      "type": "Concept",
+      "label": "dynamic spectra",
+      "norm_label": "dynamic spectra",
+      "description": ""
+    },
+    "concept:autocorrelation functions": {
+      "id": "concept:autocorrelation functions",
+      "type": "Concept",
+      "label": "autocorrelation functions",
+      "norm_label": "autocorrelation functions",
+      "description": ""
+    },
+    "concept:secondary spectra": {
+      "id": "concept:secondary spectra",
+      "type": "Concept",
+      "label": "secondary spectra",
+      "norm_label": "secondary spectra",
+      "description": ""
+    },
+    "concept:scintillation bandwidths": {
+      "id": "concept:scintillation bandwidths",
+      "type": "Concept",
+      "label": "scintillation bandwidths",
+      "norm_label": "scintillation bandwidths",
+      "description": ""
+    },
+    "concept:pulse broadening times": {
+      "id": "concept:pulse broadening times",
+      "type": "Concept",
+      "label": "pulse broadening times",
+      "norm_label": "pulse broadening times",
+      "description": ""
+    },
+    "concept:arc curvatures": {
+      "id": "concept:arc curvatures",
+      "type": "Concept",
+      "label": "arc curvatures",
+      "norm_label": "arc curvatures",
+      "description": ""
+    },
+    "dataset:low to moderate dm pulsars": {
+      "id": "dataset:low to moderate dm pulsars",
+      "type": "Dataset",
+      "label": "low to moderate DM pulsars",
+      "norm_label": "low to moderate dm pulsars",
+      "description": ""
+    },
+    "concept:ionized ism": {
+      "id": "concept:ionized ism",
+      "type": "Concept",
+      "label": "ionized ISM",
+      "norm_label": "ionized ism",
+      "description": ""
+    },
+    "concept:patchiness of the ionized ism": {
+      "id": "concept:patchiness of the ionized ism",
+      "type": "Concept",
+      "label": "patchiness of the ionized ISM",
+      "norm_label": "patchiness of the ionized ism",
+      "description": ""
+    },
+    "concept:key state": {
+      "id": "concept:key state",
+      "type": "Concept",
+      "label": "key state",
+      "norm_label": "key state",
+      "description": ""
+    },
+    "method:experiment": {
+      "id": "method:experiment",
+      "type": "Method",
+      "label": "experiment",
+      "norm_label": "experiment",
+      "description": ""
+    },
+    "concept:shell-model calculations": {
+      "id": "concept:shell-model calculations",
+      "type": "Concept",
+      "label": "shell-model calculations",
+      "norm_label": "shell-model calculations",
+      "description": ""
+    },
+    "task:measurements of lifetimes and proton branchings": {
+      "id": "task:measurements of lifetimes and proton branchings",
+      "type": "Task",
+      "label": "measurements of lifetimes and proton branchings",
+      "norm_label": "measurements of lifetimes and proton branchings",
+      "description": ""
+    },
+    "concept:high resolution detection set-up": {
+      "id": "concept:high resolution detection set-up",
+      "type": "Concept",
+      "label": "high resolution detection set-up",
+      "norm_label": "high resolution detection set-up",
+      "description": ""
+    },
+    "concept:state in 23 mg": {
+      "id": "concept:state in 23 mg",
+      "type": "Concept",
+      "label": "state in $^{23}$Mg",
+      "norm_label": "state in 23 mg",
+      "description": ""
+    },
+    "metric:f22": {
+      "id": "metric:f22",
+      "type": "Metric",
+      "label": "F22",
+      "norm_label": "f22",
+      "description": ""
+    },
+    "concept:m1": {
+      "id": "concept:m1",
+      "type": "Concept",
+      "label": "M1",
+      "norm_label": "m1",
+      "description": ""
+    },
+    "metric:22 na p γ 23 mg rate": {
+      "id": "metric:22 na p γ 23 mg rate",
+      "type": "Metric",
+      "label": "$^{22}$Na(p, $γ$)$^{23}$Mg rate",
+      "norm_label": "22 na p γ 23 mg rate",
+      "description": ""
+    },
+    "metric:detectability limit": {
+      "id": "metric:detectability limit",
+      "type": "Metric",
+      "label": "detectability limit",
+      "norm_label": "detectability limit",
+      "description": ""
+    },
+    "metric:observation frequency": {
+      "id": "metric:observation frequency",
+      "type": "Metric",
+      "label": "observation frequency",
+      "norm_label": "observation frequency",
+      "description": ""
+    },
+    "concept:novae": {
+      "id": "concept:novae",
+      "type": "Concept",
+      "label": "novae",
+      "norm_label": "novae",
+      "description": ""
+    }
+  },
+  "edges": [
+    {
+      "source": "paper:2206.04564v6",
+      "target": "task:为了提供一个全面的图基twitter机器人检测基准，以解决现有数据集规模小、图结构不完整及注解质量低的问题，以促进新型图基机器人检测方法的发展和评价。",
+      "type": "applied_to",
+      "weight": 0.8
+    },
+    {
+      "source": "paper:2206.04564v6",
+      "target": "dataset:twibot-22",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "paper:2206.04564v6",
+      "target": "contribution:提出了twibot-22，一个全面的图基twitter机器人检测基准，规模为目前最大。",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "paper:2206.04564v6",
+      "target": "contribution:提供了twitter网络中多样化的实体和关系。",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "paper:2206.04564v6",
+      "target": "contribution:提升了注解质量。",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "paper:2206.08029v1",
+      "target": "method:ensemble method",
+      "type": "proposes",
+      "weight": 1.0
+    },
+    {
+      "source": "paper:2206.08029v1",
+      "target": "task:尽管文本生成模型 tgms 在生成符合人类语言风格的文本方面取得了显著进展，但现有的检测方法在分辨tgm生成的文本和真人撰写的文本方面效果有限，为了改善这一问题，研究提出了用于区分tgm生成文本和人类",
+      "type": "applied_to",
+      "weight": 0.8
+    },
+    {
+      "source": "method:ensemble method",
+      "target": "task:尽管文本生成模型 tgms 在生成符合人类语言风格的文本方面取得了显著进展，但现有的检测方法在分辨tgm生成的文本和真人撰写的文本方面效果有限，为了改善这一问题，研究提出了用于区分tgm生成文本和人类",
+      "type": "solves",
+      "weight": 0.95
+    },
+    {
+      "source": "paper:2206.08029v1",
+      "target": "dataset:null",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "method:ensemble method",
+      "target": "dataset:null",
+      "type": "evaluates_on",
+      "weight": 0.9
+    },
+    {
+      "source": "method:ensemble method",
+      "target": "metric:accuracy",
+      "type": "achieves",
+      "weight": 0.85
+    },
+    {
+      "source": "paper:2206.08029v1",
+      "target": "contribution:提出了基于注意力机制的预训练模型组合方法对于检测tgm生成的文本有提高效果。",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "method:ensemble method",
+      "target": "contribution:提出了基于注意力机制的预训练模型组合方法对于检测tgm生成的文本有提高效果。",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:2207.08756v1",
+      "target": "method:动态谱、自相关函数和次级谱分析",
+      "type": "proposes",
+      "weight": 1.0
+    },
+    {
+      "source": "paper:2207.08756v1",
+      "target": "task:通过提供关于脉冲星视线（los）上散射物质位置的信息，散射弧是研究星际介质（ism）中电离物质分布的强大工具。",
+      "type": "applied_to",
+      "weight": 0.8
+    },
+    {
+      "source": "method:动态谱、自相关函数和次级谱分析",
+      "target": "task:通过提供关于脉冲星视线（los）上散射物质位置的信息，散射弧是研究星际介质（ism）中电离物质分布的强大工具。",
+      "type": "solves",
+      "weight": 0.95
+    },
+    {
+      "source": "paper:2207.08756v1",
+      "target": "dataset:22低到中等dm脉冲星",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "method:动态谱、自相关函数和次级谱分析",
+      "target": "dataset:22低到中等dm脉冲星",
+      "type": "evaluates_on",
+      "weight": 0.9
+    },
+    {
+      "source": "paper:2207.08756v1",
+      "target": "contribution:展示了ism在不同尺度上的斑块状分布，包括沿视向约100pc的尺度和视线方向上的星子尺度。",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "method:动态谱、自相关函数和次级谱分析",
+      "target": "contribution:展示了ism在不同尺度上的斑块状分布，包括沿视向约100pc的尺度和视线方向上的星子尺度。",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:2207.08756v1",
+      "target": "contribution:没有在大多数视线路径上发现分布式散射的明显证据。",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "method:动态谱、自相关函数和次级谱分析",
+      "target": "contribution:没有在大多数视线路径上发现分布式散射的明显证据。",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:2210.14336v2",
+      "target": "task:为了更准确地测量 22 na p γ 23 mg反应的关键状态的寿命和质子分支比，以降低对 22 na产额的不确定性，同时提高对其在超新星中的可检测性和观测频率。",
+      "type": "applied_to",
+      "weight": 0.8
+    },
+    {
+      "source": "paper:2210.14336v2",
+      "target": "contribution:提供了关键状态的精确测量结果，并与壳模型计算进行了比较。",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "paper:2210.14336v2",
+      "target": "contribution:改进了对 22 na p γ 23 mg反应率的评估。",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "paper:2210.14336v2",
+      "target": "contribution:提高了通过未来太空望远镜观测 22 na的可检测性和频率的前景。",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "dataset:twibot-22",
+      "target": "concept:twitter network",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "dataset:twibot-22",
+      "target": "task:graph-based twitter bot detection",
+      "type": "applied_to",
+      "weight": 0.8
+    },
+    {
+      "source": "model:representative twitter bot detection baselines",
+      "target": "dataset:twibot-22",
+      "type": "evaluates_on",
+      "weight": 0.9
+    },
+    {
+      "source": "method:ensemble method",
+      "target": "concept:tgm generation",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "method:ensemble method",
+      "target": "concept:attention mechanism",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "method:ensemble method",
+      "target": "task:dialog-22 ruatd",
+      "type": "applied_to",
+      "weight": 0.8
+    },
+    {
+      "source": "method:ensemble method",
+      "target": "task:binary classification task",
+      "type": "applied_to",
+      "weight": 0.8
+    },
+    {
+      "source": "method:ensemble method",
+      "target": "task:multiclass classification task",
+      "type": "applied_to",
+      "weight": 0.8
+    },
+    {
+      "source": "method:ensemble method",
+      "target": "dataset:private test set",
+      "type": "evaluates_on",
+      "weight": 0.9
+    },
+    {
+      "source": "method:ensemble method",
+      "target": "dataset:private test set",
+      "type": "achieves",
+      "weight": 0.85
+    },
+    {
+      "source": "paper:2207.08756v1",
+      "target": "concept:dynamic spectra",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "paper:2207.08756v1",
+      "target": "concept:autocorrelation functions",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "paper:2207.08756v1",
+      "target": "concept:secondary spectra",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "paper:2207.08756v1",
+      "target": "concept:scintillation bandwidths",
+      "type": "achieves",
+      "weight": 0.85
+    },
+    {
+      "source": "paper:2207.08756v1",
+      "target": "concept:pulse broadening times",
+      "type": "achieves",
+      "weight": 0.85
+    },
+    {
+      "source": "paper:2207.08756v1",
+      "target": "concept:arc curvatures",
+      "type": "achieves",
+      "weight": 0.85
+    },
+    {
+      "source": "paper:2207.08756v1",
+      "target": "dataset:low to moderate dm pulsars",
+      "type": "evaluates_on",
+      "weight": 0.9
+    },
+    {
+      "source": "paper:2207.08756v1",
+      "target": "concept:ionized ism",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:2207.08756v1",
+      "target": "concept:patchiness of the ionized ism",
+      "type": "achieves",
+      "weight": 0.85
+    },
+    {
+      "source": "paper:2207.08756v1",
+      "target": "concept:ionized ism",
+      "type": "achieves",
+      "weight": 0.85
+    },
+    {
+      "source": "concept:key state",
+      "target": "concept:shell-model calculations",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "method:experiment",
+      "target": "task:measurements of lifetimes and proton branchings",
+      "type": "evaluates_on",
+      "weight": 0.9
+    },
+    {
+      "source": "concept:high resolution detection set-up",
+      "target": "task:measurements of lifetimes and proton branchings",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "concept:shell-model calculations",
+      "target": "concept:state in 23 mg",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "concept:shell-model calculations",
+      "target": "metric:detectability limit",
+      "type": "achieves",
+      "weight": 0.85
+    },
+    {
+      "source": "metric:22 na p γ 23 mg rate",
+      "target": "concept:novae",
+      "type": "applied_to",
+      "weight": 0.8
+    },
+    {
+      "source": "concept:m1",
+      "target": "concept:key state",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "metric:f22",
+      "target": "concept:key state",
+      "type": "related_to",
+      "weight": 0.5
+    }
+  ],
+  "paper_entities": {
+    "2206.04564v6": [
+      "paper:2206.04564v6",
+      "task:为了提供一个全面的图基twitter机器人检测基准，以解决现有数据集规模小、图结构不完整及注解质量低的问题，以促进新型图基机器人检测方法的发展和评价。",
+      "dataset:twibot-22",
+      "contribution:提出了twibot-22，一个全面的图基twitter机器人检测基准，规模为目前最大。",
+      "contribution:提供了twitter网络中多样化的实体和关系。",
+      "contribution:提升了注解质量。",
+      "concept:twitter network",
+      "task:graph-based twitter bot detection",
+      "model:representative twitter bot detection baselines"
+    ],
+    "2206.08029v1": [
+      "paper:2206.08029v1",
+      "method:ensemble method",
+      "task:尽管文本生成模型 tgms 在生成符合人类语言风格的文本方面取得了显著进展，但现有的检测方法在分辨tgm生成的文本和真人撰写的文本方面效果有限，为了改善这一问题，研究提出了用于区分tgm生成文本和人类",
+      "dataset:null",
+      "metric:accuracy",
+      "contribution:提出了基于注意力机制的预训练模型组合方法对于检测tgm生成的文本有提高效果。",
+      "task:dialog-22 ruatd",
+      "task:binary classification task",
+      "task:multiclass classification task",
+      "dataset:private test set",
+      "concept:tgm generation",
+      "concept:attention mechanism"
+    ],
+    "2207.08756v1": [
+      "paper:2207.08756v1",
+      "method:动态谱、自相关函数和次级谱分析",
+      "task:通过提供关于脉冲星视线（los）上散射物质位置的信息，散射弧是研究星际介质（ism）中电离物质分布的强大工具。",
+      "dataset:22低到中等dm脉冲星",
+      "contribution:展示了ism在不同尺度上的斑块状分布，包括沿视向约100pc的尺度和视线方向上的星子尺度。",
+      "contribution:没有在大多数视线路径上发现分布式散射的明显证据。",
+      "concept:dynamic spectra",
+      "concept:autocorrelation functions",
+      "concept:secondary spectra",
+      "concept:scintillation bandwidths",
+      "concept:pulse broadening times",
+      "concept:arc curvatures",
+      "dataset:low to moderate dm pulsars",
+      "concept:ionized ism",
+      "concept:patchiness of the ionized ism"
+    ],
+    "2210.14336v2": [
+      "paper:2210.14336v2",
+      "task:为了更准确地测量 22 na p γ 23 mg反应的关键状态的寿命和质子分支比，以降低对 22 na产额的不确定性，同时提高对其在超新星中的可检测性和观测频率。",
+      "contribution:提供了关键状态的精确测量结果，并与壳模型计算进行了比较。",
+      "contribution:改进了对 22 na p γ 23 mg反应率的评估。",
+      "contribution:提高了通过未来太空望远镜观测 22 na的可检测性和频率的前景。",
+      "concept:key state",
+      "method:experiment",
+      "concept:shell-model calculations",
+      "task:measurements of lifetimes and proton branchings",
+      "concept:high resolution detection set-up",
+      "concept:state in 23 mg",
+      "metric:f22",
+      "concept:m1",
+      "metric:22 na p γ 23 mg rate",
+      "metric:detectability limit",
+      "metric:observation frequency",
+      "concept:novae"
+    ]
+  },
+  "entity_aliases": {
+    "twibot-22 towards graph-based twitter bot detection": "paper:2206.04564v6",
+    "为了提供一个全面的图基twitter机器人检测基准，以解决现有数据集规模小、图结构不完整及注解质量低的问题，以促进新型图基机器人检测方法的发展和评价。": "task:为了提供一个全面的图基twitter机器人检测基准，以解决现有数据集规模小、图结构不完整及注解质量低的问题，以促进新型图基机器人检测方法的发展和评价。",
+    "twibot-22": "dataset:twibot-22",
+    "提出了twibot-22，一个全面的图基twitter机器人检测基准，规模为目前最大。": "contribution:提出了twibot-22，一个全面的图基twitter机器人检测基准，规模为目前最大。",
+    "提供了twitter网络中多样化的实体和关系。": "contribution:提供了twitter网络中多样化的实体和关系。",
+    "提升了注解质量。": "contribution:提升了注解质量。",
+    "dialog-22 ruatd generated text detection": "paper:2206.08029v1",
+    "ensemble method": "method:ensemble method",
+    "尽管文本生成模型 tgms 在生成符合人类语言风格的文本方面取得了显著进展，但现有的检测方法在分辨tgm生成的文本和真人撰写的文本方面效果有限，为了改善这一问题，研究提出了用于区分tgm生成文本和人类": "task:尽管文本生成模型 tgms 在生成符合人类语言风格的文本方面取得了显著进展，但现有的检测方法在分辨tgm生成的文本和真人撰写的文本方面效果有限，为了改善这一问题，研究提出了用于区分tgm生成文本和人类",
+    "null": "dataset:null",
+    "accuracy": "metric:accuracy",
+    "提出了基于注意力机制的预训练模型组合方法对于检测tgm生成的文本有提高效果。": "contribution:提出了基于注意力机制的预训练模型组合方法对于检测tgm生成的文本有提高效果。",
+    "a scintillation arc survey of 22 pulsars with low to moderate dispersion measures": "paper:2207.08756v1",
+    "动态谱、自相关函数和次级谱分析": "method:动态谱、自相关函数和次级谱分析",
+    "通过提供关于脉冲星视线（los）上散射物质位置的信息，散射弧是研究星际介质（ism）中电离物质分布的强大工具。": "task:通过提供关于脉冲星视线（los）上散射物质位置的信息，散射弧是研究星际介质（ism）中电离物质分布的强大工具。",
+    "22低到中等dm脉冲星": "dataset:22低到中等dm脉冲星",
+    "展示了ism在不同尺度上的斑块状分布，包括沿视向约100pc的尺度和视线方向上的星子尺度。": "contribution:展示了ism在不同尺度上的斑块状分布，包括沿视向约100pc的尺度和视线方向上的星子尺度。",
+    "没有在大多数视线路径上发现分布式散射的明显证据。": "contribution:没有在大多数视线路径上发现分布式散射的明显证据。",
+    "understanding the cosmic abundance of 22 na lifetime measurements in 23 mg": "paper:2210.14336v2",
+    "为了更准确地测量 22 na p γ 23 mg反应的关键状态的寿命和质子分支比，以降低对 22 na产额的不确定性，同时提高对其在超新星中的可检测性和观测频率。": "task:为了更准确地测量 22 na p γ 23 mg反应的关键状态的寿命和质子分支比，以降低对 22 na产额的不确定性，同时提高对其在超新星中的可检测性和观测频率。",
+    "提供了关键状态的精确测量结果，并与壳模型计算进行了比较。": "contribution:提供了关键状态的精确测量结果，并与壳模型计算进行了比较。",
+    "改进了对 22 na p γ 23 mg反应率的评估。": "contribution:改进了对 22 na p γ 23 mg反应率的评估。",
+    "提高了通过未来太空望远镜观测 22 na的可检测性和频率的前景。": "contribution:提高了通过未来太空望远镜观测 22 na的可检测性和频率的前景。",
+    "twitter network": "concept:twitter network",
+    "graph-based twitter bot detection": "task:graph-based twitter bot detection",
+    "representative twitter bot detection baselines": "model:representative twitter bot detection baselines",
+    "dialog-22 ruatd": "task:dialog-22 ruatd",
+    "binary classification task": "task:binary classification task",
+    "multiclass classification task": "task:multiclass classification task",
+    "private test set": "dataset:private test set",
+    "tgm generation": "concept:tgm generation",
+    "attention mechanism": "concept:attention mechanism",
+    "dynamic spectra": "concept:dynamic spectra",
+    "autocorrelation functions": "concept:autocorrelation functions",
+    "secondary spectra": "concept:secondary spectra",
+    "scintillation bandwidths": "concept:scintillation bandwidths",
+    "pulse broadening times": "concept:pulse broadening times",
+    "arc curvatures": "concept:arc curvatures",
+    "low to moderate dm pulsars": "dataset:low to moderate dm pulsars",
+    "ionized ism": "concept:ionized ism",
+    "patchiness of the ionized ism": "concept:patchiness of the ionized ism",
+    "key state": "concept:key state",
+    "experiment": "method:experiment",
+    "shell-model calculations": "concept:shell-model calculations",
+    "measurements of lifetimes and proton branchings": "task:measurements of lifetimes and proton branchings",
+    "high resolution detection set-up": "concept:high resolution detection set-up",
+    "state in 23 mg": "concept:state in 23 mg",
+    "f22": "metric:f22",
+    "m1": "concept:m1",
+    "22 na p γ 23 mg rate": "metric:22 na p γ 23 mg rate",
+    "detectability limit": "metric:detectability limit",
+    "observation frequency": "metric:observation frequency",
+    "novae": "concept:novae"
+  },
+  "communities": {
+    "0": {
+      "nodes": [
+        "paper:2206.04564v6",
+        "task:为了提供一个全面的图基twitter机器人检测基准，以解决现有数据集规模小、图结构不完整及注解质量低的问题，以促进新型图基机器人检测方法的发展和评价。",
+        "contribution:提出了twibot-22，一个全面的图基twitter机器人检测基准，规模为目前最大。",
+        "contribution:提供了twitter网络中多样化的实体和关系。",
+        "contribution:提升了注解质量。"
+      ],
+      "key_entities": [
+        "TwiBot-22: Towards Graph-Based Twitter Bot Detection",
+        "为了提供一个全面的图基Twitter机器人检测基准，以解决现有数据集规模小、图结构不完整及注解质量低的问题，以促进新型图基机器人检测方法的发展和评价。",
+        "提出了TwiBot-22，一个全面的图基Twitter机器人检测基准，规模为目前最大。",
+        "提供了Twitter网络中多样化的实体和关系。",
+        "提升了注解质量。"
+      ],
+      "key_papers": [
+        "TwiBot-22: Towards Graph-Based Twitter Bot Detection"
+      ],
+      "dominant_types": [
+        "Contribution",
+        "Paper",
+        "Task"
+      ],
+      "semantic_tag": "Research Contributions Cluster",
+      "summary": "",
+      "community_name": "Research Contributions Cluster"
+    },
+    "1": {
+      "nodes": [
+        "dataset:twibot-22",
+        "concept:twitter network",
+        "task:graph-based twitter bot detection",
+        "model:representative twitter bot detection baselines"
+      ],
+      "key_entities": [
+        "TwiBot-22",
+        "Twitter network",
+        "Graph-based Twitter bot detection",
+        "representative Twitter bot detection baselines"
+      ],
+      "key_papers": [],
+      "dominant_types": [
+        "Dataset",
+        "Concept",
+        "Task"
+      ],
+      "semantic_tag": "Benchmark & Dataset Cluster",
+      "summary": "",
+      "community_name": "Benchmark & Dataset Cluster"
+    },
+    "2": {
+      "nodes": [
+        "paper:2206.08029v1",
+        "task:尽管文本生成模型 tgms 在生成符合人类语言风格的文本方面取得了显著进展，但现有的检测方法在分辨tgm生成的文本和真人撰写的文本方面效果有限，为了改善这一问题，研究提出了用于区分tgm生成文本和人类",
+        "dataset:null",
+        "contribution:提出了基于注意力机制的预训练模型组合方法对于检测tgm生成的文本有提高效果。"
+      ],
+      "key_entities": [
+        "DIALOG-22 RuATD Generated Text Detection",
+        "尽管文本生成模型(TGMs)在生成符合人类语言风格的文本方面取得了显著进展，但现有的检测方法在分辨TGM生成的文本和真人撰写的文本方面效果有限，为了改善这一问题，研究提出了用于区分TGM生成文本和人类",
+        "null",
+        "提出了基于注意力机制的预训练模型组合方法对于检测TGM生成的文本有提高效果。"
+      ],
+      "key_papers": [
+        "DIALOG-22 RuATD Generated Text Detection"
+      ],
+      "dominant_types": [
+        "Paper",
+        "Task",
+        "Dataset"
+      ],
+      "semantic_tag": "Task & Application Cluster",
+      "summary": "",
+      "community_name": "Task & Application Cluster"
+    },
+    "3": {
+      "nodes": [
+        "method:ensemble method",
+        "metric:accuracy",
+        "task:dialog-22 ruatd",
+        "task:binary classification task",
+        "task:multiclass classification task",
+        "dataset:private test set",
+        "concept:tgm generation",
+        "concept:attention mechanism"
+      ],
+      "key_entities": [
+        "ensemble method",
+        "Accuracy",
+        "DIALOG-22 RuATD",
+        "binary classification task",
+        "multiclass classification task",
+        "private test set",
+        "TGM generation",
+        "Attention mechanism"
+      ],
+      "key_papers": [],
+      "dominant_types": [
+        "Task",
+        "Concept",
+        "Method"
+      ],
+      "semantic_tag": "Task & Application Cluster",
+      "summary": "",
+      "community_name": "Task & Application Cluster"
+    },
+    "4": {
+      "nodes": [
+        "paper:2207.08756v1",
+        "contribution:展示了ism在不同尺度上的斑块状分布，包括沿视向约100pc的尺度和视线方向上的星子尺度。",
+        "contribution:没有在大多数视线路径上发现分布式散射的明显证据。",
+        "concept:dynamic spectra",
+        "concept:autocorrelation functions",
+        "concept:secondary spectra",
+        "concept:scintillation bandwidths",
+        "concept:pulse broadening times",
+        "concept:arc curvatures",
+        "dataset:low to moderate dm pulsars",
+        "concept:ionized ism",
+        "concept:patchiness of the ionized ism",
+        "metric:observation frequency"
+      ],
+      "key_entities": [
+        "A Scintillation Arc Survey of 22 Pulsars with Low to Moderate Dispersion Measures",
+        "展示了ISM在不同尺度上的斑块状分布，包括沿视向约100pc的尺度和视线方向上的星子尺度。",
+        "没有在大多数视线路径上发现分布式散射的明显证据。",
+        "dynamic spectra",
+        "autocorrelation functions",
+        "secondary spectra",
+        "scintillation bandwidths",
+        "pulse broadening times",
+        "arc curvatures",
+        "low to moderate DM pulsars",
+        "ionized ISM",
+        "patchiness of the ionized ISM"
+      ],
+      "key_papers": [
+        "A Scintillation Arc Survey of 22 Pulsars with Low to Moderate Dispersion Measures"
+      ],
+      "dominant_types": [
+        "Concept",
+        "Contribution",
+        "Paper"
+      ],
+      "semantic_tag": "Research Contributions Cluster",
+      "summary": "",
+      "community_name": "Research Contributions Cluster"
+    },
+    "5": {
+      "nodes": [
+        "method:动态谱、自相关函数和次级谱分析",
+        "task:通过提供关于脉冲星视线（los）上散射物质位置的信息，散射弧是研究星际介质（ism）中电离物质分布的强大工具。",
+        "dataset:22低到中等dm脉冲星"
+      ],
+      "key_entities": [
+        "动态谱、自相关函数和次级谱分析",
+        "通过提供关于脉冲星视线（LoS）上散射物质位置的信息，散射弧是研究星际介质（ISM）中电离物质分布的强大工具。",
+        "22低到中等DM脉冲星"
+      ],
+      "key_papers": [],
+      "dominant_types": [
+        "Method",
+        "Task",
+        "Dataset"
+      ],
+      "semantic_tag": "Task & Application Cluster",
+      "summary": "",
+      "community_name": "Task & Application Cluster"
+    },
+    "6": {
+      "nodes": [
+        "paper:2210.14336v2",
+        "task:为了更准确地测量 22 na p γ 23 mg反应的关键状态的寿命和质子分支比，以降低对 22 na产额的不确定性，同时提高对其在超新星中的可检测性和观测频率。",
+        "contribution:提供了关键状态的精确测量结果，并与壳模型计算进行了比较。",
+        "contribution:改进了对 22 na p γ 23 mg反应率的评估。",
+        "contribution:提高了通过未来太空望远镜观测 22 na的可检测性和频率的前景。"
+      ],
+      "key_entities": [
+        "Understanding the cosmic abundance of $^{22}$Na: lifetime measurements in $^{23}$Mg",
+        "为了更准确地测量$^{22}$Na(p, $γ$)$^{23}$Mg反应的关键状态的寿命和质子分支比，以降低对$^{22}$Na产额的不确定性，同时提高对其在超新星中的可检测性和观测频率。",
+        "提供了关键状态的精确测量结果，并与壳模型计算进行了比较。",
+        "改进了对$^{22}$Na(p, $γ$)$^{23}$Mg反应率的评估。",
+        "提高了通过未来太空望远镜观测$^{22}$Na的可检测性和频率的前景。"
+      ],
+      "key_papers": [
+        "Understanding the cosmic abundance of $^{22}$Na: lifetime measurements in $^{23}$Mg"
+      ],
+      "dominant_types": [
+        "Contribution",
+        "Paper",
+        "Task"
+      ],
+      "semantic_tag": "Research Contributions Cluster",
+      "summary": "",
+      "community_name": "Research Contributions Cluster"
+    },
+    "7": {
+      "nodes": [
+        "concept:key state",
+        "metric:f22",
+        "concept:m1"
+      ],
+      "key_entities": [
+        "key state",
+        "F22",
+        "M1"
+      ],
+      "key_papers": [],
+      "dominant_types": [
+        "Concept",
+        "Metric"
+      ],
+      "semantic_tag": "Evaluation Metrics Cluster",
+      "summary": "",
+      "community_name": "Evaluation Metrics Cluster"
+    },
+    "8": {
+      "nodes": [
+        "method:experiment",
+        "task:measurements of lifetimes and proton branchings",
+        "concept:high resolution detection set-up"
+      ],
+      "key_entities": [
+        "experiment",
+        "measurements of lifetimes and proton branchings",
+        "high resolution detection set-up"
+      ],
+      "key_papers": [],
+      "dominant_types": [
+        "Method",
+        "Task",
+        "Concept"
+      ],
+      "semantic_tag": "Task & Application Cluster",
+      "summary": "",
+      "community_name": "Task & Application Cluster"
+    },
+    "9": {
+      "nodes": [
+        "concept:shell-model calculations",
+        "concept:state in 23 mg",
+        "metric:detectability limit"
+      ],
+      "key_entities": [
+        "shell-model calculations",
+        "state in $^{23}$Mg",
+        "detectability limit"
+      ],
+      "key_papers": [],
+      "dominant_types": [
+        "Concept",
+        "Metric"
+      ],
+      "semantic_tag": "Evaluation Metrics Cluster",
+      "summary": "",
+      "community_name": "Evaluation Metrics Cluster"
+    },
+    "10": {
+      "nodes": [
+        "metric:22 na p γ 23 mg rate",
+        "concept:novae"
+      ],
+      "key_entities": [
+        "$^{22}$Na(p, $γ$)$^{23}$Mg rate",
+        "novae"
+      ],
+      "key_papers": [],
+      "dominant_types": [
+        "Metric",
+        "Concept"
+      ],
+      "semantic_tag": "Evaluation Metrics Cluster",
+      "summary": "",
+      "community_name": "Evaluation Metrics Cluster"
+    }
+  },
+  "citation_graph": {},
+  "stats": {
+    "node_count": 53,
+    "edge_count": 54,
+    "node_type_count": {
+      "Paper": 4,
+      "Task": 9,
+      "Dataset": 5,
+      "Contribution": 9,
+      "Method": 3,
+      "Metric": 5,
+      "Concept": 17,
+      "Model": 1
+    },
+    "paper_count": 4,
+    "community_count": 0,
+    "citation_edge_count": 0
+  }
+}

@@ -4,12 +4,18 @@
 
 export type MessageRole = 'user' | 'assistant' | 'system';
 
+export interface UsedKb {
+  db_id: string;
+  name: string;
+}
+
 export interface Message {
   id: string;
   role: MessageRole;
   content: string;
   createdAt: number;
   isStreaming?: boolean;
+  usedKbs?: UsedKb[];
 }
 
 export interface ChatSession {

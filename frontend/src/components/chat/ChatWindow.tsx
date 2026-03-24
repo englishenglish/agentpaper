@@ -15,6 +15,7 @@ export function ChatWindow() {
     createSession,
     addMessage,
     updateLastAssistantMessage,
+    setLastMessageKbs,
     setIsGenerating,
     setAbortController,
     abortController,
@@ -56,7 +57,9 @@ export function ChatWindow() {
           const { step, state, data: payload } = data;
 
           if (step === 'qa_answering') {
-            if (state === 'generating' && typeof payload === 'string') {
+            if (state === 'kb_context' && Array.isArray(payload)) {
+              setLastMessageKbs(activeSessionId, payload as { db_id: string; name: string }[]);
+            } else if (state === 'generating' && typeof payload === 'string') {
               accumulated += payload;
               updateLastAssistantMessage(activeSessionId, accumulated, true);
             } else if (state === 'completed') {
@@ -87,7 +90,7 @@ export function ChatWindow() {
         setIsGenerating(false);
       };
     },
-    [activeSessionId, settings, addMessage, updateLastAssistantMessage, setIsGenerating]
+    [activeSessionId, settings, addMessage, updateLastAssistantMessage, setLastMessageKbs, setIsGenerating]
   );
 
   const handleStop = useCallback(() => {

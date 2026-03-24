@@ -14,6 +14,8 @@ from pydantic import BaseModel, Field, field_validator
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 
 from src.utils.log_utils import setup_logger
+from src.utils import hashstr
+from src.utils.datetime_utils import utc_isoformat
 from src.core.prompts import reading_agent_prompt, kg_extraction_prompt
 from src.core.model_client import create_default_client, create_reading_model_client
 from src.core.state_models import BackToFrontData, State, ExecutionState
@@ -153,7 +155,12 @@ async def _extract_kg_for_paper(paper: Dict[str, Any], extracted: Any) -> Dict[s
             if raw.startswith("```"):
                 raw = re.sub(r"^```(?:json)?\s*", "", raw)
                 raw = re.sub(r"\s*```$", "", raw)
-            return json.loads(raw)
+            try:
+                return json.loads(raw)
+            except json.JSONDecodeError:
+                # LLM 偶发输出非法转义（如 \_ / \( / \-），先修复后再解析
+                repaired = re.sub(r'\\(?!["\\/bfnrtu])', r"\\\\", raw)
+                return json.loads(repaired)
         if isinstance(raw, dict):
             return raw
     except Exception as e:
@@ -231,6 +238,7 @@ async def add_papers_to_kb(
     documents = []
     metadatas = []
     ids = []
+    file_records: list[dict] = []
 
     # 2. 遍历论文并进行切片
     for i, (paper, extracted_paper) in enumerate(zip(papers, extracted_papers.papers)):
@@ -244,22 +252,44 @@ async def add_papers_to_kb(
         # 切片
         chunks = text_splitter.split_text(str(content_to_chunk))
 
+        # 生成该论文的稳定 file_id（基于 paper_id/title + db_id，确保可重复、不冲突）
+        paper_id_raw = str(paper.get("paper_id") or paper.get("id") or paper.get("title") or f"paper_{i}")
+        file_id = f"arxiv_{hashstr(paper_id_raw + db_id, 12)}"
+
         # 准备元数据：合并基础 metadata 和 大模型提取出来的核心字段（利于混合检索过滤）
         base_meta = sanitize_metadata(paper)
         extracted_dict = extracted_paper.model_dump()
 
-        rich_meta = {
+        rich_meta_base = {
             **base_meta,
             "core_problem": str(extracted_dict.get("core_problem", "")),
             "methodology_name": str(extracted_dict.get("key_methodology", {}).get("name", "")),
-            "paper_index": i
+            "paper_index": i,
+            "full_doc_id": file_id,   # 供 get_file_content 按文档过滤
+            "source": str(paper.get("title") or paper_id_raw),
         }
 
-        # 将每个 chunk 加入入库列表
+        # 将每个 chunk 加入入库列表（每 chunk 独立携带 chunk_index 以支持排序）
         for j, chunk in enumerate(chunks):
             documents.append(chunk)
-            metadatas.append(rich_meta)
-            ids.append(f"paper_{i}_chunk_{j}")
+            metadatas.append({**rich_meta_base, "chunk_index": j})
+            ids.append(f"{file_id}_chunk_{j}")
+
+        # 构建该论文的 files_meta 注册记录
+        title = str(paper.get("title") or paper_id_raw)
+        file_records.append({
+            "file_id": file_id,
+            "database_id": db_id,
+            "filename": f"{title[:80]}.pdf",
+            "path": str(paper.get("url") or paper.get("pdf_url") or paper_id_raw),
+            "file_type": "arxiv",
+            "status": "done",
+            "created_at": utc_isoformat(),
+            "source_type": "arxiv",
+            "paper_id": paper_id_raw,
+            "authors": str(paper.get("authors") or ""),
+            "abstract": str(paper.get("abstract") or paper.get("summary") or "")[:500],
+        })
 
     if not documents:
         logger.warning("No documents generated after chunking.")
@@ -273,6 +303,13 @@ async def add_papers_to_kb(
 
     # 执行最终的数据入库
     await knowledge_base.add_processed_content(db_id, data)
+
+    # 将每篇论文注册为独立的文档记录，使其出现在前端文档列表中
+    try:
+        knowledge_base.register_file_records(db_id, file_records)
+        logger.info(f"已注册 {len(file_records)} 篇 arXiv 论文到知识库文档列表（db_id={db_id}）")
+    except Exception as e:
+        logger.warning(f"注册 arXiv 论文文档记录失败（不影响检索功能）: {e}")
 
     # ---- 知识图谱构建（两阶段）----
     try:

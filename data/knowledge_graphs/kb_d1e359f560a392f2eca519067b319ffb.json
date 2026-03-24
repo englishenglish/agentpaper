@@ -1,0 +1,1097 @@
+{
+  "db_id": "kb_d1e359f560a392f2eca519067b319ffb",
+  "nodes": {
+    "paper:2303.05745v3": {
+      "id": "paper:2303.05745v3",
+      "type": "Paper",
+      "label": "Multi-site, Multi-domain Airway Tree Modeling (ATM'22): A Public Benchmark for Pulmonary Airway Segmentation",
+      "norm_label": "multi-site multi-domain airway tree modeling atm 22 a public benchmark for pulmonary airway segmentation"
+    },
+    "method:大气道树建模挑战（atm 22）": {
+      "id": "method:大气道树建模挑战（atm 22）",
+      "type": "Method",
+      "label": "大气道树建模挑战（ATM'22）",
+      "norm_label": "大气道树建模挑战（atm 22）"
+    },
+    "task:为了提供一个基准，以促进肺气道分割算法的发展和性能评估，特别是在ct扫描上实现精细气道结构的分割。": {
+      "id": "task:为了提供一个基准，以促进肺气道分割算法的发展和性能评估，特别是在ct扫描上实现精细气道结构的分割。",
+      "type": "Task",
+      "label": "为了提供一个基准，以促进肺气道分割算法的发展和性能评估，特别是在CT扫描上实现精细气道结构的分割。",
+      "norm_label": "为了提供一个基准，以促进肺气道分割算法的发展和性能评估，特别是在ct扫描上实现精细气道结构的分割。"
+    },
+    "dataset:500 ct scans 300 for training 50 for validation and 150 for testing": {
+      "id": "dataset:500 ct scans 300 for training 50 for validation and 150 for testing",
+      "type": "Dataset",
+      "label": "500 CT scans (300 for training, 50 for validation, and 150 for testing)",
+      "norm_label": "500 ct scans 300 for training 50 for validation and 150 for testing"
+    },
+    "metric:null": {
+      "id": "metric:null",
+      "type": "Metric",
+      "label": "null",
+      "norm_label": "null"
+    },
+    "contribution:组织了atm 22，提供了一个包含大量ct扫描的大规模肺气道注释数据集。": {
+      "id": "contribution:组织了atm 22，提供了一个包含大量ct扫描的大规模肺气道注释数据集。",
+      "type": "Contribution",
+      "label": "组织了ATM'22，提供了一个包含大量CT扫描的大规模肺气道注释数据集。",
+      "norm_label": "组织了atm 22，提供了一个包含大量ct扫描的大规模肺气道注释数据集。"
+    },
+    "contribution:促进了肺气道分割算法的评估和对比。": {
+      "id": "contribution:促进了肺气道分割算法的评估和对比。",
+      "type": "Contribution",
+      "label": "促进了肺气道分割算法的评估和对比。",
+      "norm_label": "促进了肺气道分割算法的评估和对比。"
+    },
+    "contribution:open-call设计，数据和技术细节对公众开放。": {
+      "id": "contribution:open-call设计，数据和技术细节对公众开放。",
+      "type": "Contribution",
+      "label": "open-call设计，数据和技术细节对公众开放。",
+      "norm_label": "open-call设计，数据和技术细节对公众开放。"
+    },
+    "paper:2206.14987v2": {
+      "id": "paper:2206.14987v2",
+      "type": "Paper",
+      "label": "Lookback for Learning to Branch",
+      "norm_label": "lookback for learning to branch"
+    },
+    "method:parent-as-target pat lookback": {
+      "id": "method:parent-as-target pat lookback",
+      "type": "Method",
+      "label": "Parent-as-Target (PAT) Lookback",
+      "norm_label": "parent-as-target pat lookback"
+    },
+    "task:尽管传统的分支启发式算法在混合整数线性程序求解中表现良好但计算效率较低，为了提高效率，研究分支决策的过程，是否可以引入子节点与父节点之间的依赖性，即 回溯 现象。": {
+      "id": "task:尽管传统的分支启发式算法在混合整数线性程序求解中表现良好但计算效率较低，为了提高效率，研究分支决策的过程，是否可以引入子节点与父节点之间的依赖性，即 回溯 现象。",
+      "type": "Task",
+      "label": "尽管传统的分支启发式算法在混合整数线性程序求解中表现良好但计算效率较低，为了提高效率，研究分支决策的过程，是否可以引入子节点与父节点之间的依赖性，即'回溯'现象。",
+      "norm_label": "尽管传统的分支启发式算法在混合整数线性程序求解中表现良好但计算效率较低，为了提高效率，研究分支决策的过程，是否可以引入子节点与父节点之间的依赖性，即 回溯 现象。"
+    },
+    "contribution:发现了强分支启发式算法中的 回溯 现象": {
+      "id": "contribution:发现了强分支启发式算法中的 回溯 现象",
+      "type": "Contribution",
+      "label": "发现了强分支启发式算法中的'回溯'现象",
+      "norm_label": "发现了强分支启发式算法中的 回溯 现象"
+    },
+    "contribution:提出了目标平滑和父节点作为目标（pat）回溯正则化术语以改进gnn": {
+      "id": "contribution:提出了目标平滑和父节点作为目标（pat）回溯正则化术语以改进gnn",
+      "type": "Contribution",
+      "label": "提出了目标平滑和父节点作为目标（PAT）回溯正则化术语以改进GNN",
+      "norm_label": "提出了目标平滑和父节点作为目标（pat）回溯正则化术语以改进gnn"
+    },
+    "contribution:提出了模型选择框架以整合更难表述的目标，如求解时间": {
+      "id": "contribution:提出了模型选择框架以整合更难表述的目标，如求解时间",
+      "type": "Contribution",
+      "label": "提出了模型选择框架以整合更难表述的目标，如求解时间",
+      "norm_label": "提出了模型选择框架以整合更难表述的目标，如求解时间"
+    },
+    "paper:2202.08566v1": {
+      "id": "paper:2202.08566v1",
+      "type": "Paper",
+      "label": "Efficient and Reliable Probabilistic Interactive Learning with Structured Outputs",
+      "norm_label": "efficient and reliable probabilistic interactive learning with structured outputs"
+    },
+    "method:crisps": {
+      "id": "method:crisps",
+      "type": "Method",
+      "label": "CRISPs",
+      "norm_label": "crisps"
+    },
+    "task:为了研究结构化输出空间中的交互学习，特别是在标签未知需要获取和标签可能需要重新标注的情况下。": {
+      "id": "task:为了研究结构化输出空间中的交互学习，特别是在标签未知需要获取和标签可能需要重新标注的情况下。",
+      "type": "Task",
+      "label": "为了研究结构化输出空间中的交互学习，特别是在标签未知需要获取和标签可能需要重新标注的情况下。",
+      "norm_label": "为了研究结构化输出空间中的交互学习，特别是在标签未知需要获取和标签可能需要重新标注的情况下。"
+    },
+    "contribution:提出了crisps，一类能够在表达力和计算可操作性之间取得平衡的概率模型。": {
+      "id": "contribution:提出了crisps，一类能够在表达力和计算可操作性之间取得平衡的概率模型。",
+      "type": "Contribution",
+      "label": "提出了CRISPs，一类能够在表达力和计算可操作性之间取得平衡的概率模型。",
+      "norm_label": "提出了crisps，一类能够在表达力和计算可操作性之间取得平衡的概率模型。"
+    },
+    "contribution:基于可操作的概率电路的先前工作，说明了crisps如何在大型结构化输出空间中实现稳健且高效的主动和怀疑式学习。": {
+      "id": "contribution:基于可操作的概率电路的先前工作，说明了crisps如何在大型结构化输出空间中实现稳健且高效的主动和怀疑式学习。",
+      "type": "Contribution",
+      "label": "基于可操作的概率电路的先前工作，说明了CRISPs如何在大型结构化输出空间中实现稳健且高效的主动和怀疑式学习。",
+      "norm_label": "基于可操作的概率电路的先前工作，说明了crisps如何在大型结构化输出空间中实现稳健且高效的主动和怀疑式学习。"
+    },
+    "contribution:确定了一类满足所有这些条件的crisps的条件": {
+      "id": "contribution:确定了一类满足所有这些条件的crisps的条件",
+      "type": "Contribution",
+      "label": "确定了一类满足所有这些条件的CRISPs的条件",
+      "norm_label": "确定了一类满足所有这些条件的crisps的条件"
+    },
+    "paper:2308.02233v2": {
+      "id": "paper:2308.02233v2",
+      "type": "Paper",
+      "label": "Self-Normalizing Neural Network, Enabling One Shot Transfer Learning for Modeling EDFA Wavelength Dependent Gain",
+      "norm_label": "self-normalizing neural network enabling one shot transfer learning for modeling edfa wavelength dependent gain"
+    },
+    "method:self-normalizing neural networks": {
+      "id": "method:self-normalizing neural networks",
+      "type": "Method",
+      "label": "self-normalizing neural networks",
+      "norm_label": "self-normalizing neural networks"
+    },
+    "task:尽管现有方法在edfa建模中表现良好但其泛化能力有限，为了提高其在不同条件下的一次性转移学习能力。": {
+      "id": "task:尽管现有方法在edfa建模中表现良好但其泛化能力有限，为了提高其在不同条件下的一次性转移学习能力。",
+      "type": "Task",
+      "label": "尽管现有方法在EDFA建模中表现良好但其泛化能力有限，为了提高其在不同条件下的一次性转移学习能力。",
+      "norm_label": "尽管现有方法在edfa建模中表现良好但其泛化能力有限，为了提高其在不同条件下的一次性转移学习能力。"
+    },
+    "dataset:22 edfas in open ireland and cosmos testbeds": {
+      "id": "dataset:22 edfas in open ireland and cosmos testbeds",
+      "type": "Dataset",
+      "label": "22 EDFAs in Open Ireland and COSMOS testbeds",
+      "norm_label": "22 edfas in open ireland and cosmos testbeds"
+    },
+    "contribution:提出了基于半监督自规范化神经网络的新型ml框架": {
+      "id": "contribution:提出了基于半监督自规范化神经网络的新型ml框架",
+      "type": "Contribution",
+      "label": "提出了基于半监督自规范化神经网络的新型ML框架",
+      "norm_label": "提出了基于半监督自规范化神经网络的新型ml框架"
+    },
+    "contribution:该框架能够一次传输学习多edfa的波长相关增益建模": {
+      "id": "contribution:该框架能够一次传输学习多edfa的波长相关增益建模",
+      "type": "Contribution",
+      "label": "该框架能够一次传输学习多EDFA的波长相关增益建模",
+      "norm_label": "该框架能够一次传输学习多edfa的波长相关增益建模"
+    },
+    "contribution:验证了方法的有效性": {
+      "id": "contribution:验证了方法的有效性",
+      "type": "Contribution",
+      "label": "验证了方法的有效性",
+      "norm_label": "验证了方法的有效性"
+    },
+    "paper:2208.11512v2": {
+      "id": "paper:2208.11512v2",
+      "type": "Paper",
+      "label": "FedOS: using open-set learning to stabilize training in federated learning",
+      "norm_label": "fedos using open-set learning to stabilize training in federated learning"
+    },
+    "method:fedos": {
+      "id": "method:fedos",
+      "type": "Method",
+      "label": "FedOS",
+      "norm_label": "fedos"
+    },
+    "task:在federated learning中，数据分布的差异性导致了模型训练的不稳定性。": {
+      "id": "task:在federated learning中，数据分布的差异性导致了模型训练的不稳定性。",
+      "type": "Task",
+      "label": "在Federated Learning中，数据分布的差异性导致了模型训练的不稳定性。",
+      "norm_label": "在federated learning中，数据分布的差异性导致了模型训练的不稳定性。"
+    },
+    "contribution:提出了fedos方法，旨在解决联邦学习中的开放集问题。": {
+      "id": "contribution:提出了fedos方法，旨在解决联邦学习中的开放集问题。",
+      "type": "Contribution",
+      "label": "提出了FedOS方法，旨在解决联邦学习中的开放集问题。",
+      "norm_label": "提出了fedos方法，旨在解决联邦学习中的开放集问题。"
+    },
+    "contribution:展示了fedos方法在识别未见过类的性能优于现有方法。": {
+      "id": "contribution:展示了fedos方法在识别未见过类的性能优于现有方法。",
+      "type": "Contribution",
+      "label": "展示了FedOS方法在识别未见过类的性能优于现有方法。",
+      "norm_label": "展示了fedos方法在识别未见过类的性能优于现有方法。"
+    },
+    "contribution:为联邦学习中的开放集学习提供了一种新的工具箱。": {
+      "id": "contribution:为联邦学习中的开放集学习提供了一种新的工具箱。",
+      "type": "Contribution",
+      "label": "为联邦学习中的开放集学习提供了一种新的工具箱。",
+      "norm_label": "为联邦学习中的开放集学习提供了一种新的工具箱。"
+    },
+    "paper:atm 22": {
+      "id": "paper:atm 22",
+      "type": "Paper",
+      "label": "ATM'22",
+      "norm_label": "atm 22",
+      "description": ""
+    },
+    "dataset:ct scans": {
+      "id": "dataset:ct scans",
+      "type": "Dataset",
+      "label": "CT scans",
+      "norm_label": "ct scans",
+      "description": ""
+    },
+    "task:pulmonary airway segmentation": {
+      "id": "task:pulmonary airway segmentation",
+      "type": "Task",
+      "label": "Pulmonary airway segmentation",
+      "norm_label": "pulmonary airway segmentation",
+      "description": ""
+    },
+    "concept:topological continuity enhancement": {
+      "id": "concept:topological continuity enhancement",
+      "type": "Concept",
+      "label": "topological continuity enhancement",
+      "norm_label": "topological continuity enhancement",
+      "description": ""
+    },
+    "method:strong branching heuristic": {
+      "id": "method:strong branching heuristic",
+      "type": "Method",
+      "label": "Strong Branching Heuristic",
+      "norm_label": "strong branching heuristic",
+      "description": ""
+    },
+    "model:bipartite graph neural networks gnn": {
+      "id": "model:bipartite graph neural networks gnn",
+      "type": "Model",
+      "label": "Bipartite Graph Neural Networks (GNN)",
+      "norm_label": "bipartite graph neural networks gnn",
+      "description": ""
+    },
+    "task:branch-and-bound b b": {
+      "id": "task:branch-and-bound b b",
+      "type": "Task",
+      "label": "Branch-and-Bound (B&B)",
+      "norm_label": "branch-and-bound b b",
+      "description": ""
+    },
+    "task:mixed-integer linear program milp": {
+      "id": "task:mixed-integer linear program milp",
+      "type": "Task",
+      "label": "Mixed-Integer Linear Program (MILP)",
+      "norm_label": "mixed-integer linear program milp",
+      "description": ""
+    },
+    "concept:lookback phenomenon": {
+      "id": "concept:lookback phenomenon",
+      "type": "Concept",
+      "label": "Lookback Phenomenon",
+      "norm_label": "lookback phenomenon",
+      "description": ""
+    },
+    "concept:strong branching heuristic propagation": {
+      "id": "concept:strong branching heuristic propagation",
+      "type": "Concept",
+      "label": "Strong Branching Heuristic Propagation",
+      "norm_label": "strong branching heuristic propagation",
+      "description": ""
+    },
+    "dataset:benchmark instances": {
+      "id": "dataset:benchmark instances",
+      "type": "Dataset",
+      "label": "Benchmark Instances",
+      "norm_label": "benchmark instances",
+      "description": ""
+    },
+    "concept:probabilistic circuits": {
+      "id": "concept:probabilistic circuits",
+      "type": "Concept",
+      "label": "Probabilistic Circuits",
+      "norm_label": "probabilistic circuits",
+      "description": ""
+    },
+    "method:ml framework": {
+      "id": "method:ml framework",
+      "type": "Method",
+      "label": "ML framework",
+      "norm_label": "ml framework",
+      "description": ""
+    },
+    "dataset:open ireland and cosmos testbeds": {
+      "id": "dataset:open ireland and cosmos testbeds",
+      "type": "Dataset",
+      "label": "Open Ireland and COSMOS testbeds",
+      "norm_label": "open ireland and cosmos testbeds",
+      "description": ""
+    },
+    "concept:open-set learning": {
+      "id": "concept:open-set learning",
+      "type": "Concept",
+      "label": "open-set learning",
+      "norm_label": "open-set learning",
+      "description": ""
+    }
+  },
+  "edges": [
+    {
+      "source": "paper:2303.05745v3",
+      "target": "method:大气道树建模挑战（atm 22）",
+      "type": "proposes",
+      "weight": 1.0
+    },
+    {
+      "source": "paper:2303.05745v3",
+      "target": "task:为了提供一个基准，以促进肺气道分割算法的发展和性能评估，特别是在ct扫描上实现精细气道结构的分割。",
+      "type": "applied_to",
+      "weight": 0.8
+    },
+    {
+      "source": "method:大气道树建模挑战（atm 22）",
+      "target": "task:为了提供一个基准，以促进肺气道分割算法的发展和性能评估，特别是在ct扫描上实现精细气道结构的分割。",
+      "type": "solves",
+      "weight": 0.95
+    },
+    {
+      "source": "paper:2303.05745v3",
+      "target": "dataset:500 ct scans 300 for training 50 for validation and 150 for testing",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "method:大气道树建模挑战（atm 22）",
+      "target": "dataset:500 ct scans 300 for training 50 for validation and 150 for testing",
+      "type": "evaluates_on",
+      "weight": 0.9
+    },
+    {
+      "source": "method:大气道树建模挑战（atm 22）",
+      "target": "metric:null",
+      "type": "achieves",
+      "weight": 0.85
+    },
+    {
+      "source": "paper:2303.05745v3",
+      "target": "contribution:组织了atm 22，提供了一个包含大量ct扫描的大规模肺气道注释数据集。",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "method:大气道树建模挑战（atm 22）",
+      "target": "contribution:组织了atm 22，提供了一个包含大量ct扫描的大规模肺气道注释数据集。",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:2303.05745v3",
+      "target": "contribution:促进了肺气道分割算法的评估和对比。",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "method:大气道树建模挑战（atm 22）",
+      "target": "contribution:促进了肺气道分割算法的评估和对比。",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:2303.05745v3",
+      "target": "contribution:open-call设计，数据和技术细节对公众开放。",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "method:大气道树建模挑战（atm 22）",
+      "target": "contribution:open-call设计，数据和技术细节对公众开放。",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:2206.14987v2",
+      "target": "method:parent-as-target pat lookback",
+      "type": "proposes",
+      "weight": 1.0
+    },
+    {
+      "source": "paper:2206.14987v2",
+      "target": "task:尽管传统的分支启发式算法在混合整数线性程序求解中表现良好但计算效率较低，为了提高效率，研究分支决策的过程，是否可以引入子节点与父节点之间的依赖性，即 回溯 现象。",
+      "type": "applied_to",
+      "weight": 0.8
+    },
+    {
+      "source": "method:parent-as-target pat lookback",
+      "target": "task:尽管传统的分支启发式算法在混合整数线性程序求解中表现良好但计算效率较低，为了提高效率，研究分支决策的过程，是否可以引入子节点与父节点之间的依赖性，即 回溯 现象。",
+      "type": "solves",
+      "weight": 0.95
+    },
+    {
+      "source": "paper:2206.14987v2",
+      "target": "metric:null",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "method:parent-as-target pat lookback",
+      "target": "metric:null",
+      "type": "evaluates_on",
+      "weight": 0.9
+    },
+    {
+      "source": "method:parent-as-target pat lookback",
+      "target": "metric:null",
+      "type": "achieves",
+      "weight": 0.85
+    },
+    {
+      "source": "paper:2206.14987v2",
+      "target": "contribution:发现了强分支启发式算法中的 回溯 现象",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "method:parent-as-target pat lookback",
+      "target": "contribution:发现了强分支启发式算法中的 回溯 现象",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:2206.14987v2",
+      "target": "contribution:提出了目标平滑和父节点作为目标（pat）回溯正则化术语以改进gnn",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "method:parent-as-target pat lookback",
+      "target": "contribution:提出了目标平滑和父节点作为目标（pat）回溯正则化术语以改进gnn",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:2206.14987v2",
+      "target": "contribution:提出了模型选择框架以整合更难表述的目标，如求解时间",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "method:parent-as-target pat lookback",
+      "target": "contribution:提出了模型选择框架以整合更难表述的目标，如求解时间",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:2202.08566v1",
+      "target": "method:crisps",
+      "type": "proposes",
+      "weight": 1.0
+    },
+    {
+      "source": "paper:2202.08566v1",
+      "target": "task:为了研究结构化输出空间中的交互学习，特别是在标签未知需要获取和标签可能需要重新标注的情况下。",
+      "type": "applied_to",
+      "weight": 0.8
+    },
+    {
+      "source": "method:crisps",
+      "target": "task:为了研究结构化输出空间中的交互学习，特别是在标签未知需要获取和标签可能需要重新标注的情况下。",
+      "type": "solves",
+      "weight": 0.95
+    },
+    {
+      "source": "paper:2202.08566v1",
+      "target": "contribution:提出了crisps，一类能够在表达力和计算可操作性之间取得平衡的概率模型。",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "method:crisps",
+      "target": "contribution:提出了crisps，一类能够在表达力和计算可操作性之间取得平衡的概率模型。",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:2202.08566v1",
+      "target": "contribution:基于可操作的概率电路的先前工作，说明了crisps如何在大型结构化输出空间中实现稳健且高效的主动和怀疑式学习。",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "method:crisps",
+      "target": "contribution:基于可操作的概率电路的先前工作，说明了crisps如何在大型结构化输出空间中实现稳健且高效的主动和怀疑式学习。",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:2202.08566v1",
+      "target": "contribution:确定了一类满足所有这些条件的crisps的条件",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "method:crisps",
+      "target": "contribution:确定了一类满足所有这些条件的crisps的条件",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:2308.02233v2",
+      "target": "method:self-normalizing neural networks",
+      "type": "proposes",
+      "weight": 1.0
+    },
+    {
+      "source": "paper:2308.02233v2",
+      "target": "task:尽管现有方法在edfa建模中表现良好但其泛化能力有限，为了提高其在不同条件下的一次性转移学习能力。",
+      "type": "applied_to",
+      "weight": 0.8
+    },
+    {
+      "source": "method:self-normalizing neural networks",
+      "target": "task:尽管现有方法在edfa建模中表现良好但其泛化能力有限，为了提高其在不同条件下的一次性转移学习能力。",
+      "type": "solves",
+      "weight": 0.95
+    },
+    {
+      "source": "paper:2308.02233v2",
+      "target": "dataset:22 edfas in open ireland and cosmos testbeds",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "method:self-normalizing neural networks",
+      "target": "dataset:22 edfas in open ireland and cosmos testbeds",
+      "type": "evaluates_on",
+      "weight": 0.9
+    },
+    {
+      "source": "paper:2308.02233v2",
+      "target": "contribution:提出了基于半监督自规范化神经网络的新型ml框架",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "method:self-normalizing neural networks",
+      "target": "contribution:提出了基于半监督自规范化神经网络的新型ml框架",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:2308.02233v2",
+      "target": "contribution:该框架能够一次传输学习多edfa的波长相关增益建模",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "method:self-normalizing neural networks",
+      "target": "contribution:该框架能够一次传输学习多edfa的波长相关增益建模",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:2308.02233v2",
+      "target": "contribution:验证了方法的有效性",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "method:self-normalizing neural networks",
+      "target": "contribution:验证了方法的有效性",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:2208.11512v2",
+      "target": "method:fedos",
+      "type": "proposes",
+      "weight": 1.0
+    },
+    {
+      "source": "paper:2208.11512v2",
+      "target": "task:在federated learning中，数据分布的差异性导致了模型训练的不稳定性。",
+      "type": "applied_to",
+      "weight": 0.8
+    },
+    {
+      "source": "method:fedos",
+      "target": "task:在federated learning中，数据分布的差异性导致了模型训练的不稳定性。",
+      "type": "solves",
+      "weight": 0.95
+    },
+    {
+      "source": "paper:2208.11512v2",
+      "target": "metric:null",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "method:fedos",
+      "target": "metric:null",
+      "type": "evaluates_on",
+      "weight": 0.9
+    },
+    {
+      "source": "method:fedos",
+      "target": "metric:null",
+      "type": "achieves",
+      "weight": 0.85
+    },
+    {
+      "source": "paper:2208.11512v2",
+      "target": "contribution:提出了fedos方法，旨在解决联邦学习中的开放集问题。",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "method:fedos",
+      "target": "contribution:提出了fedos方法，旨在解决联邦学习中的开放集问题。",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:2208.11512v2",
+      "target": "contribution:展示了fedos方法在识别未见过类的性能优于现有方法。",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "method:fedos",
+      "target": "contribution:展示了fedos方法在识别未见过类的性能优于现有方法。",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:2208.11512v2",
+      "target": "contribution:为联邦学习中的开放集学习提供了一种新的工具箱。",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "method:fedos",
+      "target": "contribution:为联邦学习中的开放集学习提供了一种新的工具箱。",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:atm 22",
+      "target": "dataset:ct scans",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "paper:atm 22",
+      "target": "task:pulmonary airway segmentation",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:atm 22",
+      "target": "concept:topological continuity enhancement",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "model:bipartite graph neural networks gnn",
+      "target": "method:strong branching heuristic",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "method:parent-as-target pat lookback",
+      "target": "model:bipartite graph neural networks gnn",
+      "type": "improves",
+      "weight": 0.95
+    },
+    {
+      "source": "method:strong branching heuristic",
+      "target": "concept:lookback phenomenon",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "model:bipartite graph neural networks gnn",
+      "target": "concept:lookback phenomenon",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "method:parent-as-target pat lookback",
+      "target": "task:branch-and-bound b b",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "method:parent-as-target pat lookback",
+      "target": "task:mixed-integer linear program milp",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "method:parent-as-target pat lookback",
+      "target": "concept:strong branching heuristic propagation",
+      "type": "achieves",
+      "weight": 0.85
+    },
+    {
+      "source": "method:parent-as-target pat lookback",
+      "target": "dataset:benchmark instances",
+      "type": "evaluates_on",
+      "weight": 0.9
+    },
+    {
+      "source": "method:crisps",
+      "target": "concept:probabilistic circuits",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "method:self-normalizing neural networks",
+      "target": "method:ml framework",
+      "type": "proposes",
+      "weight": 1.0
+    },
+    {
+      "source": "method:ml framework",
+      "target": "dataset:open ireland and cosmos testbeds",
+      "type": "evaluates_on",
+      "weight": 0.9
+    },
+    {
+      "source": "method:fedos",
+      "target": "concept:open-set learning",
+      "type": "uses",
+      "weight": 0.8
+    }
+  ],
+  "paper_entities": {
+    "2303.05745v3": [
+      "paper:2303.05745v3",
+      "method:大气道树建模挑战（atm 22）",
+      "task:为了提供一个基准，以促进肺气道分割算法的发展和性能评估，特别是在ct扫描上实现精细气道结构的分割。",
+      "dataset:500 ct scans 300 for training 50 for validation and 150 for testing",
+      "metric:null",
+      "contribution:组织了atm 22，提供了一个包含大量ct扫描的大规模肺气道注释数据集。",
+      "contribution:促进了肺气道分割算法的评估和对比。",
+      "contribution:open-call设计，数据和技术细节对公众开放。",
+      "paper:atm 22",
+      "dataset:ct scans",
+      "task:pulmonary airway segmentation",
+      "concept:topological continuity enhancement"
+    ],
+    "2206.14987v2": [
+      "paper:2206.14987v2",
+      "method:parent-as-target pat lookback",
+      "task:尽管传统的分支启发式算法在混合整数线性程序求解中表现良好但计算效率较低，为了提高效率，研究分支决策的过程，是否可以引入子节点与父节点之间的依赖性，即 回溯 现象。",
+      "metric:null",
+      "metric:null",
+      "contribution:发现了强分支启发式算法中的 回溯 现象",
+      "contribution:提出了目标平滑和父节点作为目标（pat）回溯正则化术语以改进gnn",
+      "contribution:提出了模型选择框架以整合更难表述的目标，如求解时间",
+      "method:strong branching heuristic",
+      "model:bipartite graph neural networks gnn",
+      "task:branch-and-bound b b",
+      "task:mixed-integer linear program milp",
+      "concept:lookback phenomenon",
+      "concept:strong branching heuristic propagation",
+      "dataset:benchmark instances"
+    ],
+    "2202.08566v1": [
+      "paper:2202.08566v1",
+      "method:crisps",
+      "task:为了研究结构化输出空间中的交互学习，特别是在标签未知需要获取和标签可能需要重新标注的情况下。",
+      "contribution:提出了crisps，一类能够在表达力和计算可操作性之间取得平衡的概率模型。",
+      "contribution:基于可操作的概率电路的先前工作，说明了crisps如何在大型结构化输出空间中实现稳健且高效的主动和怀疑式学习。",
+      "contribution:确定了一类满足所有这些条件的crisps的条件",
+      "concept:probabilistic circuits"
+    ],
+    "2308.02233v2": [
+      "paper:2308.02233v2",
+      "method:self-normalizing neural networks",
+      "task:尽管现有方法在edfa建模中表现良好但其泛化能力有限，为了提高其在不同条件下的一次性转移学习能力。",
+      "dataset:22 edfas in open ireland and cosmos testbeds",
+      "contribution:提出了基于半监督自规范化神经网络的新型ml框架",
+      "contribution:该框架能够一次传输学习多edfa的波长相关增益建模",
+      "contribution:验证了方法的有效性",
+      "method:ml framework",
+      "dataset:open ireland and cosmos testbeds"
+    ],
+    "2208.11512v2": [
+      "paper:2208.11512v2",
+      "method:fedos",
+      "task:在federated learning中，数据分布的差异性导致了模型训练的不稳定性。",
+      "metric:null",
+      "metric:null",
+      "contribution:提出了fedos方法，旨在解决联邦学习中的开放集问题。",
+      "contribution:展示了fedos方法在识别未见过类的性能优于现有方法。",
+      "contribution:为联邦学习中的开放集学习提供了一种新的工具箱。",
+      "concept:open-set learning"
+    ]
+  },
+  "entity_aliases": {
+    "multi-site multi-domain airway tree modeling atm 22 a public benchmark for pulmonary airway segmentation": "paper:2303.05745v3",
+    "大气道树建模挑战（atm 22）": "method:大气道树建模挑战（atm 22）",
+    "为了提供一个基准，以促进肺气道分割算法的发展和性能评估，特别是在ct扫描上实现精细气道结构的分割。": "task:为了提供一个基准，以促进肺气道分割算法的发展和性能评估，特别是在ct扫描上实现精细气道结构的分割。",
+    "500 ct scans 300 for training 50 for validation and 150 for testing": "dataset:500 ct scans 300 for training 50 for validation and 150 for testing",
+    "null": "metric:null",
+    "组织了atm 22，提供了一个包含大量ct扫描的大规模肺气道注释数据集。": "contribution:组织了atm 22，提供了一个包含大量ct扫描的大规模肺气道注释数据集。",
+    "促进了肺气道分割算法的评估和对比。": "contribution:促进了肺气道分割算法的评估和对比。",
+    "open-call设计，数据和技术细节对公众开放。": "contribution:open-call设计，数据和技术细节对公众开放。",
+    "lookback for learning to branch": "paper:2206.14987v2",
+    "parent-as-target pat lookback": "method:parent-as-target pat lookback",
+    "尽管传统的分支启发式算法在混合整数线性程序求解中表现良好但计算效率较低，为了提高效率，研究分支决策的过程，是否可以引入子节点与父节点之间的依赖性，即 回溯 现象。": "task:尽管传统的分支启发式算法在混合整数线性程序求解中表现良好但计算效率较低，为了提高效率，研究分支决策的过程，是否可以引入子节点与父节点之间的依赖性，即 回溯 现象。",
+    "发现了强分支启发式算法中的 回溯 现象": "contribution:发现了强分支启发式算法中的 回溯 现象",
+    "提出了目标平滑和父节点作为目标（pat）回溯正则化术语以改进gnn": "contribution:提出了目标平滑和父节点作为目标（pat）回溯正则化术语以改进gnn",
+    "提出了模型选择框架以整合更难表述的目标，如求解时间": "contribution:提出了模型选择框架以整合更难表述的目标，如求解时间",
+    "efficient and reliable probabilistic interactive learning with structured outputs": "paper:2202.08566v1",
+    "crisps": "method:crisps",
+    "为了研究结构化输出空间中的交互学习，特别是在标签未知需要获取和标签可能需要重新标注的情况下。": "task:为了研究结构化输出空间中的交互学习，特别是在标签未知需要获取和标签可能需要重新标注的情况下。",
+    "提出了crisps，一类能够在表达力和计算可操作性之间取得平衡的概率模型。": "contribution:提出了crisps，一类能够在表达力和计算可操作性之间取得平衡的概率模型。",
+    "基于可操作的概率电路的先前工作，说明了crisps如何在大型结构化输出空间中实现稳健且高效的主动和怀疑式学习。": "contribution:基于可操作的概率电路的先前工作，说明了crisps如何在大型结构化输出空间中实现稳健且高效的主动和怀疑式学习。",
+    "确定了一类满足所有这些条件的crisps的条件": "contribution:确定了一类满足所有这些条件的crisps的条件",
+    "self-normalizing neural network enabling one shot transfer learning for modeling edfa wavelength dependent gain": "paper:2308.02233v2",
+    "self-normalizing neural networks": "method:self-normalizing neural networks",
+    "尽管现有方法在edfa建模中表现良好但其泛化能力有限，为了提高其在不同条件下的一次性转移学习能力。": "task:尽管现有方法在edfa建模中表现良好但其泛化能力有限，为了提高其在不同条件下的一次性转移学习能力。",
+    "22 edfas in open ireland and cosmos testbeds": "dataset:22 edfas in open ireland and cosmos testbeds",
+    "提出了基于半监督自规范化神经网络的新型ml框架": "contribution:提出了基于半监督自规范化神经网络的新型ml框架",
+    "该框架能够一次传输学习多edfa的波长相关增益建模": "contribution:该框架能够一次传输学习多edfa的波长相关增益建模",
+    "验证了方法的有效性": "contribution:验证了方法的有效性",
+    "fedos using open-set learning to stabilize training in federated learning": "paper:2208.11512v2",
+    "fedos": "method:fedos",
+    "在federated learning中，数据分布的差异性导致了模型训练的不稳定性。": "task:在federated learning中，数据分布的差异性导致了模型训练的不稳定性。",
+    "提出了fedos方法，旨在解决联邦学习中的开放集问题。": "contribution:提出了fedos方法，旨在解决联邦学习中的开放集问题。",
+    "展示了fedos方法在识别未见过类的性能优于现有方法。": "contribution:展示了fedos方法在识别未见过类的性能优于现有方法。",
+    "为联邦学习中的开放集学习提供了一种新的工具箱。": "contribution:为联邦学习中的开放集学习提供了一种新的工具箱。",
+    "atm 22": "paper:atm 22",
+    "ct scans": "dataset:ct scans",
+    "pulmonary airway segmentation": "task:pulmonary airway segmentation",
+    "topological continuity enhancement": "concept:topological continuity enhancement",
+    "strong branching heuristic": "method:strong branching heuristic",
+    "bipartite graph neural networks gnn": "model:bipartite graph neural networks gnn",
+    "branch-and-bound b b": "task:branch-and-bound b b",
+    "mixed-integer linear program milp": "task:mixed-integer linear program milp",
+    "lookback phenomenon": "concept:lookback phenomenon",
+    "strong branching heuristic propagation": "concept:strong branching heuristic propagation",
+    "benchmark instances": "dataset:benchmark instances",
+    "probabilistic circuits": "concept:probabilistic circuits",
+    "ml framework": "method:ml framework",
+    "open ireland and cosmos testbeds": "dataset:open ireland and cosmos testbeds",
+    "open-set learning": "concept:open-set learning"
+  },
+  "communities": {
+    "0": {
+      "nodes": [
+        "paper:2303.05745v3",
+        "method:大气道树建模挑战（atm 22）",
+        "task:为了提供一个基准，以促进肺气道分割算法的发展和性能评估，特别是在ct扫描上实现精细气道结构的分割。",
+        "dataset:500 ct scans 300 for training 50 for validation and 150 for testing",
+        "contribution:组织了atm 22，提供了一个包含大量ct扫描的大规模肺气道注释数据集。",
+        "contribution:促进了肺气道分割算法的评估和对比。",
+        "contribution:open-call设计，数据和技术细节对公众开放。"
+      ],
+      "key_entities": [
+        "Multi-site, Multi-domain Airway Tree Modeling (ATM'22): A Public Benchmark for Pulmonary Airway Segmentation",
+        "大气道树建模挑战（ATM'22）",
+        "为了提供一个基准，以促进肺气道分割算法的发展和性能评估，特别是在CT扫描上实现精细气道结构的分割。",
+        "500 CT scans (300 for training, 50 for validation, and 150 for testing)",
+        "组织了ATM'22，提供了一个包含大量CT扫描的大规模肺气道注释数据集。",
+        "促进了肺气道分割算法的评估和对比。",
+        "open-call设计，数据和技术细节对公众开放。"
+      ],
+      "key_papers": [
+        "Multi-site, Multi-domain Airway Tree Modeling (ATM'22): A Public Benchmark for Pulmonary Airway Segmentation"
+      ],
+      "dominant_types": [
+        "Contribution",
+        "Paper",
+        "Method"
+      ],
+      "semantic_tag": "Research Contributions Cluster",
+      "summary": "",
+      "community_name": "Research Contributions Cluster"
+    },
+    "1": {
+      "nodes": [
+        "metric:null",
+        "paper:2208.11512v2",
+        "method:fedos",
+        "task:在federated learning中，数据分布的差异性导致了模型训练的不稳定性。",
+        "contribution:提出了fedos方法，旨在解决联邦学习中的开放集问题。",
+        "contribution:展示了fedos方法在识别未见过类的性能优于现有方法。",
+        "contribution:为联邦学习中的开放集学习提供了一种新的工具箱。",
+        "concept:open-set learning"
+      ],
+      "key_entities": [
+        "null",
+        "FedOS: using open-set learning to stabilize training in federated learning",
+        "FedOS",
+        "在Federated Learning中，数据分布的差异性导致了模型训练的不稳定性。",
+        "提出了FedOS方法，旨在解决联邦学习中的开放集问题。",
+        "展示了FedOS方法在识别未见过类的性能优于现有方法。",
+        "为联邦学习中的开放集学习提供了一种新的工具箱。",
+        "open-set learning"
+      ],
+      "key_papers": [
+        "FedOS: using open-set learning to stabilize training in federated learning"
+      ],
+      "dominant_types": [
+        "Contribution",
+        "Metric",
+        "Paper"
+      ],
+      "semantic_tag": "Research Contributions Cluster",
+      "summary": "",
+      "community_name": "Research Contributions Cluster"
+    },
+    "2": {
+      "nodes": [
+        "paper:2206.14987v2",
+        "method:parent-as-target pat lookback",
+        "task:尽管传统的分支启发式算法在混合整数线性程序求解中表现良好但计算效率较低，为了提高效率，研究分支决策的过程，是否可以引入子节点与父节点之间的依赖性，即 回溯 现象。",
+        "contribution:发现了强分支启发式算法中的 回溯 现象",
+        "contribution:提出了目标平滑和父节点作为目标（pat）回溯正则化术语以改进gnn",
+        "contribution:提出了模型选择框架以整合更难表述的目标，如求解时间",
+        "task:branch-and-bound b b",
+        "task:mixed-integer linear program milp",
+        "concept:strong branching heuristic propagation",
+        "dataset:benchmark instances"
+      ],
+      "key_entities": [
+        "Lookback for Learning to Branch",
+        "Parent-as-Target (PAT) Lookback",
+        "尽管传统的分支启发式算法在混合整数线性程序求解中表现良好但计算效率较低，为了提高效率，研究分支决策的过程，是否可以引入子节点与父节点之间的依赖性，即'回溯'现象。",
+        "发现了强分支启发式算法中的'回溯'现象",
+        "提出了目标平滑和父节点作为目标（PAT）回溯正则化术语以改进GNN",
+        "提出了模型选择框架以整合更难表述的目标，如求解时间",
+        "Branch-and-Bound (B&B)",
+        "Mixed-Integer Linear Program (MILP)",
+        "Strong Branching Heuristic Propagation",
+        "Benchmark Instances"
+      ],
+      "key_papers": [
+        "Lookback for Learning to Branch"
+      ],
+      "dominant_types": [
+        "Task",
+        "Contribution",
+        "Paper"
+      ],
+      "semantic_tag": "Research Contributions Cluster",
+      "summary": "",
+      "community_name": "Research Contributions Cluster"
+    },
+    "3": {
+      "nodes": [
+        "paper:2202.08566v1",
+        "method:crisps",
+        "task:为了研究结构化输出空间中的交互学习，特别是在标签未知需要获取和标签可能需要重新标注的情况下。",
+        "contribution:提出了crisps，一类能够在表达力和计算可操作性之间取得平衡的概率模型。",
+        "contribution:基于可操作的概率电路的先前工作，说明了crisps如何在大型结构化输出空间中实现稳健且高效的主动和怀疑式学习。",
+        "contribution:确定了一类满足所有这些条件的crisps的条件",
+        "concept:probabilistic circuits"
+      ],
+      "key_entities": [
+        "Efficient and Reliable Probabilistic Interactive Learning with Structured Outputs",
+        "CRISPs",
+        "为了研究结构化输出空间中的交互学习，特别是在标签未知需要获取和标签可能需要重新标注的情况下。",
+        "提出了CRISPs，一类能够在表达力和计算可操作性之间取得平衡的概率模型。",
+        "基于可操作的概率电路的先前工作，说明了CRISPs如何在大型结构化输出空间中实现稳健且高效的主动和怀疑式学习。",
+        "确定了一类满足所有这些条件的CRISPs的条件",
+        "Probabilistic Circuits"
+      ],
+      "key_papers": [
+        "Efficient and Reliable Probabilistic Interactive Learning with Structured Outputs"
+      ],
+      "dominant_types": [
+        "Contribution",
+        "Paper",
+        "Method"
+      ],
+      "semantic_tag": "Research Contributions Cluster",
+      "summary": "",
+      "community_name": "Research Contributions Cluster"
+    },
+    "4": {
+      "nodes": [
+        "paper:2308.02233v2",
+        "method:self-normalizing neural networks",
+        "task:尽管现有方法在edfa建模中表现良好但其泛化能力有限，为了提高其在不同条件下的一次性转移学习能力。",
+        "dataset:22 edfas in open ireland and cosmos testbeds",
+        "contribution:提出了基于半监督自规范化神经网络的新型ml框架",
+        "contribution:该框架能够一次传输学习多edfa的波长相关增益建模",
+        "contribution:验证了方法的有效性"
+      ],
+      "key_entities": [
+        "Self-Normalizing Neural Network, Enabling One Shot Transfer Learning for Modeling EDFA Wavelength Dependent Gain",
+        "self-normalizing neural networks",
+        "尽管现有方法在EDFA建模中表现良好但其泛化能力有限，为了提高其在不同条件下的一次性转移学习能力。",
+        "22 EDFAs in Open Ireland and COSMOS testbeds",
+        "提出了基于半监督自规范化神经网络的新型ML框架",
+        "该框架能够一次传输学习多EDFA的波长相关增益建模",
+        "验证了方法的有效性"
+      ],
+      "key_papers": [
+        "Self-Normalizing Neural Network, Enabling One Shot Transfer Learning for Modeling EDFA Wavelength Dependent Gain"
+      ],
+      "dominant_types": [
+        "Contribution",
+        "Paper",
+        "Method"
+      ],
+      "semantic_tag": "Research Contributions Cluster",
+      "summary": "",
+      "community_name": "Research Contributions Cluster"
+    },
+    "5": {
+      "nodes": [
+        "paper:atm 22",
+        "dataset:ct scans",
+        "task:pulmonary airway segmentation",
+        "concept:topological continuity enhancement"
+      ],
+      "key_entities": [
+        "ATM'22",
+        "CT scans",
+        "Pulmonary airway segmentation",
+        "topological continuity enhancement"
+      ],
+      "key_papers": [
+        "ATM'22"
+      ],
+      "dominant_types": [
+        "Paper",
+        "Dataset",
+        "Task"
+      ],
+      "semantic_tag": "Benchmark & Dataset Cluster",
+      "summary": "",
+      "community_name": "Benchmark & Dataset Cluster"
+    },
+    "6": {
+      "nodes": [
+        "method:strong branching heuristic",
+        "model:bipartite graph neural networks gnn",
+        "concept:lookback phenomenon"
+      ],
+      "key_entities": [
+        "Strong Branching Heuristic",
+        "Bipartite Graph Neural Networks (GNN)",
+        "Lookback Phenomenon"
+      ],
+      "key_papers": [],
+      "dominant_types": [
+        "Method",
+        "Model",
+        "Concept"
+      ],
+      "semantic_tag": "Knowledge Graph Cluster",
+      "summary": "",
+      "community_name": "Knowledge Graph Cluster"
+    },
+    "7": {
+      "nodes": [
+        "method:ml framework",
+        "dataset:open ireland and cosmos testbeds"
+      ],
+      "key_entities": [
+        "ML framework",
+        "Open Ireland and COSMOS testbeds"
+      ],
+      "key_papers": [],
+      "dominant_types": [
+        "Method",
+        "Dataset"
+      ],
+      "semantic_tag": "Benchmark & Dataset Cluster",
+      "summary": "",
+      "community_name": "Benchmark & Dataset Cluster"
+    }
+  },
+  "citation_graph": {},
+  "stats": {
+    "node_count": 48,
+    "edge_count": 71,
+    "node_type_count": {
+      "Paper": 6,
+      "Method": 7,
+      "Task": 8,
+      "Dataset": 5,
+      "Metric": 1,
+      "Contribution": 15,
+      "Concept": 5,
+      "Model": 1
+    },
+    "paper_count": 5,
+    "community_count": 0,
+    "citation_edge_count": 0
+  }
+}

@@ -1,0 +1,1349 @@
+{
+  "db_id": "kb_656c6dd450cafedce8d478941594cd19",
+  "nodes": {
+    "paper:2209.03452v1": {
+      "id": "paper:2209.03452v1",
+      "type": "Paper",
+      "label": "AILAB-Udine@SMM4H 22: Limits of Transformers and BERT Ensembles",
+      "norm_label": "ailab-udine smm4h 22 limits of transformers and bert ensembles"
+    },
+    "method:无详细名称": {
+      "id": "method:无详细名称",
+      "type": "Method",
+      "label": "无详细名称",
+      "norm_label": "无详细名称"
+    },
+    "task:尽管transformers在文本分类等任务上有明显优势，但组合不同架构能产生更好的效果，并且生成模型在术语归一化任务中有巨大的潜力。": {
+      "id": "task:尽管transformers在文本分类等任务上有明显优势，但组合不同架构能产生更好的效果，并且生成模型在术语归一化任务中有巨大的潜力。",
+      "type": "Task",
+      "label": "尽管Transformers在文本分类等任务上有明显优势，但组合不同架构能产生更好的效果，并且生成模型在术语归一化任务中有巨大的潜力。",
+      "norm_label": "尽管transformers在文本分类等任务上有明显优势，但组合不同架构能产生更好的效果，并且生成模型在术语归一化任务中有巨大的潜力。"
+    },
+    "dataset:task 1 没有具体数据集": {
+      "id": "dataset:task 1 没有具体数据集",
+      "type": "Dataset",
+      "label": "Task 1: 没有具体数据集",
+      "norm_label": "task 1 没有具体数据集"
+    },
+    "dataset:task 2 没有具体数据集": {
+      "id": "dataset:task 2 没有具体数据集",
+      "type": "Dataset",
+      "label": "Task 2: 没有具体数据集",
+      "norm_label": "task 2 没有具体数据集"
+    },
+    "dataset:task 5 没有具体数据集": {
+      "id": "dataset:task 5 没有具体数据集",
+      "type": "Dataset",
+      "label": "Task 5: 没有具体数据集",
+      "norm_label": "task 5 没有具体数据集"
+    },
+    "dataset:task 6 没有具体数据集": {
+      "id": "dataset:task 6 没有具体数据集",
+      "type": "Dataset",
+      "label": "Task 6: 没有具体数据集",
+      "norm_label": "task 6 没有具体数据集"
+    },
+    "dataset:task 10 没有具体数据集": {
+      "id": "dataset:task 10 没有具体数据集",
+      "type": "Dataset",
+      "label": "Task 10: 没有具体数据集",
+      "norm_label": "task 10 没有具体数据集"
+    },
+    "metric:未具体列出相关评估指标": {
+      "id": "metric:未具体列出相关评估指标",
+      "type": "Metric",
+      "label": "未具体列出相关评估指标",
+      "norm_label": "未具体列出相关评估指标"
+    },
+    "contribution:展示了多个架构组合的有效性，特别是在使用集成学习时。": {
+      "id": "contribution:展示了多个架构组合的有效性，特别是在使用集成学习时。",
+      "type": "Contribution",
+      "label": "展示了多个架构组合的有效性，特别是在使用集成学习时。",
+      "norm_label": "展示了多个架构组合的有效性，特别是在使用集成学习时。"
+    },
+    "contribution:探索了生成模型在术语归一化任务中的潜在应用。": {
+      "id": "contribution:探索了生成模型在术语归一化任务中的潜在应用。",
+      "type": "Contribution",
+      "label": "探索了生成模型在术语归一化任务中的潜在应用。",
+      "norm_label": "探索了生成模型在术语归一化任务中的潜在应用。"
+    },
+    "contribution:获得的见解表明，在不同的nlp任务中多样性和生成能力的重要性。": {
+      "id": "contribution:获得的见解表明，在不同的nlp任务中多样性和生成能力的重要性。",
+      "type": "Contribution",
+      "label": "获得的见解表明，在不同的NLP任务中多样性和生成能力的重要性。",
+      "norm_label": "获得的见解表明，在不同的nlp任务中多样性和生成能力的重要性。"
+    },
+    "paper:2303.05745v3": {
+      "id": "paper:2303.05745v3",
+      "type": "Paper",
+      "label": "Multi-site, Multi-domain Airway Tree Modeling (ATM'22): A Public Benchmark for Pulmonary Airway Segmentation",
+      "norm_label": "multi-site multi-domain airway tree modeling atm 22 a public benchmark for pulmonary airway segmentation"
+    },
+    "task:尽管目前深度学习方法已经接近肺气道分割的图像分辨率极限，但由于缺乏公共标注数据集，使得性能评价困难，阻碍了该领域的数据驱动方法的发展。": {
+      "id": "task:尽管目前深度学习方法已经接近肺气道分割的图像分辨率极限，但由于缺乏公共标注数据集，使得性能评价困难，阻碍了该领域的数据驱动方法的发展。",
+      "type": "Task",
+      "label": "尽管目前深度学习方法已经接近肺气道分割的图像分辨率极限，但由于缺乏公共标注数据集，使得性能评价困难，阻碍了该领域的数据驱动方法的发展。",
+      "norm_label": "尽管目前深度学习方法已经接近肺气道分割的图像分辨率极限，但由于缺乏公共标注数据集，使得性能评价困难，阻碍了该领域的数据驱动方法的发展。"
+    },
+    "dataset:500 ct scans 300 for training 50 for validation and 150 for testing": {
+      "id": "dataset:500 ct scans 300 for training 50 for validation and 150 for testing",
+      "type": "Dataset",
+      "label": "500 CT scans (300 for training, 50 for validation, and 150 for testing)",
+      "norm_label": "500 ct scans 300 for training 50 for validation and 150 for testing"
+    },
+    "contribution:组织了multi-site multi-domain airway tree modeling atm 22 挑战，提供了大规模ct扫描数据集用于肺气道分割。": {
+      "id": "contribution:组织了multi-site multi-domain airway tree modeling atm 22 挑战，提供了大规模ct扫描数据集用于肺气道分割。",
+      "type": "Contribution",
+      "label": "组织了Multi-site, Multi-domain Airway Tree Modeling (ATM'22)挑战，提供了大规模CT扫描数据集用于肺气道分割。",
+      "norm_label": "组织了multi-site multi-domain airway tree modeling atm 22 挑战，提供了大规模ct扫描数据集用于肺气道分割。"
+    },
+    "contribution:涵盖了不同临床站点的数据，包括部分covid-19 cts数据，用于评估模型在实际临床应用中的效果。": {
+      "id": "contribution:涵盖了不同临床站点的数据，包括部分covid-19 cts数据，用于评估模型在实际临床应用中的效果。",
+      "type": "Contribution",
+      "label": "涵盖了不同临床站点的数据，包括部分COVID-19 CTs数据，用于评估模型在实际临床应用中的效果。",
+      "norm_label": "涵盖了不同临床站点的数据，包括部分covid-19 cts数据，用于评估模型在实际临床应用中的效果。"
+    },
+    "contribution:公开数据集和评估标准使更多研究团队能参与评估和改进肺气道分割算法，促进了该领域的研究和发展。": {
+      "id": "contribution:公开数据集和评估标准使更多研究团队能参与评估和改进肺气道分割算法，促进了该领域的研究和发展。",
+      "type": "Contribution",
+      "label": "公开数据集和评估标准使更多研究团队能参与评估和改进肺气道分割算法，促进了该领域的研究和发展。",
+      "norm_label": "公开数据集和评估标准使更多研究团队能参与评估和改进肺气道分割算法，促进了该领域的研究和发展。"
+    },
+    "paper:2211.11747v2": {
+      "id": "paper:2211.11747v2",
+      "type": "Paper",
+      "label": "NEVIS'22: A Stream of 100 Tasks Sampled from 30 Years of Computer Vision Research",
+      "norm_label": "nevis 22 a stream of 100 tasks sampled from 30 years of computer vision research"
+    },
+    "method:nevis 22": {
+      "id": "method:nevis 22",
+      "type": "Method",
+      "label": "NEVIS'22",
+      "norm_label": "nevis 22"
+    },
+    "task:设计高效适应新任务的机器学习算法和模型": {
+      "id": "task:设计高效适应新任务的机器学习算法和模型",
+      "type": "Task",
+      "label": "设计高效适应新任务的机器学习算法和模型",
+      "norm_label": "设计高效适应新任务的机器学习算法和模型"
+    },
+    "dataset:nevis 22 100 visual classification tasks": {
+      "id": "dataset:nevis 22 100 visual classification tasks",
+      "type": "Dataset",
+      "label": "NEVIS'22 (100+ visual classification tasks)",
+      "norm_label": "nevis 22 100 visual classification tasks"
+    },
+    "metric:准确性": {
+      "id": "metric:准确性",
+      "type": "Metric",
+      "label": "准确性",
+      "norm_label": "准确性"
+    },
+    "contribution:提供了一种视觉分类任务流nevis 22，用以评估模型适应新任务的能力。": {
+      "id": "contribution:提供了一种视觉分类任务流nevis 22，用以评估模型适应新任务的能力。",
+      "type": "Contribution",
+      "label": "提供了一种视觉分类任务流NEVIS'22，用以评估模型适应新任务的能力。",
+      "norm_label": "提供了一种视觉分类任务流nevis 22，用以评估模型适应新任务的能力。"
+    },
+    "contribution:反映了三十年间计算机视觉领域研究重点的变化，为持续学习提供了挑战性的基准。": {
+      "id": "contribution:反映了三十年间计算机视觉领域研究重点的变化，为持续学习提供了挑战性的基准。",
+      "type": "Contribution",
+      "label": "反映了三十年间计算机视觉领域研究重点的变化，为持续学习提供了挑战性的基准。",
+      "norm_label": "反映了三十年间计算机视觉领域研究重点的变化，为持续学习提供了挑战性的基准。"
+    },
+    "contribution:提供了实现、强基线和评估协议，帮助比较不同方法间的权衡": {
+      "id": "contribution:提供了实现、强基线和评估协议，帮助比较不同方法间的权衡",
+      "type": "Contribution",
+      "label": "提供了实现、强基线和评估协议，帮助比较不同方法间的权衡",
+      "norm_label": "提供了实现、强基线和评估协议，帮助比较不同方法间的权衡"
+    },
+    "paper:2205.14550v5": {
+      "id": "paper:2205.14550v5",
+      "type": "Paper",
+      "label": "Machine Learning for Microcontroller-Class Hardware: A Review",
+      "norm_label": "machine learning for microcontroller-class hardware a review"
+    },
+    "method:null": {
+      "id": "method:null",
+      "type": "Method",
+      "label": "null",
+      "norm_label": "null"
+    },
+    "task:尽管传统的机器学习部署在低内存和计算能力资源受限的微控制器上面临挑战，但为了在这些设备上实现在线机器学习，需要一个特殊的模型开发工作流程来确保计算和延迟预算在设备限制内的同时保持所需的性能。": {
+      "id": "task:尽管传统的机器学习部署在低内存和计算能力资源受限的微控制器上面临挑战，但为了在这些设备上实现在线机器学习，需要一个特殊的模型开发工作流程来确保计算和延迟预算在设备限制内的同时保持所需的性能。",
+      "type": "Task",
+      "label": "尽管传统的机器学习部署在低内存和计算能力资源受限的微控制器上面临挑战，但为了在这些设备上实现在线机器学习，需要一个特殊的模型开发工作流程来确保计算和延迟预算在设备限制内的同时保持所需的性能。",
+      "norm_label": "尽管传统的机器学习部署在低内存和计算能力资源受限的微控制器上面临挑战，但为了在这些设备上实现在线机器学习，需要一个特殊的模型开发工作流程来确保计算和延迟预算在设备限制内的同时保持所需的性能。"
+    },
+    "contribution:提出了适用于微控制器类设备的闭合环广泛适用的工作流。": {
+      "id": "contribution:提出了适用于微控制器类设备的闭合环广泛适用的工作流。",
+      "type": "Contribution",
+      "label": "提出了适用于微控制器类设备的闭合环广泛适用的工作流。",
+      "norm_label": "提出了适用于微控制器类设备的闭合环广泛适用的工作流。"
+    },
+    "contribution:展示了不同模型开发阶段的定性和定量洞察。": {
+      "id": "contribution:展示了不同模型开发阶段的定性和定量洞察。",
+      "type": "Contribution",
+      "label": "展示了不同模型开发阶段的定性和定量洞察。",
+      "norm_label": "展示了不同模型开发阶段的定性和定量洞察。"
+    },
+    "contribution:识别了推进本领域所需考虑的开放研究挑战和未解决的问题。": {
+      "id": "contribution:识别了推进本领域所需考虑的开放研究挑战和未解决的问题。",
+      "type": "Contribution",
+      "label": "识别了推进本领域所需考虑的开放研究挑战和未解决的问题。",
+      "norm_label": "识别了推进本领域所需考虑的开放研究挑战和未解决的问题。"
+    },
+    "paper:2011.08729v3": {
+      "id": "paper:2011.08729v3",
+      "type": "Paper",
+      "label": "Control Strategies for Autonomous Vehicles",
+      "norm_label": "control strategies for autonomous vehicles"
+    },
+    "task:尽管现有的自动驾驶技术已经能够处理感知、规划和控制等多个任务，但也存在许多挑战，特别是针对控制策略的数学建模和实际应用。": {
+      "id": "task:尽管现有的自动驾驶技术已经能够处理感知、规划和控制等多个任务，但也存在许多挑战，特别是针对控制策略的数学建模和实际应用。",
+      "type": "Task",
+      "label": "尽管现有的自动驾驶技术已经能够处理感知、规划和控制等多个任务，但也存在许多挑战，特别是针对控制策略的数学建模和实际应用。",
+      "norm_label": "尽管现有的自动驾驶技术已经能够处理感知、规划和控制等多个任务，但也存在许多挑战，特别是针对控制策略的数学建模和实际应用。"
+    },
+    "contribution:详细讲解了自动驾驶技术中的感知、规划和控制策略。": {
+      "id": "contribution:详细讲解了自动驾驶技术中的感知、规划和控制策略。",
+      "type": "Contribution",
+      "label": "详细讲解了自动驾驶技术中的感知、规划和控制策略。",
+      "norm_label": "详细讲解了自动驾驶技术中的感知、规划和控制策略。"
+    },
+    "contribution:详细讨论了纵向和横向控制策略，以及耦合和解耦控制方案。": {
+      "id": "contribution:详细讨论了纵向和横向控制策略，以及耦合和解耦控制方案。",
+      "type": "Contribution",
+      "label": "详细讨论了纵向和横向控制策略，以及耦合和解耦控制方案。",
+      "norm_label": "详细讨论了纵向和横向控制策略，以及耦合和解耦控制方案。"
+    },
+    "contribution:介绍了机器学习技术在自动驾驶控制任务中的应用": {
+      "id": "contribution:介绍了机器学习技术在自动驾驶控制任务中的应用",
+      "type": "Contribution",
+      "label": "介绍了机器学习技术在自动驾驶控制任务中的应用",
+      "norm_label": "介绍了机器学习技术在自动驾驶控制任务中的应用"
+    },
+    "paper:ailab-udine": {
+      "id": "paper:ailab-udine",
+      "type": "Paper",
+      "label": "AILAB-Udine",
+      "norm_label": "ailab-udine",
+      "description": ""
+    },
+    "concept:transformer": {
+      "id": "concept:transformer",
+      "type": "Concept",
+      "label": "Transformer",
+      "norm_label": "transformer",
+      "description": ""
+    },
+    "concept:ensemble learning": {
+      "id": "concept:ensemble learning",
+      "type": "Concept",
+      "label": "Ensemble learning",
+      "norm_label": "ensemble learning",
+      "description": ""
+    },
+    "concept:generative models": {
+      "id": "concept:generative models",
+      "type": "Concept",
+      "label": "Generative models",
+      "norm_label": "generative models",
+      "description": ""
+    },
+    "task:term normalization": {
+      "id": "task:term normalization",
+      "type": "Task",
+      "label": "Term normalization",
+      "norm_label": "term normalization",
+      "description": ""
+    },
+    "task:text classification": {
+      "id": "task:text classification",
+      "type": "Task",
+      "label": "Text classification",
+      "norm_label": "text classification",
+      "description": ""
+    },
+    "task:entity extraction": {
+      "id": "task:entity extraction",
+      "type": "Task",
+      "label": "Entity extraction",
+      "norm_label": "entity extraction",
+      "description": ""
+    },
+    "task:entity normalization": {
+      "id": "task:entity normalization",
+      "type": "Task",
+      "label": "Entity normalization",
+      "norm_label": "entity normalization",
+      "description": ""
+    },
+    "paper:multi-site multi-domain airway tree modeling atm 22": {
+      "id": "paper:multi-site multi-domain airway tree modeling atm 22",
+      "type": "Paper",
+      "label": "Multi-site, Multi-domain Airway Tree Modeling (ATM'22)",
+      "norm_label": "multi-site multi-domain airway tree modeling atm 22",
+      "description": ""
+    },
+    "concept:computer vision": {
+      "id": "concept:computer vision",
+      "type": "Concept",
+      "label": "computer vision",
+      "norm_label": "computer vision",
+      "description": ""
+    },
+    "concept:continual learning": {
+      "id": "concept:continual learning",
+      "type": "Concept",
+      "label": "continual learning",
+      "norm_label": "continual learning",
+      "description": ""
+    },
+    "concept:meta-learning": {
+      "id": "concept:meta-learning",
+      "type": "Concept",
+      "label": "meta-learning",
+      "norm_label": "meta-learning",
+      "description": ""
+    },
+    "concept:transfer learning": {
+      "id": "concept:transfer learning",
+      "type": "Concept",
+      "label": "transfer learning",
+      "norm_label": "transfer learning",
+      "description": ""
+    },
+    "method:continual learning algorithms": {
+      "id": "method:continual learning algorithms",
+      "type": "Method",
+      "label": "continual learning algorithms",
+      "norm_label": "continual learning algorithms",
+      "description": ""
+    },
+    "model:model architectures": {
+      "id": "model:model architectures",
+      "type": "Model",
+      "label": "model architectures",
+      "norm_label": "model architectures",
+      "description": ""
+    },
+    "model:nevis 22 evaluation protocol": {
+      "id": "model:nevis 22 evaluation protocol",
+      "type": "Model",
+      "label": "NEVIS'22 evaluation protocol",
+      "norm_label": "nevis 22 evaluation protocol",
+      "description": ""
+    },
+    "model:strong baselines": {
+      "id": "model:strong baselines",
+      "type": "Model",
+      "label": "strong baselines",
+      "norm_label": "strong baselines",
+      "description": ""
+    },
+    "concept:microcontroller-class hardware": {
+      "id": "concept:microcontroller-class hardware",
+      "type": "Concept",
+      "label": "Microcontroller-Class Hardware",
+      "norm_label": "microcontroller-class hardware",
+      "description": ""
+    },
+    "method:specialized model development workflow": {
+      "id": "method:specialized model development workflow",
+      "type": "Method",
+      "label": "Specialized Model Development Workflow",
+      "norm_label": "specialized model development workflow",
+      "description": ""
+    },
+    "concept:closed-loop workflow": {
+      "id": "concept:closed-loop workflow",
+      "type": "Concept",
+      "label": "Closed-loop Workflow",
+      "norm_label": "closed-loop workflow",
+      "description": ""
+    },
+    "concept:closed-loop widely applicable workflow": {
+      "id": "concept:closed-loop widely applicable workflow",
+      "type": "Concept",
+      "label": "Closed-loop Widely Applicable Workflow",
+      "norm_label": "closed-loop widely applicable workflow",
+      "description": ""
+    },
+    "concept:autonomous vehicles": {
+      "id": "concept:autonomous vehicles",
+      "type": "Concept",
+      "label": "Autonomous Vehicles",
+      "norm_label": "autonomous vehicles",
+      "description": ""
+    },
+    "concept:perception": {
+      "id": "concept:perception",
+      "type": "Concept",
+      "label": "Perception",
+      "norm_label": "perception",
+      "description": ""
+    },
+    "concept:planning": {
+      "id": "concept:planning",
+      "type": "Concept",
+      "label": "Planning",
+      "norm_label": "planning",
+      "description": ""
+    },
+    "concept:control strategies": {
+      "id": "concept:control strategies",
+      "type": "Concept",
+      "label": "Control Strategies",
+      "norm_label": "control strategies",
+      "description": ""
+    },
+    "task:autonomous driving": {
+      "id": "task:autonomous driving",
+      "type": "Task",
+      "label": "Autonomous Driving",
+      "norm_label": "autonomous driving",
+      "description": ""
+    },
+    "concept:machine learning techniques": {
+      "id": "concept:machine learning techniques",
+      "type": "Concept",
+      "label": "Machine Learning Techniques",
+      "norm_label": "machine learning techniques",
+      "description": ""
+    }
+  },
+  "edges": [
+    {
+      "source": "paper:2209.03452v1",
+      "target": "method:无详细名称",
+      "type": "proposes",
+      "weight": 1.0
+    },
+    {
+      "source": "paper:2209.03452v1",
+      "target": "task:尽管transformers在文本分类等任务上有明显优势，但组合不同架构能产生更好的效果，并且生成模型在术语归一化任务中有巨大的潜力。",
+      "type": "applied_to",
+      "weight": 0.8
+    },
+    {
+      "source": "method:无详细名称",
+      "target": "task:尽管transformers在文本分类等任务上有明显优势，但组合不同架构能产生更好的效果，并且生成模型在术语归一化任务中有巨大的潜力。",
+      "type": "solves",
+      "weight": 0.95
+    },
+    {
+      "source": "paper:2209.03452v1",
+      "target": "dataset:task 1 没有具体数据集",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "method:无详细名称",
+      "target": "dataset:task 1 没有具体数据集",
+      "type": "evaluates_on",
+      "weight": 0.9
+    },
+    {
+      "source": "paper:2209.03452v1",
+      "target": "dataset:task 2 没有具体数据集",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "method:无详细名称",
+      "target": "dataset:task 2 没有具体数据集",
+      "type": "evaluates_on",
+      "weight": 0.9
+    },
+    {
+      "source": "paper:2209.03452v1",
+      "target": "dataset:task 5 没有具体数据集",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "method:无详细名称",
+      "target": "dataset:task 5 没有具体数据集",
+      "type": "evaluates_on",
+      "weight": 0.9
+    },
+    {
+      "source": "paper:2209.03452v1",
+      "target": "dataset:task 6 没有具体数据集",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "method:无详细名称",
+      "target": "dataset:task 6 没有具体数据集",
+      "type": "evaluates_on",
+      "weight": 0.9
+    },
+    {
+      "source": "paper:2209.03452v1",
+      "target": "dataset:task 10 没有具体数据集",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "method:无详细名称",
+      "target": "dataset:task 10 没有具体数据集",
+      "type": "evaluates_on",
+      "weight": 0.9
+    },
+    {
+      "source": "method:无详细名称",
+      "target": "metric:未具体列出相关评估指标",
+      "type": "achieves",
+      "weight": 0.85
+    },
+    {
+      "source": "paper:2209.03452v1",
+      "target": "contribution:展示了多个架构组合的有效性，特别是在使用集成学习时。",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "method:无详细名称",
+      "target": "contribution:展示了多个架构组合的有效性，特别是在使用集成学习时。",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:2209.03452v1",
+      "target": "contribution:探索了生成模型在术语归一化任务中的潜在应用。",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "method:无详细名称",
+      "target": "contribution:探索了生成模型在术语归一化任务中的潜在应用。",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:2209.03452v1",
+      "target": "contribution:获得的见解表明，在不同的nlp任务中多样性和生成能力的重要性。",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "method:无详细名称",
+      "target": "contribution:获得的见解表明，在不同的nlp任务中多样性和生成能力的重要性。",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:2303.05745v3",
+      "target": "task:尽管目前深度学习方法已经接近肺气道分割的图像分辨率极限，但由于缺乏公共标注数据集，使得性能评价困难，阻碍了该领域的数据驱动方法的发展。",
+      "type": "applied_to",
+      "weight": 0.8
+    },
+    {
+      "source": "paper:2303.05745v3",
+      "target": "dataset:500 ct scans 300 for training 50 for validation and 150 for testing",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "paper:2303.05745v3",
+      "target": "contribution:组织了multi-site multi-domain airway tree modeling atm 22 挑战，提供了大规模ct扫描数据集用于肺气道分割。",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "paper:2303.05745v3",
+      "target": "contribution:涵盖了不同临床站点的数据，包括部分covid-19 cts数据，用于评估模型在实际临床应用中的效果。",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "paper:2303.05745v3",
+      "target": "contribution:公开数据集和评估标准使更多研究团队能参与评估和改进肺气道分割算法，促进了该领域的研究和发展。",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "paper:2211.11747v2",
+      "target": "method:nevis 22",
+      "type": "proposes",
+      "weight": 1.0
+    },
+    {
+      "source": "paper:2211.11747v2",
+      "target": "task:设计高效适应新任务的机器学习算法和模型",
+      "type": "applied_to",
+      "weight": 0.8
+    },
+    {
+      "source": "method:nevis 22",
+      "target": "task:设计高效适应新任务的机器学习算法和模型",
+      "type": "solves",
+      "weight": 0.95
+    },
+    {
+      "source": "paper:2211.11747v2",
+      "target": "dataset:nevis 22 100 visual classification tasks",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "method:nevis 22",
+      "target": "dataset:nevis 22 100 visual classification tasks",
+      "type": "evaluates_on",
+      "weight": 0.9
+    },
+    {
+      "source": "method:nevis 22",
+      "target": "metric:准确性",
+      "type": "achieves",
+      "weight": 0.85
+    },
+    {
+      "source": "paper:2211.11747v2",
+      "target": "contribution:提供了一种视觉分类任务流nevis 22，用以评估模型适应新任务的能力。",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "method:nevis 22",
+      "target": "contribution:提供了一种视觉分类任务流nevis 22，用以评估模型适应新任务的能力。",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:2211.11747v2",
+      "target": "contribution:反映了三十年间计算机视觉领域研究重点的变化，为持续学习提供了挑战性的基准。",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "method:nevis 22",
+      "target": "contribution:反映了三十年间计算机视觉领域研究重点的变化，为持续学习提供了挑战性的基准。",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:2211.11747v2",
+      "target": "contribution:提供了实现、强基线和评估协议，帮助比较不同方法间的权衡",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "method:nevis 22",
+      "target": "contribution:提供了实现、强基线和评估协议，帮助比较不同方法间的权衡",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:2205.14550v5",
+      "target": "method:null",
+      "type": "proposes",
+      "weight": 1.0
+    },
+    {
+      "source": "paper:2205.14550v5",
+      "target": "task:尽管传统的机器学习部署在低内存和计算能力资源受限的微控制器上面临挑战，但为了在这些设备上实现在线机器学习，需要一个特殊的模型开发工作流程来确保计算和延迟预算在设备限制内的同时保持所需的性能。",
+      "type": "applied_to",
+      "weight": 0.8
+    },
+    {
+      "source": "method:null",
+      "target": "task:尽管传统的机器学习部署在低内存和计算能力资源受限的微控制器上面临挑战，但为了在这些设备上实现在线机器学习，需要一个特殊的模型开发工作流程来确保计算和延迟预算在设备限制内的同时保持所需的性能。",
+      "type": "solves",
+      "weight": 0.95
+    },
+    {
+      "source": "paper:2205.14550v5",
+      "target": "method:null",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "paper:2205.14550v5",
+      "target": "contribution:提出了适用于微控制器类设备的闭合环广泛适用的工作流。",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "method:null",
+      "target": "contribution:提出了适用于微控制器类设备的闭合环广泛适用的工作流。",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:2205.14550v5",
+      "target": "contribution:展示了不同模型开发阶段的定性和定量洞察。",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "method:null",
+      "target": "contribution:展示了不同模型开发阶段的定性和定量洞察。",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:2205.14550v5",
+      "target": "contribution:识别了推进本领域所需考虑的开放研究挑战和未解决的问题。",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "method:null",
+      "target": "contribution:识别了推进本领域所需考虑的开放研究挑战和未解决的问题。",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:2011.08729v3",
+      "target": "task:尽管现有的自动驾驶技术已经能够处理感知、规划和控制等多个任务，但也存在许多挑战，特别是针对控制策略的数学建模和实际应用。",
+      "type": "applied_to",
+      "weight": 0.8
+    },
+    {
+      "source": "paper:2011.08729v3",
+      "target": "contribution:详细讲解了自动驾驶技术中的感知、规划和控制策略。",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "paper:2011.08729v3",
+      "target": "contribution:详细讨论了纵向和横向控制策略，以及耦合和解耦控制方案。",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "paper:2011.08729v3",
+      "target": "contribution:介绍了机器学习技术在自动驾驶控制任务中的应用",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "paper:ailab-udine",
+      "target": "concept:transformer",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "paper:ailab-udine",
+      "target": "concept:ensemble learning",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "paper:ailab-udine",
+      "target": "concept:generative models",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "paper:ailab-udine",
+      "target": "task:term normalization",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:ailab-udine",
+      "target": "task:text classification",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:ailab-udine",
+      "target": "task:entity extraction",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:ailab-udine",
+      "target": "task:entity normalization",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:multi-site multi-domain airway tree modeling atm 22",
+      "target": "dataset:500 ct scans 300 for training 50 for validation and 150 for testing",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "method:nevis 22",
+      "target": "concept:computer vision",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "method:nevis 22",
+      "target": "concept:continual learning",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "method:nevis 22",
+      "target": "concept:meta-learning",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "method:nevis 22",
+      "target": "concept:transfer learning",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "method:nevis 22",
+      "target": "method:continual learning algorithms",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "method:nevis 22",
+      "target": "model:model architectures",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "concept:computer vision",
+      "target": "concept:continual learning",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "concept:computer vision",
+      "target": "concept:meta-learning",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "concept:computer vision",
+      "target": "concept:transfer learning",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "concept:computer vision",
+      "target": "method:nevis 22",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "model:model architectures",
+      "target": "method:nevis 22",
+      "type": "evaluates_on",
+      "weight": 0.9
+    },
+    {
+      "source": "method:specialized model development workflow",
+      "target": "concept:microcontroller-class hardware",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "method:specialized model development workflow",
+      "target": "concept:closed-loop workflow",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "method:specialized model development workflow",
+      "target": "concept:closed-loop widely applicable workflow",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "task:autonomous driving",
+      "target": "concept:autonomous vehicles",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "concept:autonomous vehicles",
+      "target": "concept:perception",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "concept:autonomous vehicles",
+      "target": "concept:planning",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "concept:autonomous vehicles",
+      "target": "concept:control strategies",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "concept:control strategies",
+      "target": "concept:autonomous vehicles",
+      "type": "applied_to",
+      "weight": 0.8
+    },
+    {
+      "source": "concept:control strategies",
+      "target": "task:autonomous driving",
+      "type": "applied_to",
+      "weight": 0.8
+    },
+    {
+      "source": "concept:control strategies",
+      "target": "concept:machine learning techniques",
+      "type": "uses",
+      "weight": 0.8
+    }
+  ],
+  "paper_entities": {
+    "2209.03452v1": [
+      "paper:2209.03452v1",
+      "method:无详细名称",
+      "task:尽管transformers在文本分类等任务上有明显优势，但组合不同架构能产生更好的效果，并且生成模型在术语归一化任务中有巨大的潜力。",
+      "dataset:task 1 没有具体数据集",
+      "dataset:task 2 没有具体数据集",
+      "dataset:task 5 没有具体数据集",
+      "dataset:task 6 没有具体数据集",
+      "dataset:task 10 没有具体数据集",
+      "metric:未具体列出相关评估指标",
+      "contribution:展示了多个架构组合的有效性，特别是在使用集成学习时。",
+      "contribution:探索了生成模型在术语归一化任务中的潜在应用。",
+      "contribution:获得的见解表明，在不同的nlp任务中多样性和生成能力的重要性。",
+      "paper:ailab-udine",
+      "concept:transformer",
+      "concept:ensemble learning",
+      "concept:generative models",
+      "task:term normalization",
+      "task:text classification",
+      "task:entity extraction",
+      "task:entity normalization"
+    ],
+    "2303.05745v3": [
+      "paper:2303.05745v3",
+      "task:尽管目前深度学习方法已经接近肺气道分割的图像分辨率极限，但由于缺乏公共标注数据集，使得性能评价困难，阻碍了该领域的数据驱动方法的发展。",
+      "dataset:500 ct scans 300 for training 50 for validation and 150 for testing",
+      "contribution:组织了multi-site multi-domain airway tree modeling atm 22 挑战，提供了大规模ct扫描数据集用于肺气道分割。",
+      "contribution:涵盖了不同临床站点的数据，包括部分covid-19 cts数据，用于评估模型在实际临床应用中的效果。",
+      "contribution:公开数据集和评估标准使更多研究团队能参与评估和改进肺气道分割算法，促进了该领域的研究和发展。",
+      "paper:multi-site multi-domain airway tree modeling atm 22"
+    ],
+    "2211.11747v2": [
+      "paper:2211.11747v2",
+      "method:nevis 22",
+      "task:设计高效适应新任务的机器学习算法和模型",
+      "dataset:nevis 22 100 visual classification tasks",
+      "metric:准确性",
+      "contribution:提供了一种视觉分类任务流nevis 22，用以评估模型适应新任务的能力。",
+      "contribution:反映了三十年间计算机视觉领域研究重点的变化，为持续学习提供了挑战性的基准。",
+      "contribution:提供了实现、强基线和评估协议，帮助比较不同方法间的权衡",
+      "concept:computer vision",
+      "concept:continual learning",
+      "concept:meta-learning",
+      "concept:transfer learning",
+      "method:continual learning algorithms",
+      "model:model architectures",
+      "model:nevis 22 evaluation protocol",
+      "model:strong baselines"
+    ],
+    "2205.14550v5": [
+      "paper:2205.14550v5",
+      "method:null",
+      "task:尽管传统的机器学习部署在低内存和计算能力资源受限的微控制器上面临挑战，但为了在这些设备上实现在线机器学习，需要一个特殊的模型开发工作流程来确保计算和延迟预算在设备限制内的同时保持所需的性能。",
+      "method:null",
+      "method:null",
+      "contribution:提出了适用于微控制器类设备的闭合环广泛适用的工作流。",
+      "contribution:展示了不同模型开发阶段的定性和定量洞察。",
+      "contribution:识别了推进本领域所需考虑的开放研究挑战和未解决的问题。",
+      "concept:microcontroller-class hardware",
+      "method:specialized model development workflow",
+      "concept:closed-loop workflow",
+      "concept:closed-loop widely applicable workflow"
+    ],
+    "2011.08729v3": [
+      "paper:2011.08729v3",
+      "task:尽管现有的自动驾驶技术已经能够处理感知、规划和控制等多个任务，但也存在许多挑战，特别是针对控制策略的数学建模和实际应用。",
+      "contribution:详细讲解了自动驾驶技术中的感知、规划和控制策略。",
+      "contribution:详细讨论了纵向和横向控制策略，以及耦合和解耦控制方案。",
+      "contribution:介绍了机器学习技术在自动驾驶控制任务中的应用",
+      "concept:autonomous vehicles",
+      "concept:perception",
+      "concept:planning",
+      "concept:control strategies",
+      "task:autonomous driving",
+      "concept:machine learning techniques"
+    ]
+  },
+  "entity_aliases": {
+    "ailab-udine smm4h 22 limits of transformers and bert ensembles": "paper:2209.03452v1",
+    "无详细名称": "method:无详细名称",
+    "尽管transformers在文本分类等任务上有明显优势，但组合不同架构能产生更好的效果，并且生成模型在术语归一化任务中有巨大的潜力。": "task:尽管transformers在文本分类等任务上有明显优势，但组合不同架构能产生更好的效果，并且生成模型在术语归一化任务中有巨大的潜力。",
+    "task 1 没有具体数据集": "dataset:task 1 没有具体数据集",
+    "task 2 没有具体数据集": "dataset:task 2 没有具体数据集",
+    "task 5 没有具体数据集": "dataset:task 5 没有具体数据集",
+    "task 6 没有具体数据集": "dataset:task 6 没有具体数据集",
+    "task 10 没有具体数据集": "dataset:task 10 没有具体数据集",
+    "未具体列出相关评估指标": "metric:未具体列出相关评估指标",
+    "展示了多个架构组合的有效性，特别是在使用集成学习时。": "contribution:展示了多个架构组合的有效性，特别是在使用集成学习时。",
+    "探索了生成模型在术语归一化任务中的潜在应用。": "contribution:探索了生成模型在术语归一化任务中的潜在应用。",
+    "获得的见解表明，在不同的nlp任务中多样性和生成能力的重要性。": "contribution:获得的见解表明，在不同的nlp任务中多样性和生成能力的重要性。",
+    "multi-site multi-domain airway tree modeling atm 22 a public benchmark for pulmonary airway segmentation": "paper:2303.05745v3",
+    "尽管目前深度学习方法已经接近肺气道分割的图像分辨率极限，但由于缺乏公共标注数据集，使得性能评价困难，阻碍了该领域的数据驱动方法的发展。": "task:尽管目前深度学习方法已经接近肺气道分割的图像分辨率极限，但由于缺乏公共标注数据集，使得性能评价困难，阻碍了该领域的数据驱动方法的发展。",
+    "500 ct scans 300 for training 50 for validation and 150 for testing": "dataset:500 ct scans 300 for training 50 for validation and 150 for testing",
+    "组织了multi-site multi-domain airway tree modeling atm 22 挑战，提供了大规模ct扫描数据集用于肺气道分割。": "contribution:组织了multi-site multi-domain airway tree modeling atm 22 挑战，提供了大规模ct扫描数据集用于肺气道分割。",
+    "涵盖了不同临床站点的数据，包括部分covid-19 cts数据，用于评估模型在实际临床应用中的效果。": "contribution:涵盖了不同临床站点的数据，包括部分covid-19 cts数据，用于评估模型在实际临床应用中的效果。",
+    "公开数据集和评估标准使更多研究团队能参与评估和改进肺气道分割算法，促进了该领域的研究和发展。": "contribution:公开数据集和评估标准使更多研究团队能参与评估和改进肺气道分割算法，促进了该领域的研究和发展。",
+    "nevis 22 a stream of 100 tasks sampled from 30 years of computer vision research": "paper:2211.11747v2",
+    "nevis 22": "method:nevis 22",
+    "设计高效适应新任务的机器学习算法和模型": "task:设计高效适应新任务的机器学习算法和模型",
+    "nevis 22 100 visual classification tasks": "dataset:nevis 22 100 visual classification tasks",
+    "准确性": "metric:准确性",
+    "提供了一种视觉分类任务流nevis 22，用以评估模型适应新任务的能力。": "contribution:提供了一种视觉分类任务流nevis 22，用以评估模型适应新任务的能力。",
+    "反映了三十年间计算机视觉领域研究重点的变化，为持续学习提供了挑战性的基准。": "contribution:反映了三十年间计算机视觉领域研究重点的变化，为持续学习提供了挑战性的基准。",
+    "提供了实现、强基线和评估协议，帮助比较不同方法间的权衡": "contribution:提供了实现、强基线和评估协议，帮助比较不同方法间的权衡",
+    "machine learning for microcontroller-class hardware a review": "paper:2205.14550v5",
+    "null": "method:null",
+    "尽管传统的机器学习部署在低内存和计算能力资源受限的微控制器上面临挑战，但为了在这些设备上实现在线机器学习，需要一个特殊的模型开发工作流程来确保计算和延迟预算在设备限制内的同时保持所需的性能。": "task:尽管传统的机器学习部署在低内存和计算能力资源受限的微控制器上面临挑战，但为了在这些设备上实现在线机器学习，需要一个特殊的模型开发工作流程来确保计算和延迟预算在设备限制内的同时保持所需的性能。",
+    "提出了适用于微控制器类设备的闭合环广泛适用的工作流。": "contribution:提出了适用于微控制器类设备的闭合环广泛适用的工作流。",
+    "展示了不同模型开发阶段的定性和定量洞察。": "contribution:展示了不同模型开发阶段的定性和定量洞察。",
+    "识别了推进本领域所需考虑的开放研究挑战和未解决的问题。": "contribution:识别了推进本领域所需考虑的开放研究挑战和未解决的问题。",
+    "control strategies for autonomous vehicles": "paper:2011.08729v3",
+    "尽管现有的自动驾驶技术已经能够处理感知、规划和控制等多个任务，但也存在许多挑战，特别是针对控制策略的数学建模和实际应用。": "task:尽管现有的自动驾驶技术已经能够处理感知、规划和控制等多个任务，但也存在许多挑战，特别是针对控制策略的数学建模和实际应用。",
+    "详细讲解了自动驾驶技术中的感知、规划和控制策略。": "contribution:详细讲解了自动驾驶技术中的感知、规划和控制策略。",
+    "详细讨论了纵向和横向控制策略，以及耦合和解耦控制方案。": "contribution:详细讨论了纵向和横向控制策略，以及耦合和解耦控制方案。",
+    "介绍了机器学习技术在自动驾驶控制任务中的应用": "contribution:介绍了机器学习技术在自动驾驶控制任务中的应用",
+    "ailab-udine": "paper:ailab-udine",
+    "transformer": "concept:transformer",
+    "ensemble learning": "concept:ensemble learning",
+    "generative models": "concept:generative models",
+    "term normalization": "task:term normalization",
+    "text classification": "task:text classification",
+    "entity extraction": "task:entity extraction",
+    "entity normalization": "task:entity normalization",
+    "multi-site multi-domain airway tree modeling atm 22": "paper:multi-site multi-domain airway tree modeling atm 22",
+    "computer vision": "concept:computer vision",
+    "continual learning": "concept:continual learning",
+    "meta-learning": "concept:meta-learning",
+    "transfer learning": "concept:transfer learning",
+    "continual learning algorithms": "method:continual learning algorithms",
+    "model architectures": "model:model architectures",
+    "nevis 22 evaluation protocol": "model:nevis 22 evaluation protocol",
+    "strong baselines": "model:strong baselines",
+    "microcontroller-class hardware": "concept:microcontroller-class hardware",
+    "specialized model development workflow": "method:specialized model development workflow",
+    "closed-loop workflow": "concept:closed-loop workflow",
+    "closed-loop widely applicable workflow": "concept:closed-loop widely applicable workflow",
+    "autonomous vehicles": "concept:autonomous vehicles",
+    "perception": "concept:perception",
+    "planning": "concept:planning",
+    "control strategies": "concept:control strategies",
+    "autonomous driving": "task:autonomous driving",
+    "machine learning techniques": "concept:machine learning techniques"
+  },
+  "communities": {
+    "0": {
+      "nodes": [
+        "paper:2209.03452v1",
+        "method:无详细名称",
+        "task:尽管transformers在文本分类等任务上有明显优势，但组合不同架构能产生更好的效果，并且生成模型在术语归一化任务中有巨大的潜力。",
+        "dataset:task 1 没有具体数据集",
+        "dataset:task 2 没有具体数据集",
+        "dataset:task 5 没有具体数据集",
+        "dataset:task 6 没有具体数据集",
+        "dataset:task 10 没有具体数据集",
+        "metric:未具体列出相关评估指标",
+        "contribution:展示了多个架构组合的有效性，特别是在使用集成学习时。",
+        "contribution:探索了生成模型在术语归一化任务中的潜在应用。",
+        "contribution:获得的见解表明，在不同的nlp任务中多样性和生成能力的重要性。",
+        "model:nevis 22 evaluation protocol",
+        "model:strong baselines"
+      ],
+      "key_entities": [
+        "AILAB-Udine@SMM4H 22: Limits of Transformers and BERT Ensembles",
+        "无详细名称",
+        "尽管Transformers在文本分类等任务上有明显优势，但组合不同架构能产生更好的效果，并且生成模型在术语归一化任务中有巨大的潜力。",
+        "Task 1: 没有具体数据集",
+        "Task 2: 没有具体数据集",
+        "Task 5: 没有具体数据集",
+        "Task 6: 没有具体数据集",
+        "Task 10: 没有具体数据集",
+        "未具体列出相关评估指标",
+        "展示了多个架构组合的有效性，特别是在使用集成学习时。",
+        "探索了生成模型在术语归一化任务中的潜在应用。",
+        "获得的见解表明，在不同的NLP任务中多样性和生成能力的重要性。"
+      ],
+      "key_papers": [
+        "AILAB-Udine@SMM4H 22: Limits of Transformers and BERT Ensembles"
+      ],
+      "dominant_types": [
+        "Dataset",
+        "Contribution",
+        "Model"
+      ],
+      "semantic_tag": "Benchmark & Dataset Cluster",
+      "summary": "",
+      "community_name": "Benchmark & Dataset Cluster"
+    },
+    "1": {
+      "nodes": [
+        "paper:2303.05745v3",
+        "task:尽管目前深度学习方法已经接近肺气道分割的图像分辨率极限，但由于缺乏公共标注数据集，使得性能评价困难，阻碍了该领域的数据驱动方法的发展。",
+        "contribution:组织了multi-site multi-domain airway tree modeling atm 22 挑战，提供了大规模ct扫描数据集用于肺气道分割。",
+        "contribution:涵盖了不同临床站点的数据，包括部分covid-19 cts数据，用于评估模型在实际临床应用中的效果。",
+        "contribution:公开数据集和评估标准使更多研究团队能参与评估和改进肺气道分割算法，促进了该领域的研究和发展。"
+      ],
+      "key_entities": [
+        "Multi-site, Multi-domain Airway Tree Modeling (ATM'22): A Public Benchmark for Pulmonary Airway Segmentation",
+        "尽管目前深度学习方法已经接近肺气道分割的图像分辨率极限，但由于缺乏公共标注数据集，使得性能评价困难，阻碍了该领域的数据驱动方法的发展。",
+        "组织了Multi-site, Multi-domain Airway Tree Modeling (ATM'22)挑战，提供了大规模CT扫描数据集用于肺气道分割。",
+        "涵盖了不同临床站点的数据，包括部分COVID-19 CTs数据，用于评估模型在实际临床应用中的效果。",
+        "公开数据集和评估标准使更多研究团队能参与评估和改进肺气道分割算法，促进了该领域的研究和发展。"
+      ],
+      "key_papers": [
+        "Multi-site, Multi-domain Airway Tree Modeling (ATM'22): A Public Benchmark for Pulmonary Airway Segmentation"
+      ],
+      "dominant_types": [
+        "Contribution",
+        "Paper",
+        "Task"
+      ],
+      "semantic_tag": "Research Contributions Cluster",
+      "summary": "",
+      "community_name": "Research Contributions Cluster"
+    },
+    "2": {
+      "nodes": [
+        "dataset:500 ct scans 300 for training 50 for validation and 150 for testing",
+        "paper:multi-site multi-domain airway tree modeling atm 22"
+      ],
+      "key_entities": [
+        "500 CT scans (300 for training, 50 for validation, and 150 for testing)",
+        "Multi-site, Multi-domain Airway Tree Modeling (ATM'22)"
+      ],
+      "key_papers": [
+        "Multi-site, Multi-domain Airway Tree Modeling (ATM'22)"
+      ],
+      "dominant_types": [
+        "Dataset",
+        "Paper"
+      ],
+      "semantic_tag": "Benchmark & Dataset Cluster",
+      "summary": "",
+      "community_name": "Benchmark & Dataset Cluster"
+    },
+    "3": {
+      "nodes": [
+        "paper:2211.11747v2",
+        "dataset:nevis 22 100 visual classification tasks",
+        "contribution:提供了一种视觉分类任务流nevis 22，用以评估模型适应新任务的能力。",
+        "contribution:反映了三十年间计算机视觉领域研究重点的变化，为持续学习提供了挑战性的基准。",
+        "contribution:提供了实现、强基线和评估协议，帮助比较不同方法间的权衡"
+      ],
+      "key_entities": [
+        "NEVIS'22: A Stream of 100 Tasks Sampled from 30 Years of Computer Vision Research",
+        "NEVIS'22 (100+ visual classification tasks)",
+        "提供了一种视觉分类任务流NEVIS'22，用以评估模型适应新任务的能力。",
+        "反映了三十年间计算机视觉领域研究重点的变化，为持续学习提供了挑战性的基准。",
+        "提供了实现、强基线和评估协议，帮助比较不同方法间的权衡"
+      ],
+      "key_papers": [
+        "NEVIS'22: A Stream of 100 Tasks Sampled from 30 Years of Computer Vision Research"
+      ],
+      "dominant_types": [
+        "Contribution",
+        "Paper",
+        "Dataset"
+      ],
+      "semantic_tag": "Research Contributions Cluster",
+      "summary": "",
+      "community_name": "Research Contributions Cluster"
+    },
+    "4": {
+      "nodes": [
+        "method:nevis 22",
+        "task:设计高效适应新任务的机器学习算法和模型",
+        "metric:准确性",
+        "concept:computer vision",
+        "concept:continual learning",
+        "concept:meta-learning",
+        "concept:transfer learning",
+        "method:continual learning algorithms",
+        "model:model architectures"
+      ],
+      "key_entities": [
+        "NEVIS'22",
+        "设计高效适应新任务的机器学习算法和模型",
+        "准确性",
+        "computer vision",
+        "continual learning",
+        "meta-learning",
+        "transfer learning",
+        "continual learning algorithms",
+        "model architectures"
+      ],
+      "key_papers": [],
+      "dominant_types": [
+        "Concept",
+        "Method",
+        "Task"
+      ],
+      "semantic_tag": "Computer Vision Cluster",
+      "summary": "",
+      "community_name": "Computer Vision Cluster"
+    },
+    "5": {
+      "nodes": [
+        "paper:2205.14550v5",
+        "method:null",
+        "task:尽管传统的机器学习部署在低内存和计算能力资源受限的微控制器上面临挑战，但为了在这些设备上实现在线机器学习，需要一个特殊的模型开发工作流程来确保计算和延迟预算在设备限制内的同时保持所需的性能。",
+        "contribution:提出了适用于微控制器类设备的闭合环广泛适用的工作流。",
+        "contribution:展示了不同模型开发阶段的定性和定量洞察。",
+        "contribution:识别了推进本领域所需考虑的开放研究挑战和未解决的问题。"
+      ],
+      "key_entities": [
+        "Machine Learning for Microcontroller-Class Hardware: A Review",
+        "null",
+        "尽管传统的机器学习部署在低内存和计算能力资源受限的微控制器上面临挑战，但为了在这些设备上实现在线机器学习，需要一个特殊的模型开发工作流程来确保计算和延迟预算在设备限制内的同时保持所需的性能。",
+        "提出了适用于微控制器类设备的闭合环广泛适用的工作流。",
+        "展示了不同模型开发阶段的定性和定量洞察。",
+        "识别了推进本领域所需考虑的开放研究挑战和未解决的问题。"
+      ],
+      "key_papers": [
+        "Machine Learning for Microcontroller-Class Hardware: A Review"
+      ],
+      "dominant_types": [
+        "Contribution",
+        "Paper",
+        "Method"
+      ],
+      "semantic_tag": "Research Contributions Cluster",
+      "summary": "",
+      "community_name": "Research Contributions Cluster"
+    },
+    "6": {
+      "nodes": [
+        "paper:2011.08729v3",
+        "task:尽管现有的自动驾驶技术已经能够处理感知、规划和控制等多个任务，但也存在许多挑战，特别是针对控制策略的数学建模和实际应用。",
+        "contribution:详细讲解了自动驾驶技术中的感知、规划和控制策略。",
+        "contribution:详细讨论了纵向和横向控制策略，以及耦合和解耦控制方案。",
+        "contribution:介绍了机器学习技术在自动驾驶控制任务中的应用"
+      ],
+      "key_entities": [
+        "Control Strategies for Autonomous Vehicles",
+        "尽管现有的自动驾驶技术已经能够处理感知、规划和控制等多个任务，但也存在许多挑战，特别是针对控制策略的数学建模和实际应用。",
+        "详细讲解了自动驾驶技术中的感知、规划和控制策略。",
+        "详细讨论了纵向和横向控制策略，以及耦合和解耦控制方案。",
+        "介绍了机器学习技术在自动驾驶控制任务中的应用"
+      ],
+      "key_papers": [
+        "Control Strategies for Autonomous Vehicles"
+      ],
+      "dominant_types": [
+        "Contribution",
+        "Paper",
+        "Task"
+      ],
+      "semantic_tag": "Research Contributions Cluster",
+      "summary": "",
+      "community_name": "Research Contributions Cluster"
+    },
+    "7": {
+      "nodes": [
+        "paper:ailab-udine",
+        "concept:transformer",
+        "concept:ensemble learning",
+        "concept:generative models",
+        "task:term normalization",
+        "task:text classification",
+        "task:entity extraction",
+        "task:entity normalization"
+      ],
+      "key_entities": [
+        "AILAB-Udine",
+        "Transformer",
+        "Ensemble learning",
+        "Generative models",
+        "Term normalization",
+        "Text classification",
+        "Entity extraction",
+        "Entity normalization"
+      ],
+      "key_papers": [
+        "AILAB-Udine"
+      ],
+      "dominant_types": [
+        "Task",
+        "Concept",
+        "Paper"
+      ],
+      "semantic_tag": "Task & Application Cluster",
+      "summary": "",
+      "community_name": "Task & Application Cluster"
+    },
+    "8": {
+      "nodes": [
+        "concept:microcontroller-class hardware",
+        "method:specialized model development workflow",
+        "concept:closed-loop workflow",
+        "concept:closed-loop widely applicable workflow"
+      ],
+      "key_entities": [
+        "Microcontroller-Class Hardware",
+        "Specialized Model Development Workflow",
+        "Closed-loop Workflow",
+        "Closed-loop Widely Applicable Workflow"
+      ],
+      "key_papers": [],
+      "dominant_types": [
+        "Concept",
+        "Method"
+      ],
+      "semantic_tag": "Research Topic Cluster",
+      "summary": "",
+      "community_name": "Research Topic Cluster"
+    },
+    "9": {
+      "nodes": [
+        "concept:autonomous vehicles",
+        "concept:perception",
+        "concept:planning",
+        "concept:control strategies",
+        "task:autonomous driving",
+        "concept:machine learning techniques"
+      ],
+      "key_entities": [
+        "Autonomous Vehicles",
+        "Perception",
+        "Planning",
+        "Control Strategies",
+        "Autonomous Driving",
+        "Machine Learning Techniques"
+      ],
+      "key_papers": [],
+      "dominant_types": [
+        "Concept",
+        "Task"
+      ],
+      "semantic_tag": "Task & Application Cluster",
+      "summary": "",
+      "community_name": "Task & Application Cluster"
+    }
+  },
+  "citation_graph": {},
+  "stats": {
+    "node_count": 64,
+    "edge_count": 80,
+    "node_type_count": {
+      "Paper": 7,
+      "Method": 5,
+      "Task": 10,
+      "Dataset": 7,
+      "Metric": 2,
+      "Contribution": 15,
+      "Concept": 15,
+      "Model": 3
+    },
+    "paper_count": 5,
+    "community_count": 0,
+    "citation_edge_count": 0
+  }
+}

@@ -1,0 +1,1193 @@
+{
+  "db_id": "kb_2833ded9c777393645a0ec1fa9ef634c",
+  "nodes": {
+    "paper:2302.08893v4": {
+      "id": "paper:2302.08893v4",
+      "type": "Paper",
+      "label": "Active learning for data streams: a survey",
+      "norm_label": "active learning for data streams a survey"
+    },
+    "method:null": {
+      "id": "method:null",
+      "type": "Method",
+      "label": "null",
+      "norm_label": "null"
+    },
+    "task:尽管在现实应用中，数据是以未标记的形式获得的，但标注每个观测数据可能耗时且昂贵，使得难以获得大量的标记数据。": {
+      "id": "task:尽管在现实应用中，数据是以未标记的形式获得的，但标注每个观测数据可能耗时且昂贵，使得难以获得大量的标记数据。",
+      "type": "Task",
+      "label": "尽管在现实应用中，数据是以未标记的形式获得的，但标注每个观测数据可能耗时且昂贵，使得难以获得大量的标记数据。",
+      "norm_label": "尽管在现实应用中，数据是以未标记的形式获得的，但标注每个观测数据可能耗时且昂贵，使得难以获得大量的标记数据。"
+    },
+    "contribution:综述了最近提出的数据流在线选择最具信息量的观测点的技术。": {
+      "id": "contribution:综述了最近提出的数据流在线选择最具信息量的观测点的技术。",
+      "type": "Contribution",
+      "label": "综述了最近提出的数据流在线选择最具信息量的观测点的技术。",
+      "norm_label": "综述了最近提出的数据流在线选择最具信息量的观测点的技术。"
+    },
+    "contribution:讨论了各种技术的优缺点，以及在这个研究领域存在的挑战和机遇。": {
+      "id": "contribution:讨论了各种技术的优缺点，以及在这个研究领域存在的挑战和机遇。",
+      "type": "Contribution",
+      "label": "讨论了各种技术的优缺点，以及在这个研究领域存在的挑战和机遇。",
+      "norm_label": "讨论了各种技术的优缺点，以及在这个研究领域存在的挑战和机遇。"
+    },
+    "paper:2506.09781v2": {
+      "id": "paper:2506.09781v2",
+      "type": "Paper",
+      "label": "On the Similarities of Embeddings in Contrastive Learning",
+      "norm_label": "on the similarities of embeddings in contrastive learning"
+    },
+    "method:cosine similarity framework": {
+      "id": "method:cosine similarity framework",
+      "type": "Method",
+      "label": "Cosine Similarity Framework",
+      "norm_label": "cosine similarity framework"
+    },
+    "task:在对比学习中，正样本对齐和负样本分离的机制在不同批量设置下的最优性问题。": {
+      "id": "task:在对比学习中，正样本对齐和负样本分离的机制在不同批量设置下的最优性问题。",
+      "type": "Task",
+      "label": "在对比学习中，正样本对齐和负样本分离的机制在不同批量设置下的最优性问题。",
+      "norm_label": "在对比学习中，正样本对齐和负样本分离的机制在不同批量设置下的最优性问题。"
+    },
+    "contribution:提出了基于余弦相似度的统一框架来理解对比学习。": {
+      "id": "contribution:提出了基于余弦相似度的统一框架来理解对比学习。",
+      "type": "Contribution",
+      "label": "提出了基于余弦相似度的统一框架来理解对比学习。",
+      "norm_label": "提出了基于余弦相似度的统一框架来理解对比学习。"
+    },
+    "contribution:展示了在全批量设置下，当负样本对的相似度低于一定阈值时，正样本对准完全对齐是不可达的。": {
+      "id": "contribution:展示了在全批量设置下，当负样本对的相似度低于一定阈值时，正样本对准完全对齐是不可达的。",
+      "type": "Contribution",
+      "label": "展示了在全批量设置下，当负样本对的相似度低于一定阈值时，正样本对准完全对齐是不可达的。",
+      "norm_label": "展示了在全批量设置下，当负样本对的相似度低于一定阈值时，正样本对准完全对齐是不可达的。"
+    },
+    "contribution:提出了在小批量设置下减少负样本对相似度方差的辅助损失函数。": {
+      "id": "contribution:提出了在小批量设置下减少负样本对相似度方差的辅助损失函数。",
+      "type": "Contribution",
+      "label": "提出了在小批量设置下减少负样本对相似度方差的辅助损失函数。",
+      "norm_label": "提出了在小批量设置下减少负样本对相似度方差的辅助损失函数。"
+    },
+    "contribution:实验证明了辅助损失函数在小批量设置下的有效性。": {
+      "id": "contribution:实验证明了辅助损失函数在小批量设置下的有效性。",
+      "type": "Contribution",
+      "label": "实验证明了辅助损失函数在小批量设置下的有效性。",
+      "norm_label": "实验证明了辅助损失函数在小批量设置下的有效性。"
+    },
+    "paper:1905.07435v1": {
+      "id": "paper:1905.07435v1",
+      "type": "Paper",
+      "label": "Alpha MAML: Adaptive Model-Agnostic Meta-Learning",
+      "norm_label": "alpha maml adaptive model-agnostic meta-learning"
+    },
+    "method:alpha maml": {
+      "id": "method:alpha maml",
+      "type": "Method",
+      "label": "Alpha MAML",
+      "norm_label": "alpha maml"
+    },
+    "task:尽管maml在少量样本学习问题中表现良好，但其训练稳定性需要昂贵的超参数调优。": {
+      "id": "task:尽管maml在少量样本学习问题中表现良好，但其训练稳定性需要昂贵的超参数调优。",
+      "type": "Task",
+      "label": "尽管MAML在少量样本学习问题中表现良好，但其训练稳定性需要昂贵的超参数调优。",
+      "norm_label": "尽管maml在少量样本学习问题中表现良好，但其训练稳定性需要昂贵的超参数调优。"
+    },
+    "dataset:omniglot database 1 200 classes": {
+      "id": "dataset:omniglot database 1 200 classes",
+      "type": "Dataset",
+      "label": "Omniglot database (1,200 classes)",
+      "norm_label": "omniglot database 1 200 classes"
+    },
+    "metric:无直接提及的指标": {
+      "id": "metric:无直接提及的指标",
+      "type": "Metric",
+      "label": "无直接提及的指标",
+      "norm_label": "无直接提及的指标"
+    },
+    "contribution:提出alpha maml，一种增强maml训练稳定性的方法。": {
+      "id": "contribution:提出alpha maml，一种增强maml训练稳定性的方法。",
+      "type": "Contribution",
+      "label": "提出Alpha MAML，一种增强MAML训练稳定性的方法。",
+      "norm_label": "提出alpha maml，一种增强maml训练稳定性的方法。"
+    },
+    "contribution:通过引入在线的超参数自适应方案，减少了对maml超参数调优的需求。": {
+      "id": "contribution:通过引入在线的超参数自适应方案，减少了对maml超参数调优的需求。",
+      "type": "Contribution",
+      "label": "通过引入在线的超参数自适应方案，减少了对MAML超参数调优的需求。",
+      "norm_label": "通过引入在线的超参数自适应方案，减少了对maml超参数调优的需求。"
+    },
+    "contribution:证明了alpha maml能够在保持或改善性能的同时提高模型的泛化能力。": {
+      "id": "contribution:证明了alpha maml能够在保持或改善性能的同时提高模型的泛化能力。",
+      "type": "Contribution",
+      "label": "证明了Alpha MAML能够在保持或改善性能的同时提高模型的泛化能力。",
+      "norm_label": "证明了alpha maml能够在保持或改善性能的同时提高模型的泛化能力。"
+    },
+    "paper:1905.05461v2": {
+      "id": "paper:1905.05461v2",
+      "type": "Paper",
+      "label": "Learning Generative Models across Incomparable Spaces",
+      "norm_label": "learning generative models across incomparable spaces"
+    },
+    "method:一种学习跨不可比较空间生成模型的方法": {
+      "id": "method:一种学习跨不可比较空间生成模型的方法",
+      "type": "Method",
+      "label": "一种学习跨不可比较空间生成模型的方法",
+      "norm_label": "一种学习跨不可比较空间生成模型的方法"
+    },
+    "task:尽管现有的生成对抗网络（gan）能够学习一个分布以忠实恢复参考分布，但在某些情况下，我们可能仅想学习某些方面（如簇或流形结构），同时修改其他方面（如样式、方向或维度）。": {
+      "id": "task:尽管现有的生成对抗网络（gan）能够学习一个分布以忠实恢复参考分布，但在某些情况下，我们可能仅想学习某些方面（如簇或流形结构），同时修改其他方面（如样式、方向或维度）。",
+      "type": "Task",
+      "label": "尽管现有的生成对抗网络（GAN）能够学习一个分布以忠实恢复参考分布，但在某些情况下，我们可能仅想学习某些方面（如簇或流形结构），同时修改其他方面（如样式、方向或维度）。",
+      "norm_label": "尽管现有的生成对抗网络（gan）能够学习一个分布以忠实恢复参考分布，但在某些情况下，我们可能仅想学习某些方面（如簇或流形结构），同时修改其他方面（如样式、方向或维度）。"
+    },
+    "contribution:开发了一种新颖的模型来学习跨不可比较空间的生成模型。": {
+      "id": "contribution:开发了一种新颖的模型来学习跨不可比较空间的生成模型。",
+      "type": "Contribution",
+      "label": "开发了一种新颖的模型来学习跨不可比较空间的生成模型。",
+      "norm_label": "开发了一种新颖的模型来学习跨不可比较空间的生成模型。"
+    },
+    "contribution:该方法利用gromov-wasserstein距离进行分布比较。": {
+      "id": "contribution:该方法利用gromov-wasserstein距离进行分布比较。",
+      "type": "Contribution",
+      "label": "该方法利用Gromov-Wasserstein距离进行分布比较。",
+      "norm_label": "该方法利用gromov-wasserstein距离进行分布比较。"
+    },
+    "contribution:展示了该模型在流形学习、关系学习和跨域学习等任务中的应用潜力。": {
+      "id": "contribution:展示了该模型在流形学习、关系学习和跨域学习等任务中的应用潜力。",
+      "type": "Contribution",
+      "label": "展示了该模型在流形学习、关系学习和跨域学习等任务中的应用潜力。",
+      "norm_label": "展示了该模型在流形学习、关系学习和跨域学习等任务中的应用潜力。"
+    },
+    "paper:1805.09921v4": {
+      "id": "paper:1805.09921v4",
+      "type": "Paper",
+      "label": "Meta-Learning Probabilistic Inference For Prediction",
+      "norm_label": "meta-learning probabilistic inference for prediction"
+    },
+    "method:ml-pip": {
+      "id": "method:ml-pip",
+      "type": "Method",
+      "label": "ML-PIP",
+      "norm_label": "ml-pip"
+    },
+    "task:在现有数据效率较低的元学习方法中开发一种更高效且通用的框架。": {
+      "id": "task:在现有数据效率较低的元学习方法中开发一种更高效且通用的框架。",
+      "type": "Task",
+      "label": "在现有数据效率较低的元学习方法中开发一种更高效且通用的框架。",
+      "norm_label": "在现有数据效率较低的元学习方法中开发一种更高效且通用的框架。"
+    },
+    "dataset:未直接提及具体数据集": {
+      "id": "dataset:未直接提及具体数据集",
+      "type": "Dataset",
+      "label": "未直接提及具体数据集",
+      "norm_label": "未直接提及具体数据集"
+    },
+    "contribution:开发了一种新的框架 ml-pip 用于元学习中的概率推理。": {
+      "id": "contribution:开发了一种新的框架 ml-pip 用于元学习中的概率推理。",
+      "type": "Contribution",
+      "label": "开发了一种新的框架 ML-PIP 用于元学习中的概率推理。",
+      "norm_label": "开发了一种新的框架 ml-pip 用于元学习中的概率推理。"
+    },
+    "contribution:引入了 versa，一种运用灵活且通用的归一化网络进行少量样 examples 态学习，一次前向传播输出任务特定参数的方法。": {
+      "id": "contribution:引入了 versa，一种运用灵活且通用的归一化网络进行少量样 examples 态学习，一次前向传播输出任务特定参数的方法。",
+      "type": "Contribution",
+      "label": "引入了 VERSA，一种运用灵活且通用的归一化网络进行少量样/examples 态学习，一次前向传播输出任务特定参数的方法。",
+      "norm_label": "引入了 versa，一种运用灵活且通用的归一化网络进行少量样 examples 态学习，一次前向传播输出任务特定参数的方法。"
+    },
+    "contribution:versaa 在基准数据集上达到了最优结果，能够处理任意数量的射击次数以及分类任务中的任意数量的类。": {
+      "id": "contribution:versaa 在基准数据集上达到了最优结果，能够处理任意数量的射击次数以及分类任务中的任意数量的类。",
+      "type": "Contribution",
+      "label": "VERSAA 在基准数据集上达到了最优结果，能够处理任意数量的射击次数以及分类任务中的任意数量的类。",
+      "norm_label": "versaa 在基准数据集上达到了最优结果，能够处理任意数量的射击次数以及分类任务中的任意数量的类。"
+    },
+    "task:active learning for data streams": {
+      "id": "task:active learning for data streams",
+      "type": "Task",
+      "label": "active learning for data streams",
+      "norm_label": "active learning for data streams",
+      "description": ""
+    },
+    "method:pool-based active learning": {
+      "id": "method:pool-based active learning",
+      "type": "Method",
+      "label": "pool-based active learning",
+      "norm_label": "pool-based active learning",
+      "description": ""
+    },
+    "method:stream-based active learning": {
+      "id": "method:stream-based active learning",
+      "type": "Method",
+      "label": "stream-based active learning",
+      "norm_label": "stream-based active learning",
+      "description": ""
+    },
+    "concept:recently proposed approaches": {
+      "id": "concept:recently proposed approaches",
+      "type": "Concept",
+      "label": "recently proposed approaches",
+      "norm_label": "recently proposed approaches",
+      "description": ""
+    },
+    "concept:unified framework": {
+      "id": "concept:unified framework",
+      "type": "Concept",
+      "label": "Unified Framework",
+      "norm_label": "unified framework",
+      "description": ""
+    },
+    "concept:perfect alignment": {
+      "id": "concept:perfect alignment",
+      "type": "Concept",
+      "label": "Perfect Alignment",
+      "norm_label": "perfect alignment",
+      "description": ""
+    },
+    "concept:within-view negative pairs": {
+      "id": "concept:within-view negative pairs",
+      "type": "Concept",
+      "label": "Within-View Negative Pairs",
+      "norm_label": "within-view negative pairs",
+      "description": ""
+    },
+    "method:auxiliary loss": {
+      "id": "method:auxiliary loss",
+      "type": "Method",
+      "label": "Auxiliary Loss",
+      "norm_label": "auxiliary loss",
+      "description": ""
+    },
+    "concept:mini-batch setting": {
+      "id": "concept:mini-batch setting",
+      "type": "Concept",
+      "label": "Mini-Batch Setting",
+      "norm_label": "mini-batch setting",
+      "description": ""
+    },
+    "concept:full-batch setting": {
+      "id": "concept:full-batch setting",
+      "type": "Concept",
+      "label": "Full-Batch Setting",
+      "norm_label": "full-batch setting",
+      "description": ""
+    },
+    "concept:variance reduction": {
+      "id": "concept:variance reduction",
+      "type": "Concept",
+      "label": "Variance Reduction",
+      "norm_label": "variance reduction",
+      "description": ""
+    },
+    "method:maml": {
+      "id": "method:maml",
+      "type": "Method",
+      "label": "MAML",
+      "norm_label": "maml",
+      "description": ""
+    },
+    "dataset:omniglot database": {
+      "id": "dataset:omniglot database",
+      "type": "Dataset",
+      "label": "Omniglot database",
+      "norm_label": "omniglot database",
+      "description": ""
+    },
+    "method:generative models": {
+      "id": "method:generative models",
+      "type": "Method",
+      "label": "generative models",
+      "norm_label": "generative models",
+      "description": ""
+    },
+    "concept:gromov-wasserstein distance": {
+      "id": "concept:gromov-wasserstein distance",
+      "type": "Concept",
+      "label": "Gromov-Wasserstein distance",
+      "norm_label": "gromov-wasserstein distance",
+      "description": ""
+    },
+    "task:manifold learning": {
+      "id": "task:manifold learning",
+      "type": "Task",
+      "label": "manifold learning",
+      "norm_label": "manifold learning",
+      "description": ""
+    },
+    "task:relation learning": {
+      "id": "task:relation learning",
+      "type": "Task",
+      "label": "relation learning",
+      "norm_label": "relation learning",
+      "description": ""
+    },
+    "task:cross-domain learning": {
+      "id": "task:cross-domain learning",
+      "type": "Task",
+      "label": "cross-domain learning",
+      "norm_label": "cross-domain learning",
+      "description": ""
+    },
+    "method:versaa": {
+      "id": "method:versaa",
+      "type": "Method",
+      "label": "VERSAA",
+      "norm_label": "versaa",
+      "description": ""
+    },
+    "task:few-shot learning": {
+      "id": "task:few-shot learning",
+      "type": "Task",
+      "label": "Few-shot Learning",
+      "norm_label": "few-shot learning",
+      "description": ""
+    },
+    "task:shapenet view reconstruction": {
+      "id": "task:shapenet view reconstruction",
+      "type": "Task",
+      "label": "ShapeNet View Reconstruction",
+      "norm_label": "shapenet view reconstruction",
+      "description": ""
+    },
+    "task:classification": {
+      "id": "task:classification",
+      "type": "Task",
+      "label": "Classification",
+      "norm_label": "classification",
+      "description": ""
+    }
+  },
+  "edges": [
+    {
+      "source": "paper:2302.08893v4",
+      "target": "method:null",
+      "type": "proposes",
+      "weight": 1.0
+    },
+    {
+      "source": "paper:2302.08893v4",
+      "target": "task:尽管在现实应用中，数据是以未标记的形式获得的，但标注每个观测数据可能耗时且昂贵，使得难以获得大量的标记数据。",
+      "type": "applied_to",
+      "weight": 0.8
+    },
+    {
+      "source": "method:null",
+      "target": "task:尽管在现实应用中，数据是以未标记的形式获得的，但标注每个观测数据可能耗时且昂贵，使得难以获得大量的标记数据。",
+      "type": "solves",
+      "weight": 0.95
+    },
+    {
+      "source": "paper:2302.08893v4",
+      "target": "contribution:综述了最近提出的数据流在线选择最具信息量的观测点的技术。",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "method:null",
+      "target": "contribution:综述了最近提出的数据流在线选择最具信息量的观测点的技术。",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:2302.08893v4",
+      "target": "contribution:讨论了各种技术的优缺点，以及在这个研究领域存在的挑战和机遇。",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "method:null",
+      "target": "contribution:讨论了各种技术的优缺点，以及在这个研究领域存在的挑战和机遇。",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:2506.09781v2",
+      "target": "method:cosine similarity framework",
+      "type": "proposes",
+      "weight": 1.0
+    },
+    {
+      "source": "paper:2506.09781v2",
+      "target": "task:在对比学习中，正样本对齐和负样本分离的机制在不同批量设置下的最优性问题。",
+      "type": "applied_to",
+      "weight": 0.8
+    },
+    {
+      "source": "method:cosine similarity framework",
+      "target": "task:在对比学习中，正样本对齐和负样本分离的机制在不同批量设置下的最优性问题。",
+      "type": "solves",
+      "weight": 0.95
+    },
+    {
+      "source": "paper:2506.09781v2",
+      "target": "contribution:提出了基于余弦相似度的统一框架来理解对比学习。",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "method:cosine similarity framework",
+      "target": "contribution:提出了基于余弦相似度的统一框架来理解对比学习。",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:2506.09781v2",
+      "target": "contribution:展示了在全批量设置下，当负样本对的相似度低于一定阈值时，正样本对准完全对齐是不可达的。",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "method:cosine similarity framework",
+      "target": "contribution:展示了在全批量设置下，当负样本对的相似度低于一定阈值时，正样本对准完全对齐是不可达的。",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:2506.09781v2",
+      "target": "contribution:提出了在小批量设置下减少负样本对相似度方差的辅助损失函数。",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "method:cosine similarity framework",
+      "target": "contribution:提出了在小批量设置下减少负样本对相似度方差的辅助损失函数。",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:2506.09781v2",
+      "target": "contribution:实验证明了辅助损失函数在小批量设置下的有效性。",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "method:cosine similarity framework",
+      "target": "contribution:实验证明了辅助损失函数在小批量设置下的有效性。",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:1905.07435v1",
+      "target": "method:alpha maml",
+      "type": "proposes",
+      "weight": 1.0
+    },
+    {
+      "source": "paper:1905.07435v1",
+      "target": "task:尽管maml在少量样本学习问题中表现良好，但其训练稳定性需要昂贵的超参数调优。",
+      "type": "applied_to",
+      "weight": 0.8
+    },
+    {
+      "source": "method:alpha maml",
+      "target": "task:尽管maml在少量样本学习问题中表现良好，但其训练稳定性需要昂贵的超参数调优。",
+      "type": "solves",
+      "weight": 0.95
+    },
+    {
+      "source": "paper:1905.07435v1",
+      "target": "dataset:omniglot database 1 200 classes",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "method:alpha maml",
+      "target": "dataset:omniglot database 1 200 classes",
+      "type": "evaluates_on",
+      "weight": 0.9
+    },
+    {
+      "source": "method:alpha maml",
+      "target": "metric:无直接提及的指标",
+      "type": "achieves",
+      "weight": 0.85
+    },
+    {
+      "source": "paper:1905.07435v1",
+      "target": "contribution:提出alpha maml，一种增强maml训练稳定性的方法。",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "method:alpha maml",
+      "target": "contribution:提出alpha maml，一种增强maml训练稳定性的方法。",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:1905.07435v1",
+      "target": "contribution:通过引入在线的超参数自适应方案，减少了对maml超参数调优的需求。",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "method:alpha maml",
+      "target": "contribution:通过引入在线的超参数自适应方案，减少了对maml超参数调优的需求。",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:1905.07435v1",
+      "target": "contribution:证明了alpha maml能够在保持或改善性能的同时提高模型的泛化能力。",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "method:alpha maml",
+      "target": "contribution:证明了alpha maml能够在保持或改善性能的同时提高模型的泛化能力。",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:1905.05461v2",
+      "target": "method:一种学习跨不可比较空间生成模型的方法",
+      "type": "proposes",
+      "weight": 1.0
+    },
+    {
+      "source": "paper:1905.05461v2",
+      "target": "task:尽管现有的生成对抗网络（gan）能够学习一个分布以忠实恢复参考分布，但在某些情况下，我们可能仅想学习某些方面（如簇或流形结构），同时修改其他方面（如样式、方向或维度）。",
+      "type": "applied_to",
+      "weight": 0.8
+    },
+    {
+      "source": "method:一种学习跨不可比较空间生成模型的方法",
+      "target": "task:尽管现有的生成对抗网络（gan）能够学习一个分布以忠实恢复参考分布，但在某些情况下，我们可能仅想学习某些方面（如簇或流形结构），同时修改其他方面（如样式、方向或维度）。",
+      "type": "solves",
+      "weight": 0.95
+    },
+    {
+      "source": "paper:1905.05461v2",
+      "target": "contribution:开发了一种新颖的模型来学习跨不可比较空间的生成模型。",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "method:一种学习跨不可比较空间生成模型的方法",
+      "target": "contribution:开发了一种新颖的模型来学习跨不可比较空间的生成模型。",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:1905.05461v2",
+      "target": "contribution:该方法利用gromov-wasserstein距离进行分布比较。",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "method:一种学习跨不可比较空间生成模型的方法",
+      "target": "contribution:该方法利用gromov-wasserstein距离进行分布比较。",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:1905.05461v2",
+      "target": "contribution:展示了该模型在流形学习、关系学习和跨域学习等任务中的应用潜力。",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "method:一种学习跨不可比较空间生成模型的方法",
+      "target": "contribution:展示了该模型在流形学习、关系学习和跨域学习等任务中的应用潜力。",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:1805.09921v4",
+      "target": "method:ml-pip",
+      "type": "proposes",
+      "weight": 1.0
+    },
+    {
+      "source": "paper:1805.09921v4",
+      "target": "task:在现有数据效率较低的元学习方法中开发一种更高效且通用的框架。",
+      "type": "applied_to",
+      "weight": 0.8
+    },
+    {
+      "source": "method:ml-pip",
+      "target": "task:在现有数据效率较低的元学习方法中开发一种更高效且通用的框架。",
+      "type": "solves",
+      "weight": 0.95
+    },
+    {
+      "source": "paper:1805.09921v4",
+      "target": "dataset:未直接提及具体数据集",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "method:ml-pip",
+      "target": "dataset:未直接提及具体数据集",
+      "type": "evaluates_on",
+      "weight": 0.9
+    },
+    {
+      "source": "paper:1805.09921v4",
+      "target": "contribution:开发了一种新的框架 ml-pip 用于元学习中的概率推理。",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "method:ml-pip",
+      "target": "contribution:开发了一种新的框架 ml-pip 用于元学习中的概率推理。",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:1805.09921v4",
+      "target": "contribution:引入了 versa，一种运用灵活且通用的归一化网络进行少量样 examples 态学习，一次前向传播输出任务特定参数的方法。",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "method:ml-pip",
+      "target": "contribution:引入了 versa，一种运用灵活且通用的归一化网络进行少量样 examples 态学习，一次前向传播输出任务特定参数的方法。",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:1805.09921v4",
+      "target": "contribution:versaa 在基准数据集上达到了最优结果，能够处理任意数量的射击次数以及分类任务中的任意数量的类。",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "method:ml-pip",
+      "target": "contribution:versaa 在基准数据集上达到了最优结果，能够处理任意数量的射击次数以及分类任务中的任意数量的类。",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "task:active learning for data streams",
+      "target": "method:pool-based active learning",
+      "type": "compared_with",
+      "weight": 0.7
+    },
+    {
+      "source": "task:active learning for data streams",
+      "target": "method:stream-based active learning",
+      "type": "compared_with",
+      "weight": 0.7
+    },
+    {
+      "source": "task:active learning for data streams",
+      "target": "concept:recently proposed approaches",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "method:cosine similarity framework",
+      "target": "concept:unified framework",
+      "type": "proposes",
+      "weight": 1.0
+    },
+    {
+      "source": "method:cosine similarity framework",
+      "target": "concept:perfect alignment",
+      "type": "achieves",
+      "weight": 0.85
+    },
+    {
+      "source": "method:cosine similarity framework",
+      "target": "concept:within-view negative pairs",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "concept:unified framework",
+      "target": "method:auxiliary loss",
+      "type": "proposes",
+      "weight": 1.0
+    },
+    {
+      "source": "method:auxiliary loss",
+      "target": "concept:mini-batch setting",
+      "type": "applied_to",
+      "weight": 0.8
+    },
+    {
+      "source": "method:auxiliary loss",
+      "target": "concept:full-batch setting",
+      "type": "applied_to",
+      "weight": 0.8
+    },
+    {
+      "source": "method:cosine similarity framework",
+      "target": "concept:variance reduction",
+      "type": "achieves",
+      "weight": 0.85
+    },
+    {
+      "source": "method:alpha maml",
+      "target": "method:maml",
+      "type": "improves",
+      "weight": 0.95
+    },
+    {
+      "source": "method:alpha maml",
+      "target": "dataset:omniglot database",
+      "type": "evaluates_on",
+      "weight": 0.9
+    },
+    {
+      "source": "method:alpha maml",
+      "target": "method:maml",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "method:maml",
+      "target": "dataset:omniglot database",
+      "type": "evaluates_on",
+      "weight": 0.9
+    },
+    {
+      "source": "paper:1905.05461v2",
+      "target": "method:generative models",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "method:generative models",
+      "target": "concept:gromov-wasserstein distance",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "method:generative models",
+      "target": "task:manifold learning",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "method:generative models",
+      "target": "task:relation learning",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "method:generative models",
+      "target": "task:cross-domain learning",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "method:ml-pip",
+      "target": "method:versaa",
+      "type": "proposes",
+      "weight": 1.0
+    },
+    {
+      "source": "method:versaa",
+      "target": "task:few-shot learning",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "method:versaa",
+      "target": "task:classification",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "method:versaa",
+      "target": "task:shapenet view reconstruction",
+      "type": "related_to",
+      "weight": 0.5
+    }
+  ],
+  "paper_entities": {
+    "2302.08893v4": [
+      "paper:2302.08893v4",
+      "method:null",
+      "task:尽管在现实应用中，数据是以未标记的形式获得的，但标注每个观测数据可能耗时且昂贵，使得难以获得大量的标记数据。",
+      "contribution:综述了最近提出的数据流在线选择最具信息量的观测点的技术。",
+      "contribution:讨论了各种技术的优缺点，以及在这个研究领域存在的挑战和机遇。",
+      "task:active learning for data streams",
+      "method:pool-based active learning",
+      "method:stream-based active learning",
+      "concept:recently proposed approaches"
+    ],
+    "2506.09781v2": [
+      "paper:2506.09781v2",
+      "method:cosine similarity framework",
+      "task:在对比学习中，正样本对齐和负样本分离的机制在不同批量设置下的最优性问题。",
+      "contribution:提出了基于余弦相似度的统一框架来理解对比学习。",
+      "contribution:展示了在全批量设置下，当负样本对的相似度低于一定阈值时，正样本对准完全对齐是不可达的。",
+      "contribution:提出了在小批量设置下减少负样本对相似度方差的辅助损失函数。",
+      "contribution:实验证明了辅助损失函数在小批量设置下的有效性。",
+      "concept:unified framework",
+      "concept:perfect alignment",
+      "concept:within-view negative pairs",
+      "method:auxiliary loss",
+      "concept:mini-batch setting",
+      "concept:full-batch setting",
+      "concept:variance reduction"
+    ],
+    "1905.07435v1": [
+      "paper:1905.07435v1",
+      "method:alpha maml",
+      "task:尽管maml在少量样本学习问题中表现良好，但其训练稳定性需要昂贵的超参数调优。",
+      "dataset:omniglot database 1 200 classes",
+      "metric:无直接提及的指标",
+      "contribution:提出alpha maml，一种增强maml训练稳定性的方法。",
+      "contribution:通过引入在线的超参数自适应方案，减少了对maml超参数调优的需求。",
+      "contribution:证明了alpha maml能够在保持或改善性能的同时提高模型的泛化能力。",
+      "method:maml",
+      "dataset:omniglot database"
+    ],
+    "1905.05461v2": [
+      "paper:1905.05461v2",
+      "method:一种学习跨不可比较空间生成模型的方法",
+      "task:尽管现有的生成对抗网络（gan）能够学习一个分布以忠实恢复参考分布，但在某些情况下，我们可能仅想学习某些方面（如簇或流形结构），同时修改其他方面（如样式、方向或维度）。",
+      "contribution:开发了一种新颖的模型来学习跨不可比较空间的生成模型。",
+      "contribution:该方法利用gromov-wasserstein距离进行分布比较。",
+      "contribution:展示了该模型在流形学习、关系学习和跨域学习等任务中的应用潜力。",
+      "method:generative models",
+      "concept:gromov-wasserstein distance",
+      "task:manifold learning",
+      "task:relation learning",
+      "task:cross-domain learning"
+    ],
+    "1805.09921v4": [
+      "paper:1805.09921v4",
+      "method:ml-pip",
+      "task:在现有数据效率较低的元学习方法中开发一种更高效且通用的框架。",
+      "dataset:未直接提及具体数据集",
+      "contribution:开发了一种新的框架 ml-pip 用于元学习中的概率推理。",
+      "contribution:引入了 versa，一种运用灵活且通用的归一化网络进行少量样 examples 态学习，一次前向传播输出任务特定参数的方法。",
+      "contribution:versaa 在基准数据集上达到了最优结果，能够处理任意数量的射击次数以及分类任务中的任意数量的类。",
+      "method:versaa",
+      "task:few-shot learning",
+      "task:shapenet view reconstruction",
+      "task:classification"
+    ]
+  },
+  "entity_aliases": {
+    "active learning for data streams a survey": "paper:2302.08893v4",
+    "null": "method:null",
+    "尽管在现实应用中，数据是以未标记的形式获得的，但标注每个观测数据可能耗时且昂贵，使得难以获得大量的标记数据。": "task:尽管在现实应用中，数据是以未标记的形式获得的，但标注每个观测数据可能耗时且昂贵，使得难以获得大量的标记数据。",
+    "综述了最近提出的数据流在线选择最具信息量的观测点的技术。": "contribution:综述了最近提出的数据流在线选择最具信息量的观测点的技术。",
+    "讨论了各种技术的优缺点，以及在这个研究领域存在的挑战和机遇。": "contribution:讨论了各种技术的优缺点，以及在这个研究领域存在的挑战和机遇。",
+    "on the similarities of embeddings in contrastive learning": "paper:2506.09781v2",
+    "cosine similarity framework": "method:cosine similarity framework",
+    "在对比学习中，正样本对齐和负样本分离的机制在不同批量设置下的最优性问题。": "task:在对比学习中，正样本对齐和负样本分离的机制在不同批量设置下的最优性问题。",
+    "提出了基于余弦相似度的统一框架来理解对比学习。": "contribution:提出了基于余弦相似度的统一框架来理解对比学习。",
+    "展示了在全批量设置下，当负样本对的相似度低于一定阈值时，正样本对准完全对齐是不可达的。": "contribution:展示了在全批量设置下，当负样本对的相似度低于一定阈值时，正样本对准完全对齐是不可达的。",
+    "提出了在小批量设置下减少负样本对相似度方差的辅助损失函数。": "contribution:提出了在小批量设置下减少负样本对相似度方差的辅助损失函数。",
+    "实验证明了辅助损失函数在小批量设置下的有效性。": "contribution:实验证明了辅助损失函数在小批量设置下的有效性。",
+    "alpha maml adaptive model-agnostic meta-learning": "paper:1905.07435v1",
+    "alpha maml": "method:alpha maml",
+    "尽管maml在少量样本学习问题中表现良好，但其训练稳定性需要昂贵的超参数调优。": "task:尽管maml在少量样本学习问题中表现良好，但其训练稳定性需要昂贵的超参数调优。",
+    "omniglot database 1 200 classes": "dataset:omniglot database 1 200 classes",
+    "无直接提及的指标": "metric:无直接提及的指标",
+    "提出alpha maml，一种增强maml训练稳定性的方法。": "contribution:提出alpha maml，一种增强maml训练稳定性的方法。",
+    "通过引入在线的超参数自适应方案，减少了对maml超参数调优的需求。": "contribution:通过引入在线的超参数自适应方案，减少了对maml超参数调优的需求。",
+    "证明了alpha maml能够在保持或改善性能的同时提高模型的泛化能力。": "contribution:证明了alpha maml能够在保持或改善性能的同时提高模型的泛化能力。",
+    "learning generative models across incomparable spaces": "paper:1905.05461v2",
+    "一种学习跨不可比较空间生成模型的方法": "method:一种学习跨不可比较空间生成模型的方法",
+    "尽管现有的生成对抗网络（gan）能够学习一个分布以忠实恢复参考分布，但在某些情况下，我们可能仅想学习某些方面（如簇或流形结构），同时修改其他方面（如样式、方向或维度）。": "task:尽管现有的生成对抗网络（gan）能够学习一个分布以忠实恢复参考分布，但在某些情况下，我们可能仅想学习某些方面（如簇或流形结构），同时修改其他方面（如样式、方向或维度）。",
+    "开发了一种新颖的模型来学习跨不可比较空间的生成模型。": "contribution:开发了一种新颖的模型来学习跨不可比较空间的生成模型。",
+    "该方法利用gromov-wasserstein距离进行分布比较。": "contribution:该方法利用gromov-wasserstein距离进行分布比较。",
+    "展示了该模型在流形学习、关系学习和跨域学习等任务中的应用潜力。": "contribution:展示了该模型在流形学习、关系学习和跨域学习等任务中的应用潜力。",
+    "meta-learning probabilistic inference for prediction": "paper:1805.09921v4",
+    "ml-pip": "method:ml-pip",
+    "在现有数据效率较低的元学习方法中开发一种更高效且通用的框架。": "task:在现有数据效率较低的元学习方法中开发一种更高效且通用的框架。",
+    "未直接提及具体数据集": "dataset:未直接提及具体数据集",
+    "开发了一种新的框架 ml-pip 用于元学习中的概率推理。": "contribution:开发了一种新的框架 ml-pip 用于元学习中的概率推理。",
+    "引入了 versa，一种运用灵活且通用的归一化网络进行少量样 examples 态学习，一次前向传播输出任务特定参数的方法。": "contribution:引入了 versa，一种运用灵活且通用的归一化网络进行少量样 examples 态学习，一次前向传播输出任务特定参数的方法。",
+    "versaa 在基准数据集上达到了最优结果，能够处理任意数量的射击次数以及分类任务中的任意数量的类。": "contribution:versaa 在基准数据集上达到了最优结果，能够处理任意数量的射击次数以及分类任务中的任意数量的类。",
+    "active learning for data streams": "task:active learning for data streams",
+    "pool-based active learning": "method:pool-based active learning",
+    "stream-based active learning": "method:stream-based active learning",
+    "recently proposed approaches": "concept:recently proposed approaches",
+    "unified framework": "concept:unified framework",
+    "perfect alignment": "concept:perfect alignment",
+    "within-view negative pairs": "concept:within-view negative pairs",
+    "auxiliary loss": "method:auxiliary loss",
+    "mini-batch setting": "concept:mini-batch setting",
+    "full-batch setting": "concept:full-batch setting",
+    "variance reduction": "concept:variance reduction",
+    "maml": "method:maml",
+    "omniglot database": "dataset:omniglot database",
+    "generative models": "method:generative models",
+    "gromov-wasserstein distance": "concept:gromov-wasserstein distance",
+    "manifold learning": "task:manifold learning",
+    "relation learning": "task:relation learning",
+    "cross-domain learning": "task:cross-domain learning",
+    "versaa": "method:versaa",
+    "few-shot learning": "task:few-shot learning",
+    "shapenet view reconstruction": "task:shapenet view reconstruction",
+    "classification": "task:classification"
+  },
+  "communities": {
+    "0": {
+      "nodes": [
+        "paper:2302.08893v4",
+        "method:null",
+        "task:尽管在现实应用中，数据是以未标记的形式获得的，但标注每个观测数据可能耗时且昂贵，使得难以获得大量的标记数据。",
+        "contribution:综述了最近提出的数据流在线选择最具信息量的观测点的技术。",
+        "contribution:讨论了各种技术的优缺点，以及在这个研究领域存在的挑战和机遇。"
+      ],
+      "key_entities": [
+        "Active learning for data streams: a survey",
+        "null",
+        "尽管在现实应用中，数据是以未标记的形式获得的，但标注每个观测数据可能耗时且昂贵，使得难以获得大量的标记数据。",
+        "综述了最近提出的数据流在线选择最具信息量的观测点的技术。",
+        "讨论了各种技术的优缺点，以及在这个研究领域存在的挑战和机遇。"
+      ],
+      "key_papers": [
+        "Active learning for data streams: a survey"
+      ],
+      "dominant_types": [
+        "Contribution",
+        "Paper",
+        "Method"
+      ],
+      "semantic_tag": "Research Contributions Cluster",
+      "summary": "",
+      "community_name": "Research Contributions Cluster"
+    },
+    "1": {
+      "nodes": [
+        "paper:2506.09781v2",
+        "method:cosine similarity framework",
+        "task:在对比学习中，正样本对齐和负样本分离的机制在不同批量设置下的最优性问题。",
+        "contribution:提出了基于余弦相似度的统一框架来理解对比学习。",
+        "contribution:展示了在全批量设置下，当负样本对的相似度低于一定阈值时，正样本对准完全对齐是不可达的。",
+        "contribution:提出了在小批量设置下减少负样本对相似度方差的辅助损失函数。",
+        "contribution:实验证明了辅助损失函数在小批量设置下的有效性。",
+        "concept:perfect alignment",
+        "concept:within-view negative pairs",
+        "concept:variance reduction"
+      ],
+      "key_entities": [
+        "On the Similarities of Embeddings in Contrastive Learning",
+        "Cosine Similarity Framework",
+        "在对比学习中，正样本对齐和负样本分离的机制在不同批量设置下的最优性问题。",
+        "提出了基于余弦相似度的统一框架来理解对比学习。",
+        "展示了在全批量设置下，当负样本对的相似度低于一定阈值时，正样本对准完全对齐是不可达的。",
+        "提出了在小批量设置下减少负样本对相似度方差的辅助损失函数。",
+        "实验证明了辅助损失函数在小批量设置下的有效性。",
+        "Perfect Alignment",
+        "Within-View Negative Pairs",
+        "Variance Reduction"
+      ],
+      "key_papers": [
+        "On the Similarities of Embeddings in Contrastive Learning"
+      ],
+      "dominant_types": [
+        "Contribution",
+        "Concept",
+        "Paper"
+      ],
+      "semantic_tag": "Research Contributions Cluster",
+      "summary": "",
+      "community_name": "Research Contributions Cluster"
+    },
+    "2": {
+      "nodes": [
+        "paper:1905.07435v1",
+        "contribution:提出alpha maml，一种增强maml训练稳定性的方法。",
+        "contribution:通过引入在线的超参数自适应方案，减少了对maml超参数调优的需求。",
+        "contribution:证明了alpha maml能够在保持或改善性能的同时提高模型的泛化能力。"
+      ],
+      "key_entities": [
+        "Alpha MAML: Adaptive Model-Agnostic Meta-Learning",
+        "提出Alpha MAML，一种增强MAML训练稳定性的方法。",
+        "通过引入在线的超参数自适应方案，减少了对MAML超参数调优的需求。",
+        "证明了Alpha MAML能够在保持或改善性能的同时提高模型的泛化能力。"
+      ],
+      "key_papers": [
+        "Alpha MAML: Adaptive Model-Agnostic Meta-Learning"
+      ],
+      "dominant_types": [
+        "Contribution",
+        "Paper"
+      ],
+      "semantic_tag": "Research Contributions Cluster",
+      "summary": "",
+      "community_name": "Research Contributions Cluster"
+    },
+    "3": {
+      "nodes": [
+        "method:alpha maml",
+        "task:尽管maml在少量样本学习问题中表现良好，但其训练稳定性需要昂贵的超参数调优。",
+        "dataset:omniglot database 1 200 classes",
+        "metric:无直接提及的指标",
+        "method:maml",
+        "dataset:omniglot database"
+      ],
+      "key_entities": [
+        "Alpha MAML",
+        "尽管MAML在少量样本学习问题中表现良好，但其训练稳定性需要昂贵的超参数调优。",
+        "Omniglot database (1,200 classes)",
+        "无直接提及的指标",
+        "MAML",
+        "Omniglot database"
+      ],
+      "key_papers": [],
+      "dominant_types": [
+        "Method",
+        "Dataset",
+        "Task"
+      ],
+      "semantic_tag": "Benchmark & Dataset Cluster",
+      "summary": "",
+      "community_name": "Benchmark & Dataset Cluster"
+    },
+    "4": {
+      "nodes": [
+        "paper:1905.05461v2",
+        "method:一种学习跨不可比较空间生成模型的方法",
+        "task:尽管现有的生成对抗网络（gan）能够学习一个分布以忠实恢复参考分布，但在某些情况下，我们可能仅想学习某些方面（如簇或流形结构），同时修改其他方面（如样式、方向或维度）。",
+        "contribution:开发了一种新颖的模型来学习跨不可比较空间的生成模型。",
+        "contribution:该方法利用gromov-wasserstein距离进行分布比较。",
+        "contribution:展示了该模型在流形学习、关系学习和跨域学习等任务中的应用潜力。"
+      ],
+      "key_entities": [
+        "Learning Generative Models across Incomparable Spaces",
+        "一种学习跨不可比较空间生成模型的方法",
+        "尽管现有的生成对抗网络（GAN）能够学习一个分布以忠实恢复参考分布，但在某些情况下，我们可能仅想学习某些方面（如簇或流形结构），同时修改其他方面（如样式、方向或维度）。",
+        "开发了一种新颖的模型来学习跨不可比较空间的生成模型。",
+        "该方法利用Gromov-Wasserstein距离进行分布比较。",
+        "展示了该模型在流形学习、关系学习和跨域学习等任务中的应用潜力。"
+      ],
+      "key_papers": [
+        "Learning Generative Models across Incomparable Spaces"
+      ],
+      "dominant_types": [
+        "Contribution",
+        "Paper",
+        "Method"
+      ],
+      "semantic_tag": "Research Contributions Cluster",
+      "summary": "",
+      "community_name": "Research Contributions Cluster"
+    },
+    "5": {
+      "nodes": [
+        "paper:1805.09921v4",
+        "method:ml-pip",
+        "task:在现有数据效率较低的元学习方法中开发一种更高效且通用的框架。",
+        "dataset:未直接提及具体数据集",
+        "contribution:开发了一种新的框架 ml-pip 用于元学习中的概率推理。",
+        "contribution:引入了 versa，一种运用灵活且通用的归一化网络进行少量样 examples 态学习，一次前向传播输出任务特定参数的方法。",
+        "contribution:versaa 在基准数据集上达到了最优结果，能够处理任意数量的射击次数以及分类任务中的任意数量的类。",
+        "method:versaa",
+        "task:few-shot learning",
+        "task:shapenet view reconstruction",
+        "task:classification"
+      ],
+      "key_entities": [
+        "Meta-Learning Probabilistic Inference For Prediction",
+        "ML-PIP",
+        "在现有数据效率较低的元学习方法中开发一种更高效且通用的框架。",
+        "未直接提及具体数据集",
+        "开发了一种新的框架 ML-PIP 用于元学习中的概率推理。",
+        "引入了 VERSA，一种运用灵活且通用的归一化网络进行少量样/examples 态学习，一次前向传播输出任务特定参数的方法。",
+        "VERSAA 在基准数据集上达到了最优结果，能够处理任意数量的射击次数以及分类任务中的任意数量的类。",
+        "VERSAA",
+        "Few-shot Learning",
+        "ShapeNet View Reconstruction",
+        "Classification"
+      ],
+      "key_papers": [
+        "Meta-Learning Probabilistic Inference For Prediction"
+      ],
+      "dominant_types": [
+        "Task",
+        "Contribution",
+        "Method"
+      ],
+      "semantic_tag": "Research Contributions Cluster",
+      "summary": "",
+      "community_name": "Research Contributions Cluster"
+    },
+    "6": {
+      "nodes": [
+        "task:active learning for data streams",
+        "method:pool-based active learning",
+        "method:stream-based active learning",
+        "concept:recently proposed approaches"
+      ],
+      "key_entities": [
+        "active learning for data streams",
+        "pool-based active learning",
+        "stream-based active learning",
+        "recently proposed approaches"
+      ],
+      "key_papers": [],
+      "dominant_types": [
+        "Method",
+        "Task",
+        "Concept"
+      ],
+      "semantic_tag": "Task & Application Cluster",
+      "summary": "",
+      "community_name": "Task & Application Cluster"
+    },
+    "7": {
+      "nodes": [
+        "concept:unified framework",
+        "method:auxiliary loss",
+        "concept:mini-batch setting",
+        "concept:full-batch setting"
+      ],
+      "key_entities": [
+        "Unified Framework",
+        "Auxiliary Loss",
+        "Mini-Batch Setting",
+        "Full-Batch Setting"
+      ],
+      "key_papers": [],
+      "dominant_types": [
+        "Concept",
+        "Method"
+      ],
+      "semantic_tag": "Research Topic Cluster",
+      "summary": "",
+      "community_name": "Research Topic Cluster"
+    },
+    "8": {
+      "nodes": [
+        "method:generative models",
+        "concept:gromov-wasserstein distance",
+        "task:manifold learning",
+        "task:relation learning",
+        "task:cross-domain learning"
+      ],
+      "key_entities": [
+        "generative models",
+        "Gromov-Wasserstein distance",
+        "manifold learning",
+        "relation learning",
+        "cross-domain learning"
+      ],
+      "key_papers": [],
+      "dominant_types": [
+        "Task",
+        "Method",
+        "Concept"
+      ],
+      "semantic_tag": "Task & Application Cluster",
+      "summary": "",
+      "community_name": "Task & Application Cluster"
+    }
+  },
+  "citation_graph": {},
+  "stats": {
+    "node_count": 55,
+    "edge_count": 73,
+    "node_type_count": {
+      "Paper": 5,
+      "Method": 11,
+      "Task": 12,
+      "Contribution": 15,
+      "Dataset": 3,
+      "Metric": 1,
+      "Concept": 8
+    },
+    "paper_count": 5,
+    "community_count": 0,
+    "citation_edge_count": 0
+  }
+}

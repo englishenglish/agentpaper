@@ -13,6 +13,7 @@ class BackToFrontData(BaseModel):
 class ExecutionState(str, Enum):
     """工作流执行状态枚举"""
     INITIALIZING = "initializing"
+    INTENT_RECOGNIZING = "intent_recognizing"
     SEARCHING = "searching"
     READING = "reading"
     PARSING = "parsing"

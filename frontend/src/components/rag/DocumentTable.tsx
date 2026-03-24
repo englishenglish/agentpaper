@@ -1,12 +1,13 @@
 'use client';
 
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import { useRagStore } from '@/store/ragStore';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
-import { Trash2, Upload, RefreshCw, FileText, Loader2 } from 'lucide-react';
+import { Trash2, Upload, RefreshCw, FileText, Loader2, Eye } from 'lucide-react';
 import { formatDate } from '@/lib/utils';
 import type { EmbeddingStatus } from '@/types';
+import { DocumentChunksModal } from './DocumentChunksModal';
 
 const STATUS_CONFIG: Record<string, { label: string; variant: 'success' | 'info' | 'warning' | 'destructive' | 'secondary' }> = {
   completed: { label: '已完成', variant: 'success' },
@@ -30,6 +31,8 @@ export function DocumentTable({ dbId }: DocumentTableProps) {
   const { documents, deleteDocument, uploadAndAddDocument, fetchDocuments, isUploading } = useRagStore();
   const fileInputRef = useRef<HTMLInputElement>(null);
   const docs = documents[dbId] ?? [];
+
+  const [viewingDoc, setViewingDoc] = useState<{ id: string; filename: string } | null>(null);
 
   const handleUpload = async (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
@@ -130,6 +133,15 @@ export function DocumentTable({ dbId }: DocumentTableProps) {
                     <Button
                       variant="ghost"
                       size="icon"
+                      className="h-7 w-7 text-muted-foreground hover:text-primary"
+                      onClick={() => setViewingDoc({ id: doc.file_id, filename: doc.filename })}
+                      title="查看切片"
+                    >
+                      <Eye className="w-3.5 h-3.5" />
+                    </Button>
+                    <Button
+                      variant="ghost"
+                      size="icon"
                       className="h-7 w-7 hover:text-destructive"
                       onClick={() => deleteDocument(dbId, doc.file_id)}
                       title="删除文档"
@@ -142,6 +154,16 @@ export function DocumentTable({ dbId }: DocumentTableProps) {
             </tbody>
           </table>
         </div>
+      )}
+
+      {viewingDoc && (
+        <DocumentChunksModal
+          isOpen={!!viewingDoc}
+          onClose={() => setViewingDoc(null)}
+          dbId={dbId}
+          docId={viewingDoc.id}
+          filename={viewingDoc.filename}
+        />
       )}
     </div>
   );

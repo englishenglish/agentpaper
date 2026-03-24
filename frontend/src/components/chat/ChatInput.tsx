@@ -6,6 +6,7 @@ import { Textarea } from '@/components/ui/textarea';
 import { Send, Square, Globe, Paperclip } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { useChatStore } from '@/store/chatStore';
+import { KbSelector } from './KbSelector';
 
 interface ChatInputProps {
   onSend: (content: string) => void;
@@ -86,6 +87,11 @@ export function ChatInput({ onSend, onStop, isGenerating, disabled }: ChatInputP
               </button>
             ))}
           </div>
+        </div>
+
+        {/* Selected knowledge base tags */}
+        <div className="mb-2">
+          <KbSelector />
         </div>
 
         {/* Input area */}

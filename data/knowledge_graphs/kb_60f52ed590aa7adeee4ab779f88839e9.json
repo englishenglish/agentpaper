@@ -1,0 +1,863 @@
+{
+  "db_id": "kb_60f52ed590aa7adeee4ab779f88839e9",
+  "nodes": {
+    "paper:2303.05745v3": {
+      "id": "paper:2303.05745v3",
+      "type": "Paper",
+      "label": "Multi-site, Multi-domain Airway Tree Modeling (ATM'22): A Public Benchmark for Pulmonary Airway Segmentation",
+      "norm_label": "multi-site multi-domain airway tree modeling atm 22 a public benchmark for pulmonary airway segmentation"
+    },
+    "task:为了提供一个基准用于医学成像社区，解决有限的公开标注数据集限制了数据驱动方法的发展和新算法的详细性能评估。": {
+      "id": "task:为了提供一个基准用于医学成像社区，解决有限的公开标注数据集限制了数据驱动方法的发展和新算法的详细性能评估。",
+      "type": "Task",
+      "label": "为了提供一个基准用于医学成像社区，解决有限的公开标注数据集限制了数据驱动方法的发展和新算法的详细性能评估。",
+      "norm_label": "为了提供一个基准用于医学成像社区，解决有限的公开标注数据集限制了数据驱动方法的发展和新算法的详细性能评估。"
+    },
+    "dataset:500 ct scans 300 for training 50 for validation and 150 for testing": {
+      "id": "dataset:500 ct scans 300 for training 50 for validation and 150 for testing",
+      "type": "Dataset",
+      "label": "500 CT scans (300 for training, 50 for validation, and 150 for testing)",
+      "norm_label": "500 ct scans 300 for training 50 for validation and 150 for testing"
+    },
+    "contribution:提供了适合肺气道分割挑战的大规模ct扫描和详细肺气道标注。": {
+      "id": "contribution:提供了适合肺气道分割挑战的大规模ct扫描和详细肺气道标注。",
+      "type": "Contribution",
+      "label": "提供了适合肺气道分割挑战的大规模CT扫描和详细肺气道标注。",
+      "norm_label": "提供了适合肺气道分割挑战的大规模ct扫描和详细肺气道标注。"
+    },
+    "contribution:组织了multi-site multi-domain airway tree modeling atm 22 挑战，作为miccai 2022会议的官方挑战事件。": {
+      "id": "contribution:组织了multi-site multi-domain airway tree modeling atm 22 挑战，作为miccai 2022会议的官方挑战事件。",
+      "type": "Contribution",
+      "label": "组织了Multi-site, Multi-domain Airway Tree Modeling (ATM'22)挑战，作为MICCAI 2022会议的官方挑战事件。",
+      "norm_label": "组织了multi-site multi-domain airway tree modeling atm 22 挑战，作为miccai 2022会议的官方挑战事件。"
+    },
+    "contribution:公开呼叫设计，训练数据和黄金标准评估注册后可获取。": {
+      "id": "contribution:公开呼叫设计，训练数据和黄金标准评估注册后可获取。",
+      "type": "Contribution",
+      "label": "公开呼叫设计，训练数据和黄金标准评估注册后可获取。",
+      "norm_label": "公开呼叫设计，训练数据和黄金标准评估注册后可获取。"
+    },
+    "paper:hep-ph 0304186v1": {
+      "id": "paper:hep-ph 0304186v1",
+      "type": "Paper",
+      "label": "Structure of the Standard Model",
+      "norm_label": "structure of the standard model"
+    },
+    "task:描述标准模型的结构，包括自发对称性破缺、拉格朗日量的重表达以及质量本征态下拉格朗日量的表示，以及标准模型存在的问题。": {
+      "id": "task:描述标准模型的结构，包括自发对称性破缺、拉格朗日量的重表达以及质量本征态下拉格朗日量的表示，以及标准模型存在的问题。",
+      "type": "Task",
+      "label": "描述标准模型的结构，包括自发对称性破缺、拉格朗日量的重表达以及质量本征态下拉格朗日量的表示，以及标准模型存在的问题。",
+      "norm_label": "描述标准模型的结构，包括自发对称性破缺、拉格朗日量的重表达以及质量本征态下拉格朗日量的表示，以及标准模型存在的问题。"
+    },
+    "contribution:详细总结了标准模型的结构": {
+      "id": "contribution:详细总结了标准模型的结构",
+      "type": "Contribution",
+      "label": "详细总结了标准模型的结构",
+      "norm_label": "详细总结了标准模型的结构"
+    },
+    "contribution:解释了拉格朗日量和相互作用": {
+      "id": "contribution:解释了拉格朗日量和相互作用",
+      "type": "Contribution",
+      "label": "解释了拉格朗日量和相互作用",
+      "norm_label": "解释了拉格朗日量和相互作用"
+    },
+    "contribution:描述了标准模型存在的问题": {
+      "id": "contribution:描述了标准模型存在的问题",
+      "type": "Contribution",
+      "label": "描述了标准模型存在的问题",
+      "norm_label": "描述了标准模型存在的问题"
+    },
+    "paper:1002.1188v1": {
+      "id": "paper:1002.1188v1",
+      "type": "Paper",
+      "label": "Framework for Visualizing Model-Driven Software Evolution and its Application",
+      "norm_label": "framework for visualizing model-driven software evolution and its application"
+    },
+    "method:goal question metric paradigm": {
+      "id": "method:goal question metric paradigm",
+      "type": "Method",
+      "label": "Goal Question Metric Paradigm",
+      "norm_label": "goal question metric paradigm"
+    },
+    "task:尽管在model-driven software evolution中缺乏有效地可视化模型演化的方法，但为了通过应用goal question metric paradigm来可视化模型的演化，作者提": {
+      "id": "task:尽管在model-driven software evolution中缺乏有效地可视化模型演化的方法，但为了通过应用goal question metric paradigm来可视化模型的演化，作者提",
+      "type": "Task",
+      "label": "尽管在Model-Driven Software Evolution中缺乏有效地可视化模型演化的方法，但为了通过应用Goal Question Metric Paradigm来可视化模型的演化，作者提",
+      "norm_label": "尽管在model-driven software evolution中缺乏有效地可视化模型演化的方法，但为了通过应用goal question metric paradigm来可视化模型的演化，作者提"
+    },
+    "contribution:提出了一种基于goal question metric paradigm的框架，用于评估model-driven software evolution过程。": {
+      "id": "contribution:提出了一种基于goal question metric paradigm的框架，用于评估model-driven software evolution过程。",
+      "type": "Contribution",
+      "label": "提出了一种基于Goal Question Metric Paradigm的框架，用于评估Model-Driven Software Evolution过程。",
+      "norm_label": "提出了一种基于goal question metric paradigm的框架，用于评估model-driven software evolution过程。"
+    },
+    "contribution:该框架包含7个关键区域和22个关键特征来详细评估模型演化。": {
+      "id": "contribution:该框架包含7个关键区域和22个关键特征来详细评估模型演化。",
+      "type": "Contribution",
+      "label": "该框架包含7个关键区域和22个关键特征来详细评估模型演化。",
+      "norm_label": "该框架包含7个关键区域和22个关键特征来详细评估模型演化。"
+    },
+    "contribution:此框架能够用于不同视图中的模型可视化，捕捉模型演变过程中信息。": {
+      "id": "contribution:此框架能够用于不同视图中的模型可视化，捕捉模型演变过程中信息。",
+      "type": "Contribution",
+      "label": "此框架能够用于不同视图中的模型可视化，捕捉模型演变过程中信息。",
+      "norm_label": "此框架能够用于不同视图中的模型可视化，捕捉模型演变过程中信息。"
+    },
+    "paper:2305.16307v3": {
+      "id": "paper:2305.16307v3",
+      "type": "Paper",
+      "label": "IndicTrans2: Towards High-Quality and Accessible Machine Translation Models for all 22 Scheduled Indian Languages",
+      "norm_label": "indictrans2 towards high-quality and accessible machine translation models for all 22 scheduled indian languages"
+    },
+    "task:尽管当前没有平行训练数据覆盖所有22种印度语言，没有涵盖印度内容的基准测试，且没有支持所有22种印度语言的翻译模型。": {
+      "id": "task:尽管当前没有平行训练数据覆盖所有22种印度语言，没有涵盖印度内容的基准测试，且没有支持所有22种印度语言的翻译模型。",
+      "type": "Task",
+      "label": "尽管当前没有平行训练数据覆盖所有22种印度语言，没有涵盖印度内容的基准测试，且没有支持所有22种印度语言的翻译模型。",
+      "norm_label": "尽管当前没有平行训练数据覆盖所有22种印度语言，没有涵盖印度内容的基准测试，且没有支持所有22种印度语言的翻译模型。"
+    },
+    "dataset:bharat parallel corpus collection bpcc": {
+      "id": "dataset:bharat parallel corpus collection bpcc",
+      "type": "Dataset",
+      "label": "Bharat Parallel Corpus Collection (BPCC)",
+      "norm_label": "bharat parallel corpus collection bpcc"
+    },
+    "metric:未在摘要中提及具体的评价指标": {
+      "id": "metric:未在摘要中提及具体的评价指标",
+      "type": "Metric",
+      "label": "未在摘要中提及具体的评价指标",
+      "norm_label": "未在摘要中提及具体的评价指标"
+    },
+    "contribution:bpcc 是最大规模的公共可获取的印度语言平行语料库，包含230m句对。": {
+      "id": "contribution:bpcc 是最大规模的公共可获取的印度语言平行语料库，包含230m句对。",
+      "type": "Contribution",
+      "label": "BPCC 是最大规模的公共可获取的印度语言平行语料库，包含230M句对。",
+      "norm_label": "bpcc 是最大规模的公共可获取的印度语言平行语料库，包含230m句对。"
+    },
+    "contribution:发布了第一个覆盖所有22种印度语言的多向平行基准测试。": {
+      "id": "contribution:发布了第一个覆盖所有22种印度语言的多向平行基准测试。",
+      "type": "Contribution",
+      "label": "发布了第一个覆盖所有22种印度语言的多向平行基准测试。",
+      "norm_label": "发布了第一个覆盖所有22种印度语言的多向平行基准测试。"
+    },
+    "contribution:indictrans2 是第一个支持所有22种印度语言的模型，并在多个基准测试上超过了现有的模型。": {
+      "id": "contribution:indictrans2 是第一个支持所有22种印度语言的模型，并在多个基准测试上超过了现有的模型。",
+      "type": "Contribution",
+      "label": "IndicTrans2 是第一个支持所有22种印度语言的模型，并在多个基准测试上超过了现有的模型。",
+      "norm_label": "indictrans2 是第一个支持所有22种印度语言的模型，并在多个基准测试上超过了现有的模型。"
+    },
+    "paper:1806.05491v1": {
+      "id": "paper:1806.05491v1",
+      "type": "Paper",
+      "label": "Dynamical masses of M-dwarf binaries in young moving groups: I - The case of TWA 22 and GJ 2060",
+      "norm_label": "dynamical masses of m-dwarf binaries in young moving groups i - the case of twa 22 and gj 2060"
+    },
+    "task:尽管演化模型在低质量恒星和行星的质量预测中被认为在年轻年龄（ 200 myr）时可靠性较低，但需要测量这些天体的动态质量来校准演化轨道并确定年轻移动组的年龄。": {
+      "id": "task:尽管演化模型在低质量恒星和行星的质量预测中被认为在年轻年龄（ 200 myr）时可靠性较低，但需要测量这些天体的动态质量来校准演化轨道并确定年轻移动组的年龄。",
+      "type": "Task",
+      "label": "尽管演化模型在低质量恒星和行星的质量预测中被认为在年轻年龄（<200 Myr）时可靠性较低，但需要测量这些天体的动态质量来校准演化轨道并确定年轻移动组的年龄。",
+      "norm_label": "尽管演化模型在低质量恒星和行星的质量预测中被认为在年轻年龄（ 200 myr）时可靠性较低，但需要测量这些天体的动态质量来校准演化轨道并确定年轻移动组的年龄。"
+    },
+    "contribution:发现了twa 22的动态质量和光谱类型，检验了模型预测值的准确性。": {
+      "id": "contribution:发现了twa 22的动态质量和光谱类型，检验了模型预测值的准确性。",
+      "type": "Contribution",
+      "label": "发现了TWA 22的动态质量和光谱类型，检验了模型预测值的准确性。",
+      "norm_label": "发现了twa 22的动态质量和光谱类型，检验了模型预测值的准确性。"
+    },
+    "contribution:提供了关于gj 2060 ab的详细光谱和动态质量分析，可能揭示了新的次要天体或模型偏差。": {
+      "id": "contribution:提供了关于gj 2060 ab的详细光谱和动态质量分析，可能揭示了新的次要天体或模型偏差。",
+      "type": "Contribution",
+      "label": "提供了关于GJ 2060 AB的详细光谱和动态质量分析，可能揭示了新的次要天体或模型偏差。",
+      "norm_label": "提供了关于gj 2060 ab的详细光谱和动态质量分析，可能揭示了新的次要天体或模型偏差。"
+    },
+    "contribution:提出了一种新的方法来测量年轻移动组天体的质量，这将有助于更好地理解低质量恒星的质量演化。": {
+      "id": "contribution:提出了一种新的方法来测量年轻移动组天体的质量，这将有助于更好地理解低质量恒星的质量演化。",
+      "type": "Contribution",
+      "label": "提出了一种新的方法来测量年轻移动组天体的质量，这将有助于更好地理解低质量恒星的质量演化。",
+      "norm_label": "提出了一种新的方法来测量年轻移动组天体的质量，这将有助于更好地理解低质量恒星的质量演化。"
+    },
+    "paper:atm 22": {
+      "id": "paper:atm 22",
+      "type": "Paper",
+      "label": "ATM'22",
+      "norm_label": "atm 22",
+      "description": ""
+    },
+    "task:multi-site multi-domain airway tree modeling": {
+      "id": "task:multi-site multi-domain airway tree modeling",
+      "type": "Task",
+      "label": "Multi-site, Multi-domain Airway Tree Modeling",
+      "norm_label": "multi-site multi-domain airway tree modeling",
+      "description": ""
+    },
+    "dataset:500 ct scans": {
+      "id": "dataset:500 ct scans",
+      "type": "Dataset",
+      "label": "500 CT scans",
+      "norm_label": "500 ct scans",
+      "description": ""
+    },
+    "task:pulmonary airway segmentation": {
+      "id": "task:pulmonary airway segmentation",
+      "type": "Task",
+      "label": "pulmonary airway segmentation",
+      "norm_label": "pulmonary airway segmentation",
+      "description": ""
+    },
+    "concept:standard model": {
+      "id": "concept:standard model",
+      "type": "Concept",
+      "label": "Standard Model",
+      "norm_label": "standard model",
+      "description": ""
+    },
+    "concept:standardmodellagrangian": {
+      "id": "concept:standardmodellagrangian",
+      "type": "Concept",
+      "label": "StandardModelLagrangian",
+      "norm_label": "standardmodellagrangian",
+      "description": ""
+    },
+    "concept:spontaneoussymmetrybreaking": {
+      "id": "concept:spontaneoussymmetrybreaking",
+      "type": "Concept",
+      "label": "SpontaneousSymmetryBreaking",
+      "norm_label": "spontaneoussymmetrybreaking",
+      "description": ""
+    },
+    "concept:masseigenstates": {
+      "id": "concept:masseigenstates",
+      "type": "Concept",
+      "label": "MassEigenstates",
+      "norm_label": "masseigenstates",
+      "description": ""
+    },
+    "concept:gaugeinteractions": {
+      "id": "concept:gaugeinteractions",
+      "type": "Concept",
+      "label": "GaugeInteractions",
+      "norm_label": "gaugeinteractions",
+      "description": ""
+    },
+    "method:framework": {
+      "id": "method:framework",
+      "type": "Method",
+      "label": "Framework",
+      "norm_label": "framework",
+      "description": ""
+    },
+    "task:model-driven software evolution": {
+      "id": "task:model-driven software evolution",
+      "type": "Task",
+      "label": "Model-Driven Software Evolution",
+      "norm_label": "model-driven software evolution",
+      "description": ""
+    },
+    "concept:visualization tools case tools": {
+      "id": "concept:visualization tools case tools",
+      "type": "Concept",
+      "label": "Visualization Tools/CASE Tools",
+      "norm_label": "visualization tools case tools",
+      "description": ""
+    },
+    "method:indictrans2": {
+      "id": "method:indictrans2",
+      "type": "Method",
+      "label": "IndicTrans2",
+      "norm_label": "indictrans2",
+      "description": ""
+    }
+  },
+  "edges": [
+    {
+      "source": "paper:2303.05745v3",
+      "target": "task:为了提供一个基准用于医学成像社区，解决有限的公开标注数据集限制了数据驱动方法的发展和新算法的详细性能评估。",
+      "type": "applied_to",
+      "weight": 0.8
+    },
+    {
+      "source": "paper:2303.05745v3",
+      "target": "dataset:500 ct scans 300 for training 50 for validation and 150 for testing",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "paper:2303.05745v3",
+      "target": "contribution:提供了适合肺气道分割挑战的大规模ct扫描和详细肺气道标注。",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "paper:2303.05745v3",
+      "target": "contribution:组织了multi-site multi-domain airway tree modeling atm 22 挑战，作为miccai 2022会议的官方挑战事件。",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "paper:2303.05745v3",
+      "target": "contribution:公开呼叫设计，训练数据和黄金标准评估注册后可获取。",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "paper:hep-ph 0304186v1",
+      "target": "task:描述标准模型的结构，包括自发对称性破缺、拉格朗日量的重表达以及质量本征态下拉格朗日量的表示，以及标准模型存在的问题。",
+      "type": "applied_to",
+      "weight": 0.8
+    },
+    {
+      "source": "paper:hep-ph 0304186v1",
+      "target": "contribution:详细总结了标准模型的结构",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "paper:hep-ph 0304186v1",
+      "target": "contribution:解释了拉格朗日量和相互作用",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "paper:hep-ph 0304186v1",
+      "target": "contribution:描述了标准模型存在的问题",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "paper:1002.1188v1",
+      "target": "method:goal question metric paradigm",
+      "type": "proposes",
+      "weight": 1.0
+    },
+    {
+      "source": "paper:1002.1188v1",
+      "target": "task:尽管在model-driven software evolution中缺乏有效地可视化模型演化的方法，但为了通过应用goal question metric paradigm来可视化模型的演化，作者提",
+      "type": "applied_to",
+      "weight": 0.8
+    },
+    {
+      "source": "method:goal question metric paradigm",
+      "target": "task:尽管在model-driven software evolution中缺乏有效地可视化模型演化的方法，但为了通过应用goal question metric paradigm来可视化模型的演化，作者提",
+      "type": "solves",
+      "weight": 0.95
+    },
+    {
+      "source": "paper:1002.1188v1",
+      "target": "contribution:提出了一种基于goal question metric paradigm的框架，用于评估model-driven software evolution过程。",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "method:goal question metric paradigm",
+      "target": "contribution:提出了一种基于goal question metric paradigm的框架，用于评估model-driven software evolution过程。",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:1002.1188v1",
+      "target": "contribution:该框架包含7个关键区域和22个关键特征来详细评估模型演化。",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "method:goal question metric paradigm",
+      "target": "contribution:该框架包含7个关键区域和22个关键特征来详细评估模型演化。",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:1002.1188v1",
+      "target": "contribution:此框架能够用于不同视图中的模型可视化，捕捉模型演变过程中信息。",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "method:goal question metric paradigm",
+      "target": "contribution:此框架能够用于不同视图中的模型可视化，捕捉模型演变过程中信息。",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:2305.16307v3",
+      "target": "task:尽管当前没有平行训练数据覆盖所有22种印度语言，没有涵盖印度内容的基准测试，且没有支持所有22种印度语言的翻译模型。",
+      "type": "applied_to",
+      "weight": 0.8
+    },
+    {
+      "source": "paper:2305.16307v3",
+      "target": "dataset:bharat parallel corpus collection bpcc",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "paper:2305.16307v3",
+      "target": "metric:未在摘要中提及具体的评价指标",
+      "type": "achieves",
+      "weight": 0.85
+    },
+    {
+      "source": "paper:2305.16307v3",
+      "target": "contribution:bpcc 是最大规模的公共可获取的印度语言平行语料库，包含230m句对。",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "paper:2305.16307v3",
+      "target": "contribution:发布了第一个覆盖所有22种印度语言的多向平行基准测试。",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "paper:2305.16307v3",
+      "target": "contribution:indictrans2 是第一个支持所有22种印度语言的模型，并在多个基准测试上超过了现有的模型。",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "paper:1806.05491v1",
+      "target": "task:尽管演化模型在低质量恒星和行星的质量预测中被认为在年轻年龄（ 200 myr）时可靠性较低，但需要测量这些天体的动态质量来校准演化轨道并确定年轻移动组的年龄。",
+      "type": "applied_to",
+      "weight": 0.8
+    },
+    {
+      "source": "paper:1806.05491v1",
+      "target": "contribution:发现了twa 22的动态质量和光谱类型，检验了模型预测值的准确性。",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "paper:1806.05491v1",
+      "target": "contribution:提供了关于gj 2060 ab的详细光谱和动态质量分析，可能揭示了新的次要天体或模型偏差。",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "paper:1806.05491v1",
+      "target": "contribution:提出了一种新的方法来测量年轻移动组天体的质量，这将有助于更好地理解低质量恒星的质量演化。",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "paper:atm 22",
+      "target": "task:multi-site multi-domain airway tree modeling",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:atm 22",
+      "target": "dataset:500 ct scans",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "concept:standard model",
+      "target": "concept:standardmodellagrangian",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "concept:standard model",
+      "target": "concept:spontaneoussymmetrybreaking",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "concept:standard model",
+      "target": "concept:masseigenstates",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "concept:standard model",
+      "target": "concept:gaugeinteractions",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "method:framework",
+      "target": "method:goal question metric paradigm",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "method:framework",
+      "target": "task:model-driven software evolution",
+      "type": "applied_to",
+      "weight": 0.8
+    },
+    {
+      "source": "method:framework",
+      "target": "concept:visualization tools case tools",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "method:framework",
+      "target": "concept:visualization tools case tools",
+      "type": "evaluates_on",
+      "weight": 0.9
+    },
+    {
+      "source": "method:indictrans2",
+      "target": "dataset:bharat parallel corpus collection bpcc",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "method:indictrans2",
+      "target": "dataset:bharat parallel corpus collection bpcc",
+      "type": "evaluates_on",
+      "weight": 0.9
+    },
+    {
+      "source": "method:indictrans2",
+      "target": "dataset:bharat parallel corpus collection bpcc",
+      "type": "achieves",
+      "weight": 0.85
+    }
+  ],
+  "paper_entities": {
+    "2303.05745v3": [
+      "paper:2303.05745v3",
+      "task:为了提供一个基准用于医学成像社区，解决有限的公开标注数据集限制了数据驱动方法的发展和新算法的详细性能评估。",
+      "dataset:500 ct scans 300 for training 50 for validation and 150 for testing",
+      "contribution:提供了适合肺气道分割挑战的大规模ct扫描和详细肺气道标注。",
+      "contribution:组织了multi-site multi-domain airway tree modeling atm 22 挑战，作为miccai 2022会议的官方挑战事件。",
+      "contribution:公开呼叫设计，训练数据和黄金标准评估注册后可获取。",
+      "paper:atm 22",
+      "task:multi-site multi-domain airway tree modeling",
+      "dataset:500 ct scans",
+      "task:pulmonary airway segmentation"
+    ],
+    "hep-ph/0304186v1": [
+      "paper:hep-ph 0304186v1",
+      "task:描述标准模型的结构，包括自发对称性破缺、拉格朗日量的重表达以及质量本征态下拉格朗日量的表示，以及标准模型存在的问题。",
+      "contribution:详细总结了标准模型的结构",
+      "contribution:解释了拉格朗日量和相互作用",
+      "contribution:描述了标准模型存在的问题",
+      "concept:standard model",
+      "concept:standardmodellagrangian",
+      "concept:spontaneoussymmetrybreaking",
+      "concept:masseigenstates",
+      "concept:gaugeinteractions"
+    ],
+    "1002.1188v1": [
+      "paper:1002.1188v1",
+      "method:goal question metric paradigm",
+      "task:尽管在model-driven software evolution中缺乏有效地可视化模型演化的方法，但为了通过应用goal question metric paradigm来可视化模型的演化，作者提",
+      "contribution:提出了一种基于goal question metric paradigm的框架，用于评估model-driven software evolution过程。",
+      "contribution:该框架包含7个关键区域和22个关键特征来详细评估模型演化。",
+      "contribution:此框架能够用于不同视图中的模型可视化，捕捉模型演变过程中信息。",
+      "method:framework",
+      "task:model-driven software evolution",
+      "concept:visualization tools case tools"
+    ],
+    "2305.16307v3": [
+      "paper:2305.16307v3",
+      "task:尽管当前没有平行训练数据覆盖所有22种印度语言，没有涵盖印度内容的基准测试，且没有支持所有22种印度语言的翻译模型。",
+      "dataset:bharat parallel corpus collection bpcc",
+      "metric:未在摘要中提及具体的评价指标",
+      "contribution:bpcc 是最大规模的公共可获取的印度语言平行语料库，包含230m句对。",
+      "contribution:发布了第一个覆盖所有22种印度语言的多向平行基准测试。",
+      "contribution:indictrans2 是第一个支持所有22种印度语言的模型，并在多个基准测试上超过了现有的模型。",
+      "method:indictrans2"
+    ],
+    "1806.05491v1": [
+      "paper:1806.05491v1",
+      "task:尽管演化模型在低质量恒星和行星的质量预测中被认为在年轻年龄（ 200 myr）时可靠性较低，但需要测量这些天体的动态质量来校准演化轨道并确定年轻移动组的年龄。",
+      "contribution:发现了twa 22的动态质量和光谱类型，检验了模型预测值的准确性。",
+      "contribution:提供了关于gj 2060 ab的详细光谱和动态质量分析，可能揭示了新的次要天体或模型偏差。",
+      "contribution:提出了一种新的方法来测量年轻移动组天体的质量，这将有助于更好地理解低质量恒星的质量演化。"
+    ]
+  },
+  "entity_aliases": {
+    "multi-site multi-domain airway tree modeling atm 22 a public benchmark for pulmonary airway segmentation": "paper:2303.05745v3",
+    "为了提供一个基准用于医学成像社区，解决有限的公开标注数据集限制了数据驱动方法的发展和新算法的详细性能评估。": "task:为了提供一个基准用于医学成像社区，解决有限的公开标注数据集限制了数据驱动方法的发展和新算法的详细性能评估。",
+    "500 ct scans 300 for training 50 for validation and 150 for testing": "dataset:500 ct scans 300 for training 50 for validation and 150 for testing",
+    "提供了适合肺气道分割挑战的大规模ct扫描和详细肺气道标注。": "contribution:提供了适合肺气道分割挑战的大规模ct扫描和详细肺气道标注。",
+    "组织了multi-site multi-domain airway tree modeling atm 22 挑战，作为miccai 2022会议的官方挑战事件。": "contribution:组织了multi-site multi-domain airway tree modeling atm 22 挑战，作为miccai 2022会议的官方挑战事件。",
+    "公开呼叫设计，训练数据和黄金标准评估注册后可获取。": "contribution:公开呼叫设计，训练数据和黄金标准评估注册后可获取。",
+    "structure of the standard model": "paper:hep-ph 0304186v1",
+    "描述标准模型的结构，包括自发对称性破缺、拉格朗日量的重表达以及质量本征态下拉格朗日量的表示，以及标准模型存在的问题。": "task:描述标准模型的结构，包括自发对称性破缺、拉格朗日量的重表达以及质量本征态下拉格朗日量的表示，以及标准模型存在的问题。",
+    "详细总结了标准模型的结构": "contribution:详细总结了标准模型的结构",
+    "解释了拉格朗日量和相互作用": "contribution:解释了拉格朗日量和相互作用",
+    "描述了标准模型存在的问题": "contribution:描述了标准模型存在的问题",
+    "framework for visualizing model-driven software evolution and its application": "paper:1002.1188v1",
+    "goal question metric paradigm": "method:goal question metric paradigm",
+    "尽管在model-driven software evolution中缺乏有效地可视化模型演化的方法，但为了通过应用goal question metric paradigm来可视化模型的演化，作者提": "task:尽管在model-driven software evolution中缺乏有效地可视化模型演化的方法，但为了通过应用goal question metric paradigm来可视化模型的演化，作者提",
+    "提出了一种基于goal question metric paradigm的框架，用于评估model-driven software evolution过程。": "contribution:提出了一种基于goal question metric paradigm的框架，用于评估model-driven software evolution过程。",
+    "该框架包含7个关键区域和22个关键特征来详细评估模型演化。": "contribution:该框架包含7个关键区域和22个关键特征来详细评估模型演化。",
+    "此框架能够用于不同视图中的模型可视化，捕捉模型演变过程中信息。": "contribution:此框架能够用于不同视图中的模型可视化，捕捉模型演变过程中信息。",
+    "indictrans2 towards high-quality and accessible machine translation models for all 22 scheduled indian languages": "paper:2305.16307v3",
+    "尽管当前没有平行训练数据覆盖所有22种印度语言，没有涵盖印度内容的基准测试，且没有支持所有22种印度语言的翻译模型。": "task:尽管当前没有平行训练数据覆盖所有22种印度语言，没有涵盖印度内容的基准测试，且没有支持所有22种印度语言的翻译模型。",
+    "bharat parallel corpus collection bpcc": "dataset:bharat parallel corpus collection bpcc",
+    "未在摘要中提及具体的评价指标": "metric:未在摘要中提及具体的评价指标",
+    "bpcc 是最大规模的公共可获取的印度语言平行语料库，包含230m句对。": "contribution:bpcc 是最大规模的公共可获取的印度语言平行语料库，包含230m句对。",
+    "发布了第一个覆盖所有22种印度语言的多向平行基准测试。": "contribution:发布了第一个覆盖所有22种印度语言的多向平行基准测试。",
+    "indictrans2 是第一个支持所有22种印度语言的模型，并在多个基准测试上超过了现有的模型。": "contribution:indictrans2 是第一个支持所有22种印度语言的模型，并在多个基准测试上超过了现有的模型。",
+    "dynamical masses of m-dwarf binaries in young moving groups i - the case of twa 22 and gj 2060": "paper:1806.05491v1",
+    "尽管演化模型在低质量恒星和行星的质量预测中被认为在年轻年龄（ 200 myr）时可靠性较低，但需要测量这些天体的动态质量来校准演化轨道并确定年轻移动组的年龄。": "task:尽管演化模型在低质量恒星和行星的质量预测中被认为在年轻年龄（ 200 myr）时可靠性较低，但需要测量这些天体的动态质量来校准演化轨道并确定年轻移动组的年龄。",
+    "发现了twa 22的动态质量和光谱类型，检验了模型预测值的准确性。": "contribution:发现了twa 22的动态质量和光谱类型，检验了模型预测值的准确性。",
+    "提供了关于gj 2060 ab的详细光谱和动态质量分析，可能揭示了新的次要天体或模型偏差。": "contribution:提供了关于gj 2060 ab的详细光谱和动态质量分析，可能揭示了新的次要天体或模型偏差。",
+    "提出了一种新的方法来测量年轻移动组天体的质量，这将有助于更好地理解低质量恒星的质量演化。": "contribution:提出了一种新的方法来测量年轻移动组天体的质量，这将有助于更好地理解低质量恒星的质量演化。",
+    "atm 22": "paper:atm 22",
+    "multi-site multi-domain airway tree modeling": "task:multi-site multi-domain airway tree modeling",
+    "500 ct scans": "dataset:500 ct scans",
+    "pulmonary airway segmentation": "task:pulmonary airway segmentation",
+    "standard model": "concept:standard model",
+    "standardmodellagrangian": "concept:standardmodellagrangian",
+    "spontaneoussymmetrybreaking": "concept:spontaneoussymmetrybreaking",
+    "masseigenstates": "concept:masseigenstates",
+    "gaugeinteractions": "concept:gaugeinteractions",
+    "framework": "method:framework",
+    "model-driven software evolution": "task:model-driven software evolution",
+    "visualization tools case tools": "concept:visualization tools case tools",
+    "indictrans2": "method:indictrans2"
+  },
+  "communities": {
+    "0": {
+      "nodes": [
+        "paper:2303.05745v3",
+        "task:为了提供一个基准用于医学成像社区，解决有限的公开标注数据集限制了数据驱动方法的发展和新算法的详细性能评估。",
+        "dataset:500 ct scans 300 for training 50 for validation and 150 for testing",
+        "contribution:提供了适合肺气道分割挑战的大规模ct扫描和详细肺气道标注。",
+        "contribution:组织了multi-site multi-domain airway tree modeling atm 22 挑战，作为miccai 2022会议的官方挑战事件。",
+        "contribution:公开呼叫设计，训练数据和黄金标准评估注册后可获取。",
+        "task:pulmonary airway segmentation"
+      ],
+      "key_entities": [
+        "Multi-site, Multi-domain Airway Tree Modeling (ATM'22): A Public Benchmark for Pulmonary Airway Segmentation",
+        "为了提供一个基准用于医学成像社区，解决有限的公开标注数据集限制了数据驱动方法的发展和新算法的详细性能评估。",
+        "500 CT scans (300 for training, 50 for validation, and 150 for testing)",
+        "提供了适合肺气道分割挑战的大规模CT扫描和详细肺气道标注。",
+        "组织了Multi-site, Multi-domain Airway Tree Modeling (ATM'22)挑战，作为MICCAI 2022会议的官方挑战事件。",
+        "公开呼叫设计，训练数据和黄金标准评估注册后可获取。",
+        "pulmonary airway segmentation"
+      ],
+      "key_papers": [
+        "Multi-site, Multi-domain Airway Tree Modeling (ATM'22): A Public Benchmark for Pulmonary Airway Segmentation"
+      ],
+      "dominant_types": [
+        "Contribution",
+        "Task",
+        "Paper"
+      ],
+      "semantic_tag": "Research Contributions Cluster",
+      "summary": "",
+      "community_name": "Research Contributions Cluster"
+    },
+    "1": {
+      "nodes": [
+        "paper:hep-ph 0304186v1",
+        "task:描述标准模型的结构，包括自发对称性破缺、拉格朗日量的重表达以及质量本征态下拉格朗日量的表示，以及标准模型存在的问题。",
+        "contribution:详细总结了标准模型的结构",
+        "contribution:解释了拉格朗日量和相互作用",
+        "contribution:描述了标准模型存在的问题"
+      ],
+      "key_entities": [
+        "Structure of the Standard Model",
+        "描述标准模型的结构，包括自发对称性破缺、拉格朗日量的重表达以及质量本征态下拉格朗日量的表示，以及标准模型存在的问题。",
+        "详细总结了标准模型的结构",
+        "解释了拉格朗日量和相互作用",
+        "描述了标准模型存在的问题"
+      ],
+      "key_papers": [
+        "Structure of the Standard Model"
+      ],
+      "dominant_types": [
+        "Contribution",
+        "Paper",
+        "Task"
+      ],
+      "semantic_tag": "Research Contributions Cluster",
+      "summary": "",
+      "community_name": "Research Contributions Cluster"
+    },
+    "2": {
+      "nodes": [
+        "paper:1002.1188v1",
+        "method:goal question metric paradigm",
+        "task:尽管在model-driven software evolution中缺乏有效地可视化模型演化的方法，但为了通过应用goal question metric paradigm来可视化模型的演化，作者提",
+        "contribution:提出了一种基于goal question metric paradigm的框架，用于评估model-driven software evolution过程。",
+        "contribution:该框架包含7个关键区域和22个关键特征来详细评估模型演化。",
+        "contribution:此框架能够用于不同视图中的模型可视化，捕捉模型演变过程中信息。"
+      ],
+      "key_entities": [
+        "Framework for Visualizing Model-Driven Software Evolution and its Application",
+        "Goal Question Metric Paradigm",
+        "尽管在Model-Driven Software Evolution中缺乏有效地可视化模型演化的方法，但为了通过应用Goal Question Metric Paradigm来可视化模型的演化，作者提",
+        "提出了一种基于Goal Question Metric Paradigm的框架，用于评估Model-Driven Software Evolution过程。",
+        "该框架包含7个关键区域和22个关键特征来详细评估模型演化。",
+        "此框架能够用于不同视图中的模型可视化，捕捉模型演变过程中信息。"
+      ],
+      "key_papers": [
+        "Framework for Visualizing Model-Driven Software Evolution and its Application"
+      ],
+      "dominant_types": [
+        "Contribution",
+        "Paper",
+        "Method"
+      ],
+      "semantic_tag": "Research Contributions Cluster",
+      "summary": "",
+      "community_name": "Research Contributions Cluster"
+    },
+    "3": {
+      "nodes": [
+        "paper:2305.16307v3",
+        "task:尽管当前没有平行训练数据覆盖所有22种印度语言，没有涵盖印度内容的基准测试，且没有支持所有22种印度语言的翻译模型。",
+        "metric:未在摘要中提及具体的评价指标",
+        "contribution:bpcc 是最大规模的公共可获取的印度语言平行语料库，包含230m句对。",
+        "contribution:发布了第一个覆盖所有22种印度语言的多向平行基准测试。",
+        "contribution:indictrans2 是第一个支持所有22种印度语言的模型，并在多个基准测试上超过了现有的模型。"
+      ],
+      "key_entities": [
+        "IndicTrans2: Towards High-Quality and Accessible Machine Translation Models for all 22 Scheduled Indian Languages",
+        "尽管当前没有平行训练数据覆盖所有22种印度语言，没有涵盖印度内容的基准测试，且没有支持所有22种印度语言的翻译模型。",
+        "未在摘要中提及具体的评价指标",
+        "BPCC 是最大规模的公共可获取的印度语言平行语料库，包含230M句对。",
+        "发布了第一个覆盖所有22种印度语言的多向平行基准测试。",
+        "IndicTrans2 是第一个支持所有22种印度语言的模型，并在多个基准测试上超过了现有的模型。"
+      ],
+      "key_papers": [
+        "IndicTrans2: Towards High-Quality and Accessible Machine Translation Models for all 22 Scheduled Indian Languages"
+      ],
+      "dominant_types": [
+        "Contribution",
+        "Paper",
+        "Task"
+      ],
+      "semantic_tag": "Research Contributions Cluster",
+      "summary": "",
+      "community_name": "Research Contributions Cluster"
+    },
+    "4": {
+      "nodes": [
+        "dataset:bharat parallel corpus collection bpcc",
+        "method:indictrans2"
+      ],
+      "key_entities": [
+        "Bharat Parallel Corpus Collection (BPCC)",
+        "IndicTrans2"
+      ],
+      "key_papers": [],
+      "dominant_types": [
+        "Dataset",
+        "Method"
+      ],
+      "semantic_tag": "Benchmark & Dataset Cluster",
+      "summary": "",
+      "community_name": "Benchmark & Dataset Cluster"
+    },
+    "5": {
+      "nodes": [
+        "paper:1806.05491v1",
+        "task:尽管演化模型在低质量恒星和行星的质量预测中被认为在年轻年龄（ 200 myr）时可靠性较低，但需要测量这些天体的动态质量来校准演化轨道并确定年轻移动组的年龄。",
+        "contribution:发现了twa 22的动态质量和光谱类型，检验了模型预测值的准确性。",
+        "contribution:提供了关于gj 2060 ab的详细光谱和动态质量分析，可能揭示了新的次要天体或模型偏差。",
+        "contribution:提出了一种新的方法来测量年轻移动组天体的质量，这将有助于更好地理解低质量恒星的质量演化。"
+      ],
+      "key_entities": [
+        "Dynamical masses of M-dwarf binaries in young moving groups: I - The case of TWA 22 and GJ 2060",
+        "尽管演化模型在低质量恒星和行星的质量预测中被认为在年轻年龄（<200 Myr）时可靠性较低，但需要测量这些天体的动态质量来校准演化轨道并确定年轻移动组的年龄。",
+        "发现了TWA 22的动态质量和光谱类型，检验了模型预测值的准确性。",
+        "提供了关于GJ 2060 AB的详细光谱和动态质量分析，可能揭示了新的次要天体或模型偏差。",
+        "提出了一种新的方法来测量年轻移动组天体的质量，这将有助于更好地理解低质量恒星的质量演化。"
+      ],
+      "key_papers": [
+        "Dynamical masses of M-dwarf binaries in young moving groups: I - The case of TWA 22 and GJ 2060"
+      ],
+      "dominant_types": [
+        "Contribution",
+        "Paper",
+        "Task"
+      ],
+      "semantic_tag": "Research Contributions Cluster",
+      "summary": "",
+      "community_name": "Research Contributions Cluster"
+    },
+    "6": {
+      "nodes": [
+        "paper:atm 22",
+        "task:multi-site multi-domain airway tree modeling",
+        "dataset:500 ct scans"
+      ],
+      "key_entities": [
+        "ATM'22",
+        "Multi-site, Multi-domain Airway Tree Modeling",
+        "500 CT scans"
+      ],
+      "key_papers": [
+        "ATM'22"
+      ],
+      "dominant_types": [
+        "Paper",
+        "Task",
+        "Dataset"
+      ],
+      "semantic_tag": "Task & Application Cluster",
+      "summary": "",
+      "community_name": "Task & Application Cluster"
+    },
+    "7": {
+      "nodes": [
+        "concept:standard model",
+        "concept:standardmodellagrangian",
+        "concept:spontaneoussymmetrybreaking",
+        "concept:masseigenstates",
+        "concept:gaugeinteractions"
+      ],
+      "key_entities": [
+        "Standard Model",
+        "StandardModelLagrangian",
+        "SpontaneousSymmetryBreaking",
+        "MassEigenstates",
+        "GaugeInteractions"
+      ],
+      "key_papers": [],
+      "dominant_types": [
+        "Concept"
+      ],
+      "semantic_tag": "Research Topic Cluster",
+      "summary": "",
+      "community_name": "Research Topic Cluster"
+    },
+    "8": {
+      "nodes": [
+        "method:framework",
+        "task:model-driven software evolution",
+        "concept:visualization tools case tools"
+      ],
+      "key_entities": [
+        "Framework",
+        "Model-Driven Software Evolution",
+        "Visualization Tools/CASE Tools"
+      ],
+      "key_papers": [],
+      "dominant_types": [
+        "Method",
+        "Task",
+        "Concept"
+      ],
+      "semantic_tag": "Task & Application Cluster",
+      "summary": "",
+      "community_name": "Task & Application Cluster"
+    }
+  },
+  "citation_graph": {},
+  "stats": {
+    "node_count": 42,
+    "edge_count": 41,
+    "node_type_count": {
+      "Paper": 6,
+      "Task": 8,
+      "Dataset": 3,
+      "Contribution": 15,
+      "Method": 3,
+      "Metric": 1,
+      "Concept": 6
+    },
+    "paper_count": 5,
+    "community_count": 0,
+    "citation_edge_count": 0
+  }
+}

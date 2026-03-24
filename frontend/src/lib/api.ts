@@ -56,6 +56,11 @@ export const knowledgeApi = {
     return res.data;
   },
 
+  getDocumentContent: async (db_id: string, doc_id: string): Promise<{ lines: { id: string; content: string; metadata: any; chunk_order_index?: number }[] }> => {
+    const res = await http.get(`/knowledge/databases/${db_id}/documents/${doc_id}/content`);
+    return res.data;
+  },
+
   rebuildDatabase: async (db_id: string, params?: Record<string, unknown>) => {
     const res = await http.post(`/knowledge/databases/${db_id}/rebuild`, params ?? {});
     return res.data;

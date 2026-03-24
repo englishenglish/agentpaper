@@ -203,7 +203,7 @@ async def research_chat_stream(
     async def run_chat_task():
         orchestrator = PaperAgentOrchestrator(state_queue=chat_queue)
         try:
-            # 如果是全新会话（state 为空），直接走完整 /init 流程
+            # 全新会话（state 为空），走完整流程：意图→搜索→建库→QA
             if current_state is None:
                 final_state = await orchestrator.run(
                     user_request=question,
@@ -215,8 +215,21 @@ async def research_chat_stream(
                 active_sessions[session_id]["state"] = final_state
                 return
 
-            # 对已有会话：当用户未选且系统也找不到合适知识库时，自动触发联网搜索建库
-            if not matched_db_ids and enable_web_search:
+            # ---- 已有会话：追问逻辑 ----
+            # 优先使用用户手动选择的库；其次复用上轮对话中已建好的临时库；
+            # 最后才降级到本轮 auto_select（避免因措辞变化重复联网建库）
+            session_cfg = getattr(current_state, "config", {}) or {}
+            session_auto_db_ids = (
+                session_cfg.get("auto_selected_db_ids")
+                or session_cfg.get("selected_db_ids")
+                or []
+            )
+            effective_auto = manual_selected or session_auto_db_ids or auto_selected
+            effective_manual = manual_selected
+
+            # 只有当用户明确开启联网 且 本轮 + session 都找不到任何知识库时，才重新建库
+            has_any_db = bool(effective_auto or effective_manual)
+            if not has_any_db and enable_web_search:
                 final_state = await orchestrator.run(
                     user_request=question,
                     enable_web_search=True,
@@ -227,15 +240,14 @@ async def research_chat_stream(
                 active_sessions[session_id]["state"] = final_state
                 return
 
-            final_enable_web_search = enable_web_search if not matched_db_ids else False
-            # 直接调用 ask_question 触发问答环
+            # 直接追问：跳过搜索/建库，基于已有知识库回答
             final_state = await orchestrator.ask_question(
                 current_state=current_state,
                 new_question=question,
-                enable_web_search=final_enable_web_search,
+                enable_web_search=False,  # 追问阶段不联网，始终基于已建知识库
                 retrieval_mode=retrieval_mode,
-                selected_db_ids=manual_selected,
-                auto_selected_db_ids=auto_selected,
+                selected_db_ids=effective_manual,
+                auto_selected_db_ids=effective_auto,
             )
             active_sessions[session_id]["state"] = final_state
         except Exception as e:

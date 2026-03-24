@@ -19,6 +19,7 @@ from src.services.graph_store import (
     get_multi_hop_reasoning_path,
 )
 from src.core.config import config
+from src.knowledge.knowledge import knowledge_base as kb_manager
 
 logger = setup_logger(__name__)
 
@@ -169,6 +170,10 @@ async def qa_node(state: State) -> State:
     """
     state_queue = state["state_queue"]
     current_state = state["value"]
+    cfg = getattr(current_state, "config", None) or {}
+    if cfg.get("bypass_to_qa"):
+        current_state.config = {**cfg, "bypass_to_qa": False}
+
     current_state.current_step = ExecutionState.QA_ANSWERING
 
     await state_queue.put(
@@ -188,6 +193,25 @@ async def qa_node(state: State) -> State:
 
     retrieval_mode: str = cfg.get("retrieval_mode", "rag")
     use_graphrag = retrieval_mode in ("graphrag", "graphrag_local", "graphrag_community", "graphrag_global", "both")
+
+    # ---- 通知前端正在使用哪些知识库 ----
+    if preferred_db_ids:
+        try:
+            all_dbs = kb_manager.get_databases().get("databases", [])
+            db_name_map = {db["db_id"]: db.get("name", db["db_id"]) for db in all_dbs}
+        except Exception:
+            db_name_map = {}
+        used_kbs = [
+            {"db_id": db_id, "name": db_name_map.get(db_id, db_id)}
+            for db_id in preferred_db_ids
+        ]
+        await state_queue.put(
+            BackToFrontData(
+                step=ExecutionState.QA_ANSWERING,
+                state="kb_context",
+                data=used_kbs,
+            )
+        )
 
     # ---- 向量检索 ----
     await state_queue.put(

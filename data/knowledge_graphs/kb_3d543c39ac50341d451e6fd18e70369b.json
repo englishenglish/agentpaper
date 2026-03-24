@@ -1,0 +1,1171 @@
+{
+  "db_id": "kb_3d543c39ac50341d451e6fd18e70369b",
+  "nodes": {
+    "paper:hep-ph 0304186v1": {
+      "id": "paper:hep-ph 0304186v1",
+      "type": "Paper",
+      "label": "Structure of the Standard Model",
+      "norm_label": "structure of the standard model"
+    },
+    "task:描述标准模型的结构问题": {
+      "id": "task:描述标准模型的结构问题",
+      "type": "Task",
+      "label": "描述标准模型的结构问题",
+      "norm_label": "描述标准模型的结构问题"
+    },
+    "contribution:总结了标准模型的拉格朗日方程": {
+      "id": "contribution:总结了标准模型的拉格朗日方程",
+      "type": "Contribution",
+      "label": "总结了标准模型的拉格朗日方程",
+      "norm_label": "总结了标准模型的拉格朗日方程"
+    },
+    "contribution:描述了自发对称性破缺的过程": {
+      "id": "contribution:描述了自发对称性破缺的过程",
+      "type": "Contribution",
+      "label": "描述了自发对称性破缺的过程",
+      "norm_label": "描述了自发对称性破缺的过程"
+    },
+    "contribution:解释了如何在对称破缺后重新表达拉格朗日方程以质量本征态的形式": {
+      "id": "contribution:解释了如何在对称破缺后重新表达拉格朗日方程以质量本征态的形式",
+      "type": "Contribution",
+      "label": "解释了如何在对称破缺后重新表达拉格朗日方程以质量本征态的形式",
+      "norm_label": "解释了如何在对称破缺后重新表达拉格朗日方程以质量本征态的形式"
+    },
+    "contribution:描述了规范相互作用": {
+      "id": "contribution:描述了规范相互作用",
+      "type": "Contribution",
+      "label": "描述了规范相互作用",
+      "norm_label": "描述了规范相互作用"
+    },
+    "paper:1002.1188v1": {
+      "id": "paper:1002.1188v1",
+      "type": "Paper",
+      "label": "Framework for Visualizing Model-Driven Software Evolution and its Application",
+      "norm_label": "framework for visualizing model-driven software evolution and its application"
+    },
+    "method:framework for visualizing model-driven software evolution": {
+      "id": "method:framework for visualizing model-driven software evolution",
+      "type": "Method",
+      "label": "Framework for Visualizing Model-Driven Software Evolution",
+      "norm_label": "framework for visualizing model-driven software evolution"
+    },
+    "task:为了可视化模型驱动软件演变过程中的模型演进，提出了一种框架。": {
+      "id": "task:为了可视化模型驱动软件演变过程中的模型演进，提出了一种框架。",
+      "type": "Task",
+      "label": "为了可视化模型驱动软件演变过程中的模型演进，提出了一种框架。",
+      "norm_label": "为了可视化模型驱动软件演变过程中的模型演进，提出了一种框架。"
+    },
+    "contribution:提出了一个用于评估模型驱动软件演化过程的框架。": {
+      "id": "contribution:提出了一个用于评估模型驱动软件演化过程的框架。",
+      "type": "Contribution",
+      "label": "提出了一个用于评估模型驱动软件演化过程的框架。",
+      "norm_label": "提出了一个用于评估模型驱动软件演化过程的框架。"
+    },
+    "contribution:框架由7个关键区域和22个关键特性组成。": {
+      "id": "contribution:框架由7个关键区域和22个关键特性组成。",
+      "type": "Contribution",
+      "label": "框架由7个关键区域和22个关键特性组成。",
+      "norm_label": "框架由7个关键区域和22个关键特性组成。"
+    },
+    "contribution:该框架解决了利益相关者的问题。": {
+      "id": "contribution:该框架解决了利益相关者的问题。",
+      "type": "Contribution",
+      "label": "该框架解决了利益相关者的问题。",
+      "norm_label": "该框架解决了利益相关者的问题。"
+    },
+    "paper:2101.07688v2": {
+      "id": "paper:2101.07688v2",
+      "type": "Paper",
+      "label": "Radiation drive temperature measurements in aluminium via radiation-driven shock waves: Modeling using self-similar solutions",
+      "norm_label": "radiation drive temperature measurements in aluminium via radiation-driven shock waves modeling using self-similar solutions"
+    },
+    "method:self-similar solutions": {
+      "id": "method:self-similar solutions",
+      "type": "Method",
+      "label": "self-similar solutions",
+      "norm_label": "self-similar solutions"
+    },
+    "task:尽管存在不同研究中关于辐射驱动温度 t mathrm rad 与产生的等离子体冲击波 d s 之间关系的各种方法，但它们之间存在明显差异。为了更好地理解这一现象，本文通过自相似解提供了": {
+      "id": "task:尽管存在不同研究中关于辐射驱动温度 t mathrm rad 与产生的等离子体冲击波 d s 之间关系的各种方法，但它们之间存在明显差异。为了更好地理解这一现象，本文通过自相似解提供了",
+      "type": "Task",
+      "label": "尽管存在不同研究中关于辐射驱动温度 $T_{\\mathrm{Rad}}$ 与产生的等离子体冲击波 $D_S$ 之间关系的各种方法，但它们之间存在明显差异。为了更好地理解这一现象，本文通过自相似解提供了",
+      "norm_label": "尽管存在不同研究中关于辐射驱动温度 t mathrm rad 与产生的等离子体冲击波 d s 之间关系的各种方法，但它们之间存在明显差异。为了更好地理解这一现象，本文通过自相似解提供了"
+    },
+    "contribution:通过自相似方法建立了铝的 t mathrm rad d s 关系，包括等离子体蒸发和冲击波区域。": {
+      "id": "contribution:通过自相似方法建立了铝的 t mathrm rad d s 关系，包括等离子体蒸发和冲击波区域。",
+      "type": "Contribution",
+      "label": "通过自相似方法建立了铝的 $T_{\\mathrm{Rad}}(D_S)$ 关系，包括等离子体蒸发和冲击波区域。",
+      "norm_label": "通过自相似方法建立了铝的 t mathrm rad d s 关系，包括等离子体蒸发和冲击波区域。"
+    },
+    "contribution:解释了现有文献中不同缩放关系的差异。": {
+      "id": "contribution:解释了现有文献中不同缩放关系的差异。",
+      "type": "Contribution",
+      "label": "解释了现有文献中不同缩放关系的差异。",
+      "norm_label": "解释了现有文献中不同缩放关系的差异。"
+    },
+    "contribution:模型与现有实验和模拟数据相吻合。": {
+      "id": "contribution:模型与现有实验和模拟数据相吻合。",
+      "type": "Contribution",
+      "label": "模型与现有实验和模拟数据相吻合。",
+      "norm_label": "模型与现有实验和模拟数据相吻合。"
+    },
+    "paper:2305.16307v3": {
+      "id": "paper:2305.16307v3",
+      "type": "Paper",
+      "label": "IndicTrans2: Towards High-Quality and Accessible Machine Translation Models for all 22 Scheduled Indian Languages",
+      "norm_label": "indictrans2 towards high-quality and accessible machine translation models for all 22 scheduled indian languages"
+    },
+    "method:bpcc和indictrans2": {
+      "id": "method:bpcc和indictrans2",
+      "type": "Method",
+      "label": "BPCC和IndicTrans2",
+      "norm_label": "bpcc和indictrans2"
+    },
+    "task:尽管缺乏全面覆盖22种印度官方语言的平行训练数据和基准测试，但为了提供高质量且易于访问的机器翻译系统，特别是为22种印度官方语言。": {
+      "id": "task:尽管缺乏全面覆盖22种印度官方语言的平行训练数据和基准测试，但为了提供高质量且易于访问的机器翻译系统，特别是为22种印度官方语言。",
+      "type": "Task",
+      "label": "尽管缺乏全面覆盖22种印度官方语言的平行训练数据和基准测试，但为了提供高质量且易于访问的机器翻译系统，特别是为22种印度官方语言。",
+      "norm_label": "尽管缺乏全面覆盖22种印度官方语言的平行训练数据和基准测试，但为了提供高质量且易于访问的机器翻译系统，特别是为22种印度官方语言。"
+    },
+    "dataset:bharat parallel corpus collection bpcc 包含230m对双语文本，其中126m是新的，包括644k人工翻译的句子对": {
+      "id": "dataset:bharat parallel corpus collection bpcc 包含230m对双语文本，其中126m是新的，包括644k人工翻译的句子对",
+      "type": "Dataset",
+      "label": "Bharat Parallel Corpus Collection (BPCC)包含230M对双语文本，其中126M是新的，包括644K人工翻译的句子对",
+      "norm_label": "bharat parallel corpus collection bpcc 包含230m对双语文本，其中126m是新的，包括644k人工翻译的句子对"
+    },
+    "metric:null": {
+      "id": "metric:null",
+      "type": "Metric",
+      "label": "null",
+      "norm_label": "null"
+    },
+    "contribution:开发了bharat parallel corpus collection bpcc ，这是印度语料库中最大的公共并行语料库": {
+      "id": "contribution:开发了bharat parallel corpus collection bpcc ，这是印度语料库中最大的公共并行语料库",
+      "type": "Contribution",
+      "label": "开发了Bharat Parallel Corpus Collection (BPCC)，这是印度语料库中最大的公共并行语料库",
+      "norm_label": "开发了bharat parallel corpus collection bpcc ，这是印度语料库中最大的公共并行语料库"
+    },
+    "contribution:创建了第一个覆盖所有22种印度官方语言的n-way并行基准": {
+      "id": "contribution:创建了第一个覆盖所有22种印度官方语言的n-way并行基准",
+      "type": "Contribution",
+      "label": "创建了第一个覆盖所有22种印度官方语言的n-way并行基准",
+      "norm_label": "创建了第一个覆盖所有22种印度官方语言的n-way并行基准"
+    },
+    "contribution:推出了支持所有22种印度官方语言的第一个模型indictrans2": {
+      "id": "contribution:推出了支持所有22种印度官方语言的第一个模型indictrans2",
+      "type": "Contribution",
+      "label": "推出了支持所有22种印度官方语言的第一个模型IndicTrans2",
+      "norm_label": "推出了支持所有22种印度官方语言的第一个模型indictrans2"
+    },
+    "contribution:将模型和相关数据以开放许可的形式发布": {
+      "id": "contribution:将模型和相关数据以开放许可的形式发布",
+      "type": "Contribution",
+      "label": "将模型和相关数据以开放许可的形式发布",
+      "norm_label": "将模型和相关数据以开放许可的形式发布"
+    },
+    "paper:1806.05491v1": {
+      "id": "paper:1806.05491v1",
+      "type": "Paper",
+      "label": "Dynamical masses of M-dwarf binaries in young moving groups: I - The case of TWA 22 and GJ 2060",
+      "norm_label": "dynamical masses of m-dwarf binaries in young moving groups i - the case of twa 22 and gj 2060"
+    },
+    "task:尽管现有的演化模型在年轻恒星（ 200 myr）和低质量恒星（ 1 m⊙）的预测准确性存疑，但twa 22和gj 2060系统的质量测量能够用于校准这些演化轨迹。": {
+      "id": "task:尽管现有的演化模型在年轻恒星（ 200 myr）和低质量恒星（ 1 m⊙）的预测准确性存疑，但twa 22和gj 2060系统的质量测量能够用于校准这些演化轨迹。",
+      "type": "Task",
+      "label": "尽管现有的演化模型在年轻恒星（<200 Myr）和低质量恒星（<1 M⊙）的预测准确性存疑，但TWA 22和GJ 2060系统的质量测量能够用于校准这些演化轨迹。",
+      "norm_label": "尽管现有的演化模型在年轻恒星（ 200 myr）和低质量恒星（ 1 m⊙）的预测准确性存疑，但twa 22和gj 2060系统的质量测量能够用于校准这些演化轨迹。"
+    },
+    "dataset:twa 22系统": {
+      "id": "dataset:twa 22系统",
+      "type": "Dataset",
+      "label": "TWA 22系统",
+      "norm_label": "twa 22系统"
+    },
+    "dataset:gj 2060系统": {
+      "id": "dataset:gj 2060系统",
+      "type": "Dataset",
+      "label": "GJ 2060系统",
+      "norm_label": "gj 2060系统"
+    },
+    "metric:无直接相关指标": {
+      "id": "metric:无直接相关指标",
+      "type": "Metric",
+      "label": "无直接相关指标",
+      "norm_label": "无直接相关指标"
+    },
+    "contribution:通过测量twa 22和gj 2060系统的总质量，验证了介于20百万年的模型预测。": {
+      "id": "contribution:通过测量twa 22和gj 2060系统的总质量，验证了介于20百万年的模型预测。",
+      "type": "Contribution",
+      "label": "通过测量TWA 22和GJ 2060系统的总质量，验证了介于20百万年的模型预测。",
+      "norm_label": "通过测量twa 22和gj 2060系统的总质量，验证了介于20百万年的模型预测。"
+    },
+    "contribution:发现gj 2060系统的质量测量结果与演化模型预测存在1-2个标准差的偏差，这可能是由于模型低估了年轻低质量恒星的质量。": {
+      "id": "contribution:发现gj 2060系统的质量测量结果与演化模型预测存在1-2个标准差的偏差，这可能是由于模型低估了年轻低质量恒星的质量。",
+      "type": "Contribution",
+      "label": "发现GJ 2060系统的质量测量结果与演化模型预测存在1-2个标准差的偏差，这可能是由于模型低估了年轻低质量恒星的质量。",
+      "norm_label": "发现gj 2060系统的质量测量结果与演化模型预测存在1-2个标准差的偏差，这可能是由于模型低估了年轻低质量恒星的质量。"
+    },
+    "contribution:建议了twa 22和gj 2060系统可能适合年轻星团（ 50 myr）的研究，进一步限制了模型预测的适用范围。": {
+      "id": "contribution:建议了twa 22和gj 2060系统可能适合年轻星团（ 50 myr）的研究，进一步限制了模型预测的适用范围。",
+      "type": "Contribution",
+      "label": "建议了TWA 22和GJ 2060系统可能适合年轻星团（~50 Myr）的研究，进一步限制了模型预测的适用范围。",
+      "norm_label": "建议了twa 22和gj 2060系统可能适合年轻星团（ 50 myr）的研究，进一步限制了模型预测的适用范围。"
+    },
+    "concept:standard model": {
+      "id": "concept:standard model",
+      "type": "Concept",
+      "label": "Standard Model",
+      "norm_label": "standard model",
+      "description": ""
+    },
+    "concept:standard model lagrangian": {
+      "id": "concept:standard model lagrangian",
+      "type": "Concept",
+      "label": "Standard Model Lagrangian",
+      "norm_label": "standard model lagrangian",
+      "description": ""
+    },
+    "concept:spontaneous symmetry breaking": {
+      "id": "concept:spontaneous symmetry breaking",
+      "type": "Concept",
+      "label": "Spontaneous Symmetry Breaking",
+      "norm_label": "spontaneous symmetry breaking",
+      "description": ""
+    },
+    "concept:mass eigenstates": {
+      "id": "concept:mass eigenstates",
+      "type": "Concept",
+      "label": "Mass Eigenstates",
+      "norm_label": "mass eigenstates",
+      "description": ""
+    },
+    "concept:gauge interactions": {
+      "id": "concept:gauge interactions",
+      "type": "Concept",
+      "label": "Gauge Interactions",
+      "norm_label": "gauge interactions",
+      "description": ""
+    },
+    "concept:goal question metric paradigm": {
+      "id": "concept:goal question metric paradigm",
+      "type": "Concept",
+      "label": "Goal Question Metric Paradigm",
+      "norm_label": "goal question metric paradigm",
+      "description": ""
+    },
+    "concept:7 key areas": {
+      "id": "concept:7 key areas",
+      "type": "Concept",
+      "label": "7 key areas",
+      "norm_label": "7 key areas",
+      "description": ""
+    },
+    "concept:22 key features": {
+      "id": "concept:22 key features",
+      "type": "Concept",
+      "label": "22 key features",
+      "norm_label": "22 key features",
+      "description": ""
+    },
+    "concept:t mathrm rad d s relation": {
+      "id": "concept:t mathrm rad d s relation",
+      "type": "Concept",
+      "label": "T_{\\mathrm{Rad}}(D_S)$ relation",
+      "norm_label": "t mathrm rad d s relation",
+      "description": ""
+    },
+    "concept:aluminum": {
+      "id": "concept:aluminum",
+      "type": "Concept",
+      "label": "aluminum",
+      "norm_label": "aluminum",
+      "description": ""
+    },
+    "concept:experiments": {
+      "id": "concept:experiments",
+      "type": "Concept",
+      "label": "experiments",
+      "norm_label": "experiments",
+      "description": ""
+    },
+    "concept:simulations data": {
+      "id": "concept:simulations data",
+      "type": "Concept",
+      "label": "simulations data",
+      "norm_label": "simulations data",
+      "description": ""
+    },
+    "model:indictrans2": {
+      "id": "model:indictrans2",
+      "type": "Model",
+      "label": "IndicTrans2",
+      "norm_label": "indictrans2",
+      "description": ""
+    },
+    "dataset:bharat parallel corpus collection bpcc": {
+      "id": "dataset:bharat parallel corpus collection bpcc",
+      "type": "Dataset",
+      "label": "Bharat Parallel Corpus Collection (BPCC)",
+      "norm_label": "bharat parallel corpus collection bpcc",
+      "description": ""
+    },
+    "task:machine translation mt": {
+      "id": "task:machine translation mt",
+      "type": "Task",
+      "label": "Machine Translation (MT)",
+      "norm_label": "machine translation mt",
+      "description": ""
+    },
+    "concept:22 scheduled indian languages": {
+      "id": "concept:22 scheduled indian languages",
+      "type": "Concept",
+      "label": "22 scheduled Indian languages",
+      "norm_label": "22 scheduled indian languages",
+      "description": ""
+    },
+    "dataset:n-way parallel benchmark": {
+      "id": "dataset:n-way parallel benchmark",
+      "type": "Dataset",
+      "label": "n-way parallel benchmark",
+      "norm_label": "n-way parallel benchmark",
+      "description": ""
+    },
+    "method:dynamical masses measurement": {
+      "id": "method:dynamical masses measurement",
+      "type": "Method",
+      "label": "Dynamical masses measurement",
+      "norm_label": "dynamical masses measurement",
+      "description": ""
+    },
+    "model:evolutionary models": {
+      "id": "model:evolutionary models",
+      "type": "Model",
+      "label": "Evolutionary models",
+      "norm_label": "evolutionary models",
+      "description": ""
+    },
+    "model:bcah15": {
+      "id": "model:bcah15",
+      "type": "Model",
+      "label": "BCAH15",
+      "norm_label": "bcah15",
+      "description": ""
+    },
+    "model:parsec": {
+      "id": "model:parsec",
+      "type": "Model",
+      "label": "PARSEC",
+      "norm_label": "parsec",
+      "description": ""
+    }
+  },
+  "edges": [
+    {
+      "source": "paper:hep-ph 0304186v1",
+      "target": "task:描述标准模型的结构问题",
+      "type": "applied_to",
+      "weight": 0.8
+    },
+    {
+      "source": "paper:hep-ph 0304186v1",
+      "target": "contribution:总结了标准模型的拉格朗日方程",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "paper:hep-ph 0304186v1",
+      "target": "contribution:描述了自发对称性破缺的过程",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "paper:hep-ph 0304186v1",
+      "target": "contribution:解释了如何在对称破缺后重新表达拉格朗日方程以质量本征态的形式",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "paper:hep-ph 0304186v1",
+      "target": "contribution:描述了规范相互作用",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "paper:1002.1188v1",
+      "target": "method:framework for visualizing model-driven software evolution",
+      "type": "proposes",
+      "weight": 1.0
+    },
+    {
+      "source": "paper:1002.1188v1",
+      "target": "task:为了可视化模型驱动软件演变过程中的模型演进，提出了一种框架。",
+      "type": "applied_to",
+      "weight": 0.8
+    },
+    {
+      "source": "method:framework for visualizing model-driven software evolution",
+      "target": "task:为了可视化模型驱动软件演变过程中的模型演进，提出了一种框架。",
+      "type": "solves",
+      "weight": 0.95
+    },
+    {
+      "source": "paper:1002.1188v1",
+      "target": "contribution:提出了一个用于评估模型驱动软件演化过程的框架。",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "method:framework for visualizing model-driven software evolution",
+      "target": "contribution:提出了一个用于评估模型驱动软件演化过程的框架。",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:1002.1188v1",
+      "target": "contribution:框架由7个关键区域和22个关键特性组成。",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "method:framework for visualizing model-driven software evolution",
+      "target": "contribution:框架由7个关键区域和22个关键特性组成。",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:1002.1188v1",
+      "target": "contribution:该框架解决了利益相关者的问题。",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "method:framework for visualizing model-driven software evolution",
+      "target": "contribution:该框架解决了利益相关者的问题。",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:2101.07688v2",
+      "target": "method:self-similar solutions",
+      "type": "proposes",
+      "weight": 1.0
+    },
+    {
+      "source": "paper:2101.07688v2",
+      "target": "task:尽管存在不同研究中关于辐射驱动温度 t mathrm rad 与产生的等离子体冲击波 d s 之间关系的各种方法，但它们之间存在明显差异。为了更好地理解这一现象，本文通过自相似解提供了",
+      "type": "applied_to",
+      "weight": 0.8
+    },
+    {
+      "source": "method:self-similar solutions",
+      "target": "task:尽管存在不同研究中关于辐射驱动温度 t mathrm rad 与产生的等离子体冲击波 d s 之间关系的各种方法，但它们之间存在明显差异。为了更好地理解这一现象，本文通过自相似解提供了",
+      "type": "solves",
+      "weight": 0.95
+    },
+    {
+      "source": "paper:2101.07688v2",
+      "target": "contribution:通过自相似方法建立了铝的 t mathrm rad d s 关系，包括等离子体蒸发和冲击波区域。",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "method:self-similar solutions",
+      "target": "contribution:通过自相似方法建立了铝的 t mathrm rad d s 关系，包括等离子体蒸发和冲击波区域。",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:2101.07688v2",
+      "target": "contribution:解释了现有文献中不同缩放关系的差异。",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "method:self-similar solutions",
+      "target": "contribution:解释了现有文献中不同缩放关系的差异。",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:2101.07688v2",
+      "target": "contribution:模型与现有实验和模拟数据相吻合。",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "method:self-similar solutions",
+      "target": "contribution:模型与现有实验和模拟数据相吻合。",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:2305.16307v3",
+      "target": "method:bpcc和indictrans2",
+      "type": "proposes",
+      "weight": 1.0
+    },
+    {
+      "source": "paper:2305.16307v3",
+      "target": "task:尽管缺乏全面覆盖22种印度官方语言的平行训练数据和基准测试，但为了提供高质量且易于访问的机器翻译系统，特别是为22种印度官方语言。",
+      "type": "applied_to",
+      "weight": 0.8
+    },
+    {
+      "source": "method:bpcc和indictrans2",
+      "target": "task:尽管缺乏全面覆盖22种印度官方语言的平行训练数据和基准测试，但为了提供高质量且易于访问的机器翻译系统，特别是为22种印度官方语言。",
+      "type": "solves",
+      "weight": 0.95
+    },
+    {
+      "source": "paper:2305.16307v3",
+      "target": "dataset:bharat parallel corpus collection bpcc 包含230m对双语文本，其中126m是新的，包括644k人工翻译的句子对",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "method:bpcc和indictrans2",
+      "target": "dataset:bharat parallel corpus collection bpcc 包含230m对双语文本，其中126m是新的，包括644k人工翻译的句子对",
+      "type": "evaluates_on",
+      "weight": 0.9
+    },
+    {
+      "source": "method:bpcc和indictrans2",
+      "target": "metric:null",
+      "type": "achieves",
+      "weight": 0.85
+    },
+    {
+      "source": "paper:2305.16307v3",
+      "target": "contribution:开发了bharat parallel corpus collection bpcc ，这是印度语料库中最大的公共并行语料库",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "method:bpcc和indictrans2",
+      "target": "contribution:开发了bharat parallel corpus collection bpcc ，这是印度语料库中最大的公共并行语料库",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:2305.16307v3",
+      "target": "contribution:创建了第一个覆盖所有22种印度官方语言的n-way并行基准",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "method:bpcc和indictrans2",
+      "target": "contribution:创建了第一个覆盖所有22种印度官方语言的n-way并行基准",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:2305.16307v3",
+      "target": "contribution:推出了支持所有22种印度官方语言的第一个模型indictrans2",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "method:bpcc和indictrans2",
+      "target": "contribution:推出了支持所有22种印度官方语言的第一个模型indictrans2",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:2305.16307v3",
+      "target": "contribution:将模型和相关数据以开放许可的形式发布",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "method:bpcc和indictrans2",
+      "target": "contribution:将模型和相关数据以开放许可的形式发布",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:1806.05491v1",
+      "target": "task:尽管现有的演化模型在年轻恒星（ 200 myr）和低质量恒星（ 1 m⊙）的预测准确性存疑，但twa 22和gj 2060系统的质量测量能够用于校准这些演化轨迹。",
+      "type": "applied_to",
+      "weight": 0.8
+    },
+    {
+      "source": "paper:1806.05491v1",
+      "target": "dataset:twa 22系统",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "paper:1806.05491v1",
+      "target": "dataset:gj 2060系统",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "paper:1806.05491v1",
+      "target": "metric:无直接相关指标",
+      "type": "achieves",
+      "weight": 0.85
+    },
+    {
+      "source": "paper:1806.05491v1",
+      "target": "contribution:通过测量twa 22和gj 2060系统的总质量，验证了介于20百万年的模型预测。",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "paper:1806.05491v1",
+      "target": "contribution:发现gj 2060系统的质量测量结果与演化模型预测存在1-2个标准差的偏差，这可能是由于模型低估了年轻低质量恒星的质量。",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "paper:1806.05491v1",
+      "target": "contribution:建议了twa 22和gj 2060系统可能适合年轻星团（ 50 myr）的研究，进一步限制了模型预测的适用范围。",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "concept:standard model",
+      "target": "concept:standard model lagrangian",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "concept:standard model",
+      "target": "concept:spontaneous symmetry breaking",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "concept:standard model",
+      "target": "concept:mass eigenstates",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "concept:standard model",
+      "target": "concept:gauge interactions",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "method:framework for visualizing model-driven software evolution",
+      "target": "concept:goal question metric paradigm",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "method:framework for visualizing model-driven software evolution",
+      "target": "concept:7 key areas",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "method:framework for visualizing model-driven software evolution",
+      "target": "concept:22 key features",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "method:self-similar solutions",
+      "target": "concept:t mathrm rad d s relation",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "method:self-similar solutions",
+      "target": "concept:aluminum",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "concept:t mathrm rad d s relation",
+      "target": "concept:experiments",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "concept:t mathrm rad d s relation",
+      "target": "concept:simulations data",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "model:indictrans2",
+      "target": "dataset:bharat parallel corpus collection bpcc",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "model:indictrans2",
+      "target": "task:machine translation mt",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "model:indictrans2",
+      "target": "concept:22 scheduled indian languages",
+      "type": "applied_to",
+      "weight": 0.8
+    },
+    {
+      "source": "dataset:bharat parallel corpus collection bpcc",
+      "target": "concept:22 scheduled indian languages",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "task:machine translation mt",
+      "target": "concept:22 scheduled indian languages",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "dataset:n-way parallel benchmark",
+      "target": "concept:22 scheduled indian languages",
+      "type": "evaluates_on",
+      "weight": 0.9
+    },
+    {
+      "source": "dataset:n-way parallel benchmark",
+      "target": "model:indictrans2",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "method:dynamical masses measurement",
+      "target": "dataset:twa 22系统",
+      "type": "evaluates_on",
+      "weight": 0.9
+    },
+    {
+      "source": "method:dynamical masses measurement",
+      "target": "dataset:gj 2060系统",
+      "type": "evaluates_on",
+      "weight": 0.9
+    },
+    {
+      "source": "method:dynamical masses measurement",
+      "target": "model:bcah15",
+      "type": "compared_with",
+      "weight": 0.7
+    },
+    {
+      "source": "method:dynamical masses measurement",
+      "target": "model:parsec",
+      "type": "compared_with",
+      "weight": 0.7
+    },
+    {
+      "source": "method:dynamical masses measurement",
+      "target": "model:evolutionary models",
+      "type": "improves",
+      "weight": 0.95
+    },
+    {
+      "source": "model:evolutionary models",
+      "target": "method:dynamical masses measurement",
+      "type": "evaluates_on",
+      "weight": 0.9
+    }
+  ],
+  "paper_entities": {
+    "hep-ph/0304186v1": [
+      "paper:hep-ph 0304186v1",
+      "task:描述标准模型的结构问题",
+      "contribution:总结了标准模型的拉格朗日方程",
+      "contribution:描述了自发对称性破缺的过程",
+      "contribution:解释了如何在对称破缺后重新表达拉格朗日方程以质量本征态的形式",
+      "contribution:描述了规范相互作用",
+      "concept:standard model",
+      "concept:standard model lagrangian",
+      "concept:spontaneous symmetry breaking",
+      "concept:mass eigenstates",
+      "concept:gauge interactions"
+    ],
+    "1002.1188v1": [
+      "paper:1002.1188v1",
+      "method:framework for visualizing model-driven software evolution",
+      "task:为了可视化模型驱动软件演变过程中的模型演进，提出了一种框架。",
+      "contribution:提出了一个用于评估模型驱动软件演化过程的框架。",
+      "contribution:框架由7个关键区域和22个关键特性组成。",
+      "contribution:该框架解决了利益相关者的问题。",
+      "concept:goal question metric paradigm",
+      "concept:7 key areas",
+      "concept:22 key features"
+    ],
+    "2101.07688v2": [
+      "paper:2101.07688v2",
+      "method:self-similar solutions",
+      "task:尽管存在不同研究中关于辐射驱动温度 t mathrm rad 与产生的等离子体冲击波 d s 之间关系的各种方法，但它们之间存在明显差异。为了更好地理解这一现象，本文通过自相似解提供了",
+      "contribution:通过自相似方法建立了铝的 t mathrm rad d s 关系，包括等离子体蒸发和冲击波区域。",
+      "contribution:解释了现有文献中不同缩放关系的差异。",
+      "contribution:模型与现有实验和模拟数据相吻合。",
+      "concept:t mathrm rad d s relation",
+      "concept:aluminum",
+      "concept:experiments",
+      "concept:simulations data"
+    ],
+    "2305.16307v3": [
+      "paper:2305.16307v3",
+      "method:bpcc和indictrans2",
+      "task:尽管缺乏全面覆盖22种印度官方语言的平行训练数据和基准测试，但为了提供高质量且易于访问的机器翻译系统，特别是为22种印度官方语言。",
+      "dataset:bharat parallel corpus collection bpcc 包含230m对双语文本，其中126m是新的，包括644k人工翻译的句子对",
+      "metric:null",
+      "contribution:开发了bharat parallel corpus collection bpcc ，这是印度语料库中最大的公共并行语料库",
+      "contribution:创建了第一个覆盖所有22种印度官方语言的n-way并行基准",
+      "contribution:推出了支持所有22种印度官方语言的第一个模型indictrans2",
+      "contribution:将模型和相关数据以开放许可的形式发布",
+      "model:indictrans2",
+      "dataset:bharat parallel corpus collection bpcc",
+      "task:machine translation mt",
+      "concept:22 scheduled indian languages",
+      "dataset:n-way parallel benchmark"
+    ],
+    "1806.05491v1": [
+      "paper:1806.05491v1",
+      "task:尽管现有的演化模型在年轻恒星（ 200 myr）和低质量恒星（ 1 m⊙）的预测准确性存疑，但twa 22和gj 2060系统的质量测量能够用于校准这些演化轨迹。",
+      "dataset:twa 22系统",
+      "dataset:gj 2060系统",
+      "metric:无直接相关指标",
+      "contribution:通过测量twa 22和gj 2060系统的总质量，验证了介于20百万年的模型预测。",
+      "contribution:发现gj 2060系统的质量测量结果与演化模型预测存在1-2个标准差的偏差，这可能是由于模型低估了年轻低质量恒星的质量。",
+      "contribution:建议了twa 22和gj 2060系统可能适合年轻星团（ 50 myr）的研究，进一步限制了模型预测的适用范围。",
+      "method:dynamical masses measurement",
+      "model:evolutionary models",
+      "model:bcah15",
+      "model:parsec"
+    ]
+  },
+  "entity_aliases": {
+    "structure of the standard model": "paper:hep-ph 0304186v1",
+    "描述标准模型的结构问题": "task:描述标准模型的结构问题",
+    "总结了标准模型的拉格朗日方程": "contribution:总结了标准模型的拉格朗日方程",
+    "描述了自发对称性破缺的过程": "contribution:描述了自发对称性破缺的过程",
+    "解释了如何在对称破缺后重新表达拉格朗日方程以质量本征态的形式": "contribution:解释了如何在对称破缺后重新表达拉格朗日方程以质量本征态的形式",
+    "描述了规范相互作用": "contribution:描述了规范相互作用",
+    "framework for visualizing model-driven software evolution and its application": "paper:1002.1188v1",
+    "framework for visualizing model-driven software evolution": "method:framework for visualizing model-driven software evolution",
+    "为了可视化模型驱动软件演变过程中的模型演进，提出了一种框架。": "task:为了可视化模型驱动软件演变过程中的模型演进，提出了一种框架。",
+    "提出了一个用于评估模型驱动软件演化过程的框架。": "contribution:提出了一个用于评估模型驱动软件演化过程的框架。",
+    "框架由7个关键区域和22个关键特性组成。": "contribution:框架由7个关键区域和22个关键特性组成。",
+    "该框架解决了利益相关者的问题。": "contribution:该框架解决了利益相关者的问题。",
+    "radiation drive temperature measurements in aluminium via radiation-driven shock waves modeling using self-similar solutions": "paper:2101.07688v2",
+    "self-similar solutions": "method:self-similar solutions",
+    "尽管存在不同研究中关于辐射驱动温度 t mathrm rad 与产生的等离子体冲击波 d s 之间关系的各种方法，但它们之间存在明显差异。为了更好地理解这一现象，本文通过自相似解提供了": "task:尽管存在不同研究中关于辐射驱动温度 t mathrm rad 与产生的等离子体冲击波 d s 之间关系的各种方法，但它们之间存在明显差异。为了更好地理解这一现象，本文通过自相似解提供了",
+    "通过自相似方法建立了铝的 t mathrm rad d s 关系，包括等离子体蒸发和冲击波区域。": "contribution:通过自相似方法建立了铝的 t mathrm rad d s 关系，包括等离子体蒸发和冲击波区域。",
+    "解释了现有文献中不同缩放关系的差异。": "contribution:解释了现有文献中不同缩放关系的差异。",
+    "模型与现有实验和模拟数据相吻合。": "contribution:模型与现有实验和模拟数据相吻合。",
+    "indictrans2 towards high-quality and accessible machine translation models for all 22 scheduled indian languages": "paper:2305.16307v3",
+    "bpcc和indictrans2": "method:bpcc和indictrans2",
+    "尽管缺乏全面覆盖22种印度官方语言的平行训练数据和基准测试，但为了提供高质量且易于访问的机器翻译系统，特别是为22种印度官方语言。": "task:尽管缺乏全面覆盖22种印度官方语言的平行训练数据和基准测试，但为了提供高质量且易于访问的机器翻译系统，特别是为22种印度官方语言。",
+    "bharat parallel corpus collection bpcc 包含230m对双语文本，其中126m是新的，包括644k人工翻译的句子对": "dataset:bharat parallel corpus collection bpcc 包含230m对双语文本，其中126m是新的，包括644k人工翻译的句子对",
+    "null": "metric:null",
+    "开发了bharat parallel corpus collection bpcc ，这是印度语料库中最大的公共并行语料库": "contribution:开发了bharat parallel corpus collection bpcc ，这是印度语料库中最大的公共并行语料库",
+    "创建了第一个覆盖所有22种印度官方语言的n-way并行基准": "contribution:创建了第一个覆盖所有22种印度官方语言的n-way并行基准",
+    "推出了支持所有22种印度官方语言的第一个模型indictrans2": "contribution:推出了支持所有22种印度官方语言的第一个模型indictrans2",
+    "将模型和相关数据以开放许可的形式发布": "contribution:将模型和相关数据以开放许可的形式发布",
+    "dynamical masses of m-dwarf binaries in young moving groups i - the case of twa 22 and gj 2060": "paper:1806.05491v1",
+    "尽管现有的演化模型在年轻恒星（ 200 myr）和低质量恒星（ 1 m⊙）的预测准确性存疑，但twa 22和gj 2060系统的质量测量能够用于校准这些演化轨迹。": "task:尽管现有的演化模型在年轻恒星（ 200 myr）和低质量恒星（ 1 m⊙）的预测准确性存疑，但twa 22和gj 2060系统的质量测量能够用于校准这些演化轨迹。",
+    "twa 22系统": "dataset:twa 22系统",
+    "gj 2060系统": "dataset:gj 2060系统",
+    "无直接相关指标": "metric:无直接相关指标",
+    "通过测量twa 22和gj 2060系统的总质量，验证了介于20百万年的模型预测。": "contribution:通过测量twa 22和gj 2060系统的总质量，验证了介于20百万年的模型预测。",
+    "发现gj 2060系统的质量测量结果与演化模型预测存在1-2个标准差的偏差，这可能是由于模型低估了年轻低质量恒星的质量。": "contribution:发现gj 2060系统的质量测量结果与演化模型预测存在1-2个标准差的偏差，这可能是由于模型低估了年轻低质量恒星的质量。",
+    "建议了twa 22和gj 2060系统可能适合年轻星团（ 50 myr）的研究，进一步限制了模型预测的适用范围。": "contribution:建议了twa 22和gj 2060系统可能适合年轻星团（ 50 myr）的研究，进一步限制了模型预测的适用范围。",
+    "standard model": "concept:standard model",
+    "standard model lagrangian": "concept:standard model lagrangian",
+    "spontaneous symmetry breaking": "concept:spontaneous symmetry breaking",
+    "mass eigenstates": "concept:mass eigenstates",
+    "gauge interactions": "concept:gauge interactions",
+    "goal question metric paradigm": "concept:goal question metric paradigm",
+    "7 key areas": "concept:7 key areas",
+    "22 key features": "concept:22 key features",
+    "t mathrm rad d s relation": "concept:t mathrm rad d s relation",
+    "aluminum": "concept:aluminum",
+    "experiments": "concept:experiments",
+    "simulations data": "concept:simulations data",
+    "indictrans2": "model:indictrans2",
+    "bharat parallel corpus collection bpcc": "dataset:bharat parallel corpus collection bpcc",
+    "machine translation mt": "task:machine translation mt",
+    "22 scheduled indian languages": "concept:22 scheduled indian languages",
+    "n-way parallel benchmark": "dataset:n-way parallel benchmark",
+    "dynamical masses measurement": "method:dynamical masses measurement",
+    "evolutionary models": "model:evolutionary models",
+    "bcah15": "model:bcah15",
+    "parsec": "model:parsec"
+  },
+  "communities": {
+    "0": {
+      "nodes": [
+        "paper:hep-ph 0304186v1",
+        "task:描述标准模型的结构问题",
+        "contribution:总结了标准模型的拉格朗日方程",
+        "contribution:描述了自发对称性破缺的过程",
+        "contribution:解释了如何在对称破缺后重新表达拉格朗日方程以质量本征态的形式",
+        "contribution:描述了规范相互作用"
+      ],
+      "key_entities": [
+        "Structure of the Standard Model",
+        "描述标准模型的结构问题",
+        "总结了标准模型的拉格朗日方程",
+        "描述了自发对称性破缺的过程",
+        "解释了如何在对称破缺后重新表达拉格朗日方程以质量本征态的形式",
+        "描述了规范相互作用"
+      ],
+      "key_papers": [
+        "Structure of the Standard Model"
+      ],
+      "dominant_types": [
+        "Contribution",
+        "Paper",
+        "Task"
+      ],
+      "semantic_tag": "Research Contributions Cluster",
+      "summary": "",
+      "community_name": "Research Contributions Cluster"
+    },
+    "1": {
+      "nodes": [
+        "paper:1002.1188v1",
+        "method:framework for visualizing model-driven software evolution",
+        "task:为了可视化模型驱动软件演变过程中的模型演进，提出了一种框架。",
+        "contribution:提出了一个用于评估模型驱动软件演化过程的框架。",
+        "contribution:框架由7个关键区域和22个关键特性组成。",
+        "contribution:该框架解决了利益相关者的问题。",
+        "concept:goal question metric paradigm",
+        "concept:7 key areas",
+        "concept:22 key features"
+      ],
+      "key_entities": [
+        "Framework for Visualizing Model-Driven Software Evolution and its Application",
+        "Framework for Visualizing Model-Driven Software Evolution",
+        "为了可视化模型驱动软件演变过程中的模型演进，提出了一种框架。",
+        "提出了一个用于评估模型驱动软件演化过程的框架。",
+        "框架由7个关键区域和22个关键特性组成。",
+        "该框架解决了利益相关者的问题。",
+        "Goal Question Metric Paradigm",
+        "7 key areas",
+        "22 key features"
+      ],
+      "key_papers": [
+        "Framework for Visualizing Model-Driven Software Evolution and its Application"
+      ],
+      "dominant_types": [
+        "Contribution",
+        "Concept",
+        "Paper"
+      ],
+      "semantic_tag": "Research Contributions Cluster",
+      "summary": "",
+      "community_name": "Research Contributions Cluster"
+    },
+    "2": {
+      "nodes": [
+        "paper:2101.07688v2",
+        "method:self-similar solutions",
+        "task:尽管存在不同研究中关于辐射驱动温度 t mathrm rad 与产生的等离子体冲击波 d s 之间关系的各种方法，但它们之间存在明显差异。为了更好地理解这一现象，本文通过自相似解提供了",
+        "contribution:通过自相似方法建立了铝的 t mathrm rad d s 关系，包括等离子体蒸发和冲击波区域。",
+        "contribution:解释了现有文献中不同缩放关系的差异。",
+        "contribution:模型与现有实验和模拟数据相吻合。",
+        "concept:aluminum"
+      ],
+      "key_entities": [
+        "Radiation drive temperature measurements in aluminium via radiation-driven shock waves: Modeling using self-similar solutions",
+        "self-similar solutions",
+        "尽管存在不同研究中关于辐射驱动温度 $T_{\\mathrm{Rad}}$ 与产生的等离子体冲击波 $D_S$ 之间关系的各种方法，但它们之间存在明显差异。为了更好地理解这一现象，本文通过自相似解提供了",
+        "通过自相似方法建立了铝的 $T_{\\mathrm{Rad}}(D_S)$ 关系，包括等离子体蒸发和冲击波区域。",
+        "解释了现有文献中不同缩放关系的差异。",
+        "模型与现有实验和模拟数据相吻合。",
+        "aluminum"
+      ],
+      "key_papers": [
+        "Radiation drive temperature measurements in aluminium via radiation-driven shock waves: Modeling using self-similar solutions"
+      ],
+      "dominant_types": [
+        "Contribution",
+        "Paper",
+        "Method"
+      ],
+      "semantic_tag": "Research Contributions Cluster",
+      "summary": "",
+      "community_name": "Research Contributions Cluster"
+    },
+    "3": {
+      "nodes": [
+        "paper:2305.16307v3",
+        "method:bpcc和indictrans2",
+        "task:尽管缺乏全面覆盖22种印度官方语言的平行训练数据和基准测试，但为了提供高质量且易于访问的机器翻译系统，特别是为22种印度官方语言。",
+        "dataset:bharat parallel corpus collection bpcc 包含230m对双语文本，其中126m是新的，包括644k人工翻译的句子对",
+        "metric:null",
+        "contribution:开发了bharat parallel corpus collection bpcc ，这是印度语料库中最大的公共并行语料库",
+        "contribution:创建了第一个覆盖所有22种印度官方语言的n-way并行基准",
+        "contribution:推出了支持所有22种印度官方语言的第一个模型indictrans2",
+        "contribution:将模型和相关数据以开放许可的形式发布"
+      ],
+      "key_entities": [
+        "IndicTrans2: Towards High-Quality and Accessible Machine Translation Models for all 22 Scheduled Indian Languages",
+        "BPCC和IndicTrans2",
+        "尽管缺乏全面覆盖22种印度官方语言的平行训练数据和基准测试，但为了提供高质量且易于访问的机器翻译系统，特别是为22种印度官方语言。",
+        "Bharat Parallel Corpus Collection (BPCC)包含230M对双语文本，其中126M是新的，包括644K人工翻译的句子对",
+        "null",
+        "开发了Bharat Parallel Corpus Collection (BPCC)，这是印度语料库中最大的公共并行语料库",
+        "创建了第一个覆盖所有22种印度官方语言的n-way并行基准",
+        "推出了支持所有22种印度官方语言的第一个模型IndicTrans2",
+        "将模型和相关数据以开放许可的形式发布"
+      ],
+      "key_papers": [
+        "IndicTrans2: Towards High-Quality and Accessible Machine Translation Models for all 22 Scheduled Indian Languages"
+      ],
+      "dominant_types": [
+        "Contribution",
+        "Paper",
+        "Method"
+      ],
+      "semantic_tag": "Research Contributions Cluster",
+      "summary": "",
+      "community_name": "Research Contributions Cluster"
+    },
+    "4": {
+      "nodes": [
+        "paper:1806.05491v1",
+        "task:尽管现有的演化模型在年轻恒星（ 200 myr）和低质量恒星（ 1 m⊙）的预测准确性存疑，但twa 22和gj 2060系统的质量测量能够用于校准这些演化轨迹。",
+        "metric:无直接相关指标",
+        "contribution:通过测量twa 22和gj 2060系统的总质量，验证了介于20百万年的模型预测。",
+        "contribution:发现gj 2060系统的质量测量结果与演化模型预测存在1-2个标准差的偏差，这可能是由于模型低估了年轻低质量恒星的质量。",
+        "contribution:建议了twa 22和gj 2060系统可能适合年轻星团（ 50 myr）的研究，进一步限制了模型预测的适用范围。"
+      ],
+      "key_entities": [
+        "Dynamical masses of M-dwarf binaries in young moving groups: I - The case of TWA 22 and GJ 2060",
+        "尽管现有的演化模型在年轻恒星（<200 Myr）和低质量恒星（<1 M⊙）的预测准确性存疑，但TWA 22和GJ 2060系统的质量测量能够用于校准这些演化轨迹。",
+        "无直接相关指标",
+        "通过测量TWA 22和GJ 2060系统的总质量，验证了介于20百万年的模型预测。",
+        "发现GJ 2060系统的质量测量结果与演化模型预测存在1-2个标准差的偏差，这可能是由于模型低估了年轻低质量恒星的质量。",
+        "建议了TWA 22和GJ 2060系统可能适合年轻星团（~50 Myr）的研究，进一步限制了模型预测的适用范围。"
+      ],
+      "key_papers": [
+        "Dynamical masses of M-dwarf binaries in young moving groups: I - The case of TWA 22 and GJ 2060"
+      ],
+      "dominant_types": [
+        "Contribution",
+        "Paper",
+        "Task"
+      ],
+      "semantic_tag": "Research Contributions Cluster",
+      "summary": "",
+      "community_name": "Research Contributions Cluster"
+    },
+    "5": {
+      "nodes": [
+        "dataset:twa 22系统",
+        "dataset:gj 2060系统",
+        "method:dynamical masses measurement",
+        "model:evolutionary models",
+        "model:bcah15",
+        "model:parsec"
+      ],
+      "key_entities": [
+        "TWA 22系统",
+        "GJ 2060系统",
+        "Dynamical masses measurement",
+        "Evolutionary models",
+        "BCAH15",
+        "PARSEC"
+      ],
+      "key_papers": [],
+      "dominant_types": [
+        "Model",
+        "Dataset",
+        "Method"
+      ],
+      "semantic_tag": "Benchmark & Dataset Cluster",
+      "summary": "",
+      "community_name": "Benchmark & Dataset Cluster"
+    },
+    "6": {
+      "nodes": [
+        "concept:standard model",
+        "concept:standard model lagrangian",
+        "concept:spontaneous symmetry breaking",
+        "concept:mass eigenstates",
+        "concept:gauge interactions"
+      ],
+      "key_entities": [
+        "Standard Model",
+        "Standard Model Lagrangian",
+        "Spontaneous Symmetry Breaking",
+        "Mass Eigenstates",
+        "Gauge Interactions"
+      ],
+      "key_papers": [],
+      "dominant_types": [
+        "Concept"
+      ],
+      "semantic_tag": "Research Topic Cluster",
+      "summary": "",
+      "community_name": "Research Topic Cluster"
+    },
+    "7": {
+      "nodes": [
+        "concept:t mathrm rad d s relation",
+        "concept:experiments",
+        "concept:simulations data"
+      ],
+      "key_entities": [
+        "T_{\\mathrm{Rad}}(D_S)$ relation",
+        "experiments",
+        "simulations data"
+      ],
+      "key_papers": [],
+      "dominant_types": [
+        "Concept"
+      ],
+      "semantic_tag": "Research Topic Cluster",
+      "summary": "",
+      "community_name": "Research Topic Cluster"
+    },
+    "8": {
+      "nodes": [
+        "model:indictrans2",
+        "dataset:bharat parallel corpus collection bpcc",
+        "task:machine translation mt",
+        "concept:22 scheduled indian languages",
+        "dataset:n-way parallel benchmark"
+      ],
+      "key_entities": [
+        "IndicTrans2",
+        "Bharat Parallel Corpus Collection (BPCC)",
+        "Machine Translation (MT)",
+        "22 scheduled Indian languages",
+        "n-way parallel benchmark"
+      ],
+      "key_papers": [],
+      "dominant_types": [
+        "Dataset",
+        "Model",
+        "Task"
+      ],
+      "semantic_tag": "Benchmark & Dataset Cluster",
+      "summary": "",
+      "community_name": "Benchmark & Dataset Cluster"
+    }
+  },
+  "citation_graph": {},
+  "stats": {
+    "node_count": 56,
+    "edge_count": 68,
+    "node_type_count": {
+      "Paper": 5,
+      "Task": 6,
+      "Contribution": 17,
+      "Method": 4,
+      "Dataset": 5,
+      "Metric": 2,
+      "Concept": 13,
+      "Model": 4
+    },
+    "paper_count": 5,
+    "community_count": 0,
+    "citation_edge_count": 0
+  }
+}

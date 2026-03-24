@@ -317,16 +317,28 @@ class ChromaKB(KnowledgeBase):
             batch_metadatas = data.get("metadatas", None)
             batch_ids = data.get("ids", None)
 
-            await asyncio.to_thread(
-                                collection.add,
-                                embeddings=batch_embeddings,
-                                documents=batch_documents,
-                                metadatas=batch_metadatas,
-                                ids=batch_ids,
-                            )
-            logger.info(f"成功将 {len(batch_ids)} 个项 插入到临时知识库中")
+            if not batch_documents:
+                return []
+
+            batch_size = 10
+            total_batches = (len(batch_documents) + batch_size - 1) // batch_size
+            
+            for i in range(0, len(batch_documents), batch_size):
+                b_docs = batch_documents[i : i + batch_size]
+                b_ids = batch_ids[i : i + batch_size] if batch_ids else None
+                b_metas = batch_metadatas[i : i + batch_size] if batch_metadatas else None
+                b_embeds = batch_embeddings[i : i + batch_size] if batch_embeddings else None
+
+                await asyncio.to_thread(
+                    collection.add,
+                    embeddings=b_embeds,
+                    documents=b_docs,
+                    metadatas=b_metas,
+                    ids=b_ids,
+                )
+            logger.info(f"成功将 {len(batch_documents)} 个项 插入到临时知识库中")
         except Exception as e:
-            logger.error(f"错误处理{len(batch_ids)} 个项 插入到临时知识库中，失败: {e}, {traceback.format_exc()}")
+            logger.error(f"错误处理{len(batch_documents)} 个项 插入到临时知识库中，失败: {e}, {traceback.format_exc()}")
 
     async def add_content(self, db_id: str, items: list[str], params: dict | None) -> list[dict]:
         """添加内容（文件/URL）"""
@@ -374,8 +386,10 @@ class ChromaKB(KnowledgeBase):
                     metadatas = [chunk["metadata"] for chunk in chunks]
                     ids = [chunk["id"] for chunk in chunks]
 
-                    # 插入到 ChromaDB - 分批处理以避免超出 OpenAI 批次大小限制
-                    batch_size = 64  # OpenAI 的最大批次大小限制
+                    # 插入到 ChromaDB - 分批处理以避免嵌入服务批次限制
+                    # DashScope 兼容端的 embedding 接口要求 batch size <= 10。
+                    # 取 10 作为安全上限，兼容当前默认供应商配置。
+                    batch_size = 10
                     total_batches = (len(chunks) + batch_size - 1) // batch_size
 
                     for i in range(0, len(chunks), batch_size):
