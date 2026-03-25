@@ -7,12 +7,14 @@ from typing import Optional, List
 import re
 import ast
 import asyncio
+import os
 from openai import RateLimitError
 from src.utils.log_utils import setup_logger
 from src.tasks.paper_search import PaperSearcher
 from src.core.state_models import State, ExecutionState
 from src.core.prompts import search_agent_prompt
 from src.core.state_models import BackToFrontData
+from src.core.config import config
 
 from src.core.model_client import create_search_model_client
 
@@ -124,14 +126,7 @@ async def search_node(state: State) -> State:
         )
 
         # 6. 处理检索结果
-        current_state.search_results = results
-        if len(results) > 0:
-            await state_queue.put(BackToFrontData(
-                step=ExecutionState.SEARCHING,
-                state="completed",
-                data=f"文献检索完成，共获取 {len(results)} 篇论文，即将开始构建问答知识库..."
-            ))
-        else:
+        if not results:
             err_msg = "没有找到相关论文，请尝试调整关键词或时间范围"
             current_state.error.search_node_error = err_msg
             await state_queue.put(BackToFrontData(
@@ -139,6 +134,40 @@ async def search_node(state: State) -> State:
                 state="error",
                 data=err_msg
             ))
+            return {"value": current_state}
+
+        # 7. 下载 PDF 并提取全文（并行，最多 3 个并发）
+        await state_queue.put(BackToFrontData(
+            step=ExecutionState.SEARCHING,
+            state="downloading",
+            data=f"找到 {len(results)} 篇论文，正在下载 PDF 并提取正文..."
+        ))
+
+        save_dir = config.get("SAVE_DIR", "data")
+        tmp_pdf_dir = os.path.join(save_dir, "tmp_papers")
+
+        sem = asyncio.Semaphore(3)
+
+        async def _fetch_one(paper: dict) -> dict:
+            async with sem:
+                pdf_path, full_text = await paper_searcher.download_and_extract(paper, tmp_pdf_dir)
+            updated = dict(paper)
+            if full_text:
+                updated["full_text"] = full_text
+            if pdf_path:
+                updated["pdf_local_path"] = pdf_path
+            return updated
+
+        enriched = await asyncio.gather(*[_fetch_one(p) for p in results])
+        success_count = sum(1 for p in enriched if p.get("full_text"))
+        logger.info(f"PDF 下载完成：{success_count}/{len(enriched)} 篇成功提取全文")
+
+        current_state.search_results = list(enriched)
+        await state_queue.put(BackToFrontData(
+            step=ExecutionState.SEARCHING,
+            state="completed",
+            data=f"文献检索完成，共获取 {len(enriched)} 篇论文（{success_count} 篇成功提取全文），即将开始构建问答知识库..."
+        ))
 
         return {"value": current_state}
 

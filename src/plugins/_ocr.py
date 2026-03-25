@@ -11,6 +11,7 @@ from rapidocr_onnxruntime import RapidOCR
 from tqdm import tqdm
 
 from src.utils import logger
+from src.core.config import config
 
 GOLBAL_STATE = {}
 
@@ -65,13 +66,25 @@ class OCRPlugin:
     def __init__(self, **kwargs):
         self.ocr = None
         self.det_box_thresh = kwargs.get("det_box_thresh", 0.3)
-        self.model_dir_root = (
-            os.getenv("MODEL_DIR") if not os.getenv("RUNNING_IN_DOCKER") else os.getenv("MODEL_DIR_IN_DOCKER")
-        )
+        # 优先使用环境变量；未配置时回退到 system_params.yaml 的 MODEL_DIR
+        model_dir = os.getenv("MODEL_DIR") if not os.getenv("RUNNING_IN_DOCKER") else os.getenv("MODEL_DIR_IN_DOCKER")
+        if not model_dir:
+            model_dir = config.get("MODEL_DIR")
+        # 将相对路径解析为项目根目录下的绝对路径
+        if model_dir and not os.path.isabs(str(model_dir)):
+            project_root = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", ".."))
+            model_dir = os.path.abspath(os.path.join(project_root, str(model_dir)))
+        self.model_dir_root = model_dir
 
     def _check_rapid_ocr_availability(self):
         """检查RapidOCR模型是否可用"""
         try:
+            if not self.model_dir_root:
+                raise OCRServiceException(
+                    "未配置 MODEL_DIR（或 Docker 下的 MODEL_DIR_IN_DOCKER），无法定位 RapidOCR 模型目录。",
+                    "rapid_ocr",
+                    "model_dir_not_set",
+                )
             model_dir = os.path.join(self.model_dir_root, "SWHL/RapidOCR")
             det_model_dir = os.path.join(model_dir, "PP-OCRv4/ch_PP-OCRv4_det_infer.onnx")
             rec_model_dir = os.path.join(model_dir, "PP-OCRv4/ch_PP-OCRv4_rec_infer.onnx")

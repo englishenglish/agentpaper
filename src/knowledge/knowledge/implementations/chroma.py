@@ -4,14 +4,20 @@ import traceback
 from typing import Any, Optional, Union, List
 from pathlib import Path
 
+import httpx
+import numpy as np
 import chromadb
 from chromadb.config import Settings
-from chromadb.utils.embedding_functions import OpenAIEmbeddingFunction
 from chromadb.api.types import (
     Embedding,
     PyEmbedding,
     OneOrMany,
+    Documents,
+    Embeddings,
+    EmbeddingFunction,
+    Space,
 )
+from openai import OpenAI
 from src.knowledge.knowledge.base import KnowledgeBase
 from src.knowledge.knowledge.indexing import process_file_to_markdown, process_file_to_json, process_url_to_markdown
 from src.knowledge.knowledge.utils.kb_utils import (
@@ -28,9 +34,59 @@ from src.core.config import config
 logger = setup_logger(__name__)
 
 
-chroma_client = chromadb.Client()
-collection = chroma_client.create_collection(name="my_collection")
-collection.query
+class ResilientOpenAIEmbeddingFunction(EmbeddingFunction[Documents]):
+    """
+    使用自定义 httpx.Client：
+    - trust_env 可配置（默认 False），避免系统 HTTP(S)_PROXY 导致访问 DashScope 等域名时 TLS 握手超时
+    - 超时时间可配置
+    """
+
+    def __init__(
+        self,
+        model_name: str,
+        api_key: str,
+        api_base: str,
+        dimensions: Optional[int] = None,
+        trust_env: bool = False,
+        timeout_seconds: float = 120.0,
+        connect_seconds: float = 45.0,
+    ):
+        self.model_name = model_name
+        self.dimensions = dimensions
+        base = (api_base or "").replace("/embeddings", "").rstrip("/")
+        timeout = httpx.Timeout(timeout_seconds, connect=connect_seconds)
+        http_client = httpx.Client(timeout=timeout, trust_env=trust_env)
+        self.client = OpenAI(
+            api_key=api_key,
+            base_url=base,
+            http_client=http_client,
+            timeout=timeout,
+            max_retries=2,
+        )
+        logger.info(
+            "Embedding HTTP client: base_url=%s trust_env=%s timeout=%ss connect=%ss",
+            base,
+            trust_env,
+            timeout_seconds,
+            connect_seconds,
+        )
+
+    def __call__(self, input: Documents) -> Embeddings:
+        if not input:
+            return []
+        params: dict[str, Any] = {"model": self.model_name, "input": input}
+        if self.dimensions is not None and "text-embedding-3" in self.model_name:
+            params["dimensions"] = self.dimensions
+        response = self.client.embeddings.create(**params)
+        return [np.array(data.embedding, dtype=np.float32) for data in response.data]
+
+    @staticmethod
+    def name() -> str:
+        return "openai_resilient"
+
+    def default_space(self) -> Space:
+        return "cosine"
+
 
 class ChromaKB(KnowledgeBase):
     """基于 ChromaDB 的向量知识库实现"""
@@ -112,11 +168,18 @@ class ChromaKB(KnowledgeBase):
     def _get_embedding_function(self, embed_info: dict):
         """获取 embedding 函数"""
         config_dict = get_embedding_config(embed_info)
-
-        return OpenAIEmbeddingFunction(
+        trust_env = config.get_bool("embedding_http_trust_env", False)
+        timeout_s = float(config.get("embedding_http_timeout", 120) or 120)
+        connect_s = float(config.get("embedding_http_connect", 45) or 45)
+        dim = config_dict.get("dimension")
+        return ResilientOpenAIEmbeddingFunction(
             model_name=config_dict["model"],
             api_key=config_dict["api_key"],
-            api_base=config_dict["base_url"].replace("/embeddings", ""),
+            api_base=config_dict["base_url"],
+            dimensions=dim if isinstance(dim, int) else None,
+            trust_env=trust_env,
+            timeout_seconds=timeout_s,
+            connect_seconds=connect_s,
         )
 
     async def _get_chroma_collection(self, db_id: str):

@@ -1,8 +1,11 @@
 import arxiv
+import asyncio
 import logging
-from typing import List, Dict, Optional, Union
+import shutil
+from typing import List, Dict, Optional, Union, Tuple
 from datetime import datetime, timedelta
-
+import time
+import os
 from src.utils.log_utils import setup_logger
 
 logger = setup_logger(__name__)
@@ -69,8 +72,32 @@ class PaperSearcher:
             # logger.info(f"论文搜索结果为：{search.results()}")
             # 执行搜索并解析结果
             # 使用新方法格式化论文列表
-            papers = self.format_papers_list(search.results())
+            papers = []
+            max_retries = 3  # 最大重试次数
             
+            for attempt in range(max_retries):
+                try:
+                    # 只有在这里的 list() 操作时，才会真正向 arXiv 发起 HTTP 请求
+                    papers = self.format_papers_list(search.results())
+                    break  # 如果成功拿到数据，就跳出循环
+                    
+                except Exception as e:
+                    error_msg = str(e)
+                    # 捕获 429 限流错误或空页面错误
+                    if "429" in error_msg or "Too Many Requests" in error_msg or "UnexpectedEmptyPageError" in error_msg:
+                        wait_time = (attempt + 1) * 5  # 第一轮等 5 秒，第二轮等 10 秒...
+                        logger.warning(f"⚠️ 触发 arXiv 限流 (HTTP 429)。程序休眠 {wait_time} 秒后重试 ({attempt + 1}/{max_retries})...")
+                        time.sleep(wait_time)
+                        
+                        if attempt == max_retries - 1:
+                            logger.error("❌ 达到最大重试次数，arXiv 搜索失败。请稍后重试或减少搜索并发量。")
+                            return []
+                    else:
+                        # 如果是其他网络断开等严重错误，直接抛出
+                        logger.error(f"论文搜索数据拉取失败: {error_msg}")
+                        raise e
+            # =============== 修改的部分到这里结束 ===============
+
             logger.info(f"论文搜索完成，共找到 {len(papers)} 篇论文")
             return papers
         except Exception as e:
@@ -107,6 +134,117 @@ class PaperSearcher:
             sort_order=arxiv.SortOrder.Descending,
             start_date=start_date
         )
+
+    async def download_and_extract(
+        self,
+        paper: Dict,
+        dirpath: str,
+    ) -> Tuple[Optional[str], str]:
+        """下载论文 PDF 并用 PyMuPDF 提取正文文本。
+
+        返回 (本地PDF路径, 提取的全文)。
+        失败时返回 (None, "")，由调用方决定是否降级使用摘要。
+        """
+        paper_id = paper.get("paper_id", "")
+        title = str(paper.get("title", paper_id))
+        safe_title = "".join(c for c in title[:60] if c.isalnum() or c in " _-").strip()
+        filename = f"{paper_id.replace('/', '_')}_{safe_title}.pdf"
+
+        os.makedirs(dirpath, exist_ok=True)
+        pdf_path = os.path.join(dirpath, filename)
+
+        # 如果已下载，跳过
+        if not os.path.exists(pdf_path):
+            try:
+                def _do_download():
+                    search = arxiv.Search(id_list=[paper_id])
+                    result = next(search.results())
+                    result.download_pdf(dirpath=dirpath, filename=filename)
+
+                await asyncio.to_thread(_do_download)
+                logger.info(f"PDF 下载成功: {pdf_path}")
+            except Exception as e:
+                logger.warning(f"PDF 下载失败 [{paper_id}]: {e}")
+                return None, ""
+
+        # 提取全文：优先 OCRPlugin（支持扫描版 PDF），空结果或异常时降级到 PyMuPDF 文本层
+        full_text = ""
+
+        # --- 主路径：OCRPlugin ---
+        try:
+            from src.plugins._ocr import OCRPlugin
+
+            def _extract_ocr():
+                ocr = OCRPlugin()
+                return ocr.process_pdf(pdf_path)
+
+            ocr_text = await asyncio.to_thread(_extract_ocr)
+            full_text = (ocr_text or "").strip()
+            if full_text:
+                logger.info(f"OCR 文本提取成功 [{paper_id}]: {len(full_text)} 字符")
+            else:
+                logger.warning(f"OCR 返回空文本（模型未配置或 PDF 无可识别内容）[{paper_id}]，降级到 PyMuPDF")
+        except Exception as e:
+            logger.warning(f"OCR 提取异常 [{paper_id}]: {e}，降级到 PyMuPDF")
+
+        # --- 降级路径：PyMuPDF 直接读文本层（数字版 PDF 效果好）---
+        if not full_text:
+            try:
+                import fitz
+
+                def _extract_fitz():
+                    doc = fitz.open(pdf_path)
+                    text = "\n".join(page.get_text() for page in doc)
+                    doc.close()
+                    return text
+
+                full_text = (await asyncio.to_thread(_extract_fitz)).strip()
+                if full_text:
+                    logger.info(f"PyMuPDF 文本提取成功 [{paper_id}]: {len(full_text)} 字符")
+                else:
+                    logger.warning(f"PyMuPDF 也未提取到文本 [{paper_id}]，将使用摘要")
+            except Exception as e2:
+                logger.warning(f"PyMuPDF 提取失败 [{paper_id}]: {e2}")
+
+        return pdf_path, full_text
+
+    async def download_paper(self, paper_id: str, dirpath: str = "./papers", filename: Optional[str] = None) -> Optional[str]:
+        """
+        根据论文ID下载PDF文件
+
+        参数:
+            paper_id: 论文的短ID (例如 '2310.06825')
+            dirpath: 保存路径，默认为当前目录下的 papers 文件夹
+            filename: 自定义文件名，如果为None则使用默认的 "ID.pdf" 或 "IDvX.pdf"
+
+        返回:
+            下载后的文件绝对路径，如果失败则返回 None
+        """
+        # 确保保存目录存在
+        if not os.path.exists(dirpath):
+            os.makedirs(dirpath)
+            logger.info(f"创建论文保存目录: {dirpath}")
+
+        try:
+            # 通过 ID 准确查找这篇论文
+            search = arxiv.Search(id_list=[paper_id])
+            paper = next(search.results())
+
+            logger.info(f"正在下载论文: {paper.title} ({paper_id})...")
+
+            # 调用 arxiv 库自带的下载方法
+            # 可以在这里使用自定义文件名，比如 f"{paper_id}_{paper.title}.pdf"
+            file_path = paper.download_pdf(dirpath=dirpath, filename=filename)
+
+            logger.info(f"✅ 论文下载成功，已保存至: {file_path}")
+            return file_path
+
+        except StopIteration:
+            logger.error(f"❌ 找不到 ID 为 {paper_id} 的论文")
+            return None
+        except Exception as e:
+            logger.error(f"❌ 下载论文失败: {str(e)}")
+            return None
     
     def format_papers_list(self, search_results) -> List[Dict]:
         """
@@ -239,6 +377,35 @@ class PaperSearcher:
         return datetime.now().strftime("%Y%m%d0000")
 
 # 示例用法
+# 示例用法
 if __name__ == "__main__":
-    data = PaperSearcher()._format_date("2023")
-    print(data)
+    import asyncio
+
+
+    async def main():
+        searcher = PaperSearcher()
+
+        # 1. 搜索 LLM 论文
+        print("开始搜索...")
+        papers = await searcher.search_papers(querys=["Retrieval-Augmented Generation", "LLM"], max_results=2)
+
+        for p in papers:
+            print(f"找到论文: {p['title']} | ID: {p['paper_id']}")
+
+        # 2. 如果找到了论文，尝试下载第一篇
+        if papers:
+            first_paper_id = papers[0]['paper_id']
+            print(f"\n准备下载第一篇论文: {first_paper_id}")
+
+            # 调用新增的下载方法
+            downloaded_path = await searcher.download_paper(
+                paper_id=first_paper_id,
+                dirpath="./my_downloaded_papers"
+            )
+
+            if downloaded_path:
+                print(f"下载完成！文件位置在: {downloaded_path}")
+
+
+    # 运行异步函数
+    asyncio.run(main())

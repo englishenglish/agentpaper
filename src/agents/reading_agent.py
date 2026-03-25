@@ -4,6 +4,7 @@ import re
 import json
 import ast
 import asyncio
+import shutil
 from typing import List, Optional, Dict, Any
 
 # 将项目根目录添加到Python路径
@@ -228,6 +229,13 @@ async def add_papers_to_kb(
     db_id = database_info["db_id"]
     config.set("tmp_db_id", db_id)
 
+    # KB uploads 目录：已下载的临时 PDF 将被复制到此处，作为知识库的持久化文件
+    save_dir = config.get("SAVE_DIR", "data")
+    kb_uploads_dir = os.path.join(
+        save_dir, "knowledge_base_data", "chroma_data", f"kb_{db_id}", "uploads"
+    )
+    os.makedirs(kb_uploads_dir, exist_ok=True)
+
     # 1. 初始化文本切分器（按 800 字符切块，保留 100 字符重叠防止上下文截断）
     text_splitter = RecursiveCharacterTextSplitter(
         chunk_size=800,
@@ -275,13 +283,27 @@ async def add_papers_to_kb(
             metadatas.append({**rich_meta_base, "chunk_index": j})
             ids.append(f"{file_id}_chunk_{j}")
 
-        # 构建该论文的 files_meta 注册记录
+        # 将临时 PDF 复制到 KB uploads 目录，并将路径更新为 KB 内的持久路径
         title = str(paper.get("title") or paper_id_raw)
+        safe_title = "".join(c for c in title[:60] if c.isalnum() or c in " _-").strip()
+        dest_filename = f"{paper_id_raw.replace('/', '_')}_{safe_title}.pdf"
+        dest_path = os.path.join(kb_uploads_dir, dest_filename)
+
+        tmp_pdf_path = paper.get("pdf_local_path")
+        if tmp_pdf_path and os.path.exists(tmp_pdf_path) and not os.path.exists(dest_path):
+            try:
+                shutil.copy2(tmp_pdf_path, dest_path)
+                logger.info(f"PDF 已复制到知识库目录: {dest_path}")
+            except Exception as e:
+                logger.warning(f"复制 PDF 失败，使用原始路径: {e}")
+                dest_path = tmp_pdf_path
+
+        # 构建该论文的 files_meta 注册记录
         file_records.append({
             "file_id": file_id,
             "database_id": db_id,
-            "filename": f"{title[:80]}.pdf",
-            "path": str(paper.get("url") or paper.get("pdf_url") or paper_id_raw),
+            "filename": f"{safe_title}.pdf" if safe_title else f"{paper_id_raw}.pdf",
+            "path": dest_path if os.path.exists(dest_path) else str(paper.get("pdf_url") or paper.get("url") or paper_id_raw),
             "file_type": "arxiv",
             "status": "done",
             "created_at": utc_isoformat(),

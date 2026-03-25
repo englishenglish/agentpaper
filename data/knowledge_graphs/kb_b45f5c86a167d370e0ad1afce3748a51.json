@@ -1,0 +1,1088 @@
+{
+  "db_id": "kb_b45f5c86a167d370e0ad1afce3748a51",
+  "nodes": {
+    "paper:2206.04564v6": {
+      "id": "paper:2206.04564v6",
+      "type": "Paper",
+      "label": "TwiBot-22: Towards Graph-Based Twitter Bot Detection",
+      "norm_label": "twibot-22 towards graph-based twitter bot detection"
+    },
+    "method:twibot-22": {
+      "id": "method:twibot-22",
+      "type": "Method",
+      "label": "TwiBot-22",
+      "norm_label": "twibot-22"
+    },
+    "task:尽管目前twitter bot检测方法在新型twitter bot检测上表现出色，但缺乏大规模的图基twitter bot检测基准数据集。": {
+      "id": "task:尽管目前twitter bot检测方法在新型twitter bot检测上表现出色，但缺乏大规模的图基twitter bot检测基准数据集。",
+      "type": "Task",
+      "label": "尽管目前Twitter bot检测方法在新型Twitter bot检测上表现出色，但缺乏大规模的图基Twitter bot检测基准数据集。",
+      "norm_label": "尽管目前twitter bot检测方法在新型twitter bot检测上表现出色，但缺乏大规模的图基twitter bot检测基准数据集。"
+    },
+    "contribution:提出了twibot-22，一个大型图基twitter bot检测基准，其中包括大量的twitter用户数据及他们在twitter网络中的实体和关系。": {
+      "id": "contribution:提出了twibot-22，一个大型图基twitter bot检测基准，其中包括大量的twitter用户数据及他们在twitter网络中的实体和关系。",
+      "type": "Contribution",
+      "label": "提出了TwiBot-22，一个大型图基Twitter bot检测基准，其中包括大量的Twitter用户数据及他们在Twitter网络中的实体和关系。",
+      "norm_label": "提出了twibot-22，一个大型图基twitter bot检测基准，其中包括大量的twitter用户数据及他们在twitter网络中的实体和关系。"
+    },
+    "contribution:重新实现了35个代表性的twitter bot检测基线，评估了9个数据集，包括twibot-22，以促进模型性能的公平比较。": {
+      "id": "contribution:重新实现了35个代表性的twitter bot检测基线，评估了9个数据集，包括twibot-22，以促进模型性能的公平比较。",
+      "type": "Contribution",
+      "label": "重新实现了35个代表性的Twitter bot检测基线，评估了9个数据集，包括TwiBot-22，以促进模型性能的公平比较。",
+      "norm_label": "重新实现了35个代表性的twitter bot检测基线，评估了9个数据集，包括twibot-22，以促进模型性能的公平比较。"
+    },
+    "contribution:发布了twibot-22基准和评估框架，使研究人员能够一致地评估新的模型和数据集。": {
+      "id": "contribution:发布了twibot-22基准和评估框架，使研究人员能够一致地评估新的模型和数据集。",
+      "type": "Contribution",
+      "label": "发布了TwiBot-22基准和评估框架，使研究人员能够一致地评估新的模型和数据集。",
+      "norm_label": "发布了twibot-22基准和评估框架，使研究人员能够一致地评估新的模型和数据集。"
+    },
+    "paper:2301.02010v1": {
+      "id": "paper:2301.02010v1",
+      "type": "Paper",
+      "label": "HIT-SCIR at MMNLU-22: Consistency Regularization for Multilingual Spoken Language Understanding",
+      "norm_label": "hit-scir at mmnlu-22 consistency regularization for multilingual spoken language understanding"
+    },
+    "method:一致性正则化": {
+      "id": "method:一致性正则化",
+      "type": "Method",
+      "label": "一致性正则化",
+      "norm_label": "一致性正则化"
+    },
+    "task:为了改进多语言语音理解中的意图检测和槽填充任务，需要一种有效的方法补充跨语言的训练数据。": {
+      "id": "task:为了改进多语言语音理解中的意图检测和槽填充任务，需要一种有效的方法补充跨语言的训练数据。",
+      "type": "Task",
+      "label": "为了改进多语言语音理解中的意图检测和槽填充任务，需要一种有效的方法补充跨语言的训练数据。",
+      "norm_label": "为了改进多语言语音理解中的意图检测和槽填充任务，需要一种有效的方法补充跨语言的训练数据。"
+    },
+    "dataset:massive": {
+      "id": "dataset:massive",
+      "type": "Dataset",
+      "label": "MASSIVE",
+      "norm_label": "massive"
+    },
+    "metric:accuracy": {
+      "id": "metric:accuracy",
+      "type": "Metric",
+      "label": "Accuracy",
+      "norm_label": "accuracy"
+    },
+    "metric:f1": {
+      "id": "metric:f1",
+      "type": "Metric",
+      "label": "F1",
+      "norm_label": "f1"
+    },
+    "metric:ema": {
+      "id": "metric:ema",
+      "type": "Metric",
+      "label": "EMA",
+      "norm_label": "ema"
+    },
+    "contribution:提出了基于混合数据增强策略的一致性正则化方法。": {
+      "id": "contribution:提出了基于混合数据增强策略的一致性正则化方法。",
+      "type": "Contribution",
+      "label": "提出了基于混合数据增强策略的一致性正则化方法。",
+      "norm_label": "提出了基于混合数据增强策略的一致性正则化方法。"
+    },
+    "contribution:该方法在全数据设置下在mmnlu-22竞赛中排名第一。": {
+      "id": "contribution:该方法在全数据设置下在mmnlu-22竞赛中排名第一。",
+      "type": "Contribution",
+      "label": "该方法在全数据设置下在MMNLU-22竞赛中排名第一。",
+      "norm_label": "该方法在全数据设置下在mmnlu-22竞赛中排名第一。"
+    },
+    "contribution:该方法在零样本设置下也表现出色，并在类似任务中取得了显著提升。": {
+      "id": "contribution:该方法在零样本设置下也表现出色，并在类似任务中取得了显著提升。",
+      "type": "Contribution",
+      "label": "该方法在零样本设置下也表现出色，并在类似任务中取得了显著提升。",
+      "norm_label": "该方法在零样本设置下也表现出色，并在类似任务中取得了显著提升。"
+    },
+    "paper:2206.08029v1": {
+      "id": "paper:2206.08029v1",
+      "type": "Paper",
+      "label": "DIALOG-22 RuATD Generated Text Detection",
+      "norm_label": "dialog-22 ruatd generated text detection"
+    },
+    "method:基于注意力机制的集成方法": {
+      "id": "method:基于注意力机制的集成方法",
+      "type": "Method",
+      "label": "基于注意力机制的集成方法",
+      "norm_label": "基于注意力机制的集成方法"
+    },
+    "task:尽管文本生成模型（tgms）能生成符合人类语言风格的文本，但需要一种可以区分tgm生成的文本和人类撰写的文本的探测器，以防止滥用tgm。": {
+      "id": "task:尽管文本生成模型（tgms）能生成符合人类语言风格的文本，但需要一种可以区分tgm生成的文本和人类撰写的文本的探测器，以防止滥用tgm。",
+      "type": "Task",
+      "label": "尽管文本生成模型（TGMs）能生成符合人类语言风格的文本，但需要一种可以区分TGM生成的文本和人类撰写的文本的探测器，以防止滥用TGM。",
+      "norm_label": "尽管文本生成模型（tgms）能生成符合人类语言风格的文本，但需要一种可以区分tgm生成的文本和人类撰写的文本的探测器，以防止滥用tgm。"
+    },
+    "dataset:dialog-22 ruatd 二分类和多分类任务的训练和测试数据集": {
+      "id": "dataset:dialog-22 ruatd 二分类和多分类任务的训练和测试数据集",
+      "type": "Dataset",
+      "label": "DIALOG-22 RuATD (二分类和多分类任务的训练和测试数据集)",
+      "norm_label": "dialog-22 ruatd 二分类和多分类任务的训练和测试数据集"
+    },
+    "contribution:提出了基于注意力机制的集成方法": {
+      "id": "contribution:提出了基于注意力机制的集成方法",
+      "type": "Contribution",
+      "label": "提出了基于注意力机制的集成方法",
+      "norm_label": "提出了基于注意力机制的集成方法"
+    },
+    "contribution:在二分类任务中取得了第一的名次": {
+      "id": "contribution:在二分类任务中取得了第一的名次",
+      "type": "Contribution",
+      "label": "在二分类任务中取得了第一的名次",
+      "norm_label": "在二分类任务中取得了第一的名次"
+    },
+    "contribution:在多分类任务中取得了第四的名次": {
+      "id": "contribution:在多分类任务中取得了第四的名次",
+      "type": "Contribution",
+      "label": "在多分类任务中取得了第四的名次",
+      "norm_label": "在多分类任务中取得了第四的名次"
+    },
+    "paper:2304.09935v1": {
+      "id": "paper:2304.09935v1",
+      "type": "Paper",
+      "label": "Detection of millihertz quasi-periodic oscillations in the low-mass X-ray binary 4U 1730--22 with NICER",
+      "norm_label": "detection of millihertz quasi-periodic oscillations in the low-mass x-ray binary 4u 1730--22 with nicer"
+    },
+    "task:检测低质量x射线双星4u 1730--22中的毫赫兹准周期振荡 mhz qpos": {
+      "id": "task:检测低质量x射线双星4u 1730--22中的毫赫兹准周期振荡 mhz qpos",
+      "type": "Task",
+      "label": "检测低质量X射线双星4U 1730--22中的毫赫兹准周期振荡(mHz QPOs)",
+      "norm_label": "检测低质量x射线双星4u 1730--22中的毫赫兹准周期振荡 mhz qpos"
+    },
+    "contribution:发现4u 1730--22源中的mhz qpos与其他一系列显示出此现象的源一致，支持msnb假说。": {
+      "id": "contribution:发现4u 1730--22源中的mhz qpos与其他一系列显示出此现象的源一致，支持msnb假说。",
+      "type": "Contribution",
+      "label": "发现4U 1730--22源中的mHz QPOs与其他一系列显示出此现象的源一致，支持MSNB假说。",
+      "norm_label": "发现4u 1730--22源中的mhz qpos与其他一系列显示出此现象的源一致，支持msnb假说。"
+    },
+    "contribution:4u 1730--22成为第八个显示出mhz qpos现象的源。": {
+      "id": "contribution:4u 1730--22成为第八个显示出mhz qpos现象的源。",
+      "type": "Contribution",
+      "label": "4U 1730--22成为第八个显示出mHz QPOs现象的源。",
+      "norm_label": "4u 1730--22成为第八个显示出mhz qpos现象的源。"
+    },
+    "contribution:提出mhz qpos与ns表面的边际稳定核燃烧 msnb 模式相关的解释。": {
+      "id": "contribution:提出mhz qpos与ns表面的边际稳定核燃烧 msnb 模式相关的解释。",
+      "type": "Contribution",
+      "label": "提出mHz QPOs与NS表面的边际稳定核燃烧(MSNB)模式相关的解释。",
+      "norm_label": "提出mhz qpos与ns表面的边际稳定核燃烧 msnb 模式相关的解释。"
+    },
+    "paper:2207.08756v1": {
+      "id": "paper:2207.08756v1",
+      "type": "Paper",
+      "label": "A Scintillation Arc Survey of 22 Pulsars with Low to Moderate Dispersion Measures",
+      "norm_label": "a scintillation arc survey of 22 pulsars with low to moderate dispersion measures"
+    },
+    "method:脉冲星散射弧观测方法": {
+      "id": "method:脉冲星散射弧观测方法",
+      "type": "Method",
+      "label": "脉冲星散射弧观测方法",
+      "norm_label": "脉冲星散射弧观测方法"
+    },
+    "task:尽管天文学家能够通过脉冲星散射弧研究星际介质的离子化分布，但需要对离子化星际介质在 0.001-30 au尺度上的分布进行更详细且未偏倚的观测。": {
+      "id": "task:尽管天文学家能够通过脉冲星散射弧研究星际介质的离子化分布，但需要对离子化星际介质在 0.001-30 au尺度上的分布进行更详细且未偏倚的观测。",
+      "type": "Task",
+      "label": "尽管天文学家能够通过脉冲星散射弧研究星际介质的离子化分布，但需要对离子化星际介质在~0.001-30 au尺度上的分布进行更详细且未偏倚的观测。",
+      "norm_label": "尽管天文学家能够通过脉冲星散射弧研究星际介质的离子化分布，但需要对离子化星际介质在 0.001-30 au尺度上的分布进行更详细且未偏倚的观测。"
+    },
+    "dataset:22低到中等dm脉冲星": {
+      "id": "dataset:22低到中等dm脉冲星",
+      "type": "Dataset",
+      "label": "22低到中等DM脉冲星",
+      "norm_label": "22低到中等dm脉冲星"
+    },
+    "contribution:展示了离子化星际介质在au尺度范围内存在显著的不均匀性。": {
+      "id": "contribution:展示了离子化星际介质在au尺度范围内存在显著的不均匀性。",
+      "type": "Contribution",
+      "label": "展示了离子化星际介质在AU尺度范围内存在显著的不均匀性。",
+      "norm_label": "展示了离子化星际介质在au尺度范围内存在显著的不均匀性。"
+    },
+    "contribution:沿视线方向上，离子化介质的分散程度在几百至上百pc范围内具有类似特征。": {
+      "id": "contribution:沿视线方向上，离子化介质的分散程度在几百至上百pc范围内具有类似特征。",
+      "type": "Contribution",
+      "label": "沿视线方向上，离子化介质的分散程度在几百至上百PC范围内具有类似特征。",
+      "norm_label": "沿视线方向上，离子化介质的分散程度在几百至上百pc范围内具有类似特征。"
+    },
+    "contribution:对于大多数视线，没有观察到分布式的散射现象。": {
+      "id": "contribution:对于大多数视线，没有观察到分布式的散射现象。",
+      "type": "Contribution",
+      "label": "对于大多数视线，没有观察到分布式的散射现象。",
+      "norm_label": "对于大多数视线，没有观察到分布式的散射现象。"
+    },
+    "task:graph-based twitter bot detection benchmark": {
+      "id": "task:graph-based twitter bot detection benchmark",
+      "type": "Task",
+      "label": "Graph-Based Twitter Bot Detection Benchmark",
+      "norm_label": "graph-based twitter bot detection benchmark",
+      "description": ""
+    },
+    "concept:twitter": {
+      "id": "concept:twitter",
+      "type": "Concept",
+      "label": "Twitter",
+      "norm_label": "twitter",
+      "description": ""
+    },
+    "task:mmnlu-22": {
+      "id": "task:mmnlu-22",
+      "type": "Task",
+      "label": "MMNLU-22",
+      "norm_label": "mmnlu-22",
+      "description": ""
+    },
+    "task:多语言口语理解": {
+      "id": "task:多语言口语理解",
+      "type": "Task",
+      "label": "多语言口语理解",
+      "norm_label": "多语言口语理解",
+      "description": ""
+    },
+    "task:意图检测": {
+      "id": "task:意图检测",
+      "type": "Task",
+      "label": "意图检测",
+      "norm_label": "意图检测",
+      "description": ""
+    },
+    "task:槽位填充": {
+      "id": "task:槽位填充",
+      "type": "Task",
+      "label": "槽位填充",
+      "norm_label": "槽位填充",
+      "description": ""
+    },
+    "task:dialog-22 ruatd": {
+      "id": "task:dialog-22 ruatd",
+      "type": "Task",
+      "label": "DIALOG-22 RuATD",
+      "norm_label": "dialog-22 ruatd",
+      "description": ""
+    },
+    "dataset:nicer": {
+      "id": "dataset:nicer",
+      "type": "Dataset",
+      "label": "NICER",
+      "norm_label": "nicer",
+      "description": ""
+    },
+    "dataset:4u 1730--22": {
+      "id": "dataset:4u 1730--22",
+      "type": "Dataset",
+      "label": "4U 1730--22",
+      "norm_label": "4u 1730--22",
+      "description": ""
+    },
+    "concept:mhz qpos": {
+      "id": "concept:mhz qpos",
+      "type": "Concept",
+      "label": "mHz QPOs",
+      "norm_label": "mhz qpos",
+      "description": ""
+    },
+    "concept:msnb": {
+      "id": "concept:msnb",
+      "type": "Concept",
+      "label": "MSNB",
+      "norm_label": "msnb",
+      "description": ""
+    },
+    "concept:dynamic spectra": {
+      "id": "concept:dynamic spectra",
+      "type": "Concept",
+      "label": "dynamic spectra",
+      "norm_label": "dynamic spectra",
+      "description": ""
+    },
+    "concept:autocorrelation functions": {
+      "id": "concept:autocorrelation functions",
+      "type": "Concept",
+      "label": "autocorrelation functions",
+      "norm_label": "autocorrelation functions",
+      "description": ""
+    },
+    "concept:secondary spectra": {
+      "id": "concept:secondary spectra",
+      "type": "Concept",
+      "label": "secondary spectra",
+      "norm_label": "secondary spectra",
+      "description": ""
+    }
+  },
+  "edges": [
+    {
+      "source": "paper:2206.04564v6",
+      "target": "method:twibot-22",
+      "type": "proposes",
+      "weight": 1.0
+    },
+    {
+      "source": "paper:2206.04564v6",
+      "target": "task:尽管目前twitter bot检测方法在新型twitter bot检测上表现出色，但缺乏大规模的图基twitter bot检测基准数据集。",
+      "type": "applied_to",
+      "weight": 0.8
+    },
+    {
+      "source": "method:twibot-22",
+      "target": "task:尽管目前twitter bot检测方法在新型twitter bot检测上表现出色，但缺乏大规模的图基twitter bot检测基准数据集。",
+      "type": "solves",
+      "weight": 0.95
+    },
+    {
+      "source": "paper:2206.04564v6",
+      "target": "method:twibot-22",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "paper:2206.04564v6",
+      "target": "contribution:提出了twibot-22，一个大型图基twitter bot检测基准，其中包括大量的twitter用户数据及他们在twitter网络中的实体和关系。",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "method:twibot-22",
+      "target": "contribution:提出了twibot-22，一个大型图基twitter bot检测基准，其中包括大量的twitter用户数据及他们在twitter网络中的实体和关系。",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:2206.04564v6",
+      "target": "contribution:重新实现了35个代表性的twitter bot检测基线，评估了9个数据集，包括twibot-22，以促进模型性能的公平比较。",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "method:twibot-22",
+      "target": "contribution:重新实现了35个代表性的twitter bot检测基线，评估了9个数据集，包括twibot-22，以促进模型性能的公平比较。",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:2206.04564v6",
+      "target": "contribution:发布了twibot-22基准和评估框架，使研究人员能够一致地评估新的模型和数据集。",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "method:twibot-22",
+      "target": "contribution:发布了twibot-22基准和评估框架，使研究人员能够一致地评估新的模型和数据集。",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:2301.02010v1",
+      "target": "method:一致性正则化",
+      "type": "proposes",
+      "weight": 1.0
+    },
+    {
+      "source": "paper:2301.02010v1",
+      "target": "task:为了改进多语言语音理解中的意图检测和槽填充任务，需要一种有效的方法补充跨语言的训练数据。",
+      "type": "applied_to",
+      "weight": 0.8
+    },
+    {
+      "source": "method:一致性正则化",
+      "target": "task:为了改进多语言语音理解中的意图检测和槽填充任务，需要一种有效的方法补充跨语言的训练数据。",
+      "type": "solves",
+      "weight": 0.95
+    },
+    {
+      "source": "paper:2301.02010v1",
+      "target": "dataset:massive",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "method:一致性正则化",
+      "target": "dataset:massive",
+      "type": "evaluates_on",
+      "weight": 0.9
+    },
+    {
+      "source": "method:一致性正则化",
+      "target": "metric:accuracy",
+      "type": "achieves",
+      "weight": 0.85
+    },
+    {
+      "source": "method:一致性正则化",
+      "target": "metric:f1",
+      "type": "achieves",
+      "weight": 0.85
+    },
+    {
+      "source": "method:一致性正则化",
+      "target": "metric:ema",
+      "type": "achieves",
+      "weight": 0.85
+    },
+    {
+      "source": "paper:2301.02010v1",
+      "target": "contribution:提出了基于混合数据增强策略的一致性正则化方法。",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "method:一致性正则化",
+      "target": "contribution:提出了基于混合数据增强策略的一致性正则化方法。",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:2301.02010v1",
+      "target": "contribution:该方法在全数据设置下在mmnlu-22竞赛中排名第一。",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "method:一致性正则化",
+      "target": "contribution:该方法在全数据设置下在mmnlu-22竞赛中排名第一。",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:2301.02010v1",
+      "target": "contribution:该方法在零样本设置下也表现出色，并在类似任务中取得了显著提升。",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "method:一致性正则化",
+      "target": "contribution:该方法在零样本设置下也表现出色，并在类似任务中取得了显著提升。",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:2206.08029v1",
+      "target": "method:基于注意力机制的集成方法",
+      "type": "proposes",
+      "weight": 1.0
+    },
+    {
+      "source": "paper:2206.08029v1",
+      "target": "task:尽管文本生成模型（tgms）能生成符合人类语言风格的文本，但需要一种可以区分tgm生成的文本和人类撰写的文本的探测器，以防止滥用tgm。",
+      "type": "applied_to",
+      "weight": 0.8
+    },
+    {
+      "source": "method:基于注意力机制的集成方法",
+      "target": "task:尽管文本生成模型（tgms）能生成符合人类语言风格的文本，但需要一种可以区分tgm生成的文本和人类撰写的文本的探测器，以防止滥用tgm。",
+      "type": "solves",
+      "weight": 0.95
+    },
+    {
+      "source": "paper:2206.08029v1",
+      "target": "dataset:dialog-22 ruatd 二分类和多分类任务的训练和测试数据集",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "method:基于注意力机制的集成方法",
+      "target": "dataset:dialog-22 ruatd 二分类和多分类任务的训练和测试数据集",
+      "type": "evaluates_on",
+      "weight": 0.9
+    },
+    {
+      "source": "method:基于注意力机制的集成方法",
+      "target": "metric:accuracy",
+      "type": "achieves",
+      "weight": 0.85
+    },
+    {
+      "source": "paper:2206.08029v1",
+      "target": "contribution:提出了基于注意力机制的集成方法",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "method:基于注意力机制的集成方法",
+      "target": "contribution:提出了基于注意力机制的集成方法",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:2206.08029v1",
+      "target": "contribution:在二分类任务中取得了第一的名次",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "method:基于注意力机制的集成方法",
+      "target": "contribution:在二分类任务中取得了第一的名次",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:2206.08029v1",
+      "target": "contribution:在多分类任务中取得了第四的名次",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "method:基于注意力机制的集成方法",
+      "target": "contribution:在多分类任务中取得了第四的名次",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:2304.09935v1",
+      "target": "task:检测低质量x射线双星4u 1730--22中的毫赫兹准周期振荡 mhz qpos",
+      "type": "applied_to",
+      "weight": 0.8
+    },
+    {
+      "source": "paper:2304.09935v1",
+      "target": "contribution:发现4u 1730--22源中的mhz qpos与其他一系列显示出此现象的源一致，支持msnb假说。",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "paper:2304.09935v1",
+      "target": "contribution:4u 1730--22成为第八个显示出mhz qpos现象的源。",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "paper:2304.09935v1",
+      "target": "contribution:提出mhz qpos与ns表面的边际稳定核燃烧 msnb 模式相关的解释。",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "paper:2207.08756v1",
+      "target": "method:脉冲星散射弧观测方法",
+      "type": "proposes",
+      "weight": 1.0
+    },
+    {
+      "source": "paper:2207.08756v1",
+      "target": "task:尽管天文学家能够通过脉冲星散射弧研究星际介质的离子化分布，但需要对离子化星际介质在 0.001-30 au尺度上的分布进行更详细且未偏倚的观测。",
+      "type": "applied_to",
+      "weight": 0.8
+    },
+    {
+      "source": "method:脉冲星散射弧观测方法",
+      "target": "task:尽管天文学家能够通过脉冲星散射弧研究星际介质的离子化分布，但需要对离子化星际介质在 0.001-30 au尺度上的分布进行更详细且未偏倚的观测。",
+      "type": "solves",
+      "weight": 0.95
+    },
+    {
+      "source": "paper:2207.08756v1",
+      "target": "dataset:22低到中等dm脉冲星",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "method:脉冲星散射弧观测方法",
+      "target": "dataset:22低到中等dm脉冲星",
+      "type": "evaluates_on",
+      "weight": 0.9
+    },
+    {
+      "source": "paper:2207.08756v1",
+      "target": "contribution:展示了离子化星际介质在au尺度范围内存在显著的不均匀性。",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "method:脉冲星散射弧观测方法",
+      "target": "contribution:展示了离子化星际介质在au尺度范围内存在显著的不均匀性。",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:2207.08756v1",
+      "target": "contribution:沿视线方向上，离子化介质的分散程度在几百至上百pc范围内具有类似特征。",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "method:脉冲星散射弧观测方法",
+      "target": "contribution:沿视线方向上，离子化介质的分散程度在几百至上百pc范围内具有类似特征。",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:2207.08756v1",
+      "target": "contribution:对于大多数视线，没有观察到分布式的散射现象。",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "method:脉冲星散射弧观测方法",
+      "target": "contribution:对于大多数视线，没有观察到分布式的散射现象。",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "method:twibot-22",
+      "target": "task:graph-based twitter bot detection benchmark",
+      "type": "applied_to",
+      "weight": 0.8
+    },
+    {
+      "source": "method:twibot-22",
+      "target": "concept:twitter",
+      "type": "evaluates_on",
+      "weight": 0.9
+    },
+    {
+      "source": "method:一致性正则化",
+      "target": "dataset:massive",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "method:一致性正则化",
+      "target": "task:意图检测",
+      "type": "applied_to",
+      "weight": 0.8
+    },
+    {
+      "source": "method:一致性正则化",
+      "target": "task:槽位填充",
+      "type": "applied_to",
+      "weight": 0.8
+    },
+    {
+      "source": "method:一致性正则化",
+      "target": "task:mmnlu-22",
+      "type": "evaluates_on",
+      "weight": 0.9
+    },
+    {
+      "source": "task:mmnlu-22",
+      "target": "task:多语言口语理解",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "task:mmnlu-22",
+      "target": "task:意图检测",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "task:mmnlu-22",
+      "target": "task:槽位填充",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "method:基于注意力机制的集成方法",
+      "target": "dataset:dialog-22 ruatd 二分类和多分类任务的训练和测试数据集",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "method:基于注意力机制的集成方法",
+      "target": "task:dialog-22 ruatd",
+      "type": "applied_to",
+      "weight": 0.8
+    },
+    {
+      "source": "method:基于注意力机制的集成方法",
+      "target": "metric:accuracy",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "concept:mhz qpos",
+      "target": "dataset:4u 1730--22",
+      "type": "evaluates_on",
+      "weight": 0.9
+    },
+    {
+      "source": "dataset:4u 1730--22",
+      "target": "dataset:nicer",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "concept:mhz qpos",
+      "target": "concept:msnb",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "method:脉冲星散射弧观测方法",
+      "target": "concept:dynamic spectra",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "method:脉冲星散射弧观测方法",
+      "target": "concept:autocorrelation functions",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "method:脉冲星散射弧观测方法",
+      "target": "concept:secondary spectra",
+      "type": "uses",
+      "weight": 0.8
+    }
+  ],
+  "paper_entities": {
+    "2206.04564v6": [
+      "paper:2206.04564v6",
+      "method:twibot-22",
+      "task:尽管目前twitter bot检测方法在新型twitter bot检测上表现出色，但缺乏大规模的图基twitter bot检测基准数据集。",
+      "method:twibot-22",
+      "contribution:提出了twibot-22，一个大型图基twitter bot检测基准，其中包括大量的twitter用户数据及他们在twitter网络中的实体和关系。",
+      "contribution:重新实现了35个代表性的twitter bot检测基线，评估了9个数据集，包括twibot-22，以促进模型性能的公平比较。",
+      "contribution:发布了twibot-22基准和评估框架，使研究人员能够一致地评估新的模型和数据集。",
+      "task:graph-based twitter bot detection benchmark",
+      "concept:twitter"
+    ],
+    "2301.02010v1": [
+      "paper:2301.02010v1",
+      "method:一致性正则化",
+      "task:为了改进多语言语音理解中的意图检测和槽填充任务，需要一种有效的方法补充跨语言的训练数据。",
+      "dataset:massive",
+      "metric:accuracy",
+      "metric:f1",
+      "metric:ema",
+      "contribution:提出了基于混合数据增强策略的一致性正则化方法。",
+      "contribution:该方法在全数据设置下在mmnlu-22竞赛中排名第一。",
+      "contribution:该方法在零样本设置下也表现出色，并在类似任务中取得了显著提升。",
+      "task:mmnlu-22",
+      "task:多语言口语理解",
+      "task:意图检测",
+      "task:槽位填充"
+    ],
+    "2206.08029v1": [
+      "paper:2206.08029v1",
+      "method:基于注意力机制的集成方法",
+      "task:尽管文本生成模型（tgms）能生成符合人类语言风格的文本，但需要一种可以区分tgm生成的文本和人类撰写的文本的探测器，以防止滥用tgm。",
+      "dataset:dialog-22 ruatd 二分类和多分类任务的训练和测试数据集",
+      "metric:accuracy",
+      "contribution:提出了基于注意力机制的集成方法",
+      "contribution:在二分类任务中取得了第一的名次",
+      "contribution:在多分类任务中取得了第四的名次",
+      "task:dialog-22 ruatd"
+    ],
+    "2304.09935v1": [
+      "paper:2304.09935v1",
+      "task:检测低质量x射线双星4u 1730--22中的毫赫兹准周期振荡 mhz qpos",
+      "contribution:发现4u 1730--22源中的mhz qpos与其他一系列显示出此现象的源一致，支持msnb假说。",
+      "contribution:4u 1730--22成为第八个显示出mhz qpos现象的源。",
+      "contribution:提出mhz qpos与ns表面的边际稳定核燃烧 msnb 模式相关的解释。",
+      "dataset:nicer",
+      "dataset:4u 1730--22",
+      "concept:mhz qpos",
+      "concept:msnb"
+    ],
+    "2207.08756v1": [
+      "paper:2207.08756v1",
+      "method:脉冲星散射弧观测方法",
+      "task:尽管天文学家能够通过脉冲星散射弧研究星际介质的离子化分布，但需要对离子化星际介质在 0.001-30 au尺度上的分布进行更详细且未偏倚的观测。",
+      "dataset:22低到中等dm脉冲星",
+      "contribution:展示了离子化星际介质在au尺度范围内存在显著的不均匀性。",
+      "contribution:沿视线方向上，离子化介质的分散程度在几百至上百pc范围内具有类似特征。",
+      "contribution:对于大多数视线，没有观察到分布式的散射现象。",
+      "concept:dynamic spectra",
+      "concept:autocorrelation functions",
+      "concept:secondary spectra"
+    ]
+  },
+  "entity_aliases": {
+    "twibot-22 towards graph-based twitter bot detection": "paper:2206.04564v6",
+    "twibot-22": "method:twibot-22",
+    "尽管目前twitter bot检测方法在新型twitter bot检测上表现出色，但缺乏大规模的图基twitter bot检测基准数据集。": "task:尽管目前twitter bot检测方法在新型twitter bot检测上表现出色，但缺乏大规模的图基twitter bot检测基准数据集。",
+    "提出了twibot-22，一个大型图基twitter bot检测基准，其中包括大量的twitter用户数据及他们在twitter网络中的实体和关系。": "contribution:提出了twibot-22，一个大型图基twitter bot检测基准，其中包括大量的twitter用户数据及他们在twitter网络中的实体和关系。",
+    "重新实现了35个代表性的twitter bot检测基线，评估了9个数据集，包括twibot-22，以促进模型性能的公平比较。": "contribution:重新实现了35个代表性的twitter bot检测基线，评估了9个数据集，包括twibot-22，以促进模型性能的公平比较。",
+    "发布了twibot-22基准和评估框架，使研究人员能够一致地评估新的模型和数据集。": "contribution:发布了twibot-22基准和评估框架，使研究人员能够一致地评估新的模型和数据集。",
+    "hit-scir at mmnlu-22 consistency regularization for multilingual spoken language understanding": "paper:2301.02010v1",
+    "一致性正则化": "method:一致性正则化",
+    "为了改进多语言语音理解中的意图检测和槽填充任务，需要一种有效的方法补充跨语言的训练数据。": "task:为了改进多语言语音理解中的意图检测和槽填充任务，需要一种有效的方法补充跨语言的训练数据。",
+    "massive": "dataset:massive",
+    "accuracy": "metric:accuracy",
+    "f1": "metric:f1",
+    "ema": "metric:ema",
+    "提出了基于混合数据增强策略的一致性正则化方法。": "contribution:提出了基于混合数据增强策略的一致性正则化方法。",
+    "该方法在全数据设置下在mmnlu-22竞赛中排名第一。": "contribution:该方法在全数据设置下在mmnlu-22竞赛中排名第一。",
+    "该方法在零样本设置下也表现出色，并在类似任务中取得了显著提升。": "contribution:该方法在零样本设置下也表现出色，并在类似任务中取得了显著提升。",
+    "dialog-22 ruatd generated text detection": "paper:2206.08029v1",
+    "基于注意力机制的集成方法": "method:基于注意力机制的集成方法",
+    "尽管文本生成模型（tgms）能生成符合人类语言风格的文本，但需要一种可以区分tgm生成的文本和人类撰写的文本的探测器，以防止滥用tgm。": "task:尽管文本生成模型（tgms）能生成符合人类语言风格的文本，但需要一种可以区分tgm生成的文本和人类撰写的文本的探测器，以防止滥用tgm。",
+    "dialog-22 ruatd 二分类和多分类任务的训练和测试数据集": "dataset:dialog-22 ruatd 二分类和多分类任务的训练和测试数据集",
+    "提出了基于注意力机制的集成方法": "contribution:提出了基于注意力机制的集成方法",
+    "在二分类任务中取得了第一的名次": "contribution:在二分类任务中取得了第一的名次",
+    "在多分类任务中取得了第四的名次": "contribution:在多分类任务中取得了第四的名次",
+    "detection of millihertz quasi-periodic oscillations in the low-mass x-ray binary 4u 1730--22 with nicer": "paper:2304.09935v1",
+    "检测低质量x射线双星4u 1730--22中的毫赫兹准周期振荡 mhz qpos": "task:检测低质量x射线双星4u 1730--22中的毫赫兹准周期振荡 mhz qpos",
+    "发现4u 1730--22源中的mhz qpos与其他一系列显示出此现象的源一致，支持msnb假说。": "contribution:发现4u 1730--22源中的mhz qpos与其他一系列显示出此现象的源一致，支持msnb假说。",
+    "4u 1730--22成为第八个显示出mhz qpos现象的源。": "contribution:4u 1730--22成为第八个显示出mhz qpos现象的源。",
+    "提出mhz qpos与ns表面的边际稳定核燃烧 msnb 模式相关的解释。": "contribution:提出mhz qpos与ns表面的边际稳定核燃烧 msnb 模式相关的解释。",
+    "a scintillation arc survey of 22 pulsars with low to moderate dispersion measures": "paper:2207.08756v1",
+    "脉冲星散射弧观测方法": "method:脉冲星散射弧观测方法",
+    "尽管天文学家能够通过脉冲星散射弧研究星际介质的离子化分布，但需要对离子化星际介质在 0.001-30 au尺度上的分布进行更详细且未偏倚的观测。": "task:尽管天文学家能够通过脉冲星散射弧研究星际介质的离子化分布，但需要对离子化星际介质在 0.001-30 au尺度上的分布进行更详细且未偏倚的观测。",
+    "22低到中等dm脉冲星": "dataset:22低到中等dm脉冲星",
+    "展示了离子化星际介质在au尺度范围内存在显著的不均匀性。": "contribution:展示了离子化星际介质在au尺度范围内存在显著的不均匀性。",
+    "沿视线方向上，离子化介质的分散程度在几百至上百pc范围内具有类似特征。": "contribution:沿视线方向上，离子化介质的分散程度在几百至上百pc范围内具有类似特征。",
+    "对于大多数视线，没有观察到分布式的散射现象。": "contribution:对于大多数视线，没有观察到分布式的散射现象。",
+    "graph-based twitter bot detection benchmark": "task:graph-based twitter bot detection benchmark",
+    "twitter": "concept:twitter",
+    "mmnlu-22": "task:mmnlu-22",
+    "多语言口语理解": "task:多语言口语理解",
+    "意图检测": "task:意图检测",
+    "槽位填充": "task:槽位填充",
+    "dialog-22 ruatd": "task:dialog-22 ruatd",
+    "nicer": "dataset:nicer",
+    "4u 1730--22": "dataset:4u 1730--22",
+    "mhz qpos": "concept:mhz qpos",
+    "msnb": "concept:msnb",
+    "dynamic spectra": "concept:dynamic spectra",
+    "autocorrelation functions": "concept:autocorrelation functions",
+    "secondary spectra": "concept:secondary spectra"
+  },
+  "communities": {
+    "0": {
+      "nodes": [
+        "paper:2206.04564v6",
+        "method:twibot-22",
+        "task:尽管目前twitter bot检测方法在新型twitter bot检测上表现出色，但缺乏大规模的图基twitter bot检测基准数据集。",
+        "contribution:提出了twibot-22，一个大型图基twitter bot检测基准，其中包括大量的twitter用户数据及他们在twitter网络中的实体和关系。",
+        "contribution:重新实现了35个代表性的twitter bot检测基线，评估了9个数据集，包括twibot-22，以促进模型性能的公平比较。",
+        "contribution:发布了twibot-22基准和评估框架，使研究人员能够一致地评估新的模型和数据集。",
+        "task:graph-based twitter bot detection benchmark",
+        "concept:twitter"
+      ],
+      "key_entities": [
+        "TwiBot-22: Towards Graph-Based Twitter Bot Detection",
+        "TwiBot-22",
+        "尽管目前Twitter bot检测方法在新型Twitter bot检测上表现出色，但缺乏大规模的图基Twitter bot检测基准数据集。",
+        "提出了TwiBot-22，一个大型图基Twitter bot检测基准，其中包括大量的Twitter用户数据及他们在Twitter网络中的实体和关系。",
+        "重新实现了35个代表性的Twitter bot检测基线，评估了9个数据集，包括TwiBot-22，以促进模型性能的公平比较。",
+        "发布了TwiBot-22基准和评估框架，使研究人员能够一致地评估新的模型和数据集。",
+        "Graph-Based Twitter Bot Detection Benchmark",
+        "Twitter"
+      ],
+      "key_papers": [
+        "TwiBot-22: Towards Graph-Based Twitter Bot Detection"
+      ],
+      "dominant_types": [
+        "Contribution",
+        "Task",
+        "Paper"
+      ],
+      "semantic_tag": "Research Contributions Cluster",
+      "summary": "",
+      "community_name": "Research Contributions Cluster"
+    },
+    "1": {
+      "nodes": [
+        "paper:2301.02010v1",
+        "task:为了改进多语言语音理解中的意图检测和槽填充任务，需要一种有效的方法补充跨语言的训练数据。",
+        "contribution:提出了基于混合数据增强策略的一致性正则化方法。",
+        "contribution:该方法在全数据设置下在mmnlu-22竞赛中排名第一。",
+        "contribution:该方法在零样本设置下也表现出色，并在类似任务中取得了显著提升。"
+      ],
+      "key_entities": [
+        "HIT-SCIR at MMNLU-22: Consistency Regularization for Multilingual Spoken Language Understanding",
+        "为了改进多语言语音理解中的意图检测和槽填充任务，需要一种有效的方法补充跨语言的训练数据。",
+        "提出了基于混合数据增强策略的一致性正则化方法。",
+        "该方法在全数据设置下在MMNLU-22竞赛中排名第一。",
+        "该方法在零样本设置下也表现出色，并在类似任务中取得了显著提升。"
+      ],
+      "key_papers": [
+        "HIT-SCIR at MMNLU-22: Consistency Regularization for Multilingual Spoken Language Understanding"
+      ],
+      "dominant_types": [
+        "Contribution",
+        "Paper",
+        "Task"
+      ],
+      "semantic_tag": "Research Contributions Cluster",
+      "summary": "",
+      "community_name": "Research Contributions Cluster"
+    },
+    "2": {
+      "nodes": [
+        "method:一致性正则化",
+        "dataset:massive",
+        "metric:f1",
+        "metric:ema",
+        "task:mmnlu-22",
+        "task:多语言口语理解",
+        "task:意图检测",
+        "task:槽位填充"
+      ],
+      "key_entities": [
+        "一致性正则化",
+        "MASSIVE",
+        "F1",
+        "EMA",
+        "MMNLU-22",
+        "多语言口语理解",
+        "意图检测",
+        "槽位填充"
+      ],
+      "key_papers": [],
+      "dominant_types": [
+        "Task",
+        "Metric",
+        "Method"
+      ],
+      "semantic_tag": "Task & Application Cluster",
+      "summary": "",
+      "community_name": "Task & Application Cluster"
+    },
+    "3": {
+      "nodes": [
+        "metric:accuracy",
+        "method:基于注意力机制的集成方法",
+        "task:尽管文本生成模型（tgms）能生成符合人类语言风格的文本，但需要一种可以区分tgm生成的文本和人类撰写的文本的探测器，以防止滥用tgm。",
+        "dataset:dialog-22 ruatd 二分类和多分类任务的训练和测试数据集",
+        "task:dialog-22 ruatd"
+      ],
+      "key_entities": [
+        "Accuracy",
+        "基于注意力机制的集成方法",
+        "尽管文本生成模型（TGMs）能生成符合人类语言风格的文本，但需要一种可以区分TGM生成的文本和人类撰写的文本的探测器，以防止滥用TGM。",
+        "DIALOG-22 RuATD (二分类和多分类任务的训练和测试数据集)",
+        "DIALOG-22 RuATD"
+      ],
+      "key_papers": [],
+      "dominant_types": [
+        "Task",
+        "Metric",
+        "Method"
+      ],
+      "semantic_tag": "Task & Application Cluster",
+      "summary": "",
+      "community_name": "Task & Application Cluster"
+    },
+    "4": {
+      "nodes": [
+        "paper:2206.08029v1",
+        "contribution:提出了基于注意力机制的集成方法",
+        "contribution:在二分类任务中取得了第一的名次",
+        "contribution:在多分类任务中取得了第四的名次"
+      ],
+      "key_entities": [
+        "DIALOG-22 RuATD Generated Text Detection",
+        "提出了基于注意力机制的集成方法",
+        "在二分类任务中取得了第一的名次",
+        "在多分类任务中取得了第四的名次"
+      ],
+      "key_papers": [
+        "DIALOG-22 RuATD Generated Text Detection"
+      ],
+      "dominant_types": [
+        "Contribution",
+        "Paper"
+      ],
+      "semantic_tag": "Research Contributions Cluster",
+      "summary": "",
+      "community_name": "Research Contributions Cluster"
+    },
+    "5": {
+      "nodes": [
+        "paper:2304.09935v1",
+        "task:检测低质量x射线双星4u 1730--22中的毫赫兹准周期振荡 mhz qpos",
+        "contribution:发现4u 1730--22源中的mhz qpos与其他一系列显示出此现象的源一致，支持msnb假说。",
+        "contribution:4u 1730--22成为第八个显示出mhz qpos现象的源。",
+        "contribution:提出mhz qpos与ns表面的边际稳定核燃烧 msnb 模式相关的解释。"
+      ],
+      "key_entities": [
+        "Detection of millihertz quasi-periodic oscillations in the low-mass X-ray binary 4U 1730--22 with NICER",
+        "检测低质量X射线双星4U 1730--22中的毫赫兹准周期振荡(mHz QPOs)",
+        "发现4U 1730--22源中的mHz QPOs与其他一系列显示出此现象的源一致，支持MSNB假说。",
+        "4U 1730--22成为第八个显示出mHz QPOs现象的源。",
+        "提出mHz QPOs与NS表面的边际稳定核燃烧(MSNB)模式相关的解释。"
+      ],
+      "key_papers": [
+        "Detection of millihertz quasi-periodic oscillations in the low-mass X-ray binary 4U 1730--22 with NICER"
+      ],
+      "dominant_types": [
+        "Contribution",
+        "Paper",
+        "Task"
+      ],
+      "semantic_tag": "Research Contributions Cluster",
+      "summary": "",
+      "community_name": "Research Contributions Cluster"
+    },
+    "6": {
+      "nodes": [
+        "paper:2207.08756v1",
+        "method:脉冲星散射弧观测方法",
+        "task:尽管天文学家能够通过脉冲星散射弧研究星际介质的离子化分布，但需要对离子化星际介质在 0.001-30 au尺度上的分布进行更详细且未偏倚的观测。",
+        "dataset:22低到中等dm脉冲星",
+        "contribution:展示了离子化星际介质在au尺度范围内存在显著的不均匀性。",
+        "contribution:沿视线方向上，离子化介质的分散程度在几百至上百pc范围内具有类似特征。",
+        "contribution:对于大多数视线，没有观察到分布式的散射现象。",
+        "concept:dynamic spectra",
+        "concept:autocorrelation functions",
+        "concept:secondary spectra"
+      ],
+      "key_entities": [
+        "A Scintillation Arc Survey of 22 Pulsars with Low to Moderate Dispersion Measures",
+        "脉冲星散射弧观测方法",
+        "尽管天文学家能够通过脉冲星散射弧研究星际介质的离子化分布，但需要对离子化星际介质在~0.001-30 au尺度上的分布进行更详细且未偏倚的观测。",
+        "22低到中等DM脉冲星",
+        "展示了离子化星际介质在AU尺度范围内存在显著的不均匀性。",
+        "沿视线方向上，离子化介质的分散程度在几百至上百PC范围内具有类似特征。",
+        "对于大多数视线，没有观察到分布式的散射现象。",
+        "dynamic spectra",
+        "autocorrelation functions",
+        "secondary spectra"
+      ],
+      "key_papers": [
+        "A Scintillation Arc Survey of 22 Pulsars with Low to Moderate Dispersion Measures"
+      ],
+      "dominant_types": [
+        "Contribution",
+        "Concept",
+        "Paper"
+      ],
+      "semantic_tag": "Research Contributions Cluster",
+      "summary": "",
+      "community_name": "Research Contributions Cluster"
+    },
+    "7": {
+      "nodes": [
+        "dataset:nicer",
+        "dataset:4u 1730--22",
+        "concept:mhz qpos",
+        "concept:msnb"
+      ],
+      "key_entities": [
+        "NICER",
+        "4U 1730--22",
+        "mHz QPOs",
+        "MSNB"
+      ],
+      "key_papers": [],
+      "dominant_types": [
+        "Dataset",
+        "Concept"
+      ],
+      "semantic_tag": "Benchmark & Dataset Cluster",
+      "summary": "",
+      "community_name": "Benchmark & Dataset Cluster"
+    }
+  },
+  "citation_graph": {},
+  "stats": {
+    "node_count": 49,
+    "edge_count": 69,
+    "node_type_count": {
+      "Paper": 5,
+      "Method": 4,
+      "Task": 11,
+      "Contribution": 15,
+      "Dataset": 5,
+      "Metric": 3,
+      "Concept": 6
+    },
+    "paper_count": 5,
+    "community_count": 0,
+    "citation_edge_count": 0
+  }
+}

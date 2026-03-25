@@ -1,0 +1,1074 @@
+{
+  "db_id": "kb_6f94f8964d82b604534740d7eff9cd87",
+  "nodes": {
+    "paper:2206.04564v6": {
+      "id": "paper:2206.04564v6",
+      "type": "Paper",
+      "label": "TwiBot-22: Towards Graph-Based Twitter Bot Detection",
+      "norm_label": "twibot-22 towards graph-based twitter bot detection"
+    },
+    "task:尽管现有的twitter bot检测方法在检测新颖的twitter机器人方面表现出色，但存在缺乏大规模的基于图的twitter bot检测基准数据集的问题。": {
+      "id": "task:尽管现有的twitter bot检测方法在检测新颖的twitter机器人方面表现出色，但存在缺乏大规模的基于图的twitter bot检测基准数据集的问题。",
+      "type": "Task",
+      "label": "尽管现有的Twitter bot检测方法在检测新颖的Twitter机器人方面表现出色，但存在缺乏大规模的基于图的Twitter bot检测基准数据集的问题。",
+      "norm_label": "尽管现有的twitter bot检测方法在检测新颖的twitter机器人方面表现出色，但存在缺乏大规模的基于图的twitter bot检测基准数据集的问题。"
+    },
+    "dataset:twibot-22": {
+      "id": "dataset:twibot-22",
+      "type": "Dataset",
+      "label": "TwiBot-22",
+      "norm_label": "twibot-22"
+    },
+    "contribution:提出twibot-22，这是目前最大的一个基于图的twitter bot检测基准数据集。": {
+      "id": "contribution:提出twibot-22，这是目前最大的一个基于图的twitter bot检测基准数据集。",
+      "type": "Contribution",
+      "label": "提出TwiBot-22，这是目前最大的一个基于图的Twitter bot检测基准数据集。",
+      "norm_label": "提出twibot-22，这是目前最大的一个基于图的twitter bot检测基准数据集。"
+    },
+    "contribution:提供了twitter网络上的多样化实体和关系。": {
+      "id": "contribution:提供了twitter网络上的多样化实体和关系。",
+      "type": "Contribution",
+      "label": "提供了Twitter网络上的多样化实体和关系。",
+      "norm_label": "提供了twitter网络上的多样化实体和关系。"
+    },
+    "contribution:相较于现有数据集，twibot-22具有更高的标注质量。": {
+      "id": "contribution:相较于现有数据集，twibot-22具有更高的标注质量。",
+      "type": "Contribution",
+      "label": "相较于现有数据集，TwiBot-22具有更高的标注质量。",
+      "norm_label": "相较于现有数据集，twibot-22具有更高的标注质量。"
+    },
+    "contribution:重新实现了35个代表性的twitter bot检测基线，并在9个数据集（包括twibot-22）上进行了评估，以促进模型性能的公平比较和对研究进展的整体理解。": {
+      "id": "contribution:重新实现了35个代表性的twitter bot检测基线，并在9个数据集（包括twibot-22）上进行了评估，以促进模型性能的公平比较和对研究进展的整体理解。",
+      "type": "Contribution",
+      "label": "重新实现了35个代表性的Twitter bot检测基线，并在9个数据集（包括TwiBot-22）上进行了评估，以促进模型性能的公平比较和对研究进展的整体理解。",
+      "norm_label": "重新实现了35个代表性的twitter bot检测基线，并在9个数据集（包括twibot-22）上进行了评估，以促进模型性能的公平比较和对研究进展的整体理解。"
+    },
+    "paper:2206.08029v1": {
+      "id": "paper:2206.08029v1",
+      "type": "Paper",
+      "label": "DIALOG-22 RuATD Generated Text Detection",
+      "norm_label": "dialog-22 ruatd generated text detection"
+    },
+    "method:ensemble technique": {
+      "id": "method:ensemble technique",
+      "type": "Method",
+      "label": "ensemble technique",
+      "norm_label": "ensemble technique"
+    },
+    "task:为了区分人类撰写的文本和机器生成的文本，防止滥用文本生成模型。": {
+      "id": "task:为了区分人类撰写的文本和机器生成的文本，防止滥用文本生成模型。",
+      "type": "Task",
+      "label": "为了区分人类撰写的文本和机器生成的文本，防止滥用文本生成模型。",
+      "norm_label": "为了区分人类撰写的文本和机器生成的文本，防止滥用文本生成模型。"
+    },
+    "dataset:ruatd binary task": {
+      "id": "dataset:ruatd binary task",
+      "type": "Dataset",
+      "label": "RuATD (Binary Task)",
+      "norm_label": "ruatd binary task"
+    },
+    "dataset:ruatd multiclass task": {
+      "id": "dataset:ruatd multiclass task",
+      "type": "Dataset",
+      "label": "RuATD (Multiclass Task)",
+      "norm_label": "ruatd multiclass task"
+    },
+    "metric:accuracy": {
+      "id": "metric:accuracy",
+      "type": "Metric",
+      "label": "Accuracy",
+      "norm_label": "accuracy"
+    },
+    "contribution:提出了一种集成不同预训练模型的方法，用于区分文本生成。": {
+      "id": "contribution:提出了一种集成不同预训练模型的方法，用于区分文本生成。",
+      "type": "Contribution",
+      "label": "提出了一种集成不同预训练模型的方法，用于区分文本生成。",
+      "norm_label": "提出了一种集成不同预训练模型的方法，用于区分文本生成。"
+    },
+    "contribution:在二分类任务中，获得了第一名。": {
+      "id": "contribution:在二分类任务中，获得了第一名。",
+      "type": "Contribution",
+      "label": "在二分类任务中，获得了第一名。",
+      "norm_label": "在二分类任务中，获得了第一名。"
+    },
+    "contribution:在多分类任务中，提高了模型的分类性能。": {
+      "id": "contribution:在多分类任务中，提高了模型的分类性能。",
+      "type": "Contribution",
+      "label": "在多分类任务中，提高了模型的分类性能。",
+      "norm_label": "在多分类任务中，提高了模型的分类性能。"
+    },
+    "paper:1908.08066v1": {
+      "id": "paper:1908.08066v1",
+      "type": "Paper",
+      "label": "Consistency of the Infrared Variability of Sgr A* over 22 years",
+      "norm_label": "consistency of the infrared variability of sgr a over 22 years"
+    },
+    "method:speckle holography analysis": {
+      "id": "method:speckle holography analysis",
+      "type": "Method",
+      "label": "speckle holography analysis",
+      "norm_label": "speckle holography analysis"
+    },
+    "task:为了研究超大质量黑洞sgr a 的红外变异性，特别是在长时间尺度上进行研究。": {
+      "id": "task:为了研究超大质量黑洞sgr a 的红外变异性，特别是在长时间尺度上进行研究。",
+      "type": "Task",
+      "label": "为了研究超大质量黑洞Sgr A*的红外变异性，特别是在长时间尺度上进行研究。",
+      "norm_label": "为了研究超大质量黑洞sgr a 的红外变异性，特别是在长时间尺度上进行研究。"
+    },
+    "contribution:提高了sgr a 的检测率，使其在7年中多数阶段可检测。": {
+      "id": "contribution:提高了sgr a 的检测率，使其在7年中多数阶段可检测。",
+      "type": "Contribution",
+      "label": "提高了Sgr A*的检测率，使其在7年中多数阶段可检测。",
+      "norm_label": "提高了sgr a 的检测率，使其在7年中多数阶段可检测。"
+    },
+    "contribution:观测显示sgr a 的亮度和其变异性在22年内保持一致。": {
+      "id": "contribution:观测显示sgr a 的亮度和其变异性在22年内保持一致。",
+      "type": "Contribution",
+      "label": "观测显示Sgr A*的亮度和其变异性在22年内保持一致。",
+      "norm_label": "观测显示sgr a 的亮度和其变异性在22年内保持一致。"
+    },
+    "contribution:指出2001年的g1 periapse事件对sgr a 的近红外发射没有显著影响，表明g1可能是自引力物体，而不是被撕裂的气体云。": {
+      "id": "contribution:指出2001年的g1 periapse事件对sgr a 的近红外发射没有显著影响，表明g1可能是自引力物体，而不是被撕裂的气体云。",
+      "type": "Contribution",
+      "label": "指出2001年的G1 periapse事件对Sgr A*的近红外发射没有显著影响，表明G1可能是自引力物体，而不是被撕裂的气体云。",
+      "norm_label": "指出2001年的g1 periapse事件对sgr a 的近红外发射没有显著影响，表明g1可能是自引力物体，而不是被撕裂的气体云。"
+    },
+    "paper:2503.21676v2": {
+      "id": "paper:2503.21676v2",
+      "type": "Paper",
+      "label": "How do language models learn facts? Dynamics, curricula and hallucinations",
+      "norm_label": "how do language models learn facts dynamics curricula and hallucinations"
+    },
+    "task:尽管大规模语言模型在预训练过程中积累了大量的知识，但其知识学习的动态机制仍未被充分理解。": {
+      "id": "task:尽管大规模语言模型在预训练过程中积累了大量的知识，但其知识学习的动态机制仍未被充分理解。",
+      "type": "Task",
+      "label": "尽管大规模语言模型在预训练过程中积累了大量的知识，但其知识学习的动态机制仍未被充分理解。",
+      "norm_label": "尽管大规模语言模型在预训练过程中积累了大量的知识，但其知识学习的动态机制仍未被充分理解。"
+    },
+    "dataset:合成的事实回忆任务": {
+      "id": "dataset:合成的事实回忆任务",
+      "type": "Dataset",
+      "label": "合成的事实回忆任务",
+      "norm_label": "合成的事实回忆任务"
+    },
+    "contribution:揭示了语言模型在学习阶段的动态，包括三个学习阶段和平台期的存在。": {
+      "id": "contribution:揭示了语言模型在学习阶段的动态，包括三个学习阶段和平台期的存在。",
+      "type": "Contribution",
+      "label": "揭示了语言模型在学习阶段的动态，包括三个学习阶段和平台期的存在。",
+      "norm_label": "揭示了语言模型在学习阶段的动态，包括三个学习阶段和平台期的存在。"
+    },
+    "contribution:表明了数据分布对学习阶段的影响。": {
+      "id": "contribution:表明了数据分布对学习阶段的影响。",
+      "type": "Contribution",
+      "label": "表明了数据分布对学习阶段的影响。",
+      "norm_label": "表明了数据分布对学习阶段的影响。"
+    },
+    "contribution:发现知识与幻觉的出现存在关联，并且整合新知识时会迅速破坏模型的已有记忆。": {
+      "id": "contribution:发现知识与幻觉的出现存在关联，并且整合新知识时会迅速破坏模型的已有记忆。",
+      "type": "Contribution",
+      "label": "发现知识与幻觉的出现存在关联，并且整合新知识时会迅速破坏模型的已有记忆。",
+      "norm_label": "发现知识与幻觉的出现存在关联，并且整合新知识时会迅速破坏模型的已有记忆。"
+    },
+    "paper:1610.00031v1": {
+      "id": "paper:1610.00031v1",
+      "type": "Paper",
+      "label": "Discriminating Similar Languages: Evaluations and Explorations",
+      "norm_label": "discriminating similar languages evaluations and explorations"
+    },
+    "method:discriminating between similar languages dsl shared task": {
+      "id": "method:discriminating between similar languages dsl shared task",
+      "type": "Method",
+      "label": "Discriminating between Similar Languages (DSL) shared task",
+      "norm_label": "discriminating between similar languages dsl shared task"
+    },
+    "task:为了分析机器学习分类器在区分相似语言和方言上的表现。": {
+      "id": "task:为了分析机器学习分类器在区分相似语言和方言上的表现。",
+      "type": "Task",
+      "label": "为了分析机器学习分类器在区分相似语言和方言上的表现。",
+      "norm_label": "为了分析机器学习分类器在区分相似语言和方言上的表现。"
+    },
+    "dataset:discriminating between similar languages dsl shared task 两个版本": {
+      "id": "dataset:discriminating between similar languages dsl shared task 两个版本",
+      "type": "Dataset",
+      "label": "Discriminating between Similar Languages (DSL) shared task (两个版本)",
+      "norm_label": "discriminating between similar languages dsl shared task 两个版本"
+    },
+    "metric:null": {
+      "id": "metric:null",
+      "type": "Metric",
+      "label": "null",
+      "norm_label": "null"
+    },
+    "contribution:实验涉及了两个版本的dsl共享任务": {
+      "id": "contribution:实验涉及了两个版本的dsl共享任务",
+      "type": "Contribution",
+      "label": "实验涉及了两个版本的DSL共享任务",
+      "norm_label": "实验涉及了两个版本的dsl共享任务"
+    },
+    "contribution:提供了可能的最大性能估计": {
+      "id": "contribution:提供了可能的最大性能估计",
+      "type": "Contribution",
+      "label": "提供了可能的最大性能估计",
+      "norm_label": "提供了可能的最大性能估计"
+    },
+    "contribution:通过学习曲线了解了哪些语言更具挑战性": {
+      "id": "contribution:通过学习曲线了解了哪些语言更具挑战性",
+      "type": "Contribution",
+      "label": "通过学习曲线了解了哪些语言更具挑战性",
+      "norm_label": "通过学习曲线了解了哪些语言更具挑战性"
+    },
+    "task:graph-based twitter bot detection benchmark": {
+      "id": "task:graph-based twitter bot detection benchmark",
+      "type": "Task",
+      "label": "graph-based Twitter bot detection benchmark",
+      "norm_label": "graph-based twitter bot detection benchmark",
+      "description": ""
+    },
+    "task:twitter bot detection": {
+      "id": "task:twitter bot detection",
+      "type": "Task",
+      "label": "Twitter bot detection",
+      "norm_label": "twitter bot detection",
+      "description": ""
+    },
+    "dataset:ruatd": {
+      "id": "dataset:ruatd",
+      "type": "Dataset",
+      "label": "RuATD",
+      "norm_label": "ruatd",
+      "description": ""
+    },
+    "task:sgr a": {
+      "id": "task:sgr a",
+      "type": "Task",
+      "label": "Sgr A*",
+      "norm_label": "sgr a",
+      "description": ""
+    },
+    "dataset:g1": {
+      "id": "dataset:g1",
+      "type": "Dataset",
+      "label": "G1",
+      "norm_label": "g1",
+      "description": ""
+    },
+    "metric:k magnitude": {
+      "id": "metric:k magnitude",
+      "type": "Metric",
+      "label": "K magnitude",
+      "norm_label": "k magnitude",
+      "description": ""
+    },
+    "concept:infrared variability": {
+      "id": "concept:infrared variability",
+      "type": "Concept",
+      "label": "Infrared variability",
+      "norm_label": "infrared variability",
+      "description": ""
+    },
+    "task:synthetic factual recall task": {
+      "id": "task:synthetic factual recall task",
+      "type": "Task",
+      "label": "synthetic factual recall task",
+      "norm_label": "synthetic factual recall task",
+      "description": ""
+    },
+    "method:language model": {
+      "id": "method:language model",
+      "type": "Method",
+      "label": "Language Model",
+      "norm_label": "language model",
+      "description": ""
+    },
+    "concept:attention-based circuits": {
+      "id": "concept:attention-based circuits",
+      "type": "Concept",
+      "label": "attention-based circuits",
+      "norm_label": "attention-based circuits",
+      "description": ""
+    },
+    "concept:training data distribution": {
+      "id": "concept:training data distribution",
+      "type": "Concept",
+      "label": "training data distribution",
+      "norm_label": "training data distribution",
+      "description": ""
+    },
+    "concept:knowledge and hallucinations": {
+      "id": "concept:knowledge and hallucinations",
+      "type": "Concept",
+      "label": "knowledge and hallucinations",
+      "norm_label": "knowledge and hallucinations",
+      "description": ""
+    },
+    "concept:data distribution in knowledge acquisition": {
+      "id": "concept:data distribution in knowledge acquisition",
+      "type": "Concept",
+      "label": "data distribution in knowledge acquisition",
+      "norm_label": "data distribution in knowledge acquisition",
+      "description": ""
+    },
+    "dataset:dsl shared task 两个版本": {
+      "id": "dataset:dsl shared task 两个版本",
+      "type": "Dataset",
+      "label": "DSL shared task (两个版本)",
+      "norm_label": "dsl shared task 两个版本",
+      "description": ""
+    },
+    "concept:ensemble and oracle combination": {
+      "id": "concept:ensemble and oracle combination",
+      "type": "Concept",
+      "label": "ensemble and oracle combination",
+      "norm_label": "ensemble and oracle combination",
+      "description": ""
+    }
+  },
+  "edges": [
+    {
+      "source": "paper:2206.04564v6",
+      "target": "task:尽管现有的twitter bot检测方法在检测新颖的twitter机器人方面表现出色，但存在缺乏大规模的基于图的twitter bot检测基准数据集的问题。",
+      "type": "applied_to",
+      "weight": 0.8
+    },
+    {
+      "source": "paper:2206.04564v6",
+      "target": "dataset:twibot-22",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "paper:2206.04564v6",
+      "target": "contribution:提出twibot-22，这是目前最大的一个基于图的twitter bot检测基准数据集。",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "paper:2206.04564v6",
+      "target": "contribution:提供了twitter网络上的多样化实体和关系。",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "paper:2206.04564v6",
+      "target": "contribution:相较于现有数据集，twibot-22具有更高的标注质量。",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "paper:2206.04564v6",
+      "target": "contribution:重新实现了35个代表性的twitter bot检测基线，并在9个数据集（包括twibot-22）上进行了评估，以促进模型性能的公平比较和对研究进展的整体理解。",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "paper:2206.08029v1",
+      "target": "method:ensemble technique",
+      "type": "proposes",
+      "weight": 1.0
+    },
+    {
+      "source": "paper:2206.08029v1",
+      "target": "task:为了区分人类撰写的文本和机器生成的文本，防止滥用文本生成模型。",
+      "type": "applied_to",
+      "weight": 0.8
+    },
+    {
+      "source": "method:ensemble technique",
+      "target": "task:为了区分人类撰写的文本和机器生成的文本，防止滥用文本生成模型。",
+      "type": "solves",
+      "weight": 0.95
+    },
+    {
+      "source": "paper:2206.08029v1",
+      "target": "dataset:ruatd binary task",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "method:ensemble technique",
+      "target": "dataset:ruatd binary task",
+      "type": "evaluates_on",
+      "weight": 0.9
+    },
+    {
+      "source": "paper:2206.08029v1",
+      "target": "dataset:ruatd multiclass task",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "method:ensemble technique",
+      "target": "dataset:ruatd multiclass task",
+      "type": "evaluates_on",
+      "weight": 0.9
+    },
+    {
+      "source": "method:ensemble technique",
+      "target": "metric:accuracy",
+      "type": "achieves",
+      "weight": 0.85
+    },
+    {
+      "source": "paper:2206.08029v1",
+      "target": "contribution:提出了一种集成不同预训练模型的方法，用于区分文本生成。",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "method:ensemble technique",
+      "target": "contribution:提出了一种集成不同预训练模型的方法，用于区分文本生成。",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:2206.08029v1",
+      "target": "contribution:在二分类任务中，获得了第一名。",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "method:ensemble technique",
+      "target": "contribution:在二分类任务中，获得了第一名。",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:2206.08029v1",
+      "target": "contribution:在多分类任务中，提高了模型的分类性能。",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "method:ensemble technique",
+      "target": "contribution:在多分类任务中，提高了模型的分类性能。",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:1908.08066v1",
+      "target": "method:speckle holography analysis",
+      "type": "proposes",
+      "weight": 1.0
+    },
+    {
+      "source": "paper:1908.08066v1",
+      "target": "task:为了研究超大质量黑洞sgr a 的红外变异性，特别是在长时间尺度上进行研究。",
+      "type": "applied_to",
+      "weight": 0.8
+    },
+    {
+      "source": "method:speckle holography analysis",
+      "target": "task:为了研究超大质量黑洞sgr a 的红外变异性，特别是在长时间尺度上进行研究。",
+      "type": "solves",
+      "weight": 0.95
+    },
+    {
+      "source": "paper:1908.08066v1",
+      "target": "contribution:提高了sgr a 的检测率，使其在7年中多数阶段可检测。",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "method:speckle holography analysis",
+      "target": "contribution:提高了sgr a 的检测率，使其在7年中多数阶段可检测。",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:1908.08066v1",
+      "target": "contribution:观测显示sgr a 的亮度和其变异性在22年内保持一致。",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "method:speckle holography analysis",
+      "target": "contribution:观测显示sgr a 的亮度和其变异性在22年内保持一致。",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:1908.08066v1",
+      "target": "contribution:指出2001年的g1 periapse事件对sgr a 的近红外发射没有显著影响，表明g1可能是自引力物体，而不是被撕裂的气体云。",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "method:speckle holography analysis",
+      "target": "contribution:指出2001年的g1 periapse事件对sgr a 的近红外发射没有显著影响，表明g1可能是自引力物体，而不是被撕裂的气体云。",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:2503.21676v2",
+      "target": "task:尽管大规模语言模型在预训练过程中积累了大量的知识，但其知识学习的动态机制仍未被充分理解。",
+      "type": "applied_to",
+      "weight": 0.8
+    },
+    {
+      "source": "paper:2503.21676v2",
+      "target": "dataset:合成的事实回忆任务",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "paper:2503.21676v2",
+      "target": "contribution:揭示了语言模型在学习阶段的动态，包括三个学习阶段和平台期的存在。",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "paper:2503.21676v2",
+      "target": "contribution:表明了数据分布对学习阶段的影响。",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "paper:2503.21676v2",
+      "target": "contribution:发现知识与幻觉的出现存在关联，并且整合新知识时会迅速破坏模型的已有记忆。",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "paper:1610.00031v1",
+      "target": "method:discriminating between similar languages dsl shared task",
+      "type": "proposes",
+      "weight": 1.0
+    },
+    {
+      "source": "paper:1610.00031v1",
+      "target": "task:为了分析机器学习分类器在区分相似语言和方言上的表现。",
+      "type": "applied_to",
+      "weight": 0.8
+    },
+    {
+      "source": "method:discriminating between similar languages dsl shared task",
+      "target": "task:为了分析机器学习分类器在区分相似语言和方言上的表现。",
+      "type": "solves",
+      "weight": 0.95
+    },
+    {
+      "source": "paper:1610.00031v1",
+      "target": "dataset:discriminating between similar languages dsl shared task 两个版本",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "method:discriminating between similar languages dsl shared task",
+      "target": "dataset:discriminating between similar languages dsl shared task 两个版本",
+      "type": "evaluates_on",
+      "weight": 0.9
+    },
+    {
+      "source": "method:discriminating between similar languages dsl shared task",
+      "target": "metric:null",
+      "type": "achieves",
+      "weight": 0.85
+    },
+    {
+      "source": "paper:1610.00031v1",
+      "target": "contribution:实验涉及了两个版本的dsl共享任务",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "method:discriminating between similar languages dsl shared task",
+      "target": "contribution:实验涉及了两个版本的dsl共享任务",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:1610.00031v1",
+      "target": "contribution:提供了可能的最大性能估计",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "method:discriminating between similar languages dsl shared task",
+      "target": "contribution:提供了可能的最大性能估计",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:1610.00031v1",
+      "target": "contribution:通过学习曲线了解了哪些语言更具挑战性",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "method:discriminating between similar languages dsl shared task",
+      "target": "contribution:通过学习曲线了解了哪些语言更具挑战性",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "dataset:twibot-22",
+      "target": "task:graph-based twitter bot detection benchmark",
+      "type": "applied_to",
+      "weight": 0.8
+    },
+    {
+      "source": "dataset:twibot-22",
+      "target": "task:twitter bot detection",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "method:ensemble technique",
+      "target": "dataset:ruatd",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "method:ensemble technique",
+      "target": "metric:accuracy",
+      "type": "evaluates_on",
+      "weight": 0.9
+    },
+    {
+      "source": "method:speckle holography analysis",
+      "target": "task:sgr a",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "method:speckle holography analysis",
+      "target": "dataset:g1",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "task:sgr a",
+      "target": "metric:k magnitude",
+      "type": "achieves",
+      "weight": 0.85
+    },
+    {
+      "source": "task:sgr a",
+      "target": "concept:infrared variability",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "method:language model",
+      "target": "task:synthetic factual recall task",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "method:language model",
+      "target": "concept:attention-based circuits",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "method:language model",
+      "target": "concept:training data distribution",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "method:language model",
+      "target": "concept:knowledge and hallucinations",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "concept:training data distribution",
+      "target": "concept:data distribution in knowledge acquisition",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "method:discriminating between similar languages dsl shared task",
+      "target": "dataset:dsl shared task 两个版本",
+      "type": "evaluates_on",
+      "weight": 0.9
+    },
+    {
+      "source": "method:discriminating between similar languages dsl shared task",
+      "target": "concept:ensemble and oracle combination",
+      "type": "related_to",
+      "weight": 0.5
+    }
+  ],
+  "paper_entities": {
+    "2206.04564v6": [
+      "paper:2206.04564v6",
+      "task:尽管现有的twitter bot检测方法在检测新颖的twitter机器人方面表现出色，但存在缺乏大规模的基于图的twitter bot检测基准数据集的问题。",
+      "dataset:twibot-22",
+      "contribution:提出twibot-22，这是目前最大的一个基于图的twitter bot检测基准数据集。",
+      "contribution:提供了twitter网络上的多样化实体和关系。",
+      "contribution:相较于现有数据集，twibot-22具有更高的标注质量。",
+      "contribution:重新实现了35个代表性的twitter bot检测基线，并在9个数据集（包括twibot-22）上进行了评估，以促进模型性能的公平比较和对研究进展的整体理解。",
+      "task:graph-based twitter bot detection benchmark",
+      "task:twitter bot detection"
+    ],
+    "2206.08029v1": [
+      "paper:2206.08029v1",
+      "method:ensemble technique",
+      "task:为了区分人类撰写的文本和机器生成的文本，防止滥用文本生成模型。",
+      "dataset:ruatd binary task",
+      "dataset:ruatd multiclass task",
+      "metric:accuracy",
+      "contribution:提出了一种集成不同预训练模型的方法，用于区分文本生成。",
+      "contribution:在二分类任务中，获得了第一名。",
+      "contribution:在多分类任务中，提高了模型的分类性能。",
+      "dataset:ruatd"
+    ],
+    "1908.08066v1": [
+      "paper:1908.08066v1",
+      "method:speckle holography analysis",
+      "task:为了研究超大质量黑洞sgr a 的红外变异性，特别是在长时间尺度上进行研究。",
+      "contribution:提高了sgr a 的检测率，使其在7年中多数阶段可检测。",
+      "contribution:观测显示sgr a 的亮度和其变异性在22年内保持一致。",
+      "contribution:指出2001年的g1 periapse事件对sgr a 的近红外发射没有显著影响，表明g1可能是自引力物体，而不是被撕裂的气体云。",
+      "task:sgr a",
+      "dataset:g1",
+      "metric:k magnitude",
+      "concept:infrared variability"
+    ],
+    "2503.21676v2": [
+      "paper:2503.21676v2",
+      "task:尽管大规模语言模型在预训练过程中积累了大量的知识，但其知识学习的动态机制仍未被充分理解。",
+      "dataset:合成的事实回忆任务",
+      "contribution:揭示了语言模型在学习阶段的动态，包括三个学习阶段和平台期的存在。",
+      "contribution:表明了数据分布对学习阶段的影响。",
+      "contribution:发现知识与幻觉的出现存在关联，并且整合新知识时会迅速破坏模型的已有记忆。",
+      "task:synthetic factual recall task",
+      "method:language model",
+      "concept:attention-based circuits",
+      "concept:training data distribution",
+      "concept:knowledge and hallucinations",
+      "concept:data distribution in knowledge acquisition"
+    ],
+    "1610.00031v1": [
+      "paper:1610.00031v1",
+      "method:discriminating between similar languages dsl shared task",
+      "task:为了分析机器学习分类器在区分相似语言和方言上的表现。",
+      "dataset:discriminating between similar languages dsl shared task 两个版本",
+      "metric:null",
+      "contribution:实验涉及了两个版本的dsl共享任务",
+      "contribution:提供了可能的最大性能估计",
+      "contribution:通过学习曲线了解了哪些语言更具挑战性",
+      "dataset:dsl shared task 两个版本",
+      "concept:ensemble and oracle combination"
+    ]
+  },
+  "entity_aliases": {
+    "twibot-22 towards graph-based twitter bot detection": "paper:2206.04564v6",
+    "尽管现有的twitter bot检测方法在检测新颖的twitter机器人方面表现出色，但存在缺乏大规模的基于图的twitter bot检测基准数据集的问题。": "task:尽管现有的twitter bot检测方法在检测新颖的twitter机器人方面表现出色，但存在缺乏大规模的基于图的twitter bot检测基准数据集的问题。",
+    "twibot-22": "dataset:twibot-22",
+    "提出twibot-22，这是目前最大的一个基于图的twitter bot检测基准数据集。": "contribution:提出twibot-22，这是目前最大的一个基于图的twitter bot检测基准数据集。",
+    "提供了twitter网络上的多样化实体和关系。": "contribution:提供了twitter网络上的多样化实体和关系。",
+    "相较于现有数据集，twibot-22具有更高的标注质量。": "contribution:相较于现有数据集，twibot-22具有更高的标注质量。",
+    "重新实现了35个代表性的twitter bot检测基线，并在9个数据集（包括twibot-22）上进行了评估，以促进模型性能的公平比较和对研究进展的整体理解。": "contribution:重新实现了35个代表性的twitter bot检测基线，并在9个数据集（包括twibot-22）上进行了评估，以促进模型性能的公平比较和对研究进展的整体理解。",
+    "dialog-22 ruatd generated text detection": "paper:2206.08029v1",
+    "ensemble technique": "method:ensemble technique",
+    "为了区分人类撰写的文本和机器生成的文本，防止滥用文本生成模型。": "task:为了区分人类撰写的文本和机器生成的文本，防止滥用文本生成模型。",
+    "ruatd binary task": "dataset:ruatd binary task",
+    "ruatd multiclass task": "dataset:ruatd multiclass task",
+    "accuracy": "metric:accuracy",
+    "提出了一种集成不同预训练模型的方法，用于区分文本生成。": "contribution:提出了一种集成不同预训练模型的方法，用于区分文本生成。",
+    "在二分类任务中，获得了第一名。": "contribution:在二分类任务中，获得了第一名。",
+    "在多分类任务中，提高了模型的分类性能。": "contribution:在多分类任务中，提高了模型的分类性能。",
+    "consistency of the infrared variability of sgr a over 22 years": "paper:1908.08066v1",
+    "speckle holography analysis": "method:speckle holography analysis",
+    "为了研究超大质量黑洞sgr a 的红外变异性，特别是在长时间尺度上进行研究。": "task:为了研究超大质量黑洞sgr a 的红外变异性，特别是在长时间尺度上进行研究。",
+    "提高了sgr a 的检测率，使其在7年中多数阶段可检测。": "contribution:提高了sgr a 的检测率，使其在7年中多数阶段可检测。",
+    "观测显示sgr a 的亮度和其变异性在22年内保持一致。": "contribution:观测显示sgr a 的亮度和其变异性在22年内保持一致。",
+    "指出2001年的g1 periapse事件对sgr a 的近红外发射没有显著影响，表明g1可能是自引力物体，而不是被撕裂的气体云。": "contribution:指出2001年的g1 periapse事件对sgr a 的近红外发射没有显著影响，表明g1可能是自引力物体，而不是被撕裂的气体云。",
+    "how do language models learn facts dynamics curricula and hallucinations": "paper:2503.21676v2",
+    "尽管大规模语言模型在预训练过程中积累了大量的知识，但其知识学习的动态机制仍未被充分理解。": "task:尽管大规模语言模型在预训练过程中积累了大量的知识，但其知识学习的动态机制仍未被充分理解。",
+    "合成的事实回忆任务": "dataset:合成的事实回忆任务",
+    "揭示了语言模型在学习阶段的动态，包括三个学习阶段和平台期的存在。": "contribution:揭示了语言模型在学习阶段的动态，包括三个学习阶段和平台期的存在。",
+    "表明了数据分布对学习阶段的影响。": "contribution:表明了数据分布对学习阶段的影响。",
+    "发现知识与幻觉的出现存在关联，并且整合新知识时会迅速破坏模型的已有记忆。": "contribution:发现知识与幻觉的出现存在关联，并且整合新知识时会迅速破坏模型的已有记忆。",
+    "discriminating similar languages evaluations and explorations": "paper:1610.00031v1",
+    "discriminating between similar languages dsl shared task": "method:discriminating between similar languages dsl shared task",
+    "为了分析机器学习分类器在区分相似语言和方言上的表现。": "task:为了分析机器学习分类器在区分相似语言和方言上的表现。",
+    "discriminating between similar languages dsl shared task 两个版本": "dataset:discriminating between similar languages dsl shared task 两个版本",
+    "null": "metric:null",
+    "实验涉及了两个版本的dsl共享任务": "contribution:实验涉及了两个版本的dsl共享任务",
+    "提供了可能的最大性能估计": "contribution:提供了可能的最大性能估计",
+    "通过学习曲线了解了哪些语言更具挑战性": "contribution:通过学习曲线了解了哪些语言更具挑战性",
+    "graph-based twitter bot detection benchmark": "task:graph-based twitter bot detection benchmark",
+    "twitter bot detection": "task:twitter bot detection",
+    "ruatd": "dataset:ruatd",
+    "sgr a": "task:sgr a",
+    "g1": "dataset:g1",
+    "k magnitude": "metric:k magnitude",
+    "infrared variability": "concept:infrared variability",
+    "synthetic factual recall task": "task:synthetic factual recall task",
+    "language model": "method:language model",
+    "attention-based circuits": "concept:attention-based circuits",
+    "training data distribution": "concept:training data distribution",
+    "knowledge and hallucinations": "concept:knowledge and hallucinations",
+    "data distribution in knowledge acquisition": "concept:data distribution in knowledge acquisition",
+    "dsl shared task 两个版本": "dataset:dsl shared task 两个版本",
+    "ensemble and oracle combination": "concept:ensemble and oracle combination"
+  },
+  "communities": {
+    "0": {
+      "nodes": [
+        "paper:2206.04564v6",
+        "task:尽管现有的twitter bot检测方法在检测新颖的twitter机器人方面表现出色，但存在缺乏大规模的基于图的twitter bot检测基准数据集的问题。",
+        "contribution:提出twibot-22，这是目前最大的一个基于图的twitter bot检测基准数据集。",
+        "contribution:提供了twitter网络上的多样化实体和关系。",
+        "contribution:相较于现有数据集，twibot-22具有更高的标注质量。",
+        "contribution:重新实现了35个代表性的twitter bot检测基线，并在9个数据集（包括twibot-22）上进行了评估，以促进模型性能的公平比较和对研究进展的整体理解。"
+      ],
+      "key_entities": [
+        "TwiBot-22: Towards Graph-Based Twitter Bot Detection",
+        "尽管现有的Twitter bot检测方法在检测新颖的Twitter机器人方面表现出色，但存在缺乏大规模的基于图的Twitter bot检测基准数据集的问题。",
+        "提出TwiBot-22，这是目前最大的一个基于图的Twitter bot检测基准数据集。",
+        "提供了Twitter网络上的多样化实体和关系。",
+        "相较于现有数据集，TwiBot-22具有更高的标注质量。",
+        "重新实现了35个代表性的Twitter bot检测基线，并在9个数据集（包括TwiBot-22）上进行了评估，以促进模型性能的公平比较和对研究进展的整体理解。"
+      ],
+      "key_papers": [
+        "TwiBot-22: Towards Graph-Based Twitter Bot Detection"
+      ],
+      "dominant_types": [
+        "Contribution",
+        "Paper",
+        "Task"
+      ],
+      "semantic_tag": "Research Contributions Cluster",
+      "summary": "",
+      "community_name": "Research Contributions Cluster"
+    },
+    "1": {
+      "nodes": [
+        "dataset:twibot-22",
+        "task:graph-based twitter bot detection benchmark",
+        "task:twitter bot detection"
+      ],
+      "key_entities": [
+        "TwiBot-22",
+        "graph-based Twitter bot detection benchmark",
+        "Twitter bot detection"
+      ],
+      "key_papers": [],
+      "dominant_types": [
+        "Task",
+        "Dataset"
+      ],
+      "semantic_tag": "Benchmark & Dataset Cluster",
+      "summary": "",
+      "community_name": "Benchmark & Dataset Cluster"
+    },
+    "2": {
+      "nodes": [
+        "paper:2206.08029v1",
+        "contribution:提出了一种集成不同预训练模型的方法，用于区分文本生成。",
+        "contribution:在二分类任务中，获得了第一名。",
+        "contribution:在多分类任务中，提高了模型的分类性能。"
+      ],
+      "key_entities": [
+        "DIALOG-22 RuATD Generated Text Detection",
+        "提出了一种集成不同预训练模型的方法，用于区分文本生成。",
+        "在二分类任务中，获得了第一名。",
+        "在多分类任务中，提高了模型的分类性能。"
+      ],
+      "key_papers": [
+        "DIALOG-22 RuATD Generated Text Detection"
+      ],
+      "dominant_types": [
+        "Contribution",
+        "Paper"
+      ],
+      "semantic_tag": "Research Contributions Cluster",
+      "summary": "",
+      "community_name": "Research Contributions Cluster"
+    },
+    "3": {
+      "nodes": [
+        "method:ensemble technique",
+        "task:为了区分人类撰写的文本和机器生成的文本，防止滥用文本生成模型。",
+        "dataset:ruatd binary task",
+        "dataset:ruatd multiclass task",
+        "metric:accuracy",
+        "dataset:ruatd"
+      ],
+      "key_entities": [
+        "ensemble technique",
+        "为了区分人类撰写的文本和机器生成的文本，防止滥用文本生成模型。",
+        "RuATD (Binary Task)",
+        "RuATD (Multiclass Task)",
+        "Accuracy",
+        "RuATD"
+      ],
+      "key_papers": [],
+      "dominant_types": [
+        "Dataset",
+        "Method",
+        "Task"
+      ],
+      "semantic_tag": "Benchmark & Dataset Cluster",
+      "summary": "",
+      "community_name": "Benchmark & Dataset Cluster"
+    },
+    "4": {
+      "nodes": [
+        "paper:1908.08066v1",
+        "method:speckle holography analysis",
+        "task:为了研究超大质量黑洞sgr a 的红外变异性，特别是在长时间尺度上进行研究。",
+        "contribution:提高了sgr a 的检测率，使其在7年中多数阶段可检测。",
+        "contribution:观测显示sgr a 的亮度和其变异性在22年内保持一致。",
+        "contribution:指出2001年的g1 periapse事件对sgr a 的近红外发射没有显著影响，表明g1可能是自引力物体，而不是被撕裂的气体云。",
+        "dataset:g1"
+      ],
+      "key_entities": [
+        "Consistency of the Infrared Variability of Sgr A* over 22 years",
+        "speckle holography analysis",
+        "为了研究超大质量黑洞Sgr A*的红外变异性，特别是在长时间尺度上进行研究。",
+        "提高了Sgr A*的检测率，使其在7年中多数阶段可检测。",
+        "观测显示Sgr A*的亮度和其变异性在22年内保持一致。",
+        "指出2001年的G1 periapse事件对Sgr A*的近红外发射没有显著影响，表明G1可能是自引力物体，而不是被撕裂的气体云。",
+        "G1"
+      ],
+      "key_papers": [
+        "Consistency of the Infrared Variability of Sgr A* over 22 years"
+      ],
+      "dominant_types": [
+        "Contribution",
+        "Paper",
+        "Method"
+      ],
+      "semantic_tag": "Research Contributions Cluster",
+      "summary": "",
+      "community_name": "Research Contributions Cluster"
+    },
+    "5": {
+      "nodes": [
+        "paper:2503.21676v2",
+        "task:尽管大规模语言模型在预训练过程中积累了大量的知识，但其知识学习的动态机制仍未被充分理解。",
+        "dataset:合成的事实回忆任务",
+        "contribution:揭示了语言模型在学习阶段的动态，包括三个学习阶段和平台期的存在。",
+        "contribution:表明了数据分布对学习阶段的影响。",
+        "contribution:发现知识与幻觉的出现存在关联，并且整合新知识时会迅速破坏模型的已有记忆。"
+      ],
+      "key_entities": [
+        "How do language models learn facts? Dynamics, curricula and hallucinations",
+        "尽管大规模语言模型在预训练过程中积累了大量的知识，但其知识学习的动态机制仍未被充分理解。",
+        "合成的事实回忆任务",
+        "揭示了语言模型在学习阶段的动态，包括三个学习阶段和平台期的存在。",
+        "表明了数据分布对学习阶段的影响。",
+        "发现知识与幻觉的出现存在关联，并且整合新知识时会迅速破坏模型的已有记忆。"
+      ],
+      "key_papers": [
+        "How do language models learn facts? Dynamics, curricula and hallucinations"
+      ],
+      "dominant_types": [
+        "Contribution",
+        "Paper",
+        "Task"
+      ],
+      "semantic_tag": "Research Contributions Cluster",
+      "summary": "",
+      "community_name": "Research Contributions Cluster"
+    },
+    "6": {
+      "nodes": [
+        "paper:1610.00031v1",
+        "method:discriminating between similar languages dsl shared task",
+        "task:为了分析机器学习分类器在区分相似语言和方言上的表现。",
+        "dataset:discriminating between similar languages dsl shared task 两个版本",
+        "metric:null",
+        "contribution:实验涉及了两个版本的dsl共享任务",
+        "contribution:提供了可能的最大性能估计",
+        "contribution:通过学习曲线了解了哪些语言更具挑战性",
+        "dataset:dsl shared task 两个版本",
+        "concept:ensemble and oracle combination"
+      ],
+      "key_entities": [
+        "Discriminating Similar Languages: Evaluations and Explorations",
+        "Discriminating between Similar Languages (DSL) shared task",
+        "为了分析机器学习分类器在区分相似语言和方言上的表现。",
+        "Discriminating between Similar Languages (DSL) shared task (两个版本)",
+        "null",
+        "实验涉及了两个版本的DSL共享任务",
+        "提供了可能的最大性能估计",
+        "通过学习曲线了解了哪些语言更具挑战性",
+        "DSL shared task (两个版本)",
+        "ensemble and oracle combination"
+      ],
+      "key_papers": [
+        "Discriminating Similar Languages: Evaluations and Explorations"
+      ],
+      "dominant_types": [
+        "Contribution",
+        "Dataset",
+        "Paper"
+      ],
+      "semantic_tag": "Benchmark & Dataset Cluster",
+      "summary": "",
+      "community_name": "Benchmark & Dataset Cluster"
+    },
+    "7": {
+      "nodes": [
+        "task:sgr a",
+        "metric:k magnitude",
+        "concept:infrared variability"
+      ],
+      "key_entities": [
+        "Sgr A*",
+        "K magnitude",
+        "Infrared variability"
+      ],
+      "key_papers": [],
+      "dominant_types": [
+        "Task",
+        "Metric",
+        "Concept"
+      ],
+      "semantic_tag": "Task & Application Cluster",
+      "summary": "",
+      "community_name": "Task & Application Cluster"
+    },
+    "8": {
+      "nodes": [
+        "task:synthetic factual recall task",
+        "method:language model",
+        "concept:attention-based circuits",
+        "concept:training data distribution",
+        "concept:knowledge and hallucinations",
+        "concept:data distribution in knowledge acquisition"
+      ],
+      "key_entities": [
+        "synthetic factual recall task",
+        "Language Model",
+        "attention-based circuits",
+        "training data distribution",
+        "knowledge and hallucinations",
+        "data distribution in knowledge acquisition"
+      ],
+      "key_papers": [],
+      "dominant_types": [
+        "Concept",
+        "Task",
+        "Method"
+      ],
+      "semantic_tag": "Task & Application Cluster",
+      "summary": "",
+      "community_name": "Task & Application Cluster"
+    }
+  },
+  "citation_graph": {},
+  "stats": {
+    "node_count": 51,
+    "edge_count": 61,
+    "node_type_count": {
+      "Paper": 5,
+      "Task": 9,
+      "Dataset": 8,
+      "Contribution": 16,
+      "Method": 4,
+      "Metric": 3,
+      "Concept": 6
+    },
+    "paper_count": 5,
+    "community_count": 0,
+    "citation_edge_count": 0
+  }
+}
