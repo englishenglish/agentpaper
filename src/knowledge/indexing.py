@@ -196,7 +196,7 @@ def parse_pdf(file, params=None):
     Raises:
         OCRServiceException: OCR服务不可用时抛出
     """
-    from src.plugins._ocr import OCRServiceException
+    from src.parsers._ocr import OCRServiceException
 
     params = params or {}
     opt_ocr = params.get("enable_ocr", "disable")
@@ -206,17 +206,17 @@ def parse_pdf(file, params=None):
 
     try:
         if opt_ocr == "onnx_rapid_ocr":
-            from src.plugins import ocr
+            from src.parsers import ocr
 
             return ocr.process_pdf(file, params=params)
 
         elif opt_ocr == "mineru_ocr":
-            from src.plugins import ocr
+            from src.parsers import ocr
 
             return ocr.process_file_mineru(file, params=params)
 
         elif opt_ocr == "paddlex_ocr":
-            from src.plugins import ocr
+            from src.parsers import ocr
 
             return ocr.process_file_paddlex(file, params=params)
 
@@ -235,7 +235,7 @@ def parse_image(file, params=None):
     """
     解析图像文件，支持多种OCR方式
     """
-    from src.plugins._ocr import OCRServiceException
+    from src.parsers._ocr import OCRServiceException
 
     params = params or {}
     opt_ocr = params.get("enable_ocr", "disable")
@@ -246,17 +246,17 @@ def parse_image(file, params=None):
 
     try:
         if opt_ocr == "onnx_rapid_ocr":
-            from src.plugins import ocr
+            from src.parsers import ocr
 
             return ocr.process_image(file, params=params)
 
         elif opt_ocr == "mineru_ocr":
-            from src.plugins import ocr
+            from src.parsers import ocr
 
             return ocr.process_file_mineru(file, params=params)
 
         elif opt_ocr == "paddlex_ocr":
-            from src.plugins import ocr
+            from src.parsers import ocr
 
             return ocr.process_file_paddlex(file, params=params)
 

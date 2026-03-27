@@ -4,8 +4,8 @@ import os
 from typing import Dict, Optional, Union, List
 
 from src.core.config import config
-from src.knowledge.knowledge.base import KBNotFoundError, KnowledgeBase
-from src.knowledge.knowledge.factory import KnowledgeBaseFactory
+from src.knowledge.base import KBNotFoundError, KnowledgeBase
+from src.knowledge.factory import KnowledgeBaseFactory
 # from src.core.model_client import get_reranker
 from src.utils.datetime_utils import coerce_any_to_utc_datetime, utc_isoformat
 from src.utils.log_utils import setup_logger

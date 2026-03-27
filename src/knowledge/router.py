@@ -7,9 +7,9 @@ from pathlib import Path
 from fastapi import APIRouter, Body, Depends, File, HTTPException, Query, Request, UploadFile
 from fastapi.responses import FileResponse
 
-from src.knowledge.knowledge import config, knowledge_base
-from src.knowledge.knowledge.indexing import SUPPORTED_FILE_EXTENSIONS, is_supported_file_extension, process_file_to_markdown
-from src.knowledge.knowledge.utils import calculate_content_hash
+from src.knowledge import config, knowledge_base
+from src.knowledge.indexing import SUPPORTED_FILE_EXTENSIONS, is_supported_file_extension, process_file_to_markdown
+from src.knowledge.utils import calculate_content_hash
 from src.services.graph_store import load_entity_graph, graph_summary
 from src.utils import hashstr
 from src.utils.log_utils import setup_logger
@@ -159,7 +159,7 @@ async def add_documents(
 
     # 安全检查：仅对本地文件路径做路径校验
     if content_type == "file":
-        from src.knowledge.knowledge.utils.kb_utils import validate_file_path
+        from src.knowledge.utils.kb_utils import validate_file_path
 
         for item in items:
             try:

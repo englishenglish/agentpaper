@@ -10,7 +10,7 @@ import asyncio
 import os
 from openai import RateLimitError
 from src.utils.log_utils import setup_logger
-from src.tasks.paper_search import PaperSearcher
+from src.services.paper_search import PaperSearcher
 from src.core.state_models import State, ExecutionState
 from src.core.prompts import search_agent_prompt
 from src.core.state_models import BackToFrontData

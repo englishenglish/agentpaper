@@ -10,21 +10,27 @@ from langgraph.graph import StateGraph, END
 from src.core.state_models import PaperAgentState, ExecutionState, NodeError, BackToFrontData, State, ConfigSchema
 from src.agents.search_agent import search_node
 from src.agents.reading_agent import reading_node
-from src.agents.qa_agent import qa_node  # 引入我们刚写的 RAG 问答节点
+from src.agents.qa_agent import qa_node
 from src.agents.intent_agent import intent_node
 from src.agents.chat_agent import chat_node
 import asyncio
 
 
 def intent_router(state: State) -> str:
-    """意图路由：多轮追问直跳 qa；否则按意图分流。"""
+    """【修改核心】意图路由：结合意图识别结果与建库状态进行双重判断。"""
     current_state = state["value"]
     cfg = getattr(current_state, "config", None) or {}
-    if cfg.get("bypass_to_qa"):
-        return "qa_node"
-    if cfg.get("intent_route") == "chat":
-        return "chat_node"
-    return "search_node"
+
+    intent = cfg.get("intent_route", "research")
+    has_db = cfg.get("bypass_to_qa", False)
+
+    if intent == "chat":
+        return "chat_node"  # 意图是闲聊，去 chat_node
+    else:
+        if has_db:
+            return "qa_node"  # 意图是查文献，且已有专属库，极速去 qa_node
+        else:
+            return "search_node"  # 意图是查文献，但还没建库，走全流程
 
 
 class PaperAgentOrchestrator:
@@ -40,7 +46,7 @@ class PaperAgentOrchestrator:
         return {"value": current_state}
 
     def condition_handler(self, state: State) -> str:
-        """【修改核心】路由分发逻辑：根据当前步骤决定下一个节点"""
+        """路由分发逻辑：根据当前步骤决定下一个节点"""
         current_state = state["value"]
         err = current_state.error
         current_step = current_state.current_step
@@ -53,15 +59,26 @@ class PaperAgentOrchestrator:
         elif err.reading_node_error is None and current_step == ExecutionState.READING:
             return "qa_node"
 
-        # 3. 问答完毕 -> 结束当前执行流 (挂起，等待前端发起下一轮追问)
+        # 3. 问答完毕 -> 结束当前执行流，并打上“已建库”标记
         elif getattr(err, 'qa_node_error', None) is None and current_step == ExecutionState.QA_ANSWERING:
+            if current_state.config is None:
+                current_state.config = {}
+            current_state.config["bypass_to_qa"] = True  # 打上建库成功的思想钢印
             return END
 
         else:
             return "handle_error_node"
 
+    def chat_condition_handler(self, state: State) -> str:
+        """【新增】处理闲聊节点的安全退出"""
+        current_state = state["value"]
+        # 闲聊正常结束直接挂起，什么标记都不改（保护已有的 bypass_to_qa 状态）
+        if getattr(current_state.error, 'chat_node_error', None) is None:
+            return END
+        return "handle_error_node"
+
     def _build_graph(self):
-        """构建 LangGraph：意图识别 → 闲聊 或 检索→阅读→问答"""
+        """构建 LangGraph"""
         builder = StateGraph(State, context_schema=ConfigSchema)
 
         builder.add_node("intent_node", intent_node)
@@ -77,94 +94,64 @@ class PaperAgentOrchestrator:
         builder.add_conditional_edges("search_node", self.condition_handler)
         builder.add_conditional_edges("reading_node", self.condition_handler)
         builder.add_conditional_edges("qa_node", self.condition_handler)
-        builder.add_conditional_edges("chat_node", self.condition_handler)
+        # 绑定专属的 chat 退出处理器
+        builder.add_conditional_edges("chat_node", self.chat_condition_handler)
         builder.add_edge("handle_error_node", END)
 
         return builder.compile()
 
     async def run(
-        self,
-        user_request: str,
-        max_papers: int = 50,
-        enable_web_search: bool = True,
-        retrieval_mode: str = "rag",
-        selected_db_ids: list[str] | None = None,
-        auto_selected_db_ids: list[str] | None = None,
+            self,
+            user_request: str,
+            previous_state: PaperAgentState = None,  # 【新增参数】接收历史对话状态
+            max_papers: int = 50,
+            enable_web_search: bool = True,
+            retrieval_mode: str = "rag",
+            selected_db_ids: list[str] | None = None,
+            auto_selected_db_ids: list[str] | None = None,
     ):
-        print("Starting RAG QA workflow...")
-        initial_state = PaperAgentState(
-            user_request=user_request,
-            current_question=user_request,
-            max_papers=max_papers,
-            error=NodeError(),
-            config={
-                "enable_web_search": enable_web_search,
-                "retrieval_mode": retrieval_mode,
-                "selected_db_ids": selected_db_ids or [],
-                "auto_selected_db_ids": auto_selected_db_ids or [],
-            }
-        )
+        print("Starting Paper/Chat workflow...")
 
-        # 拿到图执行完毕后的结果
+        # 【修改逻辑】如果有历史状态，则继承历史并更新问题；否则从零创建
+        if previous_state:
+            initial_state = previous_state
+            initial_state.current_question = user_request
+            initial_state.chat_history.append({"role": "user", "content": user_request})
+            initial_state.error = NodeError()  # 清理上一轮可能的错误残留
+        else:
+            initial_state = PaperAgentState(
+                user_request=user_request,
+                current_question=user_request,
+                max_papers=max_papers,
+                error=NodeError(),
+                config={
+                    "enable_web_search": enable_web_search,
+                    "retrieval_mode": retrieval_mode,
+                    "selected_db_ids": selected_db_ids or [],
+                    "auto_selected_db_ids": auto_selected_db_ids or [],
+                    "bypass_to_qa": False  # 第一轮必定没建库
+                }
+            )
+            initial_state.chat_history.append({"role": "user", "content": user_request})
+
+        # 触发图运行
         result = await self.graph.ainvoke({"state_queue": self.state_queue, "value": initial_state})
         final_state = result["value"]
-        # 首轮会话未经过 ask_question 时，补齐 assistant 消息，便于前端展示历史
-        ans = getattr(final_state, "qa_answer", None)
+
+        # 补齐 assistant 消息，便于前端展示历史
+        ans = getattr(final_state, "qa_answer", None) or getattr(final_state, "chat_answer", None)
         if ans and (
-            not final_state.chat_history
-            or final_state.chat_history[-1].get("role") != "assistant"
+                not final_state.chat_history
+                or final_state.chat_history[-1].get("role") != "assistant"
         ):
             final_state.chat_history.append({"role": "assistant", "content": ans})
 
         await self.state_queue.put(BackToFrontData(step=ExecutionState.FINISHED, state="finished", data=None))
 
-        # 【新增这行】返回最终状态，供 main.py 保存到 session 中
+        # 返回最终状态，供外部缓存，下一轮对话时当作 previous_state 传回来
         return final_state
 
-    async def ask_question(
-        self,
-        current_state: PaperAgentState,
-        new_question: str,
-        enable_web_search: bool = True,
-        retrieval_mode: str = "rag",
-        selected_db_ids: list[str] | None = None,
-        auto_selected_db_ids: list[str] | None = None,
-    ):
-        """
-        【新增】多轮对话入口。
-        当临时知识库已经建好后，前端接口直接调用此方法，跳过耗时的检索和阅读建库，直接进行极速 QA 回答。
-        """
-        print(f"Answering follow-up question: {new_question}")
-
-        # 1. 变更当前问题
-        current_state.current_question = new_question
-
-        # 2. 将状态重置为“刚读完文献”的状态，便于 condition_handler 在直跳时进入 qa_node
-        current_state.current_step = ExecutionState.READING
-
-        # 3. 记录用户的追问到历史对话
-        current_state.chat_history.append({"role": "user", "content": new_question})
-
-        # 3.1 根据前端开关更新配置（是否进行联网搜索）
-        current_state.config = current_state.config or {}
-        current_state.config["enable_web_search"] = enable_web_search
-        current_state.config["retrieval_mode"] = retrieval_mode
-        if selected_db_ids is not None:
-            current_state.config["selected_db_ids"] = selected_db_ids
-        if auto_selected_db_ids is not None:
-            current_state.config["auto_selected_db_ids"] = auto_selected_db_ids
-        # 跳过多轮时的意图识别与检索，直接进入 qa_node（与原先「仅问答」行为一致）
-        current_state.config["bypass_to_qa"] = True
-
-        # 4. 再次触发工作流（intent_node 识别 bypass → qa_node）
-        result = await self.graph.ainvoke({"state_queue": self.state_queue, "value": current_state})
-
-        # 5. 将 AI 的回答追加到历史对话中，形成记忆闭环
-        final_state = result["value"]
-        final_state.chat_history.append({"role": "assistant", "content": final_state.qa_answer})
-
-        await self.state_queue.put(BackToFrontData(step=ExecutionState.FINISHED, state="finished", data=None))
-        return final_state
+    # 【注意】原先的 ask_question 方法已被安全删除，所有逻辑被无缝融入了 run() 中。
 
 
 if __name__ == "__main__":

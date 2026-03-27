@@ -172,7 +172,7 @@ class PaperSearcher:
 
         # --- 主路径：OCRPlugin ---
         try:
-            from src.plugins._ocr import OCRPlugin
+            from src.parsers._ocr import OCRPlugin
 
             def _extract_ocr():
                 ocr = OCRPlugin()

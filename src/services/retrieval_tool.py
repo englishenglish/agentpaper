@@ -2,7 +2,7 @@ from __future__ import annotations
 
 import re
 from typing import Any, List
-from src.knowledge.knowledge import knowledge_base
+from src.knowledge import knowledge_base
 from src.utils.log_utils import setup_logger
 import traceback
 from src.core.config import config
@@ -239,47 +239,7 @@ async def retrieval_tool(
         query_text = " ".join([q for q in querys if q])
 
         # ==========================================
-        # 1. 从临时知识库 (RAG 论文切片) 中检索文档
-        # ==========================================
-        tmp_db_id = config.get("tmp_db_id")
-        if tmp_db_id:
-            tmpdb_results = await knowledge_base.aquery(
-                querys,
-                db_id=tmp_db_id,
-                top_k=config.get("tmpdb_top_k", k),
-                similarity_threshold=config.get("tmpdb_similarity_threshold", 0.0)
-            )
-            tmp_chunks = _extract_chunks_from_query_result(tmpdb_results, tmp_db_id)
-            tmp_k = config.get("tmpdb_top_k", k)
-            _tmp_graphrag_type_map = {
-                "graphrag": "local",
-                "graphrag_local": "local",
-                "graphrag_community": "community",
-                "graphrag_global": "global",
-            }
-            if retrieval_mode in _tmp_graphrag_type_map:
-                tmp_search_type = _tmp_graphrag_type_map[retrieval_mode]
-                graph = load_entity_graph(tmp_db_id)
-                if graph:
-                    tmp_chunks = rerank_chunks_by_entity_graph(tmp_chunks, graph, query_text, tmp_k, search_type=tmp_search_type)
-                else:
-                    tmp_chunks = _graphrag_rerank(tmp_chunks, query_text, tmp_k)
-            elif retrieval_mode == "both":
-                rag_chunks = _rag_rerank(tmp_chunks, query_text, tmp_k)
-                graph = load_entity_graph(tmp_db_id)
-                if graph:
-                    graph_chunks = rerank_chunks_by_entity_graph(tmp_chunks, graph, query_text, tmp_k, search_type="community")
-                else:
-                    graph_chunks = _graphrag_rerank(tmp_chunks, query_text, tmp_k)
-                tmp_chunks = _merge_ranked_chunks(rag_chunks, graph_chunks, tmp_k)
-            else:
-                tmp_chunks = _rag_rerank(tmp_chunks, query_text, tmp_k)
-
-            for chunk in tmp_chunks:
-                retrieval_results.append(chunk["formatted"])
-
-        # ==========================================
-        # 2. 从用户创建的长期知识库中检索文档（支持多库）
+        # 从用户创建的永久知识库中检索文档（支持多库）
         # ==========================================
         db_ids: List[str] = []
 

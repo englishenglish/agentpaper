@@ -10,8 +10,8 @@ from sse_starlette.sse import EventSourceResponse
 from src.utils.log_utils import setup_logger
 from src.utils.tool_utils import handlerChunk
 from src.agents.userproxy_agent import WebUserProxyAgent, userProxyAgent
-from src.knowledge.knowledge_router import knowledge
-from src.knowledge.knowledge import knowledge_base
+from src.knowledge.router import knowledge
+from src.knowledge import knowledge_base
 from src.core.state_models import BackToFrontData, ExecutionState
 from src.agents.orchestrator import PaperAgentOrchestrator
 
@@ -62,9 +62,6 @@ def _tokenize_query(text: str) -> list[str]:
 
 
 def _auto_select_knowledge_bases(question: str, top_k: int = 3) -> list[str]:
-    """
-    在用户未手动选择知识库时，自动挑选最相关的几个库。
-    """
     try:
         dbs = knowledge_base.get_databases().get("databases", [])
     except Exception:
@@ -93,7 +90,6 @@ def _auto_select_knowledge_bases(question: str, top_k: int = 3) -> list[str]:
 
 @app.post("/send_input")
 async def send_input(data: dict):
-    """人类在环（人工审核）的输入接口保持不变"""
     user_input = data.get("input")
     userProxyAgent.set_user_input(user_input)
     return JSONResponse({"status": 200, "msg": "已收到人工输入"})
@@ -101,38 +97,29 @@ async def send_input(data: dict):
 
 @app.get('/api/research/init')
 async def research_init_stream(
-    query: str,
-    session_id: str = Query(default=None),
-    enable_web_search: bool = Query(default=True),
-    retrieval_mode: str = Query(default="rag"),
-    selected_db_ids: str | None = Query(default=None),
+        query: str,
+        session_id: str = Query(default=None),
+        enable_web_search: bool = Query(default=True),
+        retrieval_mode: str = Query(default="rag"),
+        selected_db_ids: str | None = Query(default=None),
 ):
-    """
-    接口 1：初始化知识库并生成首次问答。
-    包含：检索 -> 阅读切片入库 -> 首次 QA 生成
-    """
+    """接口 1：初始化知识库（其实现在和 /chat 逻辑几乎一致，保留独立入口方便前端语义化）"""
     print("API /api/research/init called")
     if not session_id:
-        session_id = str(uuid.uuid4())  # 没传则生成一个唯一的会话 ID
-    print(3)
-    # 为当前会话创建专属的通信队列，并记录时间戳
+        session_id = str(uuid.uuid4())
+
     session_queue = asyncio.Queue()
     active_sessions[session_id] = {"queue": session_queue, "state": None, "ts": time.time()}
     _cleanup_expired_sessions()
 
     manual_selected = _parse_selected_db_ids(selected_db_ids)
     auto_selected = [] if manual_selected else _auto_select_knowledge_bases(query, top_k=3)
-    matched_db_ids = manual_selected or auto_selected
 
     async def event_generator():
-        print("SSE generator start")
         yield {"data": BackToFrontData(step="system", state="session_created",
                                        data={"session_id": session_id}).model_dump_json()}
-
         while True:
-            print("waiting queue...")
             state_data = await session_queue.get()
-            print("got queue:", state_data)
             yield {"data": state_data.model_dump_json()}
             if state_data.step == ExecutionState.FINISHED:
                 break
@@ -140,17 +127,15 @@ async def research_init_stream(
     async def run_task():
         orchestrator = PaperAgentOrchestrator(state_queue=session_queue)
         try:
-            # 命中已有知识库时，优先走本地库问答（无需联网搜索）
-            final_enable_web_search = enable_web_search if not matched_db_ids else False
-            # 运行全流程，并拿回包含知识库 ID 和历史记录的最终状态
+            # 【修改】使用统一的 run 方法，因为是 init，所以 previous_state 明确传 None
             final_state = await orchestrator.run(
                 user_request=query,
-                enable_web_search=final_enable_web_search,
+                previous_state=None,
+                enable_web_search=enable_web_search,
                 retrieval_mode=retrieval_mode,
                 selected_db_ids=manual_selected,
                 auto_selected_db_ids=auto_selected,
             )
-            # 存入字典，供多轮聊天使用
             active_sessions[session_id]["state"] = final_state
         except Exception as e:
             logger.error(f"Init workflow failed: {e}")
@@ -158,40 +143,30 @@ async def research_init_stream(
                 BackToFrontData(step=ExecutionState.FINISHED, state="error", data=str(e))
             )
 
-    # 启动后台异步任务
     asyncio.create_task(run_task())
-
     return EventSourceResponse(event_generator(), media_type="text/event-stream")
 
 
 @app.get('/api/research/chat')
 async def research_chat_stream(
-    question: str,
-    session_id: str,
-    enable_web_search: bool = Query(default=True),
-    retrieval_mode: str = Query(default="rag"),
-    selected_db_ids: str | None = Query(default=None),
+        question: str,
+        session_id: str,
+        enable_web_search: bool = Query(default=True),
+        retrieval_mode: str = Query(default="rag"),
+        selected_db_ids: str | None = Query(default=None),
 ):
-    """
-    接口 2：多轮问答追问接口。
-    如果会话不存在，则自动按 /init 流程创建会话并完成首次问答（向后端“自恢复”），
-    这样前端可以直接使用 /chat 作为统一入口。
-    """
-    # 每次请求创建新队列，避免读到上次请求的残留消息
+    """接口 2：多轮对话追问。完全信任编排器的路由决策。"""
     chat_queue = asyncio.Queue()
-    # 如果会话不存在，初始化一条空状态，行为等价于 /init
+
     if session_id not in active_sessions:
         active_sessions[session_id] = {"queue": chat_queue, "state": None, "ts": time.time()}
     else:
         active_sessions[session_id]["queue"] = chat_queue
         active_sessions[session_id]["ts"] = time.time()
 
-    # 取当前会话状态（可能为 None，代表还未执行过完整流程）
     current_state = active_sessions[session_id]["state"]
-
     manual_selected = _parse_selected_db_ids(selected_db_ids)
     auto_selected = [] if manual_selected else _auto_select_knowledge_bases(question, top_k=3)
-    matched_db_ids = manual_selected or auto_selected
 
     async def event_generator():
         while True:
@@ -203,51 +178,25 @@ async def research_chat_stream(
     async def run_chat_task():
         orchestrator = PaperAgentOrchestrator(state_queue=chat_queue)
         try:
-            # 全新会话（state 为空），走完整流程：意图→搜索→建库→QA
-            if current_state is None:
-                final_state = await orchestrator.run(
-                    user_request=question,
-                    enable_web_search=enable_web_search,
-                    retrieval_mode=retrieval_mode,
-                    selected_db_ids=manual_selected,
-                    auto_selected_db_ids=auto_selected,
-                )
-                active_sessions[session_id]["state"] = final_state
-                return
+            # 如果是已有会话，前端可能改变了开关配置，我们在传入前更新一下 config
+            if current_state and current_state.config:
+                current_state.config["enable_web_search"] = enable_web_search
+                current_state.config["retrieval_mode"] = retrieval_mode
+                if manual_selected:
+                    current_state.config["selected_db_ids"] = manual_selected
+                if auto_selected:
+                    current_state.config["auto_selected_db_ids"] = auto_selected
 
-            # ---- 已有会话：追问逻辑 ----
-            # 优先使用用户手动选择的库；其次复用上轮对话中已建好的临时库；
-            # 最后才降级到本轮 auto_select（避免因措辞变化重复联网建库）
-            session_cfg = getattr(current_state, "config", {}) or {}
-            session_auto_db_ids = (
-                session_cfg.get("auto_selected_db_ids")
-                or session_cfg.get("selected_db_ids")
-                or []
-            )
-            effective_auto = manual_selected or session_auto_db_ids or auto_selected
-            effective_manual = manual_selected
-
-            # 只有当用户明确开启联网 且 本轮 + session 都找不到任何知识库时，才重新建库
-            has_any_db = bool(effective_auto or effective_manual)
-            if not has_any_db and enable_web_search:
-                final_state = await orchestrator.run(
-                    user_request=question,
-                    enable_web_search=True,
-                    retrieval_mode=retrieval_mode,
-                    selected_db_ids=[],
-                    auto_selected_db_ids=[],
-                )
-                active_sessions[session_id]["state"] = final_state
-                return
-
-            # 直接追问：跳过搜索/建库，基于已有知识库回答
-            final_state = await orchestrator.ask_question(
-                current_state=current_state,
-                new_question=question,
-                enable_web_search=False,  # 追问阶段不联网，始终基于已建知识库
+            # 【核心修改：极简调用】
+            # 不再做繁琐的 has_any_db 判断，直接把 current_state 丢进去，
+            # 编排器会根据意图和 bypass_to_qa 自己决定该走哪条路！
+            final_state = await orchestrator.run(
+                user_request=question,
+                previous_state=current_state,
+                enable_web_search=enable_web_search,
                 retrieval_mode=retrieval_mode,
-                selected_db_ids=effective_manual,
-                auto_selected_db_ids=effective_auto,
+                selected_db_ids=manual_selected,
+                auto_selected_db_ids=auto_selected,
             )
             active_sessions[session_id]["state"] = final_state
         except Exception as e:
@@ -256,20 +205,12 @@ async def research_chat_stream(
                 BackToFrontData(step=ExecutionState.FINISHED, state="error", data=str(e))
             )
 
-    # 启动后台聊天任务
     asyncio.create_task(run_chat_task())
-
     return EventSourceResponse(event_generator(), media_type="text/event-stream")
 
 
 @app.get("/health")
 async def health_check():
-    """
-    健康检查与简要运行状态：
-    - 后端服务存活状态
-    - 当前活跃会话数量
-    - 知识库基础统计信息
-    """
     kb_stats = {}
     try:
         kb_stats = knowledge_base.get_statistics()

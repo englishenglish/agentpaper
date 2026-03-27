@@ -3,7 +3,7 @@ import os
 import traceback
 from typing import Any, Optional, Union, List
 from pathlib import Path
-
+import asyncio
 import httpx
 import numpy as np
 import chromadb
@@ -18,9 +18,9 @@ from chromadb.api.types import (
     Space,
 )
 from openai import OpenAI
-from src.knowledge.knowledge.base import KnowledgeBase
-from src.knowledge.knowledge.indexing import process_file_to_markdown, process_file_to_json, process_url_to_markdown
-from src.knowledge.knowledge.utils.kb_utils import (
+from src.knowledge.base import KnowledgeBase
+from src.knowledge.indexing import process_file_to_markdown, process_file_to_json, process_url_to_markdown
+from src.knowledge.utils.kb_utils import (
     get_embedding_config,
     prepare_item_metadata,
     split_text_into_chunks,
@@ -32,6 +32,16 @@ from src.utils.log_utils import setup_logger
 from src.core.config import config
 
 logger = setup_logger(__name__)
+
+_GLOBAL_RERANKER = None
+
+def get_reranker():
+    global _GLOBAL_RERANKER
+    if _GLOBAL_RERANKER is None:
+        logger.info("正在加载 BGEReranker 模型到内存中 (首次查询会稍慢)...")
+        from src.knowledge.knowledge.rerank import BGEReranker # 请确保路径正确
+        _GLOBAL_RERANKER = BGEReranker()
+    return _GLOBAL_RERANKER
 
 
 class ResilientOpenAIEmbeddingFunction(EmbeddingFunction[Documents]):
@@ -153,6 +163,7 @@ class ChromaKB(KnowledgeBase):
                 "db_id": db_id,
                 "created_at": utc_isoformat(),
                 "embedding_model": embed_info.get("name") if embed_info else "default",
+                "hnsw:space": "cosine"
             }
             collection = self.chroma_client.create_collection(
                 name=collection_name, embedding_function=embedding_function, metadata=collection_metadata
@@ -243,7 +254,8 @@ class ChromaKB(KnowledgeBase):
                     "db_id": db_id,
                     "created_at": utc_isoformat(),
                     "embedding_model": "clip_image_embedding",
-                    "embedding_dimension": 512
+                    "embedding_dimension": 512,
+                    "hnsw:space": "cosine"
                 }
 
                 collection = self.chroma_client.create_collection(
@@ -367,6 +379,56 @@ class ChromaKB(KnowledgeBase):
 
         return chunks
 
+
+
+    def semantic_chunk_markdown(self, markdown_text: str, file_id: str, filename: str, params: dict) -> list[dict]:
+        """
+        语义切块：先按照 Markdown 标题层级切分，保留上下文结构；
+        如果某个章节实在太长，再进行常规的字符截断。
+        """
+        chunk_size = int(params.get("chunk_size", 500))
+        chunk_overlap = int(params.get("chunk_overlap", 50))
+
+        # 定义要识别的 Markdown 标题层级
+        headers_to_split_on = [
+            ("#", "Header 1"),
+            ("##", "Header 2"),
+            ("###", "Header 3"),
+            ("####", "Header 4"),
+        ]
+
+        # 1. 第一刀：按语义/标题层级切分
+        markdown_splitter = MarkdownHeaderTextSplitter(headers_to_split_on=headers_to_split_on)
+        md_splits = markdown_splitter.split_text(markdown_text)
+
+        # 2. 第二刀：防止某些没有标题的超长段落撑爆 Token
+        text_splitter = RecursiveCharacterTextSplitter(
+            chunk_size=chunk_size,
+            chunk_overlap=chunk_overlap,
+            separators=["\n\n", "\n", "。", ".", " ", ""]
+        )
+        final_splits = text_splitter.split_documents(md_splits)
+
+        # 3. 组装成 ChromaDB 需要的格式
+        chunks = []
+        for i, doc in enumerate(final_splits):
+            # 将各级标题拼接作为这段文本的前缀上下文 (非常有助于大模型理解段落归属)
+            context_headers = " > ".join([v for k, v in doc.metadata.items() if k.startswith("Header")])
+            content_with_context = f"[{context_headers}]\n{doc.page_content}" if context_headers else doc.page_content
+
+            chunks.append({
+                "content": content_with_context,
+                "id": f"{file_id}_chunk_{i}",
+                "source": filename,
+                "chunk_id": f"{file_id}_chunk_{i}",
+                "chunk_type": "semantic",
+                # 将标题信息也存入 ChromaDB metadata，方便以后精准过滤
+                "metadata": doc.metadata
+            })
+
+        logger.info(f"Semantic chunking completed: {len(chunks)} chunks generated.")
+        return chunks
+
     async def add_processed_content(self, db_id: str, data: dict | None = None) -> list[dict]:
         if db_id not in self.databases_meta:
             raise ValueError(f"Database {db_id} not found")
@@ -440,7 +502,7 @@ class ChromaKB(KnowledgeBase):
             
                 
                 chunks = []
-                chunks = self._split_text_into_chunks(markdown_content, file_id, filename, params)
+                chunks = self.semantic_chunk_markdown(markdown_content, file_id, filename, params)
                 logger.info(f"Split {filename} into {len(chunks)} chunks")
 
                 # 准备向量数据库插入的数据
@@ -492,143 +554,159 @@ class ChromaKB(KnowledgeBase):
     
     async def add_image_embeddings(self, db_id: str, item: str, params: dict | None):
         """添加图片嵌入"""
-        pass
         # 校验格式
-        # if not validate_img_embedding_file(item):
-        #     return
-        # if db_id not in self.databases_meta:
-        #     raise ValueError(f"Database {db_id} not found")
+        if not validate_img_embedding_file(item):
+            return
+        if db_id not in self.databases_meta:
+            raise ValueError(f"Database {db_id} not found")
 
-        # collection = await self._get_image_chroma_collection(db_id)
-        # if not collection:
-        #     raise ValueError(f"Failed to get ChromaDB collection for {db_id}")
+        collection = await self._get_image_chroma_collection(db_id)
+        if not collection:
+            raise ValueError(f"Failed to get ChromaDB collection for {db_id}")
 
-        # content_type = params.get("content_type", "file") if params else "file"
-        # # processed_items_info = []
+        content_type = params.get("content_type", "file") if params else "file"
+        # processed_items_info = []
 
-        # # 准备文件元数据
-        # metadata = prepare_item_metadata(item, content_type, db_id)
-        # file_id = metadata["file_id"]
-        # filename = metadata["filename"]
+        # 准备文件元数据
+        metadata = prepare_item_metadata(item, content_type, db_id)
+        file_id = metadata["file_id"]
+        filename = metadata["filename"]
 
         # 添加文件记录
-        # file_record = metadata.copy()
-            # self.files_meta[file_id] = file_record
-            # self._save_metadata()
+        file_record = metadata.copy()
+        self.files_meta[file_id] = file_record
+        self._save_metadata()
 
-            # self._add_to_processing_queue(file_id)
+        self._add_to_processing_queue(file_id)
 
-        # file_path_obj = Path(item)
-        # file_ext = file_path_obj.suffix.lower()
+        file_path_obj = Path(item)
+        file_ext = file_path_obj.suffix.lower()
 
-        # try:
-        #     json_content = ""
-        #     # 根据文件扩展名处理内容
-        #     json_content = await process_file_to_json(item, params=params)
-          
-        #     chunks = []
-        #     chunks = self.parse_json_into_embedding_chunks(json_content, file_id, filename, params)
+        try:
+            json_content = ""
+            # 根据文件扩展名处理内容
+            json_content = await process_file_to_json(item, params=params)
 
-        #     logger.info(f"Split {filename} into {len(chunks)} chunks")
+            chunks = []
+            chunks = self.parse_json_into_embedding_chunks(json_content, file_id, filename, params)
 
-        #     # 准备向量数据库插入的数据
-        #     if chunks:
-        #         documents = [chunk["content"] for chunk in chunks]
-        #         embeddings = [chunk["embeddings"] for chunk in chunks]
-        #         metadatas = [chunk["metadata"] for chunk in chunks]
-        #         ids = [chunk["id"] for chunk in chunks]
+            logger.info(f"Split {filename} into {len(chunks)} chunks")
 
-        #         # 插入到 ChromaDB - 分批处理以避免超出 OpenAI 批次大小限制
-        #         batch_size = 64  # OpenAI 的最大批次大小限制
-        #         total_batches = (len(chunks) + batch_size - 1) // batch_size
+            # 准备向量数据库插入的数据
+            if chunks:
+                documents = [chunk["content"] for chunk in chunks]
+                embeddings = [chunk["embeddings"] for chunk in chunks]
+                metadatas = [chunk["metadata"] for chunk in chunks]
+                ids = [chunk["id"] for chunk in chunks]
 
-        #         for i in range(0, len(chunks), batch_size):
-        #             batch_documents = documents[i : i + batch_size]
-        #             batch_embeddings = embeddings[i : i + batch_size]
-        #             batch_metadatas = metadatas[i : i + batch_size]
-        #             batch_ids = ids[i : i + batch_size]
+                # 插入到 ChromaDB - 分批处理以避免超出 OpenAI 批次大小限制
+                batch_size = 64  # OpenAI 的最大批次大小限制
+                total_batches = (len(chunks) + batch_size - 1) // batch_size
 
-        #             await asyncio.to_thread(
-        #                 collection.add,
-        #                 documents=batch_documents,
-        #                 embeddings=batch_embeddings,
-        #                 metadatas=batch_metadatas,
-        #                 ids=batch_ids,
-        #             )
-        #             batch_num = i // batch_size + 1
-        #             logger.info(f"Processed batch {batch_num}/{total_batches} for {filename}")
+                for i in range(0, len(chunks), batch_size):
+                    batch_documents = documents[i : i + batch_size]
+                    batch_embeddings = embeddings[i : i + batch_size]
+                    batch_metadatas = metadatas[i : i + batch_size]
+                    batch_ids = ids[i : i + batch_size]
 
-        #     logger.info(f"Inserted {content_type} {item} into Img_ChromaDB. Done.")
+                    await asyncio.to_thread(
+                        collection.add,
+                        documents=batch_documents,
+                        embeddings=batch_embeddings,
+                        metadatas=batch_metadatas,
+                        ids=batch_ids,
+                    )
+                    batch_num = i // batch_size + 1
+                    logger.info(f"Processed batch {batch_num}/{total_batches} for {filename}")
 
-                # 更新状态为完成
-                # self.files_meta[file_id]["status"] = "done"
-                # self._save_metadata()
-                # file_record["status"] = "done"
+            logger.info(f"Inserted {content_type} {item} into Img_ChromaDB. Done.")
 
-        # except Exception as e:
-            # logger.error(f"处理{content_type} {item} 失败: {e}, {traceback.format_exc()}")
-            # self.files_meta[file_id]["status"] = "failed"
-            # self._save_metadata()
-            # file_record["status"] = "failed"
-            # raise e
-                    
-    
-    async def aquery(self, db_id: str , query_text: Union[str, List[str]] = "", **kwargs) -> list[dict]:
-        """异步查询知识库"""
+            # 更新状态为完成
+            self.files_meta[file_id]["status"] = "done"
+            self._save_metadata()
+            file_record["status"] = "done"
+
+        except Exception as e:
+            logger.error(f"处理{content_type} {item} 失败: {e}, {traceback.format_exc()}")
+            logger.error(f"处理{content_type} {item} 失败: {e}, {traceback.format_exc()}")
+            self.files_meta[file_id]["status"] = "failed"
+            self._save_metadata()
+            file_record["status"] = "failed"
+            raise e
+
+    async def aquery(self, db_id: str, query_text: Union[str, List[str]] = "", **kwargs) -> list[dict]:
+        """异步查询知识库 (带重排序)"""
         collection = await self._get_chroma_collection(db_id)
         if not collection:
             raise ValueError(f"Database {db_id} not found")
 
         try:
-            top_k = kwargs.get("top_k", config.get("top_k", 10))
-            similarity_threshold = kwargs.get("similarity_threshold", config.get("similarity_threshold", 0.0))
-            
+            # 1. 扩大召回基数 (Recall K)
+            final_top_k = kwargs.get("top_k", config.get("top_k", 5))
+            recall_k = kwargs.get("recall_k", final_top_k * 4)  # 默认放大 4 倍召回
+
             text_query_results = None
             if isinstance(query_text, str) and query_text == "":
-                raise ValueError("Either query_text or query_embeddings must be provided")
-            else:
-                # 一行完成类型转换：如果是字符串转列表，否则保留列表（空值则转空列表）
-                query_texts = [query_text] if isinstance(query_text, str) else (query_text or [])
-                text_query_results = collection.query(           
-                    query_texts=query_texts, n_results=top_k, include=["documents", "metadatas", "distances"]
-                )
+                raise ValueError("query_text cannot be empty")
 
-            documents = []
-            metadatas = []
-            distances = []
-            # 处理文本查询结果
-            # 遍历所有查询结果，支持多个查询文本
-            if text_query_results and text_query_results.get("documents") and len(text_query_results["documents"]) > 0:
-                for query_idx in range(len(text_query_results["documents"])):
-                    if text_query_results["documents"][query_idx]:
-                        documents.extend(text_query_results["documents"][query_idx])
-                        if text_query_results.get("metadatas") and len(text_query_results["metadatas"]) > query_idx and text_query_results["metadatas"][query_idx]:
-                            metadatas.extend(text_query_results["metadatas"][query_idx])
-                        if text_query_results.get("distances") and len(text_query_results["distances"]) > query_idx and text_query_results["distances"][query_idx]:
-                            distances.extend(text_query_results["distances"][query_idx])
+            query_texts = [query_text] if isinstance(query_text, str) else query_text
 
-            retrieved_chunks = []
+            # 2. 初始向量粗排召回
+            text_query_results = collection.query(
+                query_texts=query_texts,
+                n_results=recall_k,
+                include=["documents", "metadatas", "distances"]
+            )
+
+            # ... (解析 documents, metadatas 的代码保持原有逻辑) ...
+            documents = text_query_results["documents"][0] if text_query_results["documents"] else []
+            metadatas = text_query_results["metadatas"][0] if text_query_results["metadatas"] else []
+
+            if not documents:
+                return []
+
+            # 3. 引入 Reranker 精排
+            # 注意：在异步方法中调用密集的模型计算，最好放到线程池
+            reranker_instance = get_reranker()
+            scores = await asyncio.to_thread(
+                reranker_instance.rerank,
+                query=query_texts[0],
+                docs=documents
+            )
+
+            # 4. 根据 Reranker 分数重新组装和排序
+            reranked_chunks = []
             for i, doc in enumerate(documents):
-                similarity = 1 - distances[i] if i < len(distances) else 1.0
-
-                if similarity < similarity_threshold:
-                    continue
-
                 metadata = metadatas[i] if i < len(metadatas) else {}
-                # 确保 file_id 在元数据中，并使用统一的键名
                 if "full_doc_id" in metadata:
                     metadata["file_id"] = metadata.pop("full_doc_id")
-                # chunk去重
-                has_same_chunk_id = False
-                for chunk in retrieved_chunks:
-                    if chunk.get("metadata").get("chunk_id") == metadata.get("chunk_id"):
-                        has_same_chunk_id = True
-                        break
-                if not has_same_chunk_id:
-                    retrieved_chunks.append({"content": doc, "metadata": metadata, "score": similarity})
 
-            logger.debug(f"ChromaDB query response: {len(retrieved_chunks)} chunks found (after similarity filtering)")
-            return retrieved_chunks
+                reranked_chunks.append({
+                    "content": doc,
+                    "metadata": metadata,
+                    "score": float(scores[i]),  # 这里替换成了精排的分数
+                    "original_chunk_id": metadata.get("chunk_id")
+                })
+
+            # 按精排分数从高到低排序
+            reranked_chunks.sort(key=lambda x: x["score"], reverse=True)
+
+            # 5. 去重并截取 final_top_k
+            final_results = []
+            seen_chunks = set()
+
+            for chunk in reranked_chunks:
+                chunk_id = chunk["original_chunk_id"]
+                if chunk_id and chunk_id not in seen_chunks:
+                    seen_chunks.add(chunk_id)
+                    final_results.append(chunk)
+
+                if len(final_results) >= final_top_k:
+                    break
+
+            logger.info(f"Reranked {len(documents)} docs down to top {len(final_results)}.")
+            # print(final_results)
+            return final_results
 
         except Exception as e:
             logger.error(f"ChromaDB query error: {e}, {traceback.format_exc()}")

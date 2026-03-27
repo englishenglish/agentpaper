@@ -19,7 +19,7 @@ from src.services.graph_store import (
     get_multi_hop_reasoning_path,
 )
 from src.core.config import config
-from src.knowledge.knowledge import knowledge_base as kb_manager
+from src.knowledge import knowledge_base as kb_manager
 
 logger = setup_logger(__name__)
 

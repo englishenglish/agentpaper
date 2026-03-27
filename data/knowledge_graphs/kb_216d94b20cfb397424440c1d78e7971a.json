@@ -1,0 +1,1276 @@
+{
+  "db_id": "kb_216d94b20cfb397424440c1d78e7971a",
+  "nodes": {
+    "paper:physics 0004033v1": {
+      "id": "paper:physics 0004033v1",
+      "type": "Paper",
+      "label": "Efficiency of neutron detection of superheated drops of Freon-22",
+      "norm_label": "efficiency of neutron detection of superheated drops of freon-22"
+    },
+    "task:确定 freon-22 和 freon-12 在来自 am-be 中子源的中子能谱下的中子检测效率。": {
+      "id": "task:确定 freon-22 和 freon-12 在来自 am-be 中子源的中子能谱下的中子检测效率。",
+      "type": "Task",
+      "label": "确定 Freon-22 和 Freon-12 在来自 Am-Be 中子源的中子能谱下的中子检测效率。",
+      "norm_label": "确定 freon-22 和 freon-12 在来自 am-be 中子源的中子能谱下的中子检测效率。"
+    },
+    "contribution:确定了 freon-22 和 freon-12 在特定中子源的中子能谱下的中子检测效率。": {
+      "id": "contribution:确定了 freon-22 和 freon-12 在特定中子源的中子能谱下的中子检测效率。",
+      "type": "Contribution",
+      "label": "确定了 Freon-22 和 Freon-12 在特定中子源的中子能谱下的中子检测效率。",
+      "norm_label": "确定了 freon-22 和 freon-12 在特定中子源的中子能谱下的中子检测效率。"
+    },
+    "contribution:报告了两种物质的中子检测效率和寿命对比。": {
+      "id": "contribution:报告了两种物质的中子检测效率和寿命对比。",
+      "type": "Contribution",
+      "label": "报告了两种物质的中子检测效率和寿命对比。",
+      "norm_label": "报告了两种物质的中子检测效率和寿命对比。"
+    },
+    "paper:2206.04564v6": {
+      "id": "paper:2206.04564v6",
+      "type": "Paper",
+      "label": "TwiBot-22: Towards Graph-Based Twitter Bot Detection",
+      "norm_label": "twibot-22 towards graph-based twitter bot detection"
+    },
+    "method:twibot-22": {
+      "id": "method:twibot-22",
+      "type": "Method",
+      "label": "TwiBot-22",
+      "norm_label": "twibot-22"
+    },
+    "task:尽管twitter bot检测在对抗错误信息、促进社交媒体管理以及维护在线讨论完整性方面变得越来越重要，但很少有基于图的传统方法能够检测新型twitter bot，而且现有twitter bot检测数": {
+      "id": "task:尽管twitter bot检测在对抗错误信息、促进社交媒体管理以及维护在线讨论完整性方面变得越来越重要，但很少有基于图的传统方法能够检测新型twitter bot，而且现有twitter bot检测数",
+      "type": "Task",
+      "label": "尽管Twitter bot检测在对抗错误信息、促进社交媒体管理以及维护在线讨论完整性方面变得越来越重要，但很少有基于图的传统方法能够检测新型Twitter bot，而且现有Twitter bot检测数",
+      "norm_label": "尽管twitter bot检测在对抗错误信息、促进社交媒体管理以及维护在线讨论完整性方面变得越来越重要，但很少有基于图的传统方法能够检测新型twitter bot，而且现有twitter bot检测数"
+    },
+    "contribution:提出了迄今为止最大的基于图的twitter bot检测数据集twibot-22。": {
+      "id": "contribution:提出了迄今为止最大的基于图的twitter bot检测数据集twibot-22。",
+      "type": "Contribution",
+      "label": "提出了迄今为止最大的基于图的Twitter bot检测数据集TwiBot-22。",
+      "norm_label": "提出了迄今为止最大的基于图的twitter bot检测数据集twibot-22。"
+    },
+    "contribution:提供了多样化的实体和关系以支持对twitter网络的检测。": {
+      "id": "contribution:提供了多样化的实体和关系以支持对twitter网络的检测。",
+      "type": "Contribution",
+      "label": "提供了多样化的实体和关系以支持对Twitter网络的检测。",
+      "norm_label": "提供了多样化的实体和关系以支持对twitter网络的检测。"
+    },
+    "contribution:注释质量高于现有数据集。": {
+      "id": "contribution:注释质量高于现有数据集。",
+      "type": "Contribution",
+      "label": "注释质量高于现有数据集。",
+      "norm_label": "注释质量高于现有数据集。"
+    },
+    "contribution:重新实现了35个代表性twitter bot检测基线，并在9个数据集上进行评估。": {
+      "id": "contribution:重新实现了35个代表性twitter bot检测基线，并在9个数据集上进行评估。",
+      "type": "Contribution",
+      "label": "重新实现了35个代表性Twitter bot检测基线，并在9个数据集上进行评估。",
+      "norm_label": "重新实现了35个代表性twitter bot检测基线，并在9个数据集上进行评估。"
+    },
+    "paper:2301.02010v1": {
+      "id": "paper:2301.02010v1",
+      "type": "Paper",
+      "label": "HIT-SCIR at MMNLU-22: Consistency Regularization for Multilingual Spoken Language Understanding",
+      "norm_label": "hit-scir at mmnlu-22 consistency regularization for multilingual spoken language understanding"
+    },
+    "method:一致性正则化": {
+      "id": "method:一致性正则化",
+      "type": "Method",
+      "label": "一致性正则化",
+      "norm_label": "一致性正则化"
+    },
+    "task:为了提高多语言语音理解（slu）中的意图检测和槽填充任务的性能，我们希望通过一致性正则化基于混合数据增强策略来改进这些任务。": {
+      "id": "task:为了提高多语言语音理解（slu）中的意图检测和槽填充任务的性能，我们希望通过一致性正则化基于混合数据增强策略来改进这些任务。",
+      "type": "Task",
+      "label": "为了提高多语言语音理解（SLU）中的意图检测和槽填充任务的性能，我们希望通过一致性正则化基于混合数据增强策略来改进这些任务。",
+      "norm_label": "为了提高多语言语音理解（slu）中的意图检测和槽填充任务的性能，我们希望通过一致性正则化基于混合数据增强策略来改进这些任务。"
+    },
+    "dataset:massive 11 514 training utterances per language": {
+      "id": "dataset:massive 11 514 training utterances per language",
+      "type": "Dataset",
+      "label": "MASSIVE (11,514 training utterances per language)",
+      "norm_label": "massive 11 514 training utterances per language"
+    },
+    "metric:exact match accuracy ema": {
+      "id": "metric:exact match accuracy ema",
+      "type": "Metric",
+      "label": "Exact Match Accuracy (EMA)",
+      "norm_label": "exact match accuracy ema"
+    },
+    "metric:intent accuracy": {
+      "id": "metric:intent accuracy",
+      "type": "Metric",
+      "label": "Intent Accuracy",
+      "norm_label": "intent accuracy"
+    },
+    "metric:slot micro f1": {
+      "id": "metric:slot micro f1",
+      "type": "Metric",
+      "label": "Slot Micro F1",
+      "norm_label": "slot micro f1"
+    },
+    "contribution:提出了一种基于混合数据增强策略的一致性正则化方法。": {
+      "id": "contribution:提出了一种基于混合数据增强策略的一致性正则化方法。",
+      "type": "Contribution",
+      "label": "提出了一种基于混合数据增强策略的一致性正则化方法。",
+      "norm_label": "提出了一种基于混合数据增强策略的一致性正则化方法。"
+    },
+    "contribution:此方法在全数据集设置中获得了第一名。": {
+      "id": "contribution:此方法在全数据集设置中获得了第一名。",
+      "type": "Contribution",
+      "label": "此方法在全数据集设置中获得了第一名。",
+      "norm_label": "此方法在全数据集设置中获得了第一名。"
+    },
+    "contribution:混合数据增强策略包括机器翻译和子词采样增强。": {
+      "id": "contribution:混合数据增强策略包括机器翻译和子词采样增强。",
+      "type": "Contribution",
+      "label": "混合数据增强策略包括机器翻译和子词采样增强。",
+      "norm_label": "混合数据增强策略包括机器翻译和子词采样增强。"
+    },
+    "paper:astro-ph 0312404v1": {
+      "id": "paper:astro-ph 0312404v1",
+      "type": "Paper",
+      "label": "Reevaluation of the $^{22}$Na(p,$γ$) reaction rate: Implications for the detection of $^{22}$Na gamma rays from novae",
+      "norm_label": "reevaluation of the 22 na p γ reaction rate implications for the detection of 22 na gamma rays from novae"
+    },
+    "method:gammasphere阵列": {
+      "id": "method:gammasphere阵列",
+      "type": "Method",
+      "label": "Gammasphere阵列",
+      "norm_label": "gammasphere阵列"
+    },
+    "task:了解22na的合成和消耗过程对于诊断经典新星爆发至关重要。": {
+      "id": "task:了解22na的合成和消耗过程对于诊断经典新星爆发至关重要。",
+      "type": "Task",
+      "label": "了解22Na的合成和消耗过程对于诊断经典新星爆发至关重要。",
+      "norm_label": "了解22na的合成和消耗过程对于诊断经典新星爆发至关重要。"
+    },
+    "contribution:通过使用大型锗探测器阵列进行非传统方式研究，获得了详细的激发能级信息。": {
+      "id": "contribution:通过使用大型锗探测器阵列进行非传统方式研究，获得了详细的激发能级信息。",
+      "type": "Contribution",
+      "label": "通过使用大型锗探测器阵列进行非传统方式研究，获得了详细的激发能级信息。",
+      "norm_label": "通过使用大型锗探测器阵列进行非传统方式研究，获得了详细的激发能级信息。"
+    },
+    "contribution:鉴别并确认了新的激发态，改进了已知状态的激发能精度。": {
+      "id": "contribution:鉴别并确认了新的激发态，改进了已知状态的激发能精度。",
+      "type": "Contribution",
+      "label": "鉴别并确认了新的激发态，改进了已知状态的激发能精度。",
+      "norm_label": "鉴别并确认了新的激发态，改进了已知状态的激发能精度。"
+    },
+    "contribution:解决了关于激发能级和自旋 宇称分类的模棱两可。": {
+      "id": "contribution:解决了关于激发能级和自旋 宇称分类的模棱两可。",
+      "type": "Contribution",
+      "label": "解决了关于激发能级和自旋/宇称分类的模棱两可。",
+      "norm_label": "解决了关于激发能级和自旋 宇称分类的模棱两可。"
+    },
+    "contribution:表明新方法可能适用于类似核反应速率确定。": {
+      "id": "contribution:表明新方法可能适用于类似核反应速率确定。",
+      "type": "Contribution",
+      "label": "表明新方法可能适用于类似核反应速率确定。",
+      "norm_label": "表明新方法可能适用于类似核反应速率确定。"
+    },
+    "paper:2206.08029v1": {
+      "id": "paper:2206.08029v1",
+      "type": "Paper",
+      "label": "DIALOG-22 RuATD Generated Text Detection",
+      "norm_label": "dialog-22 ruatd generated text detection"
+    },
+    "method:ensembled models": {
+      "id": "method:ensembled models",
+      "type": "Method",
+      "label": "ensembled models",
+      "norm_label": "ensembled models"
+    },
+    "task:尽管生成的文本与人类撰写的文章在风格上较为接近，但仍然需要区分两者，防止滥用生成文本模型。": {
+      "id": "task:尽管生成的文本与人类撰写的文章在风格上较为接近，但仍然需要区分两者，防止滥用生成文本模型。",
+      "type": "Task",
+      "label": "尽管生成的文本与人类撰写的文章在风格上较为接近，但仍然需要区分两者，防止滥用生成文本模型。",
+      "norm_label": "尽管生成的文本与人类撰写的文章在风格上较为接近，但仍然需要区分两者，防止滥用生成文本模型。"
+    },
+    "dataset:训练集和测试集，部分数据由不同的生成模型自动注释": {
+      "id": "dataset:训练集和测试集，部分数据由不同的生成模型自动注释",
+      "type": "Dataset",
+      "label": "训练集和测试集，部分数据由不同的生成模型自动注释",
+      "norm_label": "训练集和测试集，部分数据由不同的生成模型自动注释"
+    },
+    "dataset:二元分类数据集：文本属于人类撰写还是机器生成": {
+      "id": "dataset:二元分类数据集：文本属于人类撰写还是机器生成",
+      "type": "Dataset",
+      "label": "二元分类数据集：文本属于人类撰写还是机器生成",
+      "norm_label": "二元分类数据集：文本属于人类撰写还是机器生成"
+    },
+    "dataset:多分类数据集：文本属于14个类别之一": {
+      "id": "dataset:多分类数据集：文本属于14个类别之一",
+      "type": "Dataset",
+      "label": "多分类数据集：文本属于14个类别之一",
+      "norm_label": "多分类数据集：文本属于14个类别之一"
+    },
+    "dataset:kaggle ruatd 2022数据集": {
+      "id": "dataset:kaggle ruatd 2022数据集",
+      "type": "Dataset",
+      "label": "Kaggle RuATD 2022数据集",
+      "norm_label": "kaggle ruatd 2022数据集"
+    },
+    "metric:accuracy": {
+      "id": "metric:accuracy",
+      "type": "Metric",
+      "label": "Accuracy",
+      "norm_label": "accuracy"
+    },
+    "contribution:提出了一种基于注意力机制的集成方法，包括五种模型：sberbank-ai sbert large nlu ru sberbank-ai rubert-large ilyagusev mbart ru sum gazeta moritzlaurer mdeberta-v3-base-mnli-x": {
+      "id": "contribution:提出了一种基于注意力机制的集成方法，包括五种模型：sberbank-ai sbert large nlu ru sberbank-ai rubert-large ilyagusev mbart ru sum gazeta moritzlaurer mdeberta-v3-base-mnli-x",
+      "type": "Contribution",
+      "label": "提出了一种基于注意力机制的集成方法，包括五种模型：sberbank-ai/sbert_large_nlu_ru, sberbank-ai/ruBert-large, IlyaGusev/mbart_ru_sum_gazeta, MoritzLaurer/mDeBERTa-v3-base-mnli-x",
+      "norm_label": "提出了一种基于注意力机制的集成方法，包括五种模型：sberbank-ai sbert large nlu ru sberbank-ai rubert-large ilyagusev mbart ru sum gazeta moritzlaurer mdeberta-v3-base-mnli-x"
+    },
+    "contribution:在二元分类任务中获得了第一名。": {
+      "id": "contribution:在二元分类任务中获得了第一名。",
+      "type": "Contribution",
+      "label": "在二元分类任务中获得了第一名。",
+      "norm_label": "在二元分类任务中获得了第一名。"
+    },
+    "contribution:在多分类任务中获得了第四名。": {
+      "id": "contribution:在多分类任务中获得了第四名。",
+      "type": "Contribution",
+      "label": "在多分类任务中获得了第四名。",
+      "norm_label": "在多分类任务中获得了第四名。"
+    },
+    "metric:neutron detection efficiency": {
+      "id": "metric:neutron detection efficiency",
+      "type": "Metric",
+      "label": "neutron detection efficiency",
+      "norm_label": "neutron detection efficiency",
+      "description": ""
+    },
+    "concept:freon-22": {
+      "id": "concept:freon-22",
+      "type": "Concept",
+      "label": "Freon-22",
+      "norm_label": "freon-22",
+      "description": ""
+    },
+    "concept:freon-12": {
+      "id": "concept:freon-12",
+      "type": "Concept",
+      "label": "Freon-12",
+      "norm_label": "freon-12",
+      "description": ""
+    },
+    "dataset:3ci am-be neutron source": {
+      "id": "dataset:3ci am-be neutron source",
+      "type": "Dataset",
+      "label": "3Ci Am-Be neutron source",
+      "norm_label": "3ci am-be neutron source",
+      "description": ""
+    },
+    "method:volumetric method": {
+      "id": "method:volumetric method",
+      "type": "Method",
+      "label": "volumetric method",
+      "norm_label": "volumetric method",
+      "description": ""
+    },
+    "concept:graph-based twitter bot detection benchmark": {
+      "id": "concept:graph-based twitter bot detection benchmark",
+      "type": "Concept",
+      "label": "graph-based Twitter bot detection benchmark",
+      "norm_label": "graph-based twitter bot detection benchmark",
+      "description": ""
+    },
+    "model:twitter bot detection baselines": {
+      "id": "model:twitter bot detection baselines",
+      "type": "Model",
+      "label": "Twitter bot detection baselines",
+      "norm_label": "twitter bot detection baselines",
+      "description": ""
+    },
+    "concept:twitter network": {
+      "id": "concept:twitter network",
+      "type": "Concept",
+      "label": "Twitter network",
+      "norm_label": "twitter network",
+      "description": ""
+    },
+    "task:mmnlu-22": {
+      "id": "task:mmnlu-22",
+      "type": "Task",
+      "label": "MMNLU-22",
+      "norm_label": "mmnlu-22",
+      "description": ""
+    },
+    "paper:hit-scir": {
+      "id": "paper:hit-scir",
+      "type": "Paper",
+      "label": "HIT-SCIR",
+      "norm_label": "hit-scir",
+      "description": ""
+    },
+    "dataset:massive": {
+      "id": "dataset:massive",
+      "type": "Dataset",
+      "label": "MASSIVE",
+      "norm_label": "massive",
+      "description": ""
+    },
+    "task:dialog-22 ruatd": {
+      "id": "task:dialog-22 ruatd",
+      "type": "Task",
+      "label": "DIALOG-22 RuATD",
+      "norm_label": "dialog-22 ruatd",
+      "description": ""
+    },
+    "model:sberbank-ai sbert large nlu ru": {
+      "id": "model:sberbank-ai sbert large nlu ru",
+      "type": "Model",
+      "label": "sberbank-ai/sbert_large_nlu_ru",
+      "norm_label": "sberbank-ai sbert large nlu ru",
+      "description": ""
+    },
+    "model:sberbank-ai rubert-large": {
+      "id": "model:sberbank-ai rubert-large",
+      "type": "Model",
+      "label": "sberbank-ai/ruBert-large",
+      "norm_label": "sberbank-ai rubert-large",
+      "description": ""
+    },
+    "model:ilyagusev mbart ru sum gazeta": {
+      "id": "model:ilyagusev mbart ru sum gazeta",
+      "type": "Model",
+      "label": "IlyaGusev/mbart_ru_sum_gazeta",
+      "norm_label": "ilyagusev mbart ru sum gazeta",
+      "description": ""
+    },
+    "model:moritzlaurer mdeberta-v3-base-mnli-xnli": {
+      "id": "model:moritzlaurer mdeberta-v3-base-mnli-xnli",
+      "type": "Model",
+      "label": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+      "norm_label": "moritzlaurer mdeberta-v3-base-mnli-xnli",
+      "description": ""
+    },
+    "model:deeppavlov xlm-roberta-large-en-ru-mnli": {
+      "id": "model:deeppavlov xlm-roberta-large-en-ru-mnli",
+      "type": "Model",
+      "label": "DeepPavlov/xlm-roberta-large-en-ru-mnli",
+      "norm_label": "deeppavlov xlm-roberta-large-en-ru-mnli",
+      "description": ""
+    }
+  },
+  "edges": [
+    {
+      "source": "paper:physics 0004033v1",
+      "target": "task:确定 freon-22 和 freon-12 在来自 am-be 中子源的中子能谱下的中子检测效率。",
+      "type": "applied_to",
+      "weight": 0.8
+    },
+    {
+      "source": "paper:physics 0004033v1",
+      "target": "contribution:确定了 freon-22 和 freon-12 在特定中子源的中子能谱下的中子检测效率。",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "paper:physics 0004033v1",
+      "target": "contribution:报告了两种物质的中子检测效率和寿命对比。",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "paper:2206.04564v6",
+      "target": "method:twibot-22",
+      "type": "proposes",
+      "weight": 1.0
+    },
+    {
+      "source": "paper:2206.04564v6",
+      "target": "task:尽管twitter bot检测在对抗错误信息、促进社交媒体管理以及维护在线讨论完整性方面变得越来越重要，但很少有基于图的传统方法能够检测新型twitter bot，而且现有twitter bot检测数",
+      "type": "applied_to",
+      "weight": 0.8
+    },
+    {
+      "source": "method:twibot-22",
+      "target": "task:尽管twitter bot检测在对抗错误信息、促进社交媒体管理以及维护在线讨论完整性方面变得越来越重要，但很少有基于图的传统方法能够检测新型twitter bot，而且现有twitter bot检测数",
+      "type": "solves",
+      "weight": 0.95
+    },
+    {
+      "source": "paper:2206.04564v6",
+      "target": "method:twibot-22",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "paper:2206.04564v6",
+      "target": "contribution:提出了迄今为止最大的基于图的twitter bot检测数据集twibot-22。",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "method:twibot-22",
+      "target": "contribution:提出了迄今为止最大的基于图的twitter bot检测数据集twibot-22。",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:2206.04564v6",
+      "target": "contribution:提供了多样化的实体和关系以支持对twitter网络的检测。",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "method:twibot-22",
+      "target": "contribution:提供了多样化的实体和关系以支持对twitter网络的检测。",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:2206.04564v6",
+      "target": "contribution:注释质量高于现有数据集。",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "method:twibot-22",
+      "target": "contribution:注释质量高于现有数据集。",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:2206.04564v6",
+      "target": "contribution:重新实现了35个代表性twitter bot检测基线，并在9个数据集上进行评估。",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "method:twibot-22",
+      "target": "contribution:重新实现了35个代表性twitter bot检测基线，并在9个数据集上进行评估。",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:2301.02010v1",
+      "target": "method:一致性正则化",
+      "type": "proposes",
+      "weight": 1.0
+    },
+    {
+      "source": "paper:2301.02010v1",
+      "target": "task:为了提高多语言语音理解（slu）中的意图检测和槽填充任务的性能，我们希望通过一致性正则化基于混合数据增强策略来改进这些任务。",
+      "type": "applied_to",
+      "weight": 0.8
+    },
+    {
+      "source": "method:一致性正则化",
+      "target": "task:为了提高多语言语音理解（slu）中的意图检测和槽填充任务的性能，我们希望通过一致性正则化基于混合数据增强策略来改进这些任务。",
+      "type": "solves",
+      "weight": 0.95
+    },
+    {
+      "source": "paper:2301.02010v1",
+      "target": "dataset:massive 11 514 training utterances per language",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "method:一致性正则化",
+      "target": "dataset:massive 11 514 training utterances per language",
+      "type": "evaluates_on",
+      "weight": 0.9
+    },
+    {
+      "source": "method:一致性正则化",
+      "target": "metric:exact match accuracy ema",
+      "type": "achieves",
+      "weight": 0.85
+    },
+    {
+      "source": "method:一致性正则化",
+      "target": "metric:intent accuracy",
+      "type": "achieves",
+      "weight": 0.85
+    },
+    {
+      "source": "method:一致性正则化",
+      "target": "metric:slot micro f1",
+      "type": "achieves",
+      "weight": 0.85
+    },
+    {
+      "source": "paper:2301.02010v1",
+      "target": "contribution:提出了一种基于混合数据增强策略的一致性正则化方法。",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "method:一致性正则化",
+      "target": "contribution:提出了一种基于混合数据增强策略的一致性正则化方法。",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:2301.02010v1",
+      "target": "contribution:此方法在全数据集设置中获得了第一名。",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "method:一致性正则化",
+      "target": "contribution:此方法在全数据集设置中获得了第一名。",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:2301.02010v1",
+      "target": "contribution:混合数据增强策略包括机器翻译和子词采样增强。",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "method:一致性正则化",
+      "target": "contribution:混合数据增强策略包括机器翻译和子词采样增强。",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:astro-ph 0312404v1",
+      "target": "method:gammasphere阵列",
+      "type": "proposes",
+      "weight": 1.0
+    },
+    {
+      "source": "paper:astro-ph 0312404v1",
+      "target": "task:了解22na的合成和消耗过程对于诊断经典新星爆发至关重要。",
+      "type": "applied_to",
+      "weight": 0.8
+    },
+    {
+      "source": "method:gammasphere阵列",
+      "target": "task:了解22na的合成和消耗过程对于诊断经典新星爆发至关重要。",
+      "type": "solves",
+      "weight": 0.95
+    },
+    {
+      "source": "paper:astro-ph 0312404v1",
+      "target": "contribution:通过使用大型锗探测器阵列进行非传统方式研究，获得了详细的激发能级信息。",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "method:gammasphere阵列",
+      "target": "contribution:通过使用大型锗探测器阵列进行非传统方式研究，获得了详细的激发能级信息。",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:astro-ph 0312404v1",
+      "target": "contribution:鉴别并确认了新的激发态，改进了已知状态的激发能精度。",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "method:gammasphere阵列",
+      "target": "contribution:鉴别并确认了新的激发态，改进了已知状态的激发能精度。",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:astro-ph 0312404v1",
+      "target": "contribution:解决了关于激发能级和自旋 宇称分类的模棱两可。",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "method:gammasphere阵列",
+      "target": "contribution:解决了关于激发能级和自旋 宇称分类的模棱两可。",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:astro-ph 0312404v1",
+      "target": "contribution:表明新方法可能适用于类似核反应速率确定。",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "method:gammasphere阵列",
+      "target": "contribution:表明新方法可能适用于类似核反应速率确定。",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:2206.08029v1",
+      "target": "method:ensembled models",
+      "type": "proposes",
+      "weight": 1.0
+    },
+    {
+      "source": "paper:2206.08029v1",
+      "target": "task:尽管生成的文本与人类撰写的文章在风格上较为接近，但仍然需要区分两者，防止滥用生成文本模型。",
+      "type": "applied_to",
+      "weight": 0.8
+    },
+    {
+      "source": "method:ensembled models",
+      "target": "task:尽管生成的文本与人类撰写的文章在风格上较为接近，但仍然需要区分两者，防止滥用生成文本模型。",
+      "type": "solves",
+      "weight": 0.95
+    },
+    {
+      "source": "paper:2206.08029v1",
+      "target": "dataset:训练集和测试集，部分数据由不同的生成模型自动注释",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "method:ensembled models",
+      "target": "dataset:训练集和测试集，部分数据由不同的生成模型自动注释",
+      "type": "evaluates_on",
+      "weight": 0.9
+    },
+    {
+      "source": "paper:2206.08029v1",
+      "target": "dataset:二元分类数据集：文本属于人类撰写还是机器生成",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "method:ensembled models",
+      "target": "dataset:二元分类数据集：文本属于人类撰写还是机器生成",
+      "type": "evaluates_on",
+      "weight": 0.9
+    },
+    {
+      "source": "paper:2206.08029v1",
+      "target": "dataset:多分类数据集：文本属于14个类别之一",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "method:ensembled models",
+      "target": "dataset:多分类数据集：文本属于14个类别之一",
+      "type": "evaluates_on",
+      "weight": 0.9
+    },
+    {
+      "source": "paper:2206.08029v1",
+      "target": "dataset:kaggle ruatd 2022数据集",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "method:ensembled models",
+      "target": "dataset:kaggle ruatd 2022数据集",
+      "type": "evaluates_on",
+      "weight": 0.9
+    },
+    {
+      "source": "method:ensembled models",
+      "target": "metric:accuracy",
+      "type": "achieves",
+      "weight": 0.85
+    },
+    {
+      "source": "paper:2206.08029v1",
+      "target": "contribution:提出了一种基于注意力机制的集成方法，包括五种模型：sberbank-ai sbert large nlu ru sberbank-ai rubert-large ilyagusev mbart ru sum gazeta moritzlaurer mdeberta-v3-base-mnli-x",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "method:ensembled models",
+      "target": "contribution:提出了一种基于注意力机制的集成方法，包括五种模型：sberbank-ai sbert large nlu ru sberbank-ai rubert-large ilyagusev mbart ru sum gazeta moritzlaurer mdeberta-v3-base-mnli-x",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:2206.08029v1",
+      "target": "contribution:在二元分类任务中获得了第一名。",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "method:ensembled models",
+      "target": "contribution:在二元分类任务中获得了第一名。",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:2206.08029v1",
+      "target": "contribution:在多分类任务中获得了第四名。",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "method:ensembled models",
+      "target": "contribution:在多分类任务中获得了第四名。",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:physics 0004033v1",
+      "target": "metric:neutron detection efficiency",
+      "type": "achieves",
+      "weight": 0.85
+    },
+    {
+      "source": "paper:physics 0004033v1",
+      "target": "concept:freon-22",
+      "type": "evaluates_on",
+      "weight": 0.9
+    },
+    {
+      "source": "paper:physics 0004033v1",
+      "target": "concept:freon-12",
+      "type": "evaluates_on",
+      "weight": 0.9
+    },
+    {
+      "source": "paper:physics 0004033v1",
+      "target": "dataset:3ci am-be neutron source",
+      "type": "evaluates_on",
+      "weight": 0.9
+    },
+    {
+      "source": "paper:physics 0004033v1",
+      "target": "method:volumetric method",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "metric:neutron detection efficiency",
+      "target": "concept:freon-22",
+      "type": "achieves",
+      "weight": 0.85
+    },
+    {
+      "source": "metric:neutron detection efficiency",
+      "target": "concept:freon-12",
+      "type": "achieves",
+      "weight": 0.85
+    },
+    {
+      "source": "concept:freon-22",
+      "target": "metric:neutron detection efficiency",
+      "type": "achieves",
+      "weight": 0.85
+    },
+    {
+      "source": "method:twibot-22",
+      "target": "concept:graph-based twitter bot detection benchmark",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "concept:graph-based twitter bot detection benchmark",
+      "target": "model:twitter bot detection baselines",
+      "type": "evaluates_on",
+      "weight": 0.9
+    },
+    {
+      "source": "concept:graph-based twitter bot detection benchmark",
+      "target": "concept:twitter network",
+      "type": "applied_to",
+      "weight": 0.8
+    },
+    {
+      "source": "method:一致性正则化",
+      "target": "task:mmnlu-22",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:hit-scir",
+      "target": "method:一致性正则化",
+      "type": "proposes",
+      "weight": 1.0
+    },
+    {
+      "source": "paper:hit-scir",
+      "target": "dataset:massive",
+      "type": "evaluates_on",
+      "weight": 0.9
+    },
+    {
+      "source": "method:一致性正则化",
+      "target": "dataset:massive",
+      "type": "improves",
+      "weight": 0.95
+    },
+    {
+      "source": "paper:hit-scir",
+      "target": "dataset:massive",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "method:一致性正则化",
+      "target": "dataset:massive",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "task:dialog-22 ruatd",
+      "target": "method:ensembled models",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "method:ensembled models",
+      "target": "model:sberbank-ai sbert large nlu ru",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "method:ensembled models",
+      "target": "model:sberbank-ai rubert-large",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "method:ensembled models",
+      "target": "model:ilyagusev mbart ru sum gazeta",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "method:ensembled models",
+      "target": "model:moritzlaurer mdeberta-v3-base-mnli-xnli",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "method:ensembled models",
+      "target": "model:deeppavlov xlm-roberta-large-en-ru-mnli",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "method:ensembled models",
+      "target": "metric:accuracy",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "task:dialog-22 ruatd",
+      "target": "dataset:kaggle ruatd 2022数据集",
+      "type": "evaluates_on",
+      "weight": 0.9
+    }
+  ],
+  "paper_entities": {
+    "physics/0004033v1": [
+      "paper:physics 0004033v1",
+      "task:确定 freon-22 和 freon-12 在来自 am-be 中子源的中子能谱下的中子检测效率。",
+      "contribution:确定了 freon-22 和 freon-12 在特定中子源的中子能谱下的中子检测效率。",
+      "contribution:报告了两种物质的中子检测效率和寿命对比。",
+      "metric:neutron detection efficiency",
+      "concept:freon-22",
+      "concept:freon-12",
+      "dataset:3ci am-be neutron source",
+      "method:volumetric method"
+    ],
+    "2206.04564v6": [
+      "paper:2206.04564v6",
+      "method:twibot-22",
+      "task:尽管twitter bot检测在对抗错误信息、促进社交媒体管理以及维护在线讨论完整性方面变得越来越重要，但很少有基于图的传统方法能够检测新型twitter bot，而且现有twitter bot检测数",
+      "method:twibot-22",
+      "contribution:提出了迄今为止最大的基于图的twitter bot检测数据集twibot-22。",
+      "contribution:提供了多样化的实体和关系以支持对twitter网络的检测。",
+      "contribution:注释质量高于现有数据集。",
+      "contribution:重新实现了35个代表性twitter bot检测基线，并在9个数据集上进行评估。",
+      "concept:graph-based twitter bot detection benchmark",
+      "model:twitter bot detection baselines",
+      "concept:twitter network"
+    ],
+    "2301.02010v1": [
+      "paper:2301.02010v1",
+      "method:一致性正则化",
+      "task:为了提高多语言语音理解（slu）中的意图检测和槽填充任务的性能，我们希望通过一致性正则化基于混合数据增强策略来改进这些任务。",
+      "dataset:massive 11 514 training utterances per language",
+      "metric:exact match accuracy ema",
+      "metric:intent accuracy",
+      "metric:slot micro f1",
+      "contribution:提出了一种基于混合数据增强策略的一致性正则化方法。",
+      "contribution:此方法在全数据集设置中获得了第一名。",
+      "contribution:混合数据增强策略包括机器翻译和子词采样增强。",
+      "task:mmnlu-22",
+      "paper:hit-scir",
+      "dataset:massive"
+    ],
+    "astro-ph/0312404v1": [
+      "paper:astro-ph 0312404v1",
+      "method:gammasphere阵列",
+      "task:了解22na的合成和消耗过程对于诊断经典新星爆发至关重要。",
+      "contribution:通过使用大型锗探测器阵列进行非传统方式研究，获得了详细的激发能级信息。",
+      "contribution:鉴别并确认了新的激发态，改进了已知状态的激发能精度。",
+      "contribution:解决了关于激发能级和自旋 宇称分类的模棱两可。",
+      "contribution:表明新方法可能适用于类似核反应速率确定。"
+    ],
+    "2206.08029v1": [
+      "paper:2206.08029v1",
+      "method:ensembled models",
+      "task:尽管生成的文本与人类撰写的文章在风格上较为接近，但仍然需要区分两者，防止滥用生成文本模型。",
+      "dataset:训练集和测试集，部分数据由不同的生成模型自动注释",
+      "dataset:二元分类数据集：文本属于人类撰写还是机器生成",
+      "dataset:多分类数据集：文本属于14个类别之一",
+      "dataset:kaggle ruatd 2022数据集",
+      "metric:accuracy",
+      "contribution:提出了一种基于注意力机制的集成方法，包括五种模型：sberbank-ai sbert large nlu ru sberbank-ai rubert-large ilyagusev mbart ru sum gazeta moritzlaurer mdeberta-v3-base-mnli-x",
+      "contribution:在二元分类任务中获得了第一名。",
+      "contribution:在多分类任务中获得了第四名。",
+      "task:dialog-22 ruatd",
+      "model:sberbank-ai sbert large nlu ru",
+      "model:sberbank-ai rubert-large",
+      "model:ilyagusev mbart ru sum gazeta",
+      "model:moritzlaurer mdeberta-v3-base-mnli-xnli",
+      "model:deeppavlov xlm-roberta-large-en-ru-mnli"
+    ]
+  },
+  "entity_aliases": {
+    "efficiency of neutron detection of superheated drops of freon-22": "paper:physics 0004033v1",
+    "确定 freon-22 和 freon-12 在来自 am-be 中子源的中子能谱下的中子检测效率。": "task:确定 freon-22 和 freon-12 在来自 am-be 中子源的中子能谱下的中子检测效率。",
+    "确定了 freon-22 和 freon-12 在特定中子源的中子能谱下的中子检测效率。": "contribution:确定了 freon-22 和 freon-12 在特定中子源的中子能谱下的中子检测效率。",
+    "报告了两种物质的中子检测效率和寿命对比。": "contribution:报告了两种物质的中子检测效率和寿命对比。",
+    "twibot-22 towards graph-based twitter bot detection": "paper:2206.04564v6",
+    "twibot-22": "method:twibot-22",
+    "尽管twitter bot检测在对抗错误信息、促进社交媒体管理以及维护在线讨论完整性方面变得越来越重要，但很少有基于图的传统方法能够检测新型twitter bot，而且现有twitter bot检测数": "task:尽管twitter bot检测在对抗错误信息、促进社交媒体管理以及维护在线讨论完整性方面变得越来越重要，但很少有基于图的传统方法能够检测新型twitter bot，而且现有twitter bot检测数",
+    "提出了迄今为止最大的基于图的twitter bot检测数据集twibot-22。": "contribution:提出了迄今为止最大的基于图的twitter bot检测数据集twibot-22。",
+    "提供了多样化的实体和关系以支持对twitter网络的检测。": "contribution:提供了多样化的实体和关系以支持对twitter网络的检测。",
+    "注释质量高于现有数据集。": "contribution:注释质量高于现有数据集。",
+    "重新实现了35个代表性twitter bot检测基线，并在9个数据集上进行评估。": "contribution:重新实现了35个代表性twitter bot检测基线，并在9个数据集上进行评估。",
+    "hit-scir at mmnlu-22 consistency regularization for multilingual spoken language understanding": "paper:2301.02010v1",
+    "一致性正则化": "method:一致性正则化",
+    "为了提高多语言语音理解（slu）中的意图检测和槽填充任务的性能，我们希望通过一致性正则化基于混合数据增强策略来改进这些任务。": "task:为了提高多语言语音理解（slu）中的意图检测和槽填充任务的性能，我们希望通过一致性正则化基于混合数据增强策略来改进这些任务。",
+    "massive 11 514 training utterances per language": "dataset:massive 11 514 training utterances per language",
+    "exact match accuracy ema": "metric:exact match accuracy ema",
+    "intent accuracy": "metric:intent accuracy",
+    "slot micro f1": "metric:slot micro f1",
+    "提出了一种基于混合数据增强策略的一致性正则化方法。": "contribution:提出了一种基于混合数据增强策略的一致性正则化方法。",
+    "此方法在全数据集设置中获得了第一名。": "contribution:此方法在全数据集设置中获得了第一名。",
+    "混合数据增强策略包括机器翻译和子词采样增强。": "contribution:混合数据增强策略包括机器翻译和子词采样增强。",
+    "reevaluation of the 22 na p γ reaction rate implications for the detection of 22 na gamma rays from novae": "paper:astro-ph 0312404v1",
+    "gammasphere阵列": "method:gammasphere阵列",
+    "了解22na的合成和消耗过程对于诊断经典新星爆发至关重要。": "task:了解22na的合成和消耗过程对于诊断经典新星爆发至关重要。",
+    "通过使用大型锗探测器阵列进行非传统方式研究，获得了详细的激发能级信息。": "contribution:通过使用大型锗探测器阵列进行非传统方式研究，获得了详细的激发能级信息。",
+    "鉴别并确认了新的激发态，改进了已知状态的激发能精度。": "contribution:鉴别并确认了新的激发态，改进了已知状态的激发能精度。",
+    "解决了关于激发能级和自旋 宇称分类的模棱两可。": "contribution:解决了关于激发能级和自旋 宇称分类的模棱两可。",
+    "表明新方法可能适用于类似核反应速率确定。": "contribution:表明新方法可能适用于类似核反应速率确定。",
+    "dialog-22 ruatd generated text detection": "paper:2206.08029v1",
+    "ensembled models": "method:ensembled models",
+    "尽管生成的文本与人类撰写的文章在风格上较为接近，但仍然需要区分两者，防止滥用生成文本模型。": "task:尽管生成的文本与人类撰写的文章在风格上较为接近，但仍然需要区分两者，防止滥用生成文本模型。",
+    "训练集和测试集，部分数据由不同的生成模型自动注释": "dataset:训练集和测试集，部分数据由不同的生成模型自动注释",
+    "二元分类数据集：文本属于人类撰写还是机器生成": "dataset:二元分类数据集：文本属于人类撰写还是机器生成",
+    "多分类数据集：文本属于14个类别之一": "dataset:多分类数据集：文本属于14个类别之一",
+    "kaggle ruatd 2022数据集": "dataset:kaggle ruatd 2022数据集",
+    "accuracy": "metric:accuracy",
+    "提出了一种基于注意力机制的集成方法，包括五种模型：sberbank-ai sbert large nlu ru sberbank-ai rubert-large ilyagusev mbart ru sum gazeta moritzlaurer mdeberta-v3-base-mnli-x": "contribution:提出了一种基于注意力机制的集成方法，包括五种模型：sberbank-ai sbert large nlu ru sberbank-ai rubert-large ilyagusev mbart ru sum gazeta moritzlaurer mdeberta-v3-base-mnli-x",
+    "在二元分类任务中获得了第一名。": "contribution:在二元分类任务中获得了第一名。",
+    "在多分类任务中获得了第四名。": "contribution:在多分类任务中获得了第四名。",
+    "neutron detection efficiency": "metric:neutron detection efficiency",
+    "freon-22": "concept:freon-22",
+    "freon-12": "concept:freon-12",
+    "3ci am-be neutron source": "dataset:3ci am-be neutron source",
+    "volumetric method": "method:volumetric method",
+    "graph-based twitter bot detection benchmark": "concept:graph-based twitter bot detection benchmark",
+    "twitter bot detection baselines": "model:twitter bot detection baselines",
+    "twitter network": "concept:twitter network",
+    "mmnlu-22": "task:mmnlu-22",
+    "hit-scir": "paper:hit-scir",
+    "massive": "dataset:massive",
+    "dialog-22 ruatd": "task:dialog-22 ruatd",
+    "sberbank-ai sbert large nlu ru": "model:sberbank-ai sbert large nlu ru",
+    "sberbank-ai rubert-large": "model:sberbank-ai rubert-large",
+    "ilyagusev mbart ru sum gazeta": "model:ilyagusev mbart ru sum gazeta",
+    "moritzlaurer mdeberta-v3-base-mnli-xnli": "model:moritzlaurer mdeberta-v3-base-mnli-xnli",
+    "deeppavlov xlm-roberta-large-en-ru-mnli": "model:deeppavlov xlm-roberta-large-en-ru-mnli"
+  },
+  "communities": {
+    "0": {
+      "nodes": [
+        "paper:physics 0004033v1",
+        "task:确定 freon-22 和 freon-12 在来自 am-be 中子源的中子能谱下的中子检测效率。",
+        "contribution:确定了 freon-22 和 freon-12 在特定中子源的中子能谱下的中子检测效率。",
+        "contribution:报告了两种物质的中子检测效率和寿命对比。",
+        "dataset:3ci am-be neutron source",
+        "method:volumetric method"
+      ],
+      "key_entities": [
+        "Efficiency of neutron detection of superheated drops of Freon-22",
+        "确定 Freon-22 和 Freon-12 在来自 Am-Be 中子源的中子能谱下的中子检测效率。",
+        "确定了 Freon-22 和 Freon-12 在特定中子源的中子能谱下的中子检测效率。",
+        "报告了两种物质的中子检测效率和寿命对比。",
+        "3Ci Am-Be neutron source",
+        "volumetric method"
+      ],
+      "key_papers": [
+        "Efficiency of neutron detection of superheated drops of Freon-22"
+      ],
+      "dominant_types": [
+        "Contribution",
+        "Paper",
+        "Task"
+      ],
+      "semantic_tag": "Research Contributions Cluster",
+      "summary": "",
+      "community_name": "Research Contributions Cluster"
+    },
+    "1": {
+      "nodes": [
+        "paper:2206.04564v6",
+        "method:twibot-22",
+        "task:尽管twitter bot检测在对抗错误信息、促进社交媒体管理以及维护在线讨论完整性方面变得越来越重要，但很少有基于图的传统方法能够检测新型twitter bot，而且现有twitter bot检测数",
+        "contribution:提出了迄今为止最大的基于图的twitter bot检测数据集twibot-22。",
+        "contribution:提供了多样化的实体和关系以支持对twitter网络的检测。",
+        "contribution:注释质量高于现有数据集。",
+        "contribution:重新实现了35个代表性twitter bot检测基线，并在9个数据集上进行评估。"
+      ],
+      "key_entities": [
+        "TwiBot-22: Towards Graph-Based Twitter Bot Detection",
+        "TwiBot-22",
+        "尽管Twitter bot检测在对抗错误信息、促进社交媒体管理以及维护在线讨论完整性方面变得越来越重要，但很少有基于图的传统方法能够检测新型Twitter bot，而且现有Twitter bot检测数",
+        "提出了迄今为止最大的基于图的Twitter bot检测数据集TwiBot-22。",
+        "提供了多样化的实体和关系以支持对Twitter网络的检测。",
+        "注释质量高于现有数据集。",
+        "重新实现了35个代表性Twitter bot检测基线，并在9个数据集上进行评估。"
+      ],
+      "key_papers": [
+        "TwiBot-22: Towards Graph-Based Twitter Bot Detection"
+      ],
+      "dominant_types": [
+        "Contribution",
+        "Paper",
+        "Method"
+      ],
+      "semantic_tag": "Research Contributions Cluster",
+      "summary": "",
+      "community_name": "Research Contributions Cluster"
+    },
+    "2": {
+      "nodes": [
+        "paper:2301.02010v1",
+        "dataset:massive 11 514 training utterances per language",
+        "contribution:提出了一种基于混合数据增强策略的一致性正则化方法。",
+        "contribution:此方法在全数据集设置中获得了第一名。",
+        "contribution:混合数据增强策略包括机器翻译和子词采样增强。"
+      ],
+      "key_entities": [
+        "HIT-SCIR at MMNLU-22: Consistency Regularization for Multilingual Spoken Language Understanding",
+        "MASSIVE (11,514 training utterances per language)",
+        "提出了一种基于混合数据增强策略的一致性正则化方法。",
+        "此方法在全数据集设置中获得了第一名。",
+        "混合数据增强策略包括机器翻译和子词采样增强。"
+      ],
+      "key_papers": [
+        "HIT-SCIR at MMNLU-22: Consistency Regularization for Multilingual Spoken Language Understanding"
+      ],
+      "dominant_types": [
+        "Contribution",
+        "Paper",
+        "Dataset"
+      ],
+      "semantic_tag": "Research Contributions Cluster",
+      "summary": "",
+      "community_name": "Research Contributions Cluster"
+    },
+    "3": {
+      "nodes": [
+        "method:一致性正则化",
+        "task:为了提高多语言语音理解（slu）中的意图检测和槽填充任务的性能，我们希望通过一致性正则化基于混合数据增强策略来改进这些任务。",
+        "metric:exact match accuracy ema",
+        "metric:intent accuracy",
+        "metric:slot micro f1",
+        "task:mmnlu-22",
+        "paper:hit-scir",
+        "dataset:massive"
+      ],
+      "key_entities": [
+        "一致性正则化",
+        "为了提高多语言语音理解（SLU）中的意图检测和槽填充任务的性能，我们希望通过一致性正则化基于混合数据增强策略来改进这些任务。",
+        "Exact Match Accuracy (EMA)",
+        "Intent Accuracy",
+        "Slot Micro F1",
+        "MMNLU-22",
+        "HIT-SCIR",
+        "MASSIVE"
+      ],
+      "key_papers": [
+        "HIT-SCIR"
+      ],
+      "dominant_types": [
+        "Metric",
+        "Task",
+        "Method"
+      ],
+      "semantic_tag": "Task & Application Cluster",
+      "summary": "",
+      "community_name": "Task & Application Cluster"
+    },
+    "4": {
+      "nodes": [
+        "paper:astro-ph 0312404v1",
+        "method:gammasphere阵列",
+        "task:了解22na的合成和消耗过程对于诊断经典新星爆发至关重要。",
+        "contribution:通过使用大型锗探测器阵列进行非传统方式研究，获得了详细的激发能级信息。",
+        "contribution:鉴别并确认了新的激发态，改进了已知状态的激发能精度。",
+        "contribution:解决了关于激发能级和自旋 宇称分类的模棱两可。",
+        "contribution:表明新方法可能适用于类似核反应速率确定。"
+      ],
+      "key_entities": [
+        "Reevaluation of the $^{22}$Na(p,$γ$) reaction rate: Implications for the detection of $^{22}$Na gamma rays from novae",
+        "Gammasphere阵列",
+        "了解22Na的合成和消耗过程对于诊断经典新星爆发至关重要。",
+        "通过使用大型锗探测器阵列进行非传统方式研究，获得了详细的激发能级信息。",
+        "鉴别并确认了新的激发态，改进了已知状态的激发能精度。",
+        "解决了关于激发能级和自旋/宇称分类的模棱两可。",
+        "表明新方法可能适用于类似核反应速率确定。"
+      ],
+      "key_papers": [
+        "Reevaluation of the $^{22}$Na(p,$γ$) reaction rate: Implications for the detection of $^{22}$Na gamma rays from novae"
+      ],
+      "dominant_types": [
+        "Contribution",
+        "Paper",
+        "Method"
+      ],
+      "semantic_tag": "Research Contributions Cluster",
+      "summary": "",
+      "community_name": "Research Contributions Cluster"
+    },
+    "5": {
+      "nodes": [
+        "paper:2206.08029v1",
+        "dataset:二元分类数据集：文本属于人类撰写还是机器生成",
+        "contribution:提出了一种基于注意力机制的集成方法，包括五种模型：sberbank-ai sbert large nlu ru sberbank-ai rubert-large ilyagusev mbart ru sum gazeta moritzlaurer mdeberta-v3-base-mnli-x",
+        "contribution:在二元分类任务中获得了第一名。",
+        "contribution:在多分类任务中获得了第四名。"
+      ],
+      "key_entities": [
+        "DIALOG-22 RuATD Generated Text Detection",
+        "二元分类数据集：文本属于人类撰写还是机器生成",
+        "提出了一种基于注意力机制的集成方法，包括五种模型：sberbank-ai/sbert_large_nlu_ru, sberbank-ai/ruBert-large, IlyaGusev/mbart_ru_sum_gazeta, MoritzLaurer/mDeBERTa-v3-base-mnli-x",
+        "在二元分类任务中获得了第一名。",
+        "在多分类任务中获得了第四名。"
+      ],
+      "key_papers": [
+        "DIALOG-22 RuATD Generated Text Detection"
+      ],
+      "dominant_types": [
+        "Contribution",
+        "Paper",
+        "Dataset"
+      ],
+      "semantic_tag": "Research Contributions Cluster",
+      "summary": "",
+      "community_name": "Research Contributions Cluster"
+    },
+    "6": {
+      "nodes": [
+        "method:ensembled models",
+        "task:尽管生成的文本与人类撰写的文章在风格上较为接近，但仍然需要区分两者，防止滥用生成文本模型。",
+        "dataset:训练集和测试集，部分数据由不同的生成模型自动注释",
+        "dataset:多分类数据集：文本属于14个类别之一",
+        "metric:accuracy",
+        "model:sberbank-ai sbert large nlu ru",
+        "model:sberbank-ai rubert-large",
+        "model:ilyagusev mbart ru sum gazeta",
+        "model:moritzlaurer mdeberta-v3-base-mnli-xnli",
+        "model:deeppavlov xlm-roberta-large-en-ru-mnli"
+      ],
+      "key_entities": [
+        "ensembled models",
+        "尽管生成的文本与人类撰写的文章在风格上较为接近，但仍然需要区分两者，防止滥用生成文本模型。",
+        "训练集和测试集，部分数据由不同的生成模型自动注释",
+        "多分类数据集：文本属于14个类别之一",
+        "Accuracy",
+        "sberbank-ai/sbert_large_nlu_ru",
+        "sberbank-ai/ruBert-large",
+        "IlyaGusev/mbart_ru_sum_gazeta",
+        "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+        "DeepPavlov/xlm-roberta-large-en-ru-mnli"
+      ],
+      "key_papers": [],
+      "dominant_types": [
+        "Model",
+        "Dataset",
+        "Method"
+      ],
+      "semantic_tag": "Benchmark & Dataset Cluster",
+      "summary": "",
+      "community_name": "Benchmark & Dataset Cluster"
+    },
+    "7": {
+      "nodes": [
+        "dataset:kaggle ruatd 2022数据集",
+        "task:dialog-22 ruatd"
+      ],
+      "key_entities": [
+        "Kaggle RuATD 2022数据集",
+        "DIALOG-22 RuATD"
+      ],
+      "key_papers": [],
+      "dominant_types": [
+        "Dataset",
+        "Task"
+      ],
+      "semantic_tag": "Benchmark & Dataset Cluster",
+      "summary": "",
+      "community_name": "Benchmark & Dataset Cluster"
+    },
+    "8": {
+      "nodes": [
+        "metric:neutron detection efficiency",
+        "concept:freon-22",
+        "concept:freon-12"
+      ],
+      "key_entities": [
+        "neutron detection efficiency",
+        "Freon-22",
+        "Freon-12"
+      ],
+      "key_papers": [],
+      "dominant_types": [
+        "Concept",
+        "Metric"
+      ],
+      "semantic_tag": "Evaluation Metrics Cluster",
+      "summary": "",
+      "community_name": "Evaluation Metrics Cluster"
+    },
+    "9": {
+      "nodes": [
+        "concept:graph-based twitter bot detection benchmark",
+        "model:twitter bot detection baselines",
+        "concept:twitter network"
+      ],
+      "key_entities": [
+        "graph-based Twitter bot detection benchmark",
+        "Twitter bot detection baselines",
+        "Twitter network"
+      ],
+      "key_papers": [],
+      "dominant_types": [
+        "Concept",
+        "Model"
+      ],
+      "semantic_tag": "Computer Vision Cluster",
+      "summary": "",
+      "community_name": "Computer Vision Cluster"
+    }
+  },
+  "citation_graph": {},
+  "stats": {
+    "node_count": 56,
+    "edge_count": 83,
+    "node_type_count": {
+      "Paper": 6,
+      "Task": 7,
+      "Contribution": 16,
+      "Method": 5,
+      "Dataset": 7,
+      "Metric": 5,
+      "Concept": 4,
+      "Model": 6
+    },
+    "paper_count": 5,
+    "community_count": 0,
+    "citation_edge_count": 0
+  }
+}

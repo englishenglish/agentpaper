@@ -40,10 +40,7 @@ async def intent_node(state: State) -> State:
     current_state = state["value"]
     current_state.current_step = ExecutionState.INTENT_RECOGNIZING
 
-    cfg = current_state.config or {}
-    # 多轮追问：由 orchestrator 置位，跳过意图与检索，直接进入 qa_node
-    if cfg.get("bypass_to_qa"):
-        return {"value": current_state}
+    # 【修改：删除了 bypass_to_qa 的拦截逻辑，强制每次都进行大模型意图识别】
 
     user_text = (current_state.current_question or current_state.user_request or "").strip()
     await state_queue.put(
@@ -65,13 +62,15 @@ async def intent_node(state: State) -> State:
 
     if current_state.config is None:
         current_state.config = {}
+
+    # 记录真正的意图
     current_state.config["intent_route"] = route
 
     await state_queue.put(
         BackToFrontData(
             step=ExecutionState.INTENT_RECOGNIZING,
             state="completed",
-            data="闲聊" if route == "chat" else "文献检索与学术问答",
+            data="闲聊模式" if route == "chat" else "文献检索与学术问答",
         )
     )
     return {"value": current_state}

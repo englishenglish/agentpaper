@@ -1,4 +1,4 @@
-from src.knowledge.knowledge.base import KBNotFoundError, KnowledgeBase
+from src.knowledge.base import KBNotFoundError, KnowledgeBase
 from src.utils.log_utils import setup_logger
 
 logger = setup_logger(__name__)

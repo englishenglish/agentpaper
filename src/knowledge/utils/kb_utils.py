@@ -32,7 +32,7 @@ def validate_file_path(file_path: str, db_id: str = None) -> str:
         normalized_path = os.path.abspath(os.path.realpath(file_path))
 
         # 获取允许的根目录
-        from src.knowledge.knowledge import knowledge_base
+        from src.knowledge import knowledge_base
 
         allowed_dirs = [
             os.path.abspath(os.path.realpath(config.get("SAVE_DIR"))),
