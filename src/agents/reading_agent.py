@@ -1,37 +1,38 @@
-import sys
 import os
 import re
 import json
 import ast
 import asyncio
-from typing import List, Optional, Dict, Any
-
-# 将项目根目录添加到Python路径
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "..")))
+from typing import Any, Dict, List, Optional
 
 from autogen_agentchat.agents import AssistantAgent
 from pydantic import BaseModel, Field, field_validator
 
 from src.utils.log_utils import setup_logger
 from src.core.prompts import reading_agent_prompt, kg_extraction_prompt
-from src.core.model_client import create_default_client, create_reading_model_client
+from src.core.model_client import create_reading_model_client
 from src.core.state_models import BackToFrontData, State, ExecutionState
-from src.services.graph_store import (
-    build_entity_graph_from_papers,
-    merge_kg_triples,
-    build_communities,
-    save_entity_graph,
-    load_entity_graph,
-)
-from src.core.config import config
+from src.core.embedding import get_shared_embedder
+from src.extraction.graph_builder import GraphBuilder, save_entity_graph, load_entity_graph
+from src.extraction.community_builder import CommunityBuilder
+from src.knowledge import knowledge_base
 
 logger = setup_logger(__name__)
 
+# 限制并发 LLM 调用数，避免触发 API 速率上限
+_LLM_SEMAPHORE = asyncio.Semaphore(5)
+
 
 class KeyMethodology(BaseModel):
-    name: Optional[str] = Field(default=None, description="方法名称（如"Transformer-based Sentiment Classifier"）")
+    name: Optional[str] = Field(
+        default=None,
+        description='方法名称（如 "Transformer-based Sentiment Classifier"）',
+    )
     principle: Optional[str] = Field(default=None, description="核心原理")
-    novelty: Optional[str] = Field(default=None, description="创新点（如"首次引入领域自适应预训练"）")
+    novelty: Optional[str] = Field(
+        default=None,
+        description='创新点（如「首次引入领域自适应预训练」）',
+    )
 
 
 class ExtractedPaperData(BaseModel):
@@ -82,14 +83,21 @@ class ReadingExtractedPapersData(BaseModel):
     papers: List[ExtractedPaperData] = Field(default=[], description="提取的论文数据列表")
 
 
-model_client = create_reading_model_client()
+_reading_model_client = None
+
+
+def _get_reading_model_client():
+    global _reading_model_client
+    if _reading_model_client is None:
+        _reading_model_client = create_reading_model_client()
+    return _reading_model_client
 
 
 def _make_read_agent() -> AssistantAgent:
     """每次调用创建新实例，避免多并发请求共享对话历史导致上下文污染"""
     return AssistantAgent(
         name="read_agent",
-        model_client=model_client,
+        model_client=_get_reading_model_client(),
         system_message=reading_agent_prompt,
         model_client_stream=True,
     )
@@ -120,7 +128,7 @@ async def _extract_kg_for_paper(paper: Dict[str, Any], extracted: Any) -> Dict[s
 
     kg_agent = AssistantAgent(
         name="kg_extraction_agent",
-        model_client=model_client,
+        model_client=_get_reading_model_client(),
         system_message=kg_extraction_prompt,
         model_client_stream=False,
     )
@@ -144,14 +152,22 @@ async def _extract_kg_for_paper(paper: Dict[str, Any], extracted: Any) -> Dict[s
     return {}
 
 
+_get_embedder = get_shared_embedder
+
+
 async def _enrich_graph_with_llm(
-    graph: Dict[str, Any],
+    builder: GraphBuilder,
     papers: List[Dict[str, Any]],
     extracted_papers: ReadingExtractedPapersData,
 ) -> None:
-    """并行调用 LLM 为每篇论文抽取三元组，合并进图谱"""
+    """并行调用 LLM 为每篇论文抽取三元组，通过 GraphBuilder.merge_triples 合并进图谱"""
+
+    async def _bounded_extract(paper, extracted):
+        async with _LLM_SEMAPHORE:
+            return await _extract_kg_for_paper(paper, extracted)
+
     tasks = [
-        _extract_kg_for_paper(
+        _bounded_extract(
             papers[i],
             extracted_papers.papers[i] if i < len(extracted_papers.papers) else None,
         )
@@ -163,7 +179,7 @@ async def _enrich_graph_with_llm(
         if isinstance(kg_output, Exception) or not isinstance(kg_output, dict):
             continue
         paper_id_raw = str(papers[i].get("paper_id") or papers[i].get("id") or f"paper_{i}")
-        merge_kg_triples(graph, kg_output, paper_id_raw=paper_id_raw)
+        builder.merge_triples(kg_output, paper_id_raw=paper_id_raw)
 
 
 async def _build_graph_for_papers(
@@ -173,34 +189,18 @@ async def _build_graph_for_papers(
 ) -> None:
     """为论文构建知识图谱并增量持久化到指定永久知识库的 db_id。"""
     try:
-        existing_graph = load_entity_graph(db_id)
-        if existing_graph:
-            new_graph = build_entity_graph_from_papers(papers, extracted_papers.papers, db_id)
-            for nid, node in new_graph["nodes"].items():
-                if nid not in existing_graph["nodes"]:
-                    existing_graph["nodes"][nid] = node
-            existing_edge_keys = {
-                (e["source"], e["target"], e["type"]) for e in existing_graph["edges"]
-            }
-            for edge in new_graph["edges"]:
-                key = (edge["source"], edge["target"], edge["type"])
-                if key not in existing_edge_keys:
-                    existing_graph["edges"].append(edge)
-                    existing_edge_keys.add(key)
-            for pid, ents in new_graph["paper_entities"].items():
-                existing_graph["paper_entities"].setdefault(pid, [])
-                for e in ents:
-                    if e not in existing_graph["paper_entities"][pid]:
-                        existing_graph["paper_entities"][pid].append(e)
-            existing_graph["entity_aliases"].update(new_graph["entity_aliases"])
-            graph_payload = existing_graph
-        else:
-            graph_payload = build_entity_graph_from_papers(papers, extracted_papers.papers, db_id)
+        embedder = _get_embedder()
+        existing_graph = load_entity_graph(db_id, embedder=embedder)
 
-        await _enrich_graph_with_llm(graph_payload, papers, extracted_papers)
-        build_communities(graph_payload)
-        save_entity_graph(db_id, graph_payload)
-        logger.info(f"知识图谱构建完成：{graph_payload['stats']}")
+        builder = GraphBuilder(embedder=embedder, graph_data=existing_graph)
+        builder.build_from_papers(papers, extracted_papers.papers, db_id)
+
+        await _enrich_graph_with_llm(builder, papers, extracted_papers)
+
+        CommunityBuilder(builder.graph).build_communities()
+
+        save_entity_graph(db_id, builder.graph)
+        logger.info(f"知识图谱构建完成：{builder.graph.get('stats', {})}")
     except Exception as e:
         logger.warning(f"实体图谱构建失败（不影响主流程）: {e}")
 
@@ -225,8 +225,11 @@ async def reading_node(state: State) -> State:
         )
         return {"value": current_state}
 
-    # 每篇论文创建独立的 Agent 实例并行执行，避免共享对话历史导致上下文污染
-    results = await asyncio.gather(*[_make_read_agent().run(task=str(paper)) for paper in papers])
+    async def _run_one(paper: dict) -> Any:
+        async with _LLM_SEMAPHORE:
+            return await _make_read_agent().run(task=str(paper))
+
+    results = await asyncio.gather(*[_run_one(p) for p in papers])
 
     extracted_papers = ReadingExtractedPapersData()
     successful_papers = []
@@ -278,17 +281,26 @@ async def reading_node(state: State) -> State:
         except Exception as e:
             logger.error(f"Validation failed for data: {data}. Error: {e}")
 
-    # 向活跃的永久知识库构建知识图谱
-    active_db_ids: List[str] = list(config.get("current_db_ids", default=[]) or [])
-    if not active_db_ids:
-        single = config.get("current_db_id", default=None)
-        if single:
-            active_db_ids = [single]
+    # 从会话级 state.config 获取选中的知识库（避免读全局 config 导致并发串库）
+    cfg = getattr(current_state, "config", None) or {}
+    sel = cfg.get("selected_db_ids") or []
+    active_db_ids: List[str] = [sel[0]] if isinstance(sel, list) and sel else []
 
     if active_db_ids and successful_papers:
         await _build_graph_for_papers(successful_papers, extracted_papers, active_db_ids[0])
     else:
         logger.info("未选择永久知识库或无成功解析的论文，跳过知识图谱构建。")
+
+    # 向量索引：将 PDF 写入本会话知识库，供后续 RAG 检索
+    if active_db_ids and successful_papers:
+        db_id = active_db_ids[0]
+        for paper in successful_papers:
+            path = paper.get("pdf_local_path")
+            if path and os.path.isfile(path):
+                try:
+                    await knowledge_base.add_content(db_id, [path], params={"content_type": "file"})
+                except Exception as e:
+                    logger.warning(f"PDF 入库失败 {path}: {e}")
 
     current_state.extracted_data = extracted_papers
     await state_queue.put(BackToFrontData(

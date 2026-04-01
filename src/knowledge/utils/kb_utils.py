@@ -4,8 +4,6 @@ import time
 from pathlib import Path
 import json
 
-from langchain_text_splitters import MarkdownTextSplitter
-
 from src.core.config import config
 from src.utils import hashstr
 from src.utils.datetime_utils import utc_isoformat
@@ -69,42 +67,6 @@ def validate_file_path(file_path: str, db_id: str = None) -> str:
         raise ValueError(f"Invalid file path: {file_path}")
 
 
-def split_text_into_chunks(text: str, file_id: str, filename: str, params: dict = {}) -> list[dict]:
-    """
-    将文本分割成块，使用 LangChain 的 MarkdownTextSplitter 进行智能分割
-    """
-    chunks = []
-    chunk_size = params.get("chunk_size", 1000)
-    chunk_overlap = params.get("chunk_overlap", 200)
-
-    # 使用 MarkdownTextSplitter 进行智能分割
-    # MarkdownTextSplitter 会尝试沿着 Markdown 格式的标题进行分割
-    text_splitter = MarkdownTextSplitter(
-        chunk_size=chunk_size,
-        chunk_overlap=chunk_overlap,
-    )
-
-    text_chunks = text_splitter.split_text(text)
-
-    # 转换为标准格式
-    for chunk_index, chunk_content in enumerate(text_chunks):
-        if chunk_content.strip():  # 跳过空块
-            chunks.append(
-                {
-                    "id": f"{file_id}_chunk_{chunk_index}",
-                    "content": chunk_content.strip(),
-                    "file_id": file_id,
-                    "filename": filename,
-                    "chunk_index": chunk_index,
-                    "source": filename,
-                    "chunk_id": f"{file_id}_chunk_{chunk_index}",
-                }
-            )
-
-    logger.debug(f"Successfully split text into {len(chunks)} chunks using MarkdownTextSplitter")
-    return chunks
-
-
 def calculate_content_hash(data: bytes | bytearray | str | os.PathLike[str] | Path) -> str:
     """
     计算文件内容的 SHA-256 哈希值。
@@ -166,39 +128,6 @@ def prepare_item_metadata(item: str, content_type: str, db_id: str) -> dict:
     }
 
 
-def split_text_into_qa_chunks(
-    text: str, file_id: str, filename: str, qa_separator: None | str = None, params: dict = {}
-) -> list[dict]:
-    """
-    将文本按QA对分割成块，使用 LangChain 的 CharacterTextSplitter 进行分割"""
-    qa_separator = qa_separator or "\n\n"
-    text_chunks = text.split(qa_separator)
-
-    # 转换为标准格式
-    chunks = []
-    for chunk_index, chunk_content in enumerate(text_chunks):
-        if chunk_content.strip():  # 跳过空块
-            chunk_content = chunk_content.strip()[:4096]
-            chunks.append(
-                {
-                    "id": f"{file_id}_qa_chunk_{chunk_index}",
-                    "content": chunk_content.strip(),
-                    "file_id": file_id,
-                    "filename": filename,
-                    "chunk_index": chunk_index,
-                    "source": filename,
-                    "chunk_id": f"{file_id}_qa_chunk_{chunk_index}",
-                    "chunk_type": "qa",  # 标识为QA类型的chunk
-                }
-            )
-
-    logger.debug(f"QA chunks: {chunks[0]}")
-    logger.debug(
-        f"Successfully split QA text into {len(chunks)} chunks using CharacterTextSplitter with `{qa_separator=}`"
-    )
-    return chunks
-
-
 def get_embedding_config(embed_info: dict) -> dict:
     """
     获取嵌入模型配置
@@ -253,7 +182,7 @@ def validate_img_embedding_file(file_path: str) -> bool:
     try:
         with open(file_path, 'r', encoding='utf-8') as f:
             json_content = json.load(f)
-    except json.JSONDecodeError as e:
+    except json.JSONDecodeError:
         return False
         
         # 校验JSON结构是否符合hubei_museum_artifacts.json格式

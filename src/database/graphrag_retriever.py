@@ -22,96 +22,22 @@ graphrag_retriever.py — GraphRAG 五分量检索重排器
 """
 from __future__ import annotations
 
-import re
 from collections import defaultdict
 from typing import Any
 
 from src.core.config import config
 from src.core.embedding import VectorEmbedder, embedding_cosine_similarity
+from src.extraction.graph_schema import (
+    RELATION_LABELS as _RELATION_LABELS,
+    tokenize as _tokenize,
+    normalize_text as _normalize_text,
+    entity_id as _entity_id,
+    expand_abbreviation as _expand_abbreviation,
+    type_boost as _type_boost,
+)
 from src.utils.log_utils import setup_logger
 
 logger = setup_logger(__name__)
-
-# 关系语义化标签
-_RELATION_LABELS: dict[str, str] = {
-    "proposes":        "proposes",
-    "improves":        "improves upon",
-    "uses":            "uses",
-    "evaluates_on":    "evaluated on",
-    "compared_with":   "compared with",
-    "achieves":        "achieves",
-    "applied_to":      "applied to",
-    "related_to":      "related to",
-    "has_experiment":  "has experiment",
-    "uses_dataset":    "uses dataset",
-    "measures":        "measures",
-    "produces":        "produces result",
-    "has_contribution":"contributes",
-    "solves":          "solves",
-    "cites":           "cites",
-    "extends":         "extends",
-}
-
-_TYPE_BOOST: dict[str, float] = {
-    "Method":       1.25,
-    "Model":        1.20,
-    "Experiment":   1.15,
-    "Result":       1.15,
-    "Dataset":      1.10,
-    "Metric":       1.10,
-    "Contribution": 1.10,
-    "Task":         1.05,
-    "Concept":      1.00,
-    "Paper":        0.90,
-}
-
-_ABBREVIATION_MAP: dict[str, str] = {
-    "bert":        "bidirectional encoder representations from transformers",
-    "gpt":         "generative pre-trained transformer",
-    "gpt-4":       "generative pre-trained transformer 4",
-    "t5":          "text-to-text transfer transformer",
-    "llm":         "large language model",
-    "llms":        "large language models",
-    "nlp":         "natural language processing",
-    "rag":         "retrieval augmented generation",
-    "graphrag":    "graph retrieval augmented generation",
-    "kg":          "knowledge graph",
-    "qa":          "question answering",
-    "bleu":        "bilingual evaluation understudy",
-    "rouge":       "recall oriented understudy for gisting evaluation",
-    "f1":          "f1 score",
-    "sota":        "state of the art",
-    "zero-shot":   "zero-shot learning",
-    "few-shot":    "few-shot learning",
-}
-
-
-# ============================================================
-# 工具函数
-# ============================================================
-
-def _tokenize(text: str) -> list[str]:
-    if not text:
-        return []
-    return re.findall(r"[A-Za-z0-9_]+|[\u4e00-\u9fff]{2,}", text.lower())
-
-
-def _normalize_text(text: str) -> str:
-    text = re.sub(r"[\(\)\[\]\{\}\|/\\,;:\"'`~!@#$%^&*_+=<>?]+", " ", text)
-    text = re.sub(r"\s+", " ", text).strip()
-    return text.lower()
-
-
-def _entity_id(entity_type: str, text: str) -> str:
-    return f"{entity_type.lower()}:{_normalize_text(text)}"
-
-
-def _expand_abbreviation(text: str) -> str:
-    return _ABBREVIATION_MAP.get(text.lower(), text)
-
-
-def _type_boost(node_type: str) -> float:
-    return _TYPE_BOOST.get(node_type, 1.0)
 
 
 # ============================================================
@@ -534,6 +460,102 @@ class GraphRAGRetriever:
         return "\n".join(lines) if path_count > 0 else ""
 
     # ------------------------------------------------------------------
+    # 局部子图上下文（供 LLM 直接引用）
+    # ------------------------------------------------------------------
+
+    def get_local_subgraph_context(
+        self,
+        query_text: str,
+        max_hops: int = 2,
+        max_triples: int = 40,
+    ) -> str:
+        """
+        提取与查询最相关实体的局部子图，转换为结构化可读知识块。
+
+        输出示例::
+
+            [Local Knowledge Subgraph]
+
+              [Method: Transformer]
+                Description: A model architecture using self-attention...
+                → proposes              : Attention Mechanism (Concept)
+                → evaluated on          : WMT14 (Dataset)
+                → achieves              : BLEU 28.4 (Result)
+
+        Args:
+            query_text:   查询文本。
+            max_hops:     从种子节点出发 BFS 扩展的最大跳数。
+            max_triples:  子图中保留的最大边数。
+
+        Returns:
+            格式化的子图文本，若无相关实体则返回空字符串。
+        """
+        seed_scores = self._extract_query_entity_seeds(query_text)
+        if not seed_scores:
+            return ""
+
+        graph = self.graph
+        nodes = graph.get("nodes", {})
+        edges = graph.get("edges", [])
+
+        top_seeds = sorted(seed_scores.items(), key=lambda x: x[1], reverse=True)[:5]
+        seed_ids  = {nid for nid, _ in top_seeds}
+
+        visited  = set(seed_ids)
+        frontier = set(seed_ids)
+        for _ in range(max_hops):
+            next_frontier: set[str] = set()
+            for edge in edges:
+                s, t = edge["source"], edge["target"]
+                if s in frontier and t not in visited:
+                    next_frontier.add(t)
+                elif t in frontier and s not in visited:
+                    next_frontier.add(s)
+            visited |= next_frontier
+            frontier = next_frontier
+            if not frontier:
+                break
+
+        subgraph_edges = [
+            e for e in edges
+            if e["source"] in visited and e["target"] in visited
+        ][:max_triples]
+
+        if not subgraph_edges:
+            return ""
+
+        out_edges: dict[str, list[tuple[str, str, str]]] = defaultdict(list)
+        for e in subgraph_edges:
+            src_id    = e["source"]
+            dst_label = nodes.get(e["target"], {}).get("label", e["target"])
+            rel_label = _RELATION_LABELS.get(e["type"], e["type"])
+            dst_type  = nodes.get(e["target"], {}).get("type", "")
+            out_edges[src_id].append((rel_label, dst_label, dst_type))
+
+        lines = ["[Local Knowledge Subgraph]"]
+        rendered_nodes: set[str] = set()
+        ordered_nodes = list(seed_ids) + [n for n in visited if n not in seed_ids]
+
+        for node_id in ordered_nodes:
+            if node_id not in out_edges or node_id in rendered_nodes:
+                continue
+            rendered_nodes.add(node_id)
+
+            node_info  = nodes.get(node_id, {})
+            node_label = node_info.get("label", node_id)
+            node_type  = node_info.get("type", "Unknown")
+            desc       = node_info.get("description", "")
+
+            lines.append(f"\n  [{node_type}: {node_label}]")
+            if desc:
+                lines.append(f"    Description: {desc[:120]}")
+            for rel_label, dst_label, dst_type in out_edges[node_id][:8]:
+                type_hint = f" ({dst_type})" if dst_type else ""
+                lines.append(f"    → {rel_label:<20}: {dst_label}{type_hint}")
+
+        return "\n".join(lines)
+
+    # ------------------------------------------------------------------
     # 私有辅助：查询实体种子提取
     # ------------------------------------------------------------------
 
@@ -585,3 +607,24 @@ class GraphRAGRetriever:
                 )
 
         return seeds
+
+    def get_paper_relevance_scores(self, query_text: str) -> dict[str, float]:
+        """
+        根据查询在图谱中的实体种子，为每篇论文（paper_entities 键）计算相关性分数 [0,1]。
+        用于纯 RAG 路径下将图谱参与检索排序决策（与向量分融合）。
+        """
+        seed_scores = self._extract_query_entity_seeds(query_text)
+        if not seed_scores:
+            return {}
+
+        paper_entities = self.graph.get("paper_entities", {})
+        paper_scores: dict[str, float] = {}
+
+        for paper_id_raw, ent_ids in paper_entities.items():
+            best = 0.0
+            for eid in ent_ids:
+                best = max(best, float(seed_scores.get(eid, 0.0)))
+            if best > 0:
+                paper_scores[str(paper_id_raw)] = min(1.0, best)
+
+        return paper_scores

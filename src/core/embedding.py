@@ -145,12 +145,27 @@ class VectorEmbedder:
         return [0.0] * dim
 
 
+# ------------------------------------------------------------------
+# 进程级单例：避免多处 _get_embedder() 重复加载模型到内存
+# ------------------------------------------------------------------
+_shared_embedder: VectorEmbedder | None = None
+
+
+def get_shared_embedder() -> VectorEmbedder:
+    """获取进程唯一的 VectorEmbedder 实例（线程安全的懒加载）。"""
+    global _shared_embedder
+    if _shared_embedder is None:
+        _shared_embedder = VectorEmbedder()
+    return _shared_embedder
+
+
 def embedding_cosine_similarity(a: list[float], b: list[float]) -> float:
     """
-    余弦相似度计算（向量已归一化时等价于点积）。
-    返回值映射到 [0, 1]。
+    余弦相似度（向量已 L2 归一化时等价于点积）。
+
+    返回值 clamp 到 [0, 1]：负相似度视为 0（无关），正值保持线性刻度。
     """
     if not a or not b or len(a) != len(b):
         return 0.0
     dot = sum(x * y for x, y in zip(a, b))
-    return max(0.0, min(1.0, (dot + 1.0) / 2.0))
+    return max(0.0, min(1.0, dot))

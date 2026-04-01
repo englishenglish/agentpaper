@@ -1,14 +1,10 @@
-from autogen_agentchat.agents import AssistantAgent
-from autogen_agentchat.messages import TextMessage
-from autogen_core import CancellationToken
-from src.agents.userproxy_agent import WebUserProxyAgent, userProxyAgent
-from pydantic import BaseModel, Field
-from typing import Optional, List
-import re
-import ast
 import asyncio
 import os
-from openai import RateLimitError
+
+from autogen_agentchat.agents import AssistantAgent
+from pydantic import BaseModel, Field
+from typing import Optional, List
+
 from src.utils.log_utils import setup_logger
 from src.services.paper_search import PaperSearcher
 from src.core.state_models import State, ExecutionState
@@ -20,10 +16,16 @@ from src.core.model_client import create_search_model_client
 
 logger = setup_logger(__name__)
 
-model_client = create_search_model_client()
+_search_model_client = None
 
 
-# 创建一个查询条件类，包括查询内容、主题、时间范围等信息，用于存储用户的查询需求
+def _get_search_model_client():
+    global _search_model_client
+    if _search_model_client is None:
+        _search_model_client = create_search_model_client()
+    return _search_model_client
+
+
 class SearchQuery(BaseModel):
     """查询条件类，存储用户查询需求"""
     querys: Optional[List[str]] = Field(default=None, description="查询条件列表")
@@ -35,7 +37,7 @@ def _make_search_agent() -> AssistantAgent:
     """每次调用创建新实例，避免多并发请求共享对话历史导致上下文污染"""
     return AssistantAgent(
         name="search_agent",
-        model_client=model_client,
+        model_client=_get_search_model_client(),
         system_message=search_agent_prompt,
         output_content_type=SearchQuery,
     )

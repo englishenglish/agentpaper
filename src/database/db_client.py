@@ -107,7 +107,7 @@ class Neo4jGraphClient:
     def __enter__(self) -> "Neo4jGraphClient":
         return self
 
-    def __exit__(self, *args: Any) -> None:
+    def __exit__(self, *_exc: Any) -> None:
         self.close()
 
     # ------------------------------------------------------------------

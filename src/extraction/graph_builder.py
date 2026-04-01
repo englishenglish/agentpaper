@@ -14,133 +14,28 @@ graph_builder.py — 面向对象的知识图谱构建器
 """
 from __future__ import annotations
 
+import copy
+import json
+import os
 import re
-from collections import defaultdict
 from typing import Any
 
+from src.core.config import config
 from src.core.embedding import VectorEmbedder
+from src.extraction.graph_schema import (
+    VALID_ENTITY_TYPES,
+    VALID_RELATION_TYPES,
+    tokenize,
+    normalize_text,
+    entity_id,
+    relation_weight,
+    expand_abbreviation,
+    strip_model_variant,
+    jaccard_sim,
+)
 from src.utils.log_utils import setup_logger
 
 logger = setup_logger(__name__)
-
-# ============================================================
-# Schema 常量（与 graph_store.py 保持一致）
-# ============================================================
-
-VALID_ENTITY_TYPES = {
-    "Paper", "Method", "Model", "Task", "Dataset",
-    "Metric", "Experiment", "Result", "Contribution", "Concept",
-}
-
-VALID_RELATION_TYPES = {
-    "proposes", "improves", "uses", "evaluates_on",
-    "compared_with", "achieves", "applied_to", "related_to",
-    "has_experiment", "uses_dataset", "measures", "produces",
-    "has_contribution", "solves", "cites", "extends",
-}
-
-_RELATION_WEIGHT: dict[str, float] = {
-    "proposes":        1.0,
-    "has_contribution":1.0,
-    "solves":          0.95,
-    "improves":        0.95,
-    "evaluates_on":    0.9,
-    "produces":        0.9,
-    "measures":        0.88,
-    "has_experiment":  0.85,
-    "achieves":        0.85,
-    "uses_dataset":    0.82,
-    "uses":            0.8,
-    "applied_to":      0.8,
-    "cites":           0.75,
-    "extends":         0.75,
-    "compared_with":   0.7,
-    "related_to":      0.5,
-}
-
-_TYPE_BOOST: dict[str, float] = {
-    "Method":       1.25,
-    "Model":        1.20,
-    "Experiment":   1.15,
-    "Result":       1.15,
-    "Dataset":      1.10,
-    "Metric":       1.10,
-    "Contribution": 1.10,
-    "Task":         1.05,
-    "Concept":      1.00,
-    "Paper":        0.90,
-}
-
-_ABBREVIATION_MAP: dict[str, str] = {
-    "bert":        "bidirectional encoder representations from transformers",
-    "gpt":         "generative pre-trained transformer",
-    "gpt-2":       "generative pre-trained transformer 2",
-    "gpt-3":       "generative pre-trained transformer 3",
-    "gpt-4":       "generative pre-trained transformer 4",
-    "gpt4":        "generative pre-trained transformer 4",
-    "t5":          "text-to-text transfer transformer",
-    "llm":         "large language model",
-    "llms":        "large language models",
-    "nlp":         "natural language processing",
-    "cv":          "computer vision",
-    "rl":          "reinforcement learning",
-    "dl":          "deep learning",
-    "ml":          "machine learning",
-    "gan":         "generative adversarial network",
-    "cnn":         "convolutional neural network",
-    "rnn":         "recurrent neural network",
-    "lstm":        "long short-term memory",
-    "transformer": "transformer",
-    "attention":   "attention mechanism",
-    "rag":         "retrieval augmented generation",
-    "graphrag":    "graph retrieval augmented generation",
-    "kg":          "knowledge graph",
-    "kgs":         "knowledge graphs",
-    "qa":          "question answering",
-    "mt":          "machine translation",
-    "nmt":         "neural machine translation",
-    "bleu":        "bilingual evaluation understudy",
-    "rouge":       "recall oriented understudy for gisting evaluation",
-    "f1":          "f1 score",
-    "acc":         "accuracy",
-    "sota":        "state of the art",
-    "finetune":    "fine-tuning",
-    "fine-tune":   "fine-tuning",
-    "pretraining": "pre-training",
-    "pre-training":"pre-training",
-    "zero-shot":   "zero-shot learning",
-    "few-shot":    "few-shot learning",
-}
-
-_MODEL_VARIANT_PATTERN = re.compile(
-    r"[-_](base|large|small|medium|xl|xxl|uncased|cased|"
-    r"v\d+[\.\d]*|\d+[bm]|instruct|chat|hf|en|zh|multilingual)$",
-    re.IGNORECASE,
-)
-
-
-# ============================================================
-# 纯工具函数（无状态，可独立使用）
-# ============================================================
-
-def tokenize(text: str) -> list[str]:
-    if not text:
-        return []
-    return re.findall(r"[A-Za-z0-9_]+|[\u4e00-\u9fff]{2,}", text.lower())
-
-
-def normalize_text(text: str) -> str:
-    text = re.sub(r"[\(\)\[\]\{\}\|/\\,;:\"'`~!@#$%^&*_+=<>?]+", " ", text)
-    text = re.sub(r"\s+", " ", text).strip()
-    return text.lower()
-
-
-def entity_id(entity_type: str, text: str) -> str:
-    return f"{entity_type.lower()}:{normalize_text(text)}"
-
-
-def relation_weight(rel: str) -> float:
-    return _RELATION_WEIGHT.get(rel, 0.5)
 
 
 def safe_list(value: Any) -> list[str]:
@@ -155,21 +50,6 @@ def safe_list(value: Any) -> list[str]:
             else ([value.strip()] if value.strip() else [])
         )
     return []
-
-
-def strip_model_variant(name: str) -> str:
-    stripped = _MODEL_VARIANT_PATTERN.sub("", name.strip())
-    return stripped if stripped else name
-
-
-def expand_abbreviation(text: str) -> str:
-    return _ABBREVIATION_MAP.get(text.lower(), text)
-
-
-def jaccard_sim(a: set[str], b: set[str]) -> float:
-    if not a or not b:
-        return 0.0
-    return len(a & b) / len(a | b)
 
 
 def empty_graph(db_id: str) -> dict[str, Any]:
@@ -244,21 +124,26 @@ class GraphBuilder:
         db_id: str | None = None,
     ) -> dict[str, Any]:
         """
-        从 reading_agent 结构化输出构建初始知识图谱。
+        从 reading_agent 结构化输出**增量**构建知识图谱。
+
+        已有节点和边不会被清除——新论文的实体会通过三阶段实体链接
+        合并到现有图谱中。
 
         Args:
             papers:           原始论文列表（含 paper_id / title / citations）。
             extracted_papers: reading_agent 提取的结构化数据（Pydantic 模型或 dict）。
-            db_id:            图谱 ID；若提供则重置当前图谱为新空图。
+            db_id:            图谱 ID；仅用于标记 graph["db_id"]，不会重置图谱。
 
         Returns:
             构建完成的图谱字典（in-place，同时存储于 self.graph）。
         """
         if db_id is not None:
-            self.graph = empty_graph(db_id)
+            self.graph["db_id"] = db_id
 
         graph = self.graph
-        edge_seen: set[tuple[str, str, str]] = set()
+        edge_seen: set[tuple[str, str, str]] = {
+            (e["source"], e["target"], e["type"]) for e in graph.get("edges", [])
+        }
 
         def add_node(node_id: str, node_type: str, label: str) -> None:
             if node_id not in graph["nodes"]:
@@ -569,3 +454,99 @@ class GraphBuilder:
                         "type":   "cites",
                         "weight": relation_weight("cites"),
                     })
+
+
+# ============================================================
+# 图谱持久化工具函数
+# ============================================================
+
+def _graph_dir() -> str:
+    root = os.path.join(config.get("SAVE_DIR", "data"), "knowledge_graphs")
+    os.makedirs(root, exist_ok=True)
+    return root
+
+
+# ------------------------------------------------------------------
+# 图谱内存缓存（按 db_id + 文件 mtime 键控）
+# ------------------------------------------------------------------
+_graph_cache: dict[str, tuple[float, dict[str, Any]]] = {}
+_GRAPH_CACHE_MAX = 20
+
+
+def _evict_graph_cache() -> None:
+    """淘汰最旧的缓存条目直至不超过上限。"""
+    while len(_graph_cache) > _GRAPH_CACHE_MAX:
+        oldest_key = min(_graph_cache, key=lambda k: _graph_cache[k][0])
+        _graph_cache.pop(oldest_key, None)
+
+
+def invalidate_graph_cache(db_id: str) -> None:
+    """保存图谱后主动失效对应缓存条目。"""
+    _graph_cache.pop(db_id, None)
+
+
+def save_entity_graph(db_id: str, graph: dict[str, Any]) -> str:
+    """将图谱写入 JSON 文件，保存前剥除节点 embedding 以减少磁盘占用。"""
+    g = copy.deepcopy(graph)
+    for node in g.get("nodes", {}).values():
+        node.pop("embedding", None)
+    path = os.path.join(_graph_dir(), f"{db_id}.json")
+    with open(path, "w", encoding="utf-8") as f:
+        json.dump(g, f, ensure_ascii=False, indent=2)
+
+    invalidate_graph_cache(db_id)
+
+    logger.info(
+        f"图谱已保存：{path}（{graph.get('stats', {}).get('node_count', 0)} 节点，"
+        f"{graph.get('stats', {}).get('edge_count', 0)} 边）"
+    )
+    return path
+
+
+def load_entity_graph(
+    db_id: str,
+    embedder: VectorEmbedder | None = None,
+) -> dict[str, Any] | None:
+    """
+    从磁盘加载图谱（带内存缓存）。
+
+    同一 db_id 在文件未变更时直接返回缓存的深拷贝（写时复制安全）。
+    embedder 仅在首次加载或缓存失效时用于重建节点语义向量。
+    """
+    path = os.path.join(_graph_dir(), f"{db_id}.json")
+    if not os.path.exists(path):
+        return None
+
+    try:
+        file_mtime = os.path.getmtime(path)
+    except OSError:
+        return None
+
+    cached = _graph_cache.get(db_id)
+    if cached is not None and cached[0] >= file_mtime:
+        return copy.deepcopy(cached[1])
+
+    try:
+        with open(path, encoding="utf-8") as f:
+            graph = json.load(f)
+        if embedder is not None:
+            for node in graph.get("nodes", {}).values():
+                if "embedding" not in node:
+                    node["embedding"] = embedder.get_embedding(
+                        f"{node.get('type', 'Concept')}: {node.get('label', '')}"
+                    )
+
+        _graph_cache[db_id] = (file_mtime, copy.deepcopy(graph))
+        _evict_graph_cache()
+
+        return graph
+    except Exception as e:
+        logger.warning(f"加载图谱失败 {db_id}: {e}")
+        return None
+
+
+def graph_summary(graph: dict[str, Any]) -> dict[str, Any]:
+    """返回图谱统计信息（node_count / edge_count / paper_count / node_type_count）。"""
+    if not graph:
+        return {"node_count": 0, "edge_count": 0, "paper_count": 0, "node_type_count": {}}
+    return graph.get("stats", {})

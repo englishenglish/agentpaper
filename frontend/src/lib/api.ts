@@ -102,7 +102,7 @@ export const chatApi = {
     query: string,
     options: {
       enable_web_search?: boolean;
-      selected_db_ids?: string[];
+      selected_db_id?: string | null;
       retrieval_mode?: string;
     } = {}
   ): EventSource => {
@@ -111,8 +111,8 @@ export const chatApi = {
       enable_web_search: String(options.enable_web_search ?? true),
       retrieval_mode: options.retrieval_mode ?? 'rag',
     });
-    if (options.selected_db_ids?.length) {
-      options.selected_db_ids.forEach((id) => params.append('selected_db_ids', id));
+    if (options.selected_db_id) {
+      params.set('selected_db_id', options.selected_db_id);
     }
     return new EventSource(`${BASE_URL}/api/research/init?${params}`);
   },
@@ -122,7 +122,7 @@ export const chatApi = {
     session_id: string,
     options: {
       enable_web_search?: boolean;
-      selected_db_ids?: string[];
+      selected_db_id?: string | null;
       retrieval_mode?: string;
     } = {}
   ): EventSource => {
@@ -132,8 +132,8 @@ export const chatApi = {
       enable_web_search: String(options.enable_web_search ?? false),
       retrieval_mode: options.retrieval_mode ?? 'rag',
     });
-    if (options.selected_db_ids?.length) {
-      options.selected_db_ids.forEach((id) => params.append('selected_db_ids', id));
+    if (options.selected_db_id) {
+      params.set('selected_db_id', options.selected_db_id);
     }
     return new EventSource(`${BASE_URL}/api/research/chat?${params}`);
   },

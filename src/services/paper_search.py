@@ -1,7 +1,5 @@
 import arxiv
 import asyncio
-import logging
-import shutil
 from typing import List, Dict, Optional, Union, Tuple
 from datetime import datetime, timedelta
 import time
@@ -140,10 +138,10 @@ class PaperSearcher:
         paper: Dict,
         dirpath: str,
     ) -> Tuple[Optional[str], str]:
-        """下载论文 PDF 并用 PyMuPDF 提取正文文本。
+        """下载论文 PDF 并提取正文。
 
-        返回 (本地PDF路径, 提取的全文)。
-        失败时返回 (None, "")，由调用方决定是否降级使用摘要。
+        顺序：OCRPlugin.process_file_mineru_api → process_file_mineru_token → PyMuPDF 文本层。
+        返回 (本地PDF路径, 提取的全文)。下载失败时返回 (None, "")。
         """
         paper_id = paper.get("paper_id", "")
         title = str(paper.get("title", paper_id))
@@ -153,9 +151,9 @@ class PaperSearcher:
         os.makedirs(dirpath, exist_ok=True)
         pdf_path = os.path.join(dirpath, filename)
 
-        # 如果已下载，跳过
         if not os.path.exists(pdf_path):
             try:
+
                 def _do_download():
                     search = arxiv.Search(id_list=[paper_id])
                     result = next(search.results())
@@ -167,36 +165,67 @@ class PaperSearcher:
                 logger.warning(f"PDF 下载失败 [{paper_id}]: {e}")
                 return None, ""
 
-        # 提取全文：优先 OCRPlugin（支持扫描版 PDF），空结果或异常时降级到 PyMuPDF 文本层
+        if not os.path.exists(pdf_path):
+            return None, ""
+
         full_text = ""
 
-        # --- 主路径：OCRPlugin ---
         try:
-            from src.parsers._ocr import OCRPlugin
+            from src.parsers.ocr import OCRPlugin
 
-            def _extract_ocr():
-                ocr = OCRPlugin()
-                return ocr.process_pdf(pdf_path)
+            # --- 1) MinerU Agent 轻量解析 API ---
+            try:
 
-            ocr_text = await asyncio.to_thread(_extract_ocr)
-            full_text = (ocr_text or "").strip()
-            if full_text:
-                logger.info(f"OCR 文本提取成功 [{paper_id}]: {len(full_text)} 字符")
-            else:
-                logger.warning(f"OCR 返回空文本（模型未配置或 PDF 无可识别内容）[{paper_id}]，降级到 PyMuPDF")
+                def _extract_mineru_api():
+                    return OCRPlugin().process_file_mineru_api(pdf_path)
+
+                ocr_text = await asyncio.to_thread(_extract_mineru_api)
+                full_text = (ocr_text or "").strip()
+                if full_text:
+                    logger.info(
+                        f"MinerU Agent API 提取成功 [{paper_id}]: {len(full_text)} 字符"
+                    )
+            except Exception as e:
+                logger.warning(
+                    f"MinerU Agent API 失败 [{paper_id}]: {e}，尝试 MinerU Token API"
+                )
+
+            # --- 2) MinerU V4 Token API ---
+            if not full_text:
+                try:
+
+                    def _extract_mineru_token():
+                        return OCRPlugin().process_file_mineru_token(pdf_path)
+
+                    ocr_text = await asyncio.to_thread(_extract_mineru_token)
+                    full_text = (ocr_text or "").strip()
+                    if full_text:
+                        logger.info(
+                            f"MinerU Token API 提取成功 [{paper_id}]: {len(full_text)} 字符"
+                        )
+                    else:
+                        logger.warning(
+                            f"MinerU Token 返回空文本 [{paper_id}]，尝试 PyMuPDF"
+                        )
+                except Exception as e:
+                    logger.warning(
+                        f"MinerU Token 提取异常 [{paper_id}]: {e}，尝试 PyMuPDF"
+                    )
+
         except Exception as e:
-            logger.warning(f"OCR 提取异常 [{paper_id}]: {e}，降级到 PyMuPDF")
+            logger.warning(f"OCR 模块不可用或初始化失败 [{paper_id}]: {e}")
 
-        # --- 降级路径：PyMuPDF 直接读文本层（数字版 PDF 效果好）---
+        # --- 3) PyMuPDF 文本层（数字版 PDF 效果好）---
         if not full_text:
             try:
                 import fitz
 
                 def _extract_fitz():
                     doc = fitz.open(pdf_path)
-                    text = "\n".join(page.get_text() for page in doc)
-                    doc.close()
-                    return text
+                    try:
+                        return "\n".join(page.get_text() for page in doc)
+                    finally:
+                        doc.close()
 
                 full_text = (await asyncio.to_thread(_extract_fitz)).strip()
                 if full_text:
@@ -205,6 +234,9 @@ class PaperSearcher:
                     logger.warning(f"PyMuPDF 也未提取到文本 [{paper_id}]，将使用摘要")
             except Exception as e2:
                 logger.warning(f"PyMuPDF 提取失败 [{paper_id}]: {e2}")
+
+        if not full_text:
+            logger.warning(f"未提取到 PDF 正文 [{paper_id}]，调用方可使用摘要等降级方案")
 
         return pdf_path, full_text
 
@@ -356,7 +388,7 @@ class PaperSearcher:
                         try:
                             parsed_date = datetime.strptime(date, fmt)
                             return parsed_date.strftime("%Y%m%d0000")
-                        except:
+                        except ValueError:
                             continue
                     else:
                         parsed_date = datetime.strptime(date, fmt)
@@ -369,7 +401,7 @@ class PaperSearcher:
                 from dateutil import parser
                 parsed_date = parser.parse(date)
                 return parsed_date.strftime("%Y%m%d0000")
-            except:
+            except Exception:
                 # 最终fallback：当前日期
                 return datetime.now().strftime("%Y%m%d0000")
         

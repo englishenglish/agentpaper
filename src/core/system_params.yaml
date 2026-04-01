@@ -6,7 +6,7 @@
 # 路径配置
 # ------------------------------------------------------------
 SAVE_DIR: "data"          # 数据根目录（图谱、知识库等持久化文件）
-MODEL_DIR: "models"       # OCR 本地模型目录（parsers/_ocr.py 使用）
+MODEL_DIR: "models"       # OCR 本地模型目录（parsers/ocr.py 使用）
 
 # ------------------------------------------------------------
 # 知识库配置
@@ -14,9 +14,29 @@ MODEL_DIR: "models"       # OCR 本地模型目录（parsers/_ocr.py 使用）
 KB_TYPE: "chroma"                   # 知识库后端类型
 enable_reranker: false              # 是否启用重排序（BGEReranker，需额外依赖）
 
+# 入库切块：相邻句 Embedding 余弦相似度（见 embedding_sentence_chunk）
+embedding_chunk_adjacent_threshold: 0.42   # 相邻句余弦低于此则新块（与入库 embedding 同空间）
+embedding_chunk_max_chars: 4000
+embedding_chunk_embed_batch_size: 64
+
 # 检索参数
-top_k: 5                            # 主知识库默认召回数量
+retrieval_recall_top_k: 20          # 向量库首次召回条数（重排前）
+top_k: 5                            # 重排后送入 LLM 的条数（每知识库）
 similarity_threshold: 0.05          # 主知识库相似度阈值
+
+# ------------------------------------------------------------
+# 问答 / RAG 上下文长度（避免超过 LLM max_seq_len，如 32k tokens）
+# 中文为主时约 1.5～2 字符/token，总输入含 system prompt，宜保守
+# ------------------------------------------------------------
+qa:
+  # 与模型 max_seq_len（如 32768）对齐：总输入含 system prompt，此处仅限制「任务里的上下文」
+  max_combined_context_chars: 22000   # RAG+图谱+历史 合计上限（字符）
+  max_rag_context_chars: 15000        # 检索片段总长度上限
+  max_graph_context_chars: 6000       # GraphRAG 图谱文本上限
+  max_history_chars: 2000             # 历史对话块上限
+  max_chunk_chars: 5000               # 单条检索片段写入 prompt 前截断
+  max_history_messages: 4             # 带入问答的历史轮数（user/assistant 各算一条）
+  max_history_message_chars: 1500     # 历史中每条消息最大字符
 
 # ------------------------------------------------------------
 # GraphRAG 参数
@@ -24,6 +44,8 @@ similarity_threshold: 0.05          # 主知识库相似度阈值
 graphrag:
   seed_alpha: 0.55                  # 图传播阻尼系数（个性化 PageRank）
                                     # 值越大越偏向种子节点，越小越倾向全图传播
+  # 纯向量 RAG 模式下：将「查询与图谱中论文实体」的相关性融合进 chunk 排序（0=忽略图谱，1=只看图谱论文分）
+  rag_graph_fusion_weight: 0.35
 
 # 社区摘要生成所使用的模型名称（graph_store.py / community_builder.py）
 # 此处填写 model 字段的字面值（如 Qwen/Qwen2.5-7B-Instruct）

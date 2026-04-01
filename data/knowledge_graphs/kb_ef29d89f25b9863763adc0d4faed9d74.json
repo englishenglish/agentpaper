@@ -1,0 +1,1189 @@
+{
+  "db_id": "kb_ef29d89f25b9863763adc0d4faed9d74",
+  "nodes": {
+    "paper:2206.04564v6": {
+      "id": "paper:2206.04564v6",
+      "type": "Paper",
+      "label": "TwiBot-22: Towards Graph-Based Twitter Bot Detection",
+      "norm_label": "twibot-22 towards graph-based twitter bot detection"
+    },
+    "task:尽管现有的twitter bot检测方法在检测新型twitter bot方面表现出色，但它们依赖的twitter bot检测数据集极少是基于图的，且这些数据集存在规模小、图结构不完整以及标注质量低等问": {
+      "id": "task:尽管现有的twitter bot检测方法在检测新型twitter bot方面表现出色，但它们依赖的twitter bot检测数据集极少是基于图的，且这些数据集存在规模小、图结构不完整以及标注质量低等问",
+      "type": "Task",
+      "label": "尽管现有的Twitter bot检测方法在检测新型Twitter bot方面表现出色，但它们依赖的Twitter bot检测数据集极少是基于图的，且这些数据集存在规模小、图结构不完整以及标注质量低等问",
+      "norm_label": "尽管现有的twitter bot检测方法在检测新型twitter bot方面表现出色，但它们依赖的twitter bot检测数据集极少是基于图的，且这些数据集存在规模小、图结构不完整以及标注质量低等问"
+    },
+    "dataset:twibot-22": {
+      "id": "dataset:twibot-22",
+      "type": "Dataset",
+      "label": "TwiBot-22",
+      "norm_label": "twibot-22"
+    },
+    "contribution:构建了twibot-22，这是有史以来最大的基于图的twitter bot检测数据集，提供了推特网络上的多样化实体和关系，并且相比现有数据集具有更好的标注质量。": {
+      "id": "contribution:构建了twibot-22，这是有史以来最大的基于图的twitter bot检测数据集，提供了推特网络上的多样化实体和关系，并且相比现有数据集具有更好的标注质量。",
+      "type": "Contribution",
+      "label": "构建了TwiBot-22，这是有史以来最大的基于图的Twitter bot检测数据集，提供了推特网络上的多样化实体和关系，并且相比现有数据集具有更好的标注质量。",
+      "norm_label": "构建了twibot-22，这是有史以来最大的基于图的twitter bot检测数据集，提供了推特网络上的多样化实体和关系，并且相比现有数据集具有更好的标注质量。"
+    },
+    "contribution:重新实现并评估了35个代表性twitter bot检测基线，涵盖了twibot-22在内的9个数据集，促进了一个公平比较模型性能和整体理解研究进展的基准。": {
+      "id": "contribution:重新实现并评估了35个代表性twitter bot检测基线，涵盖了twibot-22在内的9个数据集，促进了一个公平比较模型性能和整体理解研究进展的基准。",
+      "type": "Contribution",
+      "label": "重新实现并评估了35个代表性Twitter bot检测基线，涵盖了TwiBot-22在内的9个数据集，促进了一个公平比较模型性能和整体理解研究进展的基准。",
+      "norm_label": "重新实现并评估了35个代表性twitter bot检测基线，涵盖了twibot-22在内的9个数据集，促进了一个公平比较模型性能和整体理解研究进展的基准。"
+    },
+    "contribution:整合了所有实现的代码和数据集，形成了twibot-22评估框架，方便进一步的研究人员进行模型和数据集的评估。": {
+      "id": "contribution:整合了所有实现的代码和数据集，形成了twibot-22评估框架，方便进一步的研究人员进行模型和数据集的评估。",
+      "type": "Contribution",
+      "label": "整合了所有实现的代码和数据集，形成了TwiBot-22评估框架，方便进一步的研究人员进行模型和数据集的评估。",
+      "norm_label": "整合了所有实现的代码和数据集，形成了twibot-22评估框架，方便进一步的研究人员进行模型和数据集的评估。"
+    },
+    "paper:1908.08066v1": {
+      "id": "paper:1908.08066v1",
+      "type": "Paper",
+      "label": "Consistency of the Infrared Variability of Sgr A* over 22 years",
+      "norm_label": "consistency of the infrared variability of sgr a over 22 years"
+    },
+    "method:speckle holography analysis techniques": {
+      "id": "method:speckle holography analysis techniques",
+      "type": "Method",
+      "label": "speckle holography analysis techniques",
+      "norm_label": "speckle holography analysis techniques"
+    },
+    "task:尽管之前的数据表明sgr a 在近红外波长下可探测，但缺乏一个能够覆盖长时间尺度（超过10年）的研究，因此需要新的红外测量去填补空白并研究其变化模式。": {
+      "id": "task:尽管之前的数据表明sgr a 在近红外波长下可探测，但缺乏一个能够覆盖长时间尺度（超过10年）的研究，因此需要新的红外测量去填补空白并研究其变化模式。",
+      "type": "Task",
+      "label": "尽管之前的数据表明Sgr A*在近红外波长下可探测，但缺乏一个能够覆盖长时间尺度（超过10年）的研究，因此需要新的红外测量去填补空白并研究其变化模式。",
+      "norm_label": "尽管之前的数据表明sgr a 在近红外波长下可探测，但缺乏一个能够覆盖长时间尺度（超过10年）的研究，因此需要新的红外测量去填补空白并研究其变化模式。"
+    },
+    "dataset:speckle imaging data 1995 - 2005": {
+      "id": "dataset:speckle imaging data 1995 - 2005",
+      "type": "Dataset",
+      "label": "speckle imaging data (1995 - 2005)",
+      "norm_label": "speckle imaging data 1995 - 2005"
+    },
+    "dataset:speckle data 2006 - 2016": {
+      "id": "dataset:speckle data 2006 - 2016",
+      "type": "Dataset",
+      "label": "speckle data (2006 - 2016)",
+      "norm_label": "speckle data 2006 - 2016"
+    },
+    "contribution:改进了speckle holography分析技术，将sgr a 的可见性范围扩展至7年。": {
+      "id": "contribution:改进了speckle holography分析技术，将sgr a 的可见性范围扩展至7年。",
+      "type": "Contribution",
+      "label": "改进了speckle holography分析技术，将Sgr A*的可见性范围扩展至7年。",
+      "norm_label": "改进了speckle holography分析技术，将sgr a 的可见性范围扩展至7年。"
+    },
+    "contribution:长时间尺度（22年）研究了sgr a 的亮度和变异性。": {
+      "id": "contribution:长时间尺度（22年）研究了sgr a 的亮度和变异性。",
+      "type": "Contribution",
+      "label": "长时间尺度（22年）研究了Sgr A*的亮度和变异性。",
+      "norm_label": "长时间尺度（22年）研究了sgr a 的亮度和变异性。"
+    },
+    "contribution:发现sgr a 的功率谱密度在10年尺度内是平坦的，表明其在时间上是不相关的。": {
+      "id": "contribution:发现sgr a 的功率谱密度在10年尺度内是平坦的，表明其在时间上是不相关的。",
+      "type": "Contribution",
+      "label": "发现Sgr A*的功率谱密度在10年尺度内是平坦的，表明其在时间上是不相关的。",
+      "norm_label": "发现sgr a 的功率谱密度在10年尺度内是平坦的，表明其在时间上是不相关的。"
+    },
+    "paper:2206.08029v1": {
+      "id": "paper:2206.08029v1",
+      "type": "Paper",
+      "label": "DIALOG-22 RuATD Generated Text Detection",
+      "norm_label": "dialog-22 ruatd generated text detection"
+    },
+    "method:ensemble method": {
+      "id": "method:ensemble method",
+      "type": "Method",
+      "label": "ensemble method",
+      "norm_label": "ensemble method"
+    },
+    "task:尽管文本生成模型（tgms）能在生成符合人类语言风格的文本方面取得显著成绩，但能区分tgm生成文本与人类撰写文本的检测器在此过程中至关重要，为了构建这些检测器，我们描述了两个dialog-22 rua": {
+      "id": "task:尽管文本生成模型（tgms）能在生成符合人类语言风格的文本方面取得显著成绩，但能区分tgm生成文本与人类撰写文本的检测器在此过程中至关重要，为了构建这些检测器，我们描述了两个dialog-22 rua",
+      "type": "Task",
+      "label": "尽管文本生成模型（TGMs）能在生成符合人类语言风格的文本方面取得显著成绩，但能区分TGM生成文本与人类撰写文本的检测器在此过程中至关重要，为了构建这些检测器，我们描述了两个DIALOG-22 RuA",
+      "norm_label": "尽管文本生成模型（tgms）能在生成符合人类语言风格的文本方面取得显著成绩，但能区分tgm生成文本与人类撰写文本的检测器在此过程中至关重要，为了构建这些检测器，我们描述了两个dialog-22 rua"
+    },
+    "dataset:null": {
+      "id": "dataset:null",
+      "type": "Dataset",
+      "label": "null",
+      "norm_label": "null"
+    },
+    "metric:accuracy": {
+      "id": "metric:accuracy",
+      "type": "Metric",
+      "label": "Accuracy",
+      "norm_label": "accuracy"
+    },
+    "contribution:提出了基于注意力机制的不同预训练模型的集成方法。": {
+      "id": "contribution:提出了基于注意力机制的不同预训练模型的集成方法。",
+      "type": "Contribution",
+      "label": "提出了基于注意力机制的不同预训练模型的集成方法。",
+      "norm_label": "提出了基于注意力机制的不同预训练模型的集成方法。"
+    },
+    "contribution:在二分类任务上获得了0.82995的最高精度。": {
+      "id": "contribution:在二分类任务上获得了0.82995的最高精度。",
+      "type": "Contribution",
+      "label": "在二分类任务上获得了0.82995的最高精度。",
+      "norm_label": "在二分类任务上获得了0.82995的最高精度。"
+    },
+    "contribution:在多分类任务上获得了0.62856的准确性": {
+      "id": "contribution:在多分类任务上获得了0.62856的准确性",
+      "type": "Contribution",
+      "label": "在多分类任务上获得了0.62856的准确性",
+      "norm_label": "在多分类任务上获得了0.62856的准确性"
+    },
+    "paper:astro-ph 9709281v1": {
+      "id": "paper:astro-ph 9709281v1",
+      "type": "Paper",
+      "label": "The simultaneous detection of 22- and 321-GHz H2O maser emission towards the symbiotic Mira R Aquarii",
+      "norm_label": "the simultaneous detection of 22- and 321-ghz h2o maser emission towards the symbiotic mira r aquarii"
+    },
+    "task:尽管已有关于r aqr的22-ghz h2o maser数据，但首次检测到321-ghz h2o maser向量，为了研究这两种类型的maser的性质差异。": {
+      "id": "task:尽管已有关于r aqr的22-ghz h2o maser数据，但首次检测到321-ghz h2o maser向量，为了研究这两种类型的maser的性质差异。",
+      "type": "Task",
+      "label": "尽管已有关于R Aqr的22-GHz H2O maser数据，但首次检测到321-GHz H2O maser向量，为了研究这两种类型的maser的性质差异。",
+      "norm_label": "尽管已有关于r aqr的22-ghz h2o maser数据，但首次检测到321-ghz h2o maser向量，为了研究这两种类型的maser的性质差异。"
+    },
+    "contribution:第一次检测到r aqr的321-ghz h2o maser": {
+      "id": "contribution:第一次检测到r aqr的321-ghz h2o maser",
+      "type": "Contribution",
+      "label": "第一次检测到R Aqr的321-GHz H2O maser",
+      "norm_label": "第一次检测到r aqr的321-ghz h2o maser"
+    },
+    "contribution:提供了22-ghz和321-ghz h2o maser的区别分析": {
+      "id": "contribution:提供了22-ghz和321-ghz h2o maser的区别分析",
+      "type": "Contribution",
+      "label": "提供了22-GHz和321-GHz H2O maser的区别分析",
+      "norm_label": "提供了22-ghz和321-ghz h2o maser的区别分析"
+    },
+    "contribution:提出了可能的物理机制解释观测数据": {
+      "id": "contribution:提出了可能的物理机制解释观测数据",
+      "type": "Contribution",
+      "label": "提出了可能的物理机制解释观测数据",
+      "norm_label": "提出了可能的物理机制解释观测数据"
+    },
+    "paper:2304.00636v1": {
+      "id": "paper:2304.00636v1",
+      "type": "Paper",
+      "label": "Classifying COVID-19 Related Tweets for Fake News Detection and Sentiment Analysis with BERT-based Models",
+      "norm_label": "classifying covid-19 related tweets for fake news detection and sentiment analysis with bert-based models"
+    },
+    "method:bert-based models": {
+      "id": "method:bert-based models",
+      "type": "Method",
+      "label": "BERT-based Models",
+      "norm_label": "bert-based models"
+    },
+    "task:为了分类与covid-19相关的推特进行假新闻检测和情感分析": {
+      "id": "task:为了分类与covid-19相关的推特进行假新闻检测和情感分析",
+      "type": "Task",
+      "label": "为了分类与COVID-19相关的推特进行假新闻检测和情感分析",
+      "norm_label": "为了分类与covid-19相关的推特进行假新闻检测和情感分析"
+    },
+    "dataset:task1.c": {
+      "id": "dataset:task1.c",
+      "type": "Dataset",
+      "label": "task1.c",
+      "norm_label": "task1.c"
+    },
+    "contribution:使用了最先进的预训练语言模型bert": {
+      "id": "contribution:使用了最先进的预训练语言模型bert",
+      "type": "Contribution",
+      "label": "使用了最先进的预训练语言模型BERT",
+      "norm_label": "使用了最先进的预训练语言模型bert"
+    },
+    "contribution:达到了较高的准确率": {
+      "id": "contribution:达到了较高的准确率",
+      "type": "Contribution",
+      "label": "达到了较高的准确率",
+      "norm_label": "达到了较高的准确率"
+    },
+    "concept:twitter network": {
+      "id": "concept:twitter network",
+      "type": "Concept",
+      "label": "Twitter network",
+      "norm_label": "twitter network",
+      "description": ""
+    },
+    "concept:graph-based twitter bot detection benchmark": {
+      "id": "concept:graph-based twitter bot detection benchmark",
+      "type": "Concept",
+      "label": "Graph-based Twitter bot detection benchmark",
+      "norm_label": "graph-based twitter bot detection benchmark",
+      "description": ""
+    },
+    "model:35 representative twitter bot detection baselines": {
+      "id": "model:35 representative twitter bot detection baselines",
+      "type": "Model",
+      "label": "35 representative Twitter bot detection baselines",
+      "norm_label": "35 representative twitter bot detection baselines",
+      "description": ""
+    },
+    "concept:fair comparison framework": {
+      "id": "concept:fair comparison framework",
+      "type": "Concept",
+      "label": "fair comparison framework",
+      "norm_label": "fair comparison framework",
+      "description": ""
+    },
+    "concept:evaluation framework": {
+      "id": "concept:evaluation framework",
+      "type": "Concept",
+      "label": "evaluation framework",
+      "norm_label": "evaluation framework",
+      "description": ""
+    },
+    "paper:sgr a": {
+      "id": "paper:sgr a",
+      "type": "Paper",
+      "label": "Sgr A*",
+      "norm_label": "sgr a",
+      "description": ""
+    },
+    "concept:22 years": {
+      "id": "concept:22 years",
+      "type": "Concept",
+      "label": "22 years",
+      "norm_label": "22 years",
+      "description": ""
+    },
+    "concept:brightness and variability of sgr a": {
+      "id": "concept:brightness and variability of sgr a",
+      "type": "Concept",
+      "label": "brightness and variability of Sgr A*",
+      "norm_label": "brightness and variability of sgr a",
+      "description": ""
+    },
+    "task:22 years study": {
+      "id": "task:22 years study",
+      "type": "Task",
+      "label": "22 years study",
+      "norm_label": "22 years study",
+      "description": ""
+    },
+    "concept:attention mechanism": {
+      "id": "concept:attention mechanism",
+      "type": "Concept",
+      "label": "attention mechanism",
+      "norm_label": "attention mechanism",
+      "description": ""
+    },
+    "task:dialog-22 ruatd": {
+      "id": "task:dialog-22 ruatd",
+      "type": "Task",
+      "label": "DIALOG-22 RuATD",
+      "norm_label": "dialog-22 ruatd",
+      "description": ""
+    },
+    "task:tgm-based generated text detection": {
+      "id": "task:tgm-based generated text detection",
+      "type": "Task",
+      "label": "TGM-based generated text detection",
+      "norm_label": "tgm-based generated text detection",
+      "description": ""
+    },
+    "dataset:private test set": {
+      "id": "dataset:private test set",
+      "type": "Dataset",
+      "label": "private test set",
+      "norm_label": "private test set",
+      "description": ""
+    },
+    "concept:r aqr": {
+      "id": "concept:r aqr",
+      "type": "Concept",
+      "label": "R Aqr",
+      "norm_label": "r aqr",
+      "description": ""
+    },
+    "method:321-ghz h2o maser": {
+      "id": "method:321-ghz h2o maser",
+      "type": "Method",
+      "label": "321-GHz H2O maser",
+      "norm_label": "321-ghz h2o maser",
+      "description": ""
+    },
+    "method:22-ghz h2o maser": {
+      "id": "method:22-ghz h2o maser",
+      "type": "Method",
+      "label": "22-GHz H2O maser",
+      "norm_label": "22-ghz h2o maser",
+      "description": ""
+    },
+    "concept:symbiotic mira": {
+      "id": "concept:symbiotic mira",
+      "type": "Concept",
+      "label": "symbiotic Mira",
+      "norm_label": "symbiotic mira",
+      "description": ""
+    },
+    "concept:dusty molecular gas": {
+      "id": "concept:dusty molecular gas",
+      "type": "Concept",
+      "label": "dusty, molecular gas",
+      "norm_label": "dusty molecular gas",
+      "description": ""
+    },
+    "concept:uv radiation": {
+      "id": "concept:uv radiation",
+      "type": "Concept",
+      "label": "UV radiation",
+      "norm_label": "uv radiation",
+      "description": ""
+    },
+    "concept:fast wind from the companion": {
+      "id": "concept:fast wind from the companion",
+      "type": "Concept",
+      "label": "fast wind from the companion",
+      "norm_label": "fast wind from the companion",
+      "description": ""
+    },
+    "concept:mira s envelope": {
+      "id": "concept:mira s envelope",
+      "type": "Concept",
+      "label": "Mira's envelope",
+      "norm_label": "mira s envelope",
+      "description": ""
+    },
+    "concept:neutral material": {
+      "id": "concept:neutral material",
+      "type": "Concept",
+      "label": "neutral material",
+      "norm_label": "neutral material",
+      "description": ""
+    },
+    "concept:ionized nebula": {
+      "id": "concept:ionized nebula",
+      "type": "Concept",
+      "label": "ionized nebula",
+      "norm_label": "ionized nebula",
+      "description": ""
+    }
+  },
+  "edges": [
+    {
+      "source": "paper:2206.04564v6",
+      "target": "task:尽管现有的twitter bot检测方法在检测新型twitter bot方面表现出色，但它们依赖的twitter bot检测数据集极少是基于图的，且这些数据集存在规模小、图结构不完整以及标注质量低等问",
+      "type": "applied_to",
+      "weight": 0.8
+    },
+    {
+      "source": "paper:2206.04564v6",
+      "target": "dataset:twibot-22",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "paper:2206.04564v6",
+      "target": "contribution:构建了twibot-22，这是有史以来最大的基于图的twitter bot检测数据集，提供了推特网络上的多样化实体和关系，并且相比现有数据集具有更好的标注质量。",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "paper:2206.04564v6",
+      "target": "contribution:重新实现并评估了35个代表性twitter bot检测基线，涵盖了twibot-22在内的9个数据集，促进了一个公平比较模型性能和整体理解研究进展的基准。",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "paper:2206.04564v6",
+      "target": "contribution:整合了所有实现的代码和数据集，形成了twibot-22评估框架，方便进一步的研究人员进行模型和数据集的评估。",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "paper:1908.08066v1",
+      "target": "method:speckle holography analysis techniques",
+      "type": "proposes",
+      "weight": 1.0
+    },
+    {
+      "source": "paper:1908.08066v1",
+      "target": "task:尽管之前的数据表明sgr a 在近红外波长下可探测，但缺乏一个能够覆盖长时间尺度（超过10年）的研究，因此需要新的红外测量去填补空白并研究其变化模式。",
+      "type": "applied_to",
+      "weight": 0.8
+    },
+    {
+      "source": "method:speckle holography analysis techniques",
+      "target": "task:尽管之前的数据表明sgr a 在近红外波长下可探测，但缺乏一个能够覆盖长时间尺度（超过10年）的研究，因此需要新的红外测量去填补空白并研究其变化模式。",
+      "type": "solves",
+      "weight": 0.95
+    },
+    {
+      "source": "paper:1908.08066v1",
+      "target": "dataset:speckle imaging data 1995 - 2005",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "method:speckle holography analysis techniques",
+      "target": "dataset:speckle imaging data 1995 - 2005",
+      "type": "evaluates_on",
+      "weight": 0.9
+    },
+    {
+      "source": "paper:1908.08066v1",
+      "target": "dataset:speckle data 2006 - 2016",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "method:speckle holography analysis techniques",
+      "target": "dataset:speckle data 2006 - 2016",
+      "type": "evaluates_on",
+      "weight": 0.9
+    },
+    {
+      "source": "paper:1908.08066v1",
+      "target": "contribution:改进了speckle holography分析技术，将sgr a 的可见性范围扩展至7年。",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "method:speckle holography analysis techniques",
+      "target": "contribution:改进了speckle holography分析技术，将sgr a 的可见性范围扩展至7年。",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:1908.08066v1",
+      "target": "contribution:长时间尺度（22年）研究了sgr a 的亮度和变异性。",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "method:speckle holography analysis techniques",
+      "target": "contribution:长时间尺度（22年）研究了sgr a 的亮度和变异性。",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:1908.08066v1",
+      "target": "contribution:发现sgr a 的功率谱密度在10年尺度内是平坦的，表明其在时间上是不相关的。",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "method:speckle holography analysis techniques",
+      "target": "contribution:发现sgr a 的功率谱密度在10年尺度内是平坦的，表明其在时间上是不相关的。",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:2206.08029v1",
+      "target": "method:ensemble method",
+      "type": "proposes",
+      "weight": 1.0
+    },
+    {
+      "source": "paper:2206.08029v1",
+      "target": "task:尽管文本生成模型（tgms）能在生成符合人类语言风格的文本方面取得显著成绩，但能区分tgm生成文本与人类撰写文本的检测器在此过程中至关重要，为了构建这些检测器，我们描述了两个dialog-22 rua",
+      "type": "applied_to",
+      "weight": 0.8
+    },
+    {
+      "source": "method:ensemble method",
+      "target": "task:尽管文本生成模型（tgms）能在生成符合人类语言风格的文本方面取得显著成绩，但能区分tgm生成文本与人类撰写文本的检测器在此过程中至关重要，为了构建这些检测器，我们描述了两个dialog-22 rua",
+      "type": "solves",
+      "weight": 0.95
+    },
+    {
+      "source": "paper:2206.08029v1",
+      "target": "dataset:null",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "method:ensemble method",
+      "target": "dataset:null",
+      "type": "evaluates_on",
+      "weight": 0.9
+    },
+    {
+      "source": "method:ensemble method",
+      "target": "metric:accuracy",
+      "type": "achieves",
+      "weight": 0.85
+    },
+    {
+      "source": "paper:2206.08029v1",
+      "target": "contribution:提出了基于注意力机制的不同预训练模型的集成方法。",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "method:ensemble method",
+      "target": "contribution:提出了基于注意力机制的不同预训练模型的集成方法。",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:2206.08029v1",
+      "target": "contribution:在二分类任务上获得了0.82995的最高精度。",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "method:ensemble method",
+      "target": "contribution:在二分类任务上获得了0.82995的最高精度。",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:2206.08029v1",
+      "target": "contribution:在多分类任务上获得了0.62856的准确性",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "method:ensemble method",
+      "target": "contribution:在多分类任务上获得了0.62856的准确性",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:astro-ph 9709281v1",
+      "target": "task:尽管已有关于r aqr的22-ghz h2o maser数据，但首次检测到321-ghz h2o maser向量，为了研究这两种类型的maser的性质差异。",
+      "type": "applied_to",
+      "weight": 0.8
+    },
+    {
+      "source": "paper:astro-ph 9709281v1",
+      "target": "contribution:第一次检测到r aqr的321-ghz h2o maser",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "paper:astro-ph 9709281v1",
+      "target": "contribution:提供了22-ghz和321-ghz h2o maser的区别分析",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "paper:astro-ph 9709281v1",
+      "target": "contribution:提出了可能的物理机制解释观测数据",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "paper:2304.00636v1",
+      "target": "method:bert-based models",
+      "type": "proposes",
+      "weight": 1.0
+    },
+    {
+      "source": "paper:2304.00636v1",
+      "target": "task:为了分类与covid-19相关的推特进行假新闻检测和情感分析",
+      "type": "applied_to",
+      "weight": 0.8
+    },
+    {
+      "source": "method:bert-based models",
+      "target": "task:为了分类与covid-19相关的推特进行假新闻检测和情感分析",
+      "type": "solves",
+      "weight": 0.95
+    },
+    {
+      "source": "paper:2304.00636v1",
+      "target": "dataset:task1.c",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "method:bert-based models",
+      "target": "dataset:task1.c",
+      "type": "evaluates_on",
+      "weight": 0.9
+    },
+    {
+      "source": "method:bert-based models",
+      "target": "metric:accuracy",
+      "type": "achieves",
+      "weight": 0.85
+    },
+    {
+      "source": "paper:2304.00636v1",
+      "target": "contribution:使用了最先进的预训练语言模型bert",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "method:bert-based models",
+      "target": "contribution:使用了最先进的预训练语言模型bert",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:2304.00636v1",
+      "target": "contribution:达到了较高的准确率",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "method:bert-based models",
+      "target": "contribution:达到了较高的准确率",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "dataset:twibot-22",
+      "target": "concept:twitter network",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "dataset:twibot-22",
+      "target": "concept:graph-based twitter bot detection benchmark",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "concept:graph-based twitter bot detection benchmark",
+      "target": "concept:twitter network",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "model:35 representative twitter bot detection baselines",
+      "target": "dataset:twibot-22",
+      "type": "evaluates_on",
+      "weight": 0.9
+    },
+    {
+      "source": "concept:fair comparison framework",
+      "target": "model:35 representative twitter bot detection baselines",
+      "type": "applied_to",
+      "weight": 0.8
+    },
+    {
+      "source": "concept:evaluation framework",
+      "target": "dataset:twibot-22",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "method:speckle holography analysis techniques",
+      "target": "paper:sgr a",
+      "type": "improves",
+      "weight": 0.95
+    },
+    {
+      "source": "method:speckle holography analysis techniques",
+      "target": "paper:sgr a",
+      "type": "evaluates_on",
+      "weight": 0.9
+    },
+    {
+      "source": "paper:sgr a",
+      "target": "dataset:speckle imaging data 1995 - 2005",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "paper:sgr a",
+      "target": "dataset:speckle data 2006 - 2016",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "paper:sgr a",
+      "target": "concept:22 years",
+      "type": "achieves",
+      "weight": 0.85
+    },
+    {
+      "source": "paper:sgr a",
+      "target": "concept:brightness and variability of sgr a",
+      "type": "achieves",
+      "weight": 0.85
+    },
+    {
+      "source": "method:ensemble method",
+      "target": "concept:attention mechanism",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "method:ensemble method",
+      "target": "task:dialog-22 ruatd",
+      "type": "applied_to",
+      "weight": 0.8
+    },
+    {
+      "source": "method:ensemble method",
+      "target": "task:tgm-based generated text detection",
+      "type": "applied_to",
+      "weight": 0.8
+    },
+    {
+      "source": "method:ensemble method",
+      "target": "dataset:private test set",
+      "type": "evaluates_on",
+      "weight": 0.9
+    },
+    {
+      "source": "method:321-ghz h2o maser",
+      "target": "concept:r aqr",
+      "type": "evaluates_on",
+      "weight": 0.9
+    },
+    {
+      "source": "method:22-ghz h2o maser",
+      "target": "concept:r aqr",
+      "type": "evaluates_on",
+      "weight": 0.9
+    },
+    {
+      "source": "method:321-ghz h2o maser",
+      "target": "concept:symbiotic mira",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "method:22-ghz h2o maser",
+      "target": "concept:symbiotic mira",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "method:321-ghz h2o maser",
+      "target": "concept:dusty molecular gas",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "method:321-ghz h2o maser",
+      "target": "concept:uv radiation",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "method:321-ghz h2o maser",
+      "target": "concept:fast wind from the companion",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "method:321-ghz h2o maser",
+      "target": "concept:mira s envelope",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "method:321-ghz h2o maser",
+      "target": "concept:neutral material",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "method:321-ghz h2o maser",
+      "target": "concept:ionized nebula",
+      "type": "uses",
+      "weight": 0.8
+    }
+  ],
+  "paper_entities": {
+    "2206.04564v6": [
+      "paper:2206.04564v6",
+      "task:尽管现有的twitter bot检测方法在检测新型twitter bot方面表现出色，但它们依赖的twitter bot检测数据集极少是基于图的，且这些数据集存在规模小、图结构不完整以及标注质量低等问",
+      "dataset:twibot-22",
+      "contribution:构建了twibot-22，这是有史以来最大的基于图的twitter bot检测数据集，提供了推特网络上的多样化实体和关系，并且相比现有数据集具有更好的标注质量。",
+      "contribution:重新实现并评估了35个代表性twitter bot检测基线，涵盖了twibot-22在内的9个数据集，促进了一个公平比较模型性能和整体理解研究进展的基准。",
+      "contribution:整合了所有实现的代码和数据集，形成了twibot-22评估框架，方便进一步的研究人员进行模型和数据集的评估。",
+      "concept:twitter network",
+      "concept:graph-based twitter bot detection benchmark",
+      "model:35 representative twitter bot detection baselines",
+      "concept:fair comparison framework",
+      "concept:evaluation framework"
+    ],
+    "1908.08066v1": [
+      "paper:1908.08066v1",
+      "method:speckle holography analysis techniques",
+      "task:尽管之前的数据表明sgr a 在近红外波长下可探测，但缺乏一个能够覆盖长时间尺度（超过10年）的研究，因此需要新的红外测量去填补空白并研究其变化模式。",
+      "dataset:speckle imaging data 1995 - 2005",
+      "dataset:speckle data 2006 - 2016",
+      "contribution:改进了speckle holography分析技术，将sgr a 的可见性范围扩展至7年。",
+      "contribution:长时间尺度（22年）研究了sgr a 的亮度和变异性。",
+      "contribution:发现sgr a 的功率谱密度在10年尺度内是平坦的，表明其在时间上是不相关的。",
+      "paper:sgr a",
+      "concept:22 years",
+      "concept:brightness and variability of sgr a",
+      "task:22 years study"
+    ],
+    "2206.08029v1": [
+      "paper:2206.08029v1",
+      "method:ensemble method",
+      "task:尽管文本生成模型（tgms）能在生成符合人类语言风格的文本方面取得显著成绩，但能区分tgm生成文本与人类撰写文本的检测器在此过程中至关重要，为了构建这些检测器，我们描述了两个dialog-22 rua",
+      "dataset:null",
+      "metric:accuracy",
+      "contribution:提出了基于注意力机制的不同预训练模型的集成方法。",
+      "contribution:在二分类任务上获得了0.82995的最高精度。",
+      "contribution:在多分类任务上获得了0.62856的准确性",
+      "concept:attention mechanism",
+      "task:dialog-22 ruatd",
+      "task:tgm-based generated text detection",
+      "dataset:private test set"
+    ],
+    "astro-ph/9709281v1": [
+      "paper:astro-ph 9709281v1",
+      "task:尽管已有关于r aqr的22-ghz h2o maser数据，但首次检测到321-ghz h2o maser向量，为了研究这两种类型的maser的性质差异。",
+      "contribution:第一次检测到r aqr的321-ghz h2o maser",
+      "contribution:提供了22-ghz和321-ghz h2o maser的区别分析",
+      "contribution:提出了可能的物理机制解释观测数据",
+      "concept:r aqr",
+      "method:321-ghz h2o maser",
+      "method:22-ghz h2o maser",
+      "concept:symbiotic mira",
+      "concept:dusty molecular gas",
+      "concept:uv radiation",
+      "concept:fast wind from the companion",
+      "concept:mira s envelope",
+      "concept:neutral material",
+      "concept:ionized nebula"
+    ],
+    "2304.00636v1": [
+      "paper:2304.00636v1",
+      "method:bert-based models",
+      "task:为了分类与covid-19相关的推特进行假新闻检测和情感分析",
+      "dataset:task1.c",
+      "metric:accuracy",
+      "contribution:使用了最先进的预训练语言模型bert",
+      "contribution:达到了较高的准确率"
+    ]
+  },
+  "entity_aliases": {
+    "twibot-22 towards graph-based twitter bot detection": "paper:2206.04564v6",
+    "尽管现有的twitter bot检测方法在检测新型twitter bot方面表现出色，但它们依赖的twitter bot检测数据集极少是基于图的，且这些数据集存在规模小、图结构不完整以及标注质量低等问": "task:尽管现有的twitter bot检测方法在检测新型twitter bot方面表现出色，但它们依赖的twitter bot检测数据集极少是基于图的，且这些数据集存在规模小、图结构不完整以及标注质量低等问",
+    "twibot-22": "dataset:twibot-22",
+    "构建了twibot-22，这是有史以来最大的基于图的twitter bot检测数据集，提供了推特网络上的多样化实体和关系，并且相比现有数据集具有更好的标注质量。": "contribution:构建了twibot-22，这是有史以来最大的基于图的twitter bot检测数据集，提供了推特网络上的多样化实体和关系，并且相比现有数据集具有更好的标注质量。",
+    "重新实现并评估了35个代表性twitter bot检测基线，涵盖了twibot-22在内的9个数据集，促进了一个公平比较模型性能和整体理解研究进展的基准。": "contribution:重新实现并评估了35个代表性twitter bot检测基线，涵盖了twibot-22在内的9个数据集，促进了一个公平比较模型性能和整体理解研究进展的基准。",
+    "整合了所有实现的代码和数据集，形成了twibot-22评估框架，方便进一步的研究人员进行模型和数据集的评估。": "contribution:整合了所有实现的代码和数据集，形成了twibot-22评估框架，方便进一步的研究人员进行模型和数据集的评估。",
+    "consistency of the infrared variability of sgr a over 22 years": "paper:1908.08066v1",
+    "speckle holography analysis techniques": "method:speckle holography analysis techniques",
+    "尽管之前的数据表明sgr a 在近红外波长下可探测，但缺乏一个能够覆盖长时间尺度（超过10年）的研究，因此需要新的红外测量去填补空白并研究其变化模式。": "task:尽管之前的数据表明sgr a 在近红外波长下可探测，但缺乏一个能够覆盖长时间尺度（超过10年）的研究，因此需要新的红外测量去填补空白并研究其变化模式。",
+    "speckle imaging data 1995 - 2005": "dataset:speckle imaging data 1995 - 2005",
+    "speckle data 2006 - 2016": "dataset:speckle data 2006 - 2016",
+    "改进了speckle holography分析技术，将sgr a 的可见性范围扩展至7年。": "contribution:改进了speckle holography分析技术，将sgr a 的可见性范围扩展至7年。",
+    "长时间尺度（22年）研究了sgr a 的亮度和变异性。": "contribution:长时间尺度（22年）研究了sgr a 的亮度和变异性。",
+    "发现sgr a 的功率谱密度在10年尺度内是平坦的，表明其在时间上是不相关的。": "contribution:发现sgr a 的功率谱密度在10年尺度内是平坦的，表明其在时间上是不相关的。",
+    "dialog-22 ruatd generated text detection": "paper:2206.08029v1",
+    "ensemble method": "method:ensemble method",
+    "尽管文本生成模型（tgms）能在生成符合人类语言风格的文本方面取得显著成绩，但能区分tgm生成文本与人类撰写文本的检测器在此过程中至关重要，为了构建这些检测器，我们描述了两个dialog-22 rua": "task:尽管文本生成模型（tgms）能在生成符合人类语言风格的文本方面取得显著成绩，但能区分tgm生成文本与人类撰写文本的检测器在此过程中至关重要，为了构建这些检测器，我们描述了两个dialog-22 rua",
+    "null": "dataset:null",
+    "accuracy": "metric:accuracy",
+    "提出了基于注意力机制的不同预训练模型的集成方法。": "contribution:提出了基于注意力机制的不同预训练模型的集成方法。",
+    "在二分类任务上获得了0.82995的最高精度。": "contribution:在二分类任务上获得了0.82995的最高精度。",
+    "在多分类任务上获得了0.62856的准确性": "contribution:在多分类任务上获得了0.62856的准确性",
+    "the simultaneous detection of 22- and 321-ghz h2o maser emission towards the symbiotic mira r aquarii": "paper:astro-ph 9709281v1",
+    "尽管已有关于r aqr的22-ghz h2o maser数据，但首次检测到321-ghz h2o maser向量，为了研究这两种类型的maser的性质差异。": "task:尽管已有关于r aqr的22-ghz h2o maser数据，但首次检测到321-ghz h2o maser向量，为了研究这两种类型的maser的性质差异。",
+    "第一次检测到r aqr的321-ghz h2o maser": "contribution:第一次检测到r aqr的321-ghz h2o maser",
+    "提供了22-ghz和321-ghz h2o maser的区别分析": "contribution:提供了22-ghz和321-ghz h2o maser的区别分析",
+    "提出了可能的物理机制解释观测数据": "contribution:提出了可能的物理机制解释观测数据",
+    "classifying covid-19 related tweets for fake news detection and sentiment analysis with bert-based models": "paper:2304.00636v1",
+    "bert-based models": "method:bert-based models",
+    "为了分类与covid-19相关的推特进行假新闻检测和情感分析": "task:为了分类与covid-19相关的推特进行假新闻检测和情感分析",
+    "task1.c": "dataset:task1.c",
+    "使用了最先进的预训练语言模型bert": "contribution:使用了最先进的预训练语言模型bert",
+    "达到了较高的准确率": "contribution:达到了较高的准确率",
+    "twitter network": "concept:twitter network",
+    "graph-based twitter bot detection benchmark": "concept:graph-based twitter bot detection benchmark",
+    "35 representative twitter bot detection baselines": "model:35 representative twitter bot detection baselines",
+    "fair comparison framework": "concept:fair comparison framework",
+    "evaluation framework": "concept:evaluation framework",
+    "sgr a": "paper:sgr a",
+    "22 years": "concept:22 years",
+    "brightness and variability of sgr a": "concept:brightness and variability of sgr a",
+    "22 years study": "task:22 years study",
+    "attention mechanism": "concept:attention mechanism",
+    "dialog-22 ruatd": "task:dialog-22 ruatd",
+    "tgm-based generated text detection": "task:tgm-based generated text detection",
+    "private test set": "dataset:private test set",
+    "r aqr": "concept:r aqr",
+    "321-ghz h2o maser": "method:321-ghz h2o maser",
+    "22-ghz h2o maser": "method:22-ghz h2o maser",
+    "symbiotic mira": "concept:symbiotic mira",
+    "dusty molecular gas": "concept:dusty molecular gas",
+    "uv radiation": "concept:uv radiation",
+    "fast wind from the companion": "concept:fast wind from the companion",
+    "mira s envelope": "concept:mira s envelope",
+    "neutral material": "concept:neutral material",
+    "ionized nebula": "concept:ionized nebula"
+  },
+  "communities": {
+    "0": {
+      "nodes": [
+        "paper:2206.04564v6",
+        "task:尽管现有的twitter bot检测方法在检测新型twitter bot方面表现出色，但它们依赖的twitter bot检测数据集极少是基于图的，且这些数据集存在规模小、图结构不完整以及标注质量低等问",
+        "contribution:构建了twibot-22，这是有史以来最大的基于图的twitter bot检测数据集，提供了推特网络上的多样化实体和关系，并且相比现有数据集具有更好的标注质量。",
+        "contribution:重新实现并评估了35个代表性twitter bot检测基线，涵盖了twibot-22在内的9个数据集，促进了一个公平比较模型性能和整体理解研究进展的基准。",
+        "contribution:整合了所有实现的代码和数据集，形成了twibot-22评估框架，方便进一步的研究人员进行模型和数据集的评估。"
+      ],
+      "key_entities": [
+        "TwiBot-22: Towards Graph-Based Twitter Bot Detection",
+        "尽管现有的Twitter bot检测方法在检测新型Twitter bot方面表现出色，但它们依赖的Twitter bot检测数据集极少是基于图的，且这些数据集存在规模小、图结构不完整以及标注质量低等问",
+        "构建了TwiBot-22，这是有史以来最大的基于图的Twitter bot检测数据集，提供了推特网络上的多样化实体和关系，并且相比现有数据集具有更好的标注质量。",
+        "重新实现并评估了35个代表性Twitter bot检测基线，涵盖了TwiBot-22在内的9个数据集，促进了一个公平比较模型性能和整体理解研究进展的基准。",
+        "整合了所有实现的代码和数据集，形成了TwiBot-22评估框架，方便进一步的研究人员进行模型和数据集的评估。"
+      ],
+      "key_papers": [
+        "TwiBot-22: Towards Graph-Based Twitter Bot Detection"
+      ],
+      "dominant_types": [
+        "Contribution",
+        "Paper",
+        "Task"
+      ],
+      "semantic_tag": "Research Contributions Cluster",
+      "summary": "",
+      "community_name": "Research Contributions Cluster"
+    },
+    "1": {
+      "nodes": [
+        "dataset:twibot-22",
+        "concept:twitter network",
+        "concept:graph-based twitter bot detection benchmark",
+        "model:35 representative twitter bot detection baselines",
+        "concept:fair comparison framework",
+        "concept:evaluation framework"
+      ],
+      "key_entities": [
+        "TwiBot-22",
+        "Twitter network",
+        "Graph-based Twitter bot detection benchmark",
+        "35 representative Twitter bot detection baselines",
+        "fair comparison framework",
+        "evaluation framework"
+      ],
+      "key_papers": [],
+      "dominant_types": [
+        "Concept",
+        "Dataset",
+        "Model"
+      ],
+      "semantic_tag": "Benchmark & Dataset Cluster",
+      "summary": "",
+      "community_name": "Benchmark & Dataset Cluster"
+    },
+    "2": {
+      "nodes": [
+        "paper:1908.08066v1",
+        "contribution:改进了speckle holography分析技术，将sgr a 的可见性范围扩展至7年。",
+        "contribution:长时间尺度（22年）研究了sgr a 的亮度和变异性。",
+        "contribution:发现sgr a 的功率谱密度在10年尺度内是平坦的，表明其在时间上是不相关的。"
+      ],
+      "key_entities": [
+        "Consistency of the Infrared Variability of Sgr A* over 22 years",
+        "改进了speckle holography分析技术，将Sgr A*的可见性范围扩展至7年。",
+        "长时间尺度（22年）研究了Sgr A*的亮度和变异性。",
+        "发现Sgr A*的功率谱密度在10年尺度内是平坦的，表明其在时间上是不相关的。"
+      ],
+      "key_papers": [
+        "Consistency of the Infrared Variability of Sgr A* over 22 years"
+      ],
+      "dominant_types": [
+        "Contribution",
+        "Paper"
+      ],
+      "semantic_tag": "Research Contributions Cluster",
+      "summary": "",
+      "community_name": "Research Contributions Cluster"
+    },
+    "3": {
+      "nodes": [
+        "method:speckle holography analysis techniques",
+        "task:尽管之前的数据表明sgr a 在近红外波长下可探测，但缺乏一个能够覆盖长时间尺度（超过10年）的研究，因此需要新的红外测量去填补空白并研究其变化模式。",
+        "dataset:speckle imaging data 1995 - 2005",
+        "dataset:speckle data 2006 - 2016",
+        "paper:sgr a",
+        "concept:22 years",
+        "concept:brightness and variability of sgr a"
+      ],
+      "key_entities": [
+        "speckle holography analysis techniques",
+        "尽管之前的数据表明Sgr A*在近红外波长下可探测，但缺乏一个能够覆盖长时间尺度（超过10年）的研究，因此需要新的红外测量去填补空白并研究其变化模式。",
+        "speckle imaging data (1995 - 2005)",
+        "speckle data (2006 - 2016)",
+        "Sgr A*",
+        "22 years",
+        "brightness and variability of Sgr A*"
+      ],
+      "key_papers": [
+        "Sgr A*"
+      ],
+      "dominant_types": [
+        "Dataset",
+        "Concept",
+        "Method"
+      ],
+      "semantic_tag": "Benchmark & Dataset Cluster",
+      "summary": "",
+      "community_name": "Benchmark & Dataset Cluster"
+    },
+    "4": {
+      "nodes": [
+        "paper:2206.08029v1",
+        "method:ensemble method",
+        "task:尽管文本生成模型（tgms）能在生成符合人类语言风格的文本方面取得显著成绩，但能区分tgm生成文本与人类撰写文本的检测器在此过程中至关重要，为了构建这些检测器，我们描述了两个dialog-22 rua",
+        "dataset:null",
+        "contribution:提出了基于注意力机制的不同预训练模型的集成方法。",
+        "contribution:在二分类任务上获得了0.82995的最高精度。",
+        "contribution:在多分类任务上获得了0.62856的准确性",
+        "concept:attention mechanism",
+        "task:dialog-22 ruatd",
+        "task:tgm-based generated text detection",
+        "dataset:private test set",
+        "task:22 years study"
+      ],
+      "key_entities": [
+        "DIALOG-22 RuATD Generated Text Detection",
+        "ensemble method",
+        "尽管文本生成模型（TGMs）能在生成符合人类语言风格的文本方面取得显著成绩，但能区分TGM生成文本与人类撰写文本的检测器在此过程中至关重要，为了构建这些检测器，我们描述了两个DIALOG-22 RuA",
+        "null",
+        "提出了基于注意力机制的不同预训练模型的集成方法。",
+        "在二分类任务上获得了0.82995的最高精度。",
+        "在多分类任务上获得了0.62856的准确性",
+        "attention mechanism",
+        "DIALOG-22 RuATD",
+        "TGM-based generated text detection",
+        "private test set",
+        "22 years study"
+      ],
+      "key_papers": [
+        "DIALOG-22 RuATD Generated Text Detection"
+      ],
+      "dominant_types": [
+        "Task",
+        "Contribution",
+        "Dataset"
+      ],
+      "semantic_tag": "Research Contributions Cluster",
+      "summary": "",
+      "community_name": "Research Contributions Cluster"
+    },
+    "5": {
+      "nodes": [
+        "metric:accuracy",
+        "paper:2304.00636v1",
+        "method:bert-based models",
+        "task:为了分类与covid-19相关的推特进行假新闻检测和情感分析",
+        "dataset:task1.c",
+        "contribution:使用了最先进的预训练语言模型bert",
+        "contribution:达到了较高的准确率"
+      ],
+      "key_entities": [
+        "Accuracy",
+        "Classifying COVID-19 Related Tweets for Fake News Detection and Sentiment Analysis with BERT-based Models",
+        "BERT-based Models",
+        "为了分类与COVID-19相关的推特进行假新闻检测和情感分析",
+        "task1.c",
+        "使用了最先进的预训练语言模型BERT",
+        "达到了较高的准确率"
+      ],
+      "key_papers": [
+        "Classifying COVID-19 Related Tweets for Fake News Detection and Sentiment Analysis with BERT-based Models"
+      ],
+      "dominant_types": [
+        "Contribution",
+        "Metric",
+        "Paper"
+      ],
+      "semantic_tag": "Research Contributions Cluster",
+      "summary": "",
+      "community_name": "Research Contributions Cluster"
+    },
+    "6": {
+      "nodes": [
+        "paper:astro-ph 9709281v1",
+        "task:尽管已有关于r aqr的22-ghz h2o maser数据，但首次检测到321-ghz h2o maser向量，为了研究这两种类型的maser的性质差异。",
+        "contribution:第一次检测到r aqr的321-ghz h2o maser",
+        "contribution:提供了22-ghz和321-ghz h2o maser的区别分析",
+        "contribution:提出了可能的物理机制解释观测数据"
+      ],
+      "key_entities": [
+        "The simultaneous detection of 22- and 321-GHz H2O maser emission towards the symbiotic Mira R Aquarii",
+        "尽管已有关于R Aqr的22-GHz H2O maser数据，但首次检测到321-GHz H2O maser向量，为了研究这两种类型的maser的性质差异。",
+        "第一次检测到R Aqr的321-GHz H2O maser",
+        "提供了22-GHz和321-GHz H2O maser的区别分析",
+        "提出了可能的物理机制解释观测数据"
+      ],
+      "key_papers": [
+        "The simultaneous detection of 22- and 321-GHz H2O maser emission towards the symbiotic Mira R Aquarii"
+      ],
+      "dominant_types": [
+        "Contribution",
+        "Paper",
+        "Task"
+      ],
+      "semantic_tag": "Research Contributions Cluster",
+      "summary": "",
+      "community_name": "Research Contributions Cluster"
+    },
+    "7": {
+      "nodes": [
+        "concept:r aqr",
+        "method:22-ghz h2o maser",
+        "concept:symbiotic mira"
+      ],
+      "key_entities": [
+        "R Aqr",
+        "22-GHz H2O maser",
+        "symbiotic Mira"
+      ],
+      "key_papers": [],
+      "dominant_types": [
+        "Concept",
+        "Method"
+      ],
+      "semantic_tag": "Research Topic Cluster",
+      "summary": "",
+      "community_name": "Research Topic Cluster"
+    },
+    "8": {
+      "nodes": [
+        "method:321-ghz h2o maser",
+        "concept:dusty molecular gas",
+        "concept:uv radiation",
+        "concept:fast wind from the companion",
+        "concept:mira s envelope",
+        "concept:neutral material",
+        "concept:ionized nebula"
+      ],
+      "key_entities": [
+        "321-GHz H2O maser",
+        "dusty, molecular gas",
+        "UV radiation",
+        "fast wind from the companion",
+        "Mira's envelope",
+        "neutral material",
+        "ionized nebula"
+      ],
+      "key_papers": [],
+      "dominant_types": [
+        "Concept",
+        "Method"
+      ],
+      "semantic_tag": "Research Topic Cluster",
+      "summary": "",
+      "community_name": "Research Topic Cluster"
+    }
+  },
+  "citation_graph": {},
+  "stats": {
+    "node_count": 56,
+    "edge_count": 70,
+    "node_type_count": {
+      "Paper": 6,
+      "Task": 8,
+      "Dataset": 6,
+      "Contribution": 14,
+      "Method": 5,
+      "Metric": 1,
+      "Concept": 15,
+      "Model": 1
+    },
+    "paper_count": 5,
+    "community_count": 0,
+    "citation_edge_count": 0
+  }
+}

@@ -20,7 +20,7 @@ export function CreateKnowledgeBaseModal() {
   const [name, setName] = useState('');
   const [description, setDescription] = useState('');
   const [buildMethod, setBuildMethod] = useState('default_chunk');
-  const [retrievalMethod, setRetrievalMethod] = useState('vector');
+  const [retrievalMethod, setRetrievalMethod] = useState('rag');
 
   const handleCreate = async () => {
     if (!name.trim()) return;

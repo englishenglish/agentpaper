@@ -1,54 +1,65 @@
+from __future__ import annotations
+
 import asyncio
 import os
 import traceback
-from typing import Any, Optional, Union, List
-from pathlib import Path
-import asyncio
+from typing import Any, List, Optional, Union
+
+import chromadb
+from chromadb.errors import NotFoundError
 import httpx
 import numpy as np
-import chromadb
-from chromadb.config import Settings
 from chromadb.api.types import (
-    Embedding,
-    PyEmbedding,
-    OneOrMany,
     Documents,
-    Embeddings,
     EmbeddingFunction,
+    Embeddings,
     Space,
 )
+from chromadb.config import Settings
 from openai import OpenAI
+
+from src.core.config import config
 from src.knowledge.base import KnowledgeBase
-from src.knowledge.indexing import process_file_to_markdown, process_file_to_json, process_url_to_markdown
+from src.knowledge.indexing import process_file_to_markdown, process_url_to_markdown
+from src.knowledge.utils.embedding_sentence_chunk import embedding_sentence_chunk_chunks
 from src.knowledge.utils.kb_utils import (
     get_embedding_config,
     prepare_item_metadata,
-    split_text_into_chunks,
-    split_text_into_qa_chunks,
     validate_img_embedding_file,
 )
 from src.utils.datetime_utils import utc_isoformat
 from src.utils.log_utils import setup_logger
-from src.core.config import config
 
 logger = setup_logger(__name__)
 
+
+# ------------------------------------------------------------------
+# Reranker（懒加载单例，仅在 enable_reranker=true 时使用）
+# ------------------------------------------------------------------
+
 _GLOBAL_RERANKER = None
 
-def get_reranker():
+
+def _get_reranker():
+    """懒加载 BGEReranker，首次调用时初始化。"""
     global _GLOBAL_RERANKER
     if _GLOBAL_RERANKER is None:
         logger.info("正在加载 BGEReranker 模型到内存中 (首次查询会稍慢)...")
-        from src.knowledge.knowledge.rerank import BGEReranker # 请确保路径正确
+        from src.knowledge.rerank import BGEReranker
         _GLOBAL_RERANKER = BGEReranker()
     return _GLOBAL_RERANKER
 
 
+# ------------------------------------------------------------------
+# Embedding 函数
+# ------------------------------------------------------------------
+
 class ResilientOpenAIEmbeddingFunction(EmbeddingFunction[Documents]):
     """
-    使用自定义 httpx.Client：
-    - trust_env 可配置（默认 False），避免系统 HTTP(S)_PROXY 导致访问 DashScope 等域名时 TLS 握手超时
-    - 超时时间可配置
+    基于自定义 httpx.Client 的 OpenAI 兼容 Embedding 函数。
+
+    - `trust_env` 默认为 False，避免系统代理导致 TLS 握手超时。
+    - 超时时间可通过构造参数配置。
     """
 
     def __init__(
@@ -60,7 +71,7 @@ class ResilientOpenAIEmbeddingFunction(EmbeddingFunction[Documents]):
         trust_env: bool = False,
         timeout_seconds: float = 120.0,
         connect_seconds: float = 45.0,
-    ):
+    ) -> None:
         self.model_name = model_name
         self.dimensions = dimensions
         base = (api_base or "").replace("/embeddings", "").rstrip("/")
@@ -92,381 +103,194 @@ class ResilientOpenAIEmbeddingFunction(EmbeddingFunction[Documents]):
 
     @staticmethod
     def name() -> str:
-        return "openai_resilient"
+        # 须与 Chroma 持久化集合中的 embedding 名称一致（历史数据多为 "openai"），
+        # 否则 get_collection 会报 embedding function conflict，且不可误走 create。
+        return "openai"
 
     def default_space(self) -> Space:
         return "cosine"
 
 
+# ------------------------------------------------------------------
+# ChromaKB
+# ------------------------------------------------------------------
+
 class ChromaKB(KnowledgeBase):
-    """基于 ChromaDB 的向量知识库实现"""
+    """基于 ChromaDB 的向量知识库实现。"""
 
-    def __init__(self, work_dir: str, **kwargs):
-        """
-        初始化 ChromaDB 知识库
-
-        Args:
-            work_dir: 工作目录
-            **kwargs: 其他配置参数
-        """
+    def __init__(self, work_dir: str, **kwargs) -> None:
         super().__init__(work_dir)
 
-        if chromadb is None:
-            raise ImportError("chromadb is not installed. Please install it with: pip install chromadb")
-
-        # ChromaDB 配置
         self.chroma_db_path = os.path.join(work_dir, "chromadb")
         os.makedirs(self.chroma_db_path, exist_ok=True)
 
-        # 初始化 ChromaDB 客户端
         self.chroma_client = chromadb.PersistentClient(
-            path=self.chroma_db_path, settings=Settings(anonymized_telemetry=False)
+            path=self.chroma_db_path,
+            settings=Settings(anonymized_telemetry=False),
         )
 
-        # 存储集合映射 {db_id: collection}
+        # {db_id: collection}（含图片集合 {db_id}_images）
         self.collections: dict[str, Any] = {}
         logger.info("ChromaKB initialized")
 
     @property
     def kb_type(self) -> str:
-        """知识库类型标识"""
         return "chroma"
 
-    async def _create_kb_instance(self, db_id: str, kb_config: dict) -> Any:
-        """创建向量数据库集合"""
-        logger.info(f"Creating ChromaDB collection for {db_id}")
+    # ------------------------------------------------------------------
+    # 内部：集合管理
+    # ------------------------------------------------------------------
 
+    async def _create_kb_instance(self, db_id: str, _config: dict) -> Any:
+        """创建或获取 ChromaDB 向量集合。"""
         if db_id not in self.databases_meta:
             raise ValueError(f"Database {db_id} not found")
 
-        # embed_info = self.databases_meta[db_id].get("embed_info", {})
-        # 先获取原始值（可能是 None、具体值或不存在）
-        embed_info = self.databases_meta[db_id].get("embed_info")
-        # 确保最终值为 {}（如果是 None 或不存在）
-        embed_info = embed_info if embed_info is not None else {}
-
+        embed_info = self.databases_meta[db_id].get("embed_info") or {}
         embedding_function = self._get_embedding_function(embed_info)
-
-        # 创建或获取集合
         collection_name = db_id
 
         try:
-            # 尝试获取现有集合
-            collection = self.chroma_client.get_collection(name=collection_name, embedding_function=embedding_function)
+            collection = self.chroma_client.get_collection(
+                name=collection_name, embedding_function=embedding_function
+            )
             logger.info(f"Retrieved existing collection: {collection_name}")
-
-
-        except Exception:
-            # 创建新集合
-            logger.info(f"Creating new collection with embedding model: {embed_info.get('name', 'default')}")
-            collection_metadata = {
-                "db_id": db_id,
-                "created_at": utc_isoformat(),
-                "embedding_model": embed_info.get("name") if embed_info else "default",
-                "hnsw:space": "cosine"
-            }
+        except NotFoundError:
+            logger.info(
+                "Creating new collection with embedding model: %s",
+                embed_info.get("name", "default"),
+            )
             collection = self.chroma_client.create_collection(
-                name=collection_name, embedding_function=embedding_function, metadata=collection_metadata
+                name=collection_name,
+                embedding_function=embedding_function,
+                metadata={
+                    "db_id": db_id,
+                    "created_at": utc_isoformat(),
+                    "embedding_model": embed_info.get("name", "default"),
+                    "hnsw:space": "cosine",
+                },
             )
             logger.info(f"Created new collection: {collection_name}")
 
         return collection
 
     async def _initialize_kb_instance(self, instance: Any) -> None:
-        """初始化向量数据库集合（无需特殊初始化）"""
-        pass
+        """无需特殊初始化。"""
 
-    def _get_embedding_function(self, embed_info: dict):
-        """获取 embedding 函数"""
-        config_dict = get_embedding_config(embed_info)
+    def _get_embedding_function(self, embed_info: dict) -> ResilientOpenAIEmbeddingFunction:
+        """根据 embed_info 构造 Embedding 函数实例。"""
+        cfg = get_embedding_config(embed_info)
         trust_env = config.get_bool("embedding_http_trust_env", False)
         timeout_s = float(config.get("embedding_http_timeout", 120) or 120)
         connect_s = float(config.get("embedding_http_connect", 45) or 45)
-        dim = config_dict.get("dimension")
+        dim = cfg.get("dimension")
         return ResilientOpenAIEmbeddingFunction(
-            model_name=config_dict["model"],
-            api_key=config_dict["api_key"],
-            api_base=config_dict["base_url"],
+            model_name=cfg["model"],
+            api_key=cfg["api_key"],
+            api_base=cfg["base_url"],
             dimensions=dim if isinstance(dim, int) else None,
             trust_env=trust_env,
             timeout_seconds=timeout_s,
             connect_seconds=connect_s,
         )
 
-    async def _get_chroma_collection(self, db_id: str):
-        """获取或创建 ChromaDB 集合"""
+    async def _get_chroma_collection(self, db_id: str) -> Any | None:
+        """获取或懒创建文本向量集合；失败时返回 None。"""
         if db_id in self.collections:
             return self.collections[db_id]
 
         if db_id not in self.databases_meta:
-            logger.info(f"self.databases_meta中没有{db_id}")
+            logger.warning(f"Database {db_id} not found in metadata")
             return None
 
         try:
-            # 创建集合
             collection = await self._create_kb_instance(db_id, {})
             await self._initialize_kb_instance(collection)
-
             self.collections[db_id] = collection
             return collection
-
         except Exception as e:
-            logger.error(f"Failed to create vector collection for {db_id}: {e}")
-            logger.error(f"Traceback: {traceback.format_exc()}")
+            logger.error(f"Failed to create vector collection for {db_id}: {e}\n{traceback.format_exc()}")
             return None
 
-    async def _get_image_chroma_collection(self, db_id: str):
-        """获取或创建图片专用的 ChromaDB 集合（使用512维嵌入）"""
+    async def _get_image_chroma_collection(self, db_id: str) -> Any | None:
+        """获取或懒创建图片专用集合（512 维，不使用外部 Embedding 函数）。"""
         if db_id not in self.databases_meta:
             return None
 
-        # 为图片嵌入创建专门的集合名称
         image_collection_name = f"{db_id}_images"
+        if image_collection_name in self.collections:
+            return self.collections[image_collection_name]
 
         try:
-            # 检查集合是否已存在
-            if image_collection_name in self.collections:
-                return self.collections[image_collection_name]
-
-            # 尝试获取现有集合
             try:
                 collection = self.chroma_client.get_collection(name=image_collection_name)
                 logger.info(f"Retrieved existing image collection: {image_collection_name}")
-                self.collections[image_collection_name] = collection
-                return collection
             except Exception:
-                # 创建新集合 - 使用自定义嵌入函数，固定维度为512
-                # 对于图片嵌入，我们不需要实际的嵌入函数，因为嵌入已经由CLIP模型生成
-                # 我们创建一个空的嵌入函数，但指定维度为512
-                class ImageEmbeddingFunction:
-                    def __init__(self):
-                        pass
-                    
+                class _ZeroEmbedFn:
+                    """占位 Embedding 函数——实际嵌入由外部 CLIP 模型生成。"""
                     def __call__(self, texts):
-                        # 返回与文本数量相同的512维零向量
-                        # 实际嵌入会在外部生成
                         return [[0.0] * 512 for _ in texts]
 
-                embed_function = ImageEmbeddingFunction()
-
-                # 创建集合元数据
-                collection_metadata = {
-                    "db_id": db_id,
-                    "created_at": utc_isoformat(),
-                    "embedding_model": "clip_image_embedding",
-                    "embedding_dimension": 512,
-                    "hnsw:space": "cosine"
-                }
-
                 collection = self.chroma_client.create_collection(
-                    name=image_collection_name, 
-                    embedding_function=embed_function,
-                    metadata=collection_metadata
+                    name=image_collection_name,
+                    embedding_function=_ZeroEmbedFn(),
+                    metadata={
+                        "db_id": db_id,
+                        "created_at": utc_isoformat(),
+                        "embedding_model": "clip_image_embedding",
+                        "embedding_dimension": 512,
+                        "hnsw:space": "cosine",
+                    },
                 )
-                
                 logger.info(f"Created new image collection: {image_collection_name}")
-                self.collections[image_collection_name] = collection
-                return collection
 
+            self.collections[image_collection_name] = collection
+            return collection
         except Exception as e:
             logger.error(f"Failed to get/create image collection {image_collection_name}: {e}")
             return None
-    def parse_json_into_embedding_chunks(self, json_content: str, file_id: str, filename: str, params: dict) -> list[dict]:
-        """将JSON解析成嵌入块"""
-        pass
-        # import json
-        # artifacts = json.loads(json_content)
-        # chunks = []
-        # for chunk_index, artifact in enumerate(artifacts):
-        #     image_url = artifact ["image_url"]
-        #     img_desc = get_image_description(image_url)
-        #     desc_embedding = get_text_embedding(img_desc)
-        #     image_embedding = get_image_embedding(image_url)
-        #     img_chunk = {
-        #         "content": f"文物名称：{artifact ['name']}\n 对应的文物描述：{artifact ['description']}\n 对应的文物图片URL：{artifact ['image_url']}\n 对应的文物图片的描述：{img_desc}",
-        #         "embeddings": image_embedding,
-        #         "id": f"{file_id}_chunk_{chunk_index}_img_chunk",
-        #         "file_id": file_id,
-        #         "filename": filename,
-        #         "chunk_index": chunk_index,
-        #         "source": filename,
-        #         "chunk_id": f"{file_id}_chunk_{chunk_index}",
-        #         "metadata": {
-        #             "description": artifact ["description"],
-        #             "name": artifact ["name"],
-        #             "image_url": artifact ["image_url"],
-        #             "detail_url": artifact ["detail_url"], 
-        #             "full_doc_id": file_id,
-        #             "source": filename,
-        #             "chunk_id": f"{file_id}_artifact_chunk_{chunk_index}",
-        #             "chunk_type": "img_chunk",
-        #         }
-        #     }
-        #     desc_chunk = {
-        #         "content": f"文物名称：{artifact ['name']}\n 对应的文物描述：{artifact ['description']}\n 对应的文物图片URL：{artifact ['image_url']}\n 对应的文物图片的描述：{img_desc}",
-        #         "embeddings": desc_embedding,
-        #         "id": f"{file_id}_chunk_{chunk_index}_desc_chunk",
-        #         "file_id": file_id,
-        #         "filename": filename,
-        #         "chunk_index": chunk_index,
-        #         "source": filename,
-        #         "chunk_id": f"{file_id}_chunk_{chunk_index}",
-        #         "metadata": {
-        #             "description": artifact ["description"],
-        #             "name": artifact ["name"],
-        #             "image_url": artifact ["image_url"],
-        #             "detail_url": artifact ["detail_url"], 
-        #             "full_doc_id": file_id,
-        #             "source": filename,
-        #             "chunk_id": f"{file_id}_artifact_chunk_{chunk_index}",
-        #             "chunk_type": "desc_chunk",
-        #         }
-        #     }
-        #     chunks.append (img_chunk)
-        #     chunks.append (desc_chunk)
-        # return chunks
 
-    def split_json_into_chunks(self, json_content: str, file_id: str, filename: str, params: dict) -> list[dict]:
-        """将JSON分割成块"""
-        pass
-        # import json
-        # artifacts = json.loads(json_content)
-        # chunks = []
-        # for chunk_index, artifact in enumerate(artifacts):
-        #     content = f"文物名称：{artifact ['name']}\n 文物描述：{artifact ['description']}"
-        #     chunk = {
-        #         "content": content.strip(),
-        #         "id": f"{file_id}_chunk_{chunk_index}",
-        #         "file_id": file_id,
-        #         "filename": filename,
-        #         "chunk_index": chunk_index,
-        #         "source": filename,
-        #         "chunk_id": f"{file_id}_chunk_{chunk_index}",
-        #         "metadata": {
-        #             "image_url": artifact ["image_url"],
-        #             "detail_url": artifact ["detail_url"], 
-        #             "name": artifact ["name"],
-        #             "full_doc_id": file_id,
-        #             "source": filename,
-        #             "chunk_id": f"{file_id}_artifact_chunk_{chunk_index}",
-        #             "chunk_type": "normal",
-        #         }
-        #     }
-        #     chunks.append (chunk)
-        # return chunks
-
-    def _split_text_into_chunks(self, text: str, file_id: str, filename: str, params: dict) -> list[dict]:
-        """将文本分割成块"""
-        # 检查是否使用QA分割模式
-        use_qa_split = params.get("use_qa_split", False)
-
-        if use_qa_split:
-            # 使用QA分割模式
-            qa_separator = params.get("qa_separator", "\n\n\n")
-            chunks = split_text_into_qa_chunks(text, file_id, filename, qa_separator, params)
-        else:
-            # 使用传统分割模式
-            chunks = split_text_into_chunks(text, file_id, filename, params)
-
-        # 为 ChromaDB 添加特定的 metadata 格式
-        for chunk in chunks:
-            chunk["metadata"] = {
-                "source": chunk["source"],
-                "chunk_id": chunk["chunk_id"],
-                "full_doc_id": file_id,
-                "chunk_type": chunk.get("chunk_type", "normal"),  # 添加chunk类型标识
-            }
-
-        return chunks
-
-
-
-    def semantic_chunk_markdown(self, markdown_text: str, file_id: str, filename: str, params: dict) -> list[dict]:
-        """
-        语义切块：先按照 Markdown 标题层级切分，保留上下文结构；
-        如果某个章节实在太长，再进行常规的字符截断。
-        """
-        chunk_size = int(params.get("chunk_size", 500))
-        chunk_overlap = int(params.get("chunk_overlap", 50))
-
-        # 定义要识别的 Markdown 标题层级
-        headers_to_split_on = [
-            ("#", "Header 1"),
-            ("##", "Header 2"),
-            ("###", "Header 3"),
-            ("####", "Header 4"),
-        ]
-
-        # 1. 第一刀：按语义/标题层级切分
-        markdown_splitter = MarkdownHeaderTextSplitter(headers_to_split_on=headers_to_split_on)
-        md_splits = markdown_splitter.split_text(markdown_text)
-
-        # 2. 第二刀：防止某些没有标题的超长段落撑爆 Token
-        text_splitter = RecursiveCharacterTextSplitter(
-            chunk_size=chunk_size,
-            chunk_overlap=chunk_overlap,
-            separators=["\n\n", "\n", "。", ".", " ", ""]
-        )
-        final_splits = text_splitter.split_documents(md_splits)
-
-        # 3. 组装成 ChromaDB 需要的格式
-        chunks = []
-        for i, doc in enumerate(final_splits):
-            # 将各级标题拼接作为这段文本的前缀上下文 (非常有助于大模型理解段落归属)
-            context_headers = " > ".join([v for k, v in doc.metadata.items() if k.startswith("Header")])
-            content_with_context = f"[{context_headers}]\n{doc.page_content}" if context_headers else doc.page_content
-
-            chunks.append({
-                "content": content_with_context,
-                "id": f"{file_id}_chunk_{i}",
-                "source": filename,
-                "chunk_id": f"{file_id}_chunk_{i}",
-                "chunk_type": "semantic",
-                # 将标题信息也存入 ChromaDB metadata，方便以后精准过滤
-                "metadata": doc.metadata
-            })
-
-        logger.info(f"Semantic chunking completed: {len(chunks)} chunks generated.")
-        return chunks
+    # ------------------------------------------------------------------
+    # 写入接口
+    # ------------------------------------------------------------------
 
     async def add_processed_content(self, db_id: str, data: dict | None = None) -> list[dict]:
+        """将已切好的 chunks 批量写入 ChromaDB（每批 10 条）。"""
         if db_id not in self.databases_meta:
             raise ValueError(f"Database {db_id} not found")
 
         collection = await self._get_chroma_collection(db_id)
         if not collection:
             raise ValueError(f"Failed to get ChromaDB collection for {db_id}")
-        try:
-            batch_embeddings = data.get("embeddings", None)
-            batch_documents = data.get("documents", [])
-            batch_metadatas = data.get("metadatas", None)
-            batch_ids = data.get("ids", None)
 
+        try:
+            batch_documents = (data or {}).get("documents", [])
             if not batch_documents:
                 return []
 
+            batch_embeddings = data.get("embeddings")
+            batch_metadatas = data.get("metadatas")
+            batch_ids = data.get("ids")
             batch_size = 10
-            total_batches = (len(batch_documents) + batch_size - 1) // batch_size
-            
-            for i in range(0, len(batch_documents), batch_size):
-                b_docs = batch_documents[i : i + batch_size]
-                b_ids = batch_ids[i : i + batch_size] if batch_ids else None
-                b_metas = batch_metadatas[i : i + batch_size] if batch_metadatas else None
-                b_embeds = batch_embeddings[i : i + batch_size] if batch_embeddings else None
 
+            for i in range(0, len(batch_documents), batch_size):
+                sl = slice(i, i + batch_size)
                 await asyncio.to_thread(
                     collection.add,
-                    embeddings=b_embeds,
-                    documents=b_docs,
-                    metadatas=b_metas,
-                    ids=b_ids,
+                    embeddings=batch_embeddings[sl] if batch_embeddings else None,
+                    documents=batch_documents[sl],
+                    metadatas=batch_metadatas[sl] if batch_metadatas else None,
+                    ids=batch_ids[sl] if batch_ids else None,
                 )
-            logger.info(f"成功将 {len(batch_documents)} 个项 插入到临时知识库中")
-        except Exception as e:
-            logger.error(f"错误处理{len(batch_documents)} 个项 插入到临时知识库中，失败: {e}, {traceback.format_exc()}")
 
-    async def add_content(self, db_id: str, items: list[str], params: dict | None) -> list[dict]:
-        """添加内容（文件/URL）"""
+            logger.info(f"Inserted {len(batch_documents)} chunks into database {db_id}")
+        except Exception as e:
+            logger.error(f"Failed to insert {len(batch_documents)} chunks into {db_id}: {e}\n{traceback.format_exc()}")
+
+        return []
+
+    async def add_content(self, db_id: str, items: list[str], params: dict | None = None) -> list[dict]:
+        """处理文件/URL 并写入 ChromaDB。"""
         if db_id not in self.databases_meta:
             raise ValueError(f"Database {db_id} not found")
 
@@ -474,422 +298,307 @@ class ChromaKB(KnowledgeBase):
         if not collection:
             raise ValueError(f"Failed to get ChromaDB collection for {db_id}")
 
-        content_type = params.get("content_type", "file") if params else "file"
+        content_type = (params or {}).get("content_type", "file")
         processed_items_info = []
 
         for item in items:
-            # 准备文件元数据
             metadata = prepare_item_metadata(item, content_type, db_id)
             file_id = metadata["file_id"]
             filename = metadata["filename"]
 
-            # 添加文件记录
             file_record = metadata.copy()
             self.files_meta[file_id] = file_record
             self._save_metadata()
-
             self._add_to_processing_queue(file_id)
 
-            file_path_obj = Path(item)
-            file_ext = file_path_obj.suffix.lower()
-
             try:
-                # 根据内容类型处理内容
                 if content_type == "file":
                     markdown_content = await process_file_to_markdown(item, params=params)
-                else:  # URL    
+                else:
                     markdown_content = await process_url_to_markdown(item, params=params)
-            
-                
-                chunks = []
-                chunks = self.semantic_chunk_markdown(markdown_content, file_id, filename, params)
-                logger.info(f"Split {filename} into {len(chunks)} chunks")
 
-                # 准备向量数据库插入的数据
+                p = params or {}
+                chunks = embedding_sentence_chunk_chunks(markdown_content, file_id, filename, p)
+                logger.info(f"Split {filename} into {len(chunks)} chunks (embedding_sentence_chunk_chunks)")
+
                 if chunks:
-                    documents = [chunk["content"] for chunk in chunks]
-                    metadatas = [chunk["metadata"] for chunk in chunks]
-                    ids = [chunk["id"] for chunk in chunks]
-
-                    # 插入到 ChromaDB - 分批处理以避免嵌入服务批次限制
-                    # DashScope 兼容端的 embedding 接口要求 batch size <= 10。
-                    # 取 10 作为安全上限，兼容当前默认供应商配置。
-                    batch_size = 10
-                    total_batches = (len(chunks) + batch_size - 1) // batch_size
-
-                    for i in range(0, len(chunks), batch_size):
-                        batch_documents = documents[i : i + batch_size]
-                        batch_metadatas = metadatas[i : i + batch_size]
-                        batch_ids = ids[i : i + batch_size]
-
+                    batch_size = 10  # DashScope 等供应商的安全上限
+                    total = len(chunks)
+                    for i in range(0, total, batch_size):
+                        sl = slice(i, i + batch_size)
                         await asyncio.to_thread(
                             collection.add,
-                            documents=batch_documents,
-                            metadatas=batch_metadatas,
-                            ids=batch_ids,
+                            documents=[c["content"] for c in chunks[sl]],
+                            metadatas=[c["metadata"] for c in chunks[sl]],
+                            ids=[c["id"] for c in chunks[sl]],
                         )
+                        logger.info(f"Batch {i // batch_size + 1}/{(total + batch_size - 1) // batch_size} for {filename}")
 
-                        batch_num = i // batch_size + 1
-                        logger.info(f"Processed batch {batch_num}/{total_batches} for {filename}")
-
-                logger.info(f"Inserted {content_type} {item} into ChromaDB. Done.")
-
-                # 更新状态为完成
                 self.files_meta[file_id]["status"] = "done"
-                self._save_metadata()
                 file_record["status"] = "done"
-
             except Exception as e:
-                logger.error(f"处理{content_type} {item} 失败: {e}, {traceback.format_exc()}")
+                logger.error(f"Failed to process {content_type} {item}: {e}\n{traceback.format_exc()}")
                 self.files_meta[file_id]["status"] = "failed"
-                self._save_metadata()
                 file_record["status"] = "failed"
             finally:
+                self._save_metadata()
                 self._remove_from_processing_queue(file_id)
 
             processed_items_info.append(file_record)
 
         return processed_items_info
 
-    
-    async def add_image_embeddings(self, db_id: str, item: str, params: dict | None):
-        """添加图片嵌入"""
-        # 校验格式
+    async def add_image_embeddings(self, db_id: str, item: str, params: dict | None = None) -> list[dict]:
+        """处理图片嵌入文件（JSON）并写入图片专用集合。"""
         if not validate_img_embedding_file(item):
-            return
+            return []
         if db_id not in self.databases_meta:
             raise ValueError(f"Database {db_id} not found")
 
         collection = await self._get_image_chroma_collection(db_id)
         if not collection:
-            raise ValueError(f"Failed to get ChromaDB collection for {db_id}")
+            raise ValueError(f"Failed to get image ChromaDB collection for {db_id}")
 
-        content_type = params.get("content_type", "file") if params else "file"
-        # processed_items_info = []
-
-        # 准备文件元数据
+        content_type = (params or {}).get("content_type", "file")
         metadata = prepare_item_metadata(item, content_type, db_id)
         file_id = metadata["file_id"]
         filename = metadata["filename"]
 
-        # 添加文件记录
         file_record = metadata.copy()
         self.files_meta[file_id] = file_record
         self._save_metadata()
-
         self._add_to_processing_queue(file_id)
 
-        file_path_obj = Path(item)
-        file_ext = file_path_obj.suffix.lower()
-
         try:
-            json_content = ""
-            # 根据文件扩展名处理内容
-            json_content = await process_file_to_json(item, params=params)
+            from src.knowledge.indexing import process_file_to_json
+            await process_file_to_json(item, params=params)
 
-            chunks = []
-            chunks = self.parse_json_into_embedding_chunks(json_content, file_id, filename, params)
+            # parse_json_into_embedding_chunks 由子类或外部实现；此处作基类占位
+            chunks: list[dict] = []
+            logger.info(f"Split {filename} into {len(chunks)} image embedding chunks")
 
-            logger.info(f"Split {filename} into {len(chunks)} chunks")
-
-            # 准备向量数据库插入的数据
             if chunks:
-                documents = [chunk["content"] for chunk in chunks]
-                embeddings = [chunk["embeddings"] for chunk in chunks]
-                metadatas = [chunk["metadata"] for chunk in chunks]
-                ids = [chunk["id"] for chunk in chunks]
-
-                # 插入到 ChromaDB - 分批处理以避免超出 OpenAI 批次大小限制
-                batch_size = 64  # OpenAI 的最大批次大小限制
-                total_batches = (len(chunks) + batch_size - 1) // batch_size
-
-                for i in range(0, len(chunks), batch_size):
-                    batch_documents = documents[i : i + batch_size]
-                    batch_embeddings = embeddings[i : i + batch_size]
-                    batch_metadatas = metadatas[i : i + batch_size]
-                    batch_ids = ids[i : i + batch_size]
-
+                batch_size = 64
+                total = len(chunks)
+                for i in range(0, total, batch_size):
+                    sl = slice(i, i + batch_size)
                     await asyncio.to_thread(
                         collection.add,
-                        documents=batch_documents,
-                        embeddings=batch_embeddings,
-                        metadatas=batch_metadatas,
-                        ids=batch_ids,
+                        documents=[c["content"] for c in chunks[sl]],
+                        embeddings=[c["embeddings"] for c in chunks[sl]],
+                        metadatas=[c["metadata"] for c in chunks[sl]],
+                        ids=[c["id"] for c in chunks[sl]],
                     )
-                    batch_num = i // batch_size + 1
-                    logger.info(f"Processed batch {batch_num}/{total_batches} for {filename}")
+                    logger.info(f"Batch {i // batch_size + 1}/{(total + batch_size - 1) // batch_size} for {filename}")
 
-            logger.info(f"Inserted {content_type} {item} into Img_ChromaDB. Done.")
-
-            # 更新状态为完成
             self.files_meta[file_id]["status"] = "done"
-            self._save_metadata()
             file_record["status"] = "done"
-
+            logger.info(f"Inserted image embeddings for {item} into {db_id}")
         except Exception as e:
-            logger.error(f"处理{content_type} {item} 失败: {e}, {traceback.format_exc()}")
-            logger.error(f"处理{content_type} {item} 失败: {e}, {traceback.format_exc()}")
+            logger.error(f"Failed to process image embeddings for {item}: {e}\n{traceback.format_exc()}")
             self.files_meta[file_id]["status"] = "failed"
-            self._save_metadata()
             file_record["status"] = "failed"
-            raise e
+            raise
+        finally:
+            self._save_metadata()
+            self._remove_from_processing_queue(file_id)
+
+        return [file_record]
+
+    # ------------------------------------------------------------------
+    # 查询接口
+    # ------------------------------------------------------------------
 
     async def aquery(self, db_id: str, query_text: Union[str, List[str]] = "", **kwargs) -> list[dict]:
-        """异步查询知识库 (带重排序)"""
+        """
+        异步查询 ChromaDB 集合。
+
+        当 `enable_reranker=true` 时，先大倍率召回再用 BGEReranker 精排；
+        否则直接按向量相似度返回 top_k 结果。
+        """
+        if not query_text:
+            raise ValueError("query_text cannot be empty")
+
         collection = await self._get_chroma_collection(db_id)
         if not collection:
             raise ValueError(f"Database {db_id} not found")
 
+        query_texts = [query_text] if isinstance(query_text, str) else list(query_text)
+        final_top_k: int = kwargs.get("top_k", config.get("top_k", 5))
+        similarity_threshold: float = float(kwargs.get("similarity_threshold", 0.0))
+        enable_reranker: bool = config.get_bool("enable_reranker", False)
+
         try:
-            # 1. 扩大召回基数 (Recall K)
-            final_top_k = kwargs.get("top_k", config.get("top_k", 5))
-            recall_k = kwargs.get("recall_k", final_top_k * 4)  # 默认放大 4 倍召回
-
-            text_query_results = None
-            if isinstance(query_text, str) and query_text == "":
-                raise ValueError("query_text cannot be empty")
-
-            query_texts = [query_text] if isinstance(query_text, str) else query_text
-
-            # 2. 初始向量粗排召回
-            text_query_results = collection.query(
-                query_texts=query_texts,
-                n_results=recall_k,
-                include=["documents", "metadatas", "distances"]
-            )
-
-            # ... (解析 documents, metadatas 的代码保持原有逻辑) ...
-            documents = text_query_results["documents"][0] if text_query_results["documents"] else []
-            metadatas = text_query_results["metadatas"][0] if text_query_results["metadatas"] else []
-
-            if not documents:
-                return []
-
-            # 3. 引入 Reranker 精排
-            # 注意：在异步方法中调用密集的模型计算，最好放到线程池
-            reranker_instance = get_reranker()
-            scores = await asyncio.to_thread(
-                reranker_instance.rerank,
-                query=query_texts[0],
-                docs=documents
-            )
-
-            # 4. 根据 Reranker 分数重新组装和排序
-            reranked_chunks = []
-            for i, doc in enumerate(documents):
-                metadata = metadatas[i] if i < len(metadatas) else {}
-                if "full_doc_id" in metadata:
-                    metadata["file_id"] = metadata.pop("full_doc_id")
-
-                reranked_chunks.append({
-                    "content": doc,
-                    "metadata": metadata,
-                    "score": float(scores[i]),  # 这里替换成了精排的分数
-                    "original_chunk_id": metadata.get("chunk_id")
-                })
-
-            # 按精排分数从高到低排序
-            reranked_chunks.sort(key=lambda x: x["score"], reverse=True)
-
-            # 5. 去重并截取 final_top_k
-            final_results = []
-            seen_chunks = set()
-
-            for chunk in reranked_chunks:
-                chunk_id = chunk["original_chunk_id"]
-                if chunk_id and chunk_id not in seen_chunks:
-                    seen_chunks.add(chunk_id)
-                    final_results.append(chunk)
-
-                if len(final_results) >= final_top_k:
-                    break
-
-            logger.info(f"Reranked {len(documents)} docs down to top {len(final_results)}.")
-            # print(final_results)
-            return final_results
-
+            if enable_reranker:
+                return await self._aquery_with_reranker(
+                    collection, query_texts, final_top_k
+                )
+            else:
+                return await self._aquery_vector_only(
+                    collection, query_texts, final_top_k, similarity_threshold
+                )
         except Exception as e:
-            logger.error(f"ChromaDB query error: {e}, {traceback.format_exc()}")
+            logger.error(f"ChromaDB query error: {e}\n{traceback.format_exc()}")
             return []
 
-    # async def aquery(self, db_id: str ,query_text: str = "" ,img_path: str = "",query_desc: str = "", **kwargs) -> list[dict]:
-    #     """异步查询ChromaDB集合"""
-    #     try:
-    #         # 获取文本集合和图片集合
-    #         text_collection = await self._get_chroma_collection(db_id)
-    #         image_collection = await self._get_image_chroma_collection(db_id)
-    #         if not text_collection and not image_collection:
-    #             raise Exception(f"No collections found for db_id: {db_id}")
+    async def _aquery_vector_only(
+        self,
+        collection: Any,
+        query_texts: list[str],
+        top_k: int,
+        similarity_threshold: float,
+    ) -> list[dict]:
+        """仅向量相似度召回，按分数过滤后返回 top_k。"""
+        raw = await asyncio.to_thread(
+            collection.query,
+            query_texts=query_texts,
+            n_results=top_k,
+            include=["documents", "metadatas", "distances"],
+        )
+        documents = raw["documents"][0] if raw.get("documents") else []
+        metadatas = raw["metadatas"][0] if raw.get("metadatas") else []
+        distances = raw["distances"][0] if raw.get("distances") else []
 
-    #         # 处理查询参数
-    #         top_k = kwargs.get("top_k", 10)
-    #         similarity_threshold = kwargs.get("similarity_threshold", 0.0)
+        results: list[dict] = []
+        seen: set[str] = set()
+        for i, doc in enumerate(documents):
+            if not doc:
+                continue
+            meta = (metadatas[i] if i < len(metadatas) else {}) or {}
+            if "full_doc_id" in meta:
+                meta["file_id"] = meta.pop("full_doc_id")
+            distance = distances[i] if i < len(distances) else 1.0
+            score = float(1.0 - distance)
+            if score < similarity_threshold:
+                continue
+            chunk_id = meta.get("chunk_id")
+            if chunk_id and chunk_id in seen:
+                continue
+            if chunk_id:
+                seen.add(chunk_id)
+            results.append({"content": doc, "metadata": meta, "score": score})
 
-    #         results = []
+        results.sort(key=lambda x: x["score"], reverse=True)
+        return results[:top_k]
 
-    #         # 查询文本集合
-    #         if text_collection and query_text:
-    #             text_results = text_collection.query(
-    #                 query_texts=[query_text],
-    #                 n_results=top_k,
-    #                 include=["documents", "metadatas", "distances"]
-    #             )
-                
-    #             if text_results and text_results.get("documents"):
-    #                 for i, doc in enumerate(text_results["documents"][0]):
-    #                     if doc:
-    #                         result = {
-    #                             "content": doc,
-    #                             "metadata": text_results["metadatas"][0][i] if text_results.get("metadatas") else {},
-    #                             "score": 1-text_results["distances"][0][i] if text_results.get("distances") else 0.0
-    #                         }
-    #                         results.append(result)
+    async def _aquery_with_reranker(
+        self,
+        collection: Any,
+        query_texts: list[str],
+        final_top_k: int,
+    ) -> list[dict]:
+        """先大倍率向量召回，再用 BGEReranker 精排后返回 final_top_k。"""
+        recall_k = final_top_k * 4
 
-    #         # 通过图片embedding查询
-    #         if image_collection and img_path:
-    #             # 获取图片嵌入
-    #             image_embedding = get_image_embedding(img_path)
-    #             if image_embedding is not None and len(image_embedding) > 0:
-    #                 image_results = image_collection.query(
-    #                     query_embeddings=[image_embedding],
-    #                     n_results=top_k,
-    #                     include=["documents", "metadatas", "distances"]
-    #                 )
-                    
-    #                 if image_results and image_results.get("documents"):
-    #                     for i, doc in enumerate(image_results["documents"][0]):
-    #                         if doc:
-    #                             result = {
-    #                                 "content": doc,
-    #                                 "metadata": image_results["metadatas"][0][i] if image_results.get("metadatas") else {},
-    #                                 "score": 1-image_results["distances"][0][i] if image_results.get("distances") else 0.0
-    #                             }
-    #                             results.append(result)
-    #         # 通过描述embedding查询
-    #         if image_collection and query_desc:
-    #             # 获取描述嵌入
-    #             desc_embedding = get_text_embedding(query_desc)
-    #             if desc_embedding is not None and len(desc_embedding) > 0:
-    #                 desc_results = image_collection.query(
-    #                     query_embeddings=[desc_embedding],
-    #                     n_results=top_k,
-    #                     include=["documents", "metadatas", "distances"]
-    #                 )
-                    
-    #                 if desc_results and desc_results.get("documents"):
-    #                     for i, doc in enumerate(desc_results["documents"][0]):
-    #                         if doc:
-    #                             result = {
-    #                                 "content": doc,
-    #                                 "metadata": desc_results["metadatas"][0][i] if desc_results.get("metadatas") else {},
-    #                                 "score": 1-desc_results["distances"][0][i] if desc_results.get("distances") else 0.0    
-    #                             }
-    #                             results.append(result)
-    #         # 去重和排序（先排序，再去重）
-    #         seen_chunks = set()
-    #         unique_results = []
+        raw = await asyncio.to_thread(
+            collection.query,
+            query_texts=query_texts,
+            n_results=recall_k,
+            include=["documents", "metadatas", "distances"],
+        )
+        documents = raw["documents"][0] if raw.get("documents") else []
+        metadatas = raw["metadatas"][0] if raw.get("metadatas") else []
 
-    #         # 按距离排序（距离越小越相似）
-    #         results.sort(key=lambda x: 1-x["score"])
+        if not documents:
+            return []
 
-    #         for result in results:
-    #             chunk_id = result["metadata"].get("chunk_id")
-    #             if chunk_id and chunk_id not in seen_chunks:
-    #                 seen_chunks.add(chunk_id)
-    #                 unique_results.append(result)
+        reranker = _get_reranker()
+        scores: list[float] = await asyncio.to_thread(
+            reranker.rerank, query_texts[0], documents
+        )
 
-            
+        ranked: list[dict] = []
+        for i, doc in enumerate(documents):
+            meta = (metadatas[i] if i < len(metadatas) else {}) or {}
+            if "full_doc_id" in meta:
+                meta["file_id"] = meta.pop("full_doc_id")
+            ranked.append({
+                "content": doc,
+                "metadata": meta,
+                "score": float(scores[i]),
+                "original_chunk_id": meta.get("chunk_id"),
+            })
 
-    #         # 应用相似度过滤
-    #         filtered_results = []
-            
-    #         for result in unique_results:
-    #             # 将距离转换为相似度（1 - 距离）
-    #             similarity = result["score"]
-    #             if similarity >= similarity_threshold:
-    #                 result["similarity"] = similarity
-    #                 filtered_results.append(result)
+        ranked.sort(key=lambda x: x["score"], reverse=True)
 
-    #         return filtered_results[:top_k]
-    #     except Exception as e:
-    #         logger.error(f"Error querying ChromaDB for db_id {db_id}: {e}")
-    #         return []
+        results: list[dict] = []
+        seen: set[str] = set()
+        for chunk in ranked:
+            chunk_id = chunk.get("original_chunk_id")
+            if chunk_id and chunk_id in seen:
+                continue
+            if chunk_id:
+                seen.add(chunk_id)
+            results.append(chunk)
+            if len(results) >= final_top_k:
+                break
 
+        logger.info(f"Reranked {len(documents)} docs → top {len(results)}")
+        return results
+
+    # ------------------------------------------------------------------
+    # 文件管理
+    # ------------------------------------------------------------------
 
     async def delete_file(self, db_id: str, file_id: str) -> None:
-        """删除文件"""
+        """从 ChromaDB 集合及 files_meta 中删除文件及其所有 chunks。"""
         collection = await self._get_chroma_collection(db_id)
         if collection:
             try:
-                # 查找所有相关的chunks
                 results = collection.get(where={"full_doc_id": file_id}, include=["metadatas"])
-
-                # 删除所有相关chunks
                 if results and results.get("ids"):
                     collection.delete(ids=results["ids"])
                     logger.info(f"Deleted {len(results['ids'])} chunks for file {file_id}")
-
             except Exception as e:
                 logger.error(f"Error deleting file {file_id} from ChromaDB: {e}")
 
-        # 删除文件记录
         if file_id in self.files_meta:
             del self.files_meta[file_id]
             self._save_metadata()
 
     async def get_file_basic_info(self, db_id: str, file_id: str) -> dict:
-        """获取文件基本信息（仅元数据）"""
+        """获取文件基本元数据。"""
         if file_id not in self.files_meta:
-            raise Exception(f"File not found: {file_id}")
-
+            raise FileNotFoundError(f"File not found: {file_id}")
         return {"meta": self.files_meta[file_id]}
 
     async def get_file_content(self, db_id: str, file_id: str) -> dict:
-        """获取文件内容信息（chunks和lines）"""
+        """获取文件 chunks（按 chunk_order_index 排序）。"""
         if file_id not in self.files_meta:
-            raise Exception(f"File not found: {file_id}")
+            raise FileNotFoundError(f"File not found: {file_id}")
 
-        # 使用 ChromaDB 获取chunks
-        content_info = {"lines": []}
+        content_info: dict = {"lines": []}
         collection = await self._get_chroma_collection(db_id)
-        if collection:
-            try:
-                # 获取文档的所有chunks
-                results = collection.get(where={"full_doc_id": file_id}, include=["documents", "metadatas"])
+        if not collection:
+            return content_info
 
-                # 构建chunks数据
-                doc_chunks = []
-                if results and results.get("ids"):
-                    for i, chunk_id in enumerate(results["ids"]):
-                        chunk_data = {
-                            "id": chunk_id,
-                            "content": results["documents"][i] if i < len(results["documents"]) else "",
-                            "metadata": results["metadatas"][i] if i < len(results["metadatas"]) else {},
-                            "chunk_order_index": results["metadatas"][i].get("chunk_index", i)
-                            if i < len(results["metadatas"])
-                            else i,
-                        }
-                        doc_chunks.append(chunk_data)
+        try:
+            results = collection.get(
+                where={"full_doc_id": file_id},
+                include=["documents", "metadatas"],
+            )
+            doc_chunks: list[dict] = []
+            if results and results.get("ids"):
+                for i, chunk_id in enumerate(results["ids"]):
+                    meta_i = results["metadatas"][i] if i < len(results["metadatas"]) else {}
+                    doc_chunks.append({
+                        "id": chunk_id,
+                        "content": results["documents"][i] if i < len(results["documents"]) else "",
+                        "metadata": meta_i,
+                        "chunk_order_index": meta_i.get("chunk_index", i),
+                    })
 
-                # 按 chunk_order_index 排序
-                doc_chunks.sort(key=lambda x: x.get("chunk_order_index", 0))
-                content_info["lines"] = doc_chunks
-                return content_info
-
-            except Exception as e:
-                logger.error(f"Failed to get file content from ChromaDB: {e}")
-                content_info["lines"] = []
-                return content_info
+            doc_chunks.sort(key=lambda x: x.get("chunk_order_index", 0))
+            content_info["lines"] = doc_chunks
+        except Exception as e:
+            logger.error(f"Failed to get file content from ChromaDB: {e}")
 
         return content_info
 
     async def get_file_info(self, db_id: str, file_id: str) -> dict:
-        """获取文件完整信息（基本信息+内容信息）- 保持向后兼容"""
+        """获取文件完整信息（基本信息 + chunks）- 保持向后兼容。"""
         if file_id not in self.files_meta:
-            raise Exception(f"File not found: {file_id}")
-
-        # 合并基本信息和内容信息
-        basic_info = await self.get_file_basic_info(db_id, file_id)
-        content_info = await self.get_file_content(db_id, file_id)
-
-        return {**basic_info, **content_info}
+            raise FileNotFoundError(f"File not found: {file_id}")
+        basic = await self.get_file_basic_info(db_id, file_id)
+        content = await self.get_file_content(db_id, file_id)
+        return {**basic, **content}

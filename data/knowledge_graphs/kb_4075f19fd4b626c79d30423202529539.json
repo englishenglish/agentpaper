@@ -1,0 +1,1585 @@
+{
+  "db_id": "kb_4075f19fd4b626c79d30423202529539",
+  "nodes": {
+    "paper:2506.22486v1": {
+      "id": "paper:2506.22486v1",
+      "type": "Paper",
+      "label": "Hallucination Detection with Small Language Models",
+      "norm_label": "hallucination detection with small language models"
+    },
+    "method:integrated multiple small language models": {
+      "id": "method:integrated multiple small language models",
+      "type": "Method",
+      "label": "integrated multiple small language models",
+      "norm_label": "integrated multiple small language models"
+    },
+    "task:尽管大型语言模型（llms）在各种任务中表现出色，但它们倾向于生成不准确的信息（称为‘幻觉’），这在实际应用中可能削弱了llms的可靠性，尤其是在问答场景中。": {
+      "id": "task:尽管大型语言模型（llms）在各种任务中表现出色，但它们倾向于生成不准确的信息（称为‘幻觉’），这在实际应用中可能削弱了llms的可靠性，尤其是在问答场景中。",
+      "type": "Task",
+      "label": "尽管大型语言模型（LLMs）在各种任务中表现出色，但它们倾向于生成不准确的信息（称为‘幻觉’），这在实际应用中可能削弱了LLMs的可靠性，尤其是在问答场景中。",
+      "norm_label": "尽管大型语言模型（llms）在各种任务中表现出色，但它们倾向于生成不准确的信息（称为‘幻觉’），这在实际应用中可能削弱了llms的可靠性，尤其是在问答场景中。"
+    },
+    "dataset:100多组问题、答案和上下文，包括完全正确的句子和部分正确的句子": {
+      "id": "dataset:100多组问题、答案和上下文，包括完全正确的句子和部分正确的句子",
+      "type": "Dataset",
+      "label": "100多组问题、答案和上下文，包括完全正确的句子和部分正确的句子",
+      "norm_label": "100多组问题、答案和上下文，包括完全正确的句子和部分正确的句子"
+    },
+    "metric:f1": {
+      "id": "metric:f1",
+      "type": "Metric",
+      "label": "F1",
+      "norm_label": "f1"
+    },
+    "contribution:提出了一种使用多个小型语言模型进行验证的框架。": {
+      "id": "contribution:提出了一种使用多个小型语言模型进行验证的框架。",
+      "type": "Contribution",
+      "label": "提出了一种使用多个小型语言模型进行验证的框架。",
+      "norm_label": "提出了一种使用多个小型语言模型进行验证的框架。"
+    },
+    "contribution:提出了一种算法，用于使用不同的小型语言模型评分细化后的响应。": {
+      "id": "contribution:提出了一种算法，用于使用不同的小型语言模型评分细化后的响应。",
+      "type": "Contribution",
+      "label": "提出了一种算法，用于使用不同的小型语言模型评分细化后的响应。",
+      "norm_label": "提出了一种算法，用于使用不同的小型语言模型评分细化后的响应。"
+    },
+    "contribution:准备了一个验证提出的框架的数据集，表明比基线提高了10 的f1分数": {
+      "id": "contribution:准备了一个验证提出的框架的数据集，表明比基线提高了10 的f1分数",
+      "type": "Contribution",
+      "label": "准备了一个验证提出的框架的数据集，表明比基线提高了10%的F1分数",
+      "norm_label": "准备了一个验证提出的框架的数据集，表明比基线提高了10 的f1分数"
+    },
+    "paper:2503.21676v2": {
+      "id": "paper:2503.21676v2",
+      "type": "Paper",
+      "label": "How do language models learn facts? Dynamics, curricula and hallucinations",
+      "norm_label": "how do language models learn facts dynamics curricula and hallucinations"
+    },
+    "task:尽管大型语言模型在预训练过程中积累了大量知识，但其知识获取动态机制仍然不明确。": {
+      "id": "task:尽管大型语言模型在预训练过程中积累了大量知识，但其知识获取动态机制仍然不明确。",
+      "type": "Task",
+      "label": "尽管大型语言模型在预训练过程中积累了大量知识，但其知识获取动态机制仍然不明确。",
+      "norm_label": "尽管大型语言模型在预训练过程中积累了大量知识，但其知识获取动态机制仍然不明确。"
+    },
+    "dataset:合成事实记忆任务": {
+      "id": "dataset:合成事实记忆任务",
+      "type": "Dataset",
+      "label": "合成事实记忆任务",
+      "norm_label": "合成事实记忆任务"
+    },
+    "contribution:揭示了语言模型学习知识的三个阶段及其背后的机制。": {
+      "id": "contribution:揭示了语言模型学习知识的三个阶段及其背后的机制。",
+      "type": "Contribution",
+      "label": "揭示了语言模型学习知识的三个阶段及其背后的机制。",
+      "norm_label": "揭示了语言模型学习知识的三个阶段及其背后的机制。"
+    },
+    "contribution:发现数据分布显著影响学习动态，不平衡数据导致较短的学习平台。": {
+      "id": "contribution:发现数据分布显著影响学习动态，不平衡数据导致较短的学习平台。",
+      "type": "Contribution",
+      "label": "发现数据分布显著影响学习动态，不平衡数据导致较短的学习平台。",
+      "norm_label": "发现数据分布显著影响学习动态，不平衡数据导致较短的学习平台。"
+    },
+    "contribution:指出知识学习与幻觉并存，并通过微调整合新知识具有挑战性。": {
+      "id": "contribution:指出知识学习与幻觉并存，并通过微调整合新知识具有挑战性。",
+      "type": "Contribution",
+      "label": "指出知识学习与幻觉并存，并通过微调整合新知识具有挑战性。",
+      "norm_label": "指出知识学习与幻觉并存，并通过微调整合新知识具有挑战性。"
+    },
+    "paper:2409.11353v3": {
+      "id": "paper:2409.11353v3",
+      "type": "Paper",
+      "label": "THaMES: An End-to-End Tool for Hallucination Mitigation and Evaluation in Large Language Models",
+      "norm_label": "thames an end-to-end tool for hallucination mitigation and evaluation in large language models"
+    },
+    "method:thames": {
+      "id": "method:thames",
+      "type": "Method",
+      "label": "THaMES",
+      "norm_label": "thames"
+    },
+    "task:尽管存在消除和检测大语言模型（llms）中的幻觉的现有方法，但这些方法通常是孤立的，且缺乏标准化的工作流程以满足特定领域的需要。": {
+      "id": "task:尽管存在消除和检测大语言模型（llms）中的幻觉的现有方法，但这些方法通常是孤立的，且缺乏标准化的工作流程以满足特定领域的需要。",
+      "type": "Task",
+      "label": "尽管存在消除和检测大语言模型（LLMs）中的幻觉的现有方法，但这些方法通常是孤立的，且缺乏标准化的工作流程以满足特定领域的需要。",
+      "norm_label": "尽管存在消除和检测大语言模型（llms）中的幻觉的现有方法，但这些方法通常是孤立的，且缺乏标准化的工作流程以满足特定领域的需要。"
+    },
+    "dataset:null": {
+      "id": "dataset:null",
+      "type": "Dataset",
+      "label": "null",
+      "norm_label": "null"
+    },
+    "contribution:提出了一个集成框架 thames，用于评估和减轻大语言模型中的幻觉。": {
+      "id": "contribution:提出了一个集成框架 thames，用于评估和减轻大语言模型中的幻觉。",
+      "type": "Contribution",
+      "label": "提出了一个集成框架 THaMES，用于评估和减轻大语言模型中的幻觉。",
+      "norm_label": "提出了一个集成框架 thames，用于评估和减轻大语言模型中的幻觉。"
+    },
+    "contribution:thames 提供了自动测试集生成、多维基准测试和适应性缓解策略。": {
+      "id": "contribution:thames 提供了自动测试集生成、多维基准测试和适应性缓解策略。",
+      "type": "Contribution",
+      "label": "THaMES 提供了自动测试集生成、多维基准测试和适应性缓解策略。",
+      "norm_label": "thames 提供了自动测试集生成、多维基准测试和适应性缓解策略。"
+    },
+    "contribution:通过实验证明了不同 icl、rag 和 peft 策略在不同 llms 中的有效性。": {
+      "id": "contribution:通过实验证明了不同 icl、rag 和 peft 策略在不同 llms 中的有效性。",
+      "type": "Contribution",
+      "label": "通过实验证明了不同 ICL、RAG 和 PEFT 策略在不同 LLMs 中的有效性。",
+      "norm_label": "通过实验证明了不同 icl、rag 和 peft 策略在不同 llms 中的有效性。"
+    },
+    "paper:2511.06073v1": {
+      "id": "paper:2511.06073v1",
+      "type": "Paper",
+      "label": "Stemming Hallucination in Language Models Using a Licensing Oracle",
+      "norm_label": "stemming hallucination in language models using a licensing oracle"
+    },
+    "method:licensing oracle": {
+      "id": "method:licensing oracle",
+      "type": "Method",
+      "label": "Licensing Oracle",
+      "norm_label": "licensing oracle"
+    },
+    "task:尽管语言模型在自然语言生成方面表现出色，但它们仍然容易出现不受事实支持的陈述（幻觉），即使生成的响应在语法上是正确的。": {
+      "id": "task:尽管语言模型在自然语言生成方面表现出色，但它们仍然容易出现不受事实支持的陈述（幻觉），即使生成的响应在语法上是正确的。",
+      "type": "Task",
+      "label": "尽管语言模型在自然语言生成方面表现出色，但它们仍然容易出现不受事实支持的陈述（幻觉），即使生成的响应在语法上是正确的。",
+      "norm_label": "尽管语言模型在自然语言生成方面表现出色，但它们仍然容易出现不受事实支持的陈述（幻觉），即使生成的响应在语法上是正确的。"
+    },
+    "dataset:s-emanuilov rivers-qa 17 726 q a pairs": {
+      "id": "dataset:s-emanuilov rivers-qa 17 726 q a pairs",
+      "type": "Dataset",
+      "label": "S-emanuilov/rivers-qa (17,726 Q&A pairs)",
+      "norm_label": "s-emanuilov rivers-qa 17 726 q a pairs"
+    },
+    "dataset:s-emanuilov rivers-knowledge-graph 118 047 triples": {
+      "id": "dataset:s-emanuilov rivers-knowledge-graph 118 047 triples",
+      "type": "Dataset",
+      "label": "S-emanuilov/rivers-knowledge-graph (118,047 triples)",
+      "norm_label": "s-emanuilov rivers-knowledge-graph 118 047 triples"
+    },
+    "metric:accuracy": {
+      "id": "metric:accuracy",
+      "type": "Metric",
+      "label": "Accuracy",
+      "norm_label": "accuracy"
+    },
+    "metric:abstention precision ap": {
+      "id": "metric:abstention precision ap",
+      "type": "Metric",
+      "label": "Abstention Precision (AP)",
+      "norm_label": "abstention precision ap"
+    },
+    "metric:false answer rate on non-entailed claims far-ne": {
+      "id": "metric:false answer rate on non-entailed claims far-ne",
+      "type": "Metric",
+      "label": "False Answer Rate on Non-Entailed Claims (FAR-NE)",
+      "norm_label": "false answer rate on non-entailed claims far-ne"
+    },
+    "metric:constraint violation rejection rate cvrr": {
+      "id": "metric:constraint violation rejection rate cvrr",
+      "type": "Metric",
+      "label": "Constraint Violation Rejection Rate (CVRR)",
+      "norm_label": "constraint violation rejection rate cvrr"
+    },
+    "metric:licensed answer accuracy la": {
+      "id": "metric:licensed answer accuracy la",
+      "type": "Metric",
+      "label": "Licensed Answer Accuracy (LA)",
+      "norm_label": "licensed answer accuracy la"
+    },
+    "contribution:对语言模型中幻觉问题提供了一个确定性解决方案，通过正式验证结构化知识图谱中的陈述来确保只有事实支持的声明生成。": {
+      "id": "contribution:对语言模型中幻觉问题提供了一个确定性解决方案，通过正式验证结构化知识图谱中的陈述来确保只有事实支持的声明生成。",
+      "type": "Contribution",
+      "label": "对语言模型中幻觉问题提供了一个确定性解决方案，通过正式验证结构化知识图谱中的陈述来确保只有事实支持的声明生成。",
+      "norm_label": "对语言模型中幻觉问题提供了一个确定性解决方案，通过正式验证结构化知识图谱中的陈述来确保只有事实支持的声明生成。"
+    },
+    "contribution:licensing oracle通过正式逻辑验证确保了生成的每个声明的逻辑一致性，为高度依赖事实正确性的领域提供了更好的保障。": {
+      "id": "contribution:licensing oracle通过正式逻辑验证确保了生成的每个声明的逻辑一致性，为高度依赖事实正确性的领域提供了更好的保障。",
+      "type": "Contribution",
+      "label": "Licensing Oracle通过正式逻辑验证确保了生成的每个声明的逻辑一致性，为高度依赖事实正确性的领域提供了更好的保障。",
+      "norm_label": "licensing oracle通过正式逻辑验证确保了生成的每个声明的逻辑一致性，为高度依赖事实正确性的领域提供了更好的保障。"
+    },
+    "contribution:通过在语言模型的生成过程中嵌入强制性验证门控，licensing oracle解决了传统的破解问题，并提供了无风险的陈述生成机制。": {
+      "id": "contribution:通过在语言模型的生成过程中嵌入强制性验证门控，licensing oracle解决了传统的破解问题，并提供了无风险的陈述生成机制。",
+      "type": "Contribution",
+      "label": "通过在语言模型的生成过程中嵌入强制性验证门控，Licensing Oracle解决了传统的破解问题，并提供了无风险的陈述生成机制。",
+      "norm_label": "通过在语言模型的生成过程中嵌入强制性验证门控，licensing oracle解决了传统的破解问题，并提供了无风险的陈述生成机制。"
+    },
+    "paper:2310.00259v3": {
+      "id": "paper:2310.00259v3",
+      "type": "Paper",
+      "label": "AutoHall: Automated Factuality Hallucination Dataset Generation for Large Language Models",
+      "norm_label": "autohall automated factuality hallucination dataset generation for large language models"
+    },
+    "method:autohall": {
+      "id": "method:autohall",
+      "type": "Method",
+      "label": "AutoHall",
+      "norm_label": "autohall"
+    },
+    "task:尽管大型语言模型（llms）广泛应用于各个领域但仍然难以避免事实幻觉，这阻碍了其可信度。": {
+      "id": "task:尽管大型语言模型（llms）广泛应用于各个领域但仍然难以避免事实幻觉，这阻碍了其可信度。",
+      "type": "Task",
+      "label": "尽管大型语言模型（LLMs）广泛应用于各个领域但仍然难以避免事实幻觉，这阻碍了其可信度。",
+      "norm_label": "尽管大型语言模型（llms）广泛应用于各个领域但仍然难以避免事实幻觉，这阻碍了其可信度。"
+    },
+    "contribution:提出了autohall方法以自动构建特定模型的幻觉数据集。": {
+      "id": "contribution:提出了autohall方法以自动构建特定模型的幻觉数据集。",
+      "type": "Contribution",
+      "label": "提出了AutoHall方法以自动构建特定模型的幻觉数据集。",
+      "norm_label": "提出了autohall方法以自动构建特定模型的幻觉数据集。"
+    },
+    "contribution:提出了一种基于自我矛盾的零资源、黑盒幻觉检测方法。": {
+      "id": "contribution:提出了一种基于自我矛盾的零资源、黑盒幻觉检测方法。",
+      "type": "Contribution",
+      "label": "提出了一种基于自我矛盾的零资源、黑盒幻觉检测方法。",
+      "norm_label": "提出了一种基于自我矛盾的零资源、黑盒幻觉检测方法。"
+    },
+    "contribution:通过分析数据集提供了对llm幻觉原因的理解": {
+      "id": "contribution:通过分析数据集提供了对llm幻觉原因的理解",
+      "type": "Contribution",
+      "label": "通过分析数据集提供了对LLM幻觉原因的理解",
+      "norm_label": "通过分析数据集提供了对llm幻觉原因的理解"
+    },
+    "task:hallucination detection": {
+      "id": "task:hallucination detection",
+      "type": "Task",
+      "label": "hallucination_detection",
+      "norm_label": "hallucination detection",
+      "description": ""
+    },
+    "method:smalllms": {
+      "id": "method:smalllms",
+      "type": "Method",
+      "label": "smallLMs",
+      "norm_label": "smalllms",
+      "description": ""
+    },
+    "model:llm": {
+      "id": "model:llm",
+      "type": "Model",
+      "label": "LLM",
+      "norm_label": "llm",
+      "description": ""
+    },
+    "concept:vectorized database": {
+      "id": "concept:vectorized database",
+      "type": "Concept",
+      "label": "vectorized_database",
+      "norm_label": "vectorized database",
+      "description": ""
+    },
+    "concept:rag": {
+      "id": "concept:rag",
+      "type": "Concept",
+      "label": "RAG",
+      "norm_label": "rag",
+      "description": ""
+    },
+    "task:question answering": {
+      "id": "task:question answering",
+      "type": "Task",
+      "label": "question_answering",
+      "norm_label": "question answering",
+      "description": ""
+    },
+    "metric:precision in f1": {
+      "id": "metric:precision in f1",
+      "type": "Metric",
+      "label": "precision_in_f1",
+      "norm_label": "precision in f1",
+      "description": ""
+    },
+    "dataset:dataset": {
+      "id": "dataset:dataset",
+      "type": "Dataset",
+      "label": "dataset",
+      "norm_label": "dataset",
+      "description": ""
+    },
+    "dataset:100 groups questions answers contexts": {
+      "id": "dataset:100 groups questions answers contexts",
+      "type": "Dataset",
+      "label": "100_groups_questions_answers_contexts",
+      "norm_label": "100 groups questions answers contexts",
+      "description": ""
+    },
+    "method:language models": {
+      "id": "method:language models",
+      "type": "Method",
+      "label": "Language Models",
+      "norm_label": "language models",
+      "description": ""
+    },
+    "task:factual recall task": {
+      "id": "task:factual recall task",
+      "type": "Task",
+      "label": "Factual Recall Task",
+      "norm_label": "factual recall task",
+      "description": ""
+    },
+    "concept:performance plateau": {
+      "id": "concept:performance plateau",
+      "type": "Concept",
+      "label": "Performance Plateau",
+      "norm_label": "performance plateau",
+      "description": ""
+    },
+    "concept:attention-based circuits": {
+      "id": "concept:attention-based circuits",
+      "type": "Concept",
+      "label": "Attention-Based Circuits",
+      "norm_label": "attention-based circuits",
+      "description": ""
+    },
+    "concept:imbalanced distributions": {
+      "id": "concept:imbalanced distributions",
+      "type": "Concept",
+      "label": "Imbalanced Distributions",
+      "norm_label": "imbalanced distributions",
+      "description": ""
+    },
+    "concept:knowledge acquisition": {
+      "id": "concept:knowledge acquisition",
+      "type": "Concept",
+      "label": "Knowledge Acquisition",
+      "norm_label": "knowledge acquisition",
+      "description": ""
+    },
+    "concept:data distribution": {
+      "id": "concept:data distribution",
+      "type": "Concept",
+      "label": "Data Distribution",
+      "norm_label": "data distribution",
+      "description": ""
+    },
+    "concept:hallucinations": {
+      "id": "concept:hallucinations",
+      "type": "Concept",
+      "label": "Hallucinations",
+      "norm_label": "hallucinations",
+      "description": ""
+    },
+    "dataset:synthetic fact memory task": {
+      "id": "dataset:synthetic fact memory task",
+      "type": "Dataset",
+      "label": "Synthetic Fact Memory Task",
+      "norm_label": "synthetic fact memory task",
+      "description": ""
+    },
+    "concept:hallucination": {
+      "id": "concept:hallucination",
+      "type": "Concept",
+      "label": "Hallucination",
+      "norm_label": "hallucination",
+      "description": ""
+    },
+    "method:in-context learning icl": {
+      "id": "method:in-context learning icl",
+      "type": "Method",
+      "label": "In-Context Learning (ICL)",
+      "norm_label": "in-context learning icl",
+      "description": ""
+    },
+    "method:retrieval augmented generation rag": {
+      "id": "method:retrieval augmented generation rag",
+      "type": "Method",
+      "label": "Retrieval Augmented Generation (RAG)",
+      "norm_label": "retrieval augmented generation rag",
+      "description": ""
+    },
+    "method:parameter-efficient fine-tuning peft": {
+      "id": "method:parameter-efficient fine-tuning peft",
+      "type": "Method",
+      "label": "Parameter-Efficient Fine-tuning (PEFT)",
+      "norm_label": "parameter-efficient fine-tuning peft",
+      "description": ""
+    },
+    "model:gpt-4o": {
+      "id": "model:gpt-4o",
+      "type": "Model",
+      "label": "GPT-4o",
+      "norm_label": "gpt-4o",
+      "description": ""
+    },
+    "model:llama-3.1-8b-instruct": {
+      "id": "model:llama-3.1-8b-instruct",
+      "type": "Model",
+      "label": "Llama-3.1-8B-Instruct",
+      "norm_label": "llama-3.1-8b-instruct",
+      "description": ""
+    },
+    "model:mistral-nemo": {
+      "id": "model:mistral-nemo",
+      "type": "Model",
+      "label": "Mistral-Nemo",
+      "norm_label": "mistral-nemo",
+      "description": ""
+    },
+    "dataset:academic papers": {
+      "id": "dataset:academic papers",
+      "type": "Dataset",
+      "label": "academic papers",
+      "norm_label": "academic papers",
+      "description": ""
+    },
+    "dataset:political news": {
+      "id": "dataset:political news",
+      "type": "Dataset",
+      "label": "political news",
+      "norm_label": "political news",
+      "description": ""
+    },
+    "dataset:wikipedia": {
+      "id": "dataset:wikipedia",
+      "type": "Dataset",
+      "label": "Wikipedia",
+      "norm_label": "wikipedia",
+      "description": ""
+    },
+    "model:language model": {
+      "id": "model:language model",
+      "type": "Model",
+      "label": "Language Model",
+      "norm_label": "language model",
+      "description": ""
+    },
+    "task:stemming hallucination": {
+      "id": "task:stemming hallucination",
+      "type": "Task",
+      "label": "Stemming Hallucination",
+      "norm_label": "stemming hallucination",
+      "description": ""
+    },
+    "concept:structured knowledge graph": {
+      "id": "concept:structured knowledge graph",
+      "type": "Concept",
+      "label": "Structured Knowledge Graph",
+      "norm_label": "structured knowledge graph",
+      "description": ""
+    },
+    "dataset:s-emanuilov rivers-qa": {
+      "id": "dataset:s-emanuilov rivers-qa",
+      "type": "Dataset",
+      "label": "S-emanuilov/rivers-qa",
+      "norm_label": "s-emanuilov rivers-qa",
+      "description": ""
+    },
+    "dataset:s-emanuilov rivers-knowledge-graph": {
+      "id": "dataset:s-emanuilov rivers-knowledge-graph",
+      "type": "Dataset",
+      "label": "S-emanuilov/rivers-knowledge-graph",
+      "norm_label": "s-emanuilov rivers-knowledge-graph",
+      "description": ""
+    },
+    "concept:fact-checking": {
+      "id": "concept:fact-checking",
+      "type": "Concept",
+      "label": "fact-checking",
+      "norm_label": "fact-checking",
+      "description": ""
+    },
+    "concept:self-contradiction": {
+      "id": "concept:self-contradiction",
+      "type": "Concept",
+      "label": "self-contradiction",
+      "norm_label": "self-contradiction",
+      "description": ""
+    }
+  },
+  "edges": [
+    {
+      "source": "paper:2506.22486v1",
+      "target": "method:integrated multiple small language models",
+      "type": "proposes",
+      "weight": 1.0
+    },
+    {
+      "source": "paper:2506.22486v1",
+      "target": "task:尽管大型语言模型（llms）在各种任务中表现出色，但它们倾向于生成不准确的信息（称为‘幻觉’），这在实际应用中可能削弱了llms的可靠性，尤其是在问答场景中。",
+      "type": "applied_to",
+      "weight": 0.8
+    },
+    {
+      "source": "method:integrated multiple small language models",
+      "target": "task:尽管大型语言模型（llms）在各种任务中表现出色，但它们倾向于生成不准确的信息（称为‘幻觉’），这在实际应用中可能削弱了llms的可靠性，尤其是在问答场景中。",
+      "type": "solves",
+      "weight": 0.95
+    },
+    {
+      "source": "paper:2506.22486v1",
+      "target": "dataset:100多组问题、答案和上下文，包括完全正确的句子和部分正确的句子",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "method:integrated multiple small language models",
+      "target": "dataset:100多组问题、答案和上下文，包括完全正确的句子和部分正确的句子",
+      "type": "evaluates_on",
+      "weight": 0.9
+    },
+    {
+      "source": "method:integrated multiple small language models",
+      "target": "metric:f1",
+      "type": "achieves",
+      "weight": 0.85
+    },
+    {
+      "source": "paper:2506.22486v1",
+      "target": "contribution:提出了一种使用多个小型语言模型进行验证的框架。",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "method:integrated multiple small language models",
+      "target": "contribution:提出了一种使用多个小型语言模型进行验证的框架。",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:2506.22486v1",
+      "target": "contribution:提出了一种算法，用于使用不同的小型语言模型评分细化后的响应。",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "method:integrated multiple small language models",
+      "target": "contribution:提出了一种算法，用于使用不同的小型语言模型评分细化后的响应。",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:2506.22486v1",
+      "target": "contribution:准备了一个验证提出的框架的数据集，表明比基线提高了10 的f1分数",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "method:integrated multiple small language models",
+      "target": "contribution:准备了一个验证提出的框架的数据集，表明比基线提高了10 的f1分数",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:2503.21676v2",
+      "target": "task:尽管大型语言模型在预训练过程中积累了大量知识，但其知识获取动态机制仍然不明确。",
+      "type": "applied_to",
+      "weight": 0.8
+    },
+    {
+      "source": "paper:2503.21676v2",
+      "target": "dataset:合成事实记忆任务",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "paper:2503.21676v2",
+      "target": "contribution:揭示了语言模型学习知识的三个阶段及其背后的机制。",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "paper:2503.21676v2",
+      "target": "contribution:发现数据分布显著影响学习动态，不平衡数据导致较短的学习平台。",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "paper:2503.21676v2",
+      "target": "contribution:指出知识学习与幻觉并存，并通过微调整合新知识具有挑战性。",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "paper:2409.11353v3",
+      "target": "method:thames",
+      "type": "proposes",
+      "weight": 1.0
+    },
+    {
+      "source": "paper:2409.11353v3",
+      "target": "task:尽管存在消除和检测大语言模型（llms）中的幻觉的现有方法，但这些方法通常是孤立的，且缺乏标准化的工作流程以满足特定领域的需要。",
+      "type": "applied_to",
+      "weight": 0.8
+    },
+    {
+      "source": "method:thames",
+      "target": "task:尽管存在消除和检测大语言模型（llms）中的幻觉的现有方法，但这些方法通常是孤立的，且缺乏标准化的工作流程以满足特定领域的需要。",
+      "type": "solves",
+      "weight": 0.95
+    },
+    {
+      "source": "paper:2409.11353v3",
+      "target": "dataset:null",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "method:thames",
+      "target": "dataset:null",
+      "type": "evaluates_on",
+      "weight": 0.9
+    },
+    {
+      "source": "method:thames",
+      "target": "dataset:null",
+      "type": "achieves",
+      "weight": 0.85
+    },
+    {
+      "source": "paper:2409.11353v3",
+      "target": "contribution:提出了一个集成框架 thames，用于评估和减轻大语言模型中的幻觉。",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "method:thames",
+      "target": "contribution:提出了一个集成框架 thames，用于评估和减轻大语言模型中的幻觉。",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:2409.11353v3",
+      "target": "contribution:thames 提供了自动测试集生成、多维基准测试和适应性缓解策略。",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "method:thames",
+      "target": "contribution:thames 提供了自动测试集生成、多维基准测试和适应性缓解策略。",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:2409.11353v3",
+      "target": "contribution:通过实验证明了不同 icl、rag 和 peft 策略在不同 llms 中的有效性。",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "method:thames",
+      "target": "contribution:通过实验证明了不同 icl、rag 和 peft 策略在不同 llms 中的有效性。",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:2511.06073v1",
+      "target": "method:licensing oracle",
+      "type": "proposes",
+      "weight": 1.0
+    },
+    {
+      "source": "paper:2511.06073v1",
+      "target": "task:尽管语言模型在自然语言生成方面表现出色，但它们仍然容易出现不受事实支持的陈述（幻觉），即使生成的响应在语法上是正确的。",
+      "type": "applied_to",
+      "weight": 0.8
+    },
+    {
+      "source": "method:licensing oracle",
+      "target": "task:尽管语言模型在自然语言生成方面表现出色，但它们仍然容易出现不受事实支持的陈述（幻觉），即使生成的响应在语法上是正确的。",
+      "type": "solves",
+      "weight": 0.95
+    },
+    {
+      "source": "paper:2511.06073v1",
+      "target": "dataset:s-emanuilov rivers-qa 17 726 q a pairs",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "method:licensing oracle",
+      "target": "dataset:s-emanuilov rivers-qa 17 726 q a pairs",
+      "type": "evaluates_on",
+      "weight": 0.9
+    },
+    {
+      "source": "paper:2511.06073v1",
+      "target": "dataset:s-emanuilov rivers-knowledge-graph 118 047 triples",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "method:licensing oracle",
+      "target": "dataset:s-emanuilov rivers-knowledge-graph 118 047 triples",
+      "type": "evaluates_on",
+      "weight": 0.9
+    },
+    {
+      "source": "method:licensing oracle",
+      "target": "metric:accuracy",
+      "type": "achieves",
+      "weight": 0.85
+    },
+    {
+      "source": "method:licensing oracle",
+      "target": "metric:abstention precision ap",
+      "type": "achieves",
+      "weight": 0.85
+    },
+    {
+      "source": "method:licensing oracle",
+      "target": "metric:false answer rate on non-entailed claims far-ne",
+      "type": "achieves",
+      "weight": 0.85
+    },
+    {
+      "source": "method:licensing oracle",
+      "target": "metric:constraint violation rejection rate cvrr",
+      "type": "achieves",
+      "weight": 0.85
+    },
+    {
+      "source": "method:licensing oracle",
+      "target": "metric:licensed answer accuracy la",
+      "type": "achieves",
+      "weight": 0.85
+    },
+    {
+      "source": "paper:2511.06073v1",
+      "target": "contribution:对语言模型中幻觉问题提供了一个确定性解决方案，通过正式验证结构化知识图谱中的陈述来确保只有事实支持的声明生成。",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "method:licensing oracle",
+      "target": "contribution:对语言模型中幻觉问题提供了一个确定性解决方案，通过正式验证结构化知识图谱中的陈述来确保只有事实支持的声明生成。",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:2511.06073v1",
+      "target": "contribution:licensing oracle通过正式逻辑验证确保了生成的每个声明的逻辑一致性，为高度依赖事实正确性的领域提供了更好的保障。",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "method:licensing oracle",
+      "target": "contribution:licensing oracle通过正式逻辑验证确保了生成的每个声明的逻辑一致性，为高度依赖事实正确性的领域提供了更好的保障。",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:2511.06073v1",
+      "target": "contribution:通过在语言模型的生成过程中嵌入强制性验证门控，licensing oracle解决了传统的破解问题，并提供了无风险的陈述生成机制。",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "method:licensing oracle",
+      "target": "contribution:通过在语言模型的生成过程中嵌入强制性验证门控，licensing oracle解决了传统的破解问题，并提供了无风险的陈述生成机制。",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:2310.00259v3",
+      "target": "method:autohall",
+      "type": "proposes",
+      "weight": 1.0
+    },
+    {
+      "source": "paper:2310.00259v3",
+      "target": "task:尽管大型语言模型（llms）广泛应用于各个领域但仍然难以避免事实幻觉，这阻碍了其可信度。",
+      "type": "applied_to",
+      "weight": 0.8
+    },
+    {
+      "source": "method:autohall",
+      "target": "task:尽管大型语言模型（llms）广泛应用于各个领域但仍然难以避免事实幻觉，这阻碍了其可信度。",
+      "type": "solves",
+      "weight": 0.95
+    },
+    {
+      "source": "paper:2310.00259v3",
+      "target": "dataset:null",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "method:autohall",
+      "target": "dataset:null",
+      "type": "evaluates_on",
+      "weight": 0.9
+    },
+    {
+      "source": "method:autohall",
+      "target": "dataset:null",
+      "type": "achieves",
+      "weight": 0.85
+    },
+    {
+      "source": "paper:2310.00259v3",
+      "target": "contribution:提出了autohall方法以自动构建特定模型的幻觉数据集。",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "method:autohall",
+      "target": "contribution:提出了autohall方法以自动构建特定模型的幻觉数据集。",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:2310.00259v3",
+      "target": "contribution:提出了一种基于自我矛盾的零资源、黑盒幻觉检测方法。",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "method:autohall",
+      "target": "contribution:提出了一种基于自我矛盾的零资源、黑盒幻觉检测方法。",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:2310.00259v3",
+      "target": "contribution:通过分析数据集提供了对llm幻觉原因的理解",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "method:autohall",
+      "target": "contribution:通过分析数据集提供了对llm幻觉原因的理解",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "method:smalllms",
+      "target": "concept:vectorized database",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "method:smalllms",
+      "target": "concept:rag",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "method:smalllms",
+      "target": "metric:precision in f1",
+      "type": "achieves",
+      "weight": 0.85
+    },
+    {
+      "source": "method:smalllms",
+      "target": "task:question answering",
+      "type": "applied_to",
+      "weight": 0.8
+    },
+    {
+      "source": "method:smalllms",
+      "target": "metric:precision in f1",
+      "type": "evaluates_on",
+      "weight": 0.9
+    },
+    {
+      "source": "method:smalllms",
+      "target": "dataset:100 groups questions answers contexts",
+      "type": "evaluates_on",
+      "weight": 0.9
+    },
+    {
+      "source": "dataset:100 groups questions answers contexts",
+      "target": "method:smalllms",
+      "type": "compared_with",
+      "weight": 0.7
+    },
+    {
+      "source": "dataset:100 groups questions answers contexts",
+      "target": "metric:precision in f1",
+      "type": "compared_with",
+      "weight": 0.7
+    },
+    {
+      "source": "method:language models",
+      "target": "task:factual recall task",
+      "type": "applied_to",
+      "weight": 0.8
+    },
+    {
+      "source": "method:language models",
+      "target": "concept:performance plateau",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "method:language models",
+      "target": "concept:attention-based circuits",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "method:language models",
+      "target": "concept:imbalanced distributions",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "method:language models",
+      "target": "concept:knowledge acquisition",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "method:language models",
+      "target": "concept:data distribution",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "method:language models",
+      "target": "concept:hallucinations",
+      "type": "achieves",
+      "weight": 0.85
+    },
+    {
+      "source": "method:language models",
+      "target": "dataset:synthetic fact memory task",
+      "type": "evaluates_on",
+      "weight": 0.9
+    },
+    {
+      "source": "method:thames",
+      "target": "model:llm",
+      "type": "evaluates_on",
+      "weight": 0.9
+    },
+    {
+      "source": "method:thames",
+      "target": "concept:hallucination",
+      "type": "improves",
+      "weight": 0.95
+    },
+    {
+      "source": "method:thames",
+      "target": "method:in-context learning icl",
+      "type": "compared_with",
+      "weight": 0.7
+    },
+    {
+      "source": "method:thames",
+      "target": "method:retrieval augmented generation rag",
+      "type": "compared_with",
+      "weight": 0.7
+    },
+    {
+      "source": "method:thames",
+      "target": "method:parameter-efficient fine-tuning peft",
+      "type": "compared_with",
+      "weight": 0.7
+    },
+    {
+      "source": "method:in-context learning icl",
+      "target": "model:gpt-4o",
+      "type": "achieves",
+      "weight": 0.85
+    },
+    {
+      "source": "method:retrieval augmented generation rag",
+      "target": "model:gpt-4o",
+      "type": "achieves",
+      "weight": 0.85
+    },
+    {
+      "source": "method:parameter-efficient fine-tuning peft",
+      "target": "model:llama-3.1-8b-instruct",
+      "type": "achieves",
+      "weight": 0.85
+    },
+    {
+      "source": "method:parameter-efficient fine-tuning peft",
+      "target": "model:mistral-nemo",
+      "type": "achieves",
+      "weight": 0.85
+    },
+    {
+      "source": "method:parameter-efficient fine-tuning peft",
+      "target": "dataset:academic papers",
+      "type": "achieves",
+      "weight": 0.85
+    },
+    {
+      "source": "method:parameter-efficient fine-tuning peft",
+      "target": "dataset:political news",
+      "type": "achieves",
+      "weight": 0.85
+    },
+    {
+      "source": "method:parameter-efficient fine-tuning peft",
+      "target": "dataset:wikipedia",
+      "type": "achieves",
+      "weight": 0.85
+    },
+    {
+      "source": "method:licensing oracle",
+      "target": "model:language model",
+      "type": "proposes",
+      "weight": 1.0
+    },
+    {
+      "source": "method:licensing oracle",
+      "target": "task:stemming hallucination",
+      "type": "improves",
+      "weight": 0.95
+    },
+    {
+      "source": "method:licensing oracle",
+      "target": "concept:structured knowledge graph",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "method:licensing oracle",
+      "target": "dataset:s-emanuilov rivers-qa",
+      "type": "evaluates_on",
+      "weight": 0.9
+    },
+    {
+      "source": "method:licensing oracle",
+      "target": "dataset:s-emanuilov rivers-knowledge-graph",
+      "type": "evaluates_on",
+      "weight": 0.9
+    },
+    {
+      "source": "model:language model",
+      "target": "method:licensing oracle",
+      "type": "applied_to",
+      "weight": 0.8
+    },
+    {
+      "source": "concept:structured knowledge graph",
+      "target": "method:licensing oracle",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "method:autohall",
+      "target": "concept:hallucination",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "method:autohall",
+      "target": "concept:fact-checking",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "method:autohall",
+      "target": "model:llm",
+      "type": "applied_to",
+      "weight": 0.8
+    },
+    {
+      "source": "method:autohall",
+      "target": "concept:self-contradiction",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "method:autohall",
+      "target": "model:llm",
+      "type": "achieves",
+      "weight": 0.85
+    }
+  ],
+  "paper_entities": {
+    "2506.22486v1": [
+      "paper:2506.22486v1",
+      "method:integrated multiple small language models",
+      "task:尽管大型语言模型（llms）在各种任务中表现出色，但它们倾向于生成不准确的信息（称为‘幻觉’），这在实际应用中可能削弱了llms的可靠性，尤其是在问答场景中。",
+      "dataset:100多组问题、答案和上下文，包括完全正确的句子和部分正确的句子",
+      "metric:f1",
+      "contribution:提出了一种使用多个小型语言模型进行验证的框架。",
+      "contribution:提出了一种算法，用于使用不同的小型语言模型评分细化后的响应。",
+      "contribution:准备了一个验证提出的框架的数据集，表明比基线提高了10 的f1分数",
+      "task:hallucination detection",
+      "method:smalllms",
+      "model:llm",
+      "concept:vectorized database",
+      "concept:rag",
+      "task:question answering",
+      "metric:precision in f1",
+      "dataset:dataset",
+      "dataset:100 groups questions answers contexts"
+    ],
+    "2503.21676v2": [
+      "paper:2503.21676v2",
+      "task:尽管大型语言模型在预训练过程中积累了大量知识，但其知识获取动态机制仍然不明确。",
+      "dataset:合成事实记忆任务",
+      "contribution:揭示了语言模型学习知识的三个阶段及其背后的机制。",
+      "contribution:发现数据分布显著影响学习动态，不平衡数据导致较短的学习平台。",
+      "contribution:指出知识学习与幻觉并存，并通过微调整合新知识具有挑战性。",
+      "method:language models",
+      "task:factual recall task",
+      "concept:performance plateau",
+      "concept:attention-based circuits",
+      "concept:imbalanced distributions",
+      "concept:knowledge acquisition",
+      "concept:data distribution",
+      "concept:hallucinations",
+      "dataset:synthetic fact memory task"
+    ],
+    "2409.11353v3": [
+      "paper:2409.11353v3",
+      "method:thames",
+      "task:尽管存在消除和检测大语言模型（llms）中的幻觉的现有方法，但这些方法通常是孤立的，且缺乏标准化的工作流程以满足特定领域的需要。",
+      "dataset:null",
+      "dataset:null",
+      "contribution:提出了一个集成框架 thames，用于评估和减轻大语言模型中的幻觉。",
+      "contribution:thames 提供了自动测试集生成、多维基准测试和适应性缓解策略。",
+      "contribution:通过实验证明了不同 icl、rag 和 peft 策略在不同 llms 中的有效性。",
+      "model:llm",
+      "concept:hallucination",
+      "method:in-context learning icl",
+      "method:retrieval augmented generation rag",
+      "method:parameter-efficient fine-tuning peft",
+      "model:gpt-4o",
+      "model:llama-3.1-8b-instruct",
+      "model:mistral-nemo",
+      "dataset:academic papers",
+      "dataset:political news",
+      "dataset:wikipedia"
+    ],
+    "2511.06073v1": [
+      "paper:2511.06073v1",
+      "method:licensing oracle",
+      "task:尽管语言模型在自然语言生成方面表现出色，但它们仍然容易出现不受事实支持的陈述（幻觉），即使生成的响应在语法上是正确的。",
+      "dataset:s-emanuilov rivers-qa 17 726 q a pairs",
+      "dataset:s-emanuilov rivers-knowledge-graph 118 047 triples",
+      "metric:accuracy",
+      "metric:abstention precision ap",
+      "metric:false answer rate on non-entailed claims far-ne",
+      "metric:constraint violation rejection rate cvrr",
+      "metric:licensed answer accuracy la",
+      "contribution:对语言模型中幻觉问题提供了一个确定性解决方案，通过正式验证结构化知识图谱中的陈述来确保只有事实支持的声明生成。",
+      "contribution:licensing oracle通过正式逻辑验证确保了生成的每个声明的逻辑一致性，为高度依赖事实正确性的领域提供了更好的保障。",
+      "contribution:通过在语言模型的生成过程中嵌入强制性验证门控，licensing oracle解决了传统的破解问题，并提供了无风险的陈述生成机制。",
+      "model:language model",
+      "task:stemming hallucination",
+      "concept:structured knowledge graph",
+      "dataset:s-emanuilov rivers-qa",
+      "dataset:s-emanuilov rivers-knowledge-graph"
+    ],
+    "2310.00259v3": [
+      "paper:2310.00259v3",
+      "method:autohall",
+      "task:尽管大型语言模型（llms）广泛应用于各个领域但仍然难以避免事实幻觉，这阻碍了其可信度。",
+      "dataset:null",
+      "dataset:null",
+      "contribution:提出了autohall方法以自动构建特定模型的幻觉数据集。",
+      "contribution:提出了一种基于自我矛盾的零资源、黑盒幻觉检测方法。",
+      "contribution:通过分析数据集提供了对llm幻觉原因的理解",
+      "concept:hallucination",
+      "concept:fact-checking",
+      "model:llm",
+      "concept:self-contradiction"
+    ]
+  },
+  "entity_aliases": {
+    "hallucination detection with small language models": "paper:2506.22486v1",
+    "integrated multiple small language models": "method:integrated multiple small language models",
+    "尽管大型语言模型（llms）在各种任务中表现出色，但它们倾向于生成不准确的信息（称为‘幻觉’），这在实际应用中可能削弱了llms的可靠性，尤其是在问答场景中。": "task:尽管大型语言模型（llms）在各种任务中表现出色，但它们倾向于生成不准确的信息（称为‘幻觉’），这在实际应用中可能削弱了llms的可靠性，尤其是在问答场景中。",
+    "100多组问题、答案和上下文，包括完全正确的句子和部分正确的句子": "dataset:100多组问题、答案和上下文，包括完全正确的句子和部分正确的句子",
+    "f1": "metric:f1",
+    "提出了一种使用多个小型语言模型进行验证的框架。": "contribution:提出了一种使用多个小型语言模型进行验证的框架。",
+    "提出了一种算法，用于使用不同的小型语言模型评分细化后的响应。": "contribution:提出了一种算法，用于使用不同的小型语言模型评分细化后的响应。",
+    "准备了一个验证提出的框架的数据集，表明比基线提高了10 的f1分数": "contribution:准备了一个验证提出的框架的数据集，表明比基线提高了10 的f1分数",
+    "how do language models learn facts dynamics curricula and hallucinations": "paper:2503.21676v2",
+    "尽管大型语言模型在预训练过程中积累了大量知识，但其知识获取动态机制仍然不明确。": "task:尽管大型语言模型在预训练过程中积累了大量知识，但其知识获取动态机制仍然不明确。",
+    "合成事实记忆任务": "dataset:合成事实记忆任务",
+    "揭示了语言模型学习知识的三个阶段及其背后的机制。": "contribution:揭示了语言模型学习知识的三个阶段及其背后的机制。",
+    "发现数据分布显著影响学习动态，不平衡数据导致较短的学习平台。": "contribution:发现数据分布显著影响学习动态，不平衡数据导致较短的学习平台。",
+    "指出知识学习与幻觉并存，并通过微调整合新知识具有挑战性。": "contribution:指出知识学习与幻觉并存，并通过微调整合新知识具有挑战性。",
+    "thames an end-to-end tool for hallucination mitigation and evaluation in large language models": "paper:2409.11353v3",
+    "thames": "method:thames",
+    "尽管存在消除和检测大语言模型（llms）中的幻觉的现有方法，但这些方法通常是孤立的，且缺乏标准化的工作流程以满足特定领域的需要。": "task:尽管存在消除和检测大语言模型（llms）中的幻觉的现有方法，但这些方法通常是孤立的，且缺乏标准化的工作流程以满足特定领域的需要。",
+    "null": "dataset:null",
+    "提出了一个集成框架 thames，用于评估和减轻大语言模型中的幻觉。": "contribution:提出了一个集成框架 thames，用于评估和减轻大语言模型中的幻觉。",
+    "thames 提供了自动测试集生成、多维基准测试和适应性缓解策略。": "contribution:thames 提供了自动测试集生成、多维基准测试和适应性缓解策略。",
+    "通过实验证明了不同 icl、rag 和 peft 策略在不同 llms 中的有效性。": "contribution:通过实验证明了不同 icl、rag 和 peft 策略在不同 llms 中的有效性。",
+    "stemming hallucination in language models using a licensing oracle": "paper:2511.06073v1",
+    "licensing oracle": "method:licensing oracle",
+    "尽管语言模型在自然语言生成方面表现出色，但它们仍然容易出现不受事实支持的陈述（幻觉），即使生成的响应在语法上是正确的。": "task:尽管语言模型在自然语言生成方面表现出色，但它们仍然容易出现不受事实支持的陈述（幻觉），即使生成的响应在语法上是正确的。",
+    "s-emanuilov rivers-qa 17 726 q a pairs": "dataset:s-emanuilov rivers-qa 17 726 q a pairs",
+    "s-emanuilov rivers-knowledge-graph 118 047 triples": "dataset:s-emanuilov rivers-knowledge-graph 118 047 triples",
+    "accuracy": "metric:accuracy",
+    "abstention precision ap": "metric:abstention precision ap",
+    "false answer rate on non-entailed claims far-ne": "metric:false answer rate on non-entailed claims far-ne",
+    "constraint violation rejection rate cvrr": "metric:constraint violation rejection rate cvrr",
+    "licensed answer accuracy la": "metric:licensed answer accuracy la",
+    "对语言模型中幻觉问题提供了一个确定性解决方案，通过正式验证结构化知识图谱中的陈述来确保只有事实支持的声明生成。": "contribution:对语言模型中幻觉问题提供了一个确定性解决方案，通过正式验证结构化知识图谱中的陈述来确保只有事实支持的声明生成。",
+    "licensing oracle通过正式逻辑验证确保了生成的每个声明的逻辑一致性，为高度依赖事实正确性的领域提供了更好的保障。": "contribution:licensing oracle通过正式逻辑验证确保了生成的每个声明的逻辑一致性，为高度依赖事实正确性的领域提供了更好的保障。",
+    "通过在语言模型的生成过程中嵌入强制性验证门控，licensing oracle解决了传统的破解问题，并提供了无风险的陈述生成机制。": "contribution:通过在语言模型的生成过程中嵌入强制性验证门控，licensing oracle解决了传统的破解问题，并提供了无风险的陈述生成机制。",
+    "autohall automated factuality hallucination dataset generation for large language models": "paper:2310.00259v3",
+    "autohall": "method:autohall",
+    "尽管大型语言模型（llms）广泛应用于各个领域但仍然难以避免事实幻觉，这阻碍了其可信度。": "task:尽管大型语言模型（llms）广泛应用于各个领域但仍然难以避免事实幻觉，这阻碍了其可信度。",
+    "提出了autohall方法以自动构建特定模型的幻觉数据集。": "contribution:提出了autohall方法以自动构建特定模型的幻觉数据集。",
+    "提出了一种基于自我矛盾的零资源、黑盒幻觉检测方法。": "contribution:提出了一种基于自我矛盾的零资源、黑盒幻觉检测方法。",
+    "通过分析数据集提供了对llm幻觉原因的理解": "contribution:通过分析数据集提供了对llm幻觉原因的理解",
+    "hallucination detection": "task:hallucination detection",
+    "smalllms": "method:smalllms",
+    "llm": "model:llm",
+    "large language model": "model:llm",
+    "vectorized database": "concept:vectorized database",
+    "rag": "concept:rag",
+    "retrieval augmented generation": "concept:rag",
+    "question answering": "task:question answering",
+    "precision in f1": "metric:precision in f1",
+    "dataset": "dataset:dataset",
+    "100 groups questions answers contexts": "dataset:100 groups questions answers contexts",
+    "language models": "method:language models",
+    "factual recall task": "task:factual recall task",
+    "performance plateau": "concept:performance plateau",
+    "attention-based circuits": "concept:attention-based circuits",
+    "imbalanced distributions": "concept:imbalanced distributions",
+    "knowledge acquisition": "concept:knowledge acquisition",
+    "data distribution": "concept:data distribution",
+    "hallucinations": "concept:hallucinations",
+    "synthetic fact memory task": "dataset:synthetic fact memory task",
+    "hallucination": "concept:hallucination",
+    "in-context learning icl": "method:in-context learning icl",
+    "retrieval augmented generation rag": "method:retrieval augmented generation rag",
+    "parameter-efficient fine-tuning peft": "method:parameter-efficient fine-tuning peft",
+    "gpt-4o": "model:gpt-4o",
+    "llama-3.1-8b-instruct": "model:llama-3.1-8b-instruct",
+    "mistral-nemo": "model:mistral-nemo",
+    "academic papers": "dataset:academic papers",
+    "political news": "dataset:political news",
+    "wikipedia": "dataset:wikipedia",
+    "language model": "model:language model",
+    "stemming hallucination": "task:stemming hallucination",
+    "structured knowledge graph": "concept:structured knowledge graph",
+    "s-emanuilov rivers-qa": "dataset:s-emanuilov rivers-qa",
+    "s-emanuilov rivers-knowledge-graph": "dataset:s-emanuilov rivers-knowledge-graph",
+    "fact-checking": "concept:fact-checking",
+    "self-contradiction": "concept:self-contradiction"
+  },
+  "communities": {
+    "0": {
+      "nodes": [
+        "paper:2506.22486v1",
+        "method:integrated multiple small language models",
+        "task:尽管大型语言模型（llms）在各种任务中表现出色，但它们倾向于生成不准确的信息（称为‘幻觉’），这在实际应用中可能削弱了llms的可靠性，尤其是在问答场景中。",
+        "dataset:100多组问题、答案和上下文，包括完全正确的句子和部分正确的句子",
+        "metric:f1",
+        "contribution:提出了一种使用多个小型语言模型进行验证的框架。",
+        "contribution:提出了一种算法，用于使用不同的小型语言模型评分细化后的响应。",
+        "contribution:准备了一个验证提出的框架的数据集，表明比基线提高了10 的f1分数"
+      ],
+      "key_entities": [
+        "Hallucination Detection with Small Language Models",
+        "integrated multiple small language models",
+        "尽管大型语言模型（LLMs）在各种任务中表现出色，但它们倾向于生成不准确的信息（称为‘幻觉’），这在实际应用中可能削弱了LLMs的可靠性，尤其是在问答场景中。",
+        "100多组问题、答案和上下文，包括完全正确的句子和部分正确的句子",
+        "F1",
+        "提出了一种使用多个小型语言模型进行验证的框架。",
+        "提出了一种算法，用于使用不同的小型语言模型评分细化后的响应。",
+        "准备了一个验证提出的框架的数据集，表明比基线提高了10%的F1分数"
+      ],
+      "key_papers": [
+        "Hallucination Detection with Small Language Models"
+      ],
+      "dominant_types": [
+        "Contribution",
+        "Paper",
+        "Method"
+      ],
+      "semantic_tag": "Research Contributions Cluster",
+      "summary": "",
+      "community_name": "Research Contributions Cluster"
+    },
+    "1": {
+      "nodes": [
+        "paper:2503.21676v2",
+        "task:尽管大型语言模型在预训练过程中积累了大量知识，但其知识获取动态机制仍然不明确。",
+        "dataset:合成事实记忆任务",
+        "contribution:揭示了语言模型学习知识的三个阶段及其背后的机制。",
+        "contribution:发现数据分布显著影响学习动态，不平衡数据导致较短的学习平台。",
+        "contribution:指出知识学习与幻觉并存，并通过微调整合新知识具有挑战性。"
+      ],
+      "key_entities": [
+        "How do language models learn facts? Dynamics, curricula and hallucinations",
+        "尽管大型语言模型在预训练过程中积累了大量知识，但其知识获取动态机制仍然不明确。",
+        "合成事实记忆任务",
+        "揭示了语言模型学习知识的三个阶段及其背后的机制。",
+        "发现数据分布显著影响学习动态，不平衡数据导致较短的学习平台。",
+        "指出知识学习与幻觉并存，并通过微调整合新知识具有挑战性。"
+      ],
+      "key_papers": [
+        "How do language models learn facts? Dynamics, curricula and hallucinations"
+      ],
+      "dominant_types": [
+        "Contribution",
+        "Paper",
+        "Task"
+      ],
+      "semantic_tag": "Research Contributions Cluster",
+      "summary": "",
+      "community_name": "Research Contributions Cluster"
+    },
+    "2": {
+      "nodes": [
+        "paper:2409.11353v3",
+        "method:thames",
+        "task:尽管存在消除和检测大语言模型（llms）中的幻觉的现有方法，但这些方法通常是孤立的，且缺乏标准化的工作流程以满足特定领域的需要。",
+        "dataset:null",
+        "contribution:提出了一个集成框架 thames，用于评估和减轻大语言模型中的幻觉。",
+        "contribution:thames 提供了自动测试集生成、多维基准测试和适应性缓解策略。",
+        "contribution:通过实验证明了不同 icl、rag 和 peft 策略在不同 llms 中的有效性。",
+        "concept:hallucination"
+      ],
+      "key_entities": [
+        "THaMES: An End-to-End Tool for Hallucination Mitigation and Evaluation in Large Language Models",
+        "THaMES",
+        "尽管存在消除和检测大语言模型（LLMs）中的幻觉的现有方法，但这些方法通常是孤立的，且缺乏标准化的工作流程以满足特定领域的需要。",
+        "null",
+        "提出了一个集成框架 THaMES，用于评估和减轻大语言模型中的幻觉。",
+        "THaMES 提供了自动测试集生成、多维基准测试和适应性缓解策略。",
+        "通过实验证明了不同 ICL、RAG 和 PEFT 策略在不同 LLMs 中的有效性。",
+        "Hallucination"
+      ],
+      "key_papers": [
+        "THaMES: An End-to-End Tool for Hallucination Mitigation and Evaluation in Large Language Models"
+      ],
+      "dominant_types": [
+        "Contribution",
+        "Paper",
+        "Method"
+      ],
+      "semantic_tag": "Research Contributions Cluster",
+      "summary": "",
+      "community_name": "Research Contributions Cluster"
+    },
+    "3": {
+      "nodes": [
+        "paper:2511.06073v1",
+        "dataset:s-emanuilov rivers-qa 17 726 q a pairs",
+        "dataset:s-emanuilov rivers-knowledge-graph 118 047 triples",
+        "contribution:对语言模型中幻觉问题提供了一个确定性解决方案，通过正式验证结构化知识图谱中的陈述来确保只有事实支持的声明生成。",
+        "contribution:licensing oracle通过正式逻辑验证确保了生成的每个声明的逻辑一致性，为高度依赖事实正确性的领域提供了更好的保障。",
+        "contribution:通过在语言模型的生成过程中嵌入强制性验证门控，licensing oracle解决了传统的破解问题，并提供了无风险的陈述生成机制。"
+      ],
+      "key_entities": [
+        "Stemming Hallucination in Language Models Using a Licensing Oracle",
+        "S-emanuilov/rivers-qa (17,726 Q&A pairs)",
+        "S-emanuilov/rivers-knowledge-graph (118,047 triples)",
+        "对语言模型中幻觉问题提供了一个确定性解决方案，通过正式验证结构化知识图谱中的陈述来确保只有事实支持的声明生成。",
+        "Licensing Oracle通过正式逻辑验证确保了生成的每个声明的逻辑一致性，为高度依赖事实正确性的领域提供了更好的保障。",
+        "通过在语言模型的生成过程中嵌入强制性验证门控，Licensing Oracle解决了传统的破解问题，并提供了无风险的陈述生成机制。"
+      ],
+      "key_papers": [
+        "Stemming Hallucination in Language Models Using a Licensing Oracle"
+      ],
+      "dominant_types": [
+        "Contribution",
+        "Dataset",
+        "Paper"
+      ],
+      "semantic_tag": "Benchmark & Dataset Cluster",
+      "summary": "",
+      "community_name": "Benchmark & Dataset Cluster"
+    },
+    "4": {
+      "nodes": [
+        "method:licensing oracle",
+        "task:尽管语言模型在自然语言生成方面表现出色，但它们仍然容易出现不受事实支持的陈述（幻觉），即使生成的响应在语法上是正确的。",
+        "metric:accuracy",
+        "metric:abstention precision ap",
+        "metric:false answer rate on non-entailed claims far-ne",
+        "metric:constraint violation rejection rate cvrr",
+        "metric:licensed answer accuracy la",
+        "model:language model",
+        "task:stemming hallucination",
+        "concept:structured knowledge graph",
+        "dataset:s-emanuilov rivers-qa",
+        "dataset:s-emanuilov rivers-knowledge-graph",
+        "task:hallucination detection",
+        "dataset:dataset"
+      ],
+      "key_entities": [
+        "Licensing Oracle",
+        "尽管语言模型在自然语言生成方面表现出色，但它们仍然容易出现不受事实支持的陈述（幻觉），即使生成的响应在语法上是正确的。",
+        "Accuracy",
+        "Abstention Precision (AP)",
+        "False Answer Rate on Non-Entailed Claims (FAR-NE)",
+        "Constraint Violation Rejection Rate (CVRR)",
+        "Licensed Answer Accuracy (LA)",
+        "Language Model",
+        "Stemming Hallucination",
+        "Structured Knowledge Graph",
+        "S-emanuilov/rivers-qa",
+        "S-emanuilov/rivers-knowledge-graph"
+      ],
+      "key_papers": [],
+      "dominant_types": [
+        "Metric",
+        "Task",
+        "Dataset"
+      ],
+      "semantic_tag": "Task & Application Cluster",
+      "summary": "",
+      "community_name": "Task & Application Cluster"
+    },
+    "5": {
+      "nodes": [
+        "paper:2310.00259v3",
+        "method:autohall",
+        "task:尽管大型语言模型（llms）广泛应用于各个领域但仍然难以避免事实幻觉，这阻碍了其可信度。",
+        "contribution:提出了autohall方法以自动构建特定模型的幻觉数据集。",
+        "contribution:提出了一种基于自我矛盾的零资源、黑盒幻觉检测方法。",
+        "contribution:通过分析数据集提供了对llm幻觉原因的理解",
+        "model:llm",
+        "concept:fact-checking",
+        "concept:self-contradiction"
+      ],
+      "key_entities": [
+        "AutoHall: Automated Factuality Hallucination Dataset Generation for Large Language Models",
+        "AutoHall",
+        "尽管大型语言模型（LLMs）广泛应用于各个领域但仍然难以避免事实幻觉，这阻碍了其可信度。",
+        "提出了AutoHall方法以自动构建特定模型的幻觉数据集。",
+        "提出了一种基于自我矛盾的零资源、黑盒幻觉检测方法。",
+        "通过分析数据集提供了对LLM幻觉原因的理解",
+        "LLM",
+        "fact-checking",
+        "self-contradiction"
+      ],
+      "key_papers": [
+        "AutoHall: Automated Factuality Hallucination Dataset Generation for Large Language Models"
+      ],
+      "dominant_types": [
+        "Contribution",
+        "Concept",
+        "Paper"
+      ],
+      "semantic_tag": "Research Contributions Cluster",
+      "summary": "",
+      "community_name": "Research Contributions Cluster"
+    },
+    "6": {
+      "nodes": [
+        "method:smalllms",
+        "concept:vectorized database",
+        "concept:rag",
+        "task:question answering",
+        "metric:precision in f1",
+        "dataset:100 groups questions answers contexts"
+      ],
+      "key_entities": [
+        "smallLMs",
+        "vectorized_database",
+        "RAG",
+        "question_answering",
+        "precision_in_f1",
+        "100_groups_questions_answers_contexts"
+      ],
+      "key_papers": [],
+      "dominant_types": [
+        "Concept",
+        "Method",
+        "Task"
+      ],
+      "semantic_tag": "Language Model Cluster",
+      "summary": "",
+      "community_name": "Language Model Cluster"
+    },
+    "7": {
+      "nodes": [
+        "method:language models",
+        "task:factual recall task",
+        "concept:performance plateau",
+        "concept:attention-based circuits",
+        "concept:imbalanced distributions",
+        "concept:knowledge acquisition",
+        "concept:data distribution",
+        "concept:hallucinations",
+        "dataset:synthetic fact memory task"
+      ],
+      "key_entities": [
+        "Language Models",
+        "Factual Recall Task",
+        "Performance Plateau",
+        "Attention-Based Circuits",
+        "Imbalanced Distributions",
+        "Knowledge Acquisition",
+        "Data Distribution",
+        "Hallucinations",
+        "Synthetic Fact Memory Task"
+      ],
+      "key_papers": [],
+      "dominant_types": [
+        "Concept",
+        "Method",
+        "Task"
+      ],
+      "semantic_tag": "Language Model Cluster",
+      "summary": "",
+      "community_name": "Language Model Cluster"
+    },
+    "8": {
+      "nodes": [
+        "method:in-context learning icl",
+        "method:retrieval augmented generation rag",
+        "model:gpt-4o"
+      ],
+      "key_entities": [
+        "In-Context Learning (ICL)",
+        "Retrieval Augmented Generation (RAG)",
+        "GPT-4o"
+      ],
+      "key_papers": [],
+      "dominant_types": [
+        "Method",
+        "Model"
+      ],
+      "semantic_tag": "Language Model Cluster",
+      "summary": "",
+      "community_name": "Language Model Cluster"
+    },
+    "9": {
+      "nodes": [
+        "method:parameter-efficient fine-tuning peft",
+        "model:llama-3.1-8b-instruct",
+        "model:mistral-nemo",
+        "dataset:academic papers",
+        "dataset:political news",
+        "dataset:wikipedia"
+      ],
+      "key_entities": [
+        "Parameter-Efficient Fine-tuning (PEFT)",
+        "Llama-3.1-8B-Instruct",
+        "Mistral-Nemo",
+        "academic papers",
+        "political news",
+        "Wikipedia"
+      ],
+      "key_papers": [],
+      "dominant_types": [
+        "Dataset",
+        "Model",
+        "Method"
+      ],
+      "semantic_tag": "Benchmark & Dataset Cluster",
+      "summary": "",
+      "community_name": "Benchmark & Dataset Cluster"
+    }
+  },
+  "citation_graph": {},
+  "stats": {
+    "node_count": 75,
+    "edge_count": 99,
+    "node_type_count": {
+      "Paper": 5,
+      "Method": 9,
+      "Task": 9,
+      "Dataset": 13,
+      "Metric": 7,
+      "Contribution": 15,
+      "Model": 5,
+      "Concept": 12
+    },
+    "paper_count": 5,
+    "community_count": 0,
+    "citation_edge_count": 0
+  }
+}

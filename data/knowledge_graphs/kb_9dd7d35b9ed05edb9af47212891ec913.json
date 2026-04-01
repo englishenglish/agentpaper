@@ -1,0 +1,1679 @@
+{
+  "db_id": "kb_9dd7d35b9ed05edb9af47212891ec913",
+  "nodes": {
+    "paper:2509.21473v1": {
+      "id": "paper:2509.21473v1",
+      "type": "Paper",
+      "label": "Are Hallucinations Bad Estimations?",
+      "norm_label": "are hallucinations bad estimations"
+    },
+    "method:δ-hallucination": {
+      "id": "method:δ-hallucination",
+      "type": "Method",
+      "label": "δ-hallucination",
+      "norm_label": "δ-hallucination"
+    },
+    "task:尽管语言模型在最小化损失时优化了平均结果，但它们仍可能生成与任何实用的可能性输出都不匹配的内容，这就提出了估计过程中误差的结构性问题。": {
+      "id": "task:尽管语言模型在最小化损失时优化了平均结果，但它们仍可能生成与任何实用的可能性输出都不匹配的内容，这就提出了估计过程中误差的结构性问题。",
+      "type": "Task",
+      "label": "尽管语言模型在最小化损失时优化了平均结果，但它们仍可能生成与任何实用的可能性输出都不匹配的内容，这就提出了估计过程中误差的结构性问题。",
+      "norm_label": "尽管语言模型在最小化损失时优化了平均结果，但它们仍可能生成与任何实用的可能性输出都不匹配的内容，这就提出了估计过程中误差的结构性问题。"
+    },
+    "dataset:未使用特定的数据集": {
+      "id": "dataset:未使用特定的数据集",
+      "type": "Dataset",
+      "label": "未使用特定的数据集",
+      "norm_label": "未使用特定的数据集"
+    },
+    "contribution:新定义幻觉的结构性来源：引入了δ-幻觉定义，并解释了幻觉对模型估计的影响。": {
+      "id": "contribution:新定义幻觉的结构性来源：引入了δ-幻觉定义，并解释了幻觉对模型估计的影响。",
+      "type": "Contribution",
+      "label": "新定义幻觉的结构性来源：引入了δ-幻觉定义，并解释了幻觉对模型估计的影响。",
+      "norm_label": "新定义幻觉的结构性来源：引入了δ-幻觉定义，并解释了幻觉对模型估计的影响。"
+    },
+    "contribution:证明了损失最小化的优化估计器仍然存在δ-幻觉，适用于单个输入、近似最优估计器、多输入情况以及模型收到隐含影响信号的情况。": {
+      "id": "contribution:证明了损失最小化的优化估计器仍然存在δ-幻觉，适用于单个输入、近似最优估计器、多输入情况以及模型收到隐含影响信号的情况。",
+      "type": "Contribution",
+      "label": "证明了损失最小化的优化估计器仍然存在δ-幻觉，适用于单个输入、近似最优估计器、多输入情况以及模型收到隐含影响信号的情况。",
+      "norm_label": "证明了损失最小化的优化估计器仍然存在δ-幻觉，适用于单个输入、近似最优估计器、多输入情况以及模型收到隐含影响信号的情况。"
+    },
+    "contribution:提出了δ-幻觉发生的概率下限，为广泛的目标分布类提供了假设条件下的非零概率。": {
+      "id": "contribution:提出了δ-幻觉发生的概率下限，为广泛的目标分布类提供了假设条件下的非零概率。",
+      "type": "Contribution",
+      "label": "提出了δ-幻觉发生的概率下限，为广泛的目标分布类提供了假设条件下的非零概率。",
+      "norm_label": "提出了δ-幻觉发生的概率下限，为广泛的目标分布类提供了假设条件下的非零概率。"
+    },
+    "paper:2506.00448v1": {
+      "id": "paper:2506.00448v1",
+      "type": "Paper",
+      "label": "Fact-Controlled Diagnosis of Hallucinations in Medical Text Summarization",
+      "norm_label": "fact-controlled diagnosis of hallucinations in medical text summarization"
+    },
+    "method:fact-based approaches": {
+      "id": "method:fact-based approaches",
+      "type": "Method",
+      "label": "Fact-based approaches",
+      "norm_label": "fact-based approaches"
+    },
+    "task:尽管近年来大型语言模型（llms）在临床对话摘要中表现出显著风险，但其引发的幻觉现象仍处于临床领域研究不足的状态，尤其是在检测和防止其潜在危害方面。": {
+      "id": "task:尽管近年来大型语言模型（llms）在临床对话摘要中表现出显著风险，但其引发的幻觉现象仍处于临床领域研究不足的状态，尤其是在检测和防止其潜在危害方面。",
+      "type": "Task",
+      "label": "尽管近年来大型语言模型（LLMs）在临床对话摘要中表现出显著风险，但其引发的幻觉现象仍处于临床领域研究不足的状态，尤其是在检测和防止其潜在危害方面。",
+      "norm_label": "尽管近年来大型语言模型（llms）在临床对话摘要中表现出显著风险，但其引发的幻觉现象仍处于临床领域研究不足的状态，尤其是在检测和防止其潜在危害方面。"
+    },
+    "dataset:leave-n-out lno dataset 570 modified transcripts": {
+      "id": "dataset:leave-n-out lno dataset 570 modified transcripts",
+      "type": "Dataset",
+      "label": "Leave-N-out (LNO) dataset, 570 modified transcripts",
+      "norm_label": "leave-n-out lno dataset 570 modified transcripts"
+    },
+    "dataset:natural hallucination nh dataset 500 news articles": {
+      "id": "dataset:natural hallucination nh dataset 500 news articles",
+      "type": "Dataset",
+      "label": "Natural Hallucination (NH) dataset, 500 news articles",
+      "norm_label": "natural hallucination nh dataset 500 news articles"
+    },
+    "metric:pearson correlation between model outputs and the number of removed facts": {
+      "id": "metric:pearson correlation between model outputs and the number of removed facts",
+      "type": "Metric",
+      "label": "Pearson correlation between model outputs and the number of removed facts",
+      "norm_label": "pearson correlation between model outputs and the number of removed facts"
+    },
+    "metric:various metrics such as rouge-1 factcc bertscore questeval infolmab summaczs summacconv alignscore": {
+      "id": "metric:various metrics such as rouge-1 factcc bertscore questeval infolmab summaczs summacconv alignscore",
+      "type": "Metric",
+      "label": "Various metrics such as ROUGE-1, FactCC, BERTScore, QuestEval, InfoLMAB, SummaCZS, SummaCConv, AlignScore",
+      "norm_label": "various metrics such as rouge-1 factcc bertscore questeval infolmab summaczs summacconv alignscore"
+    },
+    "contribution:提出一个针对临床幻觉检测的新型事实控制评估基准": {
+      "id": "contribution:提出一个针对临床幻觉检测的新型事实控制评估基准",
+      "type": "Contribution",
+      "label": "提出一个针对临床幻觉检测的新型事实控制评估基准",
+      "norm_label": "提出一个针对临床幻觉检测的新型事实控制评估基准"
+    },
+    "contribution:开发多种基于事实的幻觉检测方法，提高解释性": {
+      "id": "contribution:开发多种基于事实的幻觉检测方法，提高解释性",
+      "type": "Contribution",
+      "label": "开发多种基于事实的幻觉检测方法，提高解释性",
+      "norm_label": "开发多种基于事实的幻觉检测方法，提高解释性"
+    },
+    "contribution:证明基于假设验证的方法在幻觉检测方面的优越性": {
+      "id": "contribution:证明基于假设验证的方法在幻觉检测方面的优越性",
+      "type": "Contribution",
+      "label": "证明基于假设验证的方法在幻觉检测方面的优越性",
+      "norm_label": "证明基于假设验证的方法在幻觉检测方面的优越性"
+    },
+    "paper:2507.20836v4": {
+      "id": "paper:2507.20836v4",
+      "type": "Paper",
+      "label": "First Hallucination Tokens Are Different from Conditional Ones",
+      "norm_label": "first hallucination tokens are different from conditional ones"
+    },
+    "method:ragtruth": {
+      "id": "method:ragtruth",
+      "type": "Method",
+      "label": "RAGTruth",
+      "norm_label": "ragtruth"
+    },
+    "task:尽管大语言模型（llms）会生成虚构或矛盾内容，而当前方法往往忽略了在生成序列中令牌级幻觉信号的演变，研究首令牌在幻觉检测中的差异。": {
+      "id": "task:尽管大语言模型（llms）会生成虚构或矛盾内容，而当前方法往往忽略了在生成序列中令牌级幻觉信号的演变，研究首令牌在幻觉检测中的差异。",
+      "type": "Task",
+      "label": "尽管大语言模型（LLMs）会生成虚构或矛盾内容，而当前方法往往忽略了在生成序列中令牌级幻觉信号的演变，研究首令牌在幻觉检测中的差异。",
+      "norm_label": "尽管大语言模型（llms）会生成虚构或矛盾内容，而当前方法往往忽略了在生成序列中令牌级幻觉信号的演变，研究首令牌在幻觉检测中的差异。"
+    },
+    "metric:auroc": {
+      "id": "metric:auroc",
+      "type": "Metric",
+      "label": "AUROC",
+      "norm_label": "auroc"
+    },
+    "contribution:揭示了首令牌在幻觉信号中的更强特征，有助于更好的检测方法。": {
+      "id": "contribution:揭示了首令牌在幻觉信号中的更强特征，有助于更好的检测方法。",
+      "type": "Contribution",
+      "label": "揭示了首令牌在幻觉信号中的更强特征，有助于更好的检测方法。",
+      "norm_label": "揭示了首令牌在幻觉信号中的更强特征，有助于更好的检测方法。"
+    },
+    "contribution:表明部分令牌级信号（如熵）能有效识别首令牌的幻觉。": {
+      "id": "contribution:表明部分令牌级信号（如熵）能有效识别首令牌的幻觉。",
+      "type": "Contribution",
+      "label": "表明部分令牌级信号（如熵）能有效识别首令牌的幻觉。",
+      "norm_label": "表明部分令牌级信号（如熵）能有效识别首令牌的幻觉。"
+    },
+    "contribution:指出当前基于令牌的幻觉检测方法在所有位置上并不保持一致的性能。": {
+      "id": "contribution:指出当前基于令牌的幻觉检测方法在所有位置上并不保持一致的性能。",
+      "type": "Contribution",
+      "label": "指出当前基于令牌的幻觉检测方法在所有位置上并不保持一致的性能。",
+      "norm_label": "指出当前基于令牌的幻觉检测方法在所有位置上并不保持一致的性能。"
+    },
+    "paper:1906.07008v1": {
+      "id": "paper:1906.07008v1",
+      "type": "Paper",
+      "label": "Hallucinated Adversarial Learning for Robust Visual Tracking",
+      "norm_label": "hallucinated adversarial learning for robust visual tracking"
+    },
+    "method:adversarial hallucinator ah": {
+      "id": "method:adversarial hallucinator ah",
+      "type": "Method",
+      "label": "adversarial hallucinator (AH)",
+      "norm_label": "adversarial hallucinator ah"
+    },
+    "task:在低数据跟踪阶段，通过模拟人类的想象机制生成新的正样本，以帮助基于cnn的跟踪器解决过拟合问题和泛化能力不足的问题。": {
+      "id": "task:在低数据跟踪阶段，通过模拟人类的想象机制生成新的正样本，以帮助基于cnn的跟踪器解决过拟合问题和泛化能力不足的问题。",
+      "type": "Task",
+      "label": "在低数据跟踪阶段，通过模拟人类的想象机制生成新的正样本，以帮助基于CNN的跟踪器解决过拟合问题和泛化能力不足的问题。",
+      "norm_label": "在低数据跟踪阶段，通过模拟人类的想象机制生成新的正样本，以帮助基于cnn的跟踪器解决过拟合问题和泛化能力不足的问题。"
+    },
+    "dataset:dt 从imagenet-vid中收集同一身份实例对": {
+      "id": "dataset:dt 从imagenet-vid中收集同一身份实例对",
+      "type": "Dataset",
+      "label": "DT (从ImageNet-VID中收集同一身份实例对)",
+      "norm_label": "dt 从imagenet-vid中收集同一身份实例对"
+    },
+    "dataset:dq 由dt生成的新样本集": {
+      "id": "dataset:dq 由dt生成的新样本集",
+      "type": "Dataset",
+      "label": "DQ (由DT生成的新样本集)",
+      "norm_label": "dq 由dt生成的新样本集"
+    },
+    "metric:dpr": {
+      "id": "metric:dpr",
+      "type": "Metric",
+      "label": "DPR",
+      "norm_label": "dpr"
+    },
+    "metric:auc": {
+      "id": "metric:auc",
+      "type": "Metric",
+      "label": "AUC",
+      "norm_label": "auc"
+    },
+    "contribution:提出了一种基于生成对抗网络的对抗“幻象器”（ah），模仿人类的想象机制生成新颖的正样本。": {
+      "id": "contribution:提出了一种基于生成对抗网络的对抗“幻象器”（ah），模仿人类的想象机制生成新颖的正样本。",
+      "type": "Contribution",
+      "label": "提出了一种基于生成对抗网络的对抗“幻象器”（AH），模仿人类的想象机制生成新颖的正样本。",
+      "norm_label": "提出了一种基于生成对抗网络的对抗“幻象器”（ah），模仿人类的想象机制生成新颖的正样本。"
+    },
+    "contribution:基于ah和在线分类器（mdnet）共同优化hat，有助于缓解过拟合并提高生成多样性正样本的能力。": {
+      "id": "contribution:基于ah和在线分类器（mdnet）共同优化hat，有助于缓解过拟合并提高生成多样性正样本的能力。",
+      "type": "Contribution",
+      "label": "基于AH和在线分类器（MDNet）共同优化HAT，有助于缓解过拟合并提高生成多样性正样本的能力。",
+      "norm_label": "基于ah和在线分类器（mdnet）共同优化hat，有助于缓解过拟合并提高生成多样性正样本的能力。"
+    },
+    "contribution:提出了一种新颖的选择性变形转移（sdt）方法，以更好地选择合适的变形方法。": {
+      "id": "contribution:提出了一种新颖的选择性变形转移（sdt）方法，以更好地选择合适的变形方法。",
+      "type": "Contribution",
+      "label": "提出了一种新颖的选择性变形转移（SDT）方法，以更好地选择合适的变形方法。",
+      "norm_label": "提出了一种新颖的选择性变形转移（sdt）方法，以更好地选择合适的变形方法。"
+    },
+    "paper:1111.2281v1": {
+      "id": "paper:1111.2281v1",
+      "type": "Paper",
+      "label": "IVOA Recommendation: Data Model for Astronomical DataSet Characterisation",
+      "norm_label": "ivoa recommendation data model for astronomical dataset characterisation"
+    },
+    "method:uml模型": {
+      "id": "method:uml模型",
+      "type": "Method",
+      "label": "UML模型",
+      "norm_label": "uml模型"
+    },
+    "task:定义高维度元数据标准，以便描述天文数据产品的物理参数空间，包括2d图像、数据立方体、x射线事件列表、ifu数据等。": {
+      "id": "task:定义高维度元数据标准，以便描述天文数据产品的物理参数空间，包括2d图像、数据立方体、x射线事件列表、ifu数据等。",
+      "type": "Task",
+      "label": "定义高维度元数据标准，以便描述天文数据产品的物理参数空间，包括2D图像、数据立方体、X射线事件列表、IFU数据等。",
+      "norm_label": "定义高维度元数据标准，以便描述天文数据产品的物理参数空间，包括2d图像、数据立方体、x射线事件列表、ifu数据等。"
+    },
+    "dataset:x-ray ccd event list": {
+      "id": "dataset:x-ray ccd event list",
+      "type": "Dataset",
+      "label": "X-ray CCD Event List",
+      "norm_label": "x-ray ccd event list"
+    },
+    "dataset:2d optical image": {
+      "id": "dataset:2d optical image",
+      "type": "Dataset",
+      "label": "2D Optical Image",
+      "norm_label": "2d optical image"
+    },
+    "dataset:1d spectrum": {
+      "id": "dataset:1d spectrum",
+      "type": "Dataset",
+      "label": "1D Spectrum",
+      "norm_label": "1d spectrum"
+    },
+    "dataset:3d ifu data": {
+      "id": "dataset:3d ifu data",
+      "type": "Dataset",
+      "label": "3D IFU Data",
+      "norm_label": "3d ifu data"
+    },
+    "dataset:radio interferometry data": {
+      "id": "dataset:radio interferometry data",
+      "type": "Dataset",
+      "label": "Radio Interferometry Data",
+      "norm_label": "radio interferometry data"
+    },
+    "dataset:simulated ccd observation": {
+      "id": "dataset:simulated ccd observation",
+      "type": "Dataset",
+      "label": "Simulated CCD Observation",
+      "norm_label": "simulated ccd observation"
+    },
+    "metric:不能直接提取具体指标，但描述了如何构建结构化数据模型以描述各种类型的数据集": {
+      "id": "metric:不能直接提取具体指标，但描述了如何构建结构化数据模型以描述各种类型的数据集",
+      "type": "Metric",
+      "label": "不能直接提取具体指标，但描述了如何构建结构化数据模型以描述各种类型的数据集",
+      "norm_label": "不能直接提取具体指标，但描述了如何构建结构化数据模型以描述各种类型的数据集"
+    },
+    "contribution:提出了适用于不同类型天文数据集的标准化元数据描述框架。": {
+      "id": "contribution:提出了适用于不同类型天文数据集的标准化元数据描述框架。",
+      "type": "Contribution",
+      "label": "提出了适用于不同类型天文数据集的标准化元数据描述框架。",
+      "norm_label": "提出了适用于不同类型天文数据集的标准化元数据描述框架。"
+    },
+    "contribution:详细定义了数据集的物理轴、覆盖范围、灵敏度、分辨率和采样精度。": {
+      "id": "contribution:详细定义了数据集的物理轴、覆盖范围、灵敏度、分辨率和采样精度。",
+      "type": "Contribution",
+      "label": "详细定义了数据集的物理轴、覆盖范围、灵敏度、分辨率和采样精度。",
+      "norm_label": "详细定义了数据集的物理轴、覆盖范围、灵敏度、分辨率和采样精度。"
+    },
+    "contribution:提供了描述不同观测和模拟数据集物理属性的语法和结构。": {
+      "id": "contribution:提供了描述不同观测和模拟数据集物理属性的语法和结构。",
+      "type": "Contribution",
+      "label": "提供了描述不同观测和模拟数据集物理属性的语法和结构。",
+      "norm_label": "提供了描述不同观测和模拟数据集物理属性的语法和结构。"
+    },
+    "contribution:促进了跨不同vo框架或门户的数据操作和数据集描述的一致性。": {
+      "id": "contribution:促进了跨不同vo框架或门户的数据操作和数据集描述的一致性。",
+      "type": "Contribution",
+      "label": "促进了跨不同VO框架或门户的数据操作和数据集描述的一致性。",
+      "norm_label": "促进了跨不同vo框架或门户的数据操作和数据集描述的一致性。"
+    },
+    "concept:generative model": {
+      "id": "concept:generative model",
+      "type": "Concept",
+      "label": "Generative Model",
+      "norm_label": "generative model",
+      "description": ""
+    },
+    "concept:loss minimization": {
+      "id": "concept:loss minimization",
+      "type": "Concept",
+      "label": "Loss Minimization",
+      "norm_label": "loss minimization",
+      "description": ""
+    },
+    "concept:estimation error": {
+      "id": "concept:estimation error",
+      "type": "Concept",
+      "label": "Estimation Error",
+      "norm_label": "estimation error",
+      "description": ""
+    },
+    "task:coin aggregation": {
+      "id": "task:coin aggregation",
+      "type": "Task",
+      "label": "Coin Aggregation",
+      "norm_label": "coin aggregation",
+      "description": ""
+    },
+    "task:open-ended qa": {
+      "id": "task:open-ended qa",
+      "type": "Task",
+      "label": "Open-Ended QA",
+      "norm_label": "open-ended qa",
+      "description": ""
+    },
+    "task:text-to-image": {
+      "id": "task:text-to-image",
+      "type": "Task",
+      "label": "Text-to-Image",
+      "norm_label": "text-to-image",
+      "description": ""
+    },
+    "method:fact-controlled approaches": {
+      "id": "method:fact-controlled approaches",
+      "type": "Method",
+      "label": "Fact-controlled approaches",
+      "norm_label": "fact-controlled approaches",
+      "description": ""
+    },
+    "dataset:leave-n-out dataset": {
+      "id": "dataset:leave-n-out dataset",
+      "type": "Dataset",
+      "label": "Leave-N-out dataset",
+      "norm_label": "leave-n-out dataset",
+      "description": ""
+    },
+    "dataset:natural hallucination dataset": {
+      "id": "dataset:natural hallucination dataset",
+      "type": "Dataset",
+      "label": "Natural hallucination dataset",
+      "norm_label": "natural hallucination dataset",
+      "description": ""
+    },
+    "task:clinical hallucination detection": {
+      "id": "task:clinical hallucination detection",
+      "type": "Task",
+      "label": "clinical hallucination detection",
+      "norm_label": "clinical hallucination detection",
+      "description": ""
+    },
+    "method:general-domain hallucination detection": {
+      "id": "method:general-domain hallucination detection",
+      "type": "Method",
+      "label": "general-domain hallucination detection",
+      "norm_label": "general-domain hallucination detection",
+      "description": ""
+    },
+    "metric:pearson correlation": {
+      "id": "metric:pearson correlation",
+      "type": "Metric",
+      "label": "Pearson correlation",
+      "norm_label": "pearson correlation",
+      "description": ""
+    },
+    "metric:rouge-1": {
+      "id": "metric:rouge-1",
+      "type": "Metric",
+      "label": "ROUGE-1",
+      "norm_label": "rouge-1",
+      "description": ""
+    },
+    "metric:factcc": {
+      "id": "metric:factcc",
+      "type": "Metric",
+      "label": "FactCC",
+      "norm_label": "factcc",
+      "description": ""
+    },
+    "metric:bertscore": {
+      "id": "metric:bertscore",
+      "type": "Metric",
+      "label": "BERTScore",
+      "norm_label": "bertscore",
+      "description": ""
+    },
+    "metric:questeval": {
+      "id": "metric:questeval",
+      "type": "Metric",
+      "label": "QuestEval",
+      "norm_label": "questeval",
+      "description": ""
+    },
+    "metric:infolmab": {
+      "id": "metric:infolmab",
+      "type": "Metric",
+      "label": "InfoLMAB",
+      "norm_label": "infolmab",
+      "description": ""
+    },
+    "metric:summaczs": {
+      "id": "metric:summaczs",
+      "type": "Metric",
+      "label": "SummaCZS",
+      "norm_label": "summaczs",
+      "description": ""
+    },
+    "metric:summacconv": {
+      "id": "metric:summacconv",
+      "type": "Metric",
+      "label": "SummaCConv",
+      "norm_label": "summacconv",
+      "description": ""
+    },
+    "metric:alignscore": {
+      "id": "metric:alignscore",
+      "type": "Metric",
+      "label": "AlignScore",
+      "norm_label": "alignscore",
+      "description": ""
+    },
+    "task:clinical summarization system": {
+      "id": "task:clinical summarization system",
+      "type": "Task",
+      "label": "clinical summarization system",
+      "norm_label": "clinical summarization system",
+      "description": ""
+    },
+    "concept:firsthallucinationtoken": {
+      "id": "concept:firsthallucinationtoken",
+      "type": "Concept",
+      "label": "FirstHallucinationToken",
+      "norm_label": "firsthallucinationtoken",
+      "description": ""
+    },
+    "task:token-levelhallucinationdetection": {
+      "id": "task:token-levelhallucinationdetection",
+      "type": "Task",
+      "label": "Token-LevelHallucinationDetection",
+      "norm_label": "token-levelhallucinationdetection",
+      "description": ""
+    },
+    "method:hat": {
+      "id": "method:hat",
+      "type": "Method",
+      "label": "HAT",
+      "norm_label": "hat",
+      "description": ""
+    },
+    "method:ah": {
+      "id": "method:ah",
+      "type": "Method",
+      "label": "AH",
+      "norm_label": "ah",
+      "description": ""
+    },
+    "method:sdt": {
+      "id": "method:sdt",
+      "type": "Method",
+      "label": "SDT",
+      "norm_label": "sdt",
+      "description": ""
+    },
+    "model:mdnet": {
+      "id": "model:mdnet",
+      "type": "Model",
+      "label": "MDNet",
+      "norm_label": "mdnet",
+      "description": ""
+    },
+    "dataset:dt": {
+      "id": "dataset:dt",
+      "type": "Dataset",
+      "label": "DT",
+      "norm_label": "dt",
+      "description": ""
+    },
+    "dataset:dq": {
+      "id": "dataset:dq",
+      "type": "Dataset",
+      "label": "DQ",
+      "norm_label": "dq",
+      "description": ""
+    },
+    "dataset:imagenet-vid": {
+      "id": "dataset:imagenet-vid",
+      "type": "Dataset",
+      "label": "ImageNet-VID",
+      "norm_label": "imagenet-vid",
+      "description": ""
+    }
+  },
+  "edges": [
+    {
+      "source": "paper:2509.21473v1",
+      "target": "method:δ-hallucination",
+      "type": "proposes",
+      "weight": 1.0
+    },
+    {
+      "source": "paper:2509.21473v1",
+      "target": "task:尽管语言模型在最小化损失时优化了平均结果，但它们仍可能生成与任何实用的可能性输出都不匹配的内容，这就提出了估计过程中误差的结构性问题。",
+      "type": "applied_to",
+      "weight": 0.8
+    },
+    {
+      "source": "method:δ-hallucination",
+      "target": "task:尽管语言模型在最小化损失时优化了平均结果，但它们仍可能生成与任何实用的可能性输出都不匹配的内容，这就提出了估计过程中误差的结构性问题。",
+      "type": "solves",
+      "weight": 0.95
+    },
+    {
+      "source": "paper:2509.21473v1",
+      "target": "dataset:未使用特定的数据集",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "method:δ-hallucination",
+      "target": "dataset:未使用特定的数据集",
+      "type": "evaluates_on",
+      "weight": 0.9
+    },
+    {
+      "source": "paper:2509.21473v1",
+      "target": "contribution:新定义幻觉的结构性来源：引入了δ-幻觉定义，并解释了幻觉对模型估计的影响。",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "method:δ-hallucination",
+      "target": "contribution:新定义幻觉的结构性来源：引入了δ-幻觉定义，并解释了幻觉对模型估计的影响。",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:2509.21473v1",
+      "target": "contribution:证明了损失最小化的优化估计器仍然存在δ-幻觉，适用于单个输入、近似最优估计器、多输入情况以及模型收到隐含影响信号的情况。",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "method:δ-hallucination",
+      "target": "contribution:证明了损失最小化的优化估计器仍然存在δ-幻觉，适用于单个输入、近似最优估计器、多输入情况以及模型收到隐含影响信号的情况。",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:2509.21473v1",
+      "target": "contribution:提出了δ-幻觉发生的概率下限，为广泛的目标分布类提供了假设条件下的非零概率。",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "method:δ-hallucination",
+      "target": "contribution:提出了δ-幻觉发生的概率下限，为广泛的目标分布类提供了假设条件下的非零概率。",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:2506.00448v1",
+      "target": "method:fact-based approaches",
+      "type": "proposes",
+      "weight": 1.0
+    },
+    {
+      "source": "paper:2506.00448v1",
+      "target": "task:尽管近年来大型语言模型（llms）在临床对话摘要中表现出显著风险，但其引发的幻觉现象仍处于临床领域研究不足的状态，尤其是在检测和防止其潜在危害方面。",
+      "type": "applied_to",
+      "weight": 0.8
+    },
+    {
+      "source": "method:fact-based approaches",
+      "target": "task:尽管近年来大型语言模型（llms）在临床对话摘要中表现出显著风险，但其引发的幻觉现象仍处于临床领域研究不足的状态，尤其是在检测和防止其潜在危害方面。",
+      "type": "solves",
+      "weight": 0.95
+    },
+    {
+      "source": "paper:2506.00448v1",
+      "target": "dataset:leave-n-out lno dataset 570 modified transcripts",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "method:fact-based approaches",
+      "target": "dataset:leave-n-out lno dataset 570 modified transcripts",
+      "type": "evaluates_on",
+      "weight": 0.9
+    },
+    {
+      "source": "paper:2506.00448v1",
+      "target": "dataset:natural hallucination nh dataset 500 news articles",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "method:fact-based approaches",
+      "target": "dataset:natural hallucination nh dataset 500 news articles",
+      "type": "evaluates_on",
+      "weight": 0.9
+    },
+    {
+      "source": "method:fact-based approaches",
+      "target": "metric:pearson correlation between model outputs and the number of removed facts",
+      "type": "achieves",
+      "weight": 0.85
+    },
+    {
+      "source": "method:fact-based approaches",
+      "target": "metric:various metrics such as rouge-1 factcc bertscore questeval infolmab summaczs summacconv alignscore",
+      "type": "achieves",
+      "weight": 0.85
+    },
+    {
+      "source": "paper:2506.00448v1",
+      "target": "contribution:提出一个针对临床幻觉检测的新型事实控制评估基准",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "method:fact-based approaches",
+      "target": "contribution:提出一个针对临床幻觉检测的新型事实控制评估基准",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:2506.00448v1",
+      "target": "contribution:开发多种基于事实的幻觉检测方法，提高解释性",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "method:fact-based approaches",
+      "target": "contribution:开发多种基于事实的幻觉检测方法，提高解释性",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:2506.00448v1",
+      "target": "contribution:证明基于假设验证的方法在幻觉检测方面的优越性",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "method:fact-based approaches",
+      "target": "contribution:证明基于假设验证的方法在幻觉检测方面的优越性",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:2507.20836v4",
+      "target": "method:ragtruth",
+      "type": "proposes",
+      "weight": 1.0
+    },
+    {
+      "source": "paper:2507.20836v4",
+      "target": "task:尽管大语言模型（llms）会生成虚构或矛盾内容，而当前方法往往忽略了在生成序列中令牌级幻觉信号的演变，研究首令牌在幻觉检测中的差异。",
+      "type": "applied_to",
+      "weight": 0.8
+    },
+    {
+      "source": "method:ragtruth",
+      "target": "task:尽管大语言模型（llms）会生成虚构或矛盾内容，而当前方法往往忽略了在生成序列中令牌级幻觉信号的演变，研究首令牌在幻觉检测中的差异。",
+      "type": "solves",
+      "weight": 0.95
+    },
+    {
+      "source": "paper:2507.20836v4",
+      "target": "method:ragtruth",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "method:ragtruth",
+      "target": "metric:auroc",
+      "type": "achieves",
+      "weight": 0.85
+    },
+    {
+      "source": "paper:2507.20836v4",
+      "target": "contribution:揭示了首令牌在幻觉信号中的更强特征，有助于更好的检测方法。",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "method:ragtruth",
+      "target": "contribution:揭示了首令牌在幻觉信号中的更强特征，有助于更好的检测方法。",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:2507.20836v4",
+      "target": "contribution:表明部分令牌级信号（如熵）能有效识别首令牌的幻觉。",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "method:ragtruth",
+      "target": "contribution:表明部分令牌级信号（如熵）能有效识别首令牌的幻觉。",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:2507.20836v4",
+      "target": "contribution:指出当前基于令牌的幻觉检测方法在所有位置上并不保持一致的性能。",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "method:ragtruth",
+      "target": "contribution:指出当前基于令牌的幻觉检测方法在所有位置上并不保持一致的性能。",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:1906.07008v1",
+      "target": "method:adversarial hallucinator ah",
+      "type": "proposes",
+      "weight": 1.0
+    },
+    {
+      "source": "paper:1906.07008v1",
+      "target": "task:在低数据跟踪阶段，通过模拟人类的想象机制生成新的正样本，以帮助基于cnn的跟踪器解决过拟合问题和泛化能力不足的问题。",
+      "type": "applied_to",
+      "weight": 0.8
+    },
+    {
+      "source": "method:adversarial hallucinator ah",
+      "target": "task:在低数据跟踪阶段，通过模拟人类的想象机制生成新的正样本，以帮助基于cnn的跟踪器解决过拟合问题和泛化能力不足的问题。",
+      "type": "solves",
+      "weight": 0.95
+    },
+    {
+      "source": "paper:1906.07008v1",
+      "target": "dataset:dt 从imagenet-vid中收集同一身份实例对",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "method:adversarial hallucinator ah",
+      "target": "dataset:dt 从imagenet-vid中收集同一身份实例对",
+      "type": "evaluates_on",
+      "weight": 0.9
+    },
+    {
+      "source": "paper:1906.07008v1",
+      "target": "dataset:dq 由dt生成的新样本集",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "method:adversarial hallucinator ah",
+      "target": "dataset:dq 由dt生成的新样本集",
+      "type": "evaluates_on",
+      "weight": 0.9
+    },
+    {
+      "source": "method:adversarial hallucinator ah",
+      "target": "metric:dpr",
+      "type": "achieves",
+      "weight": 0.85
+    },
+    {
+      "source": "method:adversarial hallucinator ah",
+      "target": "metric:auc",
+      "type": "achieves",
+      "weight": 0.85
+    },
+    {
+      "source": "paper:1906.07008v1",
+      "target": "contribution:提出了一种基于生成对抗网络的对抗“幻象器”（ah），模仿人类的想象机制生成新颖的正样本。",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "method:adversarial hallucinator ah",
+      "target": "contribution:提出了一种基于生成对抗网络的对抗“幻象器”（ah），模仿人类的想象机制生成新颖的正样本。",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:1906.07008v1",
+      "target": "contribution:基于ah和在线分类器（mdnet）共同优化hat，有助于缓解过拟合并提高生成多样性正样本的能力。",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "method:adversarial hallucinator ah",
+      "target": "contribution:基于ah和在线分类器（mdnet）共同优化hat，有助于缓解过拟合并提高生成多样性正样本的能力。",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:1906.07008v1",
+      "target": "contribution:提出了一种新颖的选择性变形转移（sdt）方法，以更好地选择合适的变形方法。",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "method:adversarial hallucinator ah",
+      "target": "contribution:提出了一种新颖的选择性变形转移（sdt）方法，以更好地选择合适的变形方法。",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:1111.2281v1",
+      "target": "method:uml模型",
+      "type": "proposes",
+      "weight": 1.0
+    },
+    {
+      "source": "paper:1111.2281v1",
+      "target": "task:定义高维度元数据标准，以便描述天文数据产品的物理参数空间，包括2d图像、数据立方体、x射线事件列表、ifu数据等。",
+      "type": "applied_to",
+      "weight": 0.8
+    },
+    {
+      "source": "method:uml模型",
+      "target": "task:定义高维度元数据标准，以便描述天文数据产品的物理参数空间，包括2d图像、数据立方体、x射线事件列表、ifu数据等。",
+      "type": "solves",
+      "weight": 0.95
+    },
+    {
+      "source": "paper:1111.2281v1",
+      "target": "dataset:x-ray ccd event list",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "method:uml模型",
+      "target": "dataset:x-ray ccd event list",
+      "type": "evaluates_on",
+      "weight": 0.9
+    },
+    {
+      "source": "paper:1111.2281v1",
+      "target": "dataset:2d optical image",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "method:uml模型",
+      "target": "dataset:2d optical image",
+      "type": "evaluates_on",
+      "weight": 0.9
+    },
+    {
+      "source": "paper:1111.2281v1",
+      "target": "dataset:1d spectrum",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "method:uml模型",
+      "target": "dataset:1d spectrum",
+      "type": "evaluates_on",
+      "weight": 0.9
+    },
+    {
+      "source": "paper:1111.2281v1",
+      "target": "dataset:3d ifu data",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "method:uml模型",
+      "target": "dataset:3d ifu data",
+      "type": "evaluates_on",
+      "weight": 0.9
+    },
+    {
+      "source": "paper:1111.2281v1",
+      "target": "dataset:radio interferometry data",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "method:uml模型",
+      "target": "dataset:radio interferometry data",
+      "type": "evaluates_on",
+      "weight": 0.9
+    },
+    {
+      "source": "paper:1111.2281v1",
+      "target": "dataset:simulated ccd observation",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "method:uml模型",
+      "target": "dataset:simulated ccd observation",
+      "type": "evaluates_on",
+      "weight": 0.9
+    },
+    {
+      "source": "method:uml模型",
+      "target": "metric:不能直接提取具体指标，但描述了如何构建结构化数据模型以描述各种类型的数据集",
+      "type": "achieves",
+      "weight": 0.85
+    },
+    {
+      "source": "paper:1111.2281v1",
+      "target": "contribution:提出了适用于不同类型天文数据集的标准化元数据描述框架。",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "method:uml模型",
+      "target": "contribution:提出了适用于不同类型天文数据集的标准化元数据描述框架。",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:1111.2281v1",
+      "target": "contribution:详细定义了数据集的物理轴、覆盖范围、灵敏度、分辨率和采样精度。",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "method:uml模型",
+      "target": "contribution:详细定义了数据集的物理轴、覆盖范围、灵敏度、分辨率和采样精度。",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:1111.2281v1",
+      "target": "contribution:提供了描述不同观测和模拟数据集物理属性的语法和结构。",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "method:uml模型",
+      "target": "contribution:提供了描述不同观测和模拟数据集物理属性的语法和结构。",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:1111.2281v1",
+      "target": "contribution:促进了跨不同vo框架或门户的数据操作和数据集描述的一致性。",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "method:uml模型",
+      "target": "contribution:促进了跨不同vo框架或门户的数据操作和数据集描述的一致性。",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "method:δ-hallucination",
+      "target": "concept:generative model",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "method:δ-hallucination",
+      "target": "concept:loss minimization",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "method:δ-hallucination",
+      "target": "concept:estimation error",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "method:δ-hallucination",
+      "target": "task:coin aggregation",
+      "type": "applied_to",
+      "weight": 0.8
+    },
+    {
+      "source": "method:δ-hallucination",
+      "target": "task:open-ended qa",
+      "type": "applied_to",
+      "weight": 0.8
+    },
+    {
+      "source": "method:δ-hallucination",
+      "target": "task:text-to-image",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "concept:generative model",
+      "target": "concept:loss minimization",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "method:fact-controlled approaches",
+      "target": "dataset:leave-n-out dataset",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "method:fact-controlled approaches",
+      "target": "dataset:natural hallucination dataset",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "method:general-domain hallucination detection",
+      "target": "dataset:leave-n-out dataset",
+      "type": "evaluates_on",
+      "weight": 0.9
+    },
+    {
+      "source": "method:general-domain hallucination detection",
+      "target": "task:clinical hallucination detection",
+      "type": "applied_to",
+      "weight": 0.8
+    },
+    {
+      "source": "method:fact-controlled approaches",
+      "target": "task:clinical hallucination detection",
+      "type": "applied_to",
+      "weight": 0.8
+    },
+    {
+      "source": "method:fact-controlled approaches",
+      "target": "metric:pearson correlation",
+      "type": "achieves",
+      "weight": 0.85
+    },
+    {
+      "source": "method:fact-controlled approaches",
+      "target": "metric:rouge-1",
+      "type": "achieves",
+      "weight": 0.85
+    },
+    {
+      "source": "method:fact-controlled approaches",
+      "target": "metric:factcc",
+      "type": "achieves",
+      "weight": 0.85
+    },
+    {
+      "source": "method:fact-controlled approaches",
+      "target": "metric:bertscore",
+      "type": "achieves",
+      "weight": 0.85
+    },
+    {
+      "source": "method:fact-controlled approaches",
+      "target": "metric:questeval",
+      "type": "achieves",
+      "weight": 0.85
+    },
+    {
+      "source": "method:fact-controlled approaches",
+      "target": "metric:infolmab",
+      "type": "achieves",
+      "weight": 0.85
+    },
+    {
+      "source": "method:fact-controlled approaches",
+      "target": "metric:summaczs",
+      "type": "achieves",
+      "weight": 0.85
+    },
+    {
+      "source": "method:fact-controlled approaches",
+      "target": "metric:summacconv",
+      "type": "achieves",
+      "weight": 0.85
+    },
+    {
+      "source": "method:fact-controlled approaches",
+      "target": "metric:alignscore",
+      "type": "achieves",
+      "weight": 0.85
+    },
+    {
+      "source": "method:fact-controlled approaches",
+      "target": "task:clinical summarization system",
+      "type": "applied_to",
+      "weight": 0.8
+    },
+    {
+      "source": "method:general-domain hallucination detection",
+      "target": "metric:pearson correlation",
+      "type": "achieves",
+      "weight": 0.85
+    },
+    {
+      "source": "method:fact-controlled approaches",
+      "target": "task:clinical hallucination detection",
+      "type": "evaluates_on",
+      "weight": 0.9
+    },
+    {
+      "source": "method:ragtruth",
+      "target": "task:token-levelhallucinationdetection",
+      "type": "evaluates_on",
+      "weight": 0.9
+    },
+    {
+      "source": "concept:firsthallucinationtoken",
+      "target": "task:token-levelhallucinationdetection",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "concept:firsthallucinationtoken",
+      "target": "method:ragtruth",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "method:ragtruth",
+      "target": "task:token-levelhallucinationdetection",
+      "type": "achieves",
+      "weight": 0.85
+    },
+    {
+      "source": "method:hat",
+      "target": "method:ah",
+      "type": "proposes",
+      "weight": 1.0
+    },
+    {
+      "source": "method:hat",
+      "target": "method:sdt",
+      "type": "proposes",
+      "weight": 1.0
+    },
+    {
+      "source": "method:hat",
+      "target": "model:mdnet",
+      "type": "applied_to",
+      "weight": 0.8
+    },
+    {
+      "source": "method:ah",
+      "target": "dataset:dt",
+      "type": "evaluates_on",
+      "weight": 0.9
+    },
+    {
+      "source": "method:ah",
+      "target": "dataset:dq",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "method:ah",
+      "target": "dataset:imagenet-vid",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "method:hat",
+      "target": "metric:dpr",
+      "type": "achieves",
+      "weight": 0.85
+    },
+    {
+      "source": "method:hat",
+      "target": "metric:auc",
+      "type": "achieves",
+      "weight": 0.85
+    }
+  ],
+  "paper_entities": {
+    "2509.21473v1": [
+      "paper:2509.21473v1",
+      "method:δ-hallucination",
+      "task:尽管语言模型在最小化损失时优化了平均结果，但它们仍可能生成与任何实用的可能性输出都不匹配的内容，这就提出了估计过程中误差的结构性问题。",
+      "dataset:未使用特定的数据集",
+      "contribution:新定义幻觉的结构性来源：引入了δ-幻觉定义，并解释了幻觉对模型估计的影响。",
+      "contribution:证明了损失最小化的优化估计器仍然存在δ-幻觉，适用于单个输入、近似最优估计器、多输入情况以及模型收到隐含影响信号的情况。",
+      "contribution:提出了δ-幻觉发生的概率下限，为广泛的目标分布类提供了假设条件下的非零概率。",
+      "concept:generative model",
+      "concept:loss minimization",
+      "concept:estimation error",
+      "task:coin aggregation",
+      "task:open-ended qa",
+      "task:text-to-image"
+    ],
+    "2506.00448v1": [
+      "paper:2506.00448v1",
+      "method:fact-based approaches",
+      "task:尽管近年来大型语言模型（llms）在临床对话摘要中表现出显著风险，但其引发的幻觉现象仍处于临床领域研究不足的状态，尤其是在检测和防止其潜在危害方面。",
+      "dataset:leave-n-out lno dataset 570 modified transcripts",
+      "dataset:natural hallucination nh dataset 500 news articles",
+      "metric:pearson correlation between model outputs and the number of removed facts",
+      "metric:various metrics such as rouge-1 factcc bertscore questeval infolmab summaczs summacconv alignscore",
+      "contribution:提出一个针对临床幻觉检测的新型事实控制评估基准",
+      "contribution:开发多种基于事实的幻觉检测方法，提高解释性",
+      "contribution:证明基于假设验证的方法在幻觉检测方面的优越性",
+      "method:fact-controlled approaches",
+      "dataset:leave-n-out dataset",
+      "dataset:natural hallucination dataset",
+      "task:clinical hallucination detection",
+      "method:general-domain hallucination detection",
+      "metric:pearson correlation",
+      "metric:rouge-1",
+      "metric:factcc",
+      "metric:bertscore",
+      "metric:questeval",
+      "metric:infolmab",
+      "metric:summaczs",
+      "metric:summacconv",
+      "metric:alignscore",
+      "task:clinical summarization system"
+    ],
+    "2507.20836v4": [
+      "paper:2507.20836v4",
+      "method:ragtruth",
+      "task:尽管大语言模型（llms）会生成虚构或矛盾内容，而当前方法往往忽略了在生成序列中令牌级幻觉信号的演变，研究首令牌在幻觉检测中的差异。",
+      "method:ragtruth",
+      "metric:auroc",
+      "contribution:揭示了首令牌在幻觉信号中的更强特征，有助于更好的检测方法。",
+      "contribution:表明部分令牌级信号（如熵）能有效识别首令牌的幻觉。",
+      "contribution:指出当前基于令牌的幻觉检测方法在所有位置上并不保持一致的性能。",
+      "concept:firsthallucinationtoken",
+      "task:token-levelhallucinationdetection"
+    ],
+    "1906.07008v1": [
+      "paper:1906.07008v1",
+      "method:adversarial hallucinator ah",
+      "task:在低数据跟踪阶段，通过模拟人类的想象机制生成新的正样本，以帮助基于cnn的跟踪器解决过拟合问题和泛化能力不足的问题。",
+      "dataset:dt 从imagenet-vid中收集同一身份实例对",
+      "dataset:dq 由dt生成的新样本集",
+      "metric:dpr",
+      "metric:auc",
+      "contribution:提出了一种基于生成对抗网络的对抗“幻象器”（ah），模仿人类的想象机制生成新颖的正样本。",
+      "contribution:基于ah和在线分类器（mdnet）共同优化hat，有助于缓解过拟合并提高生成多样性正样本的能力。",
+      "contribution:提出了一种新颖的选择性变形转移（sdt）方法，以更好地选择合适的变形方法。",
+      "method:hat",
+      "method:ah",
+      "method:sdt",
+      "model:mdnet",
+      "dataset:dt",
+      "dataset:dq",
+      "dataset:imagenet-vid"
+    ],
+    "1111.2281v1": [
+      "paper:1111.2281v1",
+      "method:uml模型",
+      "task:定义高维度元数据标准，以便描述天文数据产品的物理参数空间，包括2d图像、数据立方体、x射线事件列表、ifu数据等。",
+      "dataset:x-ray ccd event list",
+      "dataset:2d optical image",
+      "dataset:1d spectrum",
+      "dataset:3d ifu data",
+      "dataset:radio interferometry data",
+      "dataset:simulated ccd observation",
+      "metric:不能直接提取具体指标，但描述了如何构建结构化数据模型以描述各种类型的数据集",
+      "contribution:提出了适用于不同类型天文数据集的标准化元数据描述框架。",
+      "contribution:详细定义了数据集的物理轴、覆盖范围、灵敏度、分辨率和采样精度。",
+      "contribution:提供了描述不同观测和模拟数据集物理属性的语法和结构。",
+      "contribution:促进了跨不同vo框架或门户的数据操作和数据集描述的一致性。"
+    ]
+  },
+  "entity_aliases": {
+    "are hallucinations bad estimations": "paper:2509.21473v1",
+    "δ-hallucination": "method:δ-hallucination",
+    "尽管语言模型在最小化损失时优化了平均结果，但它们仍可能生成与任何实用的可能性输出都不匹配的内容，这就提出了估计过程中误差的结构性问题。": "task:尽管语言模型在最小化损失时优化了平均结果，但它们仍可能生成与任何实用的可能性输出都不匹配的内容，这就提出了估计过程中误差的结构性问题。",
+    "未使用特定的数据集": "dataset:未使用特定的数据集",
+    "新定义幻觉的结构性来源：引入了δ-幻觉定义，并解释了幻觉对模型估计的影响。": "contribution:新定义幻觉的结构性来源：引入了δ-幻觉定义，并解释了幻觉对模型估计的影响。",
+    "证明了损失最小化的优化估计器仍然存在δ-幻觉，适用于单个输入、近似最优估计器、多输入情况以及模型收到隐含影响信号的情况。": "contribution:证明了损失最小化的优化估计器仍然存在δ-幻觉，适用于单个输入、近似最优估计器、多输入情况以及模型收到隐含影响信号的情况。",
+    "提出了δ-幻觉发生的概率下限，为广泛的目标分布类提供了假设条件下的非零概率。": "contribution:提出了δ-幻觉发生的概率下限，为广泛的目标分布类提供了假设条件下的非零概率。",
+    "fact-controlled diagnosis of hallucinations in medical text summarization": "paper:2506.00448v1",
+    "fact-based approaches": "method:fact-based approaches",
+    "尽管近年来大型语言模型（llms）在临床对话摘要中表现出显著风险，但其引发的幻觉现象仍处于临床领域研究不足的状态，尤其是在检测和防止其潜在危害方面。": "task:尽管近年来大型语言模型（llms）在临床对话摘要中表现出显著风险，但其引发的幻觉现象仍处于临床领域研究不足的状态，尤其是在检测和防止其潜在危害方面。",
+    "leave-n-out lno dataset 570 modified transcripts": "dataset:leave-n-out lno dataset 570 modified transcripts",
+    "natural hallucination nh dataset 500 news articles": "dataset:natural hallucination nh dataset 500 news articles",
+    "pearson correlation between model outputs and the number of removed facts": "metric:pearson correlation between model outputs and the number of removed facts",
+    "various metrics such as rouge-1 factcc bertscore questeval infolmab summaczs summacconv alignscore": "metric:various metrics such as rouge-1 factcc bertscore questeval infolmab summaczs summacconv alignscore",
+    "提出一个针对临床幻觉检测的新型事实控制评估基准": "contribution:提出一个针对临床幻觉检测的新型事实控制评估基准",
+    "开发多种基于事实的幻觉检测方法，提高解释性": "contribution:开发多种基于事实的幻觉检测方法，提高解释性",
+    "证明基于假设验证的方法在幻觉检测方面的优越性": "contribution:证明基于假设验证的方法在幻觉检测方面的优越性",
+    "first hallucination tokens are different from conditional ones": "paper:2507.20836v4",
+    "ragtruth": "method:ragtruth",
+    "尽管大语言模型（llms）会生成虚构或矛盾内容，而当前方法往往忽略了在生成序列中令牌级幻觉信号的演变，研究首令牌在幻觉检测中的差异。": "task:尽管大语言模型（llms）会生成虚构或矛盾内容，而当前方法往往忽略了在生成序列中令牌级幻觉信号的演变，研究首令牌在幻觉检测中的差异。",
+    "auroc": "metric:auroc",
+    "揭示了首令牌在幻觉信号中的更强特征，有助于更好的检测方法。": "contribution:揭示了首令牌在幻觉信号中的更强特征，有助于更好的检测方法。",
+    "表明部分令牌级信号（如熵）能有效识别首令牌的幻觉。": "contribution:表明部分令牌级信号（如熵）能有效识别首令牌的幻觉。",
+    "指出当前基于令牌的幻觉检测方法在所有位置上并不保持一致的性能。": "contribution:指出当前基于令牌的幻觉检测方法在所有位置上并不保持一致的性能。",
+    "hallucinated adversarial learning for robust visual tracking": "paper:1906.07008v1",
+    "adversarial hallucinator ah": "method:adversarial hallucinator ah",
+    "在低数据跟踪阶段，通过模拟人类的想象机制生成新的正样本，以帮助基于cnn的跟踪器解决过拟合问题和泛化能力不足的问题。": "task:在低数据跟踪阶段，通过模拟人类的想象机制生成新的正样本，以帮助基于cnn的跟踪器解决过拟合问题和泛化能力不足的问题。",
+    "dt 从imagenet-vid中收集同一身份实例对": "dataset:dt 从imagenet-vid中收集同一身份实例对",
+    "dq 由dt生成的新样本集": "dataset:dq 由dt生成的新样本集",
+    "dpr": "metric:dpr",
+    "auc": "metric:auc",
+    "提出了一种基于生成对抗网络的对抗“幻象器”（ah），模仿人类的想象机制生成新颖的正样本。": "contribution:提出了一种基于生成对抗网络的对抗“幻象器”（ah），模仿人类的想象机制生成新颖的正样本。",
+    "基于ah和在线分类器（mdnet）共同优化hat，有助于缓解过拟合并提高生成多样性正样本的能力。": "contribution:基于ah和在线分类器（mdnet）共同优化hat，有助于缓解过拟合并提高生成多样性正样本的能力。",
+    "提出了一种新颖的选择性变形转移（sdt）方法，以更好地选择合适的变形方法。": "contribution:提出了一种新颖的选择性变形转移（sdt）方法，以更好地选择合适的变形方法。",
+    "ivoa recommendation data model for astronomical dataset characterisation": "paper:1111.2281v1",
+    "uml模型": "method:uml模型",
+    "定义高维度元数据标准，以便描述天文数据产品的物理参数空间，包括2d图像、数据立方体、x射线事件列表、ifu数据等。": "task:定义高维度元数据标准，以便描述天文数据产品的物理参数空间，包括2d图像、数据立方体、x射线事件列表、ifu数据等。",
+    "x-ray ccd event list": "dataset:x-ray ccd event list",
+    "2d optical image": "dataset:2d optical image",
+    "1d spectrum": "dataset:1d spectrum",
+    "3d ifu data": "dataset:3d ifu data",
+    "radio interferometry data": "dataset:radio interferometry data",
+    "simulated ccd observation": "dataset:simulated ccd observation",
+    "不能直接提取具体指标，但描述了如何构建结构化数据模型以描述各种类型的数据集": "metric:不能直接提取具体指标，但描述了如何构建结构化数据模型以描述各种类型的数据集",
+    "提出了适用于不同类型天文数据集的标准化元数据描述框架。": "contribution:提出了适用于不同类型天文数据集的标准化元数据描述框架。",
+    "详细定义了数据集的物理轴、覆盖范围、灵敏度、分辨率和采样精度。": "contribution:详细定义了数据集的物理轴、覆盖范围、灵敏度、分辨率和采样精度。",
+    "提供了描述不同观测和模拟数据集物理属性的语法和结构。": "contribution:提供了描述不同观测和模拟数据集物理属性的语法和结构。",
+    "促进了跨不同vo框架或门户的数据操作和数据集描述的一致性。": "contribution:促进了跨不同vo框架或门户的数据操作和数据集描述的一致性。",
+    "generative model": "concept:generative model",
+    "loss minimization": "concept:loss minimization",
+    "estimation error": "concept:estimation error",
+    "coin aggregation": "task:coin aggregation",
+    "open-ended qa": "task:open-ended qa",
+    "text-to-image": "task:text-to-image",
+    "fact-controlled approaches": "method:fact-controlled approaches",
+    "leave-n-out dataset": "dataset:leave-n-out dataset",
+    "natural hallucination dataset": "dataset:natural hallucination dataset",
+    "clinical hallucination detection": "task:clinical hallucination detection",
+    "general-domain hallucination detection": "method:general-domain hallucination detection",
+    "pearson correlation": "metric:pearson correlation",
+    "rouge-1": "metric:rouge-1",
+    "factcc": "metric:factcc",
+    "bertscore": "metric:bertscore",
+    "questeval": "metric:questeval",
+    "infolmab": "metric:infolmab",
+    "summaczs": "metric:summaczs",
+    "summacconv": "metric:summacconv",
+    "alignscore": "metric:alignscore",
+    "clinical summarization system": "task:clinical summarization system",
+    "firsthallucinationtoken": "concept:firsthallucinationtoken",
+    "token-levelhallucinationdetection": "task:token-levelhallucinationdetection",
+    "hat": "method:hat",
+    "ah": "method:ah",
+    "sdt": "method:sdt",
+    "mdnet": "model:mdnet",
+    "dt": "dataset:dt",
+    "dq": "dataset:dq",
+    "imagenet-vid": "dataset:imagenet-vid"
+  },
+  "communities": {
+    "0": {
+      "nodes": [
+        "paper:2509.21473v1",
+        "method:δ-hallucination",
+        "task:尽管语言模型在最小化损失时优化了平均结果，但它们仍可能生成与任何实用的可能性输出都不匹配的内容，这就提出了估计过程中误差的结构性问题。",
+        "dataset:未使用特定的数据集",
+        "contribution:新定义幻觉的结构性来源：引入了δ-幻觉定义，并解释了幻觉对模型估计的影响。",
+        "contribution:证明了损失最小化的优化估计器仍然存在δ-幻觉，适用于单个输入、近似最优估计器、多输入情况以及模型收到隐含影响信号的情况。",
+        "contribution:提出了δ-幻觉发生的概率下限，为广泛的目标分布类提供了假设条件下的非零概率。",
+        "concept:generative model",
+        "concept:loss minimization",
+        "concept:estimation error",
+        "task:coin aggregation",
+        "task:open-ended qa",
+        "task:text-to-image"
+      ],
+      "key_entities": [
+        "Are Hallucinations Bad Estimations?",
+        "δ-hallucination",
+        "尽管语言模型在最小化损失时优化了平均结果，但它们仍可能生成与任何实用的可能性输出都不匹配的内容，这就提出了估计过程中误差的结构性问题。",
+        "未使用特定的数据集",
+        "新定义幻觉的结构性来源：引入了δ-幻觉定义，并解释了幻觉对模型估计的影响。",
+        "证明了损失最小化的优化估计器仍然存在δ-幻觉，适用于单个输入、近似最优估计器、多输入情况以及模型收到隐含影响信号的情况。",
+        "提出了δ-幻觉发生的概率下限，为广泛的目标分布类提供了假设条件下的非零概率。",
+        "Generative Model",
+        "Loss Minimization",
+        "Estimation Error",
+        "Coin Aggregation",
+        "Open-Ended QA"
+      ],
+      "key_papers": [
+        "Are Hallucinations Bad Estimations?"
+      ],
+      "dominant_types": [
+        "Task",
+        "Contribution",
+        "Concept"
+      ],
+      "semantic_tag": "Research Contributions Cluster",
+      "summary": "",
+      "community_name": "Research Contributions Cluster"
+    },
+    "1": {
+      "nodes": [
+        "paper:2506.00448v1",
+        "method:fact-based approaches",
+        "task:尽管近年来大型语言模型（llms）在临床对话摘要中表现出显著风险，但其引发的幻觉现象仍处于临床领域研究不足的状态，尤其是在检测和防止其潜在危害方面。",
+        "dataset:leave-n-out lno dataset 570 modified transcripts",
+        "dataset:natural hallucination nh dataset 500 news articles",
+        "metric:pearson correlation between model outputs and the number of removed facts",
+        "metric:various metrics such as rouge-1 factcc bertscore questeval infolmab summaczs summacconv alignscore",
+        "contribution:提出一个针对临床幻觉检测的新型事实控制评估基准",
+        "contribution:开发多种基于事实的幻觉检测方法，提高解释性",
+        "contribution:证明基于假设验证的方法在幻觉检测方面的优越性"
+      ],
+      "key_entities": [
+        "Fact-Controlled Diagnosis of Hallucinations in Medical Text Summarization",
+        "Fact-based approaches",
+        "尽管近年来大型语言模型（LLMs）在临床对话摘要中表现出显著风险，但其引发的幻觉现象仍处于临床领域研究不足的状态，尤其是在检测和防止其潜在危害方面。",
+        "Leave-N-out (LNO) dataset, 570 modified transcripts",
+        "Natural Hallucination (NH) dataset, 500 news articles",
+        "Pearson correlation between model outputs and the number of removed facts",
+        "Various metrics such as ROUGE-1, FactCC, BERTScore, QuestEval, InfoLMAB, SummaCZS, SummaCConv, AlignScore",
+        "提出一个针对临床幻觉检测的新型事实控制评估基准",
+        "开发多种基于事实的幻觉检测方法，提高解释性",
+        "证明基于假设验证的方法在幻觉检测方面的优越性"
+      ],
+      "key_papers": [
+        "Fact-Controlled Diagnosis of Hallucinations in Medical Text Summarization"
+      ],
+      "dominant_types": [
+        "Contribution",
+        "Dataset",
+        "Metric"
+      ],
+      "semantic_tag": "Benchmark & Dataset Cluster",
+      "summary": "",
+      "community_name": "Benchmark & Dataset Cluster"
+    },
+    "2": {
+      "nodes": [
+        "paper:2507.20836v4",
+        "contribution:揭示了首令牌在幻觉信号中的更强特征，有助于更好的检测方法。",
+        "contribution:表明部分令牌级信号（如熵）能有效识别首令牌的幻觉。",
+        "contribution:指出当前基于令牌的幻觉检测方法在所有位置上并不保持一致的性能。"
+      ],
+      "key_entities": [
+        "First Hallucination Tokens Are Different from Conditional Ones",
+        "揭示了首令牌在幻觉信号中的更强特征，有助于更好的检测方法。",
+        "表明部分令牌级信号（如熵）能有效识别首令牌的幻觉。",
+        "指出当前基于令牌的幻觉检测方法在所有位置上并不保持一致的性能。"
+      ],
+      "key_papers": [
+        "First Hallucination Tokens Are Different from Conditional Ones"
+      ],
+      "dominant_types": [
+        "Contribution",
+        "Paper"
+      ],
+      "semantic_tag": "Research Contributions Cluster",
+      "summary": "",
+      "community_name": "Research Contributions Cluster"
+    },
+    "3": {
+      "nodes": [
+        "method:ragtruth",
+        "task:尽管大语言模型（llms）会生成虚构或矛盾内容，而当前方法往往忽略了在生成序列中令牌级幻觉信号的演变，研究首令牌在幻觉检测中的差异。",
+        "metric:auroc",
+        "concept:firsthallucinationtoken",
+        "task:token-levelhallucinationdetection"
+      ],
+      "key_entities": [
+        "RAGTruth",
+        "尽管大语言模型（LLMs）会生成虚构或矛盾内容，而当前方法往往忽略了在生成序列中令牌级幻觉信号的演变，研究首令牌在幻觉检测中的差异。",
+        "AUROC",
+        "FirstHallucinationToken",
+        "Token-LevelHallucinationDetection"
+      ],
+      "key_papers": [],
+      "dominant_types": [
+        "Task",
+        "Method",
+        "Metric"
+      ],
+      "semantic_tag": "Task & Application Cluster",
+      "summary": "",
+      "community_name": "Task & Application Cluster"
+    },
+    "4": {
+      "nodes": [
+        "paper:1906.07008v1",
+        "method:adversarial hallucinator ah",
+        "task:在低数据跟踪阶段，通过模拟人类的想象机制生成新的正样本，以帮助基于cnn的跟踪器解决过拟合问题和泛化能力不足的问题。",
+        "dataset:dt 从imagenet-vid中收集同一身份实例对",
+        "dataset:dq 由dt生成的新样本集",
+        "contribution:提出了一种基于生成对抗网络的对抗“幻象器”（ah），模仿人类的想象机制生成新颖的正样本。",
+        "contribution:基于ah和在线分类器（mdnet）共同优化hat，有助于缓解过拟合并提高生成多样性正样本的能力。",
+        "contribution:提出了一种新颖的选择性变形转移（sdt）方法，以更好地选择合适的变形方法。"
+      ],
+      "key_entities": [
+        "Hallucinated Adversarial Learning for Robust Visual Tracking",
+        "adversarial hallucinator (AH)",
+        "在低数据跟踪阶段，通过模拟人类的想象机制生成新的正样本，以帮助基于CNN的跟踪器解决过拟合问题和泛化能力不足的问题。",
+        "DT (从ImageNet-VID中收集同一身份实例对)",
+        "DQ (由DT生成的新样本集)",
+        "提出了一种基于生成对抗网络的对抗“幻象器”（AH），模仿人类的想象机制生成新颖的正样本。",
+        "基于AH和在线分类器（MDNet）共同优化HAT，有助于缓解过拟合并提高生成多样性正样本的能力。",
+        "提出了一种新颖的选择性变形转移（SDT）方法，以更好地选择合适的变形方法。"
+      ],
+      "key_papers": [
+        "Hallucinated Adversarial Learning for Robust Visual Tracking"
+      ],
+      "dominant_types": [
+        "Contribution",
+        "Dataset",
+        "Paper"
+      ],
+      "semantic_tag": "Benchmark & Dataset Cluster",
+      "summary": "",
+      "community_name": "Benchmark & Dataset Cluster"
+    },
+    "5": {
+      "nodes": [
+        "metric:dpr",
+        "metric:auc",
+        "method:hat",
+        "method:sdt",
+        "model:mdnet"
+      ],
+      "key_entities": [
+        "DPR",
+        "AUC",
+        "HAT",
+        "SDT",
+        "MDNet"
+      ],
+      "key_papers": [],
+      "dominant_types": [
+        "Metric",
+        "Method",
+        "Model"
+      ],
+      "semantic_tag": "Evaluation Metrics Cluster",
+      "summary": "",
+      "community_name": "Evaluation Metrics Cluster"
+    },
+    "6": {
+      "nodes": [
+        "paper:1111.2281v1",
+        "method:uml模型",
+        "task:定义高维度元数据标准，以便描述天文数据产品的物理参数空间，包括2d图像、数据立方体、x射线事件列表、ifu数据等。",
+        "dataset:x-ray ccd event list",
+        "dataset:2d optical image",
+        "dataset:1d spectrum",
+        "dataset:3d ifu data",
+        "dataset:radio interferometry data",
+        "dataset:simulated ccd observation",
+        "metric:不能直接提取具体指标，但描述了如何构建结构化数据模型以描述各种类型的数据集",
+        "contribution:提出了适用于不同类型天文数据集的标准化元数据描述框架。",
+        "contribution:详细定义了数据集的物理轴、覆盖范围、灵敏度、分辨率和采样精度。",
+        "contribution:提供了描述不同观测和模拟数据集物理属性的语法和结构。",
+        "contribution:促进了跨不同vo框架或门户的数据操作和数据集描述的一致性。"
+      ],
+      "key_entities": [
+        "IVOA Recommendation: Data Model for Astronomical DataSet Characterisation",
+        "UML模型",
+        "定义高维度元数据标准，以便描述天文数据产品的物理参数空间，包括2D图像、数据立方体、X射线事件列表、IFU数据等。",
+        "X-ray CCD Event List",
+        "2D Optical Image",
+        "1D Spectrum",
+        "3D IFU Data",
+        "Radio Interferometry Data",
+        "Simulated CCD Observation",
+        "不能直接提取具体指标，但描述了如何构建结构化数据模型以描述各种类型的数据集",
+        "提出了适用于不同类型天文数据集的标准化元数据描述框架。",
+        "详细定义了数据集的物理轴、覆盖范围、灵敏度、分辨率和采样精度。"
+      ],
+      "key_papers": [
+        "IVOA Recommendation: Data Model for Astronomical DataSet Characterisation"
+      ],
+      "dominant_types": [
+        "Dataset",
+        "Contribution",
+        "Paper"
+      ],
+      "semantic_tag": "Benchmark & Dataset Cluster",
+      "summary": "",
+      "community_name": "Benchmark & Dataset Cluster"
+    },
+    "7": {
+      "nodes": [
+        "method:fact-controlled approaches",
+        "dataset:natural hallucination dataset",
+        "task:clinical hallucination detection",
+        "metric:rouge-1",
+        "metric:factcc",
+        "metric:bertscore",
+        "metric:questeval",
+        "metric:infolmab",
+        "metric:summaczs",
+        "metric:summacconv",
+        "metric:alignscore",
+        "task:clinical summarization system"
+      ],
+      "key_entities": [
+        "Fact-controlled approaches",
+        "Natural hallucination dataset",
+        "clinical hallucination detection",
+        "ROUGE-1",
+        "FactCC",
+        "BERTScore",
+        "QuestEval",
+        "InfoLMAB",
+        "SummaCZS",
+        "SummaCConv",
+        "AlignScore",
+        "clinical summarization system"
+      ],
+      "key_papers": [],
+      "dominant_types": [
+        "Metric",
+        "Task",
+        "Method"
+      ],
+      "semantic_tag": "Task & Application Cluster",
+      "summary": "",
+      "community_name": "Task & Application Cluster"
+    },
+    "8": {
+      "nodes": [
+        "dataset:leave-n-out dataset",
+        "method:general-domain hallucination detection",
+        "metric:pearson correlation"
+      ],
+      "key_entities": [
+        "Leave-N-out dataset",
+        "general-domain hallucination detection",
+        "Pearson correlation"
+      ],
+      "key_papers": [],
+      "dominant_types": [
+        "Dataset",
+        "Method",
+        "Metric"
+      ],
+      "semantic_tag": "Benchmark & Dataset Cluster",
+      "summary": "",
+      "community_name": "Benchmark & Dataset Cluster"
+    },
+    "9": {
+      "nodes": [
+        "method:ah",
+        "dataset:dt",
+        "dataset:dq",
+        "dataset:imagenet-vid"
+      ],
+      "key_entities": [
+        "AH",
+        "DT",
+        "DQ",
+        "ImageNet-VID"
+      ],
+      "key_papers": [],
+      "dominant_types": [
+        "Dataset",
+        "Method"
+      ],
+      "semantic_tag": "Benchmark & Dataset Cluster",
+      "summary": "",
+      "community_name": "Benchmark & Dataset Cluster"
+    }
+  },
+  "citation_graph": {},
+  "stats": {
+    "node_count": 78,
+    "edge_count": 112,
+    "node_type_count": {
+      "Paper": 5,
+      "Method": 10,
+      "Task": 11,
+      "Dataset": 16,
+      "Contribution": 16,
+      "Metric": 15,
+      "Concept": 4,
+      "Model": 1
+    },
+    "paper_count": 5,
+    "community_count": 0,
+    "citation_edge_count": 0
+  }
+}

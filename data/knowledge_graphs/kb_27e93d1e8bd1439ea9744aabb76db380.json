@@ -1,0 +1,1048 @@
+{
+  "db_id": "kb_27e93d1e8bd1439ea9744aabb76db380",
+  "nodes": {
+    "paper:2206.04564v6": {
+      "id": "paper:2206.04564v6",
+      "type": "Paper",
+      "label": "TwiBot-22: Towards Graph-Based Twitter Bot Detection",
+      "norm_label": "twibot-22 towards graph-based twitter bot detection"
+    },
+    "method:twibot-22": {
+      "id": "method:twibot-22",
+      "type": "Method",
+      "label": "TwiBot-22",
+      "norm_label": "twibot-22"
+    },
+    "task:尽管传统的twitter bot检测方法在对抗传统的bot时表现出色，但它们不能有效检测新型的twitter bot，且现有的bot检测数据集很少是基于图结构的，且存在数据规模小、结构不完整和标注质量": {
+      "id": "task:尽管传统的twitter bot检测方法在对抗传统的bot时表现出色，但它们不能有效检测新型的twitter bot，且现有的bot检测数据集很少是基于图结构的，且存在数据规模小、结构不完整和标注质量",
+      "type": "Task",
+      "label": "尽管传统的Twitter bot检测方法在对抗传统的bot时表现出色，但它们不能有效检测新型的Twitter bot，且现有的bot检测数据集很少是基于图结构的，且存在数据规模小、结构不完整和标注质量",
+      "norm_label": "尽管传统的twitter bot检测方法在对抗传统的bot时表现出色，但它们不能有效检测新型的twitter bot，且现有的bot检测数据集很少是基于图结构的，且存在数据规模小、结构不完整和标注质量"
+    },
+    "dataset:twibot-22 包含230万条推文": {
+      "id": "dataset:twibot-22 包含230万条推文",
+      "type": "Dataset",
+      "label": "TwiBot-22 (包含230万条推文)",
+      "norm_label": "twibot-22 包含230万条推文"
+    },
+    "contribution:提出了twibot-22，这是迄今为止最大的基于图的twitter bot检测数据集。": {
+      "id": "contribution:提出了twibot-22，这是迄今为止最大的基于图的twitter bot检测数据集。",
+      "type": "Contribution",
+      "label": "提出了TwiBot-22，这是迄今为止最大的基于图的Twitter bot检测数据集。",
+      "norm_label": "提出了twibot-22，这是迄今为止最大的基于图的twitter bot检测数据集。"
+    },
+    "contribution:提供了多样化的实体和关系，改善了标注质量。": {
+      "id": "contribution:提供了多样化的实体和关系，改善了标注质量。",
+      "type": "Contribution",
+      "label": "提供了多样化的实体和关系，改善了标注质量。",
+      "norm_label": "提供了多样化的实体和关系，改善了标注质量。"
+    },
+    "contribution:重实现了35个代表性的twitter bot检测基准，以促进模型性能的公正比较和对研究进展的全面理解。": {
+      "id": "contribution:重实现了35个代表性的twitter bot检测基准，以促进模型性能的公正比较和对研究进展的全面理解。",
+      "type": "Contribution",
+      "label": "重实现了35个代表性的Twitter bot检测基准，以促进模型性能的公正比较和对研究进展的全面理解。",
+      "norm_label": "重实现了35个代表性的twitter bot检测基准，以促进模型性能的公正比较和对研究进展的全面理解。"
+    },
+    "paper:1908.08066v1": {
+      "id": "paper:1908.08066v1",
+      "type": "Paper",
+      "label": "Consistency of the Infrared Variability of Sgr A* over 22 years",
+      "norm_label": "consistency of the infrared variability of sgr a over 22 years"
+    },
+    "method:speckle holography": {
+      "id": "method:speckle holography",
+      "type": "Method",
+      "label": "speckle holography",
+      "norm_label": "speckle holography"
+    },
+    "task:尽管先前对sgr a 的红外变异性研究受限于较短的时间尺度，但为了研究更长的时间尺度下的变异性。": {
+      "id": "task:尽管先前对sgr a 的红外变异性研究受限于较短的时间尺度，但为了研究更长的时间尺度下的变异性。",
+      "type": "Task",
+      "label": "尽管先前对Sgr A*的红外变异性研究受限于较短的时间尺度，但为了研究更长的时间尺度下的变异性。",
+      "norm_label": "尽管先前对sgr a 的红外变异性研究受限于较短的时间尺度，但为了研究更长的时间尺度下的变异性。"
+    },
+    "dataset:null": {
+      "id": "dataset:null",
+      "type": "Dataset",
+      "label": "null",
+      "norm_label": "null"
+    },
+    "contribution:改进了speckle holography分析技术，提高了近红外断层成像的灵敏度。": {
+      "id": "contribution:改进了speckle holography分析技术，提高了近红外断层成像的灵敏度。",
+      "type": "Contribution",
+      "label": "改进了speckle holography分析技术，提高了近红外断层成像的灵敏度。",
+      "norm_label": "改进了speckle holography分析技术，提高了近红外断层成像的灵敏度。"
+    },
+    "contribution:研究了更长时间尺度上的sgr a 的变异性。": {
+      "id": "contribution:研究了更长时间尺度上的sgr a 的变异性。",
+      "type": "Contribution",
+      "label": "研究了更长时间尺度上的Sgr A*的变异性。",
+      "norm_label": "研究了更长时间尺度上的sgr a 的变异性。"
+    },
+    "contribution:使用witzel et al. 2018 模型对2006年至2016年的红外变异性进行了模拟。": {
+      "id": "contribution:使用witzel et al. 2018 模型对2006年至2016年的红外变异性进行了模拟。",
+      "type": "Contribution",
+      "label": "使用Witzel et al. (2018)模型对2006年至2016年的红外变异性进行了模拟。",
+      "norm_label": "使用witzel et al. 2018 模型对2006年至2016年的红外变异性进行了模拟。"
+    },
+    "paper:2206.08029v1": {
+      "id": "paper:2206.08029v1",
+      "type": "Paper",
+      "label": "DIALOG-22 RuATD Generated Text Detection",
+      "norm_label": "dialog-22 ruatd generated text detection"
+    },
+    "method:ensemble method": {
+      "id": "method:ensemble method",
+      "type": "Method",
+      "label": "ensemble method",
+      "norm_label": "ensemble method"
+    },
+    "task:为了检测text generation models生成的文本并区分其来源于哪个模型，防止滥用tgm。": {
+      "id": "task:为了检测text generation models生成的文本并区分其来源于哪个模型，防止滥用tgm。",
+      "type": "Task",
+      "label": "为了检测Text Generation Models生成的文本并区分其来源于哪个模型，防止滥用TGM。",
+      "norm_label": "为了检测text generation models生成的文本并区分其来源于哪个模型，防止滥用tgm。"
+    },
+    "metric:accuracy": {
+      "id": "metric:accuracy",
+      "type": "Metric",
+      "label": "Accuracy",
+      "norm_label": "accuracy"
+    },
+    "contribution:提出了不同预训练模型的集成方法。": {
+      "id": "contribution:提出了不同预训练模型的集成方法。",
+      "type": "Contribution",
+      "label": "提出了不同预训练模型的集成方法。",
+      "norm_label": "提出了不同预训练模型的集成方法。"
+    },
+    "paper:astro-ph 9709281v1": {
+      "id": "paper:astro-ph 9709281v1",
+      "type": "Paper",
+      "label": "The simultaneous detection of 22- and 321-GHz H2O maser emission towards the symbiotic Mira R Aquarii",
+      "norm_label": "the simultaneous detection of 22- and 321-ghz h2o maser emission towards the symbiotic mira r aquarii"
+    },
+    "task:为了研究r aqr和h1-36（类mira symbiotic星）中的22-和321-ghz h2o maser的性质。": {
+      "id": "task:为了研究r aqr和h1-36（类mira symbiotic星）中的22-和321-ghz h2o maser的性质。",
+      "type": "Task",
+      "label": "为了研究R Aqr和H1-36（类Mira symbiotic星）中的22-和321-GHz H2O maser的性质。",
+      "norm_label": "为了研究r aqr和h1-36（类mira symbiotic星）中的22-和321-ghz h2o maser的性质。"
+    },
+    "contribution:提出了一个新的模型解释r aqr中不同频段的水星现象。": {
+      "id": "contribution:提出了一个新的模型解释r aqr中不同频段的水星现象。",
+      "type": "Contribution",
+      "label": "提出了一个新的模型解释R Aqr中不同频段的水星现象。",
+      "norm_label": "提出了一个新的模型解释r aqr中不同频段的水星现象。"
+    },
+    "contribution:首次使用高空间和光谱分辨率观测r aqr和h1-36。": {
+      "id": "contribution:首次使用高空间和光谱分辨率观测r aqr和h1-36。",
+      "type": "Contribution",
+      "label": "首次使用高空间和光谱分辨率观测R Aqr和H1-36。",
+      "norm_label": "首次使用高空间和光谱分辨率观测r aqr和h1-36。"
+    },
+    "contribution:揭示了22-ghz和321-ghz h2o maser的不同性质": {
+      "id": "contribution:揭示了22-ghz和321-ghz h2o maser的不同性质",
+      "type": "Contribution",
+      "label": "揭示了22-GHz和321-GHz H2O maser的不同性质",
+      "norm_label": "揭示了22-ghz和321-ghz h2o maser的不同性质"
+    },
+    "paper:2304.00636v1": {
+      "id": "paper:2304.00636v1",
+      "type": "Paper",
+      "label": "Classifying COVID-19 Related Tweets for Fake News Detection and Sentiment Analysis with BERT-based Models",
+      "norm_label": "classifying covid-19 related tweets for fake news detection and sentiment analysis with bert-based models"
+    },
+    "method:bert": {
+      "id": "method:bert",
+      "type": "Method",
+      "label": "BERT",
+      "norm_label": "bert"
+    },
+    "task:尽管现有假新闻检测和情感分析方法尚存不足，但为了更准确地识别covid-19相关的假新闻和情感。": {
+      "id": "task:尽管现有假新闻检测和情感分析方法尚存不足，但为了更准确地识别covid-19相关的假新闻和情感。",
+      "type": "Task",
+      "label": "尽管现有假新闻检测和情感分析方法尚存不足，但为了更准确地识别COVID-19相关的假新闻和情感。",
+      "norm_label": "尽管现有假新闻检测和情感分析方法尚存不足，但为了更准确地识别covid-19相关的假新闻和情感。"
+    },
+    "dataset:task1.c 4128 tweets for sentiment analysis task 8661 tweets for fake news detection task": {
+      "id": "dataset:task1.c 4128 tweets for sentiment analysis task 8661 tweets for fake news detection task",
+      "type": "Dataset",
+      "label": "task1.c (4128 tweets for sentiment analysis task, 8661 tweets for fake news detection task)",
+      "norm_label": "task1.c 4128 tweets for sentiment analysis task 8661 tweets for fake news detection task"
+    },
+    "contribution:提出了一种使用预训练语言模型bert的情感分析和假新闻检测方法": {
+      "id": "contribution:提出了一种使用预训练语言模型bert的情感分析和假新闻检测方法",
+      "type": "Contribution",
+      "label": "提出了一种使用预训练语言模型BERT的情感分析和假新闻检测方法",
+      "norm_label": "提出了一种使用预训练语言模型bert的情感分析和假新闻检测方法"
+    },
+    "task:graph-based twitter bot detection": {
+      "id": "task:graph-based twitter bot detection",
+      "type": "Task",
+      "label": "graph-based Twitter bot detection",
+      "norm_label": "graph-based twitter bot detection",
+      "description": ""
+    },
+    "concept:twitter bot": {
+      "id": "concept:twitter bot",
+      "type": "Concept",
+      "label": "Twitter bot",
+      "norm_label": "twitter bot",
+      "description": ""
+    },
+    "method:graph-based bot detection approaches": {
+      "id": "method:graph-based bot detection approaches",
+      "type": "Method",
+      "label": "graph-based bot detection approaches",
+      "norm_label": "graph-based bot detection approaches",
+      "description": ""
+    },
+    "method:35 representative twitter bot detection baselines": {
+      "id": "method:35 representative twitter bot detection baselines",
+      "type": "Method",
+      "label": "35 representative Twitter bot detection baselines",
+      "norm_label": "35 representative twitter bot detection baselines",
+      "description": ""
+    },
+    "metric:230万条推文": {
+      "id": "metric:230万条推文",
+      "type": "Metric",
+      "label": "230万条推文",
+      "norm_label": "230万条推文",
+      "description": ""
+    },
+    "paper:sgr a": {
+      "id": "paper:sgr a",
+      "type": "Paper",
+      "label": "Sgr A*",
+      "norm_label": "sgr a",
+      "description": ""
+    },
+    "metric:k magnitude": {
+      "id": "metric:k magnitude",
+      "type": "Metric",
+      "label": "K magnitude",
+      "norm_label": "k magnitude",
+      "description": ""
+    },
+    "metric:3.4 mjy": {
+      "id": "metric:3.4 mjy",
+      "type": "Metric",
+      "label": "3.4 mJy",
+      "norm_label": "3.4 mjy",
+      "description": ""
+    },
+    "model:witzel et al. 2018 model": {
+      "id": "model:witzel et al. 2018 model",
+      "type": "Model",
+      "label": "Witzel et al. (2018) model",
+      "norm_label": "witzel et al. 2018 model",
+      "description": ""
+    },
+    "task:dialog-22 ruatd": {
+      "id": "task:dialog-22 ruatd",
+      "type": "Task",
+      "label": "DIALOG-22 RuATD",
+      "norm_label": "dialog-22 ruatd",
+      "description": ""
+    },
+    "concept:attention mechanism": {
+      "id": "concept:attention mechanism",
+      "type": "Concept",
+      "label": "attention mechanism",
+      "norm_label": "attention mechanism",
+      "description": ""
+    },
+    "dataset:r aqr": {
+      "id": "dataset:r aqr",
+      "type": "Dataset",
+      "label": "R Aqr",
+      "norm_label": "r aqr",
+      "description": ""
+    },
+    "dataset:h1-36": {
+      "id": "dataset:h1-36",
+      "type": "Dataset",
+      "label": "H1-36",
+      "norm_label": "h1-36",
+      "description": ""
+    },
+    "method:新模型": {
+      "id": "method:新模型",
+      "type": "Method",
+      "label": "新模型",
+      "norm_label": "新模型",
+      "description": ""
+    },
+    "concept:水星现象": {
+      "id": "concept:水星现象",
+      "type": "Concept",
+      "label": "水星现象",
+      "norm_label": "水星现象",
+      "description": ""
+    },
+    "method:高空间和光谱分辨率观测": {
+      "id": "method:高空间和光谱分辨率观测",
+      "type": "Method",
+      "label": "高空间和光谱分辨率观测",
+      "norm_label": "高空间和光谱分辨率观测",
+      "description": ""
+    },
+    "dataset:task1.c": {
+      "id": "dataset:task1.c",
+      "type": "Dataset",
+      "label": "task1.c",
+      "norm_label": "task1.c",
+      "description": ""
+    }
+  },
+  "edges": [
+    {
+      "source": "paper:2206.04564v6",
+      "target": "method:twibot-22",
+      "type": "proposes",
+      "weight": 1.0
+    },
+    {
+      "source": "paper:2206.04564v6",
+      "target": "task:尽管传统的twitter bot检测方法在对抗传统的bot时表现出色，但它们不能有效检测新型的twitter bot，且现有的bot检测数据集很少是基于图结构的，且存在数据规模小、结构不完整和标注质量",
+      "type": "applied_to",
+      "weight": 0.8
+    },
+    {
+      "source": "method:twibot-22",
+      "target": "task:尽管传统的twitter bot检测方法在对抗传统的bot时表现出色，但它们不能有效检测新型的twitter bot，且现有的bot检测数据集很少是基于图结构的，且存在数据规模小、结构不完整和标注质量",
+      "type": "solves",
+      "weight": 0.95
+    },
+    {
+      "source": "paper:2206.04564v6",
+      "target": "dataset:twibot-22 包含230万条推文",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "method:twibot-22",
+      "target": "dataset:twibot-22 包含230万条推文",
+      "type": "evaluates_on",
+      "weight": 0.9
+    },
+    {
+      "source": "paper:2206.04564v6",
+      "target": "contribution:提出了twibot-22，这是迄今为止最大的基于图的twitter bot检测数据集。",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "method:twibot-22",
+      "target": "contribution:提出了twibot-22，这是迄今为止最大的基于图的twitter bot检测数据集。",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:2206.04564v6",
+      "target": "contribution:提供了多样化的实体和关系，改善了标注质量。",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "method:twibot-22",
+      "target": "contribution:提供了多样化的实体和关系，改善了标注质量。",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:2206.04564v6",
+      "target": "contribution:重实现了35个代表性的twitter bot检测基准，以促进模型性能的公正比较和对研究进展的全面理解。",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "method:twibot-22",
+      "target": "contribution:重实现了35个代表性的twitter bot检测基准，以促进模型性能的公正比较和对研究进展的全面理解。",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:1908.08066v1",
+      "target": "method:speckle holography",
+      "type": "proposes",
+      "weight": 1.0
+    },
+    {
+      "source": "paper:1908.08066v1",
+      "target": "task:尽管先前对sgr a 的红外变异性研究受限于较短的时间尺度，但为了研究更长的时间尺度下的变异性。",
+      "type": "applied_to",
+      "weight": 0.8
+    },
+    {
+      "source": "method:speckle holography",
+      "target": "task:尽管先前对sgr a 的红外变异性研究受限于较短的时间尺度，但为了研究更长的时间尺度下的变异性。",
+      "type": "solves",
+      "weight": 0.95
+    },
+    {
+      "source": "paper:1908.08066v1",
+      "target": "dataset:null",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "method:speckle holography",
+      "target": "dataset:null",
+      "type": "evaluates_on",
+      "weight": 0.9
+    },
+    {
+      "source": "method:speckle holography",
+      "target": "dataset:null",
+      "type": "achieves",
+      "weight": 0.85
+    },
+    {
+      "source": "paper:1908.08066v1",
+      "target": "contribution:改进了speckle holography分析技术，提高了近红外断层成像的灵敏度。",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "method:speckle holography",
+      "target": "contribution:改进了speckle holography分析技术，提高了近红外断层成像的灵敏度。",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:1908.08066v1",
+      "target": "contribution:研究了更长时间尺度上的sgr a 的变异性。",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "method:speckle holography",
+      "target": "contribution:研究了更长时间尺度上的sgr a 的变异性。",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:1908.08066v1",
+      "target": "contribution:使用witzel et al. 2018 模型对2006年至2016年的红外变异性进行了模拟。",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "method:speckle holography",
+      "target": "contribution:使用witzel et al. 2018 模型对2006年至2016年的红外变异性进行了模拟。",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:2206.08029v1",
+      "target": "method:ensemble method",
+      "type": "proposes",
+      "weight": 1.0
+    },
+    {
+      "source": "paper:2206.08029v1",
+      "target": "task:为了检测text generation models生成的文本并区分其来源于哪个模型，防止滥用tgm。",
+      "type": "applied_to",
+      "weight": 0.8
+    },
+    {
+      "source": "method:ensemble method",
+      "target": "task:为了检测text generation models生成的文本并区分其来源于哪个模型，防止滥用tgm。",
+      "type": "solves",
+      "weight": 0.95
+    },
+    {
+      "source": "paper:2206.08029v1",
+      "target": "dataset:null",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "method:ensemble method",
+      "target": "dataset:null",
+      "type": "evaluates_on",
+      "weight": 0.9
+    },
+    {
+      "source": "method:ensemble method",
+      "target": "metric:accuracy",
+      "type": "achieves",
+      "weight": 0.85
+    },
+    {
+      "source": "paper:2206.08029v1",
+      "target": "contribution:提出了不同预训练模型的集成方法。",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "method:ensemble method",
+      "target": "contribution:提出了不同预训练模型的集成方法。",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:astro-ph 9709281v1",
+      "target": "task:为了研究r aqr和h1-36（类mira symbiotic星）中的22-和321-ghz h2o maser的性质。",
+      "type": "applied_to",
+      "weight": 0.8
+    },
+    {
+      "source": "paper:astro-ph 9709281v1",
+      "target": "contribution:提出了一个新的模型解释r aqr中不同频段的水星现象。",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "paper:astro-ph 9709281v1",
+      "target": "contribution:首次使用高空间和光谱分辨率观测r aqr和h1-36。",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "paper:astro-ph 9709281v1",
+      "target": "contribution:揭示了22-ghz和321-ghz h2o maser的不同性质",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "paper:2304.00636v1",
+      "target": "method:bert",
+      "type": "proposes",
+      "weight": 1.0
+    },
+    {
+      "source": "paper:2304.00636v1",
+      "target": "task:尽管现有假新闻检测和情感分析方法尚存不足，但为了更准确地识别covid-19相关的假新闻和情感。",
+      "type": "applied_to",
+      "weight": 0.8
+    },
+    {
+      "source": "method:bert",
+      "target": "task:尽管现有假新闻检测和情感分析方法尚存不足，但为了更准确地识别covid-19相关的假新闻和情感。",
+      "type": "solves",
+      "weight": 0.95
+    },
+    {
+      "source": "paper:2304.00636v1",
+      "target": "dataset:task1.c 4128 tweets for sentiment analysis task 8661 tweets for fake news detection task",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "method:bert",
+      "target": "dataset:task1.c 4128 tweets for sentiment analysis task 8661 tweets for fake news detection task",
+      "type": "evaluates_on",
+      "weight": 0.9
+    },
+    {
+      "source": "method:bert",
+      "target": "metric:accuracy",
+      "type": "achieves",
+      "weight": 0.85
+    },
+    {
+      "source": "paper:2304.00636v1",
+      "target": "contribution:提出了一种使用预训练语言模型bert的情感分析和假新闻检测方法",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "method:bert",
+      "target": "contribution:提出了一种使用预训练语言模型bert的情感分析和假新闻检测方法",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "method:twibot-22",
+      "target": "task:graph-based twitter bot detection",
+      "type": "evaluates_on",
+      "weight": 0.9
+    },
+    {
+      "source": "method:graph-based bot detection approaches",
+      "target": "task:graph-based twitter bot detection",
+      "type": "applied_to",
+      "weight": 0.8
+    },
+    {
+      "source": "method:35 representative twitter bot detection baselines",
+      "target": "task:graph-based twitter bot detection",
+      "type": "evaluates_on",
+      "weight": 0.9
+    },
+    {
+      "source": "method:twibot-22",
+      "target": "concept:twitter bot",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "method:graph-based bot detection approaches",
+      "target": "method:twibot-22",
+      "type": "compared_with",
+      "weight": 0.7
+    },
+    {
+      "source": "method:35 representative twitter bot detection baselines",
+      "target": "method:twibot-22",
+      "type": "compared_with",
+      "weight": 0.7
+    },
+    {
+      "source": "method:twibot-22",
+      "target": "metric:230万条推文",
+      "type": "achieves",
+      "weight": 0.85
+    },
+    {
+      "source": "method:speckle holography",
+      "target": "paper:sgr a",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "method:speckle holography",
+      "target": "metric:k magnitude",
+      "type": "achieves",
+      "weight": 0.85
+    },
+    {
+      "source": "method:speckle holography",
+      "target": "metric:3.4 mjy",
+      "type": "achieves",
+      "weight": 0.85
+    },
+    {
+      "source": "method:speckle holography",
+      "target": "model:witzel et al. 2018 model",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "method:ensemble method",
+      "target": "task:dialog-22 ruatd",
+      "type": "applied_to",
+      "weight": 0.8
+    },
+    {
+      "source": "method:ensemble method",
+      "target": "concept:attention mechanism",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "method:ensemble method",
+      "target": "task:dialog-22 ruatd",
+      "type": "achieves",
+      "weight": 0.85
+    },
+    {
+      "source": "method:高空间和光谱分辨率观测",
+      "target": "dataset:r aqr",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "method:高空间和光谱分辨率观测",
+      "target": "dataset:h1-36",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "method:新模型",
+      "target": "dataset:r aqr",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "method:新模型",
+      "target": "concept:水星现象",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "method:bert",
+      "target": "dataset:task1.c",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "method:bert",
+      "target": "dataset:task1.c",
+      "type": "evaluates_on",
+      "weight": 0.9
+    },
+    {
+      "source": "method:bert",
+      "target": "dataset:task1.c",
+      "type": "achieves",
+      "weight": 0.85
+    }
+  ],
+  "paper_entities": {
+    "2206.04564v6": [
+      "paper:2206.04564v6",
+      "method:twibot-22",
+      "task:尽管传统的twitter bot检测方法在对抗传统的bot时表现出色，但它们不能有效检测新型的twitter bot，且现有的bot检测数据集很少是基于图结构的，且存在数据规模小、结构不完整和标注质量",
+      "dataset:twibot-22 包含230万条推文",
+      "contribution:提出了twibot-22，这是迄今为止最大的基于图的twitter bot检测数据集。",
+      "contribution:提供了多样化的实体和关系，改善了标注质量。",
+      "contribution:重实现了35个代表性的twitter bot检测基准，以促进模型性能的公正比较和对研究进展的全面理解。",
+      "task:graph-based twitter bot detection",
+      "concept:twitter bot",
+      "method:graph-based bot detection approaches",
+      "method:35 representative twitter bot detection baselines",
+      "metric:230万条推文"
+    ],
+    "1908.08066v1": [
+      "paper:1908.08066v1",
+      "method:speckle holography",
+      "task:尽管先前对sgr a 的红外变异性研究受限于较短的时间尺度，但为了研究更长的时间尺度下的变异性。",
+      "dataset:null",
+      "dataset:null",
+      "contribution:改进了speckle holography分析技术，提高了近红外断层成像的灵敏度。",
+      "contribution:研究了更长时间尺度上的sgr a 的变异性。",
+      "contribution:使用witzel et al. 2018 模型对2006年至2016年的红外变异性进行了模拟。",
+      "paper:sgr a",
+      "metric:k magnitude",
+      "metric:3.4 mjy",
+      "model:witzel et al. 2018 model"
+    ],
+    "2206.08029v1": [
+      "paper:2206.08029v1",
+      "method:ensemble method",
+      "task:为了检测text generation models生成的文本并区分其来源于哪个模型，防止滥用tgm。",
+      "dataset:null",
+      "metric:accuracy",
+      "contribution:提出了不同预训练模型的集成方法。",
+      "task:dialog-22 ruatd",
+      "concept:attention mechanism"
+    ],
+    "astro-ph/9709281v1": [
+      "paper:astro-ph 9709281v1",
+      "task:为了研究r aqr和h1-36（类mira symbiotic星）中的22-和321-ghz h2o maser的性质。",
+      "contribution:提出了一个新的模型解释r aqr中不同频段的水星现象。",
+      "contribution:首次使用高空间和光谱分辨率观测r aqr和h1-36。",
+      "contribution:揭示了22-ghz和321-ghz h2o maser的不同性质",
+      "dataset:r aqr",
+      "dataset:h1-36",
+      "method:新模型",
+      "concept:水星现象",
+      "method:高空间和光谱分辨率观测"
+    ],
+    "2304.00636v1": [
+      "paper:2304.00636v1",
+      "method:bert",
+      "task:尽管现有假新闻检测和情感分析方法尚存不足，但为了更准确地识别covid-19相关的假新闻和情感。",
+      "dataset:task1.c 4128 tweets for sentiment analysis task 8661 tweets for fake news detection task",
+      "metric:accuracy",
+      "contribution:提出了一种使用预训练语言模型bert的情感分析和假新闻检测方法",
+      "dataset:task1.c"
+    ]
+  },
+  "entity_aliases": {
+    "twibot-22 towards graph-based twitter bot detection": "paper:2206.04564v6",
+    "twibot-22": "method:twibot-22",
+    "尽管传统的twitter bot检测方法在对抗传统的bot时表现出色，但它们不能有效检测新型的twitter bot，且现有的bot检测数据集很少是基于图结构的，且存在数据规模小、结构不完整和标注质量": "task:尽管传统的twitter bot检测方法在对抗传统的bot时表现出色，但它们不能有效检测新型的twitter bot，且现有的bot检测数据集很少是基于图结构的，且存在数据规模小、结构不完整和标注质量",
+    "twibot-22 包含230万条推文": "dataset:twibot-22 包含230万条推文",
+    "提出了twibot-22，这是迄今为止最大的基于图的twitter bot检测数据集。": "contribution:提出了twibot-22，这是迄今为止最大的基于图的twitter bot检测数据集。",
+    "提供了多样化的实体和关系，改善了标注质量。": "contribution:提供了多样化的实体和关系，改善了标注质量。",
+    "重实现了35个代表性的twitter bot检测基准，以促进模型性能的公正比较和对研究进展的全面理解。": "contribution:重实现了35个代表性的twitter bot检测基准，以促进模型性能的公正比较和对研究进展的全面理解。",
+    "consistency of the infrared variability of sgr a over 22 years": "paper:1908.08066v1",
+    "speckle holography": "method:speckle holography",
+    "尽管先前对sgr a 的红外变异性研究受限于较短的时间尺度，但为了研究更长的时间尺度下的变异性。": "task:尽管先前对sgr a 的红外变异性研究受限于较短的时间尺度，但为了研究更长的时间尺度下的变异性。",
+    "null": "dataset:null",
+    "改进了speckle holography分析技术，提高了近红外断层成像的灵敏度。": "contribution:改进了speckle holography分析技术，提高了近红外断层成像的灵敏度。",
+    "研究了更长时间尺度上的sgr a 的变异性。": "contribution:研究了更长时间尺度上的sgr a 的变异性。",
+    "使用witzel et al. 2018 模型对2006年至2016年的红外变异性进行了模拟。": "contribution:使用witzel et al. 2018 模型对2006年至2016年的红外变异性进行了模拟。",
+    "dialog-22 ruatd generated text detection": "paper:2206.08029v1",
+    "ensemble method": "method:ensemble method",
+    "为了检测text generation models生成的文本并区分其来源于哪个模型，防止滥用tgm。": "task:为了检测text generation models生成的文本并区分其来源于哪个模型，防止滥用tgm。",
+    "accuracy": "metric:accuracy",
+    "提出了不同预训练模型的集成方法。": "contribution:提出了不同预训练模型的集成方法。",
+    "the simultaneous detection of 22- and 321-ghz h2o maser emission towards the symbiotic mira r aquarii": "paper:astro-ph 9709281v1",
+    "为了研究r aqr和h1-36（类mira symbiotic星）中的22-和321-ghz h2o maser的性质。": "task:为了研究r aqr和h1-36（类mira symbiotic星）中的22-和321-ghz h2o maser的性质。",
+    "提出了一个新的模型解释r aqr中不同频段的水星现象。": "contribution:提出了一个新的模型解释r aqr中不同频段的水星现象。",
+    "首次使用高空间和光谱分辨率观测r aqr和h1-36。": "contribution:首次使用高空间和光谱分辨率观测r aqr和h1-36。",
+    "揭示了22-ghz和321-ghz h2o maser的不同性质": "contribution:揭示了22-ghz和321-ghz h2o maser的不同性质",
+    "classifying covid-19 related tweets for fake news detection and sentiment analysis with bert-based models": "paper:2304.00636v1",
+    "bert": "method:bert",
+    "尽管现有假新闻检测和情感分析方法尚存不足，但为了更准确地识别covid-19相关的假新闻和情感。": "task:尽管现有假新闻检测和情感分析方法尚存不足，但为了更准确地识别covid-19相关的假新闻和情感。",
+    "task1.c 4128 tweets for sentiment analysis task 8661 tweets for fake news detection task": "dataset:task1.c 4128 tweets for sentiment analysis task 8661 tweets for fake news detection task",
+    "提出了一种使用预训练语言模型bert的情感分析和假新闻检测方法": "contribution:提出了一种使用预训练语言模型bert的情感分析和假新闻检测方法",
+    "graph-based twitter bot detection": "task:graph-based twitter bot detection",
+    "twitter bot": "concept:twitter bot",
+    "graph-based bot detection approaches": "method:graph-based bot detection approaches",
+    "35 representative twitter bot detection baselines": "method:35 representative twitter bot detection baselines",
+    "230万条推文": "metric:230万条推文",
+    "sgr a": "paper:sgr a",
+    "k magnitude": "metric:k magnitude",
+    "3.4 mjy": "metric:3.4 mjy",
+    "witzel et al. 2018 model": "model:witzel et al. 2018 model",
+    "dialog-22 ruatd": "task:dialog-22 ruatd",
+    "attention mechanism": "concept:attention mechanism",
+    "r aqr": "dataset:r aqr",
+    "h1-36": "dataset:h1-36",
+    "新模型": "method:新模型",
+    "水星现象": "concept:水星现象",
+    "高空间和光谱分辨率观测": "method:高空间和光谱分辨率观测",
+    "task1.c": "dataset:task1.c"
+  },
+  "communities": {
+    "0": {
+      "nodes": [
+        "paper:2206.04564v6",
+        "method:twibot-22",
+        "task:尽管传统的twitter bot检测方法在对抗传统的bot时表现出色，但它们不能有效检测新型的twitter bot，且现有的bot检测数据集很少是基于图结构的，且存在数据规模小、结构不完整和标注质量",
+        "dataset:twibot-22 包含230万条推文",
+        "contribution:提出了twibot-22，这是迄今为止最大的基于图的twitter bot检测数据集。",
+        "contribution:提供了多样化的实体和关系，改善了标注质量。",
+        "contribution:重实现了35个代表性的twitter bot检测基准，以促进模型性能的公正比较和对研究进展的全面理解。",
+        "concept:twitter bot",
+        "metric:230万条推文"
+      ],
+      "key_entities": [
+        "TwiBot-22: Towards Graph-Based Twitter Bot Detection",
+        "TwiBot-22",
+        "尽管传统的Twitter bot检测方法在对抗传统的bot时表现出色，但它们不能有效检测新型的Twitter bot，且现有的bot检测数据集很少是基于图结构的，且存在数据规模小、结构不完整和标注质量",
+        "TwiBot-22 (包含230万条推文)",
+        "提出了TwiBot-22，这是迄今为止最大的基于图的Twitter bot检测数据集。",
+        "提供了多样化的实体和关系，改善了标注质量。",
+        "重实现了35个代表性的Twitter bot检测基准，以促进模型性能的公正比较和对研究进展的全面理解。",
+        "Twitter bot",
+        "230万条推文"
+      ],
+      "key_papers": [
+        "TwiBot-22: Towards Graph-Based Twitter Bot Detection"
+      ],
+      "dominant_types": [
+        "Contribution",
+        "Paper",
+        "Method"
+      ],
+      "semantic_tag": "Research Contributions Cluster",
+      "summary": "",
+      "community_name": "Research Contributions Cluster"
+    },
+    "1": {
+      "nodes": [
+        "paper:1908.08066v1",
+        "contribution:改进了speckle holography分析技术，提高了近红外断层成像的灵敏度。",
+        "contribution:研究了更长时间尺度上的sgr a 的变异性。",
+        "contribution:使用witzel et al. 2018 模型对2006年至2016年的红外变异性进行了模拟。"
+      ],
+      "key_entities": [
+        "Consistency of the Infrared Variability of Sgr A* over 22 years",
+        "改进了speckle holography分析技术，提高了近红外断层成像的灵敏度。",
+        "研究了更长时间尺度上的Sgr A*的变异性。",
+        "使用Witzel et al. (2018)模型对2006年至2016年的红外变异性进行了模拟。"
+      ],
+      "key_papers": [
+        "Consistency of the Infrared Variability of Sgr A* over 22 years"
+      ],
+      "dominant_types": [
+        "Contribution",
+        "Paper"
+      ],
+      "semantic_tag": "Research Contributions Cluster",
+      "summary": "",
+      "community_name": "Research Contributions Cluster"
+    },
+    "2": {
+      "nodes": [
+        "method:speckle holography",
+        "task:尽管先前对sgr a 的红外变异性研究受限于较短的时间尺度，但为了研究更长的时间尺度下的变异性。",
+        "dataset:null",
+        "paper:sgr a",
+        "metric:k magnitude",
+        "metric:3.4 mjy",
+        "model:witzel et al. 2018 model"
+      ],
+      "key_entities": [
+        "speckle holography",
+        "尽管先前对Sgr A*的红外变异性研究受限于较短的时间尺度，但为了研究更长的时间尺度下的变异性。",
+        "null",
+        "Sgr A*",
+        "K magnitude",
+        "3.4 mJy",
+        "Witzel et al. (2018) model"
+      ],
+      "key_papers": [
+        "Sgr A*"
+      ],
+      "dominant_types": [
+        "Metric",
+        "Method",
+        "Task"
+      ],
+      "semantic_tag": "Evaluation Metrics Cluster",
+      "summary": "",
+      "community_name": "Evaluation Metrics Cluster"
+    },
+    "3": {
+      "nodes": [
+        "paper:2206.08029v1",
+        "method:ensemble method",
+        "task:为了检测text generation models生成的文本并区分其来源于哪个模型，防止滥用tgm。",
+        "metric:accuracy",
+        "contribution:提出了不同预训练模型的集成方法。",
+        "task:dialog-22 ruatd",
+        "concept:attention mechanism"
+      ],
+      "key_entities": [
+        "DIALOG-22 RuATD Generated Text Detection",
+        "ensemble method",
+        "为了检测Text Generation Models生成的文本并区分其来源于哪个模型，防止滥用TGM。",
+        "Accuracy",
+        "提出了不同预训练模型的集成方法。",
+        "DIALOG-22 RuATD",
+        "attention mechanism"
+      ],
+      "key_papers": [
+        "DIALOG-22 RuATD Generated Text Detection"
+      ],
+      "dominant_types": [
+        "Task",
+        "Paper",
+        "Method"
+      ],
+      "semantic_tag": "Task & Application Cluster",
+      "summary": "",
+      "community_name": "Task & Application Cluster"
+    },
+    "4": {
+      "nodes": [
+        "paper:astro-ph 9709281v1",
+        "task:为了研究r aqr和h1-36（类mira symbiotic星）中的22-和321-ghz h2o maser的性质。",
+        "contribution:提出了一个新的模型解释r aqr中不同频段的水星现象。",
+        "contribution:首次使用高空间和光谱分辨率观测r aqr和h1-36。",
+        "contribution:揭示了22-ghz和321-ghz h2o maser的不同性质"
+      ],
+      "key_entities": [
+        "The simultaneous detection of 22- and 321-GHz H2O maser emission towards the symbiotic Mira R Aquarii",
+        "为了研究R Aqr和H1-36（类Mira symbiotic星）中的22-和321-GHz H2O maser的性质。",
+        "提出了一个新的模型解释R Aqr中不同频段的水星现象。",
+        "首次使用高空间和光谱分辨率观测R Aqr和H1-36。",
+        "揭示了22-GHz和321-GHz H2O maser的不同性质"
+      ],
+      "key_papers": [
+        "The simultaneous detection of 22- and 321-GHz H2O maser emission towards the symbiotic Mira R Aquarii"
+      ],
+      "dominant_types": [
+        "Contribution",
+        "Paper",
+        "Task"
+      ],
+      "semantic_tag": "Research Contributions Cluster",
+      "summary": "",
+      "community_name": "Research Contributions Cluster"
+    },
+    "5": {
+      "nodes": [
+        "paper:2304.00636v1",
+        "method:bert",
+        "task:尽管现有假新闻检测和情感分析方法尚存不足，但为了更准确地识别covid-19相关的假新闻和情感。",
+        "dataset:task1.c 4128 tweets for sentiment analysis task 8661 tweets for fake news detection task",
+        "contribution:提出了一种使用预训练语言模型bert的情感分析和假新闻检测方法",
+        "dataset:task1.c"
+      ],
+      "key_entities": [
+        "Classifying COVID-19 Related Tweets for Fake News Detection and Sentiment Analysis with BERT-based Models",
+        "BERT",
+        "尽管现有假新闻检测和情感分析方法尚存不足，但为了更准确地识别COVID-19相关的假新闻和情感。",
+        "task1.c (4128 tweets for sentiment analysis task, 8661 tweets for fake news detection task)",
+        "提出了一种使用预训练语言模型BERT的情感分析和假新闻检测方法",
+        "task1.c"
+      ],
+      "key_papers": [
+        "Classifying COVID-19 Related Tweets for Fake News Detection and Sentiment Analysis with BERT-based Models"
+      ],
+      "dominant_types": [
+        "Dataset",
+        "Paper",
+        "Method"
+      ],
+      "semantic_tag": "Benchmark & Dataset Cluster",
+      "summary": "",
+      "community_name": "Benchmark & Dataset Cluster"
+    },
+    "6": {
+      "nodes": [
+        "task:graph-based twitter bot detection",
+        "method:graph-based bot detection approaches",
+        "method:35 representative twitter bot detection baselines"
+      ],
+      "key_entities": [
+        "graph-based Twitter bot detection",
+        "graph-based bot detection approaches",
+        "35 representative Twitter bot detection baselines"
+      ],
+      "key_papers": [],
+      "dominant_types": [
+        "Method",
+        "Task"
+      ],
+      "semantic_tag": "Task & Application Cluster",
+      "summary": "",
+      "community_name": "Task & Application Cluster"
+    },
+    "7": {
+      "nodes": [
+        "dataset:r aqr",
+        "dataset:h1-36",
+        "method:高空间和光谱分辨率观测"
+      ],
+      "key_entities": [
+        "R Aqr",
+        "H1-36",
+        "高空间和光谱分辨率观测"
+      ],
+      "key_papers": [],
+      "dominant_types": [
+        "Dataset",
+        "Method"
+      ],
+      "semantic_tag": "Benchmark & Dataset Cluster",
+      "summary": "",
+      "community_name": "Benchmark & Dataset Cluster"
+    },
+    "8": {
+      "nodes": [
+        "method:新模型",
+        "concept:水星现象"
+      ],
+      "key_entities": [
+        "新模型",
+        "水星现象"
+      ],
+      "key_papers": [],
+      "dominant_types": [
+        "Method",
+        "Concept"
+      ],
+      "semantic_tag": "Research Topic Cluster",
+      "summary": "",
+      "community_name": "Research Topic Cluster"
+    }
+  },
+  "citation_graph": {},
+  "stats": {
+    "node_count": 46,
+    "edge_count": 64,
+    "node_type_count": {
+      "Paper": 6,
+      "Method": 8,
+      "Task": 7,
+      "Dataset": 6,
+      "Contribution": 11,
+      "Metric": 4,
+      "Concept": 3,
+      "Model": 1
+    },
+    "paper_count": 5,
+    "community_count": 0,
+    "citation_edge_count": 0
+  }
+}

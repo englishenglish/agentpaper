@@ -1,4 +1,4 @@
-from src.parsers._ocr import OCRPlugin
+from src.parsers.ocr import OCRPlugin
 
 ocr = OCRPlugin()
 

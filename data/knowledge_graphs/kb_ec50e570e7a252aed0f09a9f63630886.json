@@ -1,0 +1,1815 @@
+{
+  "db_id": "kb_ec50e570e7a252aed0f09a9f63630886",
+  "nodes": {
+    "paper:2509.21473v1": {
+      "id": "paper:2509.21473v1",
+      "type": "Paper",
+      "label": "Are Hallucinations Bad Estimations?",
+      "norm_label": "are hallucinations bad estimations"
+    },
+    "method:δ-hallucination": {
+      "id": "method:δ-hallucination",
+      "type": "Method",
+      "label": "δ-Hallucination",
+      "norm_label": "δ-hallucination"
+    },
+    "task:尽管ai系统生成的输出可能会与任何合理的输入因果关系脱钩，即使是最优的损失最小化估计器仍然会产生幻觉，因此现有的损失最小化训练方法并不能解决幻觉问题。": {
+      "id": "task:尽管ai系统生成的输出可能会与任何合理的输入因果关系脱钩，即使是最优的损失最小化估计器仍然会产生幻觉，因此现有的损失最小化训练方法并不能解决幻觉问题。",
+      "type": "Task",
+      "label": "尽管AI系统生成的输出可能会与任何合理的输入因果关系脱钩，即使是最优的损失最小化估计器仍然会产生幻觉，因此现有的损失最小化训练方法并不能解决幻觉问题。",
+      "norm_label": "尽管ai系统生成的输出可能会与任何合理的输入因果关系脱钩，即使是最优的损失最小化估计器仍然会产生幻觉，因此现有的损失最小化训练方法并不能解决幻觉问题。"
+    },
+    "dataset:猫和狗的afhq数据集": {
+      "id": "dataset:猫和狗的afhq数据集",
+      "type": "Dataset",
+      "label": "猫和狗的AFHQ数据集",
+      "norm_label": "猫和狗的afhq数据集"
+    },
+    "metric:hallucination rate": {
+      "id": "metric:hallucination rate",
+      "type": "Metric",
+      "label": "Hallucination Rate",
+      "norm_label": "hallucination rate"
+    },
+    "contribution:提出了δ-幻觉的概念，正式定义了在任何可能的潜变量状态下，估计器的输出低概率区域。": {
+      "id": "contribution:提出了δ-幻觉的概念，正式定义了在任何可能的潜变量状态下，估计器的输出低概率区域。",
+      "type": "Contribution",
+      "label": "提出了δ-幻觉的概念，正式定义了在任何可能的潜变量状态下，估计器的输出低概率区域。",
+      "norm_label": "提出了δ-幻觉的概念，正式定义了在任何可能的潜变量状态下，估计器的输出低概率区域。"
+    },
+    "contribution:证明了即使最优的损失最小化估计器在存在实际上多样化正确答案的情况下也会产生幻觉。": {
+      "id": "contribution:证明了即使最优的损失最小化估计器在存在实际上多样化正确答案的情况下也会产生幻觉。",
+      "type": "Contribution",
+      "label": "证明了即使最优的损失最小化估计器在存在实际上多样化正确答案的情况下也会产生幻觉。",
+      "norm_label": "证明了即使最优的损失最小化估计器在存在实际上多样化正确答案的情况下也会产生幻觉。"
+    },
+    "contribution:得出了广泛目标分布类的δ-幻觉频率的通用下限。": {
+      "id": "contribution:得出了广泛目标分布类的δ-幻觉频率的通用下限。",
+      "type": "Contribution",
+      "label": "得出了广泛目标分布类的δ-幻觉频率的通用下限。",
+      "norm_label": "得出了广泛目标分布类的δ-幻觉频率的通用下限。"
+    },
+    "contribution:通过合成和真实数据实验验证了我们的理论。": {
+      "id": "contribution:通过合成和真实数据实验验证了我们的理论。",
+      "type": "Contribution",
+      "label": "通过合成和真实数据实验验证了我们的理论。",
+      "norm_label": "通过合成和真实数据实验验证了我们的理论。"
+    },
+    "paper:2506.00448v1": {
+      "id": "paper:2506.00448v1",
+      "type": "Paper",
+      "label": "Fact-Controlled Diagnosis of Hallucinations in Medical Text Summarization",
+      "norm_label": "fact-controlled diagnosis of hallucinations in medical text summarization"
+    },
+    "method:fact-controlled diagnosis of hallucinations": {
+      "id": "method:fact-controlled diagnosis of hallucinations",
+      "type": "Method",
+      "label": "Fact-Controlled Diagnosis of Hallucinations",
+      "norm_label": "fact-controlled diagnosis of hallucinations"
+    },
+    "task:尽管大语言模型在生成患者-临床对话摘要时会产生幻觉，但这些幻觉目前在临床领域研究不足，且通用领域的幻觉检测器难以检测临床幻觉。": {
+      "id": "task:尽管大语言模型在生成患者-临床对话摘要时会产生幻觉，但这些幻觉目前在临床领域研究不足，且通用领域的幻觉检测器难以检测临床幻觉。",
+      "type": "Task",
+      "label": "尽管大语言模型在生成患者-临床对话摘要时会产生幻觉，但这些幻觉目前在临床领域研究不足，且通用领域的幻觉检测器难以检测临床幻觉。",
+      "norm_label": "尽管大语言模型在生成患者-临床对话摘要时会产生幻觉，但这些幻觉目前在临床领域研究不足，且通用领域的幻觉检测器难以检测临床幻觉。"
+    },
+    "dataset:aci-bench 包括临床专家的对话转录和相应的临床摘要": {
+      "id": "dataset:aci-bench 包括临床专家的对话转录和相应的临床摘要",
+      "type": "Dataset",
+      "label": "ACI-Bench (包括临床专家的对话转录和相应的临床摘要)",
+      "norm_label": "aci-bench 包括临床专家的对话转录和相应的临床摘要"
+    },
+    "dataset:leave-n-out dataset（通过删除特定事实生成）": {
+      "id": "dataset:leave-n-out dataset（通过删除特定事实生成）",
+      "type": "Dataset",
+      "label": "Leave-N-Out dataset（通过删除特定事实生成）",
+      "norm_label": "leave-n-out dataset（通过删除特定事实生成）"
+    },
+    "dataset:natural hallucination dataset（基于llm生成的自然幻觉摘要）": {
+      "id": "dataset:natural hallucination dataset（基于llm生成的自然幻觉摘要）",
+      "type": "Dataset",
+      "label": "Natural Hallucination dataset（基于LLM生成的自然幻觉摘要）",
+      "norm_label": "natural hallucination dataset（基于llm生成的自然幻觉摘要）"
+    },
+    "dataset:新闻摘要数据集xsum（跨领域的验证数据集）": {
+      "id": "dataset:新闻摘要数据集xsum（跨领域的验证数据集）",
+      "type": "Dataset",
+      "label": "新闻摘要数据集XSum（跨领域的验证数据集）",
+      "norm_label": "新闻摘要数据集xsum（跨领域的验证数据集）"
+    },
+    "metric:pearson correlation": {
+      "id": "metric:pearson correlation",
+      "type": "Metric",
+      "label": "Pearson correlation",
+      "norm_label": "pearson correlation"
+    },
+    "metric:factcc": {
+      "id": "metric:factcc",
+      "type": "Metric",
+      "label": "FactCC",
+      "norm_label": "factcc"
+    },
+    "metric:bertscore": {
+      "id": "metric:bertscore",
+      "type": "Metric",
+      "label": "BERTScore",
+      "norm_label": "bertscore"
+    },
+    "metric:questeval": {
+      "id": "metric:questeval",
+      "type": "Metric",
+      "label": "QuestEval",
+      "norm_label": "questeval"
+    },
+    "metric:infolm": {
+      "id": "metric:infolm",
+      "type": "Metric",
+      "label": "InfoLM",
+      "norm_label": "infolm"
+    },
+    "metric:alignscore": {
+      "id": "metric:alignscore",
+      "type": "Metric",
+      "label": "AlignScore",
+      "norm_label": "alignscore"
+    },
+    "metric:单提示计数方法": {
+      "id": "metric:单提示计数方法",
+      "type": "Metric",
+      "label": "单提示计数方法",
+      "norm_label": "单提示计数方法"
+    },
+    "metric:单提示列表方法": {
+      "id": "metric:单提示列表方法",
+      "type": "Metric",
+      "label": "单提示列表方法",
+      "norm_label": "单提示列表方法"
+    },
+    "metric:嵌入语义相似度，使用minilm和biobert": {
+      "id": "metric:嵌入语义相似度，使用minilm和biobert",
+      "type": "Metric",
+      "label": "嵌入语义相似度，使用MiniLM和BioBERT",
+      "norm_label": "嵌入语义相似度，使用minilm和biobert"
+    },
+    "metric:llm对齐": {
+      "id": "metric:llm对齐",
+      "type": "Metric",
+      "label": "LLM对齐",
+      "norm_label": "llm对齐"
+    },
+    "metric:事件提取 嵌入语义相似度 llm检索": {
+      "id": "metric:事件提取 嵌入语义相似度 llm检索",
+      "type": "Metric",
+      "label": "事件提取+嵌入语义相似度+LLM检索",
+      "norm_label": "事件提取 嵌入语义相似度 llm检索"
+    },
+    "metric:摘要 事件提取 嵌入语义相似度语料检索": {
+      "id": "metric:摘要 事件提取 嵌入语义相似度语料检索",
+      "type": "Metric",
+      "label": "摘要+事件提取+嵌入语义相似度语料检索",
+      "norm_label": "摘要 事件提取 嵌入语义相似度语料检索"
+    },
+    "contribution:开发了专门针对临床幻觉检测的数据集和方法。": {
+      "id": "contribution:开发了专门针对临床幻觉检测的数据集和方法。",
+      "type": "Contribution",
+      "label": "开发了专门针对临床幻觉检测的数据集和方法。",
+      "norm_label": "开发了专门针对临床幻觉检测的数据集和方法。"
+    },
+    "contribution:展示了llm和基于事实的方法在真实世界数据集上的性能。": {
+      "id": "contribution:展示了llm和基于事实的方法在真实世界数据集上的性能。",
+      "type": "Contribution",
+      "label": "展示了LLM和基于事实的方法在真实世界数据集上的性能。",
+      "norm_label": "展示了llm和基于事实的方法在真实世界数据集上的性能。"
+    },
+    "contribution:提出了更加具体和简洁的评估方法，有助于职业性的临床摘要系统的推广。": {
+      "id": "contribution:提出了更加具体和简洁的评估方法，有助于职业性的临床摘要系统的推广。",
+      "type": "Contribution",
+      "label": "提出了更加具体和简洁的评估方法，有助于职业性的临床摘要系统的推广。",
+      "norm_label": "提出了更加具体和简洁的评估方法，有助于职业性的临床摘要系统的推广。"
+    },
+    "paper:2507.20836v4": {
+      "id": "paper:2507.20836v4",
+      "type": "Paper",
+      "label": "First Hallucination Tokens Are Different from Conditional Ones",
+      "norm_label": "first hallucination tokens are different from conditional ones"
+    },
+    "method:ragtruth": {
+      "id": "method:ragtruth",
+      "type": "Method",
+      "label": "RAGTruth",
+      "norm_label": "ragtruth"
+    },
+    "task:尽管大语言模型会生成不真实的内容，但现有方法在检测这些内容时往往缺乏对在其生成的序列中不同位置的不真实标记信号的变化的理解。": {
+      "id": "task:尽管大语言模型会生成不真实的内容，但现有方法在检测这些内容时往往缺乏对在其生成的序列中不同位置的不真实标记信号的变化的理解。",
+      "type": "Task",
+      "label": "尽管大语言模型会生成不真实的内容，但现有方法在检测这些内容时往往缺乏对在其生成的序列中不同位置的不真实标记信号的变化的理解。",
+      "norm_label": "尽管大语言模型会生成不真实的内容，但现有方法在检测这些内容时往往缺乏对在其生成的序列中不同位置的不真实标记信号的变化的理解。"
+    },
+    "metric:auroc": {
+      "id": "metric:auroc",
+      "type": "Metric",
+      "label": "AUROC",
+      "norm_label": "auroc"
+    },
+    "contribution:揭示了第一个不真实标记比后续条件生成标记更容易被检测的事实。": {
+      "id": "contribution:揭示了第一个不真实标记比后续条件生成标记更容易被检测的事实。",
+      "type": "Contribution",
+      "label": "揭示了第一个不真实标记比后续条件生成标记更容易被检测的事实。",
+      "norm_label": "揭示了第一个不真实标记比后续条件生成标记更容易被检测的事实。"
+    },
+    "contribution:证明了 logit 熵是区分第一个不真实标记的最佳信号。": {
+      "id": "contribution:证明了 logit 熵是区分第一个不真实标记的最佳信号。",
+      "type": "Contribution",
+      "label": "证明了 logit 熵是区分第一个不真实标记的最佳信号。",
+      "norm_label": "证明了 logit 熵是区分第一个不真实标记的最佳信号。"
+    },
+    "contribution:指出了当前基于 logit 的方法在所有序列位置上无法稳健地检测不真实标记的局限性。": {
+      "id": "contribution:指出了当前基于 logit 的方法在所有序列位置上无法稳健地检测不真实标记的局限性。",
+      "type": "Contribution",
+      "label": "指出了当前基于 logit 的方法在所有序列位置上无法稳健地检测不真实标记的局限性。",
+      "norm_label": "指出了当前基于 logit 的方法在所有序列位置上无法稳健地检测不真实标记的局限性。"
+    },
+    "paper:1906.07008v1": {
+      "id": "paper:1906.07008v1",
+      "type": "Paper",
+      "label": "Hallucinated Adversarial Learning for Robust Visual Tracking",
+      "norm_label": "hallucinated adversarial learning for robust visual tracking"
+    },
+    "method:adversarial hallucinator ah": {
+      "id": "method:adversarial hallucinator ah",
+      "type": "Method",
+      "label": "adversarial 'hallucinator' (AH)",
+      "norm_label": "adversarial hallucinator ah"
+    },
+    "task:尽管大多数基于深度学习的视觉跟踪器在大量标注数据条件下表现出色，但在少量标注数据条件下，它们容易过拟合。": {
+      "id": "task:尽管大多数基于深度学习的视觉跟踪器在大量标注数据条件下表现出色，但在少量标注数据条件下，它们容易过拟合。",
+      "type": "Task",
+      "label": "尽管大多数基于深度学习的视觉跟踪器在大量标注数据条件下表现出色，但在少量标注数据条件下，它们容易过拟合。",
+      "norm_label": "尽管大多数基于深度学习的视觉跟踪器在大量标注数据条件下表现出色，但在少量标注数据条件下，它们容易过拟合。"
+    },
+    "dataset:dt 来自imagenet-vid数据集": {
+      "id": "dataset:dt 来自imagenet-vid数据集",
+      "type": "Dataset",
+      "label": "DT (来自ImageNet-VID数据集)",
+      "norm_label": "dt 来自imagenet-vid数据集"
+    },
+    "dataset:dq 从dt中扩展生成的新数据集": {
+      "id": "dataset:dq 从dt中扩展生成的新数据集",
+      "type": "Dataset",
+      "label": "DQ (从DT中扩展生成的新数据集)",
+      "norm_label": "dq 从dt中扩展生成的新数据集"
+    },
+    "metric:accuracy": {
+      "id": "metric:accuracy",
+      "type": "Metric",
+      "label": "Accuracy",
+      "norm_label": "accuracy"
+    },
+    "metric:f1": {
+      "id": "metric:f1",
+      "type": "Metric",
+      "label": "F1",
+      "norm_label": "f1"
+    },
+    "metric:overlap success rate os": {
+      "id": "metric:overlap success rate os",
+      "type": "Metric",
+      "label": "Overlap Success Rate (OS)",
+      "norm_label": "overlap success rate os"
+    },
+    "metric:precision": {
+      "id": "metric:precision",
+      "type": "Metric",
+      "label": "Precision",
+      "norm_label": "precision"
+    },
+    "contribution:提出了对抗‘幻觉器’（ah），模仿人类想象机制进行数据增强。": {
+      "id": "contribution:提出了对抗‘幻觉器’（ah），模仿人类想象机制进行数据增强。",
+      "type": "Contribution",
+      "label": "提出了对抗‘幻觉器’（AH），模仿人类想象机制进行数据增强。",
+      "norm_label": "提出了对抗‘幻觉器’（ah），模仿人类想象机制进行数据增强。"
+    },
+    "contribution:基于ah的hat通过在端到端方式优化ah和在线cnn分类器，有效帮助cnn分类器缓解过拟合问题。": {
+      "id": "contribution:基于ah的hat通过在端到端方式优化ah和在线cnn分类器，有效帮助cnn分类器缓解过拟合问题。",
+      "type": "Contribution",
+      "label": "基于AH的HAT通过在端到端方式优化AH和在线CNN分类器，有效帮助CNN分类器缓解过拟合问题。",
+      "norm_label": "基于ah的hat通过在端到端方式优化ah和在线cnn分类器，有效帮助cnn分类器缓解过拟合问题。"
+    },
+    "contribution:提出了选择性变形转移（sdt）方法，更好地选择适合转移的变形。": {
+      "id": "contribution:提出了选择性变形转移（sdt）方法，更好地选择适合转移的变形。",
+      "type": "Contribution",
+      "label": "提出了选择性变形转移（SDT）方法，更好地选择适合转移的变形。",
+      "norm_label": "提出了选择性变形转移（sdt）方法，更好地选择适合转移的变形。"
+    },
+    "contribution:在otb-2013、otb-2015和otb-50数据集上，hat取得了最佳性能。": {
+      "id": "contribution:在otb-2013、otb-2015和otb-50数据集上，hat取得了最佳性能。",
+      "type": "Contribution",
+      "label": "在OTB-2013、OTB-2015和OTB-50数据集上，HAT取得了最佳性能。",
+      "norm_label": "在otb-2013、otb-2015和otb-50数据集上，hat取得了最佳性能。"
+    },
+    "paper:2512.03107v1": {
+      "id": "paper:2512.03107v1",
+      "type": "Paper",
+      "label": "Detecting AI Hallucinations in Finance: An Information-Theoretic Method Cuts Hallucination Rate by 92%",
+      "norm_label": "detecting ai hallucinations in finance an information-theoretic method cuts hallucination rate by 92"
+    },
+    "method:eclipse": {
+      "id": "method:eclipse",
+      "type": "Method",
+      "label": "ECLIPSE",
+      "norm_label": "eclipse"
+    },
+    "task:尽管大语言模型生产出流畅但缺乏支持的回答——幻觉，这些回答限制了它们在高风险领域的安全部署。": {
+      "id": "task:尽管大语言模型生产出流畅但缺乏支持的回答——幻觉，这些回答限制了它们在高风险领域的安全部署。",
+      "type": "Task",
+      "label": "尽管大语言模型生产出流畅但缺乏支持的回答——幻觉，这些回答限制了它们在高风险领域的安全部署。",
+      "norm_label": "尽管大语言模型生产出流畅但缺乏支持的回答——幻觉，这些回答限制了它们在高风险领域的安全部署。"
+    },
+    "dataset:我们的财务qa数据集中（n 200），包含平衡的带有合成幻觉的示例": {
+      "id": "dataset:我们的财务qa数据集中（n 200），包含平衡的带有合成幻觉的示例",
+      "type": "Dataset",
+      "label": "我们的财务QA数据集中（n=200），包含平衡的带有合成幻觉的示例",
+      "norm_label": "我们的财务qa数据集中（n 200），包含平衡的带有合成幻觉的示例"
+    },
+    "metric:roc auc": {
+      "id": "metric:roc auc",
+      "type": "Metric",
+      "label": "ROC AUC",
+      "norm_label": "roc auc"
+    },
+    "metric:平均精度": {
+      "id": "metric:平均精度",
+      "type": "Metric",
+      "label": "平均精度",
+      "norm_label": "平均精度"
+    },
+    "metric:f1分数": {
+      "id": "metric:f1分数",
+      "type": "Metric",
+      "label": "F1分数",
+      "norm_label": "f1分数"
+    },
+    "contribution:提出了一个四量结合的概念框架，将熵和容量的目标建模为严格凸。": {
+      "id": "contribution:提出了一个四量结合的概念框架，将熵和容量的目标建模为严格凸。",
+      "type": "Contribution",
+      "label": "提出了一个四量结合的概念框架，将熵和容量的目标建模为严格凸。",
+      "norm_label": "提出了一个四量结合的概念框架，将熵和容量的目标建模为严格凸。"
+    },
+    "contribution:实现了困惑度分解，提取特征用于细粒度地检测忽略证据的行为。": {
+      "id": "contribution:实现了困惑度分解，提取特征用于细粒度地检测忽略证据的行为。",
+      "type": "Contribution",
+      "label": "实现了困惑度分解，提取特征用于细粒度地检测忽略证据的行为。",
+      "norm_label": "实现了困惑度分解，提取特征用于细粒度地检测忽略证据的行为。"
+    },
+    "contribution:在api访问上实现了强大的幻觉检测性能，表明灰盒检测器可以避开隐藏状态访问。": {
+      "id": "contribution:在api访问上实现了强大的幻觉检测性能，表明灰盒检测器可以避开隐藏状态访问。",
+      "type": "Contribution",
+      "label": "在API访问上实现了强大的幻觉检测性能，表明灰盒检测器可以避开隐藏状态访问。",
+      "norm_label": "在api访问上实现了强大的幻觉检测性能，表明灰盒检测器可以避开隐藏状态访问。"
+    },
+    "contribution:通过受控的ablation测试，证明eclipse是logprob-敏感的，即没有真实log概率时，性能显著下降。": {
+      "id": "contribution:通过受控的ablation测试，证明eclipse是logprob-敏感的，即没有真实log概率时，性能显著下降。",
+      "type": "Contribution",
+      "label": "通过受控的ablation测试，证明ECLIPSE是logprob-敏感的，即没有真实log概率时，性能显著下降。",
+      "norm_label": "通过受控的ablation测试，证明eclipse是logprob-敏感的，即没有真实log概率时，性能显著下降。"
+    },
+    "dataset:afhq数据集": {
+      "id": "dataset:afhq数据集",
+      "type": "Dataset",
+      "label": "AFHQ数据集",
+      "norm_label": "afhq数据集",
+      "description": ""
+    },
+    "concept:loss minimization": {
+      "id": "concept:loss minimization",
+      "type": "Concept",
+      "label": "Loss Minimization",
+      "norm_label": "loss minimization",
+      "description": ""
+    },
+    "dataset:natural hallucination dataset": {
+      "id": "dataset:natural hallucination dataset",
+      "type": "Dataset",
+      "label": "Natural Hallucination dataset",
+      "norm_label": "natural hallucination dataset",
+      "description": ""
+    },
+    "dataset:aci-bench": {
+      "id": "dataset:aci-bench",
+      "type": "Dataset",
+      "label": "ACI-Bench",
+      "norm_label": "aci-bench",
+      "description": ""
+    },
+    "dataset:xsum": {
+      "id": "dataset:xsum",
+      "type": "Dataset",
+      "label": "XSum",
+      "norm_label": "xsum",
+      "description": ""
+    },
+    "model:llm": {
+      "id": "model:llm",
+      "type": "Model",
+      "label": "LLM",
+      "norm_label": "llm",
+      "description": ""
+    },
+    "task:clinical hallucinations": {
+      "id": "task:clinical hallucinations",
+      "type": "Task",
+      "label": "clinical hallucinations",
+      "norm_label": "clinical hallucinations",
+      "description": ""
+    },
+    "task:faithful clinical summarization system": {
+      "id": "task:faithful clinical summarization system",
+      "type": "Task",
+      "label": "faithful clinical summarization system",
+      "norm_label": "faithful clinical summarization system",
+      "description": ""
+    },
+    "concept:first hallucination token": {
+      "id": "concept:first hallucination token",
+      "type": "Concept",
+      "label": "first hallucination token",
+      "norm_label": "first hallucination token",
+      "description": ""
+    },
+    "concept:later hallucination tokens": {
+      "id": "concept:later hallucination tokens",
+      "type": "Concept",
+      "label": "later hallucination tokens",
+      "norm_label": "later hallucination tokens",
+      "description": ""
+    },
+    "task:token-level detection": {
+      "id": "task:token-level detection",
+      "type": "Task",
+      "label": "token-level detection",
+      "norm_label": "token-level detection",
+      "description": ""
+    },
+    "concept:logit entropy": {
+      "id": "concept:logit entropy",
+      "type": "Concept",
+      "label": "logit entropy",
+      "norm_label": "logit entropy",
+      "description": ""
+    },
+    "method:hallucinated adversarial tracker hat": {
+      "id": "method:hallucinated adversarial tracker hat",
+      "type": "Method",
+      "label": "hallucinated adversarial tracker (HAT)",
+      "norm_label": "hallucinated adversarial tracker hat",
+      "description": ""
+    },
+    "dataset:dt": {
+      "id": "dataset:dt",
+      "type": "Dataset",
+      "label": "DT",
+      "norm_label": "dt",
+      "description": ""
+    },
+    "dataset:dq": {
+      "id": "dataset:dq",
+      "type": "Dataset",
+      "label": "DQ",
+      "norm_label": "dq",
+      "description": ""
+    },
+    "dataset:otb-2013": {
+      "id": "dataset:otb-2013",
+      "type": "Dataset",
+      "label": "OTB-2013",
+      "norm_label": "otb-2013",
+      "description": ""
+    },
+    "dataset:otb-2015": {
+      "id": "dataset:otb-2015",
+      "type": "Dataset",
+      "label": "OTB-2015",
+      "norm_label": "otb-2015",
+      "description": ""
+    },
+    "dataset:otb-50": {
+      "id": "dataset:otb-50",
+      "type": "Dataset",
+      "label": "OTB-50",
+      "norm_label": "otb-50",
+      "description": ""
+    },
+    "model:mdnet": {
+      "id": "model:mdnet",
+      "type": "Model",
+      "label": "MDNet",
+      "norm_label": "mdnet",
+      "description": ""
+    },
+    "method:selective deformation transfer sdt": {
+      "id": "method:selective deformation transfer sdt",
+      "type": "Method",
+      "label": "selective deformation transfer (SDT)",
+      "norm_label": "selective deformation transfer sdt",
+      "description": ""
+    },
+    "dataset:financial qa dataset": {
+      "id": "dataset:financial qa dataset",
+      "type": "Dataset",
+      "label": "financial QA dataset",
+      "norm_label": "financial qa dataset",
+      "description": ""
+    },
+    "model:gpt-3.5-turbo": {
+      "id": "model:gpt-3.5-turbo",
+      "type": "Model",
+      "label": "GPT-3.5-turbo",
+      "norm_label": "gpt-3.5-turbo",
+      "description": ""
+    },
+    "concept:semantics entropy": {
+      "id": "concept:semantics entropy",
+      "type": "Concept",
+      "label": "semantics entropy",
+      "norm_label": "semantics entropy",
+      "description": ""
+    },
+    "concept:capacity of available evidence": {
+      "id": "concept:capacity of available evidence",
+      "type": "Concept",
+      "label": "capacity of available evidence",
+      "norm_label": "capacity of available evidence",
+      "description": ""
+    }
+  },
+  "edges": [
+    {
+      "source": "paper:2509.21473v1",
+      "target": "method:δ-hallucination",
+      "type": "proposes",
+      "weight": 1.0
+    },
+    {
+      "source": "paper:2509.21473v1",
+      "target": "task:尽管ai系统生成的输出可能会与任何合理的输入因果关系脱钩，即使是最优的损失最小化估计器仍然会产生幻觉，因此现有的损失最小化训练方法并不能解决幻觉问题。",
+      "type": "applied_to",
+      "weight": 0.8
+    },
+    {
+      "source": "method:δ-hallucination",
+      "target": "task:尽管ai系统生成的输出可能会与任何合理的输入因果关系脱钩，即使是最优的损失最小化估计器仍然会产生幻觉，因此现有的损失最小化训练方法并不能解决幻觉问题。",
+      "type": "solves",
+      "weight": 0.95
+    },
+    {
+      "source": "paper:2509.21473v1",
+      "target": "dataset:猫和狗的afhq数据集",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "method:δ-hallucination",
+      "target": "dataset:猫和狗的afhq数据集",
+      "type": "evaluates_on",
+      "weight": 0.9
+    },
+    {
+      "source": "method:δ-hallucination",
+      "target": "metric:hallucination rate",
+      "type": "achieves",
+      "weight": 0.85
+    },
+    {
+      "source": "paper:2509.21473v1",
+      "target": "contribution:提出了δ-幻觉的概念，正式定义了在任何可能的潜变量状态下，估计器的输出低概率区域。",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "method:δ-hallucination",
+      "target": "contribution:提出了δ-幻觉的概念，正式定义了在任何可能的潜变量状态下，估计器的输出低概率区域。",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:2509.21473v1",
+      "target": "contribution:证明了即使最优的损失最小化估计器在存在实际上多样化正确答案的情况下也会产生幻觉。",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "method:δ-hallucination",
+      "target": "contribution:证明了即使最优的损失最小化估计器在存在实际上多样化正确答案的情况下也会产生幻觉。",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:2509.21473v1",
+      "target": "contribution:得出了广泛目标分布类的δ-幻觉频率的通用下限。",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "method:δ-hallucination",
+      "target": "contribution:得出了广泛目标分布类的δ-幻觉频率的通用下限。",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:2509.21473v1",
+      "target": "contribution:通过合成和真实数据实验验证了我们的理论。",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "method:δ-hallucination",
+      "target": "contribution:通过合成和真实数据实验验证了我们的理论。",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:2506.00448v1",
+      "target": "method:fact-controlled diagnosis of hallucinations",
+      "type": "proposes",
+      "weight": 1.0
+    },
+    {
+      "source": "paper:2506.00448v1",
+      "target": "task:尽管大语言模型在生成患者-临床对话摘要时会产生幻觉，但这些幻觉目前在临床领域研究不足，且通用领域的幻觉检测器难以检测临床幻觉。",
+      "type": "applied_to",
+      "weight": 0.8
+    },
+    {
+      "source": "method:fact-controlled diagnosis of hallucinations",
+      "target": "task:尽管大语言模型在生成患者-临床对话摘要时会产生幻觉，但这些幻觉目前在临床领域研究不足，且通用领域的幻觉检测器难以检测临床幻觉。",
+      "type": "solves",
+      "weight": 0.95
+    },
+    {
+      "source": "paper:2506.00448v1",
+      "target": "dataset:aci-bench 包括临床专家的对话转录和相应的临床摘要",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "method:fact-controlled diagnosis of hallucinations",
+      "target": "dataset:aci-bench 包括临床专家的对话转录和相应的临床摘要",
+      "type": "evaluates_on",
+      "weight": 0.9
+    },
+    {
+      "source": "paper:2506.00448v1",
+      "target": "dataset:leave-n-out dataset（通过删除特定事实生成）",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "method:fact-controlled diagnosis of hallucinations",
+      "target": "dataset:leave-n-out dataset（通过删除特定事实生成）",
+      "type": "evaluates_on",
+      "weight": 0.9
+    },
+    {
+      "source": "paper:2506.00448v1",
+      "target": "dataset:natural hallucination dataset（基于llm生成的自然幻觉摘要）",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "method:fact-controlled diagnosis of hallucinations",
+      "target": "dataset:natural hallucination dataset（基于llm生成的自然幻觉摘要）",
+      "type": "evaluates_on",
+      "weight": 0.9
+    },
+    {
+      "source": "paper:2506.00448v1",
+      "target": "dataset:新闻摘要数据集xsum（跨领域的验证数据集）",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "method:fact-controlled diagnosis of hallucinations",
+      "target": "dataset:新闻摘要数据集xsum（跨领域的验证数据集）",
+      "type": "evaluates_on",
+      "weight": 0.9
+    },
+    {
+      "source": "method:fact-controlled diagnosis of hallucinations",
+      "target": "metric:pearson correlation",
+      "type": "achieves",
+      "weight": 0.85
+    },
+    {
+      "source": "method:fact-controlled diagnosis of hallucinations",
+      "target": "metric:factcc",
+      "type": "achieves",
+      "weight": 0.85
+    },
+    {
+      "source": "method:fact-controlled diagnosis of hallucinations",
+      "target": "metric:bertscore",
+      "type": "achieves",
+      "weight": 0.85
+    },
+    {
+      "source": "method:fact-controlled diagnosis of hallucinations",
+      "target": "metric:questeval",
+      "type": "achieves",
+      "weight": 0.85
+    },
+    {
+      "source": "method:fact-controlled diagnosis of hallucinations",
+      "target": "metric:infolm",
+      "type": "achieves",
+      "weight": 0.85
+    },
+    {
+      "source": "method:fact-controlled diagnosis of hallucinations",
+      "target": "metric:alignscore",
+      "type": "achieves",
+      "weight": 0.85
+    },
+    {
+      "source": "method:fact-controlled diagnosis of hallucinations",
+      "target": "metric:单提示计数方法",
+      "type": "achieves",
+      "weight": 0.85
+    },
+    {
+      "source": "method:fact-controlled diagnosis of hallucinations",
+      "target": "metric:单提示列表方法",
+      "type": "achieves",
+      "weight": 0.85
+    },
+    {
+      "source": "method:fact-controlled diagnosis of hallucinations",
+      "target": "metric:嵌入语义相似度，使用minilm和biobert",
+      "type": "achieves",
+      "weight": 0.85
+    },
+    {
+      "source": "method:fact-controlled diagnosis of hallucinations",
+      "target": "metric:llm对齐",
+      "type": "achieves",
+      "weight": 0.85
+    },
+    {
+      "source": "method:fact-controlled diagnosis of hallucinations",
+      "target": "metric:事件提取 嵌入语义相似度 llm检索",
+      "type": "achieves",
+      "weight": 0.85
+    },
+    {
+      "source": "method:fact-controlled diagnosis of hallucinations",
+      "target": "metric:摘要 事件提取 嵌入语义相似度语料检索",
+      "type": "achieves",
+      "weight": 0.85
+    },
+    {
+      "source": "paper:2506.00448v1",
+      "target": "contribution:开发了专门针对临床幻觉检测的数据集和方法。",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "method:fact-controlled diagnosis of hallucinations",
+      "target": "contribution:开发了专门针对临床幻觉检测的数据集和方法。",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:2506.00448v1",
+      "target": "contribution:展示了llm和基于事实的方法在真实世界数据集上的性能。",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "method:fact-controlled diagnosis of hallucinations",
+      "target": "contribution:展示了llm和基于事实的方法在真实世界数据集上的性能。",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:2506.00448v1",
+      "target": "contribution:提出了更加具体和简洁的评估方法，有助于职业性的临床摘要系统的推广。",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "method:fact-controlled diagnosis of hallucinations",
+      "target": "contribution:提出了更加具体和简洁的评估方法，有助于职业性的临床摘要系统的推广。",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:2507.20836v4",
+      "target": "method:ragtruth",
+      "type": "proposes",
+      "weight": 1.0
+    },
+    {
+      "source": "paper:2507.20836v4",
+      "target": "task:尽管大语言模型会生成不真实的内容，但现有方法在检测这些内容时往往缺乏对在其生成的序列中不同位置的不真实标记信号的变化的理解。",
+      "type": "applied_to",
+      "weight": 0.8
+    },
+    {
+      "source": "method:ragtruth",
+      "target": "task:尽管大语言模型会生成不真实的内容，但现有方法在检测这些内容时往往缺乏对在其生成的序列中不同位置的不真实标记信号的变化的理解。",
+      "type": "solves",
+      "weight": 0.95
+    },
+    {
+      "source": "paper:2507.20836v4",
+      "target": "method:ragtruth",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "method:ragtruth",
+      "target": "metric:auroc",
+      "type": "achieves",
+      "weight": 0.85
+    },
+    {
+      "source": "paper:2507.20836v4",
+      "target": "contribution:揭示了第一个不真实标记比后续条件生成标记更容易被检测的事实。",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "method:ragtruth",
+      "target": "contribution:揭示了第一个不真实标记比后续条件生成标记更容易被检测的事实。",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:2507.20836v4",
+      "target": "contribution:证明了 logit 熵是区分第一个不真实标记的最佳信号。",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "method:ragtruth",
+      "target": "contribution:证明了 logit 熵是区分第一个不真实标记的最佳信号。",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:2507.20836v4",
+      "target": "contribution:指出了当前基于 logit 的方法在所有序列位置上无法稳健地检测不真实标记的局限性。",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "method:ragtruth",
+      "target": "contribution:指出了当前基于 logit 的方法在所有序列位置上无法稳健地检测不真实标记的局限性。",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:1906.07008v1",
+      "target": "method:adversarial hallucinator ah",
+      "type": "proposes",
+      "weight": 1.0
+    },
+    {
+      "source": "paper:1906.07008v1",
+      "target": "task:尽管大多数基于深度学习的视觉跟踪器在大量标注数据条件下表现出色，但在少量标注数据条件下，它们容易过拟合。",
+      "type": "applied_to",
+      "weight": 0.8
+    },
+    {
+      "source": "method:adversarial hallucinator ah",
+      "target": "task:尽管大多数基于深度学习的视觉跟踪器在大量标注数据条件下表现出色，但在少量标注数据条件下，它们容易过拟合。",
+      "type": "solves",
+      "weight": 0.95
+    },
+    {
+      "source": "paper:1906.07008v1",
+      "target": "dataset:dt 来自imagenet-vid数据集",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "method:adversarial hallucinator ah",
+      "target": "dataset:dt 来自imagenet-vid数据集",
+      "type": "evaluates_on",
+      "weight": 0.9
+    },
+    {
+      "source": "paper:1906.07008v1",
+      "target": "dataset:dq 从dt中扩展生成的新数据集",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "method:adversarial hallucinator ah",
+      "target": "dataset:dq 从dt中扩展生成的新数据集",
+      "type": "evaluates_on",
+      "weight": 0.9
+    },
+    {
+      "source": "method:adversarial hallucinator ah",
+      "target": "metric:accuracy",
+      "type": "achieves",
+      "weight": 0.85
+    },
+    {
+      "source": "method:adversarial hallucinator ah",
+      "target": "metric:f1",
+      "type": "achieves",
+      "weight": 0.85
+    },
+    {
+      "source": "method:adversarial hallucinator ah",
+      "target": "metric:overlap success rate os",
+      "type": "achieves",
+      "weight": 0.85
+    },
+    {
+      "source": "method:adversarial hallucinator ah",
+      "target": "metric:precision",
+      "type": "achieves",
+      "weight": 0.85
+    },
+    {
+      "source": "paper:1906.07008v1",
+      "target": "contribution:提出了对抗‘幻觉器’（ah），模仿人类想象机制进行数据增强。",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "method:adversarial hallucinator ah",
+      "target": "contribution:提出了对抗‘幻觉器’（ah），模仿人类想象机制进行数据增强。",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:1906.07008v1",
+      "target": "contribution:基于ah的hat通过在端到端方式优化ah和在线cnn分类器，有效帮助cnn分类器缓解过拟合问题。",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "method:adversarial hallucinator ah",
+      "target": "contribution:基于ah的hat通过在端到端方式优化ah和在线cnn分类器，有效帮助cnn分类器缓解过拟合问题。",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:1906.07008v1",
+      "target": "contribution:提出了选择性变形转移（sdt）方法，更好地选择适合转移的变形。",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "method:adversarial hallucinator ah",
+      "target": "contribution:提出了选择性变形转移（sdt）方法，更好地选择适合转移的变形。",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:1906.07008v1",
+      "target": "contribution:在otb-2013、otb-2015和otb-50数据集上，hat取得了最佳性能。",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "method:adversarial hallucinator ah",
+      "target": "contribution:在otb-2013、otb-2015和otb-50数据集上，hat取得了最佳性能。",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:2512.03107v1",
+      "target": "method:eclipse",
+      "type": "proposes",
+      "weight": 1.0
+    },
+    {
+      "source": "paper:2512.03107v1",
+      "target": "task:尽管大语言模型生产出流畅但缺乏支持的回答——幻觉，这些回答限制了它们在高风险领域的安全部署。",
+      "type": "applied_to",
+      "weight": 0.8
+    },
+    {
+      "source": "method:eclipse",
+      "target": "task:尽管大语言模型生产出流畅但缺乏支持的回答——幻觉，这些回答限制了它们在高风险领域的安全部署。",
+      "type": "solves",
+      "weight": 0.95
+    },
+    {
+      "source": "paper:2512.03107v1",
+      "target": "dataset:我们的财务qa数据集中（n 200），包含平衡的带有合成幻觉的示例",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "method:eclipse",
+      "target": "dataset:我们的财务qa数据集中（n 200），包含平衡的带有合成幻觉的示例",
+      "type": "evaluates_on",
+      "weight": 0.9
+    },
+    {
+      "source": "method:eclipse",
+      "target": "metric:roc auc",
+      "type": "achieves",
+      "weight": 0.85
+    },
+    {
+      "source": "method:eclipse",
+      "target": "metric:平均精度",
+      "type": "achieves",
+      "weight": 0.85
+    },
+    {
+      "source": "method:eclipse",
+      "target": "metric:f1分数",
+      "type": "achieves",
+      "weight": 0.85
+    },
+    {
+      "source": "paper:2512.03107v1",
+      "target": "contribution:提出了一个四量结合的概念框架，将熵和容量的目标建模为严格凸。",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "method:eclipse",
+      "target": "contribution:提出了一个四量结合的概念框架，将熵和容量的目标建模为严格凸。",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:2512.03107v1",
+      "target": "contribution:实现了困惑度分解，提取特征用于细粒度地检测忽略证据的行为。",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "method:eclipse",
+      "target": "contribution:实现了困惑度分解，提取特征用于细粒度地检测忽略证据的行为。",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:2512.03107v1",
+      "target": "contribution:在api访问上实现了强大的幻觉检测性能，表明灰盒检测器可以避开隐藏状态访问。",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "method:eclipse",
+      "target": "contribution:在api访问上实现了强大的幻觉检测性能，表明灰盒检测器可以避开隐藏状态访问。",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:2512.03107v1",
+      "target": "contribution:通过受控的ablation测试，证明eclipse是logprob-敏感的，即没有真实log概率时，性能显著下降。",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "method:eclipse",
+      "target": "contribution:通过受控的ablation测试，证明eclipse是logprob-敏感的，即没有真实log概率时，性能显著下降。",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "method:δ-hallucination",
+      "target": "dataset:afhq数据集",
+      "type": "evaluates_on",
+      "weight": 0.9
+    },
+    {
+      "source": "method:δ-hallucination",
+      "target": "concept:loss minimization",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "method:fact-controlled diagnosis of hallucinations",
+      "target": "dataset:natural hallucination dataset",
+      "type": "evaluates_on",
+      "weight": 0.9
+    },
+    {
+      "source": "method:fact-controlled diagnosis of hallucinations",
+      "target": "dataset:aci-bench",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "method:fact-controlled diagnosis of hallucinations",
+      "target": "dataset:xsum",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "method:fact-controlled diagnosis of hallucinations",
+      "target": "model:llm",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "method:fact-controlled diagnosis of hallucinations",
+      "target": "metric:单提示计数方法",
+      "type": "compared_with",
+      "weight": 0.7
+    },
+    {
+      "source": "method:fact-controlled diagnosis of hallucinations",
+      "target": "metric:单提示列表方法",
+      "type": "compared_with",
+      "weight": 0.7
+    },
+    {
+      "source": "method:fact-controlled diagnosis of hallucinations",
+      "target": "metric:事件提取 嵌入语义相似度 llm检索",
+      "type": "compared_with",
+      "weight": 0.7
+    },
+    {
+      "source": "method:fact-controlled diagnosis of hallucinations",
+      "target": "metric:摘要 事件提取 嵌入语义相似度语料检索",
+      "type": "compared_with",
+      "weight": 0.7
+    },
+    {
+      "source": "method:fact-controlled diagnosis of hallucinations",
+      "target": "task:clinical hallucinations",
+      "type": "applied_to",
+      "weight": 0.8
+    },
+    {
+      "source": "method:fact-controlled diagnosis of hallucinations",
+      "target": "task:faithful clinical summarization system",
+      "type": "applied_to",
+      "weight": 0.8
+    },
+    {
+      "source": "method:ragtruth",
+      "target": "concept:first hallucination token",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "method:ragtruth",
+      "target": "concept:later hallucination tokens",
+      "type": "compared_with",
+      "weight": 0.7
+    },
+    {
+      "source": "concept:first hallucination token",
+      "target": "task:token-level detection",
+      "type": "achieves",
+      "weight": 0.85
+    },
+    {
+      "source": "concept:logit entropy",
+      "target": "task:token-level detection",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "method:ragtruth",
+      "target": "metric:auroc",
+      "type": "evaluates_on",
+      "weight": 0.9
+    },
+    {
+      "source": "method:adversarial hallucinator ah",
+      "target": "dataset:dt",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "method:adversarial hallucinator ah",
+      "target": "dataset:otb-2013",
+      "type": "evaluates_on",
+      "weight": 0.9
+    },
+    {
+      "source": "method:adversarial hallucinator ah",
+      "target": "dataset:otb-2015",
+      "type": "evaluates_on",
+      "weight": 0.9
+    },
+    {
+      "source": "method:adversarial hallucinator ah",
+      "target": "dataset:otb-50",
+      "type": "evaluates_on",
+      "weight": 0.9
+    },
+    {
+      "source": "method:hallucinated adversarial tracker hat",
+      "target": "metric:accuracy",
+      "type": "achieves",
+      "weight": 0.85
+    },
+    {
+      "source": "method:hallucinated adversarial tracker hat",
+      "target": "metric:f1",
+      "type": "achieves",
+      "weight": 0.85
+    },
+    {
+      "source": "method:hallucinated adversarial tracker hat",
+      "target": "metric:overlap success rate os",
+      "type": "achieves",
+      "weight": 0.85
+    },
+    {
+      "source": "method:hallucinated adversarial tracker hat",
+      "target": "metric:precision",
+      "type": "achieves",
+      "weight": 0.85
+    },
+    {
+      "source": "dataset:dt",
+      "target": "method:hallucinated adversarial tracker hat",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "dataset:dq",
+      "target": "dataset:dt",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "dataset:otb-2015",
+      "target": "dataset:dq",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "dataset:otb-50",
+      "target": "dataset:dq",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "method:selective deformation transfer sdt",
+      "target": "method:adversarial hallucinator ah",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "method:eclipse",
+      "target": "dataset:financial qa dataset",
+      "type": "evaluates_on",
+      "weight": 0.9
+    },
+    {
+      "source": "method:eclipse",
+      "target": "concept:semantics entropy",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "method:eclipse",
+      "target": "concept:capacity of available evidence",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "method:eclipse",
+      "target": "model:gpt-3.5-turbo",
+      "type": "evaluates_on",
+      "weight": 0.9
+    },
+    {
+      "source": "model:gpt-3.5-turbo",
+      "target": "metric:f1分数",
+      "type": "achieves",
+      "weight": 0.85
+    }
+  ],
+  "paper_entities": {
+    "2509.21473v1": [
+      "paper:2509.21473v1",
+      "method:δ-hallucination",
+      "task:尽管ai系统生成的输出可能会与任何合理的输入因果关系脱钩，即使是最优的损失最小化估计器仍然会产生幻觉，因此现有的损失最小化训练方法并不能解决幻觉问题。",
+      "dataset:猫和狗的afhq数据集",
+      "metric:hallucination rate",
+      "contribution:提出了δ-幻觉的概念，正式定义了在任何可能的潜变量状态下，估计器的输出低概率区域。",
+      "contribution:证明了即使最优的损失最小化估计器在存在实际上多样化正确答案的情况下也会产生幻觉。",
+      "contribution:得出了广泛目标分布类的δ-幻觉频率的通用下限。",
+      "contribution:通过合成和真实数据实验验证了我们的理论。",
+      "dataset:afhq数据集",
+      "concept:loss minimization"
+    ],
+    "2506.00448v1": [
+      "paper:2506.00448v1",
+      "method:fact-controlled diagnosis of hallucinations",
+      "task:尽管大语言模型在生成患者-临床对话摘要时会产生幻觉，但这些幻觉目前在临床领域研究不足，且通用领域的幻觉检测器难以检测临床幻觉。",
+      "dataset:aci-bench 包括临床专家的对话转录和相应的临床摘要",
+      "dataset:leave-n-out dataset（通过删除特定事实生成）",
+      "dataset:natural hallucination dataset（基于llm生成的自然幻觉摘要）",
+      "dataset:新闻摘要数据集xsum（跨领域的验证数据集）",
+      "metric:pearson correlation",
+      "metric:factcc",
+      "metric:bertscore",
+      "metric:questeval",
+      "metric:infolm",
+      "metric:alignscore",
+      "metric:单提示计数方法",
+      "metric:单提示列表方法",
+      "metric:嵌入语义相似度，使用minilm和biobert",
+      "metric:llm对齐",
+      "metric:事件提取 嵌入语义相似度 llm检索",
+      "metric:摘要 事件提取 嵌入语义相似度语料检索",
+      "contribution:开发了专门针对临床幻觉检测的数据集和方法。",
+      "contribution:展示了llm和基于事实的方法在真实世界数据集上的性能。",
+      "contribution:提出了更加具体和简洁的评估方法，有助于职业性的临床摘要系统的推广。",
+      "dataset:natural hallucination dataset",
+      "dataset:aci-bench",
+      "dataset:xsum",
+      "model:llm",
+      "task:clinical hallucinations",
+      "task:faithful clinical summarization system"
+    ],
+    "2507.20836v4": [
+      "paper:2507.20836v4",
+      "method:ragtruth",
+      "task:尽管大语言模型会生成不真实的内容，但现有方法在检测这些内容时往往缺乏对在其生成的序列中不同位置的不真实标记信号的变化的理解。",
+      "method:ragtruth",
+      "metric:auroc",
+      "contribution:揭示了第一个不真实标记比后续条件生成标记更容易被检测的事实。",
+      "contribution:证明了 logit 熵是区分第一个不真实标记的最佳信号。",
+      "contribution:指出了当前基于 logit 的方法在所有序列位置上无法稳健地检测不真实标记的局限性。",
+      "concept:first hallucination token",
+      "concept:later hallucination tokens",
+      "task:token-level detection",
+      "concept:logit entropy"
+    ],
+    "1906.07008v1": [
+      "paper:1906.07008v1",
+      "method:adversarial hallucinator ah",
+      "task:尽管大多数基于深度学习的视觉跟踪器在大量标注数据条件下表现出色，但在少量标注数据条件下，它们容易过拟合。",
+      "dataset:dt 来自imagenet-vid数据集",
+      "dataset:dq 从dt中扩展生成的新数据集",
+      "metric:accuracy",
+      "metric:f1",
+      "metric:overlap success rate os",
+      "metric:precision",
+      "contribution:提出了对抗‘幻觉器’（ah），模仿人类想象机制进行数据增强。",
+      "contribution:基于ah的hat通过在端到端方式优化ah和在线cnn分类器，有效帮助cnn分类器缓解过拟合问题。",
+      "contribution:提出了选择性变形转移（sdt）方法，更好地选择适合转移的变形。",
+      "contribution:在otb-2013、otb-2015和otb-50数据集上，hat取得了最佳性能。",
+      "method:hallucinated adversarial tracker hat",
+      "dataset:dt",
+      "dataset:dq",
+      "dataset:otb-2013",
+      "dataset:otb-2015",
+      "dataset:otb-50",
+      "model:mdnet",
+      "method:selective deformation transfer sdt"
+    ],
+    "2512.03107v1": [
+      "paper:2512.03107v1",
+      "method:eclipse",
+      "task:尽管大语言模型生产出流畅但缺乏支持的回答——幻觉，这些回答限制了它们在高风险领域的安全部署。",
+      "dataset:我们的财务qa数据集中（n 200），包含平衡的带有合成幻觉的示例",
+      "metric:roc auc",
+      "metric:平均精度",
+      "metric:f1分数",
+      "contribution:提出了一个四量结合的概念框架，将熵和容量的目标建模为严格凸。",
+      "contribution:实现了困惑度分解，提取特征用于细粒度地检测忽略证据的行为。",
+      "contribution:在api访问上实现了强大的幻觉检测性能，表明灰盒检测器可以避开隐藏状态访问。",
+      "contribution:通过受控的ablation测试，证明eclipse是logprob-敏感的，即没有真实log概率时，性能显著下降。",
+      "dataset:financial qa dataset",
+      "model:gpt-3.5-turbo",
+      "concept:semantics entropy",
+      "concept:capacity of available evidence"
+    ]
+  },
+  "entity_aliases": {
+    "are hallucinations bad estimations": "paper:2509.21473v1",
+    "δ-hallucination": "method:δ-hallucination",
+    "尽管ai系统生成的输出可能会与任何合理的输入因果关系脱钩，即使是最优的损失最小化估计器仍然会产生幻觉，因此现有的损失最小化训练方法并不能解决幻觉问题。": "task:尽管ai系统生成的输出可能会与任何合理的输入因果关系脱钩，即使是最优的损失最小化估计器仍然会产生幻觉，因此现有的损失最小化训练方法并不能解决幻觉问题。",
+    "猫和狗的afhq数据集": "dataset:猫和狗的afhq数据集",
+    "hallucination rate": "metric:hallucination rate",
+    "提出了δ-幻觉的概念，正式定义了在任何可能的潜变量状态下，估计器的输出低概率区域。": "contribution:提出了δ-幻觉的概念，正式定义了在任何可能的潜变量状态下，估计器的输出低概率区域。",
+    "证明了即使最优的损失最小化估计器在存在实际上多样化正确答案的情况下也会产生幻觉。": "contribution:证明了即使最优的损失最小化估计器在存在实际上多样化正确答案的情况下也会产生幻觉。",
+    "得出了广泛目标分布类的δ-幻觉频率的通用下限。": "contribution:得出了广泛目标分布类的δ-幻觉频率的通用下限。",
+    "通过合成和真实数据实验验证了我们的理论。": "contribution:通过合成和真实数据实验验证了我们的理论。",
+    "fact-controlled diagnosis of hallucinations in medical text summarization": "paper:2506.00448v1",
+    "fact-controlled diagnosis of hallucinations": "method:fact-controlled diagnosis of hallucinations",
+    "尽管大语言模型在生成患者-临床对话摘要时会产生幻觉，但这些幻觉目前在临床领域研究不足，且通用领域的幻觉检测器难以检测临床幻觉。": "task:尽管大语言模型在生成患者-临床对话摘要时会产生幻觉，但这些幻觉目前在临床领域研究不足，且通用领域的幻觉检测器难以检测临床幻觉。",
+    "aci-bench 包括临床专家的对话转录和相应的临床摘要": "dataset:aci-bench 包括临床专家的对话转录和相应的临床摘要",
+    "leave-n-out dataset（通过删除特定事实生成）": "dataset:leave-n-out dataset（通过删除特定事实生成）",
+    "natural hallucination dataset（基于llm生成的自然幻觉摘要）": "dataset:natural hallucination dataset（基于llm生成的自然幻觉摘要）",
+    "新闻摘要数据集xsum（跨领域的验证数据集）": "dataset:新闻摘要数据集xsum（跨领域的验证数据集）",
+    "pearson correlation": "metric:pearson correlation",
+    "factcc": "metric:factcc",
+    "bertscore": "metric:bertscore",
+    "questeval": "metric:questeval",
+    "infolm": "metric:infolm",
+    "alignscore": "metric:alignscore",
+    "单提示计数方法": "metric:单提示计数方法",
+    "单提示列表方法": "metric:单提示列表方法",
+    "嵌入语义相似度，使用minilm和biobert": "metric:嵌入语义相似度，使用minilm和biobert",
+    "llm对齐": "metric:llm对齐",
+    "事件提取 嵌入语义相似度 llm检索": "metric:事件提取 嵌入语义相似度 llm检索",
+    "摘要 事件提取 嵌入语义相似度语料检索": "metric:摘要 事件提取 嵌入语义相似度语料检索",
+    "开发了专门针对临床幻觉检测的数据集和方法。": "contribution:开发了专门针对临床幻觉检测的数据集和方法。",
+    "展示了llm和基于事实的方法在真实世界数据集上的性能。": "contribution:展示了llm和基于事实的方法在真实世界数据集上的性能。",
+    "提出了更加具体和简洁的评估方法，有助于职业性的临床摘要系统的推广。": "contribution:提出了更加具体和简洁的评估方法，有助于职业性的临床摘要系统的推广。",
+    "first hallucination tokens are different from conditional ones": "paper:2507.20836v4",
+    "ragtruth": "method:ragtruth",
+    "尽管大语言模型会生成不真实的内容，但现有方法在检测这些内容时往往缺乏对在其生成的序列中不同位置的不真实标记信号的变化的理解。": "task:尽管大语言模型会生成不真实的内容，但现有方法在检测这些内容时往往缺乏对在其生成的序列中不同位置的不真实标记信号的变化的理解。",
+    "auroc": "metric:auroc",
+    "揭示了第一个不真实标记比后续条件生成标记更容易被检测的事实。": "contribution:揭示了第一个不真实标记比后续条件生成标记更容易被检测的事实。",
+    "证明了 logit 熵是区分第一个不真实标记的最佳信号。": "contribution:证明了 logit 熵是区分第一个不真实标记的最佳信号。",
+    "指出了当前基于 logit 的方法在所有序列位置上无法稳健地检测不真实标记的局限性。": "contribution:指出了当前基于 logit 的方法在所有序列位置上无法稳健地检测不真实标记的局限性。",
+    "hallucinated adversarial learning for robust visual tracking": "paper:1906.07008v1",
+    "adversarial hallucinator ah": "method:adversarial hallucinator ah",
+    "尽管大多数基于深度学习的视觉跟踪器在大量标注数据条件下表现出色，但在少量标注数据条件下，它们容易过拟合。": "task:尽管大多数基于深度学习的视觉跟踪器在大量标注数据条件下表现出色，但在少量标注数据条件下，它们容易过拟合。",
+    "dt 来自imagenet-vid数据集": "dataset:dt 来自imagenet-vid数据集",
+    "dq 从dt中扩展生成的新数据集": "dataset:dq 从dt中扩展生成的新数据集",
+    "accuracy": "metric:accuracy",
+    "f1": "metric:f1",
+    "overlap success rate os": "metric:overlap success rate os",
+    "precision": "metric:precision",
+    "提出了对抗‘幻觉器’（ah），模仿人类想象机制进行数据增强。": "contribution:提出了对抗‘幻觉器’（ah），模仿人类想象机制进行数据增强。",
+    "基于ah的hat通过在端到端方式优化ah和在线cnn分类器，有效帮助cnn分类器缓解过拟合问题。": "contribution:基于ah的hat通过在端到端方式优化ah和在线cnn分类器，有效帮助cnn分类器缓解过拟合问题。",
+    "提出了选择性变形转移（sdt）方法，更好地选择适合转移的变形。": "contribution:提出了选择性变形转移（sdt）方法，更好地选择适合转移的变形。",
+    "在otb-2013、otb-2015和otb-50数据集上，hat取得了最佳性能。": "contribution:在otb-2013、otb-2015和otb-50数据集上，hat取得了最佳性能。",
+    "detecting ai hallucinations in finance an information-theoretic method cuts hallucination rate by 92": "paper:2512.03107v1",
+    "eclipse": "method:eclipse",
+    "尽管大语言模型生产出流畅但缺乏支持的回答——幻觉，这些回答限制了它们在高风险领域的安全部署。": "task:尽管大语言模型生产出流畅但缺乏支持的回答——幻觉，这些回答限制了它们在高风险领域的安全部署。",
+    "我们的财务qa数据集中（n 200），包含平衡的带有合成幻觉的示例": "dataset:我们的财务qa数据集中（n 200），包含平衡的带有合成幻觉的示例",
+    "roc auc": "metric:roc auc",
+    "平均精度": "metric:平均精度",
+    "f1分数": "metric:f1分数",
+    "提出了一个四量结合的概念框架，将熵和容量的目标建模为严格凸。": "contribution:提出了一个四量结合的概念框架，将熵和容量的目标建模为严格凸。",
+    "实现了困惑度分解，提取特征用于细粒度地检测忽略证据的行为。": "contribution:实现了困惑度分解，提取特征用于细粒度地检测忽略证据的行为。",
+    "在api访问上实现了强大的幻觉检测性能，表明灰盒检测器可以避开隐藏状态访问。": "contribution:在api访问上实现了强大的幻觉检测性能，表明灰盒检测器可以避开隐藏状态访问。",
+    "通过受控的ablation测试，证明eclipse是logprob-敏感的，即没有真实log概率时，性能显著下降。": "contribution:通过受控的ablation测试，证明eclipse是logprob-敏感的，即没有真实log概率时，性能显著下降。",
+    "afhq数据集": "dataset:afhq数据集",
+    "loss minimization": "concept:loss minimization",
+    "natural hallucination dataset": "dataset:natural hallucination dataset",
+    "aci-bench": "dataset:aci-bench",
+    "xsum": "dataset:xsum",
+    "llm": "model:llm",
+    "large language model": "model:llm",
+    "clinical hallucinations": "task:clinical hallucinations",
+    "faithful clinical summarization system": "task:faithful clinical summarization system",
+    "first hallucination token": "concept:first hallucination token",
+    "later hallucination tokens": "concept:later hallucination tokens",
+    "token-level detection": "task:token-level detection",
+    "logit entropy": "concept:logit entropy",
+    "hallucinated adversarial tracker hat": "method:hallucinated adversarial tracker hat",
+    "dt": "dataset:dt",
+    "dq": "dataset:dq",
+    "otb-2013": "dataset:otb-2013",
+    "otb-2015": "dataset:otb-2015",
+    "otb-50": "dataset:otb-50",
+    "mdnet": "model:mdnet",
+    "selective deformation transfer sdt": "method:selective deformation transfer sdt",
+    "financial qa dataset": "dataset:financial qa dataset",
+    "gpt-3.5-turbo": "model:gpt-3.5-turbo",
+    "semantics entropy": "concept:semantics entropy",
+    "capacity of available evidence": "concept:capacity of available evidence"
+  },
+  "communities": {
+    "0": {
+      "nodes": [
+        "paper:2509.21473v1",
+        "method:δ-hallucination",
+        "task:尽管ai系统生成的输出可能会与任何合理的输入因果关系脱钩，即使是最优的损失最小化估计器仍然会产生幻觉，因此现有的损失最小化训练方法并不能解决幻觉问题。",
+        "dataset:猫和狗的afhq数据集",
+        "metric:hallucination rate",
+        "contribution:提出了δ-幻觉的概念，正式定义了在任何可能的潜变量状态下，估计器的输出低概率区域。",
+        "contribution:证明了即使最优的损失最小化估计器在存在实际上多样化正确答案的情况下也会产生幻觉。",
+        "contribution:得出了广泛目标分布类的δ-幻觉频率的通用下限。",
+        "contribution:通过合成和真实数据实验验证了我们的理论。",
+        "dataset:afhq数据集",
+        "concept:loss minimization"
+      ],
+      "key_entities": [
+        "Are Hallucinations Bad Estimations?",
+        "δ-Hallucination",
+        "尽管AI系统生成的输出可能会与任何合理的输入因果关系脱钩，即使是最优的损失最小化估计器仍然会产生幻觉，因此现有的损失最小化训练方法并不能解决幻觉问题。",
+        "猫和狗的AFHQ数据集",
+        "Hallucination Rate",
+        "提出了δ-幻觉的概念，正式定义了在任何可能的潜变量状态下，估计器的输出低概率区域。",
+        "证明了即使最优的损失最小化估计器在存在实际上多样化正确答案的情况下也会产生幻觉。",
+        "得出了广泛目标分布类的δ-幻觉频率的通用下限。",
+        "通过合成和真实数据实验验证了我们的理论。",
+        "AFHQ数据集",
+        "Loss Minimization"
+      ],
+      "key_papers": [
+        "Are Hallucinations Bad Estimations?"
+      ],
+      "dominant_types": [
+        "Contribution",
+        "Dataset",
+        "Paper"
+      ],
+      "semantic_tag": "Benchmark & Dataset Cluster",
+      "summary": "",
+      "community_name": "Benchmark & Dataset Cluster"
+    },
+    "1": {
+      "nodes": [
+        "paper:2506.00448v1",
+        "task:尽管大语言模型在生成患者-临床对话摘要时会产生幻觉，但这些幻觉目前在临床领域研究不足，且通用领域的幻觉检测器难以检测临床幻觉。",
+        "dataset:aci-bench 包括临床专家的对话转录和相应的临床摘要",
+        "dataset:leave-n-out dataset（通过删除特定事实生成）",
+        "dataset:natural hallucination dataset（基于llm生成的自然幻觉摘要）",
+        "dataset:新闻摘要数据集xsum（跨领域的验证数据集）",
+        "contribution:开发了专门针对临床幻觉检测的数据集和方法。",
+        "contribution:展示了llm和基于事实的方法在真实世界数据集上的性能。",
+        "contribution:提出了更加具体和简洁的评估方法，有助于职业性的临床摘要系统的推广。"
+      ],
+      "key_entities": [
+        "Fact-Controlled Diagnosis of Hallucinations in Medical Text Summarization",
+        "尽管大语言模型在生成患者-临床对话摘要时会产生幻觉，但这些幻觉目前在临床领域研究不足，且通用领域的幻觉检测器难以检测临床幻觉。",
+        "ACI-Bench (包括临床专家的对话转录和相应的临床摘要)",
+        "Leave-N-Out dataset（通过删除特定事实生成）",
+        "Natural Hallucination dataset（基于LLM生成的自然幻觉摘要）",
+        "新闻摘要数据集XSum（跨领域的验证数据集）",
+        "开发了专门针对临床幻觉检测的数据集和方法。",
+        "展示了LLM和基于事实的方法在真实世界数据集上的性能。",
+        "提出了更加具体和简洁的评估方法，有助于职业性的临床摘要系统的推广。"
+      ],
+      "key_papers": [
+        "Fact-Controlled Diagnosis of Hallucinations in Medical Text Summarization"
+      ],
+      "dominant_types": [
+        "Dataset",
+        "Contribution",
+        "Paper"
+      ],
+      "semantic_tag": "Benchmark & Dataset Cluster",
+      "summary": "",
+      "community_name": "Benchmark & Dataset Cluster"
+    },
+    "2": {
+      "nodes": [
+        "method:fact-controlled diagnosis of hallucinations",
+        "metric:pearson correlation",
+        "metric:factcc",
+        "metric:bertscore",
+        "metric:questeval",
+        "metric:infolm",
+        "metric:alignscore",
+        "metric:单提示计数方法",
+        "metric:单提示列表方法",
+        "metric:嵌入语义相似度，使用minilm和biobert",
+        "metric:llm对齐",
+        "metric:事件提取 嵌入语义相似度 llm检索",
+        "metric:摘要 事件提取 嵌入语义相似度语料检索",
+        "dataset:natural hallucination dataset",
+        "dataset:aci-bench",
+        "dataset:xsum",
+        "model:llm",
+        "task:clinical hallucinations",
+        "task:faithful clinical summarization system",
+        "model:mdnet"
+      ],
+      "key_entities": [
+        "Fact-Controlled Diagnosis of Hallucinations",
+        "Pearson correlation",
+        "FactCC",
+        "BERTScore",
+        "QuestEval",
+        "InfoLM",
+        "AlignScore",
+        "单提示计数方法",
+        "单提示列表方法",
+        "嵌入语义相似度，使用MiniLM和BioBERT",
+        "LLM对齐",
+        "事件提取+嵌入语义相似度+LLM检索"
+      ],
+      "key_papers": [],
+      "dominant_types": [
+        "Metric",
+        "Dataset",
+        "Model"
+      ],
+      "semantic_tag": "Benchmark & Dataset Cluster",
+      "summary": "",
+      "community_name": "Benchmark & Dataset Cluster"
+    },
+    "3": {
+      "nodes": [
+        "paper:2507.20836v4",
+        "contribution:揭示了第一个不真实标记比后续条件生成标记更容易被检测的事实。",
+        "contribution:证明了 logit 熵是区分第一个不真实标记的最佳信号。",
+        "contribution:指出了当前基于 logit 的方法在所有序列位置上无法稳健地检测不真实标记的局限性。"
+      ],
+      "key_entities": [
+        "First Hallucination Tokens Are Different from Conditional Ones",
+        "揭示了第一个不真实标记比后续条件生成标记更容易被检测的事实。",
+        "证明了 logit 熵是区分第一个不真实标记的最佳信号。",
+        "指出了当前基于 logit 的方法在所有序列位置上无法稳健地检测不真实标记的局限性。"
+      ],
+      "key_papers": [
+        "First Hallucination Tokens Are Different from Conditional Ones"
+      ],
+      "dominant_types": [
+        "Contribution",
+        "Paper"
+      ],
+      "semantic_tag": "Research Contributions Cluster",
+      "summary": "",
+      "community_name": "Research Contributions Cluster"
+    },
+    "4": {
+      "nodes": [
+        "method:ragtruth",
+        "task:尽管大语言模型会生成不真实的内容，但现有方法在检测这些内容时往往缺乏对在其生成的序列中不同位置的不真实标记信号的变化的理解。",
+        "metric:auroc",
+        "concept:later hallucination tokens"
+      ],
+      "key_entities": [
+        "RAGTruth",
+        "尽管大语言模型会生成不真实的内容，但现有方法在检测这些内容时往往缺乏对在其生成的序列中不同位置的不真实标记信号的变化的理解。",
+        "AUROC",
+        "later hallucination tokens"
+      ],
+      "key_papers": [],
+      "dominant_types": [
+        "Method",
+        "Task",
+        "Metric"
+      ],
+      "semantic_tag": "Task & Application Cluster",
+      "summary": "",
+      "community_name": "Task & Application Cluster"
+    },
+    "5": {
+      "nodes": [
+        "paper:1906.07008v1",
+        "method:adversarial hallucinator ah",
+        "task:尽管大多数基于深度学习的视觉跟踪器在大量标注数据条件下表现出色，但在少量标注数据条件下，它们容易过拟合。",
+        "dataset:dt 来自imagenet-vid数据集",
+        "dataset:dq 从dt中扩展生成的新数据集",
+        "contribution:提出了对抗‘幻觉器’（ah），模仿人类想象机制进行数据增强。",
+        "contribution:基于ah的hat通过在端到端方式优化ah和在线cnn分类器，有效帮助cnn分类器缓解过拟合问题。",
+        "contribution:提出了选择性变形转移（sdt）方法，更好地选择适合转移的变形。",
+        "contribution:在otb-2013、otb-2015和otb-50数据集上，hat取得了最佳性能。",
+        "dataset:dt",
+        "dataset:dq",
+        "dataset:otb-2013",
+        "dataset:otb-2015",
+        "dataset:otb-50",
+        "method:selective deformation transfer sdt"
+      ],
+      "key_entities": [
+        "Hallucinated Adversarial Learning for Robust Visual Tracking",
+        "adversarial 'hallucinator' (AH)",
+        "尽管大多数基于深度学习的视觉跟踪器在大量标注数据条件下表现出色，但在少量标注数据条件下，它们容易过拟合。",
+        "DT (来自ImageNet-VID数据集)",
+        "DQ (从DT中扩展生成的新数据集)",
+        "提出了对抗‘幻觉器’（AH），模仿人类想象机制进行数据增强。",
+        "基于AH的HAT通过在端到端方式优化AH和在线CNN分类器，有效帮助CNN分类器缓解过拟合问题。",
+        "提出了选择性变形转移（SDT）方法，更好地选择适合转移的变形。",
+        "在OTB-2013、OTB-2015和OTB-50数据集上，HAT取得了最佳性能。",
+        "DT",
+        "DQ",
+        "OTB-2013"
+      ],
+      "key_papers": [
+        "Hallucinated Adversarial Learning for Robust Visual Tracking"
+      ],
+      "dominant_types": [
+        "Dataset",
+        "Contribution",
+        "Method"
+      ],
+      "semantic_tag": "Benchmark & Dataset Cluster",
+      "summary": "",
+      "community_name": "Benchmark & Dataset Cluster"
+    },
+    "6": {
+      "nodes": [
+        "metric:accuracy",
+        "metric:f1",
+        "metric:overlap success rate os",
+        "metric:precision",
+        "method:hallucinated adversarial tracker hat"
+      ],
+      "key_entities": [
+        "Accuracy",
+        "F1",
+        "Overlap Success Rate (OS)",
+        "Precision",
+        "hallucinated adversarial tracker (HAT)"
+      ],
+      "key_papers": [],
+      "dominant_types": [
+        "Metric",
+        "Method"
+      ],
+      "semantic_tag": "Evaluation Metrics Cluster",
+      "summary": "",
+      "community_name": "Evaluation Metrics Cluster"
+    },
+    "7": {
+      "nodes": [
+        "paper:2512.03107v1",
+        "method:eclipse",
+        "task:尽管大语言模型生产出流畅但缺乏支持的回答——幻觉，这些回答限制了它们在高风险领域的安全部署。",
+        "dataset:我们的财务qa数据集中（n 200），包含平衡的带有合成幻觉的示例",
+        "metric:roc auc",
+        "metric:平均精度",
+        "contribution:提出了一个四量结合的概念框架，将熵和容量的目标建模为严格凸。",
+        "contribution:实现了困惑度分解，提取特征用于细粒度地检测忽略证据的行为。",
+        "contribution:在api访问上实现了强大的幻觉检测性能，表明灰盒检测器可以避开隐藏状态访问。",
+        "contribution:通过受控的ablation测试，证明eclipse是logprob-敏感的，即没有真实log概率时，性能显著下降。",
+        "dataset:financial qa dataset",
+        "concept:semantics entropy",
+        "concept:capacity of available evidence"
+      ],
+      "key_entities": [
+        "Detecting AI Hallucinations in Finance: An Information-Theoretic Method Cuts Hallucination Rate by 92%",
+        "ECLIPSE",
+        "尽管大语言模型生产出流畅但缺乏支持的回答——幻觉，这些回答限制了它们在高风险领域的安全部署。",
+        "我们的财务QA数据集中（n=200），包含平衡的带有合成幻觉的示例",
+        "ROC AUC",
+        "平均精度",
+        "提出了一个四量结合的概念框架，将熵和容量的目标建模为严格凸。",
+        "实现了困惑度分解，提取特征用于细粒度地检测忽略证据的行为。",
+        "在API访问上实现了强大的幻觉检测性能，表明灰盒检测器可以避开隐藏状态访问。",
+        "通过受控的ablation测试，证明ECLIPSE是logprob-敏感的，即没有真实log概率时，性能显著下降。",
+        "financial QA dataset",
+        "semantics entropy"
+      ],
+      "key_papers": [
+        "Detecting AI Hallucinations in Finance: An Information-Theoretic Method Cuts Hallucination Rate by 92%"
+      ],
+      "dominant_types": [
+        "Contribution",
+        "Dataset",
+        "Metric"
+      ],
+      "semantic_tag": "Benchmark & Dataset Cluster",
+      "summary": "",
+      "community_name": "Benchmark & Dataset Cluster"
+    },
+    "8": {
+      "nodes": [
+        "metric:f1分数",
+        "model:gpt-3.5-turbo"
+      ],
+      "key_entities": [
+        "F1分数",
+        "GPT-3.5-turbo"
+      ],
+      "key_papers": [],
+      "dominant_types": [
+        "Metric",
+        "Model"
+      ],
+      "semantic_tag": "Evaluation Metrics Cluster",
+      "summary": "",
+      "community_name": "Evaluation Metrics Cluster"
+    },
+    "9": {
+      "nodes": [
+        "concept:first hallucination token",
+        "task:token-level detection",
+        "concept:logit entropy"
+      ],
+      "key_entities": [
+        "first hallucination token",
+        "token-level detection",
+        "logit entropy"
+      ],
+      "key_papers": [],
+      "dominant_types": [
+        "Concept",
+        "Task"
+      ],
+      "semantic_tag": "Task & Application Cluster",
+      "summary": "",
+      "community_name": "Task & Application Cluster"
+    }
+  },
+  "citation_graph": {},
+  "stats": {
+    "node_count": 86,
+    "edge_count": 124,
+    "node_type_count": {
+      "Paper": 5,
+      "Method": 7,
+      "Task": 8,
+      "Dataset": 18,
+      "Metric": 21,
+      "Contribution": 18,
+      "Concept": 6,
+      "Model": 3
+    },
+    "paper_count": 5,
+    "community_count": 0,
+    "citation_edge_count": 0
+  }
+}

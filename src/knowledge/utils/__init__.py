@@ -9,8 +9,6 @@ from .kb_utils import (
     calculate_content_hash,
     get_embedding_config,
     prepare_item_metadata,
-    split_text_into_chunks,
-    split_text_into_qa_chunks,
     validate_file_path,
 )
 
@@ -18,7 +16,5 @@ __all__ = [
     "calculate_content_hash",
     "get_embedding_config",
     "prepare_item_metadata",
-    "split_text_into_chunks",
-    "split_text_into_qa_chunks",
     "validate_file_path",
 ]

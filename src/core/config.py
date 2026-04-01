@@ -2,7 +2,7 @@ import os
 import yaml
 from dotenv import load_dotenv
 from pathlib import Path
-from typing import Any, Dict, Optional, ParamSpecArgs, Union
+from typing import Any, Dict, Optional
 from src.utils.log_utils import setup_logger
 
 logger = setup_logger(__name__)
@@ -35,19 +35,25 @@ class Config:
         
         self._initialized = True
     
+    # 仅将这些环境变量前缀/名称注入配置，避免 PATH / HOME 等系统变量污染命名空间
+    _ENV_WHITELIST_PREFIXES = (
+        "SILICONFLOW_", "OPENAI_", "DASHSCOPE_", "ARK_",
+        "NEO4J_", "CORS_", "SAVE_DIR", "KB_TYPE",
+        "MINERU_",  # MinerU V4 Token API 等（MINERU_API_KEY）
+    )
+
     def _load_env(self) -> None:
-        """加载.env文件中的环境变量并存储到配置字典中"""
-        # 查找.env文件的路径
+        """加载 .env 文件并选择性注入白名单内的环境变量。"""
         env_path = Path(__file__).parent.parent.parent / ".env"
-        
+
         if env_path.exists():
             load_dotenv(env_path)
         else:
             print(f"警告: 未找到.env文件: {env_path}")
-        
-        # 将所有环境变量添加到配置中
+
         for key, value in os.environ.items():
-            self._config[key] = value
+            if any(key.startswith(prefix) for prefix in self._ENV_WHITELIST_PREFIXES):
+                self._config[key] = value
     
     def _load_yaml_config(self) -> None:
         """加载YAML配置文件（models.yaml和system_params.yaml）"""

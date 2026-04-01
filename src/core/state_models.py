@@ -80,7 +80,11 @@ class NodeError(BaseModel):
     writing_node_error: Optional[str] = Field(default=None, description="写作节点错误信息")
     report_node_error: Optional[str] = Field(default=None, description="报告生成节点错误信息")
     qa_node_error: Optional[str] = Field(default=None, description="问答节点错误信息")
+    chat_node_error: Optional[str] = Field(default=None, description="闲聊节点错误信息")
     error: Optional[str] = Field(default=None, description="错误信息")
+
+
+MAX_CHAT_HISTORY = 40
 
 
 class PaperAgentState(BaseModel):

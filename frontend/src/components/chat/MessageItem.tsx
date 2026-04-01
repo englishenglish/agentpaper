@@ -1,13 +1,11 @@
 'use client';
 
 import React, { memo } from 'react';
-import ReactMarkdown from 'react-markdown';
-import remarkGfm from 'remark-gfm';
-import rehypeHighlight from 'rehype-highlight';
 import { Bot, User, Copy, Check } from 'lucide-react';
 import { cn, formatDate } from '@/lib/utils';
 import type { Message } from '@/types';
 import { useState } from 'react';
+import { AssistantMarkdown } from './AssistantMarkdown';
 
 interface MessageItemProps {
   message: Message;
@@ -67,40 +65,11 @@ export const MessageItem = memo(function MessageItem({ message }: MessageItemPro
             <p className="whitespace-pre-wrap break-words">{message.content}</p>
           ) : (
             <div className="prose prose-sm dark:prose-invert max-w-none prose-dark break-words">
-              <ReactMarkdown
-                remarkPlugins={[remarkGfm]}
-                rehypePlugins={[rehypeHighlight]}
-                components={{
-                  pre: ({ children }) => (
-                    <pre className="relative group/code overflow-x-auto rounded-lg bg-muted p-3 text-xs my-2">
-                      {children}
-                    </pre>
-                  ),
-                  code: ({ inline, className, children, ...props }: { inline?: boolean; className?: string; children?: React.ReactNode }) =>
-                    inline ? (
-                      <code
-                        className="bg-muted px-1.5 py-0.5 rounded text-xs font-mono text-violet-400"
-                        {...props}
-                      >
-                        {children}
-                      </code>
-                    ) : (
-                      <code className={cn('text-xs font-mono', className)} {...props}>
-                        {children}
-                      </code>
-                    ),
-                  table: ({ children }) => (
-                    <div className="overflow-x-auto my-2">
-                      <table className="border-collapse w-full text-xs">{children}</table>
-                    </div>
-                  ),
-                }}
-              >
-                {message.content}
-              </ReactMarkdown>
-              {message.isStreaming && (
-                <span className="inline-block w-2 h-4 bg-foreground/70 ml-0.5 animate-typing rounded-sm" />
-              )}
+              <AssistantMarkdown
+                content={message.content}
+                citationChunks={message.citationChunks}
+                isStreaming={message.isStreaming}
+              />
             </div>
           )}
         </div>

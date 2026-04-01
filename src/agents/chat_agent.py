@@ -2,25 +2,30 @@
 
 from __future__ import annotations
 
-import sys
-import os
-
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "..")))
-
 from autogen_agentchat.agents import AssistantAgent
 
 from src.core.model_client import create_qa_model_client
 from src.core.prompts import casual_chat_agent_prompt
 from src.core.state_models import State, ExecutionState, BackToFrontData
 from src.utils.log_utils import setup_logger
+from src.agents.streaming_utils import stream_assistant_to_queue
 
 logger = setup_logger(__name__)
+
+_chat_model_client = None
+
+
+def _get_chat_model_client():
+    global _chat_model_client
+    if _chat_model_client is None:
+        _chat_model_client = create_qa_model_client()
+    return _chat_model_client
 
 
 def _make_chat_agent() -> AssistantAgent:
     return AssistantAgent(
         name="chat_agent",
-        model_client=create_qa_model_client(),
+        model_client=_get_chat_model_client(),
         system_message=casual_chat_agent_prompt,
         model_client_stream=True,
     )
@@ -57,12 +62,16 @@ async def chat_node(state: State) -> State:
         await state_queue.put(
             BackToFrontData(step=ExecutionState.QA_ANSWERING, state="generating", data="正在生成回复...")
         )
-        result = await _make_chat_agent().run(task=task_prompt)
-        final_answer = result.messages[-1].content
+        final_answer = await stream_assistant_to_queue(
+            _make_chat_agent(),
+            task_prompt,
+            state_queue,
+            step=ExecutionState.QA_ANSWERING,
+        )
     except Exception as e:
         logger.error(f"闲聊生成失败: {e}")
         final_answer = f"抱歉，回复时出错：{e}"
-        current_state.error.qa_node_error = str(e)
+        current_state.error.chat_node_error = str(e)
 
     current_state.qa_answer = final_answer
     await state_queue.put(

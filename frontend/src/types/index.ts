@@ -9,6 +9,19 @@ export interface UsedKb {
   name: string;
 }
 
+/** 与后端检索片段编号 ref 对应，用于悬停展示 chunk 详情 */
+export interface CitationChunk {
+  ref: number;
+  chunk_id: string;
+  paper_id?: string;
+  title?: string;
+  section?: string;
+  source: string;
+  db_id: string;
+  score: number;
+  preview: string;
+}
+
 export interface Message {
   id: string;
   role: MessageRole;
@@ -16,7 +29,10 @@ export interface Message {
   createdAt: number;
   isStreaming?: boolean;
   usedKbs?: UsedKb[];
+  citationChunks?: CitationChunk[];
 }
+
+export type KbBinding = 'none' | 'manual' | 'built';
 
 export interface ChatSession {
   id: string;
@@ -24,13 +40,20 @@ export interface ChatSession {
   messages: Message[];
   createdAt: number;
   updatedAt: number;
+  /** 本会话绑定的单个知识库；未选为 null */
+  selectedDbId?: string | null;
+  enableWebSearch?: boolean;
+  retrievalMode?: 'rag' | 'graphrag' | 'both';
+  /** manual：用户手动选库；built：联网检索自动建库并锁定 */
+  kbBinding?: KbBinding;
 }
 
 export interface ChatRequestBody {
   question: string;
   session_id: string;
   enable_web_search?: boolean;
-  selected_db_ids?: string[];
+  /** 手动选择的单个知识库 id；不传表示未选库 */
+  selected_db_id?: string | null;
   retrieval_mode?: 'rag' | 'graphrag' | 'both';
 }
 

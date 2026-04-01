@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useRef, useEffect, KeyboardEvent } from 'react';
+import React, { useRef, useEffect, KeyboardEvent, useCallback } from 'react';
 import { Button } from '@/components/ui/button';
 import { Textarea } from '@/components/ui/textarea';
 import { Send, Square, Globe, Paperclip } from 'lucide-react';
@@ -17,16 +17,43 @@ interface ChatInputProps {
 
 export function ChatInput({ onSend, onStop, isGenerating, disabled }: ChatInputProps) {
   const textareaRef = useRef<HTMLTextAreaElement>(null);
-  const { settings, updateSettings } = useChatStore();
+  const webHintTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const { activeSessionId, sessions, patchSession } = useChatStore();
   const [value, setValue] = React.useState('');
+  const [webLockedHint, setWebLockedHint] = React.useState<string | null>(null);
 
-  // Auto-resize textarea
+  const session = sessions.find((s) => s.id === activeSessionId);
+  const enableWebSearch = session?.enableWebSearch ?? true;
+  const retrievalMode = session?.retrievalMode ?? 'rag';
+  const kbBinding = session?.kbBinding ?? 'none';
+  const webLocked = kbBinding === 'manual' || kbBinding === 'built';
+
+  useEffect(() => {
+    setValue('');
+  }, [activeSessionId]);
+
   useEffect(() => {
     const el = textareaRef.current;
     if (!el) return;
     el.style.height = 'auto';
     el.style.height = `${Math.min(el.scrollHeight, 200)}px`;
   }, [value]);
+
+  useEffect(() => {
+    return () => {
+      if (webHintTimerRef.current) clearTimeout(webHintTimerRef.current);
+    };
+  }, []);
+
+  const showWebLockedHint = useCallback(() => {
+    const msg =
+      kbBinding === 'built'
+        ? '当前会话已通过联网检索创建知识库，后续仅基于该库问答，无法开启联网搜索。'
+        : '已选择知识库，将仅基于该库检索，无法开启联网搜索。';
+    setWebLockedHint(msg);
+    if (webHintTimerRef.current) clearTimeout(webHintTimerRef.current);
+    webHintTimerRef.current = setTimeout(() => setWebLockedHint(null), 4500);
+  }, [kbBinding]);
 
   const handleSend = () => {
     const trimmed = value.trim();
@@ -45,26 +72,42 @@ export function ChatInput({ onSend, onStop, isGenerating, disabled }: ChatInputP
     }
   };
 
+  const handleWebSearchClick = () => {
+    if (!activeSessionId) return;
+    if (webLocked) {
+      showWebLockedHint();
+      return;
+    }
+    patchSession(activeSessionId, { enableWebSearch: !enableWebSearch });
+  };
+
+  const setRetrievalMode = (mode: 'rag' | 'graphrag' | 'both') => {
+    if (!activeSessionId) return;
+    patchSession(activeSessionId, { retrievalMode: mode });
+  };
+
   return (
     <div className="border-t bg-background/95 backdrop-blur px-4 py-3">
       <div className="max-w-3xl mx-auto">
-        {/* Toolbar row */}
         <div className="flex items-center gap-2 mb-2">
           <Button
+            type="button"
             variant="ghost"
             size="sm"
+            title={webLocked ? '点击查看说明' : undefined}
             className={cn(
               'h-7 text-xs gap-1.5 rounded-full px-3',
-              settings.enableWebSearch
+              webLocked && 'opacity-70',
+              enableWebSearch && !webLocked
                 ? 'bg-primary/10 text-primary hover:bg-primary/20'
                 : 'text-muted-foreground hover:text-foreground hover:bg-muted'
             )}
-            onClick={() => updateSettings({ enableWebSearch: !settings.enableWebSearch })}
+            onClick={handleWebSearchClick}
           >
             <Globe
               className={cn(
                 'w-3.5 h-3.5',
-                settings.enableWebSearch ? '' : 'opacity-60'
+                enableWebSearch && !webLocked ? '' : 'opacity-60'
               )}
             />
             联网搜索
@@ -75,10 +118,11 @@ export function ChatInput({ onSend, onStop, isGenerating, disabled }: ChatInputP
             {(['rag', 'graphrag', 'both'] as const).map((mode) => (
               <button
                 key={mode}
-                onClick={() => updateSettings({ retrievalMode: mode })}
+                type="button"
+                onClick={() => setRetrievalMode(mode)}
                 className={cn(
                   'text-xs px-2 py-0.5 rounded-full transition-colors',
-                  settings.retrievalMode === mode
+                  retrievalMode === mode
                     ? 'bg-primary text-primary-foreground'
                     : 'text-muted-foreground hover:text-foreground hover:bg-muted'
                 )}
@@ -89,14 +133,24 @@ export function ChatInput({ onSend, onStop, isGenerating, disabled }: ChatInputP
           </div>
         </div>
 
-        {/* Selected knowledge base tags */}
+        {webLockedHint && (
+          <p
+            role="status"
+            className="text-xs text-amber-700 dark:text-amber-400 mb-2 px-2 py-2 rounded-lg bg-amber-500/10 border border-amber-500/25"
+          >
+            {webLockedHint}
+          </p>
+        )}
+
         <div className="mb-2">
           <KbSelector />
         </div>
 
-        {/* Input area */}
         <div className="relative flex items-end gap-2 rounded-2xl border border-input bg-card px-3 py-2 focus-within:ring-1 focus-within:ring-ring transition-shadow">
-          <button className="p-1.5 text-muted-foreground hover:text-foreground transition-colors shrink-0 mb-0.5">
+          <button
+            type="button"
+            className="p-1.5 text-muted-foreground hover:text-foreground transition-colors shrink-0 mb-0.5"
+          >
             <Paperclip className="w-4 h-4" />
           </button>
 
@@ -134,8 +188,11 @@ export function ChatInput({ onSend, onStop, isGenerating, disabled }: ChatInputP
           </div>
         </div>
 
-        <p className="text-[10px] text-muted-foreground text-center mt-2">
-          AI 可能会犯错，请核实重要信息
+        <p className="text-[10px] text-muted-foreground text-center mt-2 space-y-0.5">
+          <span className="block">
+            联网、检索方式与知识库按当前对话保存，切换侧边栏其他对话后会自动恢复各自设置。
+          </span>
+          <span className="block">AI 可能会犯错，请核实重要信息。</span>
         </p>
       </div>
     </div>

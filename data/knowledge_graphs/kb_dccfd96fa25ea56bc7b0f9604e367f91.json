@@ -1,0 +1,1307 @@
+{
+  "db_id": "kb_dccfd96fa25ea56bc7b0f9604e367f91",
+  "nodes": {
+    "paper:1006.3863v2": {
+      "id": "paper:1006.3863v2",
+      "type": "Paper",
+      "label": "Normalization of peer-evaluation measures of group research quality across academic disciplines",
+      "norm_label": "normalization of peer-evaluation measures of group research quality across academic disciplines"
+    },
+    "method:数学模型": {
+      "id": "method:数学模型",
+      "type": "Method",
+      "label": "数学模型",
+      "norm_label": "数学模型"
+    },
+    "task:尽管uk的rae使用专家评估在特定学科内进行研究团队之间的比较，但它无法直接比较不同学科之间的研究影响力，导致了不同学科之间的相对强弱比较存在缺陷。": {
+      "id": "task:尽管uk的rae使用专家评估在特定学科内进行研究团队之间的比较，但它无法直接比较不同学科之间的研究影响力，导致了不同学科之间的相对强弱比较存在缺陷。",
+      "type": "Task",
+      "label": "尽管UK的RAE使用专家评估在特定学科内进行研究团队之间的比较，但它无法直接比较不同学科之间的研究影响力，导致了不同学科之间的相对强弱比较存在缺陷。",
+      "norm_label": "尽管uk的rae使用专家评估在特定学科内进行研究团队之间的比较，但它无法直接比较不同学科之间的研究影响力，导致了不同学科之间的相对强弱比较存在缺陷。"
+    },
+    "dataset:rae 2008的数据": {
+      "id": "dataset:rae 2008的数据",
+      "type": "Dataset",
+      "label": "RAE 2008的数据",
+      "norm_label": "rae 2008的数据"
+    },
+    "metric:质量得分": {
+      "id": "metric:质量得分",
+      "type": "Metric",
+      "label": "质量得分",
+      "norm_label": "质量得分"
+    },
+    "contribution:提出了一个新的跨学科归一化方法，基于研究的临界质量。": {
+      "id": "contribution:提出了一个新的跨学科归一化方法，基于研究的临界质量。",
+      "type": "Contribution",
+      "label": "提出了一个新的跨学科归一化方法，基于研究的临界质量。",
+      "norm_label": "提出了一个新的跨学科归一化方法，基于研究的临界质量。"
+    },
+    "contribution:提供了对研究质量与研究团队数量之间关系的数学建模。": {
+      "id": "contribution:提供了对研究质量与研究团队数量之间关系的数学建模。",
+      "type": "Contribution",
+      "label": "提供了对研究质量与研究团队数量之间关系的数学建模。",
+      "norm_label": "提供了对研究质量与研究团队数量之间关系的数学建模。"
+    },
+    "contribution:证明了归一化后不同学科之间的研究团队质量评值得到了合理的对比。": {
+      "id": "contribution:证明了归一化后不同学科之间的研究团队质量评值得到了合理的对比。",
+      "type": "Contribution",
+      "label": "证明了归一化后不同学科之间的研究团队质量评值得到了合理的对比。",
+      "norm_label": "证明了归一化后不同学科之间的研究团队质量评值得到了合理的对比。"
+    },
+    "paper:2504.09480v1": {
+      "id": "paper:2504.09480v1",
+      "type": "Paper",
+      "label": "Vision-Language Model for Object Detection and Segmentation: A Review and Evaluation",
+      "norm_label": "vision-language model for object detection and segmentation a review and evaluation"
+    },
+    "task:尽管vision-language model vlm 在open-vocabulary ov 对象检测和分割任务中表现出了潜力，但它们在传统视觉任务中的有效性尚未得到评估。": {
+      "id": "task:尽管vision-language model vlm 在open-vocabulary ov 对象检测和分割任务中表现出了潜力，但它们在传统视觉任务中的有效性尚未得到评估。",
+      "type": "Task",
+      "label": "尽管Vision-Language Model (VLM)在Open-Vocabulary (OV)对象检测和分割任务中表现出了潜力，但它们在传统视觉任务中的有效性尚未得到评估。",
+      "norm_label": "尽管vision-language model vlm 在open-vocabulary ov 对象检测和分割任务中表现出了潜力，但它们在传统视觉任务中的有效性尚未得到评估。"
+    },
+    "dataset:封闭集检测 无具体数据集": {
+      "id": "dataset:封闭集检测 无具体数据集",
+      "type": "Dataset",
+      "label": "封闭集检测, 无具体数据集",
+      "norm_label": "封闭集检测 无具体数据集"
+    },
+    "dataset:领域适应 无具体数据集": {
+      "id": "dataset:领域适应 无具体数据集",
+      "type": "Dataset",
+      "label": "领域适应, 无具体数据集",
+      "norm_label": "领域适应 无具体数据集"
+    },
+    "dataset:密集目标 无具体数据集": {
+      "id": "dataset:密集目标 无具体数据集",
+      "type": "Dataset",
+      "label": "密集目标, 无具体数据集",
+      "norm_label": "密集目标 无具体数据集"
+    },
+    "dataset:少量样例分割 无具体数据集": {
+      "id": "dataset:少量样例分割 无具体数据集",
+      "type": "Dataset",
+      "label": "少量样例分割, 无具体数据集",
+      "norm_label": "少量样例分割 无具体数据集"
+    },
+    "dataset:开放世界分割 无具体数据集": {
+      "id": "dataset:开放世界分割 无具体数据集",
+      "type": "Dataset",
+      "label": "开放世界分割, 无具体数据集",
+      "norm_label": "开放世界分割 无具体数据集"
+    },
+    "dataset:小型物体分割 无具体数据集": {
+      "id": "dataset:小型物体分割 无具体数据集",
+      "type": "Dataset",
+      "label": "小型物体分割, 无具体数据集",
+      "norm_label": "小型物体分割 无具体数据集"
+    },
+    "contribution:提供了vlm架构在不同任务中的性能优势和局限性分析。": {
+      "id": "contribution:提供了vlm架构在不同任务中的性能优势和局限性分析。",
+      "type": "Contribution",
+      "label": "提供了VLM架构在不同任务中的性能优势和局限性分析。",
+      "norm_label": "提供了vlm架构在不同任务中的性能优势和局限性分析。"
+    },
+    "contribution:研究了不同微调粒度（零预测、视觉微调、文本提示）对性能的影响。": {
+      "id": "contribution:研究了不同微调粒度（零预测、视觉微调、文本提示）对性能的影响。",
+      "type": "Contribution",
+      "label": "研究了不同微调粒度（零预测、视觉微调、文本提示）对性能的影响。",
+      "norm_label": "研究了不同微调粒度（零预测、视觉微调、文本提示）对性能的影响。"
+    },
+    "contribution:讨论了任务特征、模型架构和训练方法之间的关联问题，为未来vlm设计提供见解。": {
+      "id": "contribution:讨论了任务特征、模型架构和训练方法之间的关联问题，为未来vlm设计提供见解。",
+      "type": "Contribution",
+      "label": "讨论了任务特征、模型架构和训练方法之间的关联问题，为未来VLM设计提供见解。",
+      "norm_label": "讨论了任务特征、模型架构和训练方法之间的关联问题，为未来vlm设计提供见解。"
+    },
+    "paper:2311.18580v2": {
+      "id": "paper:2311.18580v2",
+      "type": "Paper",
+      "label": "FFT: Towards Harmlessness Evaluation and Analysis for LLMs with Factuality, Fairness, Toxicity",
+      "norm_label": "fft towards harmlessness evaluation and analysis for llms with factuality fairness toxicity"
+    },
+    "method:fft": {
+      "id": "method:fft",
+      "type": "Method",
+      "label": "FFT",
+      "norm_label": "fft"
+    },
+    "task:尽管大型语言模型（llms）的应用范围广泛，但它们生成的文本可能带来的潜在危害，如事实错误、偏见和毒性内容，引起了广泛关注。": {
+      "id": "task:尽管大型语言模型（llms）的应用范围广泛，但它们生成的文本可能带来的潜在危害，如事实错误、偏见和毒性内容，引起了广泛关注。",
+      "type": "Task",
+      "label": "尽管大型语言模型（LLMs）的应用范围广泛，但它们生成的文本可能带来的潜在危害，如事实错误、偏见和毒性内容，引起了广泛关注。",
+      "norm_label": "尽管大型语言模型（llms）的应用范围广泛，但它们生成的文本可能带来的潜在危害，如事实错误、偏见和毒性内容，引起了广泛关注。"
+    },
+    "dataset:2116精心设计的实例": {
+      "id": "dataset:2116精心设计的实例",
+      "type": "Dataset",
+      "label": "2116精心设计的实例",
+      "norm_label": "2116精心设计的实例"
+    },
+    "metric:accuracy": {
+      "id": "metric:accuracy",
+      "type": "Metric",
+      "label": "Accuracy",
+      "norm_label": "accuracy"
+    },
+    "metric:coefficient of variation": {
+      "id": "metric:coefficient of variation",
+      "type": "Metric",
+      "label": "Coefficient of Variation",
+      "norm_label": "coefficient of variation"
+    },
+    "metric:utterance-level toxicity": {
+      "id": "metric:utterance-level toxicity",
+      "type": "Metric",
+      "label": "Utterance-Level Toxicity",
+      "norm_label": "utterance-level toxicity"
+    },
+    "metric:context-level toxicity": {
+      "id": "metric:context-level toxicity",
+      "type": "Metric",
+      "label": "Context-Level Toxicity",
+      "norm_label": "context-level toxicity"
+    },
+    "contribution:提出了一种新的评估基准fft，扩展了传统的危害评估维度，提升了llm的无害性理解。": {
+      "id": "contribution:提出了一种新的评估基准fft，扩展了传统的危害评估维度，提升了llm的无害性理解。",
+      "type": "Contribution",
+      "label": "提出了一种新的评估基准FFT，扩展了传统的危害评估维度，提升了LLM的无害性理解。",
+      "norm_label": "提出了一种新的评估基准fft，扩展了传统的危害评估维度，提升了llm的无害性理解。"
+    },
+    "contribution:揭示了llms在参数规模和训练阶段上的差异表现，启发未来的研究。": {
+      "id": "contribution:揭示了llms在参数规模和训练阶段上的差异表现，启发未来的研究。",
+      "type": "Contribution",
+      "label": "揭示了LLMs在参数规模和训练阶段上的差异表现，启发未来的研究。",
+      "norm_label": "揭示了llms在参数规模和训练阶段上的差异表现，启发未来的研究。"
+    },
+    "contribution:提供了一系列有趣的发现，揭示了llms在不同生物组中的潜在偏见": {
+      "id": "contribution:提供了一系列有趣的发现，揭示了llms在不同生物组中的潜在偏见",
+      "type": "Contribution",
+      "label": "提供了一系列有趣的发现，揭示了LLMs在不同生物组中的潜在偏见",
+      "norm_label": "提供了一系列有趣的发现，揭示了llms在不同生物组中的潜在偏见"
+    },
+    "paper:2511.20417v2": {
+      "id": "paper:2511.20417v2",
+      "type": "Paper",
+      "label": "Comparative evaluation of future collider options",
+      "norm_label": "comparative evaluation of future collider options"
+    },
+    "task:尽管已计划于2041年完成hl-lhc项目，cern需在2040年代中期启动新的大型设施。为了确定优先级，成立了一个工作组对future circular collider fcc 及其替代方案进行": {
+      "id": "task:尽管已计划于2041年完成hl-lhc项目，cern需在2040年代中期启动新的大型设施。为了确定优先级，成立了一个工作组对future circular collider fcc 及其替代方案进行",
+      "type": "Task",
+      "label": "尽管已计划于2041年完成HL-LHC项目，CERN需在2040年代中期启动新的大型设施。为了确定优先级，成立了一个工作组对Future Circular Collider (FCC)及其替代方案进行",
+      "norm_label": "尽管已计划于2041年完成hl-lhc项目，cern需在2040年代中期启动新的大型设施。为了确定优先级，成立了一个工作组对future circular collider fcc 及其替代方案进行"
+    },
+    "contribution:确立了一个评价框架，比较了未来发展加速器项目的关键参数。": {
+      "id": "contribution:确立了一个评价框架，比较了未来发展加速器项目的关键参数。",
+      "type": "Contribution",
+      "label": "确立了一个评价框架，比较了未来发展加速器项目的关键参数。",
+      "norm_label": "确立了一个评价框架，比较了未来发展加速器项目的关键参数。"
+    },
+    "contribution:提供了关于fcc及其替代方案的系统评价。": {
+      "id": "contribution:提供了关于fcc及其替代方案的系统评价。",
+      "type": "Contribution",
+      "label": "提供了关于FCC及其替代方案的系统评价。",
+      "norm_label": "提供了关于fcc及其替代方案的系统评价。"
+    },
+    "contribution:概述了与相似时间表的国际加速器项目，如中国的cepc和日本的ilc的现状和前景。": {
+      "id": "contribution:概述了与相似时间表的国际加速器项目，如中国的cepc和日本的ilc的现状和前景。",
+      "type": "Contribution",
+      "label": "概述了与相似时间表的国际加速器项目，如中国的CEPC和日本的ILC的现状和前景。",
+      "norm_label": "概述了与相似时间表的国际加速器项目，如中国的cepc和日本的ilc的现状和前景。"
+    },
+    "paper:2110.11156v3": {
+      "id": "paper:2110.11156v3",
+      "type": "Paper",
+      "label": "DMS, AE, DAA: methods and applications of adaptive time series model selection, ensemble, and financial evaluation",
+      "norm_label": "dms ae daa methods and applications of adaptive time series model selection ensemble and financial evaluation"
+    },
+    "method:dynamic model selection dms adaptive ensemble ae dynamic asset allocation daa": {
+      "id": "method:dynamic model selection dms adaptive ensemble ae dynamic asset allocation daa",
+      "type": "Method",
+      "label": "Dynamic Model Selection (DMS), Adaptive Ensemble (AE), Dynamic Asset Allocation (DAA)",
+      "norm_label": "dynamic model selection dms adaptive ensemble ae dynamic asset allocation daa"
+    },
+    "task:为了处理金融时间序列中的模型选择、集成和情境评估问题。": {
+      "id": "task:为了处理金融时间序列中的模型选择、集成和情境评估问题。",
+      "type": "Task",
+      "label": "为了处理金融时间序列中的模型选择、集成和情境评估问题。",
+      "norm_label": "为了处理金融时间序列中的模型选择、集成和情境评估问题。"
+    },
+    "dataset:vix index": {
+      "id": "dataset:vix index",
+      "type": "Dataset",
+      "label": "VIX index",
+      "norm_label": "vix index"
+    },
+    "dataset:yield curves": {
+      "id": "dataset:yield curves",
+      "type": "Dataset",
+      "label": "Yield curves",
+      "norm_label": "yield curves"
+    },
+    "dataset:four key indices in the us market": {
+      "id": "dataset:four key indices in the us market",
+      "type": "Dataset",
+      "label": "Four key indices in the US market",
+      "norm_label": "four key indices in the us market"
+    },
+    "contribution:提出了三种自适应时间序列学习方法：dms、ae和daa。": {
+      "id": "contribution:提出了三种自适应时间序列学习方法：dms、ae和daa。",
+      "type": "Contribution",
+      "label": "提出了三种自适应时间序列学习方法：DMS、AE和DAA。",
+      "norm_label": "提出了三种自适应时间序列学习方法：dms、ae和daa。"
+    },
+    "contribution:实证研究表明这些策略在测试期间显著优于长期基准表现。": {
+      "id": "contribution:实证研究表明这些策略在测试期间显著优于长期基准表现。",
+      "type": "Contribution",
+      "label": "实证研究表明这些策略在测试期间显著优于长期基准表现。",
+      "norm_label": "实证研究表明这些策略在测试期间显著优于长期基准表现。"
+    },
+    "contribution:方法的应用包括全自动投资组合和个人动态对冲策略。": {
+      "id": "contribution:方法的应用包括全自动投资组合和个人动态对冲策略。",
+      "type": "Contribution",
+      "label": "方法的应用包括全自动投资组合和个人动态对冲策略。",
+      "norm_label": "方法的应用包括全自动投资组合和个人动态对冲策略。"
+    },
+    "concept:研究质量与研究团队数量之间的关系": {
+      "id": "concept:研究质量与研究团队数量之间的关系",
+      "type": "Concept",
+      "label": "研究质量与研究团队数量之间的关系",
+      "norm_label": "研究质量与研究团队数量之间的关系",
+      "description": ""
+    },
+    "concept:临界质量": {
+      "id": "concept:临界质量",
+      "type": "Concept",
+      "label": "临界质量",
+      "norm_label": "临界质量",
+      "description": ""
+    },
+    "method:vision-language model": {
+      "id": "method:vision-language model",
+      "type": "Method",
+      "label": "Vision-Language Model",
+      "norm_label": "vision-language model",
+      "description": ""
+    },
+    "task:closed-set detection": {
+      "id": "task:closed-set detection",
+      "type": "Task",
+      "label": "closed-set detection",
+      "norm_label": "closed-set detection",
+      "description": ""
+    },
+    "task:domain adaptation": {
+      "id": "task:domain adaptation",
+      "type": "Task",
+      "label": "domain adaptation",
+      "norm_label": "domain adaptation",
+      "description": ""
+    },
+    "task:crowded objects detection": {
+      "id": "task:crowded objects detection",
+      "type": "Task",
+      "label": "crowded objects detection",
+      "norm_label": "crowded objects detection",
+      "description": ""
+    },
+    "task:few-shot segmentation": {
+      "id": "task:few-shot segmentation",
+      "type": "Task",
+      "label": "few-shot segmentation",
+      "norm_label": "few-shot segmentation",
+      "description": ""
+    },
+    "task:open-world segmentation": {
+      "id": "task:open-world segmentation",
+      "type": "Task",
+      "label": "open-world segmentation",
+      "norm_label": "open-world segmentation",
+      "description": ""
+    },
+    "task:small object segmentation": {
+      "id": "task:small object segmentation",
+      "type": "Task",
+      "label": "small object segmentation",
+      "norm_label": "small object segmentation",
+      "description": ""
+    },
+    "concept:llms": {
+      "id": "concept:llms",
+      "type": "Concept",
+      "label": "LLMs",
+      "norm_label": "llms",
+      "description": ""
+    },
+    "concept:事实性": {
+      "id": "concept:事实性",
+      "type": "Concept",
+      "label": "事实性",
+      "norm_label": "事实性",
+      "description": ""
+    },
+    "concept:公平性": {
+      "id": "concept:公平性",
+      "type": "Concept",
+      "label": "公平性",
+      "norm_label": "公平性",
+      "description": ""
+    },
+    "concept:毒性": {
+      "id": "concept:毒性",
+      "type": "Concept",
+      "label": "毒性",
+      "norm_label": "毒性",
+      "description": ""
+    },
+    "method:future colliders comparative evaluation": {
+      "id": "method:future colliders comparative evaluation",
+      "type": "Method",
+      "label": "Future Colliders Comparative Evaluation",
+      "norm_label": "future colliders comparative evaluation",
+      "description": ""
+    },
+    "model:fcc": {
+      "id": "model:fcc",
+      "type": "Model",
+      "label": "FCC",
+      "norm_label": "fcc",
+      "description": ""
+    },
+    "dataset:cepc": {
+      "id": "dataset:cepc",
+      "type": "Dataset",
+      "label": "CEPC",
+      "norm_label": "cepc",
+      "description": ""
+    },
+    "dataset:ilc": {
+      "id": "dataset:ilc",
+      "type": "Dataset",
+      "label": "ILC",
+      "norm_label": "ilc",
+      "description": ""
+    },
+    "method:dynamic model selection dms": {
+      "id": "method:dynamic model selection dms",
+      "type": "Method",
+      "label": "Dynamic Model Selection (DMS)",
+      "norm_label": "dynamic model selection dms",
+      "description": ""
+    },
+    "method:adaptive ensemble ae": {
+      "id": "method:adaptive ensemble ae",
+      "type": "Method",
+      "label": "Adaptive Ensemble (AE)",
+      "norm_label": "adaptive ensemble ae",
+      "description": ""
+    },
+    "method:dynamic asset allocation daa": {
+      "id": "method:dynamic asset allocation daa",
+      "type": "Method",
+      "label": "Dynamic Asset Allocation (DAA)",
+      "norm_label": "dynamic asset allocation daa",
+      "description": ""
+    }
+  },
+  "edges": [
+    {
+      "source": "paper:1006.3863v2",
+      "target": "method:数学模型",
+      "type": "proposes",
+      "weight": 1.0
+    },
+    {
+      "source": "paper:1006.3863v2",
+      "target": "task:尽管uk的rae使用专家评估在特定学科内进行研究团队之间的比较，但它无法直接比较不同学科之间的研究影响力，导致了不同学科之间的相对强弱比较存在缺陷。",
+      "type": "applied_to",
+      "weight": 0.8
+    },
+    {
+      "source": "method:数学模型",
+      "target": "task:尽管uk的rae使用专家评估在特定学科内进行研究团队之间的比较，但它无法直接比较不同学科之间的研究影响力，导致了不同学科之间的相对强弱比较存在缺陷。",
+      "type": "solves",
+      "weight": 0.95
+    },
+    {
+      "source": "paper:1006.3863v2",
+      "target": "dataset:rae 2008的数据",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "method:数学模型",
+      "target": "dataset:rae 2008的数据",
+      "type": "evaluates_on",
+      "weight": 0.9
+    },
+    {
+      "source": "method:数学模型",
+      "target": "metric:质量得分",
+      "type": "achieves",
+      "weight": 0.85
+    },
+    {
+      "source": "paper:1006.3863v2",
+      "target": "contribution:提出了一个新的跨学科归一化方法，基于研究的临界质量。",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "method:数学模型",
+      "target": "contribution:提出了一个新的跨学科归一化方法，基于研究的临界质量。",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:1006.3863v2",
+      "target": "contribution:提供了对研究质量与研究团队数量之间关系的数学建模。",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "method:数学模型",
+      "target": "contribution:提供了对研究质量与研究团队数量之间关系的数学建模。",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:1006.3863v2",
+      "target": "contribution:证明了归一化后不同学科之间的研究团队质量评值得到了合理的对比。",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "method:数学模型",
+      "target": "contribution:证明了归一化后不同学科之间的研究团队质量评值得到了合理的对比。",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:2504.09480v1",
+      "target": "task:尽管vision-language model vlm 在open-vocabulary ov 对象检测和分割任务中表现出了潜力，但它们在传统视觉任务中的有效性尚未得到评估。",
+      "type": "applied_to",
+      "weight": 0.8
+    },
+    {
+      "source": "paper:2504.09480v1",
+      "target": "dataset:封闭集检测 无具体数据集",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "paper:2504.09480v1",
+      "target": "dataset:领域适应 无具体数据集",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "paper:2504.09480v1",
+      "target": "dataset:密集目标 无具体数据集",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "paper:2504.09480v1",
+      "target": "dataset:少量样例分割 无具体数据集",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "paper:2504.09480v1",
+      "target": "dataset:开放世界分割 无具体数据集",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "paper:2504.09480v1",
+      "target": "dataset:小型物体分割 无具体数据集",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "paper:2504.09480v1",
+      "target": "contribution:提供了vlm架构在不同任务中的性能优势和局限性分析。",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "paper:2504.09480v1",
+      "target": "contribution:研究了不同微调粒度（零预测、视觉微调、文本提示）对性能的影响。",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "paper:2504.09480v1",
+      "target": "contribution:讨论了任务特征、模型架构和训练方法之间的关联问题，为未来vlm设计提供见解。",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "paper:2311.18580v2",
+      "target": "method:fft",
+      "type": "proposes",
+      "weight": 1.0
+    },
+    {
+      "source": "paper:2311.18580v2",
+      "target": "task:尽管大型语言模型（llms）的应用范围广泛，但它们生成的文本可能带来的潜在危害，如事实错误、偏见和毒性内容，引起了广泛关注。",
+      "type": "applied_to",
+      "weight": 0.8
+    },
+    {
+      "source": "method:fft",
+      "target": "task:尽管大型语言模型（llms）的应用范围广泛，但它们生成的文本可能带来的潜在危害，如事实错误、偏见和毒性内容，引起了广泛关注。",
+      "type": "solves",
+      "weight": 0.95
+    },
+    {
+      "source": "paper:2311.18580v2",
+      "target": "dataset:2116精心设计的实例",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "method:fft",
+      "target": "dataset:2116精心设计的实例",
+      "type": "evaluates_on",
+      "weight": 0.9
+    },
+    {
+      "source": "method:fft",
+      "target": "metric:accuracy",
+      "type": "achieves",
+      "weight": 0.85
+    },
+    {
+      "source": "method:fft",
+      "target": "metric:coefficient of variation",
+      "type": "achieves",
+      "weight": 0.85
+    },
+    {
+      "source": "method:fft",
+      "target": "metric:utterance-level toxicity",
+      "type": "achieves",
+      "weight": 0.85
+    },
+    {
+      "source": "method:fft",
+      "target": "metric:context-level toxicity",
+      "type": "achieves",
+      "weight": 0.85
+    },
+    {
+      "source": "paper:2311.18580v2",
+      "target": "contribution:提出了一种新的评估基准fft，扩展了传统的危害评估维度，提升了llm的无害性理解。",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "method:fft",
+      "target": "contribution:提出了一种新的评估基准fft，扩展了传统的危害评估维度，提升了llm的无害性理解。",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:2311.18580v2",
+      "target": "contribution:揭示了llms在参数规模和训练阶段上的差异表现，启发未来的研究。",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "method:fft",
+      "target": "contribution:揭示了llms在参数规模和训练阶段上的差异表现，启发未来的研究。",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:2311.18580v2",
+      "target": "contribution:提供了一系列有趣的发现，揭示了llms在不同生物组中的潜在偏见",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "method:fft",
+      "target": "contribution:提供了一系列有趣的发现，揭示了llms在不同生物组中的潜在偏见",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:2511.20417v2",
+      "target": "task:尽管已计划于2041年完成hl-lhc项目，cern需在2040年代中期启动新的大型设施。为了确定优先级，成立了一个工作组对future circular collider fcc 及其替代方案进行",
+      "type": "applied_to",
+      "weight": 0.8
+    },
+    {
+      "source": "paper:2511.20417v2",
+      "target": "contribution:确立了一个评价框架，比较了未来发展加速器项目的关键参数。",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "paper:2511.20417v2",
+      "target": "contribution:提供了关于fcc及其替代方案的系统评价。",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "paper:2511.20417v2",
+      "target": "contribution:概述了与相似时间表的国际加速器项目，如中国的cepc和日本的ilc的现状和前景。",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "paper:2110.11156v3",
+      "target": "method:dynamic model selection dms adaptive ensemble ae dynamic asset allocation daa",
+      "type": "proposes",
+      "weight": 1.0
+    },
+    {
+      "source": "paper:2110.11156v3",
+      "target": "task:为了处理金融时间序列中的模型选择、集成和情境评估问题。",
+      "type": "applied_to",
+      "weight": 0.8
+    },
+    {
+      "source": "method:dynamic model selection dms adaptive ensemble ae dynamic asset allocation daa",
+      "target": "task:为了处理金融时间序列中的模型选择、集成和情境评估问题。",
+      "type": "solves",
+      "weight": 0.95
+    },
+    {
+      "source": "paper:2110.11156v3",
+      "target": "dataset:vix index",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "method:dynamic model selection dms adaptive ensemble ae dynamic asset allocation daa",
+      "target": "dataset:vix index",
+      "type": "evaluates_on",
+      "weight": 0.9
+    },
+    {
+      "source": "paper:2110.11156v3",
+      "target": "dataset:yield curves",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "method:dynamic model selection dms adaptive ensemble ae dynamic asset allocation daa",
+      "target": "dataset:yield curves",
+      "type": "evaluates_on",
+      "weight": 0.9
+    },
+    {
+      "source": "paper:2110.11156v3",
+      "target": "dataset:four key indices in the us market",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "method:dynamic model selection dms adaptive ensemble ae dynamic asset allocation daa",
+      "target": "dataset:four key indices in the us market",
+      "type": "evaluates_on",
+      "weight": 0.9
+    },
+    {
+      "source": "paper:2110.11156v3",
+      "target": "contribution:提出了三种自适应时间序列学习方法：dms、ae和daa。",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "method:dynamic model selection dms adaptive ensemble ae dynamic asset allocation daa",
+      "target": "contribution:提出了三种自适应时间序列学习方法：dms、ae和daa。",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:2110.11156v3",
+      "target": "contribution:实证研究表明这些策略在测试期间显著优于长期基准表现。",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "method:dynamic model selection dms adaptive ensemble ae dynamic asset allocation daa",
+      "target": "contribution:实证研究表明这些策略在测试期间显著优于长期基准表现。",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:2110.11156v3",
+      "target": "contribution:方法的应用包括全自动投资组合和个人动态对冲策略。",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "method:dynamic model selection dms adaptive ensemble ae dynamic asset allocation daa",
+      "target": "contribution:方法的应用包括全自动投资组合和个人动态对冲策略。",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "method:数学模型",
+      "target": "concept:研究质量与研究团队数量之间的关系",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "method:数学模型",
+      "target": "concept:临界质量",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "method:数学模型",
+      "target": "metric:质量得分",
+      "type": "evaluates_on",
+      "weight": 0.9
+    },
+    {
+      "source": "method:数学模型",
+      "target": "dataset:rae 2008的数据",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "method:vision-language model",
+      "target": "task:closed-set detection",
+      "type": "evaluates_on",
+      "weight": 0.9
+    },
+    {
+      "source": "method:vision-language model",
+      "target": "task:domain adaptation",
+      "type": "evaluates_on",
+      "weight": 0.9
+    },
+    {
+      "source": "method:vision-language model",
+      "target": "task:crowded objects detection",
+      "type": "evaluates_on",
+      "weight": 0.9
+    },
+    {
+      "source": "method:vision-language model",
+      "target": "task:few-shot segmentation",
+      "type": "evaluates_on",
+      "weight": 0.9
+    },
+    {
+      "source": "method:vision-language model",
+      "target": "task:open-world segmentation",
+      "type": "evaluates_on",
+      "weight": 0.9
+    },
+    {
+      "source": "method:vision-language model",
+      "target": "task:small object segmentation",
+      "type": "evaluates_on",
+      "weight": 0.9
+    },
+    {
+      "source": "method:fft",
+      "target": "dataset:2116精心设计的实例",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "method:fft",
+      "target": "concept:llms",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "method:fft",
+      "target": "concept:事实性",
+      "type": "improves",
+      "weight": 0.95
+    },
+    {
+      "source": "method:fft",
+      "target": "concept:公平性",
+      "type": "improves",
+      "weight": 0.95
+    },
+    {
+      "source": "method:fft",
+      "target": "concept:毒性",
+      "type": "improves",
+      "weight": 0.95
+    },
+    {
+      "source": "method:future colliders comparative evaluation",
+      "target": "model:fcc",
+      "type": "evaluates_on",
+      "weight": 0.9
+    },
+    {
+      "source": "method:future colliders comparative evaluation",
+      "target": "dataset:cepc",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "method:future colliders comparative evaluation",
+      "target": "dataset:ilc",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "method:dynamic model selection dms",
+      "target": "dataset:four key indices in the us market",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "method:adaptive ensemble ae",
+      "target": "dataset:four key indices in the us market",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "method:dynamic asset allocation daa",
+      "target": "dataset:four key indices in the us market",
+      "type": "related_to",
+      "weight": 0.5
+    }
+  ],
+  "paper_entities": {
+    "1006.3863v2": [
+      "paper:1006.3863v2",
+      "method:数学模型",
+      "task:尽管uk的rae使用专家评估在特定学科内进行研究团队之间的比较，但它无法直接比较不同学科之间的研究影响力，导致了不同学科之间的相对强弱比较存在缺陷。",
+      "dataset:rae 2008的数据",
+      "metric:质量得分",
+      "contribution:提出了一个新的跨学科归一化方法，基于研究的临界质量。",
+      "contribution:提供了对研究质量与研究团队数量之间关系的数学建模。",
+      "contribution:证明了归一化后不同学科之间的研究团队质量评值得到了合理的对比。",
+      "concept:研究质量与研究团队数量之间的关系",
+      "concept:临界质量"
+    ],
+    "2504.09480v1": [
+      "paper:2504.09480v1",
+      "task:尽管vision-language model vlm 在open-vocabulary ov 对象检测和分割任务中表现出了潜力，但它们在传统视觉任务中的有效性尚未得到评估。",
+      "dataset:封闭集检测 无具体数据集",
+      "dataset:领域适应 无具体数据集",
+      "dataset:密集目标 无具体数据集",
+      "dataset:少量样例分割 无具体数据集",
+      "dataset:开放世界分割 无具体数据集",
+      "dataset:小型物体分割 无具体数据集",
+      "contribution:提供了vlm架构在不同任务中的性能优势和局限性分析。",
+      "contribution:研究了不同微调粒度（零预测、视觉微调、文本提示）对性能的影响。",
+      "contribution:讨论了任务特征、模型架构和训练方法之间的关联问题，为未来vlm设计提供见解。",
+      "method:vision-language model",
+      "task:closed-set detection",
+      "task:domain adaptation",
+      "task:crowded objects detection",
+      "task:few-shot segmentation",
+      "task:open-world segmentation",
+      "task:small object segmentation"
+    ],
+    "2311.18580v2": [
+      "paper:2311.18580v2",
+      "method:fft",
+      "task:尽管大型语言模型（llms）的应用范围广泛，但它们生成的文本可能带来的潜在危害，如事实错误、偏见和毒性内容，引起了广泛关注。",
+      "dataset:2116精心设计的实例",
+      "metric:accuracy",
+      "metric:coefficient of variation",
+      "metric:utterance-level toxicity",
+      "metric:context-level toxicity",
+      "contribution:提出了一种新的评估基准fft，扩展了传统的危害评估维度，提升了llm的无害性理解。",
+      "contribution:揭示了llms在参数规模和训练阶段上的差异表现，启发未来的研究。",
+      "contribution:提供了一系列有趣的发现，揭示了llms在不同生物组中的潜在偏见",
+      "concept:llms",
+      "concept:事实性",
+      "concept:公平性",
+      "concept:毒性"
+    ],
+    "2511.20417v2": [
+      "paper:2511.20417v2",
+      "task:尽管已计划于2041年完成hl-lhc项目，cern需在2040年代中期启动新的大型设施。为了确定优先级，成立了一个工作组对future circular collider fcc 及其替代方案进行",
+      "contribution:确立了一个评价框架，比较了未来发展加速器项目的关键参数。",
+      "contribution:提供了关于fcc及其替代方案的系统评价。",
+      "contribution:概述了与相似时间表的国际加速器项目，如中国的cepc和日本的ilc的现状和前景。",
+      "method:future colliders comparative evaluation",
+      "model:fcc",
+      "dataset:cepc",
+      "dataset:ilc"
+    ],
+    "2110.11156v3": [
+      "paper:2110.11156v3",
+      "method:dynamic model selection dms adaptive ensemble ae dynamic asset allocation daa",
+      "task:为了处理金融时间序列中的模型选择、集成和情境评估问题。",
+      "dataset:vix index",
+      "dataset:yield curves",
+      "dataset:four key indices in the us market",
+      "contribution:提出了三种自适应时间序列学习方法：dms、ae和daa。",
+      "contribution:实证研究表明这些策略在测试期间显著优于长期基准表现。",
+      "contribution:方法的应用包括全自动投资组合和个人动态对冲策略。",
+      "method:dynamic model selection dms",
+      "method:adaptive ensemble ae",
+      "method:dynamic asset allocation daa"
+    ]
+  },
+  "entity_aliases": {
+    "normalization of peer-evaluation measures of group research quality across academic disciplines": "paper:1006.3863v2",
+    "数学模型": "method:数学模型",
+    "尽管uk的rae使用专家评估在特定学科内进行研究团队之间的比较，但它无法直接比较不同学科之间的研究影响力，导致了不同学科之间的相对强弱比较存在缺陷。": "task:尽管uk的rae使用专家评估在特定学科内进行研究团队之间的比较，但它无法直接比较不同学科之间的研究影响力，导致了不同学科之间的相对强弱比较存在缺陷。",
+    "rae 2008的数据": "dataset:rae 2008的数据",
+    "质量得分": "metric:质量得分",
+    "提出了一个新的跨学科归一化方法，基于研究的临界质量。": "contribution:提出了一个新的跨学科归一化方法，基于研究的临界质量。",
+    "提供了对研究质量与研究团队数量之间关系的数学建模。": "contribution:提供了对研究质量与研究团队数量之间关系的数学建模。",
+    "证明了归一化后不同学科之间的研究团队质量评值得到了合理的对比。": "contribution:证明了归一化后不同学科之间的研究团队质量评值得到了合理的对比。",
+    "vision-language model for object detection and segmentation a review and evaluation": "paper:2504.09480v1",
+    "尽管vision-language model vlm 在open-vocabulary ov 对象检测和分割任务中表现出了潜力，但它们在传统视觉任务中的有效性尚未得到评估。": "task:尽管vision-language model vlm 在open-vocabulary ov 对象检测和分割任务中表现出了潜力，但它们在传统视觉任务中的有效性尚未得到评估。",
+    "封闭集检测 无具体数据集": "dataset:封闭集检测 无具体数据集",
+    "领域适应 无具体数据集": "dataset:领域适应 无具体数据集",
+    "密集目标 无具体数据集": "dataset:密集目标 无具体数据集",
+    "少量样例分割 无具体数据集": "dataset:少量样例分割 无具体数据集",
+    "开放世界分割 无具体数据集": "dataset:开放世界分割 无具体数据集",
+    "小型物体分割 无具体数据集": "dataset:小型物体分割 无具体数据集",
+    "提供了vlm架构在不同任务中的性能优势和局限性分析。": "contribution:提供了vlm架构在不同任务中的性能优势和局限性分析。",
+    "研究了不同微调粒度（零预测、视觉微调、文本提示）对性能的影响。": "contribution:研究了不同微调粒度（零预测、视觉微调、文本提示）对性能的影响。",
+    "讨论了任务特征、模型架构和训练方法之间的关联问题，为未来vlm设计提供见解。": "contribution:讨论了任务特征、模型架构和训练方法之间的关联问题，为未来vlm设计提供见解。",
+    "fft towards harmlessness evaluation and analysis for llms with factuality fairness toxicity": "paper:2311.18580v2",
+    "fft": "method:fft",
+    "尽管大型语言模型（llms）的应用范围广泛，但它们生成的文本可能带来的潜在危害，如事实错误、偏见和毒性内容，引起了广泛关注。": "task:尽管大型语言模型（llms）的应用范围广泛，但它们生成的文本可能带来的潜在危害，如事实错误、偏见和毒性内容，引起了广泛关注。",
+    "2116精心设计的实例": "dataset:2116精心设计的实例",
+    "accuracy": "metric:accuracy",
+    "coefficient of variation": "metric:coefficient of variation",
+    "utterance-level toxicity": "metric:utterance-level toxicity",
+    "context-level toxicity": "metric:context-level toxicity",
+    "提出了一种新的评估基准fft，扩展了传统的危害评估维度，提升了llm的无害性理解。": "contribution:提出了一种新的评估基准fft，扩展了传统的危害评估维度，提升了llm的无害性理解。",
+    "揭示了llms在参数规模和训练阶段上的差异表现，启发未来的研究。": "contribution:揭示了llms在参数规模和训练阶段上的差异表现，启发未来的研究。",
+    "提供了一系列有趣的发现，揭示了llms在不同生物组中的潜在偏见": "contribution:提供了一系列有趣的发现，揭示了llms在不同生物组中的潜在偏见",
+    "comparative evaluation of future collider options": "paper:2511.20417v2",
+    "尽管已计划于2041年完成hl-lhc项目，cern需在2040年代中期启动新的大型设施。为了确定优先级，成立了一个工作组对future circular collider fcc 及其替代方案进行": "task:尽管已计划于2041年完成hl-lhc项目，cern需在2040年代中期启动新的大型设施。为了确定优先级，成立了一个工作组对future circular collider fcc 及其替代方案进行",
+    "确立了一个评价框架，比较了未来发展加速器项目的关键参数。": "contribution:确立了一个评价框架，比较了未来发展加速器项目的关键参数。",
+    "提供了关于fcc及其替代方案的系统评价。": "contribution:提供了关于fcc及其替代方案的系统评价。",
+    "概述了与相似时间表的国际加速器项目，如中国的cepc和日本的ilc的现状和前景。": "contribution:概述了与相似时间表的国际加速器项目，如中国的cepc和日本的ilc的现状和前景。",
+    "dms ae daa methods and applications of adaptive time series model selection ensemble and financial evaluation": "paper:2110.11156v3",
+    "dynamic model selection dms adaptive ensemble ae dynamic asset allocation daa": "method:dynamic model selection dms adaptive ensemble ae dynamic asset allocation daa",
+    "为了处理金融时间序列中的模型选择、集成和情境评估问题。": "task:为了处理金融时间序列中的模型选择、集成和情境评估问题。",
+    "vix index": "dataset:vix index",
+    "yield curves": "dataset:yield curves",
+    "four key indices in the us market": "dataset:four key indices in the us market",
+    "提出了三种自适应时间序列学习方法：dms、ae和daa。": "contribution:提出了三种自适应时间序列学习方法：dms、ae和daa。",
+    "实证研究表明这些策略在测试期间显著优于长期基准表现。": "contribution:实证研究表明这些策略在测试期间显著优于长期基准表现。",
+    "方法的应用包括全自动投资组合和个人动态对冲策略。": "contribution:方法的应用包括全自动投资组合和个人动态对冲策略。",
+    "研究质量与研究团队数量之间的关系": "concept:研究质量与研究团队数量之间的关系",
+    "临界质量": "concept:临界质量",
+    "vision-language model": "method:vision-language model",
+    "closed-set detection": "task:closed-set detection",
+    "domain adaptation": "task:domain adaptation",
+    "crowded objects detection": "task:crowded objects detection",
+    "few-shot segmentation": "task:few-shot segmentation",
+    "open-world segmentation": "task:open-world segmentation",
+    "small object segmentation": "task:small object segmentation",
+    "llms": "concept:llms",
+    "large language models": "concept:llms",
+    "事实性": "concept:事实性",
+    "公平性": "concept:公平性",
+    "毒性": "concept:毒性",
+    "future colliders comparative evaluation": "method:future colliders comparative evaluation",
+    "fcc": "model:fcc",
+    "cepc": "dataset:cepc",
+    "ilc": "dataset:ilc",
+    "dynamic model selection dms": "method:dynamic model selection dms",
+    "adaptive ensemble ae": "method:adaptive ensemble ae",
+    "dynamic asset allocation daa": "method:dynamic asset allocation daa"
+  },
+  "communities": {
+    "0": {
+      "nodes": [
+        "paper:1006.3863v2",
+        "contribution:提出了一个新的跨学科归一化方法，基于研究的临界质量。",
+        "contribution:提供了对研究质量与研究团队数量之间关系的数学建模。",
+        "contribution:证明了归一化后不同学科之间的研究团队质量评值得到了合理的对比。"
+      ],
+      "key_entities": [
+        "Normalization of peer-evaluation measures of group research quality across academic disciplines",
+        "提出了一个新的跨学科归一化方法，基于研究的临界质量。",
+        "提供了对研究质量与研究团队数量之间关系的数学建模。",
+        "证明了归一化后不同学科之间的研究团队质量评值得到了合理的对比。"
+      ],
+      "key_papers": [
+        "Normalization of peer-evaluation measures of group research quality across academic disciplines"
+      ],
+      "dominant_types": [
+        "Contribution",
+        "Paper"
+      ],
+      "semantic_tag": "Research Contributions Cluster",
+      "summary": "",
+      "community_name": "Research Contributions Cluster"
+    },
+    "1": {
+      "nodes": [
+        "method:数学模型",
+        "task:尽管uk的rae使用专家评估在特定学科内进行研究团队之间的比较，但它无法直接比较不同学科之间的研究影响力，导致了不同学科之间的相对强弱比较存在缺陷。",
+        "dataset:rae 2008的数据",
+        "metric:质量得分",
+        "concept:研究质量与研究团队数量之间的关系",
+        "concept:临界质量"
+      ],
+      "key_entities": [
+        "数学模型",
+        "尽管UK的RAE使用专家评估在特定学科内进行研究团队之间的比较，但它无法直接比较不同学科之间的研究影响力，导致了不同学科之间的相对强弱比较存在缺陷。",
+        "RAE 2008的数据",
+        "质量得分",
+        "研究质量与研究团队数量之间的关系",
+        "临界质量"
+      ],
+      "key_papers": [],
+      "dominant_types": [
+        "Concept",
+        "Method",
+        "Task"
+      ],
+      "semantic_tag": "Research Topic Cluster",
+      "summary": "",
+      "community_name": "Research Topic Cluster"
+    },
+    "2": {
+      "nodes": [
+        "paper:2504.09480v1",
+        "task:尽管vision-language model vlm 在open-vocabulary ov 对象检测和分割任务中表现出了潜力，但它们在传统视觉任务中的有效性尚未得到评估。",
+        "dataset:封闭集检测 无具体数据集",
+        "dataset:领域适应 无具体数据集",
+        "dataset:密集目标 无具体数据集",
+        "dataset:少量样例分割 无具体数据集",
+        "dataset:开放世界分割 无具体数据集",
+        "dataset:小型物体分割 无具体数据集",
+        "contribution:提供了vlm架构在不同任务中的性能优势和局限性分析。",
+        "contribution:研究了不同微调粒度（零预测、视觉微调、文本提示）对性能的影响。",
+        "contribution:讨论了任务特征、模型架构和训练方法之间的关联问题，为未来vlm设计提供见解。"
+      ],
+      "key_entities": [
+        "Vision-Language Model for Object Detection and Segmentation: A Review and Evaluation",
+        "尽管Vision-Language Model (VLM)在Open-Vocabulary (OV)对象检测和分割任务中表现出了潜力，但它们在传统视觉任务中的有效性尚未得到评估。",
+        "封闭集检测, 无具体数据集",
+        "领域适应, 无具体数据集",
+        "密集目标, 无具体数据集",
+        "少量样例分割, 无具体数据集",
+        "开放世界分割, 无具体数据集",
+        "小型物体分割, 无具体数据集",
+        "提供了VLM架构在不同任务中的性能优势和局限性分析。",
+        "研究了不同微调粒度（零预测、视觉微调、文本提示）对性能的影响。",
+        "讨论了任务特征、模型架构和训练方法之间的关联问题，为未来VLM设计提供见解。"
+      ],
+      "key_papers": [
+        "Vision-Language Model for Object Detection and Segmentation: A Review and Evaluation"
+      ],
+      "dominant_types": [
+        "Dataset",
+        "Contribution",
+        "Paper"
+      ],
+      "semantic_tag": "Benchmark & Dataset Cluster",
+      "summary": "",
+      "community_name": "Benchmark & Dataset Cluster"
+    },
+    "3": {
+      "nodes": [
+        "paper:2311.18580v2",
+        "task:尽管大型语言模型（llms）的应用范围广泛，但它们生成的文本可能带来的潜在危害，如事实错误、偏见和毒性内容，引起了广泛关注。",
+        "contribution:提出了一种新的评估基准fft，扩展了传统的危害评估维度，提升了llm的无害性理解。",
+        "contribution:揭示了llms在参数规模和训练阶段上的差异表现，启发未来的研究。",
+        "contribution:提供了一系列有趣的发现，揭示了llms在不同生物组中的潜在偏见"
+      ],
+      "key_entities": [
+        "FFT: Towards Harmlessness Evaluation and Analysis for LLMs with Factuality, Fairness, Toxicity",
+        "尽管大型语言模型（LLMs）的应用范围广泛，但它们生成的文本可能带来的潜在危害，如事实错误、偏见和毒性内容，引起了广泛关注。",
+        "提出了一种新的评估基准FFT，扩展了传统的危害评估维度，提升了LLM的无害性理解。",
+        "揭示了LLMs在参数规模和训练阶段上的差异表现，启发未来的研究。",
+        "提供了一系列有趣的发现，揭示了LLMs在不同生物组中的潜在偏见"
+      ],
+      "key_papers": [
+        "FFT: Towards Harmlessness Evaluation and Analysis for LLMs with Factuality, Fairness, Toxicity"
+      ],
+      "dominant_types": [
+        "Contribution",
+        "Paper",
+        "Task"
+      ],
+      "semantic_tag": "Research Contributions Cluster",
+      "summary": "",
+      "community_name": "Research Contributions Cluster"
+    },
+    "4": {
+      "nodes": [
+        "method:fft",
+        "dataset:2116精心设计的实例",
+        "metric:accuracy",
+        "metric:coefficient of variation",
+        "metric:utterance-level toxicity",
+        "metric:context-level toxicity",
+        "concept:llms",
+        "concept:事实性",
+        "concept:公平性",
+        "concept:毒性"
+      ],
+      "key_entities": [
+        "FFT",
+        "2116精心设计的实例",
+        "Accuracy",
+        "Coefficient of Variation",
+        "Utterance-Level Toxicity",
+        "Context-Level Toxicity",
+        "LLMs",
+        "事实性",
+        "公平性",
+        "毒性"
+      ],
+      "key_papers": [],
+      "dominant_types": [
+        "Metric",
+        "Concept",
+        "Method"
+      ],
+      "semantic_tag": "Evaluation Metrics Cluster",
+      "summary": "",
+      "community_name": "Evaluation Metrics Cluster"
+    },
+    "5": {
+      "nodes": [
+        "paper:2511.20417v2",
+        "task:尽管已计划于2041年完成hl-lhc项目，cern需在2040年代中期启动新的大型设施。为了确定优先级，成立了一个工作组对future circular collider fcc 及其替代方案进行",
+        "contribution:确立了一个评价框架，比较了未来发展加速器项目的关键参数。",
+        "contribution:提供了关于fcc及其替代方案的系统评价。",
+        "contribution:概述了与相似时间表的国际加速器项目，如中国的cepc和日本的ilc的现状和前景。"
+      ],
+      "key_entities": [
+        "Comparative evaluation of future collider options",
+        "尽管已计划于2041年完成HL-LHC项目，CERN需在2040年代中期启动新的大型设施。为了确定优先级，成立了一个工作组对Future Circular Collider (FCC)及其替代方案进行",
+        "确立了一个评价框架，比较了未来发展加速器项目的关键参数。",
+        "提供了关于FCC及其替代方案的系统评价。",
+        "概述了与相似时间表的国际加速器项目，如中国的CEPC和日本的ILC的现状和前景。"
+      ],
+      "key_papers": [
+        "Comparative evaluation of future collider options"
+      ],
+      "dominant_types": [
+        "Contribution",
+        "Paper",
+        "Task"
+      ],
+      "semantic_tag": "Research Contributions Cluster",
+      "summary": "",
+      "community_name": "Research Contributions Cluster"
+    },
+    "6": {
+      "nodes": [
+        "paper:2110.11156v3",
+        "method:dynamic model selection dms adaptive ensemble ae dynamic asset allocation daa",
+        "task:为了处理金融时间序列中的模型选择、集成和情境评估问题。",
+        "dataset:vix index",
+        "dataset:yield curves",
+        "dataset:four key indices in the us market",
+        "contribution:提出了三种自适应时间序列学习方法：dms、ae和daa。",
+        "contribution:实证研究表明这些策略在测试期间显著优于长期基准表现。",
+        "contribution:方法的应用包括全自动投资组合和个人动态对冲策略。",
+        "method:dynamic model selection dms",
+        "method:adaptive ensemble ae",
+        "method:dynamic asset allocation daa"
+      ],
+      "key_entities": [
+        "DMS, AE, DAA: methods and applications of adaptive time series model selection, ensemble, and financial evaluation",
+        "Dynamic Model Selection (DMS), Adaptive Ensemble (AE), Dynamic Asset Allocation (DAA)",
+        "为了处理金融时间序列中的模型选择、集成和情境评估问题。",
+        "VIX index",
+        "Yield curves",
+        "Four key indices in the US market",
+        "提出了三种自适应时间序列学习方法：DMS、AE和DAA。",
+        "实证研究表明这些策略在测试期间显著优于长期基准表现。",
+        "方法的应用包括全自动投资组合和个人动态对冲策略。",
+        "Dynamic Model Selection (DMS)",
+        "Adaptive Ensemble (AE)",
+        "Dynamic Asset Allocation (DAA)"
+      ],
+      "key_papers": [
+        "DMS, AE, DAA: methods and applications of adaptive time series model selection, ensemble, and financial evaluation"
+      ],
+      "dominant_types": [
+        "Method",
+        "Dataset",
+        "Contribution"
+      ],
+      "semantic_tag": "Benchmark & Dataset Cluster",
+      "summary": "",
+      "community_name": "Benchmark & Dataset Cluster"
+    },
+    "7": {
+      "nodes": [
+        "method:vision-language model",
+        "task:closed-set detection",
+        "task:domain adaptation",
+        "task:crowded objects detection",
+        "task:few-shot segmentation",
+        "task:open-world segmentation",
+        "task:small object segmentation"
+      ],
+      "key_entities": [
+        "Vision-Language Model",
+        "closed-set detection",
+        "domain adaptation",
+        "crowded objects detection",
+        "few-shot segmentation",
+        "open-world segmentation",
+        "small object segmentation"
+      ],
+      "key_papers": [],
+      "dominant_types": [
+        "Task",
+        "Method"
+      ],
+      "semantic_tag": "Task & Application Cluster",
+      "summary": "",
+      "community_name": "Task & Application Cluster"
+    },
+    "8": {
+      "nodes": [
+        "method:future colliders comparative evaluation",
+        "model:fcc",
+        "dataset:cepc",
+        "dataset:ilc"
+      ],
+      "key_entities": [
+        "Future Colliders Comparative Evaluation",
+        "FCC",
+        "CEPC",
+        "ILC"
+      ],
+      "key_papers": [],
+      "dominant_types": [
+        "Dataset",
+        "Method",
+        "Model"
+      ],
+      "semantic_tag": "Benchmark & Dataset Cluster",
+      "summary": "",
+      "community_name": "Benchmark & Dataset Cluster"
+    }
+  },
+  "citation_graph": {},
+  "stats": {
+    "node_count": 64,
+    "edge_count": 77,
+    "node_type_count": {
+      "Paper": 5,
+      "Method": 8,
+      "Task": 11,
+      "Dataset": 13,
+      "Metric": 5,
+      "Contribution": 15,
+      "Concept": 6,
+      "Model": 1
+    },
+    "paper_count": 5,
+    "community_count": 0,
+    "citation_edge_count": 0
+  }
+}

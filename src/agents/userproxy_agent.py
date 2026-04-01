@@ -11,7 +11,7 @@ class WebUserProxyAgent(UserProxyAgent):
         super().__init__(name)
         self.waiting_future = None  # 保存等待的future对象
     
-    async def on_messages(self, messages, cancellation_token: CancellationToken):
+    async def on_messages(self, messages, _cancellation_token: CancellationToken):
         # 触发等待：通知前端“等待人工输入”
         self.waiting_future = asyncio.get_event_loop().create_future()
         # 等待前端输入

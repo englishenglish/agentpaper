@@ -8,8 +8,6 @@ from io import BytesIO
 from dataclasses import dataclass, asdict
 from typing import Optional
 
-# 配置日志
-logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 logger = logging.getLogger(__name__)
 
 
@@ -119,9 +117,10 @@ class MinerUV4Client:
                     return
                 else:
                     raise ValueError(f"上传失败，HTTP 状态码: {resp.status_code}")
-            except requests.exceptions.RequestException as e:
+            except requests.exceptions.RequestException:
                 logger.warning(f"[MinerU V4] 上传遇到网络波动 (第 {attempt + 1}/3 次尝试)...")
-                if attempt == 2: raise
+                if attempt == 2:
+                    raise
                 time.sleep(3)
 
     def _poll_and_download(self, batch_id: str, start_time: float) -> str:
@@ -221,7 +220,7 @@ if __name__ == "__main__":
             f.write(result_md_content)
 
         print("-" * 30)
-        print(f"✅ 解析大功告成！")
+        print("✅ 解析大功告成！")
         print(f"📄 Markdown 文件: {md_save_path}")
         print(f"🖼️ 图片及附件目录: {os.path.join(save_dir, f'{file_stem}_extract')}")
         print("-" * 30)

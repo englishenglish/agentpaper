@@ -1,36 +1,33 @@
-import sys
-import os
-
-# 将项目根目录添加到Python路径
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "..")))
-
-from typing import TypedDict, Annotated, Sequence, Dict, Any
 from langgraph.graph import StateGraph, END
 
-from src.core.state_models import PaperAgentState, ExecutionState, NodeError, BackToFrontData, State, ConfigSchema
+from src.core.state_models import PaperAgentState, ExecutionState, NodeError, BackToFrontData, State, ConfigSchema, MAX_CHAT_HISTORY
 from src.agents.search_agent import search_node
 from src.agents.reading_agent import reading_node
 from src.agents.qa_agent import qa_node
 from src.agents.intent_agent import intent_node
 from src.agents.chat_agent import chat_node
-import asyncio
 
 
 def intent_router(state: State) -> str:
-    """【修改核心】意图路由：结合意图识别结果与建库状态进行双重判断。"""
+    """意图路由：闲聊 / 直连问答（已选手动库）/ 联网建库全流程。"""
     current_state = state["value"]
     cfg = getattr(current_state, "config", None) or {}
 
     intent = cfg.get("intent_route", "research")
     has_db = cfg.get("bypass_to_qa", False)
+    kb_binding = cfg.get("kb_binding")
+    selected = cfg.get("selected_db_ids") or []
 
     if intent == "chat":
-        return "chat_node"  # 意图是闲聊，去 chat_node
-    else:
+        return "chat_node"
+    if intent == "research":
         if has_db:
-            return "qa_node"  # 意图是查文献，且已有专属库，极速去 qa_node
-        else:
-            return "search_node"  # 意图是查文献，但还没建库，走全流程
+            return "qa_node"
+        # 手动选了知识库：不联网搜论文，直接基于该库问答
+        if kb_binding == "manual" and selected:
+            return "qa_node"
+        return "search_node"
+    return "search_node"
 
 
 class PaperAgentOrchestrator:
@@ -60,7 +57,7 @@ class PaperAgentOrchestrator:
             return "qa_node"
 
         # 3. 问答完毕 -> 结束当前执行流，并打上“已建库”标记
-        elif getattr(err, 'qa_node_error', None) is None and current_step == ExecutionState.QA_ANSWERING:
+        elif err.qa_node_error is None and current_step == ExecutionState.QA_ANSWERING:
             if current_state.config is None:
                 current_state.config = {}
             current_state.config["bypass_to_qa"] = True  # 打上建库成功的思想钢印
@@ -70,10 +67,9 @@ class PaperAgentOrchestrator:
             return "handle_error_node"
 
     def chat_condition_handler(self, state: State) -> str:
-        """【新增】处理闲聊节点的安全退出"""
+        """处理闲聊节点的安全退出"""
         current_state = state["value"]
-        # 闲聊正常结束直接挂起，什么标记都不改（保护已有的 bypass_to_qa 状态）
-        if getattr(current_state.error, 'chat_node_error', None) is None:
+        if current_state.error.chat_node_error is None:
             return END
         return "handle_error_node"
 
@@ -108,29 +104,48 @@ class PaperAgentOrchestrator:
             enable_web_search: bool = True,
             retrieval_mode: str = "rag",
             selected_db_ids: list[str] | None = None,
-            auto_selected_db_ids: list[str] | None = None,
     ):
         print("Starting Paper/Chat workflow...")
+
+        sel = list(selected_db_ids or [])
 
         # 【修改逻辑】如果有历史状态，则继承历史并更新问题；否则从零创建
         if previous_state:
             initial_state = previous_state
             initial_state.current_question = user_request
             initial_state.chat_history.append({"role": "user", "content": user_request})
-            initial_state.error = NodeError()  # 清理上一轮可能的错误残留
+            if len(initial_state.chat_history) > MAX_CHAT_HISTORY:
+                initial_state.chat_history = initial_state.chat_history[-MAX_CHAT_HISTORY:]
+            initial_state.error = NodeError()
+            if initial_state.config is None:
+                initial_state.config = {}
+            cfg = initial_state.config
+            kb_binding = cfg.get("kb_binding")
+            # 已绑定手动库或联网创建的库：锁定该会话知识库，且不再联网搜索
+            if kb_binding in ("manual", "built"):
+                cfg["enable_web_search"] = False
+                locked = cfg.get("selected_db_ids") or []
+                cfg["selected_db_ids"] = list(locked) if locked else []
+            else:
+                cfg["enable_web_search"] = enable_web_search
+                cfg["selected_db_ids"] = sel
+            cfg["retrieval_mode"] = retrieval_mode
         else:
+            cfg = {
+                "retrieval_mode": retrieval_mode,
+                "bypass_to_qa": False,
+                "selected_db_ids": sel,
+                "enable_web_search": enable_web_search if not sel else False,
+            }
+            if sel:
+                cfg["kb_binding"] = "manual"
+
             initial_state = PaperAgentState(
                 user_request=user_request,
                 current_question=user_request,
                 max_papers=max_papers,
                 error=NodeError(),
-                config={
-                    "enable_web_search": enable_web_search,
-                    "retrieval_mode": retrieval_mode,
-                    "selected_db_ids": selected_db_ids or [],
-                    "auto_selected_db_ids": auto_selected_db_ids or [],
-                    "bypass_to_qa": False  # 第一轮必定没建库
-                }
+                config=cfg,
             )
             initial_state.chat_history.append({"role": "user", "content": user_request})
 

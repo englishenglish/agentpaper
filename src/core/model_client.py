@@ -160,52 +160,11 @@ def create_reading_model_client() -> OpenAIChatCompletionClient:
     return create_model_client("reading-model")
 
 
-# ==========================================
-# 【新增】RAG 问答专属客户端
-# ==========================================
 def create_qa_model_client() -> OpenAIChatCompletionClient:
     """创建用于 RAG 问答的模型客户端实例"""
     return create_model_client("qa-model")
 
 
-def create_subanalyse_cluster_model_client() -> OpenAIChatCompletionClient:
-    """创建用于分析聚类的模型客户端实例"""
-    return create_model_client("subanalyse-cluster-model")
-
-
-def create_subanalyse_deep_analyse_model_client() -> OpenAIChatCompletionClient:
-    """创建用于深度分析的模型客户端实例"""
-    return create_model_client("subanalyse-deep-analyse-model")
-
-
-def create_subanalyse_global_analyse_model_client() -> OpenAIChatCompletionClient:
-    """创建用于全局分析的模型客户端实例"""
-    return create_model_client("subanalyse-global-analyse-model")
-
-
-def create_subwriting_writing_director_model_client() -> OpenAIChatCompletionClient:
-    """创建用于写作主管的模型客户端实例"""
-    return create_model_client("subwriting-writing-director-model")
-
-
-def create_subwriting_writing_model_client() -> OpenAIChatCompletionClient:
-    """创建用于写作的模型客户端实例"""
-    return create_model_client("subwriting-writing-model")
-
-
-def create_subwriting_retrieval_model_client() -> OpenAIChatCompletionClient:
-    """创建用于检索的模型客户端实例"""
-    return create_model_client("subwriting-retrieval-model")
-
-
-def create_report_model_client() -> OpenAIChatCompletionClient:
-    """创建用于写作报告的模型客户端实例"""
-    return create_model_client("report-model")
-
-
-def create_cluster_embedding_client() -> OpenAI:
-    """创建用于聚类嵌入的模型客户端实例"""
-    return create_embedding_client("cluster-embedding-model")
 
 
 if __name__ == "__main__":

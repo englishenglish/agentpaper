@@ -1,0 +1,919 @@
+{
+  "db_id": "kb_744d61de8654c8221b4b85ca8ff05f12",
+  "nodes": {
+    "paper:physics 0004033v1": {
+      "id": "paper:physics 0004033v1",
+      "type": "Paper",
+      "label": "Efficiency of neutron detection of superheated drops of Freon-22",
+      "norm_label": "efficiency of neutron detection of superheated drops of freon-22"
+    },
+    "task:提高freon-22在am-be中子源获得的中子能谱下的中子检测效率并研究其与freon-12的差异。": {
+      "id": "task:提高freon-22在am-be中子源获得的中子能谱下的中子检测效率并研究其与freon-12的差异。",
+      "type": "Task",
+      "label": "提高Freon-22在Am-Be中子源获得的中子能谱下的中子检测效率并研究其与Freon-12的差异。",
+      "norm_label": "提高freon-22在am-be中子源获得的中子能谱下的中子检测效率并研究其与freon-12的差异。"
+    },
+    "contribution:开发了体积法来确定中子检测效率": {
+      "id": "contribution:开发了体积法来确定中子检测效率",
+      "type": "Contribution",
+      "label": "开发了体积法来确定中子检测效率",
+      "norm_label": "开发了体积法来确定中子检测效率"
+    },
+    "paper:2206.04564v6": {
+      "id": "paper:2206.04564v6",
+      "type": "Paper",
+      "label": "TwiBot-22: Towards Graph-Based Twitter Bot Detection",
+      "norm_label": "twibot-22 towards graph-based twitter bot detection"
+    },
+    "task:尽管现有的twitter bot检测方法在检测新型twitter bot方面表现良好，但缺乏大规模的基于图的twitter bot检测基准，且现有基准在数据规模、图结构完整性和注解质量方面存在不足，这": {
+      "id": "task:尽管现有的twitter bot检测方法在检测新型twitter bot方面表现良好，但缺乏大规模的基于图的twitter bot检测基准，且现有基准在数据规模、图结构完整性和注解质量方面存在不足，这",
+      "type": "Task",
+      "label": "尽管现有的Twitter bot检测方法在检测新型Twitter bot方面表现良好，但缺乏大规模的基于图的Twitter bot检测基准，且现有基准在数据规模、图结构完整性和注解质量方面存在不足，这",
+      "norm_label": "尽管现有的twitter bot检测方法在检测新型twitter bot方面表现良好，但缺乏大规模的基于图的twitter bot检测基准，且现有基准在数据规模、图结构完整性和注解质量方面存在不足，这"
+    },
+    "dataset:twibot-22": {
+      "id": "dataset:twibot-22",
+      "type": "Dataset",
+      "label": "TwiBot-22",
+      "norm_label": "twibot-22"
+    },
+    "contribution:提出了twibot-22，这是最大的基准数据集": {
+      "id": "contribution:提出了twibot-22，这是最大的基准数据集",
+      "type": "Contribution",
+      "label": "提出了TwiBot-22，这是最大的基准数据集",
+      "norm_label": "提出了twibot-22，这是最大的基准数据集"
+    },
+    "contribution:提供了多元化的实体和关系在twitter网络上": {
+      "id": "contribution:提供了多元化的实体和关系在twitter网络上",
+      "type": "Contribution",
+      "label": "提供了多元化的实体和关系在Twitter网络上",
+      "norm_label": "提供了多元化的实体和关系在twitter网络上"
+    },
+    "contribution:注解质量优于现有基线": {
+      "id": "contribution:注解质量优于现有基线",
+      "type": "Contribution",
+      "label": "注解质量优于现有基线",
+      "norm_label": "注解质量优于现有基线"
+    },
+    "paper:2301.02010v1": {
+      "id": "paper:2301.02010v1",
+      "type": "Paper",
+      "label": "HIT-SCIR at MMNLU-22: Consistency Regularization for Multilingual Spoken Language Understanding",
+      "norm_label": "hit-scir at mmnlu-22 consistency regularization for multilingual spoken language understanding"
+    },
+    "method:一致性正则化和混合数据增强": {
+      "id": "method:一致性正则化和混合数据增强",
+      "type": "Method",
+      "label": "一致性正则化和混合数据增强",
+      "norm_label": "一致性正则化和混合数据增强"
+    },
+    "task:为了提升多语言语音语言理解（slu）中的意图检测和槽填充任务表现，如何利用一致性正则化和混合数据增强策略。": {
+      "id": "task:为了提升多语言语音语言理解（slu）中的意图检测和槽填充任务表现，如何利用一致性正则化和混合数据增强策略。",
+      "type": "Task",
+      "label": "为了提升多语言语音语言理解（SLU）中的意图检测和槽填充任务表现，如何利用一致性正则化和混合数据增强策略。",
+      "norm_label": "为了提升多语言语音语言理解（slu）中的意图检测和槽填充任务表现，如何利用一致性正则化和混合数据增强策略。"
+    },
+    "dataset:massive 11 514 training utterances per language": {
+      "id": "dataset:massive 11 514 training utterances per language",
+      "type": "Dataset",
+      "label": "MASSIVE (11,514 training utterances per language)",
+      "norm_label": "massive 11 514 training utterances per language"
+    },
+    "metric:exact match accuracy": {
+      "id": "metric:exact match accuracy",
+      "type": "Metric",
+      "label": "Exact Match Accuracy",
+      "norm_label": "exact match accuracy"
+    },
+    "metric:intent accuracy": {
+      "id": "metric:intent accuracy",
+      "type": "Metric",
+      "label": "Intent Accuracy",
+      "norm_label": "intent accuracy"
+    },
+    "metric:slot micro f1": {
+      "id": "metric:slot micro f1",
+      "type": "Metric",
+      "label": "Slot Micro F1",
+      "norm_label": "slot micro f1"
+    },
+    "contribution:提出了一种基于混合数据增强的一致性正则化方法，可以灵活应用于不同类型的跨语言预训练语言模型。": {
+      "id": "contribution:提出了一种基于混合数据增强的一致性正则化方法，可以灵活应用于不同类型的跨语言预训练语言模型。",
+      "type": "Contribution",
+      "label": "提出了一种基于混合数据增强的一致性正则化方法，可以灵活应用于不同类型的跨语言预训练语言模型。",
+      "norm_label": "提出了一种基于混合数据增强的一致性正则化方法，可以灵活应用于不同类型的跨语言预训练语言模型。"
+    },
+    "contribution:证明了一致性正则化和混合数据增强策略对提高多语言slu任务表现的重要性。": {
+      "id": "contribution:证明了一致性正则化和混合数据增强策略对提高多语言slu任务表现的重要性。",
+      "type": "Contribution",
+      "label": "证明了一致性正则化和混合数据增强策略对提高多语言SLU任务表现的重要性。",
+      "norm_label": "证明了一致性正则化和混合数据增强策略对提高多语言slu任务表现的重要性。"
+    },
+    "contribution:结合细粒度意图检测任务和槽填充任务进行更有效的一致性正则化": {
+      "id": "contribution:结合细粒度意图检测任务和槽填充任务进行更有效的一致性正则化",
+      "type": "Contribution",
+      "label": "结合细粒度意图检测任务和槽填充任务进行更有效的一致性正则化",
+      "norm_label": "结合细粒度意图检测任务和槽填充任务进行更有效的一致性正则化"
+    },
+    "paper:2206.08029v1": {
+      "id": "paper:2206.08029v1",
+      "type": "Paper",
+      "label": "DIALOG-22 RuATD Generated Text Detection",
+      "norm_label": "dialog-22 ruatd generated text detection"
+    },
+    "method:ensemble method of different pre-trained models based on the attention mechanism": {
+      "id": "method:ensemble method of different pre-trained models based on the attention mechanism",
+      "type": "Method",
+      "label": "ensemble method of different pre-trained models based on the attention mechanism",
+      "norm_label": "ensemble method of different pre-trained models based on the attention mechanism"
+    },
+    "task:尽管自动文本生成模型在生成适合人类语言风格的文本方面取得了进步，使得手动检测生成的文本变得困难，但是现有技术仍无法可靠地自动检测生成的文本。": {
+      "id": "task:尽管自动文本生成模型在生成适合人类语言风格的文本方面取得了进步，使得手动检测生成的文本变得困难，但是现有技术仍无法可靠地自动检测生成的文本。",
+      "type": "Task",
+      "label": "尽管自动文本生成模型在生成适合人类语言风格的文本方面取得了进步，使得手动检测生成的文本变得困难，但是现有技术仍无法可靠地自动检测生成的文本。",
+      "norm_label": "尽管自动文本生成模型在生成适合人类语言风格的文本方面取得了进步，使得手动检测生成的文本变得困难，但是现有技术仍无法可靠地自动检测生成的文本。"
+    },
+    "dataset:ruatd 2022 binary task": {
+      "id": "dataset:ruatd 2022 binary task",
+      "type": "Dataset",
+      "label": "Ruatd 2022 (binary task)",
+      "norm_label": "ruatd 2022 binary task"
+    },
+    "dataset:ruatd 2022 multi task": {
+      "id": "dataset:ruatd 2022 multi task",
+      "type": "Dataset",
+      "label": "Ruatd 2022 (multi task)",
+      "norm_label": "ruatd 2022 multi task"
+    },
+    "metric:accuracy": {
+      "id": "metric:accuracy",
+      "type": "Metric",
+      "label": "Accuracy",
+      "norm_label": "accuracy"
+    },
+    "contribution:提出了一种基于注意力机制的预训练模型集合方法": {
+      "id": "contribution:提出了一种基于注意力机制的预训练模型集合方法",
+      "type": "Contribution",
+      "label": "提出了一种基于注意力机制的预训练模型集合方法",
+      "norm_label": "提出了一种基于注意力机制的预训练模型集合方法"
+    },
+    "contribution:在二分类任务中获得第一名": {
+      "id": "contribution:在二分类任务中获得第一名",
+      "type": "Contribution",
+      "label": "在二分类任务中获得第一名",
+      "norm_label": "在二分类任务中获得第一名"
+    },
+    "contribution:在多分类任务中获得第四名": {
+      "id": "contribution:在多分类任务中获得第四名",
+      "type": "Contribution",
+      "label": "在多分类任务中获得第四名",
+      "norm_label": "在多分类任务中获得第四名"
+    },
+    "method:volume method": {
+      "id": "method:volume method",
+      "type": "Method",
+      "label": "volume method",
+      "norm_label": "volume method",
+      "description": ""
+    },
+    "metric:neutron detection efficiency": {
+      "id": "metric:neutron detection efficiency",
+      "type": "Metric",
+      "label": "neutron detection efficiency",
+      "norm_label": "neutron detection efficiency",
+      "description": ""
+    },
+    "method:freon22": {
+      "id": "method:freon22",
+      "type": "Method",
+      "label": "Freon22",
+      "norm_label": "freon22",
+      "description": ""
+    },
+    "method:freon12": {
+      "id": "method:freon12",
+      "type": "Method",
+      "label": "Freon12",
+      "norm_label": "freon12",
+      "description": ""
+    },
+    "dataset:3ci am-be neutron source": {
+      "id": "dataset:3ci am-be neutron source",
+      "type": "Dataset",
+      "label": "3Ci Am-Be neutron source",
+      "norm_label": "3ci am-be neutron source",
+      "description": ""
+    },
+    "metric:nucleation rate": {
+      "id": "metric:nucleation rate",
+      "type": "Metric",
+      "label": "nucleation rate",
+      "norm_label": "nucleation rate",
+      "description": ""
+    },
+    "task:twitter bot detection": {
+      "id": "task:twitter bot detection",
+      "type": "Task",
+      "label": "Twitter bot detection",
+      "norm_label": "twitter bot detection",
+      "description": ""
+    },
+    "concept:graph-based": {
+      "id": "concept:graph-based",
+      "type": "Concept",
+      "label": "graph-based",
+      "norm_label": "graph-based",
+      "description": ""
+    },
+    "concept:twitter network": {
+      "id": "concept:twitter network",
+      "type": "Concept",
+      "label": "Twitter network",
+      "norm_label": "twitter network",
+      "description": ""
+    },
+    "method:一致性正则化": {
+      "id": "method:一致性正则化",
+      "type": "Method",
+      "label": "一致性正则化",
+      "norm_label": "一致性正则化",
+      "description": ""
+    },
+    "concept:混合数据增强": {
+      "id": "concept:混合数据增强",
+      "type": "Concept",
+      "label": "混合数据增强",
+      "norm_label": "混合数据增强",
+      "description": ""
+    },
+    "dataset:massive": {
+      "id": "dataset:massive",
+      "type": "Dataset",
+      "label": "MASSIVE",
+      "norm_label": "massive",
+      "description": ""
+    },
+    "task:mmnlu-22": {
+      "id": "task:mmnlu-22",
+      "type": "Task",
+      "label": "MMNLU-22",
+      "norm_label": "mmnlu-22",
+      "description": ""
+    },
+    "method:一致性正则化方法": {
+      "id": "method:一致性正则化方法",
+      "type": "Method",
+      "label": "一致性正则化方法",
+      "norm_label": "一致性正则化方法",
+      "description": ""
+    },
+    "task:细粒度意图检测任务": {
+      "id": "task:细粒度意图检测任务",
+      "type": "Task",
+      "label": "细粒度意图检测任务",
+      "norm_label": "细粒度意图检测任务",
+      "description": ""
+    },
+    "task:槽填充任务": {
+      "id": "task:槽填充任务",
+      "type": "Task",
+      "label": "槽填充任务",
+      "norm_label": "槽填充任务",
+      "description": ""
+    }
+  },
+  "edges": [
+    {
+      "source": "paper:physics 0004033v1",
+      "target": "task:提高freon-22在am-be中子源获得的中子能谱下的中子检测效率并研究其与freon-12的差异。",
+      "type": "applied_to",
+      "weight": 0.8
+    },
+    {
+      "source": "paper:physics 0004033v1",
+      "target": "contribution:开发了体积法来确定中子检测效率",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "paper:2206.04564v6",
+      "target": "task:尽管现有的twitter bot检测方法在检测新型twitter bot方面表现良好，但缺乏大规模的基于图的twitter bot检测基准，且现有基准在数据规模、图结构完整性和注解质量方面存在不足，这",
+      "type": "applied_to",
+      "weight": 0.8
+    },
+    {
+      "source": "paper:2206.04564v6",
+      "target": "dataset:twibot-22",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "paper:2206.04564v6",
+      "target": "contribution:提出了twibot-22，这是最大的基准数据集",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "paper:2206.04564v6",
+      "target": "contribution:提供了多元化的实体和关系在twitter网络上",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "paper:2206.04564v6",
+      "target": "contribution:注解质量优于现有基线",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "paper:2301.02010v1",
+      "target": "method:一致性正则化和混合数据增强",
+      "type": "proposes",
+      "weight": 1.0
+    },
+    {
+      "source": "paper:2301.02010v1",
+      "target": "task:为了提升多语言语音语言理解（slu）中的意图检测和槽填充任务表现，如何利用一致性正则化和混合数据增强策略。",
+      "type": "applied_to",
+      "weight": 0.8
+    },
+    {
+      "source": "method:一致性正则化和混合数据增强",
+      "target": "task:为了提升多语言语音语言理解（slu）中的意图检测和槽填充任务表现，如何利用一致性正则化和混合数据增强策略。",
+      "type": "solves",
+      "weight": 0.95
+    },
+    {
+      "source": "paper:2301.02010v1",
+      "target": "dataset:massive 11 514 training utterances per language",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "method:一致性正则化和混合数据增强",
+      "target": "dataset:massive 11 514 training utterances per language",
+      "type": "evaluates_on",
+      "weight": 0.9
+    },
+    {
+      "source": "method:一致性正则化和混合数据增强",
+      "target": "metric:exact match accuracy",
+      "type": "achieves",
+      "weight": 0.85
+    },
+    {
+      "source": "method:一致性正则化和混合数据增强",
+      "target": "metric:intent accuracy",
+      "type": "achieves",
+      "weight": 0.85
+    },
+    {
+      "source": "method:一致性正则化和混合数据增强",
+      "target": "metric:slot micro f1",
+      "type": "achieves",
+      "weight": 0.85
+    },
+    {
+      "source": "paper:2301.02010v1",
+      "target": "contribution:提出了一种基于混合数据增强的一致性正则化方法，可以灵活应用于不同类型的跨语言预训练语言模型。",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "method:一致性正则化和混合数据增强",
+      "target": "contribution:提出了一种基于混合数据增强的一致性正则化方法，可以灵活应用于不同类型的跨语言预训练语言模型。",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:2301.02010v1",
+      "target": "contribution:证明了一致性正则化和混合数据增强策略对提高多语言slu任务表现的重要性。",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "method:一致性正则化和混合数据增强",
+      "target": "contribution:证明了一致性正则化和混合数据增强策略对提高多语言slu任务表现的重要性。",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:2301.02010v1",
+      "target": "contribution:结合细粒度意图检测任务和槽填充任务进行更有效的一致性正则化",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "method:一致性正则化和混合数据增强",
+      "target": "contribution:结合细粒度意图检测任务和槽填充任务进行更有效的一致性正则化",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:2206.08029v1",
+      "target": "method:ensemble method of different pre-trained models based on the attention mechanism",
+      "type": "proposes",
+      "weight": 1.0
+    },
+    {
+      "source": "paper:2206.08029v1",
+      "target": "task:尽管自动文本生成模型在生成适合人类语言风格的文本方面取得了进步，使得手动检测生成的文本变得困难，但是现有技术仍无法可靠地自动检测生成的文本。",
+      "type": "applied_to",
+      "weight": 0.8
+    },
+    {
+      "source": "method:ensemble method of different pre-trained models based on the attention mechanism",
+      "target": "task:尽管自动文本生成模型在生成适合人类语言风格的文本方面取得了进步，使得手动检测生成的文本变得困难，但是现有技术仍无法可靠地自动检测生成的文本。",
+      "type": "solves",
+      "weight": 0.95
+    },
+    {
+      "source": "paper:2206.08029v1",
+      "target": "dataset:ruatd 2022 binary task",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "method:ensemble method of different pre-trained models based on the attention mechanism",
+      "target": "dataset:ruatd 2022 binary task",
+      "type": "evaluates_on",
+      "weight": 0.9
+    },
+    {
+      "source": "paper:2206.08029v1",
+      "target": "dataset:ruatd 2022 multi task",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "method:ensemble method of different pre-trained models based on the attention mechanism",
+      "target": "dataset:ruatd 2022 multi task",
+      "type": "evaluates_on",
+      "weight": 0.9
+    },
+    {
+      "source": "method:ensemble method of different pre-trained models based on the attention mechanism",
+      "target": "metric:accuracy",
+      "type": "achieves",
+      "weight": 0.85
+    },
+    {
+      "source": "paper:2206.08029v1",
+      "target": "contribution:提出了一种基于注意力机制的预训练模型集合方法",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "method:ensemble method of different pre-trained models based on the attention mechanism",
+      "target": "contribution:提出了一种基于注意力机制的预训练模型集合方法",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:2206.08029v1",
+      "target": "contribution:在二分类任务中获得第一名",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "method:ensemble method of different pre-trained models based on the attention mechanism",
+      "target": "contribution:在二分类任务中获得第一名",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:2206.08029v1",
+      "target": "contribution:在多分类任务中获得第四名",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "method:ensemble method of different pre-trained models based on the attention mechanism",
+      "target": "contribution:在多分类任务中获得第四名",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "method:volume method",
+      "target": "metric:neutron detection efficiency",
+      "type": "evaluates_on",
+      "weight": 0.9
+    },
+    {
+      "source": "method:volume method",
+      "target": "method:freon22",
+      "type": "achieves",
+      "weight": 0.85
+    },
+    {
+      "source": "method:volume method",
+      "target": "method:freon12",
+      "type": "achieves",
+      "weight": 0.85
+    },
+    {
+      "source": "method:volume method",
+      "target": "dataset:3ci am-be neutron source",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "method:volume method",
+      "target": "metric:nucleation rate",
+      "type": "evaluates_on",
+      "weight": 0.9
+    },
+    {
+      "source": "dataset:twibot-22",
+      "target": "concept:graph-based",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "dataset:twibot-22",
+      "target": "concept:twitter network",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "dataset:twibot-22",
+      "target": "task:twitter bot detection",
+      "type": "evaluates_on",
+      "weight": 0.9
+    },
+    {
+      "source": "method:一致性正则化方法",
+      "target": "method:一致性正则化",
+      "type": "proposes",
+      "weight": 1.0
+    },
+    {
+      "source": "method:一致性正则化方法",
+      "target": "concept:混合数据增强",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "method:一致性正则化方法",
+      "target": "dataset:massive",
+      "type": "evaluates_on",
+      "weight": 0.9
+    },
+    {
+      "source": "method:一致性正则化方法",
+      "target": "metric:exact match accuracy",
+      "type": "achieves",
+      "weight": 0.85
+    },
+    {
+      "source": "method:一致性正则化方法",
+      "target": "metric:intent accuracy",
+      "type": "achieves",
+      "weight": 0.85
+    },
+    {
+      "source": "method:一致性正则化方法",
+      "target": "metric:slot micro f1",
+      "type": "achieves",
+      "weight": 0.85
+    },
+    {
+      "source": "method:一致性正则化方法",
+      "target": "task:mmnlu-22",
+      "type": "applied_to",
+      "weight": 0.8
+    },
+    {
+      "source": "method:一致性正则化方法",
+      "target": "task:细粒度意图检测任务",
+      "type": "applied_to",
+      "weight": 0.8
+    },
+    {
+      "source": "method:一致性正则化方法",
+      "target": "task:槽填充任务",
+      "type": "applied_to",
+      "weight": 0.8
+    }
+  ],
+  "paper_entities": {
+    "physics/0004033v1": [
+      "paper:physics 0004033v1",
+      "task:提高freon-22在am-be中子源获得的中子能谱下的中子检测效率并研究其与freon-12的差异。",
+      "contribution:开发了体积法来确定中子检测效率",
+      "method:volume method",
+      "metric:neutron detection efficiency",
+      "method:freon22",
+      "method:freon12",
+      "dataset:3ci am-be neutron source",
+      "metric:nucleation rate"
+    ],
+    "2206.04564v6": [
+      "paper:2206.04564v6",
+      "task:尽管现有的twitter bot检测方法在检测新型twitter bot方面表现良好，但缺乏大规模的基于图的twitter bot检测基准，且现有基准在数据规模、图结构完整性和注解质量方面存在不足，这",
+      "dataset:twibot-22",
+      "contribution:提出了twibot-22，这是最大的基准数据集",
+      "contribution:提供了多元化的实体和关系在twitter网络上",
+      "contribution:注解质量优于现有基线",
+      "task:twitter bot detection",
+      "concept:graph-based",
+      "concept:twitter network"
+    ],
+    "2301.02010v1": [
+      "paper:2301.02010v1",
+      "method:一致性正则化和混合数据增强",
+      "task:为了提升多语言语音语言理解（slu）中的意图检测和槽填充任务表现，如何利用一致性正则化和混合数据增强策略。",
+      "dataset:massive 11 514 training utterances per language",
+      "metric:exact match accuracy",
+      "metric:intent accuracy",
+      "metric:slot micro f1",
+      "contribution:提出了一种基于混合数据增强的一致性正则化方法，可以灵活应用于不同类型的跨语言预训练语言模型。",
+      "contribution:证明了一致性正则化和混合数据增强策略对提高多语言slu任务表现的重要性。",
+      "contribution:结合细粒度意图检测任务和槽填充任务进行更有效的一致性正则化",
+      "method:一致性正则化",
+      "concept:混合数据增强",
+      "dataset:massive",
+      "task:mmnlu-22",
+      "method:一致性正则化方法",
+      "task:细粒度意图检测任务",
+      "task:槽填充任务"
+    ],
+    "2206.08029v1": [
+      "paper:2206.08029v1",
+      "method:ensemble method of different pre-trained models based on the attention mechanism",
+      "task:尽管自动文本生成模型在生成适合人类语言风格的文本方面取得了进步，使得手动检测生成的文本变得困难，但是现有技术仍无法可靠地自动检测生成的文本。",
+      "dataset:ruatd 2022 binary task",
+      "dataset:ruatd 2022 multi task",
+      "metric:accuracy",
+      "contribution:提出了一种基于注意力机制的预训练模型集合方法",
+      "contribution:在二分类任务中获得第一名",
+      "contribution:在多分类任务中获得第四名"
+    ]
+  },
+  "entity_aliases": {
+    "efficiency of neutron detection of superheated drops of freon-22": "paper:physics 0004033v1",
+    "提高freon-22在am-be中子源获得的中子能谱下的中子检测效率并研究其与freon-12的差异。": "task:提高freon-22在am-be中子源获得的中子能谱下的中子检测效率并研究其与freon-12的差异。",
+    "开发了体积法来确定中子检测效率": "contribution:开发了体积法来确定中子检测效率",
+    "twibot-22 towards graph-based twitter bot detection": "paper:2206.04564v6",
+    "尽管现有的twitter bot检测方法在检测新型twitter bot方面表现良好，但缺乏大规模的基于图的twitter bot检测基准，且现有基准在数据规模、图结构完整性和注解质量方面存在不足，这": "task:尽管现有的twitter bot检测方法在检测新型twitter bot方面表现良好，但缺乏大规模的基于图的twitter bot检测基准，且现有基准在数据规模、图结构完整性和注解质量方面存在不足，这",
+    "twibot-22": "dataset:twibot-22",
+    "提出了twibot-22，这是最大的基准数据集": "contribution:提出了twibot-22，这是最大的基准数据集",
+    "提供了多元化的实体和关系在twitter网络上": "contribution:提供了多元化的实体和关系在twitter网络上",
+    "注解质量优于现有基线": "contribution:注解质量优于现有基线",
+    "hit-scir at mmnlu-22 consistency regularization for multilingual spoken language understanding": "paper:2301.02010v1",
+    "一致性正则化和混合数据增强": "method:一致性正则化和混合数据增强",
+    "为了提升多语言语音语言理解（slu）中的意图检测和槽填充任务表现，如何利用一致性正则化和混合数据增强策略。": "task:为了提升多语言语音语言理解（slu）中的意图检测和槽填充任务表现，如何利用一致性正则化和混合数据增强策略。",
+    "massive 11 514 training utterances per language": "dataset:massive 11 514 training utterances per language",
+    "exact match accuracy": "metric:exact match accuracy",
+    "intent accuracy": "metric:intent accuracy",
+    "slot micro f1": "metric:slot micro f1",
+    "提出了一种基于混合数据增强的一致性正则化方法，可以灵活应用于不同类型的跨语言预训练语言模型。": "contribution:提出了一种基于混合数据增强的一致性正则化方法，可以灵活应用于不同类型的跨语言预训练语言模型。",
+    "证明了一致性正则化和混合数据增强策略对提高多语言slu任务表现的重要性。": "contribution:证明了一致性正则化和混合数据增强策略对提高多语言slu任务表现的重要性。",
+    "结合细粒度意图检测任务和槽填充任务进行更有效的一致性正则化": "contribution:结合细粒度意图检测任务和槽填充任务进行更有效的一致性正则化",
+    "dialog-22 ruatd generated text detection": "paper:2206.08029v1",
+    "ensemble method of different pre-trained models based on the attention mechanism": "method:ensemble method of different pre-trained models based on the attention mechanism",
+    "尽管自动文本生成模型在生成适合人类语言风格的文本方面取得了进步，使得手动检测生成的文本变得困难，但是现有技术仍无法可靠地自动检测生成的文本。": "task:尽管自动文本生成模型在生成适合人类语言风格的文本方面取得了进步，使得手动检测生成的文本变得困难，但是现有技术仍无法可靠地自动检测生成的文本。",
+    "ruatd 2022 binary task": "dataset:ruatd 2022 binary task",
+    "ruatd 2022 multi task": "dataset:ruatd 2022 multi task",
+    "accuracy": "metric:accuracy",
+    "提出了一种基于注意力机制的预训练模型集合方法": "contribution:提出了一种基于注意力机制的预训练模型集合方法",
+    "在二分类任务中获得第一名": "contribution:在二分类任务中获得第一名",
+    "在多分类任务中获得第四名": "contribution:在多分类任务中获得第四名",
+    "volume method": "method:volume method",
+    "neutron detection efficiency": "metric:neutron detection efficiency",
+    "freon22": "method:freon22",
+    "freon12": "method:freon12",
+    "3ci am-be neutron source": "dataset:3ci am-be neutron source",
+    "nucleation rate": "metric:nucleation rate",
+    "twitter bot detection": "task:twitter bot detection",
+    "graph-based": "concept:graph-based",
+    "twitter network": "concept:twitter network",
+    "一致性正则化": "method:一致性正则化",
+    "混合数据增强": "concept:混合数据增强",
+    "massive": "dataset:massive",
+    "mmnlu-22": "task:mmnlu-22",
+    "一致性正则化方法": "method:一致性正则化方法",
+    "细粒度意图检测任务": "task:细粒度意图检测任务",
+    "槽填充任务": "task:槽填充任务"
+  },
+  "communities": {
+    "0": {
+      "nodes": [
+        "paper:physics 0004033v1",
+        "task:提高freon-22在am-be中子源获得的中子能谱下的中子检测效率并研究其与freon-12的差异。",
+        "contribution:开发了体积法来确定中子检测效率"
+      ],
+      "key_entities": [
+        "Efficiency of neutron detection of superheated drops of Freon-22",
+        "提高Freon-22在Am-Be中子源获得的中子能谱下的中子检测效率并研究其与Freon-12的差异。",
+        "开发了体积法来确定中子检测效率"
+      ],
+      "key_papers": [
+        "Efficiency of neutron detection of superheated drops of Freon-22"
+      ],
+      "dominant_types": [
+        "Paper",
+        "Task",
+        "Contribution"
+      ],
+      "semantic_tag": "Task & Application Cluster",
+      "summary": "",
+      "community_name": "Task & Application Cluster"
+    },
+    "1": {
+      "nodes": [
+        "paper:2206.04564v6",
+        "task:尽管现有的twitter bot检测方法在检测新型twitter bot方面表现良好，但缺乏大规模的基于图的twitter bot检测基准，且现有基准在数据规模、图结构完整性和注解质量方面存在不足，这",
+        "contribution:提出了twibot-22，这是最大的基准数据集",
+        "contribution:提供了多元化的实体和关系在twitter网络上",
+        "contribution:注解质量优于现有基线"
+      ],
+      "key_entities": [
+        "TwiBot-22: Towards Graph-Based Twitter Bot Detection",
+        "尽管现有的Twitter bot检测方法在检测新型Twitter bot方面表现良好，但缺乏大规模的基于图的Twitter bot检测基准，且现有基准在数据规模、图结构完整性和注解质量方面存在不足，这",
+        "提出了TwiBot-22，这是最大的基准数据集",
+        "提供了多元化的实体和关系在Twitter网络上",
+        "注解质量优于现有基线"
+      ],
+      "key_papers": [
+        "TwiBot-22: Towards Graph-Based Twitter Bot Detection"
+      ],
+      "dominant_types": [
+        "Contribution",
+        "Paper",
+        "Task"
+      ],
+      "semantic_tag": "Research Contributions Cluster",
+      "summary": "",
+      "community_name": "Research Contributions Cluster"
+    },
+    "2": {
+      "nodes": [
+        "dataset:twibot-22",
+        "task:twitter bot detection",
+        "concept:graph-based",
+        "concept:twitter network"
+      ],
+      "key_entities": [
+        "TwiBot-22",
+        "Twitter bot detection",
+        "graph-based",
+        "Twitter network"
+      ],
+      "key_papers": [],
+      "dominant_types": [
+        "Concept",
+        "Dataset",
+        "Task"
+      ],
+      "semantic_tag": "Benchmark & Dataset Cluster",
+      "summary": "",
+      "community_name": "Benchmark & Dataset Cluster"
+    },
+    "3": {
+      "nodes": [
+        "paper:2301.02010v1",
+        "method:一致性正则化和混合数据增强",
+        "task:为了提升多语言语音语言理解（slu）中的意图检测和槽填充任务表现，如何利用一致性正则化和混合数据增强策略。",
+        "dataset:massive 11 514 training utterances per language",
+        "contribution:提出了一种基于混合数据增强的一致性正则化方法，可以灵活应用于不同类型的跨语言预训练语言模型。",
+        "contribution:证明了一致性正则化和混合数据增强策略对提高多语言slu任务表现的重要性。",
+        "contribution:结合细粒度意图检测任务和槽填充任务进行更有效的一致性正则化"
+      ],
+      "key_entities": [
+        "HIT-SCIR at MMNLU-22: Consistency Regularization for Multilingual Spoken Language Understanding",
+        "一致性正则化和混合数据增强",
+        "为了提升多语言语音语言理解（SLU）中的意图检测和槽填充任务表现，如何利用一致性正则化和混合数据增强策略。",
+        "MASSIVE (11,514 training utterances per language)",
+        "提出了一种基于混合数据增强的一致性正则化方法，可以灵活应用于不同类型的跨语言预训练语言模型。",
+        "证明了一致性正则化和混合数据增强策略对提高多语言SLU任务表现的重要性。",
+        "结合细粒度意图检测任务和槽填充任务进行更有效的一致性正则化"
+      ],
+      "key_papers": [
+        "HIT-SCIR at MMNLU-22: Consistency Regularization for Multilingual Spoken Language Understanding"
+      ],
+      "dominant_types": [
+        "Contribution",
+        "Paper",
+        "Method"
+      ],
+      "semantic_tag": "Research Contributions Cluster",
+      "summary": "",
+      "community_name": "Research Contributions Cluster"
+    },
+    "4": {
+      "nodes": [
+        "metric:exact match accuracy",
+        "metric:intent accuracy",
+        "metric:slot micro f1",
+        "method:一致性正则化",
+        "concept:混合数据增强",
+        "dataset:massive",
+        "task:mmnlu-22",
+        "method:一致性正则化方法",
+        "task:细粒度意图检测任务",
+        "task:槽填充任务"
+      ],
+      "key_entities": [
+        "Exact Match Accuracy",
+        "Intent Accuracy",
+        "Slot Micro F1",
+        "一致性正则化",
+        "混合数据增强",
+        "MASSIVE",
+        "MMNLU-22",
+        "一致性正则化方法",
+        "细粒度意图检测任务",
+        "槽填充任务"
+      ],
+      "key_papers": [],
+      "dominant_types": [
+        "Metric",
+        "Task",
+        "Method"
+      ],
+      "semantic_tag": "Task & Application Cluster",
+      "summary": "",
+      "community_name": "Task & Application Cluster"
+    },
+    "5": {
+      "nodes": [
+        "paper:2206.08029v1",
+        "method:ensemble method of different pre-trained models based on the attention mechanism",
+        "task:尽管自动文本生成模型在生成适合人类语言风格的文本方面取得了进步，使得手动检测生成的文本变得困难，但是现有技术仍无法可靠地自动检测生成的文本。",
+        "dataset:ruatd 2022 binary task",
+        "dataset:ruatd 2022 multi task",
+        "metric:accuracy",
+        "contribution:提出了一种基于注意力机制的预训练模型集合方法",
+        "contribution:在二分类任务中获得第一名",
+        "contribution:在多分类任务中获得第四名"
+      ],
+      "key_entities": [
+        "DIALOG-22 RuATD Generated Text Detection",
+        "ensemble method of different pre-trained models based on the attention mechanism",
+        "尽管自动文本生成模型在生成适合人类语言风格的文本方面取得了进步，使得手动检测生成的文本变得困难，但是现有技术仍无法可靠地自动检测生成的文本。",
+        "Ruatd 2022 (binary task)",
+        "Ruatd 2022 (multi task)",
+        "Accuracy",
+        "提出了一种基于注意力机制的预训练模型集合方法",
+        "在二分类任务中获得第一名",
+        "在多分类任务中获得第四名"
+      ],
+      "key_papers": [
+        "DIALOG-22 RuATD Generated Text Detection"
+      ],
+      "dominant_types": [
+        "Contribution",
+        "Dataset",
+        "Paper"
+      ],
+      "semantic_tag": "Benchmark & Dataset Cluster",
+      "summary": "",
+      "community_name": "Benchmark & Dataset Cluster"
+    },
+    "6": {
+      "nodes": [
+        "method:volume method",
+        "metric:neutron detection efficiency",
+        "method:freon22",
+        "method:freon12",
+        "dataset:3ci am-be neutron source",
+        "metric:nucleation rate"
+      ],
+      "key_entities": [
+        "volume method",
+        "neutron detection efficiency",
+        "Freon22",
+        "Freon12",
+        "3Ci Am-Be neutron source",
+        "nucleation rate"
+      ],
+      "key_papers": [],
+      "dominant_types": [
+        "Method",
+        "Metric",
+        "Dataset"
+      ],
+      "semantic_tag": "Evaluation Metrics Cluster",
+      "summary": "",
+      "community_name": "Evaluation Metrics Cluster"
+    }
+  },
+  "citation_graph": {},
+  "stats": {
+    "node_count": 44,
+    "edge_count": 52,
+    "node_type_count": {
+      "Paper": 4,
+      "Task": 8,
+      "Contribution": 10,
+      "Dataset": 6,
+      "Method": 7,
+      "Metric": 6,
+      "Concept": 3
+    },
+    "paper_count": 4,
+    "community_count": 0,
+    "citation_edge_count": 0
+  }
+}

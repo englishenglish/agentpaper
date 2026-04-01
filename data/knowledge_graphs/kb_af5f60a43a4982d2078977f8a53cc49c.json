@@ -1,0 +1,1622 @@
+{
+  "db_id": "kb_af5f60a43a4982d2078977f8a53cc49c",
+  "nodes": {
+    "paper:2509.21473v1": {
+      "id": "paper:2509.21473v1",
+      "type": "Paper",
+      "label": "Are Hallucinations Bad Estimations?",
+      "norm_label": "are hallucinations bad estimations"
+    },
+    "method:δ-hallucination": {
+      "id": "method:δ-hallucination",
+      "type": "Method",
+      "label": "δ-hallucination",
+      "norm_label": "δ-hallucination"
+    },
+    "task:尽管使用损失最小化方法可以训练出在合成数据上效果良好的生成模型，但这些模型仍可能生成与实际情境不符的虚假输出（hallucinations），这在多种应用场景下带来严重问题。": {
+      "id": "task:尽管使用损失最小化方法可以训练出在合成数据上效果良好的生成模型，但这些模型仍可能生成与实际情境不符的虚假输出（hallucinations），这在多种应用场景下带来严重问题。",
+      "type": "Task",
+      "label": "尽管使用损失最小化方法可以训练出在合成数据上效果良好的生成模型，但这些模型仍可能生成与实际情境不符的虚假输出（hallucinations），这在多种应用场景下带来严重问题。",
+      "norm_label": "尽管使用损失最小化方法可以训练出在合成数据上效果良好的生成模型，但这些模型仍可能生成与实际情境不符的虚假输出（hallucinations），这在多种应用场景下带来严重问题。"
+    },
+    "dataset:synthetic coin flipping problem 2n coins m flips": {
+      "id": "dataset:synthetic coin flipping problem 2n coins m flips",
+      "type": "Dataset",
+      "label": "Synthetic Coin Flipping Problem (2N coins, M flips)",
+      "norm_label": "synthetic coin flipping problem 2n coins m flips"
+    },
+    "dataset:gpt5 gemini 2.5 flash deepseek r1 to generate open-ended questions": {
+      "id": "dataset:gpt5 gemini 2.5 flash deepseek r1 to generate open-ended questions",
+      "type": "Dataset",
+      "label": "GPT5, Gemini 2.5 Flash, DeepSeek R1 to generate open-ended questions",
+      "norm_label": "gpt5 gemini 2.5 flash deepseek r1 to generate open-ended questions"
+    },
+    "dataset:animal faces-hq afhq dataset 5558 cat images 5139 dog images": {
+      "id": "dataset:animal faces-hq afhq dataset 5558 cat images 5139 dog images",
+      "type": "Dataset",
+      "label": "Animal Faces-HQ (AFHQ) dataset (5558 cat images, 5139 dog images)",
+      "norm_label": "animal faces-hq afhq dataset 5558 cat images 5139 dog images"
+    },
+    "metric:training loss mean min-max": {
+      "id": "metric:training loss mean min-max",
+      "type": "Metric",
+      "label": "Training Loss (mean, min-max)",
+      "norm_label": "training loss mean min-max"
+    },
+    "metric:hallucination rate": {
+      "id": "metric:hallucination rate",
+      "type": "Metric",
+      "label": "Hallucination Rate",
+      "norm_label": "hallucination rate"
+    },
+    "contribution:首次定义δ-hallucination，将hallucination形式化为估计输出无法匹配任何真实可能状态的情况。": {
+      "id": "contribution:首次定义δ-hallucination，将hallucination形式化为估计输出无法匹配任何真实可能状态的情况。",
+      "type": "Contribution",
+      "label": "首次定义δ-hallucination，将hallucination形式化为估计输出无法匹配任何真实可能状态的情况。",
+      "norm_label": "首次定义δ-hallucination，将hallucination形式化为估计输出无法匹配任何真实可能状态的情况。"
+    },
+    "contribution:证明贝叶斯最优估计器即使在无限容量下也可能会产生hallucination，而不仅仅是计算资源有限的情况。": {
+      "id": "contribution:证明贝叶斯最优估计器即使在无限容量下也可能会产生hallucination，而不仅仅是计算资源有限的情况。",
+      "type": "Contribution",
+      "label": "证明贝叶斯最优估计器即使在无限容量下也可能会产生hallucination，而不仅仅是计算资源有限的情况。",
+      "norm_label": "证明贝叶斯最优估计器即使在无限容量下也可能会产生hallucination，而不仅仅是计算资源有限的情况。"
+    },
+    "contribution:提出了通用的hallucination最低概率下限，通过特定假设和相对宽松条件下得到了hallucination的频率约束。": {
+      "id": "contribution:提出了通用的hallucination最低概率下限，通过特定假设和相对宽松条件下得到了hallucination的频率约束。",
+      "type": "Contribution",
+      "label": "提出了通用的hallucination最低概率下限，通过特定假设和相对宽松条件下得到了hallucination的频率约束。",
+      "norm_label": "提出了通用的hallucination最低概率下限，通过特定假设和相对宽松条件下得到了hallucination的频率约束。"
+    },
+    "contribution:通过多种实验（硬币翻转问题、语言模型和图像生成）验证了理论分析的有效性，说明hallucination是估计过程的固有结构性问题而非模型规模大小的问题。": {
+      "id": "contribution:通过多种实验（硬币翻转问题、语言模型和图像生成）验证了理论分析的有效性，说明hallucination是估计过程的固有结构性问题而非模型规模大小的问题。",
+      "type": "Contribution",
+      "label": "通过多种实验（硬币翻转问题、语言模型和图像生成）验证了理论分析的有效性，说明hallucination是估计过程的固有结构性问题而非模型规模大小的问题。",
+      "norm_label": "通过多种实验（硬币翻转问题、语言模型和图像生成）验证了理论分析的有效性，说明hallucination是估计过程的固有结构性问题而非模型规模大小的问题。"
+    },
+    "paper:2506.00448v1": {
+      "id": "paper:2506.00448v1",
+      "type": "Paper",
+      "label": "Fact-Controlled Diagnosis of Hallucinations in Medical Text Summarization",
+      "norm_label": "fact-controlled diagnosis of hallucinations in medical text summarization"
+    },
+    "method:llm-based fact alignment": {
+      "id": "method:llm-based fact alignment",
+      "type": "Method",
+      "label": "LLM-based Fact Alignment",
+      "norm_label": "llm-based fact alignment"
+    },
+    "task:尽管语言模型在生成临床对话摘要时存在 幻觉 问题，但现有通用幻觉检测器在临床环境中的有效性尚未得到验证。": {
+      "id": "task:尽管语言模型在生成临床对话摘要时存在 幻觉 问题，但现有通用幻觉检测器在临床环境中的有效性尚未得到验证。",
+      "type": "Task",
+      "label": "尽管语言模型在生成临床对话摘要时存在'幻觉'问题，但现有通用幻觉检测器在临床环境中的有效性尚未得到验证。",
+      "norm_label": "尽管语言模型在生成临床对话摘要时存在 幻觉 问题，但现有通用幻觉检测器在临床环境中的有效性尚未得到验证。"
+    },
+    "dataset:leave-n-out dataset": {
+      "id": "dataset:leave-n-out dataset",
+      "type": "Dataset",
+      "label": "Leave-N-Out dataset",
+      "norm_label": "leave-n-out dataset"
+    },
+    "dataset:natural hallucination dataset": {
+      "id": "dataset:natural hallucination dataset",
+      "type": "Dataset",
+      "label": "Natural Hallucination dataset",
+      "norm_label": "natural hallucination dataset"
+    },
+    "dataset:xsum hallucination annotations dataset": {
+      "id": "dataset:xsum hallucination annotations dataset",
+      "type": "Dataset",
+      "label": "XSum Hallucination Annotations dataset",
+      "norm_label": "xsum hallucination annotations dataset"
+    },
+    "metric:pearson correlation": {
+      "id": "metric:pearson correlation",
+      "type": "Metric",
+      "label": "Pearson correlation",
+      "norm_label": "pearson correlation"
+    },
+    "metric:fact-based hallucination count": {
+      "id": "metric:fact-based hallucination count",
+      "type": "Metric",
+      "label": "Fact-based hallucination count",
+      "norm_label": "fact-based hallucination count"
+    },
+    "contribution:提出了事实控制合成数据集来精确控制幻觉类型和程度。": {
+      "id": "contribution:提出了事实控制合成数据集来精确控制幻觉类型和程度。",
+      "type": "Contribution",
+      "label": "提出了事实控制合成数据集来精确控制幻觉类型和程度。",
+      "norm_label": "提出了事实控制合成数据集来精确控制幻觉类型和程度。"
+    },
+    "contribution:展示了基于llm的方法在临床环境中的适用性和较好的泛化能力。": {
+      "id": "contribution:展示了基于llm的方法在临床环境中的适用性和较好的泛化能力。",
+      "type": "Contribution",
+      "label": "展示了基于LLM的方法在临床环境中的适用性和较好的泛化能力。",
+      "norm_label": "展示了基于llm的方法在临床环境中的适用性和较好的泛化能力。"
+    },
+    "contribution:提供了一组专门的评估指标，支持专家注释的数据集，以推进准确可靠的临床总结系统。": {
+      "id": "contribution:提供了一组专门的评估指标，支持专家注释的数据集，以推进准确可靠的临床总结系统。",
+      "type": "Contribution",
+      "label": "提供了一组专门的评估指标，支持专家注释的数据集，以推进准确可靠的临床总结系统。",
+      "norm_label": "提供了一组专门的评估指标，支持专家注释的数据集，以推进准确可靠的临床总结系统。"
+    },
+    "paper:2507.20836v4": {
+      "id": "paper:2507.20836v4",
+      "type": "Paper",
+      "label": "First Hallucination Tokens Are Different from Conditional Ones",
+      "norm_label": "first hallucination tokens are different from conditional ones"
+    },
+    "method:ragtruth": {
+      "id": "method:ragtruth",
+      "type": "Method",
+      "label": "RAGTruth",
+      "norm_label": "ragtruth"
+    },
+    "task:尽管现有的大规模语言模型存在生成虚假内容的问题，但关于虚假信号在生成序列中的分布缺乏深入理解。": {
+      "id": "task:尽管现有的大规模语言模型存在生成虚假内容的问题，但关于虚假信号在生成序列中的分布缺乏深入理解。",
+      "type": "Task",
+      "label": "尽管现有的大规模语言模型存在生成虚假内容的问题，但关于虚假信号在生成序列中的分布缺乏深入理解。",
+      "norm_label": "尽管现有的大规模语言模型存在生成虚假内容的问题，但关于虚假信号在生成序列中的分布缺乏深入理解。"
+    },
+    "metric:auroc": {
+      "id": "metric:auroc",
+      "type": "Metric",
+      "label": "AUROC",
+      "norm_label": "auroc"
+    },
+    "contribution:详细说明了令牌生成位置内的虚假信号系统变化。": {
+      "id": "contribution:详细说明了令牌生成位置内的虚假信号系统变化。",
+      "type": "Contribution",
+      "label": "详细说明了令牌生成位置内的虚假信号系统变化。",
+      "norm_label": "详细说明了令牌生成位置内的虚假信号系统变化。"
+    },
+    "contribution:证明了光栅化数据集 dataset all，第一令牌具有更强的虚假信号。": {
+      "id": "contribution:证明了光栅化数据集 dataset all，第一令牌具有更强的虚假信号。",
+      "type": "Contribution",
+      "label": "证明了光栅化数据集(Dataset): all，第一令牌具有更强的虚假信号。",
+      "norm_label": "证明了光栅化数据集 dataset all，第一令牌具有更强的虚假信号。"
+    },
+    "contribution:发现熵是最有效的识别第一幻觉令牌的信号。": {
+      "id": "contribution:发现熵是最有效的识别第一幻觉令牌的信号。",
+      "type": "Contribution",
+      "label": "发现熵是最有效的识别第一幻觉令牌的信号。",
+      "norm_label": "发现熵是最有效的识别第一幻觉令牌的信号。"
+    },
+    "paper:1906.07008v1": {
+      "id": "paper:1906.07008v1",
+      "type": "Paper",
+      "label": "Hallucinated Adversarial Learning for Robust Visual Tracking",
+      "norm_label": "hallucinated adversarial learning for robust visual tracking"
+    },
+    "method:adversarial hallucinator ah": {
+      "id": "method:adversarial hallucinator ah",
+      "type": "Method",
+      "label": "adversarial hallucinator (AH)",
+      "norm_label": "adversarial hallucinator ah"
+    },
+    "task:为了缓解深度学习方法在低数据视觉跟踪中的过度拟合问题，提出了一种新的针对视觉跟踪的人工想象方法。": {
+      "id": "task:为了缓解深度学习方法在低数据视觉跟踪中的过度拟合问题，提出了一种新的针对视觉跟踪的人工想象方法。",
+      "type": "Task",
+      "label": "为了缓解深度学习方法在低数据视觉跟踪中的过度拟合问题，提出了一种新的针对视觉跟踪的人工想象方法。",
+      "norm_label": "为了缓解深度学习方法在低数据视觉跟踪中的过度拟合问题，提出了一种新的针对视觉跟踪的人工想象方法。"
+    },
+    "dataset:imagenet-vid snippet dataset": {
+      "id": "dataset:imagenet-vid snippet dataset",
+      "type": "Dataset",
+      "label": "ImageNet-VID snippet dataset",
+      "norm_label": "imagenet-vid snippet dataset"
+    },
+    "dataset:constructed dataset dq": {
+      "id": "dataset:constructed dataset dq",
+      "type": "Dataset",
+      "label": "constructed dataset DQ",
+      "norm_label": "constructed dataset dq"
+    },
+    "metric:dpr": {
+      "id": "metric:dpr",
+      "type": "Metric",
+      "label": "DPR",
+      "norm_label": "dpr"
+    },
+    "metric:auc": {
+      "id": "metric:auc",
+      "type": "Metric",
+      "label": "AUC",
+      "norm_label": "auc"
+    },
+    "contribution:我们提出了一个基于生成对抗网络的人工想象器（ah），这是一种数据增强方法，可以模仿人类的想象力以生成新的正面样本。": {
+      "id": "contribution:我们提出了一个基于生成对抗网络的人工想象器（ah），这是一种数据增强方法，可以模仿人类的想象力以生成新的正面样本。",
+      "type": "Contribution",
+      "label": "我们提出了一个基于生成对抗网络的人工想象器（AH），这是一种数据增强方法，可以模仿人类的想象力以生成新的正面样本。",
+      "norm_label": "我们提出了一个基于生成对抗网络的人工想象器（ah），这是一种数据增强方法，可以模仿人类的想象力以生成新的正面样本。"
+    },
+    "contribution:基于ah，我们提出了幻觉对抗跟踪器（hat），它将ah和在线分类器（mdnet）集成进了一种端到端的学习框架，以帮助克服样本不足的问题。": {
+      "id": "contribution:基于ah，我们提出了幻觉对抗跟踪器（hat），它将ah和在线分类器（mdnet）集成进了一种端到端的学习框架，以帮助克服样本不足的问题。",
+      "type": "Contribution",
+      "label": "基于AH，我们提出了幻觉对抗跟踪器（HAT），它将AH和在线分类器（MDNet）集成进了一种端到端的学习框架，以帮助克服样本不足的问题。",
+      "norm_label": "基于ah，我们提出了幻觉对抗跟踪器（hat），它将ah和在线分类器（mdnet）集成进了一种端到端的学习框架，以帮助克服样本不足的问题。"
+    },
+    "contribution:我们提出了选择性变形传递（sdt）方法，以更好地选择适合传输的变形": {
+      "id": "contribution:我们提出了选择性变形传递（sdt）方法，以更好地选择适合传输的变形",
+      "type": "Contribution",
+      "label": "我们提出了选择性变形传递（SDT）方法，以更好地选择适合传输的变形",
+      "norm_label": "我们提出了选择性变形传递（sdt）方法，以更好地选择适合传输的变形"
+    },
+    "paper:2512.03107v1": {
+      "id": "paper:2512.03107v1",
+      "type": "Paper",
+      "label": "Detecting AI Hallucinations in Finance: An Information-Theoretic Method Cuts Hallucination Rate by 92%",
+      "norm_label": "detecting ai hallucinations in finance an information-theoretic method cuts hallucination rate by 92"
+    },
+    "method:eclipse": {
+      "id": "method:eclipse",
+      "type": "Method",
+      "label": "ECLIPSE",
+      "norm_label": "eclipse"
+    },
+    "task:尽管大型语言模型在高风险领域（如金融）中具有决策支持作用，但它们生成的事实错误支持答案（幻觉）会带来严重风险。": {
+      "id": "task:尽管大型语言模型在高风险领域（如金融）中具有决策支持作用，但它们生成的事实错误支持答案（幻觉）会带来严重风险。",
+      "type": "Task",
+      "label": "尽管大型语言模型在高风险领域（如金融）中具有决策支持作用，但它们生成的事实错误支持答案（幻觉）会带来严重风险。",
+      "norm_label": "尽管大型语言模型在高风险领域（如金融）中具有决策支持作用，但它们生成的事实错误支持答案（幻觉）会带来严重风险。"
+    },
+    "dataset:gpt-3.5-turbo": {
+      "id": "dataset:gpt-3.5-turbo",
+      "type": "Dataset",
+      "label": "GPT-3.5-turbo",
+      "norm_label": "gpt-3.5-turbo"
+    },
+    "metric:roc auc": {
+      "id": "metric:roc auc",
+      "type": "Metric",
+      "label": "ROC AUC",
+      "norm_label": "roc auc"
+    },
+    "metric:average precision": {
+      "id": "metric:average precision",
+      "type": "Metric",
+      "label": "Average Precision",
+      "norm_label": "average precision"
+    },
+    "metric:f1 score": {
+      "id": "metric:f1 score",
+      "type": "Metric",
+      "label": "F1 Score",
+      "norm_label": "f1 score"
+    },
+    "contribution:提出了一种基于熵-容量权值的理论框架，证明在轻微条件下是严格凹的且具有唯一的稳定最优值。": {
+      "id": "contribution:提出了一种基于熵-容量权值的理论框架，证明在轻微条件下是严格凹的且具有唯一的稳定最优值。",
+      "type": "Contribution",
+      "label": "提出了一种基于熵-容量权值的理论框架，证明在轻微条件下是严格凹的且具有唯一的稳定最优值。",
+      "norm_label": "提出了一种基于熵-容量权值的理论框架，证明在轻微条件下是严格凹的且具有唯一的稳定最优值。"
+    },
+    "contribution:开发了一种基于困惑度分解的新颖特征，细化了模型如何使用证据。": {
+      "id": "contribution:开发了一种基于困惑度分解的新颖特征，细化了模型如何使用证据。",
+      "type": "Contribution",
+      "label": "开发了一种基于困惑度分解的新颖特征，细化了模型如何使用证据。",
+      "norm_label": "开发了一种基于困惑度分解的新颖特征，细化了模型如何使用证据。"
+    },
+    "contribution:在受控的金融问答数据集上实现了较强的检测性能，表明基于api的灰色箱检测器可以实现高性能。": {
+      "id": "contribution:在受控的金融问答数据集上实现了较强的检测性能，表明基于api的灰色箱检测器可以实现高性能。",
+      "type": "Contribution",
+      "label": "在受控的金融问答数据集上实现了较强的检测性能，表明基于API的灰色箱检测器可以实现高性能。",
+      "norm_label": "在受控的金融问答数据集上实现了较强的检测性能，表明基于api的灰色箱检测器可以实现高性能。"
+    },
+    "contribution:受控消融实验证明eclipse对真实的令牌log概率高度依赖，展示了其log概率原生性质。": {
+      "id": "contribution:受控消融实验证明eclipse对真实的令牌log概率高度依赖，展示了其log概率原生性质。",
+      "type": "Contribution",
+      "label": "受控消融实验证明ECLIPSE对真实的令牌log概率高度依赖，展示了其log概率原生性质。",
+      "norm_label": "受控消融实验证明eclipse对真实的令牌log概率高度依赖，展示了其log概率原生性质。"
+    },
+    "concept:hallucination": {
+      "id": "concept:hallucination",
+      "type": "Concept",
+      "label": "hallucination",
+      "norm_label": "hallucination",
+      "description": ""
+    },
+    "dataset:synthetic coin flipping problem": {
+      "id": "dataset:synthetic coin flipping problem",
+      "type": "Dataset",
+      "label": "Synthetic Coin Flipping Problem",
+      "norm_label": "synthetic coin flipping problem",
+      "description": ""
+    },
+    "model:gpt5": {
+      "id": "model:gpt5",
+      "type": "Model",
+      "label": "GPT5",
+      "norm_label": "gpt5",
+      "description": ""
+    },
+    "model:gemini 2.5 flash": {
+      "id": "model:gemini 2.5 flash",
+      "type": "Model",
+      "label": "Gemini 2.5 Flash",
+      "norm_label": "gemini 2.5 flash",
+      "description": ""
+    },
+    "model:deepseek r1": {
+      "id": "model:deepseek r1",
+      "type": "Model",
+      "label": "DeepSeek R1",
+      "norm_label": "deepseek r1",
+      "description": ""
+    },
+    "dataset:animal faces-hq": {
+      "id": "dataset:animal faces-hq",
+      "type": "Dataset",
+      "label": "Animal Faces-HQ",
+      "norm_label": "animal faces-hq",
+      "description": ""
+    },
+    "metric:training loss": {
+      "id": "metric:training loss",
+      "type": "Metric",
+      "label": "Training Loss",
+      "norm_label": "training loss",
+      "description": ""
+    },
+    "concept:loss minimizing optimal estimator": {
+      "id": "concept:loss minimizing optimal estimator",
+      "type": "Concept",
+      "label": "Loss Minimizing Optimal Estimator",
+      "norm_label": "loss minimizing optimal estimator",
+      "description": ""
+    },
+    "task:hallucination detection": {
+      "id": "task:hallucination detection",
+      "type": "Task",
+      "label": "Hallucination detection",
+      "norm_label": "hallucination detection",
+      "description": ""
+    },
+    "task:clinical summarization system": {
+      "id": "task:clinical summarization system",
+      "type": "Task",
+      "label": "Clinical summarization system",
+      "norm_label": "clinical summarization system",
+      "description": ""
+    },
+    "concept:first hallucination token": {
+      "id": "concept:first hallucination token",
+      "type": "Concept",
+      "label": "first hallucination token",
+      "norm_label": "first hallucination token",
+      "description": ""
+    },
+    "concept:later hallucinated token": {
+      "id": "concept:later hallucinated token",
+      "type": "Concept",
+      "label": "later hallucinated token",
+      "norm_label": "later hallucinated token",
+      "description": ""
+    },
+    "method:hat": {
+      "id": "method:hat",
+      "type": "Method",
+      "label": "HAT",
+      "norm_label": "hat",
+      "description": ""
+    },
+    "method:ah": {
+      "id": "method:ah",
+      "type": "Method",
+      "label": "AH",
+      "norm_label": "ah",
+      "description": ""
+    },
+    "model:mdnet": {
+      "id": "model:mdnet",
+      "type": "Model",
+      "label": "MDNet",
+      "norm_label": "mdnet",
+      "description": ""
+    },
+    "dataset:imagenet-vid": {
+      "id": "dataset:imagenet-vid",
+      "type": "Dataset",
+      "label": "ImageNet-VID",
+      "norm_label": "imagenet-vid",
+      "description": ""
+    },
+    "dataset:dq": {
+      "id": "dataset:dq",
+      "type": "Dataset",
+      "label": "DQ",
+      "norm_label": "dq",
+      "description": ""
+    },
+    "method:sdt": {
+      "id": "method:sdt",
+      "type": "Method",
+      "label": "SDT",
+      "norm_label": "sdt",
+      "description": ""
+    },
+    "method:hallucinator": {
+      "id": "method:hallucinator",
+      "type": "Method",
+      "label": "hallucinator",
+      "norm_label": "hallucinator",
+      "description": ""
+    },
+    "concept:non-linear deformations": {
+      "id": "concept:non-linear deformations",
+      "type": "Concept",
+      "label": "non-linear deformations",
+      "norm_label": "non-linear deformations",
+      "description": ""
+    },
+    "concept:data augmentation": {
+      "id": "concept:data augmentation",
+      "type": "Concept",
+      "label": "Data Augmentation",
+      "norm_label": "data augmentation",
+      "description": ""
+    },
+    "metric:state-of-the-art performance": {
+      "id": "metric:state-of-the-art performance",
+      "type": "Metric",
+      "label": "state-of-the-art performance",
+      "norm_label": "state-of-the-art performance",
+      "description": ""
+    },
+    "dataset:financial question answering dataset": {
+      "id": "dataset:financial question answering dataset",
+      "type": "Dataset",
+      "label": "financial question answering dataset",
+      "norm_label": "financial question answering dataset",
+      "description": ""
+    }
+  },
+  "edges": [
+    {
+      "source": "paper:2509.21473v1",
+      "target": "method:δ-hallucination",
+      "type": "proposes",
+      "weight": 1.0
+    },
+    {
+      "source": "paper:2509.21473v1",
+      "target": "task:尽管使用损失最小化方法可以训练出在合成数据上效果良好的生成模型，但这些模型仍可能生成与实际情境不符的虚假输出（hallucinations），这在多种应用场景下带来严重问题。",
+      "type": "applied_to",
+      "weight": 0.8
+    },
+    {
+      "source": "method:δ-hallucination",
+      "target": "task:尽管使用损失最小化方法可以训练出在合成数据上效果良好的生成模型，但这些模型仍可能生成与实际情境不符的虚假输出（hallucinations），这在多种应用场景下带来严重问题。",
+      "type": "solves",
+      "weight": 0.95
+    },
+    {
+      "source": "paper:2509.21473v1",
+      "target": "dataset:synthetic coin flipping problem 2n coins m flips",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "method:δ-hallucination",
+      "target": "dataset:synthetic coin flipping problem 2n coins m flips",
+      "type": "evaluates_on",
+      "weight": 0.9
+    },
+    {
+      "source": "paper:2509.21473v1",
+      "target": "dataset:gpt5 gemini 2.5 flash deepseek r1 to generate open-ended questions",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "method:δ-hallucination",
+      "target": "dataset:gpt5 gemini 2.5 flash deepseek r1 to generate open-ended questions",
+      "type": "evaluates_on",
+      "weight": 0.9
+    },
+    {
+      "source": "paper:2509.21473v1",
+      "target": "dataset:animal faces-hq afhq dataset 5558 cat images 5139 dog images",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "method:δ-hallucination",
+      "target": "dataset:animal faces-hq afhq dataset 5558 cat images 5139 dog images",
+      "type": "evaluates_on",
+      "weight": 0.9
+    },
+    {
+      "source": "method:δ-hallucination",
+      "target": "metric:training loss mean min-max",
+      "type": "achieves",
+      "weight": 0.85
+    },
+    {
+      "source": "method:δ-hallucination",
+      "target": "metric:hallucination rate",
+      "type": "achieves",
+      "weight": 0.85
+    },
+    {
+      "source": "paper:2509.21473v1",
+      "target": "contribution:首次定义δ-hallucination，将hallucination形式化为估计输出无法匹配任何真实可能状态的情况。",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "method:δ-hallucination",
+      "target": "contribution:首次定义δ-hallucination，将hallucination形式化为估计输出无法匹配任何真实可能状态的情况。",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:2509.21473v1",
+      "target": "contribution:证明贝叶斯最优估计器即使在无限容量下也可能会产生hallucination，而不仅仅是计算资源有限的情况。",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "method:δ-hallucination",
+      "target": "contribution:证明贝叶斯最优估计器即使在无限容量下也可能会产生hallucination，而不仅仅是计算资源有限的情况。",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:2509.21473v1",
+      "target": "contribution:提出了通用的hallucination最低概率下限，通过特定假设和相对宽松条件下得到了hallucination的频率约束。",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "method:δ-hallucination",
+      "target": "contribution:提出了通用的hallucination最低概率下限，通过特定假设和相对宽松条件下得到了hallucination的频率约束。",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:2509.21473v1",
+      "target": "contribution:通过多种实验（硬币翻转问题、语言模型和图像生成）验证了理论分析的有效性，说明hallucination是估计过程的固有结构性问题而非模型规模大小的问题。",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "method:δ-hallucination",
+      "target": "contribution:通过多种实验（硬币翻转问题、语言模型和图像生成）验证了理论分析的有效性，说明hallucination是估计过程的固有结构性问题而非模型规模大小的问题。",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:2506.00448v1",
+      "target": "method:llm-based fact alignment",
+      "type": "proposes",
+      "weight": 1.0
+    },
+    {
+      "source": "paper:2506.00448v1",
+      "target": "task:尽管语言模型在生成临床对话摘要时存在 幻觉 问题，但现有通用幻觉检测器在临床环境中的有效性尚未得到验证。",
+      "type": "applied_to",
+      "weight": 0.8
+    },
+    {
+      "source": "method:llm-based fact alignment",
+      "target": "task:尽管语言模型在生成临床对话摘要时存在 幻觉 问题，但现有通用幻觉检测器在临床环境中的有效性尚未得到验证。",
+      "type": "solves",
+      "weight": 0.95
+    },
+    {
+      "source": "paper:2506.00448v1",
+      "target": "dataset:leave-n-out dataset",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "method:llm-based fact alignment",
+      "target": "dataset:leave-n-out dataset",
+      "type": "evaluates_on",
+      "weight": 0.9
+    },
+    {
+      "source": "paper:2506.00448v1",
+      "target": "dataset:natural hallucination dataset",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "method:llm-based fact alignment",
+      "target": "dataset:natural hallucination dataset",
+      "type": "evaluates_on",
+      "weight": 0.9
+    },
+    {
+      "source": "paper:2506.00448v1",
+      "target": "dataset:xsum hallucination annotations dataset",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "method:llm-based fact alignment",
+      "target": "dataset:xsum hallucination annotations dataset",
+      "type": "evaluates_on",
+      "weight": 0.9
+    },
+    {
+      "source": "method:llm-based fact alignment",
+      "target": "metric:pearson correlation",
+      "type": "achieves",
+      "weight": 0.85
+    },
+    {
+      "source": "method:llm-based fact alignment",
+      "target": "metric:fact-based hallucination count",
+      "type": "achieves",
+      "weight": 0.85
+    },
+    {
+      "source": "paper:2506.00448v1",
+      "target": "contribution:提出了事实控制合成数据集来精确控制幻觉类型和程度。",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "method:llm-based fact alignment",
+      "target": "contribution:提出了事实控制合成数据集来精确控制幻觉类型和程度。",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:2506.00448v1",
+      "target": "contribution:展示了基于llm的方法在临床环境中的适用性和较好的泛化能力。",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "method:llm-based fact alignment",
+      "target": "contribution:展示了基于llm的方法在临床环境中的适用性和较好的泛化能力。",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:2506.00448v1",
+      "target": "contribution:提供了一组专门的评估指标，支持专家注释的数据集，以推进准确可靠的临床总结系统。",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "method:llm-based fact alignment",
+      "target": "contribution:提供了一组专门的评估指标，支持专家注释的数据集，以推进准确可靠的临床总结系统。",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:2507.20836v4",
+      "target": "method:ragtruth",
+      "type": "proposes",
+      "weight": 1.0
+    },
+    {
+      "source": "paper:2507.20836v4",
+      "target": "task:尽管现有的大规模语言模型存在生成虚假内容的问题，但关于虚假信号在生成序列中的分布缺乏深入理解。",
+      "type": "applied_to",
+      "weight": 0.8
+    },
+    {
+      "source": "method:ragtruth",
+      "target": "task:尽管现有的大规模语言模型存在生成虚假内容的问题，但关于虚假信号在生成序列中的分布缺乏深入理解。",
+      "type": "solves",
+      "weight": 0.95
+    },
+    {
+      "source": "paper:2507.20836v4",
+      "target": "method:ragtruth",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "method:ragtruth",
+      "target": "metric:auroc",
+      "type": "achieves",
+      "weight": 0.85
+    },
+    {
+      "source": "paper:2507.20836v4",
+      "target": "contribution:详细说明了令牌生成位置内的虚假信号系统变化。",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "method:ragtruth",
+      "target": "contribution:详细说明了令牌生成位置内的虚假信号系统变化。",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:2507.20836v4",
+      "target": "contribution:证明了光栅化数据集 dataset all，第一令牌具有更强的虚假信号。",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "method:ragtruth",
+      "target": "contribution:证明了光栅化数据集 dataset all，第一令牌具有更强的虚假信号。",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:2507.20836v4",
+      "target": "contribution:发现熵是最有效的识别第一幻觉令牌的信号。",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "method:ragtruth",
+      "target": "contribution:发现熵是最有效的识别第一幻觉令牌的信号。",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:1906.07008v1",
+      "target": "method:adversarial hallucinator ah",
+      "type": "proposes",
+      "weight": 1.0
+    },
+    {
+      "source": "paper:1906.07008v1",
+      "target": "task:为了缓解深度学习方法在低数据视觉跟踪中的过度拟合问题，提出了一种新的针对视觉跟踪的人工想象方法。",
+      "type": "applied_to",
+      "weight": 0.8
+    },
+    {
+      "source": "method:adversarial hallucinator ah",
+      "target": "task:为了缓解深度学习方法在低数据视觉跟踪中的过度拟合问题，提出了一种新的针对视觉跟踪的人工想象方法。",
+      "type": "solves",
+      "weight": 0.95
+    },
+    {
+      "source": "paper:1906.07008v1",
+      "target": "dataset:imagenet-vid snippet dataset",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "method:adversarial hallucinator ah",
+      "target": "dataset:imagenet-vid snippet dataset",
+      "type": "evaluates_on",
+      "weight": 0.9
+    },
+    {
+      "source": "paper:1906.07008v1",
+      "target": "dataset:constructed dataset dq",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "method:adversarial hallucinator ah",
+      "target": "dataset:constructed dataset dq",
+      "type": "evaluates_on",
+      "weight": 0.9
+    },
+    {
+      "source": "method:adversarial hallucinator ah",
+      "target": "metric:dpr",
+      "type": "achieves",
+      "weight": 0.85
+    },
+    {
+      "source": "method:adversarial hallucinator ah",
+      "target": "metric:auc",
+      "type": "achieves",
+      "weight": 0.85
+    },
+    {
+      "source": "paper:1906.07008v1",
+      "target": "contribution:我们提出了一个基于生成对抗网络的人工想象器（ah），这是一种数据增强方法，可以模仿人类的想象力以生成新的正面样本。",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "method:adversarial hallucinator ah",
+      "target": "contribution:我们提出了一个基于生成对抗网络的人工想象器（ah），这是一种数据增强方法，可以模仿人类的想象力以生成新的正面样本。",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:1906.07008v1",
+      "target": "contribution:基于ah，我们提出了幻觉对抗跟踪器（hat），它将ah和在线分类器（mdnet）集成进了一种端到端的学习框架，以帮助克服样本不足的问题。",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "method:adversarial hallucinator ah",
+      "target": "contribution:基于ah，我们提出了幻觉对抗跟踪器（hat），它将ah和在线分类器（mdnet）集成进了一种端到端的学习框架，以帮助克服样本不足的问题。",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:1906.07008v1",
+      "target": "contribution:我们提出了选择性变形传递（sdt）方法，以更好地选择适合传输的变形",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "method:adversarial hallucinator ah",
+      "target": "contribution:我们提出了选择性变形传递（sdt）方法，以更好地选择适合传输的变形",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:2512.03107v1",
+      "target": "method:eclipse",
+      "type": "proposes",
+      "weight": 1.0
+    },
+    {
+      "source": "paper:2512.03107v1",
+      "target": "task:尽管大型语言模型在高风险领域（如金融）中具有决策支持作用，但它们生成的事实错误支持答案（幻觉）会带来严重风险。",
+      "type": "applied_to",
+      "weight": 0.8
+    },
+    {
+      "source": "method:eclipse",
+      "target": "task:尽管大型语言模型在高风险领域（如金融）中具有决策支持作用，但它们生成的事实错误支持答案（幻觉）会带来严重风险。",
+      "type": "solves",
+      "weight": 0.95
+    },
+    {
+      "source": "paper:2512.03107v1",
+      "target": "dataset:gpt-3.5-turbo",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "method:eclipse",
+      "target": "dataset:gpt-3.5-turbo",
+      "type": "evaluates_on",
+      "weight": 0.9
+    },
+    {
+      "source": "method:eclipse",
+      "target": "metric:roc auc",
+      "type": "achieves",
+      "weight": 0.85
+    },
+    {
+      "source": "method:eclipse",
+      "target": "metric:average precision",
+      "type": "achieves",
+      "weight": 0.85
+    },
+    {
+      "source": "method:eclipse",
+      "target": "metric:f1 score",
+      "type": "achieves",
+      "weight": 0.85
+    },
+    {
+      "source": "paper:2512.03107v1",
+      "target": "contribution:提出了一种基于熵-容量权值的理论框架，证明在轻微条件下是严格凹的且具有唯一的稳定最优值。",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "method:eclipse",
+      "target": "contribution:提出了一种基于熵-容量权值的理论框架，证明在轻微条件下是严格凹的且具有唯一的稳定最优值。",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:2512.03107v1",
+      "target": "contribution:开发了一种基于困惑度分解的新颖特征，细化了模型如何使用证据。",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "method:eclipse",
+      "target": "contribution:开发了一种基于困惑度分解的新颖特征，细化了模型如何使用证据。",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:2512.03107v1",
+      "target": "contribution:在受控的金融问答数据集上实现了较强的检测性能，表明基于api的灰色箱检测器可以实现高性能。",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "method:eclipse",
+      "target": "contribution:在受控的金融问答数据集上实现了较强的检测性能，表明基于api的灰色箱检测器可以实现高性能。",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:2512.03107v1",
+      "target": "contribution:受控消融实验证明eclipse对真实的令牌log概率高度依赖，展示了其log概率原生性质。",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "method:eclipse",
+      "target": "contribution:受控消融实验证明eclipse对真实的令牌log概率高度依赖，展示了其log概率原生性质。",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "method:δ-hallucination",
+      "target": "concept:hallucination",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "method:δ-hallucination",
+      "target": "dataset:synthetic coin flipping problem",
+      "type": "evaluates_on",
+      "weight": 0.9
+    },
+    {
+      "source": "method:δ-hallucination",
+      "target": "model:gpt5",
+      "type": "evaluates_on",
+      "weight": 0.9
+    },
+    {
+      "source": "method:δ-hallucination",
+      "target": "model:gemini 2.5 flash",
+      "type": "evaluates_on",
+      "weight": 0.9
+    },
+    {
+      "source": "method:δ-hallucination",
+      "target": "model:deepseek r1",
+      "type": "evaluates_on",
+      "weight": 0.9
+    },
+    {
+      "source": "method:δ-hallucination",
+      "target": "dataset:animal faces-hq",
+      "type": "evaluates_on",
+      "weight": 0.9
+    },
+    {
+      "source": "method:δ-hallucination",
+      "target": "metric:training loss",
+      "type": "achieves",
+      "weight": 0.85
+    },
+    {
+      "source": "concept:hallucination",
+      "target": "concept:loss minimizing optimal estimator",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "method:llm-based fact alignment",
+      "target": "dataset:xsum hallucination annotations dataset",
+      "type": "applied_to",
+      "weight": 0.8
+    },
+    {
+      "source": "method:llm-based fact alignment",
+      "target": "task:clinical summarization system",
+      "type": "improves",
+      "weight": 0.95
+    },
+    {
+      "source": "method:ragtruth",
+      "target": "concept:first hallucination token",
+      "type": "compared_with",
+      "weight": 0.7
+    },
+    {
+      "source": "method:ragtruth",
+      "target": "concept:later hallucinated token",
+      "type": "compared_with",
+      "weight": 0.7
+    },
+    {
+      "source": "method:ragtruth",
+      "target": "concept:first hallucination token",
+      "type": "achieves",
+      "weight": 0.85
+    },
+    {
+      "source": "method:ragtruth",
+      "target": "metric:auroc",
+      "type": "evaluates_on",
+      "weight": 0.9
+    },
+    {
+      "source": "method:hat",
+      "target": "method:ah",
+      "type": "applied_to",
+      "weight": 0.8
+    },
+    {
+      "source": "method:ah",
+      "target": "model:mdnet",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "method:ah",
+      "target": "dataset:imagenet-vid",
+      "type": "evaluates_on",
+      "weight": 0.9
+    },
+    {
+      "source": "method:hat",
+      "target": "dataset:dq",
+      "type": "evaluates_on",
+      "weight": 0.9
+    },
+    {
+      "source": "method:hat",
+      "target": "concept:data augmentation",
+      "type": "achieves",
+      "weight": 0.85
+    },
+    {
+      "source": "method:ah",
+      "target": "method:hallucinator",
+      "type": "proposes",
+      "weight": 1.0
+    },
+    {
+      "source": "method:hallucinator",
+      "target": "method:hat",
+      "type": "applied_to",
+      "weight": 0.8
+    },
+    {
+      "source": "method:hallucinator",
+      "target": "concept:non-linear deformations",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "method:sdt",
+      "target": "method:ah",
+      "type": "proposes",
+      "weight": 1.0
+    },
+    {
+      "source": "concept:non-linear deformations",
+      "target": "concept:data augmentation",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "method:eclipse",
+      "target": "dataset:financial question answering dataset",
+      "type": "evaluates_on",
+      "weight": 0.9
+    },
+    {
+      "source": "method:eclipse",
+      "target": "dataset:gpt-3.5-turbo",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "method:eclipse",
+      "target": "metric:roc auc",
+      "type": "compared_with",
+      "weight": 0.7
+    },
+    {
+      "source": "dataset:gpt-3.5-turbo",
+      "target": "metric:roc auc",
+      "type": "evaluates_on",
+      "weight": 0.9
+    },
+    {
+      "source": "dataset:gpt-3.5-turbo",
+      "target": "metric:average precision",
+      "type": "evaluates_on",
+      "weight": 0.9
+    },
+    {
+      "source": "dataset:gpt-3.5-turbo",
+      "target": "metric:f1 score",
+      "type": "achieves",
+      "weight": 0.85
+    }
+  ],
+  "paper_entities": {
+    "2509.21473v1": [
+      "paper:2509.21473v1",
+      "method:δ-hallucination",
+      "task:尽管使用损失最小化方法可以训练出在合成数据上效果良好的生成模型，但这些模型仍可能生成与实际情境不符的虚假输出（hallucinations），这在多种应用场景下带来严重问题。",
+      "dataset:synthetic coin flipping problem 2n coins m flips",
+      "dataset:gpt5 gemini 2.5 flash deepseek r1 to generate open-ended questions",
+      "dataset:animal faces-hq afhq dataset 5558 cat images 5139 dog images",
+      "metric:training loss mean min-max",
+      "metric:hallucination rate",
+      "contribution:首次定义δ-hallucination，将hallucination形式化为估计输出无法匹配任何真实可能状态的情况。",
+      "contribution:证明贝叶斯最优估计器即使在无限容量下也可能会产生hallucination，而不仅仅是计算资源有限的情况。",
+      "contribution:提出了通用的hallucination最低概率下限，通过特定假设和相对宽松条件下得到了hallucination的频率约束。",
+      "contribution:通过多种实验（硬币翻转问题、语言模型和图像生成）验证了理论分析的有效性，说明hallucination是估计过程的固有结构性问题而非模型规模大小的问题。",
+      "concept:hallucination",
+      "dataset:synthetic coin flipping problem",
+      "model:gpt5",
+      "model:gemini 2.5 flash",
+      "model:deepseek r1",
+      "dataset:animal faces-hq",
+      "metric:training loss",
+      "concept:loss minimizing optimal estimator"
+    ],
+    "2506.00448v1": [
+      "paper:2506.00448v1",
+      "method:llm-based fact alignment",
+      "task:尽管语言模型在生成临床对话摘要时存在 幻觉 问题，但现有通用幻觉检测器在临床环境中的有效性尚未得到验证。",
+      "dataset:leave-n-out dataset",
+      "dataset:natural hallucination dataset",
+      "dataset:xsum hallucination annotations dataset",
+      "metric:pearson correlation",
+      "metric:fact-based hallucination count",
+      "contribution:提出了事实控制合成数据集来精确控制幻觉类型和程度。",
+      "contribution:展示了基于llm的方法在临床环境中的适用性和较好的泛化能力。",
+      "contribution:提供了一组专门的评估指标，支持专家注释的数据集，以推进准确可靠的临床总结系统。",
+      "task:hallucination detection",
+      "task:clinical summarization system"
+    ],
+    "2507.20836v4": [
+      "paper:2507.20836v4",
+      "method:ragtruth",
+      "task:尽管现有的大规模语言模型存在生成虚假内容的问题，但关于虚假信号在生成序列中的分布缺乏深入理解。",
+      "method:ragtruth",
+      "metric:auroc",
+      "contribution:详细说明了令牌生成位置内的虚假信号系统变化。",
+      "contribution:证明了光栅化数据集 dataset all，第一令牌具有更强的虚假信号。",
+      "contribution:发现熵是最有效的识别第一幻觉令牌的信号。",
+      "concept:first hallucination token",
+      "concept:later hallucinated token"
+    ],
+    "1906.07008v1": [
+      "paper:1906.07008v1",
+      "method:adversarial hallucinator ah",
+      "task:为了缓解深度学习方法在低数据视觉跟踪中的过度拟合问题，提出了一种新的针对视觉跟踪的人工想象方法。",
+      "dataset:imagenet-vid snippet dataset",
+      "dataset:constructed dataset dq",
+      "metric:dpr",
+      "metric:auc",
+      "contribution:我们提出了一个基于生成对抗网络的人工想象器（ah），这是一种数据增强方法，可以模仿人类的想象力以生成新的正面样本。",
+      "contribution:基于ah，我们提出了幻觉对抗跟踪器（hat），它将ah和在线分类器（mdnet）集成进了一种端到端的学习框架，以帮助克服样本不足的问题。",
+      "contribution:我们提出了选择性变形传递（sdt）方法，以更好地选择适合传输的变形",
+      "method:hat",
+      "method:ah",
+      "model:mdnet",
+      "dataset:imagenet-vid",
+      "dataset:dq",
+      "method:sdt",
+      "method:hallucinator",
+      "concept:non-linear deformations",
+      "concept:data augmentation",
+      "metric:state-of-the-art performance"
+    ],
+    "2512.03107v1": [
+      "paper:2512.03107v1",
+      "method:eclipse",
+      "task:尽管大型语言模型在高风险领域（如金融）中具有决策支持作用，但它们生成的事实错误支持答案（幻觉）会带来严重风险。",
+      "dataset:gpt-3.5-turbo",
+      "metric:roc auc",
+      "metric:average precision",
+      "metric:f1 score",
+      "contribution:提出了一种基于熵-容量权值的理论框架，证明在轻微条件下是严格凹的且具有唯一的稳定最优值。",
+      "contribution:开发了一种基于困惑度分解的新颖特征，细化了模型如何使用证据。",
+      "contribution:在受控的金融问答数据集上实现了较强的检测性能，表明基于api的灰色箱检测器可以实现高性能。",
+      "contribution:受控消融实验证明eclipse对真实的令牌log概率高度依赖，展示了其log概率原生性质。",
+      "dataset:financial question answering dataset"
+    ]
+  },
+  "entity_aliases": {
+    "are hallucinations bad estimations": "paper:2509.21473v1",
+    "δ-hallucination": "method:δ-hallucination",
+    "尽管使用损失最小化方法可以训练出在合成数据上效果良好的生成模型，但这些模型仍可能生成与实际情境不符的虚假输出（hallucinations），这在多种应用场景下带来严重问题。": "task:尽管使用损失最小化方法可以训练出在合成数据上效果良好的生成模型，但这些模型仍可能生成与实际情境不符的虚假输出（hallucinations），这在多种应用场景下带来严重问题。",
+    "synthetic coin flipping problem 2n coins m flips": "dataset:synthetic coin flipping problem 2n coins m flips",
+    "gpt5 gemini 2.5 flash deepseek r1 to generate open-ended questions": "dataset:gpt5 gemini 2.5 flash deepseek r1 to generate open-ended questions",
+    "animal faces-hq afhq dataset 5558 cat images 5139 dog images": "dataset:animal faces-hq afhq dataset 5558 cat images 5139 dog images",
+    "training loss mean min-max": "metric:training loss mean min-max",
+    "hallucination rate": "metric:hallucination rate",
+    "首次定义δ-hallucination，将hallucination形式化为估计输出无法匹配任何真实可能状态的情况。": "contribution:首次定义δ-hallucination，将hallucination形式化为估计输出无法匹配任何真实可能状态的情况。",
+    "证明贝叶斯最优估计器即使在无限容量下也可能会产生hallucination，而不仅仅是计算资源有限的情况。": "contribution:证明贝叶斯最优估计器即使在无限容量下也可能会产生hallucination，而不仅仅是计算资源有限的情况。",
+    "提出了通用的hallucination最低概率下限，通过特定假设和相对宽松条件下得到了hallucination的频率约束。": "contribution:提出了通用的hallucination最低概率下限，通过特定假设和相对宽松条件下得到了hallucination的频率约束。",
+    "通过多种实验（硬币翻转问题、语言模型和图像生成）验证了理论分析的有效性，说明hallucination是估计过程的固有结构性问题而非模型规模大小的问题。": "contribution:通过多种实验（硬币翻转问题、语言模型和图像生成）验证了理论分析的有效性，说明hallucination是估计过程的固有结构性问题而非模型规模大小的问题。",
+    "fact-controlled diagnosis of hallucinations in medical text summarization": "paper:2506.00448v1",
+    "llm-based fact alignment": "method:llm-based fact alignment",
+    "尽管语言模型在生成临床对话摘要时存在 幻觉 问题，但现有通用幻觉检测器在临床环境中的有效性尚未得到验证。": "task:尽管语言模型在生成临床对话摘要时存在 幻觉 问题，但现有通用幻觉检测器在临床环境中的有效性尚未得到验证。",
+    "leave-n-out dataset": "dataset:leave-n-out dataset",
+    "natural hallucination dataset": "dataset:natural hallucination dataset",
+    "xsum hallucination annotations dataset": "dataset:xsum hallucination annotations dataset",
+    "pearson correlation": "metric:pearson correlation",
+    "fact-based hallucination count": "metric:fact-based hallucination count",
+    "提出了事实控制合成数据集来精确控制幻觉类型和程度。": "contribution:提出了事实控制合成数据集来精确控制幻觉类型和程度。",
+    "展示了基于llm的方法在临床环境中的适用性和较好的泛化能力。": "contribution:展示了基于llm的方法在临床环境中的适用性和较好的泛化能力。",
+    "提供了一组专门的评估指标，支持专家注释的数据集，以推进准确可靠的临床总结系统。": "contribution:提供了一组专门的评估指标，支持专家注释的数据集，以推进准确可靠的临床总结系统。",
+    "first hallucination tokens are different from conditional ones": "paper:2507.20836v4",
+    "ragtruth": "method:ragtruth",
+    "尽管现有的大规模语言模型存在生成虚假内容的问题，但关于虚假信号在生成序列中的分布缺乏深入理解。": "task:尽管现有的大规模语言模型存在生成虚假内容的问题，但关于虚假信号在生成序列中的分布缺乏深入理解。",
+    "auroc": "metric:auroc",
+    "详细说明了令牌生成位置内的虚假信号系统变化。": "contribution:详细说明了令牌生成位置内的虚假信号系统变化。",
+    "证明了光栅化数据集 dataset all，第一令牌具有更强的虚假信号。": "contribution:证明了光栅化数据集 dataset all，第一令牌具有更强的虚假信号。",
+    "发现熵是最有效的识别第一幻觉令牌的信号。": "contribution:发现熵是最有效的识别第一幻觉令牌的信号。",
+    "hallucinated adversarial learning for robust visual tracking": "paper:1906.07008v1",
+    "adversarial hallucinator ah": "method:adversarial hallucinator ah",
+    "为了缓解深度学习方法在低数据视觉跟踪中的过度拟合问题，提出了一种新的针对视觉跟踪的人工想象方法。": "task:为了缓解深度学习方法在低数据视觉跟踪中的过度拟合问题，提出了一种新的针对视觉跟踪的人工想象方法。",
+    "imagenet-vid snippet dataset": "dataset:imagenet-vid snippet dataset",
+    "constructed dataset dq": "dataset:constructed dataset dq",
+    "dpr": "metric:dpr",
+    "auc": "metric:auc",
+    "我们提出了一个基于生成对抗网络的人工想象器（ah），这是一种数据增强方法，可以模仿人类的想象力以生成新的正面样本。": "contribution:我们提出了一个基于生成对抗网络的人工想象器（ah），这是一种数据增强方法，可以模仿人类的想象力以生成新的正面样本。",
+    "基于ah，我们提出了幻觉对抗跟踪器（hat），它将ah和在线分类器（mdnet）集成进了一种端到端的学习框架，以帮助克服样本不足的问题。": "contribution:基于ah，我们提出了幻觉对抗跟踪器（hat），它将ah和在线分类器（mdnet）集成进了一种端到端的学习框架，以帮助克服样本不足的问题。",
+    "我们提出了选择性变形传递（sdt）方法，以更好地选择适合传输的变形": "contribution:我们提出了选择性变形传递（sdt）方法，以更好地选择适合传输的变形",
+    "detecting ai hallucinations in finance an information-theoretic method cuts hallucination rate by 92": "paper:2512.03107v1",
+    "eclipse": "method:eclipse",
+    "尽管大型语言模型在高风险领域（如金融）中具有决策支持作用，但它们生成的事实错误支持答案（幻觉）会带来严重风险。": "task:尽管大型语言模型在高风险领域（如金融）中具有决策支持作用，但它们生成的事实错误支持答案（幻觉）会带来严重风险。",
+    "gpt-3.5-turbo": "dataset:gpt-3.5-turbo",
+    "roc auc": "metric:roc auc",
+    "average precision": "metric:average precision",
+    "f1 score": "metric:f1 score",
+    "提出了一种基于熵-容量权值的理论框架，证明在轻微条件下是严格凹的且具有唯一的稳定最优值。": "contribution:提出了一种基于熵-容量权值的理论框架，证明在轻微条件下是严格凹的且具有唯一的稳定最优值。",
+    "开发了一种基于困惑度分解的新颖特征，细化了模型如何使用证据。": "contribution:开发了一种基于困惑度分解的新颖特征，细化了模型如何使用证据。",
+    "在受控的金融问答数据集上实现了较强的检测性能，表明基于api的灰色箱检测器可以实现高性能。": "contribution:在受控的金融问答数据集上实现了较强的检测性能，表明基于api的灰色箱检测器可以实现高性能。",
+    "受控消融实验证明eclipse对真实的令牌log概率高度依赖，展示了其log概率原生性质。": "contribution:受控消融实验证明eclipse对真实的令牌log概率高度依赖，展示了其log概率原生性质。",
+    "hallucination": "concept:hallucination",
+    "synthetic coin flipping problem": "dataset:synthetic coin flipping problem",
+    "gpt5": "model:gpt5",
+    "gemini 2.5 flash": "model:gemini 2.5 flash",
+    "deepseek r1": "model:deepseek r1",
+    "animal faces-hq": "dataset:animal faces-hq",
+    "training loss": "metric:training loss",
+    "loss minimizing optimal estimator": "concept:loss minimizing optimal estimator",
+    "hallucination detection": "task:hallucination detection",
+    "clinical summarization system": "task:clinical summarization system",
+    "first hallucination token": "concept:first hallucination token",
+    "later hallucinated token": "concept:later hallucinated token",
+    "hat": "method:hat",
+    "ah": "method:ah",
+    "mdnet": "model:mdnet",
+    "imagenet-vid": "dataset:imagenet-vid",
+    "dq": "dataset:dq",
+    "sdt": "method:sdt",
+    "hallucinator": "method:hallucinator",
+    "non-linear deformations": "concept:non-linear deformations",
+    "data augmentation": "concept:data augmentation",
+    "state-of-the-art performance": "metric:state-of-the-art performance",
+    "financial question answering dataset": "dataset:financial question answering dataset"
+  },
+  "communities": {
+    "0": {
+      "nodes": [
+        "paper:2509.21473v1",
+        "dataset:animal faces-hq afhq dataset 5558 cat images 5139 dog images",
+        "contribution:首次定义δ-hallucination，将hallucination形式化为估计输出无法匹配任何真实可能状态的情况。",
+        "contribution:证明贝叶斯最优估计器即使在无限容量下也可能会产生hallucination，而不仅仅是计算资源有限的情况。",
+        "contribution:提出了通用的hallucination最低概率下限，通过特定假设和相对宽松条件下得到了hallucination的频率约束。",
+        "contribution:通过多种实验（硬币翻转问题、语言模型和图像生成）验证了理论分析的有效性，说明hallucination是估计过程的固有结构性问题而非模型规模大小的问题。"
+      ],
+      "key_entities": [
+        "Are Hallucinations Bad Estimations?",
+        "Animal Faces-HQ (AFHQ) dataset (5558 cat images, 5139 dog images)",
+        "首次定义δ-hallucination，将hallucination形式化为估计输出无法匹配任何真实可能状态的情况。",
+        "证明贝叶斯最优估计器即使在无限容量下也可能会产生hallucination，而不仅仅是计算资源有限的情况。",
+        "提出了通用的hallucination最低概率下限，通过特定假设和相对宽松条件下得到了hallucination的频率约束。",
+        "通过多种实验（硬币翻转问题、语言模型和图像生成）验证了理论分析的有效性，说明hallucination是估计过程的固有结构性问题而非模型规模大小的问题。"
+      ],
+      "key_papers": [
+        "Are Hallucinations Bad Estimations?"
+      ],
+      "dominant_types": [
+        "Contribution",
+        "Paper",
+        "Dataset"
+      ],
+      "semantic_tag": "Research Contributions Cluster",
+      "summary": "",
+      "community_name": "Research Contributions Cluster"
+    },
+    "1": {
+      "nodes": [
+        "method:δ-hallucination",
+        "task:尽管使用损失最小化方法可以训练出在合成数据上效果良好的生成模型，但这些模型仍可能生成与实际情境不符的虚假输出（hallucinations），这在多种应用场景下带来严重问题。",
+        "dataset:synthetic coin flipping problem 2n coins m flips",
+        "dataset:gpt5 gemini 2.5 flash deepseek r1 to generate open-ended questions",
+        "metric:training loss mean min-max",
+        "metric:hallucination rate",
+        "dataset:synthetic coin flipping problem",
+        "model:gpt5",
+        "model:gemini 2.5 flash",
+        "model:deepseek r1",
+        "dataset:animal faces-hq",
+        "metric:training loss",
+        "task:hallucination detection",
+        "metric:state-of-the-art performance"
+      ],
+      "key_entities": [
+        "δ-hallucination",
+        "尽管使用损失最小化方法可以训练出在合成数据上效果良好的生成模型，但这些模型仍可能生成与实际情境不符的虚假输出（hallucinations），这在多种应用场景下带来严重问题。",
+        "Synthetic Coin Flipping Problem (2N coins, M flips)",
+        "GPT5, Gemini 2.5 Flash, DeepSeek R1 to generate open-ended questions",
+        "Training Loss (mean, min-max)",
+        "Hallucination Rate",
+        "Synthetic Coin Flipping Problem",
+        "GPT5",
+        "Gemini 2.5 Flash",
+        "DeepSeek R1",
+        "Animal Faces-HQ",
+        "Training Loss"
+      ],
+      "key_papers": [],
+      "dominant_types": [
+        "Dataset",
+        "Metric",
+        "Model"
+      ],
+      "semantic_tag": "Benchmark & Dataset Cluster",
+      "summary": "",
+      "community_name": "Benchmark & Dataset Cluster"
+    },
+    "2": {
+      "nodes": [
+        "paper:2506.00448v1",
+        "method:llm-based fact alignment",
+        "task:尽管语言模型在生成临床对话摘要时存在 幻觉 问题，但现有通用幻觉检测器在临床环境中的有效性尚未得到验证。",
+        "dataset:leave-n-out dataset",
+        "dataset:natural hallucination dataset",
+        "dataset:xsum hallucination annotations dataset",
+        "metric:pearson correlation",
+        "metric:fact-based hallucination count",
+        "contribution:提出了事实控制合成数据集来精确控制幻觉类型和程度。",
+        "contribution:展示了基于llm的方法在临床环境中的适用性和较好的泛化能力。",
+        "contribution:提供了一组专门的评估指标，支持专家注释的数据集，以推进准确可靠的临床总结系统。",
+        "task:clinical summarization system"
+      ],
+      "key_entities": [
+        "Fact-Controlled Diagnosis of Hallucinations in Medical Text Summarization",
+        "LLM-based Fact Alignment",
+        "尽管语言模型在生成临床对话摘要时存在'幻觉'问题，但现有通用幻觉检测器在临床环境中的有效性尚未得到验证。",
+        "Leave-N-Out dataset",
+        "Natural Hallucination dataset",
+        "XSum Hallucination Annotations dataset",
+        "Pearson correlation",
+        "Fact-based hallucination count",
+        "提出了事实控制合成数据集来精确控制幻觉类型和程度。",
+        "展示了基于LLM的方法在临床环境中的适用性和较好的泛化能力。",
+        "提供了一组专门的评估指标，支持专家注释的数据集，以推进准确可靠的临床总结系统。",
+        "Clinical summarization system"
+      ],
+      "key_papers": [
+        "Fact-Controlled Diagnosis of Hallucinations in Medical Text Summarization"
+      ],
+      "dominant_types": [
+        "Dataset",
+        "Contribution",
+        "Task"
+      ],
+      "semantic_tag": "Benchmark & Dataset Cluster",
+      "summary": "",
+      "community_name": "Benchmark & Dataset Cluster"
+    },
+    "3": {
+      "nodes": [
+        "paper:2507.20836v4",
+        "contribution:详细说明了令牌生成位置内的虚假信号系统变化。",
+        "contribution:证明了光栅化数据集 dataset all，第一令牌具有更强的虚假信号。",
+        "contribution:发现熵是最有效的识别第一幻觉令牌的信号。"
+      ],
+      "key_entities": [
+        "First Hallucination Tokens Are Different from Conditional Ones",
+        "详细说明了令牌生成位置内的虚假信号系统变化。",
+        "证明了光栅化数据集(Dataset): all，第一令牌具有更强的虚假信号。",
+        "发现熵是最有效的识别第一幻觉令牌的信号。"
+      ],
+      "key_papers": [
+        "First Hallucination Tokens Are Different from Conditional Ones"
+      ],
+      "dominant_types": [
+        "Contribution",
+        "Paper"
+      ],
+      "semantic_tag": "Research Contributions Cluster",
+      "summary": "",
+      "community_name": "Research Contributions Cluster"
+    },
+    "4": {
+      "nodes": [
+        "method:ragtruth",
+        "task:尽管现有的大规模语言模型存在生成虚假内容的问题，但关于虚假信号在生成序列中的分布缺乏深入理解。",
+        "metric:auroc",
+        "concept:first hallucination token",
+        "concept:later hallucinated token"
+      ],
+      "key_entities": [
+        "RAGTruth",
+        "尽管现有的大规模语言模型存在生成虚假内容的问题，但关于虚假信号在生成序列中的分布缺乏深入理解。",
+        "AUROC",
+        "first hallucination token",
+        "later hallucinated token"
+      ],
+      "key_papers": [],
+      "dominant_types": [
+        "Concept",
+        "Method",
+        "Task"
+      ],
+      "semantic_tag": "Research Topic Cluster",
+      "summary": "",
+      "community_name": "Research Topic Cluster"
+    },
+    "5": {
+      "nodes": [
+        "paper:1906.07008v1",
+        "method:adversarial hallucinator ah",
+        "task:为了缓解深度学习方法在低数据视觉跟踪中的过度拟合问题，提出了一种新的针对视觉跟踪的人工想象方法。",
+        "dataset:imagenet-vid snippet dataset",
+        "dataset:constructed dataset dq",
+        "metric:dpr",
+        "metric:auc",
+        "contribution:我们提出了一个基于生成对抗网络的人工想象器（ah），这是一种数据增强方法，可以模仿人类的想象力以生成新的正面样本。",
+        "contribution:基于ah，我们提出了幻觉对抗跟踪器（hat），它将ah和在线分类器（mdnet）集成进了一种端到端的学习框架，以帮助克服样本不足的问题。",
+        "contribution:我们提出了选择性变形传递（sdt）方法，以更好地选择适合传输的变形"
+      ],
+      "key_entities": [
+        "Hallucinated Adversarial Learning for Robust Visual Tracking",
+        "adversarial hallucinator (AH)",
+        "为了缓解深度学习方法在低数据视觉跟踪中的过度拟合问题，提出了一种新的针对视觉跟踪的人工想象方法。",
+        "ImageNet-VID snippet dataset",
+        "constructed dataset DQ",
+        "DPR",
+        "AUC",
+        "我们提出了一个基于生成对抗网络的人工想象器（AH），这是一种数据增强方法，可以模仿人类的想象力以生成新的正面样本。",
+        "基于AH，我们提出了幻觉对抗跟踪器（HAT），它将AH和在线分类器（MDNet）集成进了一种端到端的学习框架，以帮助克服样本不足的问题。",
+        "我们提出了选择性变形传递（SDT）方法，以更好地选择适合传输的变形"
+      ],
+      "key_papers": [
+        "Hallucinated Adversarial Learning for Robust Visual Tracking"
+      ],
+      "dominant_types": [
+        "Contribution",
+        "Dataset",
+        "Metric"
+      ],
+      "semantic_tag": "Benchmark & Dataset Cluster",
+      "summary": "",
+      "community_name": "Benchmark & Dataset Cluster"
+    },
+    "6": {
+      "nodes": [
+        "paper:2512.03107v1",
+        "contribution:提出了一种基于熵-容量权值的理论框架，证明在轻微条件下是严格凹的且具有唯一的稳定最优值。",
+        "contribution:开发了一种基于困惑度分解的新颖特征，细化了模型如何使用证据。",
+        "contribution:在受控的金融问答数据集上实现了较强的检测性能，表明基于api的灰色箱检测器可以实现高性能。",
+        "contribution:受控消融实验证明eclipse对真实的令牌log概率高度依赖，展示了其log概率原生性质。"
+      ],
+      "key_entities": [
+        "Detecting AI Hallucinations in Finance: An Information-Theoretic Method Cuts Hallucination Rate by 92%",
+        "提出了一种基于熵-容量权值的理论框架，证明在轻微条件下是严格凹的且具有唯一的稳定最优值。",
+        "开发了一种基于困惑度分解的新颖特征，细化了模型如何使用证据。",
+        "在受控的金融问答数据集上实现了较强的检测性能，表明基于API的灰色箱检测器可以实现高性能。",
+        "受控消融实验证明ECLIPSE对真实的令牌log概率高度依赖，展示了其log概率原生性质。"
+      ],
+      "key_papers": [
+        "Detecting AI Hallucinations in Finance: An Information-Theoretic Method Cuts Hallucination Rate by 92%"
+      ],
+      "dominant_types": [
+        "Contribution",
+        "Paper"
+      ],
+      "semantic_tag": "Research Contributions Cluster",
+      "summary": "",
+      "community_name": "Research Contributions Cluster"
+    },
+    "7": {
+      "nodes": [
+        "method:eclipse",
+        "task:尽管大型语言模型在高风险领域（如金融）中具有决策支持作用，但它们生成的事实错误支持答案（幻觉）会带来严重风险。",
+        "dataset:gpt-3.5-turbo",
+        "metric:roc auc",
+        "metric:average precision",
+        "metric:f1 score",
+        "dataset:financial question answering dataset"
+      ],
+      "key_entities": [
+        "ECLIPSE",
+        "尽管大型语言模型在高风险领域（如金融）中具有决策支持作用，但它们生成的事实错误支持答案（幻觉）会带来严重风险。",
+        "GPT-3.5-turbo",
+        "ROC AUC",
+        "Average Precision",
+        "F1 Score",
+        "financial question answering dataset"
+      ],
+      "key_papers": [],
+      "dominant_types": [
+        "Metric",
+        "Dataset",
+        "Method"
+      ],
+      "semantic_tag": "Benchmark & Dataset Cluster",
+      "summary": "",
+      "community_name": "Benchmark & Dataset Cluster"
+    },
+    "8": {
+      "nodes": [
+        "concept:hallucination",
+        "concept:loss minimizing optimal estimator"
+      ],
+      "key_entities": [
+        "hallucination",
+        "Loss Minimizing Optimal Estimator"
+      ],
+      "key_papers": [],
+      "dominant_types": [
+        "Concept"
+      ],
+      "semantic_tag": "Research Topic Cluster",
+      "summary": "",
+      "community_name": "Research Topic Cluster"
+    },
+    "9": {
+      "nodes": [
+        "method:hat",
+        "dataset:dq",
+        "concept:data augmentation"
+      ],
+      "key_entities": [
+        "HAT",
+        "DQ",
+        "Data Augmentation"
+      ],
+      "key_papers": [],
+      "dominant_types": [
+        "Method",
+        "Dataset",
+        "Concept"
+      ],
+      "semantic_tag": "Benchmark & Dataset Cluster",
+      "summary": "",
+      "community_name": "Benchmark & Dataset Cluster"
+    },
+    "10": {
+      "nodes": [
+        "method:ah",
+        "model:mdnet",
+        "dataset:imagenet-vid",
+        "method:sdt",
+        "method:hallucinator",
+        "concept:non-linear deformations"
+      ],
+      "key_entities": [
+        "AH",
+        "MDNet",
+        "ImageNet-VID",
+        "SDT",
+        "hallucinator",
+        "non-linear deformations"
+      ],
+      "key_papers": [],
+      "dominant_types": [
+        "Method",
+        "Model",
+        "Dataset"
+      ],
+      "semantic_tag": "Computer Vision Cluster",
+      "summary": "",
+      "community_name": "Computer Vision Cluster"
+    }
+  },
+  "citation_graph": {},
+  "stats": {
+    "node_count": 74,
+    "edge_count": 108,
+    "node_type_count": {
+      "Paper": 5,
+      "Method": 9,
+      "Task": 7,
+      "Dataset": 14,
+      "Metric": 12,
+      "Contribution": 17,
+      "Concept": 6,
+      "Model": 4
+    },
+    "paper_count": 5,
+    "community_count": 0,
+    "citation_edge_count": 0
+  }
+}

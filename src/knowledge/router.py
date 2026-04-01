@@ -1,16 +1,12 @@
-import asyncio
 import os
 import traceback
-from urllib.parse import quote, unquote
-from pathlib import Path
 
-from fastapi import APIRouter, Body, Depends, File, HTTPException, Query, Request, UploadFile
-from fastapi.responses import FileResponse
+from fastapi import APIRouter, Body, File, HTTPException, Query, UploadFile
 
 from src.knowledge import config, knowledge_base
-from src.knowledge.indexing import SUPPORTED_FILE_EXTENSIONS, is_supported_file_extension, process_file_to_markdown
+from src.knowledge.indexing import SUPPORTED_FILE_EXTENSIONS, is_supported_file_extension
 from src.knowledge.utils import calculate_content_hash
-from src.services.graph_store import load_entity_graph, graph_summary
+from src.extraction.graph_builder import load_entity_graph, graph_summary
 from src.utils import hashstr
 from src.utils.log_utils import setup_logger
 
@@ -277,8 +273,7 @@ async def get_build_options():
             {"id": "qa_chunk", "label": "问答切片"},
         ],
         "retrieval_methods": [
-            {"id": "vector", "label": "向量检索"},
-            {"id": "hybrid", "label": "RAG混合重排"},
+            {"id": "rag", "label": "RAG"},
             {"id": "graphrag", "label": "GraphRAG"},
             {"id": "both", "label": "RAG + GraphRAG"},
         ],
