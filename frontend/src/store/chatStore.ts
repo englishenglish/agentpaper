@@ -1,5 +1,20 @@
 import { create } from 'zustand';
-import { persist } from 'zustand/middleware';
+import { createJSONStorage, persist } from 'zustand/middleware';
+
+/** SSR/Node 下无 `localStorage` 时仍提供 Storage 形态，否则 persist 不会挂载 `api.persist`（见 zustand middleware `newImpl`）。 */
+function getPersistStorage(): Storage {
+  if (typeof window !== 'undefined') {
+    return localStorage;
+  }
+  return {
+    getItem: () => null,
+    setItem: () => {},
+    removeItem: () => {},
+    length: 0,
+    clear: () => {},
+    key: () => null,
+  } as Storage;
+}
 import type { ChatSession, CitationChunk, KbBinding, Message, UsedKb } from '@/types';
 import { generateId } from '@/lib/utils';
 
@@ -167,6 +182,7 @@ export const useChatStore = create<ChatState>()(
     }),
     {
       name: 'paper-agent-chat',
+      storage: createJSONStorage(getPersistStorage),
       version: 4,
       migrate: (persistedState: unknown, version: number) => {
         const s = persistedState as {

@@ -1,0 +1,1215 @@
+{
+  "db_id": "kb_e5c00c9f4e8d1927b19286dd039d0749",
+  "nodes": {
+    "paper:2509.21473v1": {
+      "id": "paper:2509.21473v1",
+      "type": "Paper",
+      "label": "Are Hallucinations Bad Estimations?",
+      "norm_label": "are hallucinations bad estimations"
+    },
+    "method:delta-hallucination": {
+      "id": "method:delta-hallucination",
+      "type": "Method",
+      "label": "delta-hallucination",
+      "norm_label": "delta-hallucination"
+    },
+    "task:尽管生成模型能够产生自信而不支持或不真实的输出，但为了理解从根本上导致模型产生不正确输出的原因，我们从一种新的视角将其定义为链接估计预测和任何可能的输入原因的能力不完全，即使损失最小化最优估计器依然会": {
+      "id": "task:尽管生成模型能够产生自信而不支持或不真实的输出，但为了理解从根本上导致模型产生不正确输出的原因，我们从一种新的视角将其定义为链接估计预测和任何可能的输入原因的能力不完全，即使损失最小化最优估计器依然会",
+      "type": "Task",
+      "label": "尽管生成模型能够产生自信而不支持或不真实的输出，但为了理解从根本上导致模型产生不正确输出的原因，我们从一种新的视角将其定义为链接估计预测和任何可能的输入原因的能力不完全，即使损失最小化最优估计器依然会",
+      "norm_label": "尽管生成模型能够产生自信而不支持或不真实的输出，但为了理解从根本上导致模型产生不正确输出的原因，我们从一种新的视角将其定义为链接估计预测和任何可能的输入原因的能力不完全，即使损失最小化最优估计器依然会"
+    },
+    "contribution:提出了δ-幻觉的概念，以捕捉估计器输出未能匹配任何可能实际输出的情况。": {
+      "id": "contribution:提出了δ-幻觉的概念，以捕捉估计器输出未能匹配任何可能实际输出的情况。",
+      "type": "Contribution",
+      "label": "提出了δ-幻觉的概念，以捕捉估计器输出未能匹配任何可能实际输出的情况。",
+      "norm_label": "提出了δ-幻觉的概念，以捕捉估计器输出未能匹配任何可能实际输出的情况。"
+    },
+    "contribution:证明了即使是最优估计器最小化损失，也依然会产生幻觉，即使输入的可能正确答案是多样的。": {
+      "id": "contribution:证明了即使是最优估计器最小化损失，也依然会产生幻觉，即使输入的可能正确答案是多样的。",
+      "type": "Contribution",
+      "label": "证明了即使是最优估计器最小化损失，也依然会产生幻觉，即使输入的可能正确答案是多样的。",
+      "norm_label": "证明了即使是最优估计器最小化损失，也依然会产生幻觉，即使输入的可能正确答案是多样的。"
+    },
+    "contribution:推导出δ-幻觉发生的概率下限，证明了幻觉在广泛的靶分布类别中是几乎必然存在的。": {
+      "id": "contribution:推导出δ-幻觉发生的概率下限，证明了幻觉在广泛的靶分布类别中是几乎必然存在的。",
+      "type": "Contribution",
+      "label": "推导出δ-幻觉发生的概率下限，证明了幻觉在广泛的靶分布类别中是几乎必然存在的。",
+      "norm_label": "推导出δ-幻觉发生的概率下限，证明了幻觉在广泛的靶分布类别中是几乎必然存在的。"
+    },
+    "paper:2506.00448v1": {
+      "id": "paper:2506.00448v1",
+      "type": "Paper",
+      "label": "Fact-Controlled Diagnosis of Hallucinations in Medical Text Summarization",
+      "norm_label": "fact-controlled diagnosis of hallucinations in medical text summarization"
+    },
+    "method:fact-based approaches": {
+      "id": "method:fact-based approaches",
+      "type": "Method",
+      "label": "fact-based approaches",
+      "norm_label": "fact-based approaches"
+    },
+    "task:尽管大型语言模型在总结患者-临床对话时容易出现幻觉，但这些幻觉会影响临床决策并潜在地引发医疗事故，因此需要开发有效的幻觉检测方法。": {
+      "id": "task:尽管大型语言模型在总结患者-临床对话时容易出现幻觉，但这些幻觉会影响临床决策并潜在地引发医疗事故，因此需要开发有效的幻觉检测方法。",
+      "type": "Task",
+      "label": "尽管大型语言模型在总结患者-临床对话时容易出现幻觉，但这些幻觉会影响临床决策并潜在地引发医疗事故，因此需要开发有效的幻觉检测方法。",
+      "norm_label": "尽管大型语言模型在总结患者-临床对话时容易出现幻觉，但这些幻觉会影响临床决策并潜在地引发医疗事故，因此需要开发有效的幻觉检测方法。"
+    },
+    "dataset:leave-n-out lno dataset": {
+      "id": "dataset:leave-n-out lno dataset",
+      "type": "Dataset",
+      "label": "Leave-N-Out (LNO) dataset",
+      "norm_label": "leave-n-out lno dataset"
+    },
+    "dataset:natural hallucination nh dataset": {
+      "id": "dataset:natural hallucination nh dataset",
+      "type": "Dataset",
+      "label": "Natural Hallucination (NH) dataset",
+      "norm_label": "natural hallucination nh dataset"
+    },
+    "dataset:xsum hallucination annotations": {
+      "id": "dataset:xsum hallucination annotations",
+      "type": "Dataset",
+      "label": "XSum Hallucination Annotations",
+      "norm_label": "xsum hallucination annotations"
+    },
+    "metric:f1": {
+      "id": "metric:f1",
+      "type": "Metric",
+      "label": "F1",
+      "norm_label": "f1"
+    },
+    "metric:pearson correlation": {
+      "id": "metric:pearson correlation",
+      "type": "Metric",
+      "label": "Pearson correlation",
+      "norm_label": "pearson correlation"
+    },
+    "metric:cosine similarity": {
+      "id": "metric:cosine similarity",
+      "type": "Metric",
+      "label": "Cosine similarity",
+      "norm_label": "cosine similarity"
+    },
+    "contribution:开发了一种基于事实对齐的方法，有效提高了幻觉检测的准确性。": {
+      "id": "contribution:开发了一种基于事实对齐的方法，有效提高了幻觉检测的准确性。",
+      "type": "Contribution",
+      "label": "开发了一种基于事实对齐的方法，有效提高了幻觉检测的准确性。",
+      "norm_label": "开发了一种基于事实对齐的方法，有效提高了幻觉检测的准确性。"
+    },
+    "contribution:首次提出了专门针对临床幻觉的具体评价指标，这些指标通过专家标注的数据集得到支持。": {
+      "id": "contribution:首次提出了专门针对临床幻觉的具体评价指标，这些指标通过专家标注的数据集得到支持。",
+      "type": "Contribution",
+      "label": "首次提出了专门针对临床幻觉的具体评价指标，这些指标通过专家标注的数据集得到支持。",
+      "norm_label": "首次提出了专门针对临床幻觉的具体评价指标，这些指标通过专家标注的数据集得到支持。"
+    },
+    "contribution:实验证明lno和nh数据集在幻觉检测方面具有良好的泛化能力，但自然幻觉数据集仍存在挑战。": {
+      "id": "contribution:实验证明lno和nh数据集在幻觉检测方面具有良好的泛化能力，但自然幻觉数据集仍存在挑战。",
+      "type": "Contribution",
+      "label": "实验证明LNO和NH数据集在幻觉检测方面具有良好的泛化能力，但自然幻觉数据集仍存在挑战。",
+      "norm_label": "实验证明lno和nh数据集在幻觉检测方面具有良好的泛化能力，但自然幻觉数据集仍存在挑战。"
+    },
+    "contribution:突出强调了事实计数方法的解释性优势。": {
+      "id": "contribution:突出强调了事实计数方法的解释性优势。",
+      "type": "Contribution",
+      "label": "突出强调了事实计数方法的解释性优势。",
+      "norm_label": "突出强调了事实计数方法的解释性优势。"
+    },
+    "paper:2507.20836v4": {
+      "id": "paper:2507.20836v4",
+      "type": "Paper",
+      "label": "First Hallucination Tokens Are Different from Conditional Ones",
+      "norm_label": "first hallucination tokens are different from conditional ones"
+    },
+    "method:token-level hallucination detection": {
+      "id": "method:token-level hallucination detection",
+      "type": "Method",
+      "label": "token-level hallucination detection",
+      "norm_label": "token-level hallucination detection"
+    },
+    "task:尽管大型语言模型（llms）会产生幻觉，检测这些情况对于确保信任至关重要，但当前方法大多忽视了幻觉信号在幻言论据中的演进。": {
+      "id": "task:尽管大型语言模型（llms）会产生幻觉，检测这些情况对于确保信任至关重要，但当前方法大多忽视了幻觉信号在幻言论据中的演进。",
+      "type": "Task",
+      "label": "尽管大型语言模型（LLMs）会产生幻觉，检测这些情况对于确保信任至关重要，但当前方法大多忽视了幻觉信号在幻言论据中的演进。",
+      "norm_label": "尽管大型语言模型（llms）会产生幻觉，检测这些情况对于确保信任至关重要，但当前方法大多忽视了幻觉信号在幻言论据中的演进。"
+    },
+    "dataset:ragtruth": {
+      "id": "dataset:ragtruth",
+      "type": "Dataset",
+      "label": "RAGTruth",
+      "norm_label": "ragtruth"
+    },
+    "metric:auroc": {
+      "id": "metric:auroc",
+      "type": "Metric",
+      "label": "AUROC",
+      "norm_label": "auroc"
+    },
+    "metric:min-k probability": {
+      "id": "metric:min-k probability",
+      "type": "Metric",
+      "label": "MIN-K probability",
+      "norm_label": "min-k probability"
+    },
+    "metric:min-k entropy": {
+      "id": "metric:min-k entropy",
+      "type": "Metric",
+      "label": "MIN-K entropy",
+      "norm_label": "min-k entropy"
+    },
+    "contribution:首次证明首次token更具幻觉信号特征。": {
+      "id": "contribution:首次证明首次token更具幻觉信号特征。",
+      "type": "Contribution",
+      "label": "首次证明首次token更具幻觉信号特征。",
+      "norm_label": "首次证明首次token更具幻觉信号特征。"
+    },
+    "contribution:提供了更精细的token级幻觉检测方法。": {
+      "id": "contribution:提供了更精细的token级幻觉检测方法。",
+      "type": "Contribution",
+      "label": "提供了更精细的token级幻觉检测方法。",
+      "norm_label": "提供了更精细的token级幻觉检测方法。"
+    },
+    "contribution:指出了当前基于logit的方法在所有token位置上的不足。": {
+      "id": "contribution:指出了当前基于logit的方法在所有token位置上的不足。",
+      "type": "Contribution",
+      "label": "指出了当前基于logit的方法在所有token位置上的不足。",
+      "norm_label": "指出了当前基于logit的方法在所有token位置上的不足。"
+    },
+    "paper:2512.03107v1": {
+      "id": "paper:2512.03107v1",
+      "type": "Paper",
+      "label": "Detecting AI Hallucinations in Finance: An Information-Theoretic Method Cuts Hallucination Rate by 92%",
+      "norm_label": "detecting ai hallucinations in finance an information-theoretic method cuts hallucination rate by 92"
+    },
+    "method:eclipse": {
+      "id": "method:eclipse",
+      "type": "Method",
+      "label": "ECLIPSE",
+      "norm_label": "eclipse"
+    },
+    "task:尽管大型语言模型（llms）能够生成自然流畅的回答，但这些回答往往缺乏事实支持，成为导致高风险应用中安全问题的主要原因。": {
+      "id": "task:尽管大型语言模型（llms）能够生成自然流畅的回答，但这些回答往往缺乏事实支持，成为导致高风险应用中安全问题的主要原因。",
+      "type": "Task",
+      "label": "尽管大型语言模型（LLMs）能够生成自然流畅的回答，但这些回答往往缺乏事实支持，成为导致高风险应用中安全问题的主要原因。",
+      "norm_label": "尽管大型语言模型（llms）能够生成自然流畅的回答，但这些回答往往缺乏事实支持，成为导致高风险应用中安全问题的主要原因。"
+    },
+    "dataset:金融问答数据集 n 200": {
+      "id": "dataset:金融问答数据集 n 200",
+      "type": "Dataset",
+      "label": "金融问答数据集 (n=200)",
+      "norm_label": "金融问答数据集 n 200"
+    },
+    "dataset:涵盖合成幻觉和真实报告的样本": {
+      "id": "dataset:涵盖合成幻觉和真实报告的样本",
+      "type": "Dataset",
+      "label": "涵盖合成幻觉和真实报告的样本",
+      "norm_label": "涵盖合成幻觉和真实报告的样本"
+    },
+    "metric:roc auc": {
+      "id": "metric:roc auc",
+      "type": "Metric",
+      "label": "ROC AUC",
+      "norm_label": "roc auc"
+    },
+    "metric:平均精度": {
+      "id": "metric:平均精度",
+      "type": "Metric",
+      "label": "平均精度",
+      "norm_label": "平均精度"
+    },
+    "contribution:引入了结合熵-容量目标的联合模型来量化幻觉风险。": {
+      "id": "contribution:引入了结合熵-容量目标的联合模型来量化幻觉风险。",
+      "type": "Contribution",
+      "label": "引入了结合熵-容量目标的联合模型来量化幻觉风险。",
+      "norm_label": "引入了结合熵-容量目标的联合模型来量化幻觉风险。"
+    },
+    "contribution:开发了基于困惑度分解的特征提取，用于细粒度检测证据忽略行为。": {
+      "id": "contribution:开发了基于困惑度分解的特征提取，用于细粒度检测证据忽略行为。",
+      "type": "Contribution",
+      "label": "开发了基于困惑度分解的特征提取，用于细粒度检测证据忽略行为。",
+      "norm_label": "开发了基于困惑度分解的特征提取，用于细粒度检测证据忽略行为。"
+    },
+    "contribution:实验证明了通过api访问公示令牌级概率对于有效幻觉检测至关重要。": {
+      "id": "contribution:实验证明了通过api访问公示令牌级概率对于有效幻觉检测至关重要。",
+      "type": "Contribution",
+      "label": "实验证明了通过API访问公示令牌级概率对于有效幻觉检测至关重要。",
+      "norm_label": "实验证明了通过api访问公示令牌级概率对于有效幻觉检测至关重要。"
+    },
+    "contribution:展示了即使在没有真实令牌级概率估计的情况下，eclipse 性能也会显著下降，证实了其对结构化的标记级别信息的依赖性。": {
+      "id": "contribution:展示了即使在没有真实令牌级概率估计的情况下，eclipse 性能也会显著下降，证实了其对结构化的标记级别信息的依赖性。",
+      "type": "Contribution",
+      "label": "展示了即使在没有真实令牌级概率估计的情况下，ECLIPSE 性能也会显著下降，证实了其对结构化的标记级别信息的依赖性。",
+      "norm_label": "展示了即使在没有真实令牌级概率估计的情况下，eclipse 性能也会显著下降，证实了其对结构化的标记级别信息的依赖性。"
+    },
+    "concept:optimal estimator": {
+      "id": "concept:optimal estimator",
+      "type": "Concept",
+      "label": "optimal estimator",
+      "norm_label": "optimal estimator",
+      "description": ""
+    },
+    "concept:loss minimization": {
+      "id": "concept:loss minimization",
+      "type": "Concept",
+      "label": "loss minimization",
+      "norm_label": "loss minimization",
+      "description": ""
+    },
+    "concept:human-acceptable outputs": {
+      "id": "concept:human-acceptable outputs",
+      "type": "Concept",
+      "label": "human-acceptable outputs",
+      "norm_label": "human-acceptable outputs",
+      "description": ""
+    },
+    "method:general-domain hallucination detectors": {
+      "id": "method:general-domain hallucination detectors",
+      "type": "Method",
+      "label": "general-domain hallucination detectors",
+      "norm_label": "general-domain hallucination detectors",
+      "description": ""
+    },
+    "concept:faithful clinical summarization systems": {
+      "id": "concept:faithful clinical summarization systems",
+      "type": "Concept",
+      "label": "Faithful Clinical Summarization Systems",
+      "norm_label": "faithful clinical summarization systems",
+      "description": ""
+    },
+    "task:medical text summarization": {
+      "id": "task:medical text summarization",
+      "type": "Task",
+      "label": "Medical Text Summarization",
+      "norm_label": "medical text summarization",
+      "description": ""
+    },
+    "concept:language models llms": {
+      "id": "concept:language models llms",
+      "type": "Concept",
+      "label": "Language Models (LLMs)",
+      "norm_label": "language models llms",
+      "description": ""
+    },
+    "dataset:financial qa dataset": {
+      "id": "dataset:financial qa dataset",
+      "type": "Dataset",
+      "label": "Financial QA Dataset",
+      "norm_label": "financial qa dataset",
+      "description": ""
+    },
+    "metric:average precision": {
+      "id": "metric:average precision",
+      "type": "Metric",
+      "label": "Average Precision",
+      "norm_label": "average precision",
+      "description": ""
+    },
+    "concept:semantic entropy": {
+      "id": "concept:semantic entropy",
+      "type": "Concept",
+      "label": "Semantic Entropy",
+      "norm_label": "semantic entropy",
+      "description": ""
+    },
+    "concept:evidence capacity": {
+      "id": "concept:evidence capacity",
+      "type": "Concept",
+      "label": "Evidence Capacity",
+      "norm_label": "evidence capacity",
+      "description": ""
+    },
+    "concept:perplexity decomposition": {
+      "id": "concept:perplexity decomposition",
+      "type": "Concept",
+      "label": "Perplexity Decomposition",
+      "norm_label": "perplexity decomposition",
+      "description": ""
+    }
+  },
+  "edges": [
+    {
+      "source": "paper:2509.21473v1",
+      "target": "method:delta-hallucination",
+      "type": "proposes",
+      "weight": 1.0
+    },
+    {
+      "source": "paper:2509.21473v1",
+      "target": "task:尽管生成模型能够产生自信而不支持或不真实的输出，但为了理解从根本上导致模型产生不正确输出的原因，我们从一种新的视角将其定义为链接估计预测和任何可能的输入原因的能力不完全，即使损失最小化最优估计器依然会",
+      "type": "applied_to",
+      "weight": 0.8
+    },
+    {
+      "source": "method:delta-hallucination",
+      "target": "task:尽管生成模型能够产生自信而不支持或不真实的输出，但为了理解从根本上导致模型产生不正确输出的原因，我们从一种新的视角将其定义为链接估计预测和任何可能的输入原因的能力不完全，即使损失最小化最优估计器依然会",
+      "type": "solves",
+      "weight": 0.95
+    },
+    {
+      "source": "paper:2509.21473v1",
+      "target": "contribution:提出了δ-幻觉的概念，以捕捉估计器输出未能匹配任何可能实际输出的情况。",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "method:delta-hallucination",
+      "target": "contribution:提出了δ-幻觉的概念，以捕捉估计器输出未能匹配任何可能实际输出的情况。",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:2509.21473v1",
+      "target": "contribution:证明了即使是最优估计器最小化损失，也依然会产生幻觉，即使输入的可能正确答案是多样的。",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "method:delta-hallucination",
+      "target": "contribution:证明了即使是最优估计器最小化损失，也依然会产生幻觉，即使输入的可能正确答案是多样的。",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:2509.21473v1",
+      "target": "contribution:推导出δ-幻觉发生的概率下限，证明了幻觉在广泛的靶分布类别中是几乎必然存在的。",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "method:delta-hallucination",
+      "target": "contribution:推导出δ-幻觉发生的概率下限，证明了幻觉在广泛的靶分布类别中是几乎必然存在的。",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:2506.00448v1",
+      "target": "method:fact-based approaches",
+      "type": "proposes",
+      "weight": 1.0
+    },
+    {
+      "source": "paper:2506.00448v1",
+      "target": "task:尽管大型语言模型在总结患者-临床对话时容易出现幻觉，但这些幻觉会影响临床决策并潜在地引发医疗事故，因此需要开发有效的幻觉检测方法。",
+      "type": "applied_to",
+      "weight": 0.8
+    },
+    {
+      "source": "method:fact-based approaches",
+      "target": "task:尽管大型语言模型在总结患者-临床对话时容易出现幻觉，但这些幻觉会影响临床决策并潜在地引发医疗事故，因此需要开发有效的幻觉检测方法。",
+      "type": "solves",
+      "weight": 0.95
+    },
+    {
+      "source": "paper:2506.00448v1",
+      "target": "dataset:leave-n-out lno dataset",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "method:fact-based approaches",
+      "target": "dataset:leave-n-out lno dataset",
+      "type": "evaluates_on",
+      "weight": 0.9
+    },
+    {
+      "source": "paper:2506.00448v1",
+      "target": "dataset:natural hallucination nh dataset",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "method:fact-based approaches",
+      "target": "dataset:natural hallucination nh dataset",
+      "type": "evaluates_on",
+      "weight": 0.9
+    },
+    {
+      "source": "paper:2506.00448v1",
+      "target": "dataset:xsum hallucination annotations",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "method:fact-based approaches",
+      "target": "dataset:xsum hallucination annotations",
+      "type": "evaluates_on",
+      "weight": 0.9
+    },
+    {
+      "source": "method:fact-based approaches",
+      "target": "metric:f1",
+      "type": "achieves",
+      "weight": 0.85
+    },
+    {
+      "source": "method:fact-based approaches",
+      "target": "metric:pearson correlation",
+      "type": "achieves",
+      "weight": 0.85
+    },
+    {
+      "source": "method:fact-based approaches",
+      "target": "metric:cosine similarity",
+      "type": "achieves",
+      "weight": 0.85
+    },
+    {
+      "source": "paper:2506.00448v1",
+      "target": "contribution:开发了一种基于事实对齐的方法，有效提高了幻觉检测的准确性。",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "method:fact-based approaches",
+      "target": "contribution:开发了一种基于事实对齐的方法，有效提高了幻觉检测的准确性。",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:2506.00448v1",
+      "target": "contribution:首次提出了专门针对临床幻觉的具体评价指标，这些指标通过专家标注的数据集得到支持。",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "method:fact-based approaches",
+      "target": "contribution:首次提出了专门针对临床幻觉的具体评价指标，这些指标通过专家标注的数据集得到支持。",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:2506.00448v1",
+      "target": "contribution:实验证明lno和nh数据集在幻觉检测方面具有良好的泛化能力，但自然幻觉数据集仍存在挑战。",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "method:fact-based approaches",
+      "target": "contribution:实验证明lno和nh数据集在幻觉检测方面具有良好的泛化能力，但自然幻觉数据集仍存在挑战。",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:2506.00448v1",
+      "target": "contribution:突出强调了事实计数方法的解释性优势。",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "method:fact-based approaches",
+      "target": "contribution:突出强调了事实计数方法的解释性优势。",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:2507.20836v4",
+      "target": "method:token-level hallucination detection",
+      "type": "proposes",
+      "weight": 1.0
+    },
+    {
+      "source": "paper:2507.20836v4",
+      "target": "task:尽管大型语言模型（llms）会产生幻觉，检测这些情况对于确保信任至关重要，但当前方法大多忽视了幻觉信号在幻言论据中的演进。",
+      "type": "applied_to",
+      "weight": 0.8
+    },
+    {
+      "source": "method:token-level hallucination detection",
+      "target": "task:尽管大型语言模型（llms）会产生幻觉，检测这些情况对于确保信任至关重要，但当前方法大多忽视了幻觉信号在幻言论据中的演进。",
+      "type": "solves",
+      "weight": 0.95
+    },
+    {
+      "source": "paper:2507.20836v4",
+      "target": "dataset:ragtruth",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "method:token-level hallucination detection",
+      "target": "dataset:ragtruth",
+      "type": "evaluates_on",
+      "weight": 0.9
+    },
+    {
+      "source": "method:token-level hallucination detection",
+      "target": "metric:auroc",
+      "type": "achieves",
+      "weight": 0.85
+    },
+    {
+      "source": "method:token-level hallucination detection",
+      "target": "metric:min-k probability",
+      "type": "achieves",
+      "weight": 0.85
+    },
+    {
+      "source": "method:token-level hallucination detection",
+      "target": "metric:min-k entropy",
+      "type": "achieves",
+      "weight": 0.85
+    },
+    {
+      "source": "paper:2507.20836v4",
+      "target": "contribution:首次证明首次token更具幻觉信号特征。",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "method:token-level hallucination detection",
+      "target": "contribution:首次证明首次token更具幻觉信号特征。",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:2507.20836v4",
+      "target": "contribution:提供了更精细的token级幻觉检测方法。",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "method:token-level hallucination detection",
+      "target": "contribution:提供了更精细的token级幻觉检测方法。",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:2507.20836v4",
+      "target": "contribution:指出了当前基于logit的方法在所有token位置上的不足。",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "method:token-level hallucination detection",
+      "target": "contribution:指出了当前基于logit的方法在所有token位置上的不足。",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:2512.03107v1",
+      "target": "method:eclipse",
+      "type": "proposes",
+      "weight": 1.0
+    },
+    {
+      "source": "paper:2512.03107v1",
+      "target": "task:尽管大型语言模型（llms）能够生成自然流畅的回答，但这些回答往往缺乏事实支持，成为导致高风险应用中安全问题的主要原因。",
+      "type": "applied_to",
+      "weight": 0.8
+    },
+    {
+      "source": "method:eclipse",
+      "target": "task:尽管大型语言模型（llms）能够生成自然流畅的回答，但这些回答往往缺乏事实支持，成为导致高风险应用中安全问题的主要原因。",
+      "type": "solves",
+      "weight": 0.95
+    },
+    {
+      "source": "paper:2512.03107v1",
+      "target": "dataset:金融问答数据集 n 200",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "method:eclipse",
+      "target": "dataset:金融问答数据集 n 200",
+      "type": "evaluates_on",
+      "weight": 0.9
+    },
+    {
+      "source": "paper:2512.03107v1",
+      "target": "dataset:涵盖合成幻觉和真实报告的样本",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "method:eclipse",
+      "target": "dataset:涵盖合成幻觉和真实报告的样本",
+      "type": "evaluates_on",
+      "weight": 0.9
+    },
+    {
+      "source": "method:eclipse",
+      "target": "metric:roc auc",
+      "type": "achieves",
+      "weight": 0.85
+    },
+    {
+      "source": "method:eclipse",
+      "target": "metric:平均精度",
+      "type": "achieves",
+      "weight": 0.85
+    },
+    {
+      "source": "paper:2512.03107v1",
+      "target": "contribution:引入了结合熵-容量目标的联合模型来量化幻觉风险。",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "method:eclipse",
+      "target": "contribution:引入了结合熵-容量目标的联合模型来量化幻觉风险。",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:2512.03107v1",
+      "target": "contribution:开发了基于困惑度分解的特征提取，用于细粒度检测证据忽略行为。",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "method:eclipse",
+      "target": "contribution:开发了基于困惑度分解的特征提取，用于细粒度检测证据忽略行为。",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:2512.03107v1",
+      "target": "contribution:实验证明了通过api访问公示令牌级概率对于有效幻觉检测至关重要。",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "method:eclipse",
+      "target": "contribution:实验证明了通过api访问公示令牌级概率对于有效幻觉检测至关重要。",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:2512.03107v1",
+      "target": "contribution:展示了即使在没有真实令牌级概率估计的情况下，eclipse 性能也会显著下降，证实了其对结构化的标记级别信息的依赖性。",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "method:eclipse",
+      "target": "contribution:展示了即使在没有真实令牌级概率估计的情况下，eclipse 性能也会显著下降，证实了其对结构化的标记级别信息的依赖性。",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "method:delta-hallucination",
+      "target": "concept:optimal estimator",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "method:delta-hallucination",
+      "target": "concept:loss minimization",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "method:delta-hallucination",
+      "target": "concept:human-acceptable outputs",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "method:general-domain hallucination detectors",
+      "target": "dataset:leave-n-out lno dataset",
+      "type": "evaluates_on",
+      "weight": 0.9
+    },
+    {
+      "source": "method:fact-based approaches",
+      "target": "task:medical text summarization",
+      "type": "applied_to",
+      "weight": 0.8
+    },
+    {
+      "source": "dataset:xsum hallucination annotations",
+      "target": "concept:language models llms",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "task:medical text summarization",
+      "target": "dataset:xsum hallucination annotations",
+      "type": "applied_to",
+      "weight": 0.8
+    },
+    {
+      "source": "dataset:leave-n-out lno dataset",
+      "target": "concept:faithful clinical summarization systems",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "dataset:natural hallucination nh dataset",
+      "target": "concept:faithful clinical summarization systems",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "method:general-domain hallucination detectors",
+      "target": "concept:faithful clinical summarization systems",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "method:token-level hallucination detection",
+      "target": "dataset:ragtruth",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "method:token-level hallucination detection",
+      "target": "metric:auroc",
+      "type": "evaluates_on",
+      "weight": 0.9
+    },
+    {
+      "source": "method:token-level hallucination detection",
+      "target": "metric:min-k probability",
+      "type": "evaluates_on",
+      "weight": 0.9
+    },
+    {
+      "source": "method:token-level hallucination detection",
+      "target": "metric:min-k entropy",
+      "type": "evaluates_on",
+      "weight": 0.9
+    },
+    {
+      "source": "method:token-level hallucination detection",
+      "target": "dataset:ragtruth",
+      "type": "compared_with",
+      "weight": 0.7
+    },
+    {
+      "source": "method:eclipse",
+      "target": "dataset:financial qa dataset",
+      "type": "evaluates_on",
+      "weight": 0.9
+    },
+    {
+      "source": "method:eclipse",
+      "target": "metric:average precision",
+      "type": "achieves",
+      "weight": 0.85
+    },
+    {
+      "source": "method:eclipse",
+      "target": "concept:semantic entropy",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "method:eclipse",
+      "target": "concept:evidence capacity",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "method:eclipse",
+      "target": "concept:perplexity decomposition",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "concept:perplexity decomposition",
+      "target": "concept:semantic entropy",
+      "type": "measures",
+      "weight": 0.88
+    },
+    {
+      "source": "concept:perplexity decomposition",
+      "target": "concept:evidence capacity",
+      "type": "measures",
+      "weight": 0.88
+    }
+  ],
+  "paper_entities": {
+    "2509.21473v1": [
+      "paper:2509.21473v1",
+      "method:delta-hallucination",
+      "task:尽管生成模型能够产生自信而不支持或不真实的输出，但为了理解从根本上导致模型产生不正确输出的原因，我们从一种新的视角将其定义为链接估计预测和任何可能的输入原因的能力不完全，即使损失最小化最优估计器依然会",
+      "contribution:提出了δ-幻觉的概念，以捕捉估计器输出未能匹配任何可能实际输出的情况。",
+      "contribution:证明了即使是最优估计器最小化损失，也依然会产生幻觉，即使输入的可能正确答案是多样的。",
+      "contribution:推导出δ-幻觉发生的概率下限，证明了幻觉在广泛的靶分布类别中是几乎必然存在的。",
+      "concept:optimal estimator",
+      "concept:loss minimization",
+      "concept:human-acceptable outputs"
+    ],
+    "2506.00448v1": [
+      "paper:2506.00448v1",
+      "method:fact-based approaches",
+      "task:尽管大型语言模型在总结患者-临床对话时容易出现幻觉，但这些幻觉会影响临床决策并潜在地引发医疗事故，因此需要开发有效的幻觉检测方法。",
+      "dataset:leave-n-out lno dataset",
+      "dataset:natural hallucination nh dataset",
+      "dataset:xsum hallucination annotations",
+      "metric:f1",
+      "metric:pearson correlation",
+      "metric:cosine similarity",
+      "contribution:开发了一种基于事实对齐的方法，有效提高了幻觉检测的准确性。",
+      "contribution:首次提出了专门针对临床幻觉的具体评价指标，这些指标通过专家标注的数据集得到支持。",
+      "contribution:实验证明lno和nh数据集在幻觉检测方面具有良好的泛化能力，但自然幻觉数据集仍存在挑战。",
+      "contribution:突出强调了事实计数方法的解释性优势。",
+      "method:general-domain hallucination detectors",
+      "concept:faithful clinical summarization systems",
+      "task:medical text summarization",
+      "concept:language models llms"
+    ],
+    "2507.20836v4": [
+      "paper:2507.20836v4",
+      "method:token-level hallucination detection",
+      "task:尽管大型语言模型（llms）会产生幻觉，检测这些情况对于确保信任至关重要，但当前方法大多忽视了幻觉信号在幻言论据中的演进。",
+      "dataset:ragtruth",
+      "metric:auroc",
+      "metric:min-k probability",
+      "metric:min-k entropy",
+      "contribution:首次证明首次token更具幻觉信号特征。",
+      "contribution:提供了更精细的token级幻觉检测方法。",
+      "contribution:指出了当前基于logit的方法在所有token位置上的不足。"
+    ],
+    "2512.03107v1": [
+      "paper:2512.03107v1",
+      "method:eclipse",
+      "task:尽管大型语言模型（llms）能够生成自然流畅的回答，但这些回答往往缺乏事实支持，成为导致高风险应用中安全问题的主要原因。",
+      "dataset:金融问答数据集 n 200",
+      "dataset:涵盖合成幻觉和真实报告的样本",
+      "metric:roc auc",
+      "metric:平均精度",
+      "contribution:引入了结合熵-容量目标的联合模型来量化幻觉风险。",
+      "contribution:开发了基于困惑度分解的特征提取，用于细粒度检测证据忽略行为。",
+      "contribution:实验证明了通过api访问公示令牌级概率对于有效幻觉检测至关重要。",
+      "contribution:展示了即使在没有真实令牌级概率估计的情况下，eclipse 性能也会显著下降，证实了其对结构化的标记级别信息的依赖性。",
+      "dataset:financial qa dataset",
+      "metric:average precision",
+      "concept:semantic entropy",
+      "concept:evidence capacity",
+      "concept:perplexity decomposition"
+    ]
+  },
+  "entity_aliases": {
+    "are hallucinations bad estimations": "paper:2509.21473v1",
+    "delta-hallucination": "method:delta-hallucination",
+    "尽管生成模型能够产生自信而不支持或不真实的输出，但为了理解从根本上导致模型产生不正确输出的原因，我们从一种新的视角将其定义为链接估计预测和任何可能的输入原因的能力不完全，即使损失最小化最优估计器依然会": "task:尽管生成模型能够产生自信而不支持或不真实的输出，但为了理解从根本上导致模型产生不正确输出的原因，我们从一种新的视角将其定义为链接估计预测和任何可能的输入原因的能力不完全，即使损失最小化最优估计器依然会",
+    "提出了δ-幻觉的概念，以捕捉估计器输出未能匹配任何可能实际输出的情况。": "contribution:提出了δ-幻觉的概念，以捕捉估计器输出未能匹配任何可能实际输出的情况。",
+    "证明了即使是最优估计器最小化损失，也依然会产生幻觉，即使输入的可能正确答案是多样的。": "contribution:证明了即使是最优估计器最小化损失，也依然会产生幻觉，即使输入的可能正确答案是多样的。",
+    "推导出δ-幻觉发生的概率下限，证明了幻觉在广泛的靶分布类别中是几乎必然存在的。": "contribution:推导出δ-幻觉发生的概率下限，证明了幻觉在广泛的靶分布类别中是几乎必然存在的。",
+    "fact-controlled diagnosis of hallucinations in medical text summarization": "paper:2506.00448v1",
+    "fact-based approaches": "method:fact-based approaches",
+    "尽管大型语言模型在总结患者-临床对话时容易出现幻觉，但这些幻觉会影响临床决策并潜在地引发医疗事故，因此需要开发有效的幻觉检测方法。": "task:尽管大型语言模型在总结患者-临床对话时容易出现幻觉，但这些幻觉会影响临床决策并潜在地引发医疗事故，因此需要开发有效的幻觉检测方法。",
+    "leave-n-out lno dataset": "dataset:leave-n-out lno dataset",
+    "natural hallucination nh dataset": "dataset:natural hallucination nh dataset",
+    "xsum hallucination annotations": "dataset:xsum hallucination annotations",
+    "f1": "metric:f1",
+    "pearson correlation": "metric:pearson correlation",
+    "cosine similarity": "metric:cosine similarity",
+    "开发了一种基于事实对齐的方法，有效提高了幻觉检测的准确性。": "contribution:开发了一种基于事实对齐的方法，有效提高了幻觉检测的准确性。",
+    "首次提出了专门针对临床幻觉的具体评价指标，这些指标通过专家标注的数据集得到支持。": "contribution:首次提出了专门针对临床幻觉的具体评价指标，这些指标通过专家标注的数据集得到支持。",
+    "实验证明lno和nh数据集在幻觉检测方面具有良好的泛化能力，但自然幻觉数据集仍存在挑战。": "contribution:实验证明lno和nh数据集在幻觉检测方面具有良好的泛化能力，但自然幻觉数据集仍存在挑战。",
+    "突出强调了事实计数方法的解释性优势。": "contribution:突出强调了事实计数方法的解释性优势。",
+    "first hallucination tokens are different from conditional ones": "paper:2507.20836v4",
+    "token-level hallucination detection": "method:token-level hallucination detection",
+    "尽管大型语言模型（llms）会产生幻觉，检测这些情况对于确保信任至关重要，但当前方法大多忽视了幻觉信号在幻言论据中的演进。": "task:尽管大型语言模型（llms）会产生幻觉，检测这些情况对于确保信任至关重要，但当前方法大多忽视了幻觉信号在幻言论据中的演进。",
+    "ragtruth": "dataset:ragtruth",
+    "auroc": "metric:auroc",
+    "min-k probability": "metric:min-k probability",
+    "min-k entropy": "metric:min-k entropy",
+    "首次证明首次token更具幻觉信号特征。": "contribution:首次证明首次token更具幻觉信号特征。",
+    "提供了更精细的token级幻觉检测方法。": "contribution:提供了更精细的token级幻觉检测方法。",
+    "指出了当前基于logit的方法在所有token位置上的不足。": "contribution:指出了当前基于logit的方法在所有token位置上的不足。",
+    "detecting ai hallucinations in finance an information-theoretic method cuts hallucination rate by 92": "paper:2512.03107v1",
+    "eclipse": "method:eclipse",
+    "尽管大型语言模型（llms）能够生成自然流畅的回答，但这些回答往往缺乏事实支持，成为导致高风险应用中安全问题的主要原因。": "task:尽管大型语言模型（llms）能够生成自然流畅的回答，但这些回答往往缺乏事实支持，成为导致高风险应用中安全问题的主要原因。",
+    "金融问答数据集 n 200": "dataset:金融问答数据集 n 200",
+    "涵盖合成幻觉和真实报告的样本": "dataset:涵盖合成幻觉和真实报告的样本",
+    "roc auc": "metric:roc auc",
+    "平均精度": "metric:平均精度",
+    "引入了结合熵-容量目标的联合模型来量化幻觉风险。": "contribution:引入了结合熵-容量目标的联合模型来量化幻觉风险。",
+    "开发了基于困惑度分解的特征提取，用于细粒度检测证据忽略行为。": "contribution:开发了基于困惑度分解的特征提取，用于细粒度检测证据忽略行为。",
+    "实验证明了通过api访问公示令牌级概率对于有效幻觉检测至关重要。": "contribution:实验证明了通过api访问公示令牌级概率对于有效幻觉检测至关重要。",
+    "展示了即使在没有真实令牌级概率估计的情况下，eclipse 性能也会显著下降，证实了其对结构化的标记级别信息的依赖性。": "contribution:展示了即使在没有真实令牌级概率估计的情况下，eclipse 性能也会显著下降，证实了其对结构化的标记级别信息的依赖性。",
+    "optimal estimator": "concept:optimal estimator",
+    "loss minimization": "concept:loss minimization",
+    "human-acceptable outputs": "concept:human-acceptable outputs",
+    "general-domain hallucination detectors": "method:general-domain hallucination detectors",
+    "faithful clinical summarization systems": "concept:faithful clinical summarization systems",
+    "medical text summarization": "task:medical text summarization",
+    "language models llms": "concept:language models llms",
+    "financial qa dataset": "dataset:financial qa dataset",
+    "average precision": "metric:average precision",
+    "semantic entropy": "concept:semantic entropy",
+    "evidence capacity": "concept:evidence capacity",
+    "perplexity decomposition": "concept:perplexity decomposition"
+  },
+  "communities": {
+    "0": {
+      "nodes": [
+        "paper:2509.21473v1",
+        "method:delta-hallucination",
+        "task:尽管生成模型能够产生自信而不支持或不真实的输出，但为了理解从根本上导致模型产生不正确输出的原因，我们从一种新的视角将其定义为链接估计预测和任何可能的输入原因的能力不完全，即使损失最小化最优估计器依然会",
+        "contribution:提出了δ-幻觉的概念，以捕捉估计器输出未能匹配任何可能实际输出的情况。",
+        "contribution:证明了即使是最优估计器最小化损失，也依然会产生幻觉，即使输入的可能正确答案是多样的。",
+        "contribution:推导出δ-幻觉发生的概率下限，证明了幻觉在广泛的靶分布类别中是几乎必然存在的。",
+        "concept:optimal estimator",
+        "concept:loss minimization",
+        "concept:human-acceptable outputs"
+      ],
+      "key_entities": [
+        "Are Hallucinations Bad Estimations?",
+        "delta-hallucination",
+        "尽管生成模型能够产生自信而不支持或不真实的输出，但为了理解从根本上导致模型产生不正确输出的原因，我们从一种新的视角将其定义为链接估计预测和任何可能的输入原因的能力不完全，即使损失最小化最优估计器依然会",
+        "提出了δ-幻觉的概念，以捕捉估计器输出未能匹配任何可能实际输出的情况。",
+        "证明了即使是最优估计器最小化损失，也依然会产生幻觉，即使输入的可能正确答案是多样的。",
+        "推导出δ-幻觉发生的概率下限，证明了幻觉在广泛的靶分布类别中是几乎必然存在的。",
+        "optimal estimator",
+        "loss minimization",
+        "human-acceptable outputs"
+      ],
+      "key_papers": [
+        "Are Hallucinations Bad Estimations?"
+      ],
+      "dominant_types": [
+        "Contribution",
+        "Concept",
+        "Paper"
+      ],
+      "semantic_tag": "Research Contributions Cluster",
+      "summary": "",
+      "community_name": "Research Contributions Cluster"
+    },
+    "1": {
+      "nodes": [
+        "paper:2506.00448v1",
+        "contribution:开发了一种基于事实对齐的方法，有效提高了幻觉检测的准确性。",
+        "contribution:首次提出了专门针对临床幻觉的具体评价指标，这些指标通过专家标注的数据集得到支持。",
+        "contribution:实验证明lno和nh数据集在幻觉检测方面具有良好的泛化能力，但自然幻觉数据集仍存在挑战。",
+        "contribution:突出强调了事实计数方法的解释性优势。"
+      ],
+      "key_entities": [
+        "Fact-Controlled Diagnosis of Hallucinations in Medical Text Summarization",
+        "开发了一种基于事实对齐的方法，有效提高了幻觉检测的准确性。",
+        "首次提出了专门针对临床幻觉的具体评价指标，这些指标通过专家标注的数据集得到支持。",
+        "实验证明LNO和NH数据集在幻觉检测方面具有良好的泛化能力，但自然幻觉数据集仍存在挑战。",
+        "突出强调了事实计数方法的解释性优势。"
+      ],
+      "key_papers": [
+        "Fact-Controlled Diagnosis of Hallucinations in Medical Text Summarization"
+      ],
+      "dominant_types": [
+        "Contribution",
+        "Paper"
+      ],
+      "semantic_tag": "Research Contributions Cluster",
+      "summary": "",
+      "community_name": "Research Contributions Cluster"
+    },
+    "2": {
+      "nodes": [
+        "method:fact-based approaches",
+        "task:尽管大型语言模型在总结患者-临床对话时容易出现幻觉，但这些幻觉会影响临床决策并潜在地引发医疗事故，因此需要开发有效的幻觉检测方法。",
+        "dataset:natural hallucination nh dataset",
+        "metric:f1",
+        "metric:pearson correlation",
+        "metric:cosine similarity"
+      ],
+      "key_entities": [
+        "fact-based approaches",
+        "尽管大型语言模型在总结患者-临床对话时容易出现幻觉，但这些幻觉会影响临床决策并潜在地引发医疗事故，因此需要开发有效的幻觉检测方法。",
+        "Natural Hallucination (NH) dataset",
+        "F1",
+        "Pearson correlation",
+        "Cosine similarity"
+      ],
+      "key_papers": [],
+      "dominant_types": [
+        "Metric",
+        "Method",
+        "Task"
+      ],
+      "semantic_tag": "Evaluation Metrics Cluster",
+      "summary": "",
+      "community_name": "Evaluation Metrics Cluster"
+    },
+    "3": {
+      "nodes": [
+        "dataset:leave-n-out lno dataset",
+        "method:general-domain hallucination detectors",
+        "concept:faithful clinical summarization systems"
+      ],
+      "key_entities": [
+        "Leave-N-Out (LNO) dataset",
+        "general-domain hallucination detectors",
+        "Faithful Clinical Summarization Systems"
+      ],
+      "key_papers": [],
+      "dominant_types": [
+        "Dataset",
+        "Method",
+        "Concept"
+      ],
+      "semantic_tag": "Benchmark & Dataset Cluster",
+      "summary": "",
+      "community_name": "Benchmark & Dataset Cluster"
+    },
+    "4": {
+      "nodes": [
+        "dataset:xsum hallucination annotations",
+        "task:medical text summarization",
+        "concept:language models llms"
+      ],
+      "key_entities": [
+        "XSum Hallucination Annotations",
+        "Medical Text Summarization",
+        "Language Models (LLMs)"
+      ],
+      "key_papers": [],
+      "dominant_types": [
+        "Dataset",
+        "Task",
+        "Concept"
+      ],
+      "semantic_tag": "Benchmark & Dataset Cluster",
+      "summary": "",
+      "community_name": "Benchmark & Dataset Cluster"
+    },
+    "5": {
+      "nodes": [
+        "paper:2507.20836v4",
+        "contribution:首次证明首次token更具幻觉信号特征。",
+        "contribution:提供了更精细的token级幻觉检测方法。",
+        "contribution:指出了当前基于logit的方法在所有token位置上的不足。"
+      ],
+      "key_entities": [
+        "First Hallucination Tokens Are Different from Conditional Ones",
+        "首次证明首次token更具幻觉信号特征。",
+        "提供了更精细的token级幻觉检测方法。",
+        "指出了当前基于logit的方法在所有token位置上的不足。"
+      ],
+      "key_papers": [
+        "First Hallucination Tokens Are Different from Conditional Ones"
+      ],
+      "dominant_types": [
+        "Contribution",
+        "Paper"
+      ],
+      "semantic_tag": "Research Contributions Cluster",
+      "summary": "",
+      "community_name": "Research Contributions Cluster"
+    },
+    "6": {
+      "nodes": [
+        "method:token-level hallucination detection",
+        "task:尽管大型语言模型（llms）会产生幻觉，检测这些情况对于确保信任至关重要，但当前方法大多忽视了幻觉信号在幻言论据中的演进。",
+        "dataset:ragtruth",
+        "metric:auroc",
+        "metric:min-k probability",
+        "metric:min-k entropy"
+      ],
+      "key_entities": [
+        "token-level hallucination detection",
+        "尽管大型语言模型（LLMs）会产生幻觉，检测这些情况对于确保信任至关重要，但当前方法大多忽视了幻觉信号在幻言论据中的演进。",
+        "RAGTruth",
+        "AUROC",
+        "MIN-K probability",
+        "MIN-K entropy"
+      ],
+      "key_papers": [],
+      "dominant_types": [
+        "Metric",
+        "Method",
+        "Task"
+      ],
+      "semantic_tag": "Evaluation Metrics Cluster",
+      "summary": "",
+      "community_name": "Evaluation Metrics Cluster"
+    },
+    "7": {
+      "nodes": [
+        "paper:2512.03107v1",
+        "contribution:引入了结合熵-容量目标的联合模型来量化幻觉风险。",
+        "contribution:开发了基于困惑度分解的特征提取，用于细粒度检测证据忽略行为。",
+        "contribution:实验证明了通过api访问公示令牌级概率对于有效幻觉检测至关重要。",
+        "contribution:展示了即使在没有真实令牌级概率估计的情况下，eclipse 性能也会显著下降，证实了其对结构化的标记级别信息的依赖性。"
+      ],
+      "key_entities": [
+        "Detecting AI Hallucinations in Finance: An Information-Theoretic Method Cuts Hallucination Rate by 92%",
+        "引入了结合熵-容量目标的联合模型来量化幻觉风险。",
+        "开发了基于困惑度分解的特征提取，用于细粒度检测证据忽略行为。",
+        "实验证明了通过API访问公示令牌级概率对于有效幻觉检测至关重要。",
+        "展示了即使在没有真实令牌级概率估计的情况下，ECLIPSE 性能也会显著下降，证实了其对结构化的标记级别信息的依赖性。"
+      ],
+      "key_papers": [
+        "Detecting AI Hallucinations in Finance: An Information-Theoretic Method Cuts Hallucination Rate by 92%"
+      ],
+      "dominant_types": [
+        "Contribution",
+        "Paper"
+      ],
+      "semantic_tag": "Research Contributions Cluster",
+      "summary": "",
+      "community_name": "Research Contributions Cluster"
+    },
+    "8": {
+      "nodes": [
+        "method:eclipse",
+        "task:尽管大型语言模型（llms）能够生成自然流畅的回答，但这些回答往往缺乏事实支持，成为导致高风险应用中安全问题的主要原因。",
+        "dataset:金融问答数据集 n 200",
+        "dataset:涵盖合成幻觉和真实报告的样本",
+        "metric:roc auc",
+        "metric:平均精度",
+        "dataset:financial qa dataset",
+        "metric:average precision"
+      ],
+      "key_entities": [
+        "ECLIPSE",
+        "尽管大型语言模型（LLMs）能够生成自然流畅的回答，但这些回答往往缺乏事实支持，成为导致高风险应用中安全问题的主要原因。",
+        "金融问答数据集 (n=200)",
+        "涵盖合成幻觉和真实报告的样本",
+        "ROC AUC",
+        "平均精度",
+        "Financial QA Dataset",
+        "Average Precision"
+      ],
+      "key_papers": [],
+      "dominant_types": [
+        "Dataset",
+        "Metric",
+        "Method"
+      ],
+      "semantic_tag": "Benchmark & Dataset Cluster",
+      "summary": "",
+      "community_name": "Benchmark & Dataset Cluster"
+    },
+    "9": {
+      "nodes": [
+        "concept:semantic entropy",
+        "concept:evidence capacity",
+        "concept:perplexity decomposition"
+      ],
+      "key_entities": [
+        "Semantic Entropy",
+        "Evidence Capacity",
+        "Perplexity Decomposition"
+      ],
+      "key_papers": [],
+      "dominant_types": [
+        "Concept"
+      ],
+      "semantic_tag": "Research Topic Cluster",
+      "summary": "",
+      "community_name": "Research Topic Cluster"
+    }
+  },
+  "citation_graph": {},
+  "stats": {
+    "node_count": 52,
+    "edge_count": 82,
+    "node_type_count": {
+      "Paper": 4,
+      "Method": 5,
+      "Task": 5,
+      "Contribution": 14,
+      "Dataset": 7,
+      "Metric": 9,
+      "Concept": 8
+    },
+    "paper_count": 4,
+    "community_count": 0,
+    "citation_edge_count": 0
+  }
+}

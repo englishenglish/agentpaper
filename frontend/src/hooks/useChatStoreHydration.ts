@@ -8,14 +8,22 @@ import { useChatStore } from '@/store/chatStore';
  * 若此时自动「新建对话」会覆盖用户已保存的会话与每会话的检索/联网/知识库设置。
  */
 export function useChatStoreHydration(): boolean {
-  const [hydrated, setHydrated] = useState(() => useChatStore.persist.hasHydrated());
+  const [hydrated, setHydrated] = useState(() => {
+    const p = useChatStore.persist;
+    return typeof p?.hasHydrated === 'function' ? p.hasHydrated() : false;
+  });
 
   useEffect(() => {
-    if (useChatStore.persist.hasHydrated()) {
+    const p = useChatStore.persist;
+    if (!p || typeof p.hasHydrated !== 'function') {
       setHydrated(true);
       return;
     }
-    const unsub = useChatStore.persist.onFinishHydration(() => setHydrated(true));
+    if (p.hasHydrated()) {
+      setHydrated(true);
+      return;
+    }
+    const unsub = p.onFinishHydration(() => setHydrated(true));
     return unsub;
   }, []);
 

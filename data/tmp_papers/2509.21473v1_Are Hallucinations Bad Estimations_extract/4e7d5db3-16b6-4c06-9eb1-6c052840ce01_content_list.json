@@ -1,0 +1,4788 @@
+[
+    {
+        "type": "text",
+        "text": "Are Hallucinations Bad Estimations? ",
+        "text_level": 1,
+        "bbox": [
+            222,
+            179,
+            764,
+            207
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "Hude Liu∗1 Jerry Yao-Chieh $\\mathrm { H u } ^ { \\dag \\ddag * 2 }$ Jennifer Yuntong Zhang♯3 Zhao Song§4 Han Liu†♮5 ",
+        "bbox": [
+            114,
+            239,
+            880,
+            258
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "list",
+        "sub_type": "text",
+        "list_items": [
+            "† Center for Foundation Models and Generative AI, Northwestern University, Evanston, IL 60208, USA Department of Computer Science, Northwestern University, Evanston, IL 60208, USA ",
+            "‡ Ensemble AI, San Francisco, CA 94133, USA ",
+            "♯ Engineering Science, University of Toronto, Toronto, ON M5S 1A4, CA ",
+            "§ University of California, Berkeley, Berkeley, CA 94720, USA ",
+            "♮ Department of Statistics and Data Science, Northwestern University, Evanston, IL 60208, USA "
+        ],
+        "bbox": [
+            124,
+            286,
+            875,
+            391
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "We formalize hallucinations in generative models as failures to link an estimate to any plausible cause. Under this interpretation, we show that even loss-minimizing optimal estimators still hallucinate. We confirm this with a general high probability lower bound on hallucinate rate for generic data distributions. This reframes hallucination as structural misalignment between loss minimization and human-acceptable outputs, and hence estimation errors induced by miscalibration. Experiments on coin aggregation, open-ended QA, and text-to-image support our theory. ",
+        "bbox": [
+            112,
+            434,
+            883,
+            547
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "Keywords: Hallucination in Generative Models, Foundation Model, Generative Model, Large Language Models (LLMs), Text-to-Image Generation, Trustworthy AI, Calibration ",
+        "bbox": [
+            114,
+            731,
+            883,
+            768
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "header",
+        "text": "Last Update: September 29, 2025 ",
+        "bbox": [
+            611,
+            78,
+            880,
+            98
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "page_footnote",
+        "text": "1hudeliu0208@gmail.com 2jhu@u.northwestern.edu; jhu@ensemblecore.ai 3jenniferyt.zhang@mail.utoronto.ca 4magic.linuxkde@gmail.com 5hanliu@northwestern.edu ",
+        "bbox": [
+            142,
+            777,
+            514,
+            854
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "page_footnote",
+        "text": "*These authors contributed equally to this work. Part of the work done during JH’s internship at Ensemble AI. Code is available at https://github.com/MAGICS-LAB/hallucination. ",
+        "bbox": [
+            114,
+            854,
+            879,
+            886
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "aside_text",
+        "text": "arXiv:2509.21473v1 [cs.LG] 25 Sep 2025 ",
+        "bbox": [
+            22,
+            276,
+            60,
+            717
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "Contents ",
+        "text_level": 1,
+        "bbox": [
+            114,
+            74,
+            230,
+            95
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "list",
+        "sub_type": "text",
+        "list_items": [
+            "1 Introduction 2 ",
+            "2 Related Work 4 ",
+            "3 Preliminaries 5 ",
+            "4 $\\delta$ -Hallucination 6 ",
+            "5 Optimal Estimator Still Hallucinates 8 ",
+            "6 Hallucination Probability Lower Bound 9 ",
+            "7 Experiments 11 "
+        ],
+        "bbox": [
+            117,
+            112,
+            880,
+            255
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "list",
+        "sub_type": "text",
+        "list_items": [
+            "7.1 Synthetic Coin Flipping Problem . 11 ",
+            "7.2 Open-Ended Text Questions 12 ",
+            "7.3 Open-Ended Text-to-Image . . . 13 "
+        ],
+        "bbox": [
+            145,
+            257,
+            879,
+            311
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "8 Conclusion 14 ",
+        "bbox": [
+            117,
+            315,
+            880,
+            330
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "list",
+        "sub_type": "text",
+        "list_items": [
+            "A Highest Conditional Density Regions 17 ",
+            "B Proofs of Main Text 18 "
+        ],
+        "bbox": [
+            117,
+            335,
+            880,
+            373
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "list",
+        "sub_type": "text",
+        "list_items": [
+            "B.1 Proof of Theorem 5.1 18 ",
+            "B.2 Proof of Corollary 5.2.1 23 ",
+            "B.3 Proof of Section B.3 23 ",
+            "B.4 Proof of Theorem 5.3 25 ",
+            "B.5 Proof of Theorem 6.1 25 "
+        ],
+        "bbox": [
+            145,
+            376,
+            879,
+            465
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "C Derivation to Cross-Entropy Loss 30 ",
+        "bbox": [
+            117,
+            470,
+            880,
+            488
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "1 Introduction ",
+        "text_level": 1,
+        "bbox": [
+            117,
+            517,
+            315,
+            537
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "Hallucination in generative model refers to a model generating confident yet unsupported or nonfactual outputs. This failure undermines user trust, safety, and the practical utility of AI systems. It becomes a critical concern in modern machine learning with the widespread deployment of large-scale generative models across language, vision, and multimodal domains [Ji et al., 2023, Liu et al., 2024, Bai et al., 2024, Kalai et al., 2025]. To address it, we must understand why models hallucinate at a fundamental level. In this work, we formalize hallucination as an attribution failure: the estimated prediction does not align with any plausible input cause under standard loss-minimizing training. From this perspective, we prove hallucination persists even for Bayesoptimal estimators. ",
+        "bbox": [
+            112,
+            556,
+            880,
+            722
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "Prior theory attributes hallucination to resource limits, sparse data, or computational hardness. Xu et al. [2024] study hallucination as the mismatch between a model’s computed function and the ground-truth function. They prove that any polynomial-time language model hallucinates on some tasks due to computational limits. Kalai and Vempala [2024] show that even a calibrated model hallucinates on rare “singleton” facts. They lower bound the hallucination rate by the frequency (redundancy) of these facts in the training data. Banerjee et al. [2024] study hallucination through Gödel’s first incompleteness theorem. They argue that no finite dataset captures all valid inferences, so hallucination persists regardless of model or data scale. Taken together, these results ",
+        "bbox": [
+            112,
+            738,
+            880,
+            885
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "page_number",
+        "text": "2 ",
+        "bbox": [
+            491,
+            907,
+            504,
+            920
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "frame hallucination as a byproduct of constraints rather than a structural feature of estimation. ",
+        "bbox": [
+            114,
+            79,
+            854,
+            97
+        ],
+        "page_idx": 2
+    },
+    {
+        "type": "text",
+        "text": "In contrast, we posit that hallucination is not only a symptom of modeling limitations but also a structural phenomenon of estimation itself. Our key insight is that hallucinations may still persist even for Bayes-optimal estimators with unlimited capacity that minimize the true training loss. In other words, a model with infinite power, trained without resource constraints, still outputs implausible content. The crux is a misalignment between the model’s objective and human expectations. A loss-minimizing model is optimized to produce the average outcome, whereas a human evaluator expects a specific plausible outcome (typically, one of the modes of the true distribution). ",
+        "bbox": [
+            112,
+            112,
+            883,
+            258
+        ],
+        "page_idx": 2
+    },
+    {
+        "type": "text",
+        "text": "This reframes hallucination as structural misalignment. Hallucination is a manifestation of estimation errors induced by miscalibration. To be concrete, under expected standard loss, the Bayesoptimal predictor for a target distribution $A ( X )$ given the input $X$ is the conditional expectation ",
+        "bbox": [
+            112,
+            275,
+            880,
+            330
+        ],
+        "page_idx": 2
+    },
+    {
+        "type": "equation",
+        "text": "$$\nA ^ {*} (X) = \\mathbb {E} [ A (X) ],\n$$",
+        "text_format": "latex",
+        "bbox": [
+            416,
+            345,
+            578,
+            364
+        ],
+        "page_idx": 2
+    },
+    {
+        "type": "text",
+        "text": "which minimizes the expected error by construction. If the true conditional distribution $\\operatorname* { P r } [ A ( X ) ] \\ = \\ \\operatorname* { P r } [ A ( x ) \\mid X = x ]$ is multimodel1, then $A ^ { \\star } ( X )$ average across all those possible outcomes and may fall in a low-probability region. It matches none of the plausible modes. The estimate minimizes error yet fails to align with any realistic ground-truth outcome. Thus even an optimal estimator may produce outputs that no human would recognize as valid or plausible. We deem this is a fundamental source of hallucination in generative models. To this end, we formalize this into $\\delta$ -hallucination: an estimator’s output that lies outside a $\\delta$ -neighborhood of every plausible outcome (please see Section 4 for precise definitions.) This reframing shows hallucination as a consequence of the objective misalignment, rather than just a lack of model capacity or data. ",
+        "bbox": [
+            112,
+            378,
+            883,
+            547
+        ],
+        "page_idx": 2
+    },
+    {
+        "type": "text",
+        "text": "Contributions. Our contributions are as follows. ",
+        "bbox": [
+            114,
+            561,
+            504,
+            578
+        ],
+        "page_idx": 2
+    },
+    {
+        "type": "list",
+        "sub_type": "text",
+        "list_items": [
+            "• New Formulation for Hallucination Fundamental Source. We characterize hallucination phenomena in generative models by introducing $\\delta$ -hallucination. This interprets hallucination as outputs that fail to match any plausible human-acceptable outcome. The formulation provides a rigorous and measurable way to analyze hallucination in generative models. ",
+            "• Hallucination of Optimal Estimators. We prove that loss-minimizing optimal estimators still $\\delta$ -hallucination. We extend the result to near-optimal estimators, to multiple inputs, and to inputs with hinted latent variables. These results confirm hallucination as a fundamental source rooted in the estimation process itself. ",
+            "• Fundamental Limits of Hallucination. We derive a general lower bound on the probability of $\\delta$ -hallucination under mild distribution assumptions. This bound reaffirms that hallucinations persist at a non-zero rate. This establishes a fundamental limit that prevents eliminating the source of hallucinations through larger models or datasets. ",
+            "• Experiment Validation. We validate our theory through controlled experiments on coinflipping aggregation, open-ended QA, and text-to-image generation. The results demon-"
+        ],
+        "bbox": [
+            145,
+            585,
+            877,
+            856
+        ],
+        "page_idx": 2
+    },
+    {
+        "type": "page_footnote",
+        "text": "1For instance, an open-ended question that has several distinct correct answers. ",
+        "bbox": [
+            143,
+            869,
+            663,
+            885
+        ],
+        "page_idx": 2
+    },
+    {
+        "type": "page_number",
+        "text": "3 ",
+        "bbox": [
+            491,
+            907,
+            504,
+            920
+        ],
+        "page_idx": 2
+    },
+    {
+        "type": "text",
+        "text": "strate that minimizing loss does not remove hallucination. The persistence across both synthetic and real-world settings confirms hallucination as a structural feature of estimation and a fundamental source of model misalignment. ",
+        "bbox": [
+            161,
+            78,
+            880,
+            133
+        ],
+        "page_idx": 3
+    },
+    {
+        "type": "text",
+        "text": "Organization. Section 4 defines hallucination as $\\delta$ -hallucination. Section 5 demonstrates hallucination of optimal estimators. Section 6 provides a lower bound on the probability of hallucination. Section 7 details experiment results. ",
+        "bbox": [
+            114,
+            140,
+            880,
+            196
+        ],
+        "page_idx": 3
+    },
+    {
+        "type": "text",
+        "text": "2 Related Work ",
+        "text_level": 1,
+        "bbox": [
+            114,
+            224,
+            333,
+            247
+        ],
+        "page_idx": 3
+    },
+    {
+        "type": "text",
+        "text": "Hallucinations in generative models have been studied from both theoretical and empirical perspectives. Prior theory frames them as inevitable outcomes of practical limits: finite parameters, sparse data, or computational hardness. [Xu et al., 2024] prove that any polynomial-time language model hallucinates on certain tasks. Kalai and Vempala [2024] show that even a calibrated model hallucinates at a rate tied to the fraction of “singleton” facts that appear only once in the training set. Banerjee et al. [2024] argue that no finite dataset or architecture covers all valid inferences, ensuring a nonzero hallucination rate regardless of scale. These works treat hallucination not as a flaw in estimation itself, but as an artifact of underfitting caused by resource and computational limits. More recently, Kalai et al. [2025] propose that hallucination stems from mismatches between predictive likelihood training, incomplete coverage, and reinforcement learning, suggesting hallucinations persist even with scale and motivating deeper foundational study. ",
+        "bbox": [
+            114,
+            263,
+            882,
+            468
+        ],
+        "page_idx": 3
+    },
+    {
+        "type": "text",
+        "text": "Recent empirical research has delivered taxonomies, benchmarks, and mitigation techniques for hallucinations in generative models. Huang et al. [2025] survey intrinsic and extrinsic hallucinations, and review detection and mitigation methods. Ji et al. [2023] provide a broad overview of metrics and task-specific phenomena across summarization, dialogue, and machine translation. Zhang et al. [2023] analyze detection and explanation methods. Li et al. [2024] conduct a factuality study, introducing a new benchmark and evaluating detection, sources, and mitigation. Farquhar et al. [2024] propose entropy-based uncertainty estimators to detect confabulations. In contrast to viewing hallucinations only as limitations, Jiang et al. [2024] explore their creative potential. A notable work by Aithal et al. [2024] analyzes hallucinations in diffusion models and attributes them to mode interpolation, where samples fall into regions not supported by training data. Their empirical observations support our theoretical findings by linking artifacts beyond data support to interpolation between nearby modes (corresponding to regions with low conditional probability density under any latent state in our work). ",
+        "bbox": [
+            114,
+            483,
+            880,
+            723
+        ],
+        "page_idx": 3
+    },
+    {
+        "type": "text",
+        "text": "Building on prior work, we propose a new interpretation of hallucination: it arises from a gap between model training objectives and human criteria. Estimation fails when outputs do not align with any plausible human-perceptive category. We formalize this gap as $\\delta$ -hallucination and prove that even loss-minimizing optimal estimators produce outputs with low conditional probability under every category. We derive a general lower bound on the probability of $\\delta$ -hallucination and validate our claims with empirical studies. These results establish hallucination as a structural feature of estimation itself, not a flaw of model size, data coverage, or specific queries. ",
+        "bbox": [
+            114,
+            738,
+            880,
+            869
+        ],
+        "page_idx": 3
+    },
+    {
+        "type": "page_number",
+        "text": "4 ",
+        "bbox": [
+            491,
+            907,
+            504,
+            920
+        ],
+        "page_idx": 3
+    },
+    {
+        "type": "text",
+        "text": "3 Preliminaries ",
+        "text_level": 1,
+        "bbox": [
+            114,
+            78,
+            326,
+            99
+        ],
+        "page_idx": 4
+    },
+    {
+        "type": "text",
+        "text": "Notations. In this work, $f _ { Y } ( \\cdot )$ denotes the probability density function over the randomness of $Y$ . $\\mathbb { E } _ { Y } [ T ]$ denotes the expectation of a random variable $T$ over $Y$ . $[ N ]$ denotes the set: $\\{ 1 , 2 , \\cdots , N \\}$ . $\\| \\cdot \\| _ { 2 }$ denotes 2-norm. We use $\\| \\cdot \\| _ { 2 }$ as the square root of the square sum of all entries. For a column vector $v$ , we use $v _ { i }$ to denote its $i$ -th entry from the top. For a matrix $M$ , we use $M _ { r , c }$ to denote its entry at $r$ -th row and $c$ -th column. We write $M _ { : , c }$ and $M _ { r , \\ l }$ : to denote its $c$ -th column and $r$ -th row, respectively. We use $1 _ { a }$ to denote an indicator that is 1 when $a$ happens and 0 otherwise. ",
+        "bbox": [
+            114,
+            118,
+            882,
+            247
+        ],
+        "page_idx": 4
+    },
+    {
+        "type": "text",
+        "text": "Expected Quadratic Loss. We define expected quadratic loss as follows. ",
+        "bbox": [
+            114,
+            268,
+            709,
+            287
+        ],
+        "page_idx": 4
+    },
+    {
+        "type": "text",
+        "text": "Definition 3.1 (Expected Quadratic Loss). Let $X$ be an input, let $A ( X )$ be a random target output associated with $X$ , and let $A ^ { ( } X )$ be an estimator for $A ( X )$ . Define the expected quadratic loss of the estimator $A ^ { ( } X )$ with respect to the true output $A ( X )$ as: ",
+        "bbox": [
+            112,
+            299,
+            880,
+            356
+        ],
+        "page_idx": 4
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\ell_ {A} \\left(A ^ {*} (X)\\right) := \\mathbb {E} \\left[ \\| A ^ {*} (X) - A (X) \\| _ {2} ^ {2} \\right].\n$$",
+        "text_format": "latex",
+        "bbox": [
+            339,
+            368,
+            653,
+            391
+        ],
+        "page_idx": 4
+    },
+    {
+        "type": "text",
+        "text": "In other words, $\\ell _ { A } ( A ^ { * } ( X ) )$ is the expected squared $\\ell _ { 2 }$ error between the estimate and the actual outcome. This quantity serves as the objective that an optimal estimator would minimize (e.g., the Bayes-optimal estimator minimizes the expected quadratic loss by construction). ",
+        "bbox": [
+            112,
+            402,
+            880,
+            459
+        ],
+        "page_idx": 4
+    },
+    {
+        "type": "text",
+        "text": "Remark 3.1. We use the $\\ell _ { 2 }$ loss in the main text for clarity of exposition. In Section C, we show that all results remain valid under the cross-entropy loss, which is the standard training objective for generative models in self-supervised learning. This extension is natural because cross-entropy is a proper scoring rule: its Bayes-optimal solution is the true conditional distribution $P ( \\boldsymbol { Y } | \\boldsymbol { X } )$ , so the same structural arguments for $\\delta$ -hallucination continue to apply. ",
+        "bbox": [
+            112,
+            468,
+            880,
+            561
+        ],
+        "page_idx": 4
+    },
+    {
+        "type": "text",
+        "text": "We use the expected quadratic loss to formalize the objective minimized by an optimal estimator. ",
+        "bbox": [
+            114,
+            571,
+            879,
+            589
+        ],
+        "page_idx": 4
+    },
+    {
+        "type": "text",
+        "text": "Lipschitzness. We define Lipschitzness in 2-norm as follows. ",
+        "bbox": [
+            114,
+            611,
+            617,
+            628
+        ],
+        "page_idx": 4
+    },
+    {
+        "type": "text",
+        "text": "Definition 3.2 (Lipschitzness). We say a function $g$ is $L$ -Lipschitz (with respect to the $\\ell _ { 2 }$ -norm) if there exists a constant $L > 0$ such that for all inputs $x$ and $y$ in its domain ",
+        "bbox": [
+            114,
+            640,
+            880,
+            676
+        ],
+        "page_idx": 4
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\| g (x) - g (y) \\| _ {2} \\leq L \\| x - y \\| _ {2}.\n$$",
+        "text_format": "latex",
+        "bbox": [
+            375,
+            691,
+            617,
+            712
+        ],
+        "page_idx": 4
+    },
+    {
+        "type": "text",
+        "text": "We use Lipschitzness to impose a regularity condition on the estimator. This condition ensures that small changes in the input lead to at most $L$ -scaled changes in the output. In our analyses, we assume Lipschitzness as a smoothness property that rules out estimators with abrupt or unstable behavior. ",
+        "bbox": [
+            112,
+            724,
+            880,
+            797
+        ],
+        "page_idx": 4
+    },
+    {
+        "type": "text",
+        "text": "Latent Variable $Z$ . In the context of self-supervised learning, we represent the output of the model as a probability distribution [Devlin et al., 2019, Radford et al., 2021]. Specifically, when an estimator outputs contextual factors such as speaker attitude or intended audience, we may ",
+        "bbox": [
+            112,
+            819,
+            880,
+            875
+        ],
+        "page_idx": 4
+    },
+    {
+        "type": "page_number",
+        "text": "5 ",
+        "bbox": [
+            491,
+            907,
+            504,
+            920
+        ],
+        "page_idx": 4
+    },
+    {
+        "type": "text",
+        "text": "categorize the possible outputs based on the specific factors they exhibit. Then, we see different categories (which are sub-distributions in the original target distribution) as conditional distributions under different states of a latent variable $Z$ . We illustrate the concept of this latent variable $Z$ in Figure 1. ",
+        "bbox": [
+            112,
+            79,
+            882,
+            154
+        ],
+        "page_idx": 5
+    },
+    {
+        "type": "image",
+        "img_path": "images/e93c3b90e334ed3f457c59c3aeee487c3c251ed853337c0461a01597f3eac85c.jpg",
+        "image_caption": [],
+        "image_footnote": [],
+        "bbox": [
+            133,
+            174,
+            544,
+            321
+        ],
+        "page_idx": 5
+    },
+    {
+        "type": "image",
+        "img_path": "images/fc8e7390b862221dae07ed029c3785cbcfd9ada6992c4db862f429b1f914a9d8.jpg",
+        "image_caption": [
+            "Figure 1: Examples of Latent Variable $Z$ . For an open-ended question or prompt $X$ , the latent variable $Z$ may be the emotional attitude or categories in the target distribution. "
+        ],
+        "image_footnote": [],
+        "bbox": [
+            606,
+            174,
+            864,
+            321
+        ],
+        "page_idx": 5
+    },
+    {
+        "type": "text",
+        "text": "4 $\\delta$ -Hallucination ",
+        "text_level": 1,
+        "bbox": [
+            114,
+            407,
+            357,
+            430
+        ],
+        "page_idx": 5
+    },
+    {
+        "type": "text",
+        "text": "We present our definition of $\\delta$ -hallucination as the gap between objective optimized by the model and the underlying causes of variation $( Z )$ . That is, conditioning on the state of $Z$ changes the distribution of the output. We begin by defining the relation between input $X$ and latent variable $Z$ as follows. ",
+        "bbox": [
+            112,
+            446,
+            882,
+            521
+        ],
+        "page_idx": 5
+    },
+    {
+        "type": "text",
+        "text": "Definition 4.1 (Data Distribution and Latent Variable). Let $X \\in \\mathbb { R } ^ { d _ { x } }$ denote the input, and let $A ( X ) \\in \\mathbb { R } ^ { d _ { a } }$ denote a random variable representing the target output associated with $X$ , where $d _ { x }$ and $d _ { a }$ are the input and output dimensions. Let $Z$ be a latent variable associated with $X$ , and let $\\{ Z _ { i } \\} _ { i \\in [ N ] }$ denote its possible states. The conditional output random variable given $Z _ { i }$ is ",
+        "bbox": [
+            114,
+            530,
+            883,
+            606
+        ],
+        "page_idx": 5
+    },
+    {
+        "type": "equation",
+        "text": "$$\nA (X; Z _ {i}) := A (X) \\mid \\{Z = Z _ {i} \\},\n$$",
+        "text_format": "latex",
+        "bbox": [
+            369,
+            619,
+            627,
+            641
+        ],
+        "page_idx": 5
+    },
+    {
+        "type": "text",
+        "text": "which represents the target output distribution of $X$ under latent state $Z _ { i }$ . If probability densities exist, the conditional density is ",
+        "bbox": [
+            114,
+            654,
+            880,
+            691
+        ],
+        "page_idx": 5
+    },
+    {
+        "type": "equation",
+        "text": "$$\nf _ {A (X; Z _ {i})} (a) := \\frac {f _ {A (X) , Z} (a , Z _ {i})}{\\operatorname * {P r} [ Z = Z _ {i} ]},\n$$",
+        "text_format": "latex",
+        "bbox": [
+            375,
+            703,
+            620,
+            744
+        ],
+        "page_idx": 5
+    },
+    {
+        "type": "text",
+        "text": "where $f _ { A ( X ) , Z }$ is the joint density of $( A ( X ) , Z )$ . ",
+        "bbox": [
+            114,
+            756,
+            496,
+            777
+        ],
+        "page_idx": 5
+    },
+    {
+        "type": "text",
+        "text": "Remark 4.1. $A ( X )$ in Definition 4.1 defines the data distribution, but we also view it as the real distribution in this paper. Intuitively, $Z$ indexes hidden causes that resolve ambiguity in the output. $A ( X ; Z _ { i } )$ isolates the distribution of valid outputs when the hidden cause equals $Z _ { i }$ . The marginal $A ( X )$ mixes these conditional laws with weights $\\mathrm { P r } [ Z = Z _ { i } ]$ , so multi-modality in $A ( X )$ arises from variation over $Z$ . ",
+        "bbox": [
+            112,
+            792,
+            883,
+            885
+        ],
+        "page_idx": 5
+    },
+    {
+        "type": "page_number",
+        "text": "6 ",
+        "bbox": [
+            491,
+            907,
+            504,
+            921
+        ],
+        "page_idx": 5
+    },
+    {
+        "type": "image",
+        "img_path": "images/e8bc5280582abfcd4789ce1307e51e878bec61af06b70ee37e5d360d5d97cf10.jpg",
+        "image_caption": [
+            "Figure 2: An Example of Our Key Insight. Suppose the open-ended question is to generate a picture of an animal. Then the output with $9 0 \\%$ of conditional probability under the category of cat and a $1 0 \\%$ of conditional probability under the category of dogs is considered better than the output which has a $7 0 \\%$ of probability density under the category of cat and $7 0 \\%$ under the category of dog. "
+        ],
+        "image_footnote": [],
+        "bbox": [
+            125,
+            80,
+            872,
+            194
+        ],
+        "page_idx": 6
+    },
+    {
+        "type": "text",
+        "text": "Key Insight. While minimizing the loss on the whole data distribution is critical for model estimations, it is also important to ",
+        "bbox": [
+            112,
+            328,
+            880,
+            364
+        ],
+        "page_idx": 6
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\max  _ {i \\in [ N ]} \\left\\{f _ {A (X; Z _ {i})} \\left(A ^ {*} (X)\\right) \\right\\},\n$$",
+        "text_format": "latex",
+        "bbox": [
+            393,
+            378,
+            599,
+            407
+        ],
+        "page_idx": 6
+    },
+    {
+        "type": "text",
+        "text": "which is the maximum probability density of the estimate $A ^ { * } ( X )$ under $Z = Z _ { i }$ . This reflects that a good estimate aligns with at least one plausible underlying state rather than consistent with all. We give an example in Figure 2 to illustrate the interpretation. ",
+        "bbox": [
+            114,
+            422,
+            882,
+            477
+        ],
+        "page_idx": 6
+    },
+    {
+        "type": "text",
+        "text": "Formally, we present the above insight as $\\delta$ -hallucination. ",
+        "bbox": [
+            114,
+            492,
+            571,
+            510
+        ],
+        "page_idx": 6
+    },
+    {
+        "type": "text",
+        "text": "Definition 4.2 ( $\\delta$ -Hallucination). Let $X$ be an input and $Z$ a latent variable associated with $X$ taking values in $\\{ Z _ { i } \\} _ { i \\in [ N ] }$ . Fix a tolerance parameter $\\delta \\in ( 0 , 1 ]$ , and let $A ^ { * }$ be an estimator of $X$ . We say that $A ^ { * } ~ \\delta$ -hallucinates at $X$ if, for every $i \\in [ N ]$ , ",
+        "bbox": [
+            114,
+            521,
+            880,
+            578
+        ],
+        "page_idx": 6
+    },
+    {
+        "type": "equation",
+        "text": "$$\nf \\big (A (X; Z _ {i}) = A ^ {*} (X) \\big) \\leq \\delta , \\quad i \\in [ N ],\n$$",
+        "text_format": "latex",
+        "bbox": [
+            339,
+            590,
+            653,
+            612
+        ],
+        "page_idx": 6
+    },
+    {
+        "type": "text",
+        "text": "where $f _ { A ( X ; Z _ { i } ) }$ denotes the probability mass function (in the discrete case) or probability density function (in the continuous case) of $A ( X ; Z _ { i } )$ . ",
+        "bbox": [
+            114,
+            626,
+            880,
+            665
+        ],
+        "page_idx": 6
+    },
+    {
+        "type": "text",
+        "text": "That is, for every possible latent state, the probability of producing the estimated output $A ^ { * } ( X )$ does not exceed $\\delta$ . In other words, Definition 4.2 implies that $\\delta$ -hallucination is a generated answer that has low calculated loss but is unlikely to belong to any state or class of possible outputs. ",
+        "bbox": [
+            112,
+            675,
+            880,
+            733
+        ],
+        "page_idx": 6
+    },
+    {
+        "type": "text",
+        "text": "Remark 4.2. Intuitively, $\\delta$ -hallucination occurs when the estimator $A ^ { * } ( X )$ outputs a value that has low likelihood under every plausible latent state of $Z$ . In such a case, the prediction fail to be attributed to any genuine cause consistent with the data distribution. This captures the idea that hallucination arises not merely from error, but from producing an output that fails to align with any valid mode of the underlying conditional distributions. ",
+        "bbox": [
+            112,
+            742,
+            880,
+            834
+        ],
+        "page_idx": 6
+    },
+    {
+        "type": "page_number",
+        "text": "7 ",
+        "bbox": [
+            491,
+            907,
+            504,
+            920
+        ],
+        "page_idx": 6
+    },
+    {
+        "type": "text",
+        "text": "5 Optimal Estimator Still Hallucinates ",
+        "text_level": 1,
+        "bbox": [
+            114,
+            78,
+            606,
+            102
+        ],
+        "page_idx": 7
+    },
+    {
+        "type": "text",
+        "text": "We establish the existence of $\\delta$ -hallucination. We begin with the single-input case, showing that even an optimal estimator minimizing loss may $\\delta$ -hallucinate, and that this extends to semioptimal estimators within $\\epsilon$ of the optimum. We then extend the result to the multi-input setting. Finally, we consider the practical case where the model receives hints about hidden influences in the input, and show that hallucination exists under standard regularity conditions. ",
+        "bbox": [
+            112,
+            118,
+            882,
+            212
+        ],
+        "page_idx": 7
+    },
+    {
+        "type": "text",
+        "text": "$\\delta$ -Hallucination Under a Single Input. We show that even an loss-minimizing optimal estimator may output an answer that $\\delta$ -hallucinates by Definition 4.2. ",
+        "bbox": [
+            112,
+            232,
+            880,
+            268
+        ],
+        "page_idx": 7
+    },
+    {
+        "type": "text",
+        "text": "Theorem 5.1 (Existence of $\\delta$ -Hallucination Under Single Input). For an input $X$ , there exists infinitely many distributions of $A ( X )$ and $Z$ such that for an estimator $A ^ { * }$ that minimizes the expected quadratic loss defined in Definition 3.1 over $A ( X )$ , it is bound to $\\delta$ -hallucinate at $X$ . ",
+        "bbox": [
+            114,
+            279,
+            880,
+            335
+        ],
+        "page_idx": 7
+    },
+    {
+        "type": "text",
+        "text": "Proof. See Section B.1 for detailed proof. ",
+        "bbox": [
+            114,
+            349,
+            450,
+            369
+        ],
+        "page_idx": 7
+    },
+    {
+        "type": "image",
+        "img_path": "images/2bc99459bbdc18fec2b09d40a794bc6513fa65ce6334d028edc7cc21be96b8cf.jpg",
+        "image_caption": [],
+        "image_footnote": [],
+        "bbox": [
+            861,
+            351,
+            879,
+            364
+        ],
+        "page_idx": 7
+    },
+    {
+        "type": "text",
+        "text": "We further demonstrate the existence of $\\delta$ -hallucination on semi-optimal estimators. ",
+        "bbox": [
+            114,
+            377,
+            777,
+            396
+        ],
+        "page_idx": 7
+    },
+    {
+        "type": "text",
+        "text": "Theorem 5.2 (Existence of $\\delta$ -Hallucination on Semi-Optimal Estimators under Single Input). For an input $X$ , there exists infinitely many distributions of $A ( X )$ and $Z$ such that if an estimator $A ^ { \\prime }$ is within a distance of $\\epsilon$ to the optimal estimator $A ^ { * }$ , which writes as ",
+        "bbox": [
+            114,
+            407,
+            880,
+            463
+        ],
+        "page_idx": 7
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\| A ^ {\\prime} (X) - A ^ {*} (X) \\| _ {2} \\leq \\epsilon ,\n$$",
+        "text_format": "latex",
+        "bbox": [
+            397,
+            477,
+            599,
+            497
+        ],
+        "page_idx": 7
+    },
+    {
+        "type": "text",
+        "text": "then $A ^ { \\prime } ( X )$ is bound to $\\delta$ -hallucinate. ",
+        "bbox": [
+            114,
+            511,
+            413,
+            529
+        ],
+        "page_idx": 7
+    },
+    {
+        "type": "text",
+        "text": "Proof. See Section B.3 for detailed proof. ",
+        "bbox": [
+            114,
+            545,
+            450,
+            564
+        ],
+        "page_idx": 7
+    },
+    {
+        "type": "image",
+        "img_path": "images/2d98ee312ed535c126eb6ac39c889fe26e5621d3410ce2be9ea6d02f818d3340.jpg",
+        "image_caption": [],
+        "image_footnote": [],
+        "bbox": [
+            861,
+            546,
+            879,
+            560
+        ],
+        "page_idx": 7
+    },
+    {
+        "type": "text",
+        "text": "$\\delta$ -Hallucination under Multiple Inputs. When considering a collection of inputs, our definition applies to each input individually. We describe the $\\delta$ -hallucination under multiple inputs as follows. ",
+        "bbox": [
+            112,
+            579,
+            880,
+            632
+        ],
+        "page_idx": 7
+    },
+    {
+        "type": "text",
+        "text": "Corollary 5.2.1 (Existence of $\\delta$ -Hallucination under Multiple Inputs). For a set of input $X _ { j } , j \\in$ $[ S ]$ , there exists infinitely many distributions of $A ( X _ { j } )$ and $Z$ such that any estimator minimizing the expected quadratic loss defined in Definition 3.1 is bound to $\\delta$ -hallucinate at $X$ . ",
+        "bbox": [
+            114,
+            642,
+            880,
+            698
+        ],
+        "page_idx": 7
+    },
+    {
+        "type": "text",
+        "text": "Proof. See Corollary B.1.1 for detailed proof. ",
+        "bbox": [
+            114,
+            712,
+            480,
+            729
+        ],
+        "page_idx": 7
+    },
+    {
+        "type": "image",
+        "img_path": "images/def3053c185d8a71d0542f691388787cc03cba9da0a9a95f4dcb25ea6ede033e.jpg",
+        "image_caption": [],
+        "image_footnote": [],
+        "bbox": [
+            861,
+            713,
+            879,
+            727
+        ],
+        "page_idx": 7
+    },
+    {
+        "type": "text",
+        "text": "$\\delta$ -Hallucination with Hinted Latent Variables. In practical situations, the model receives hints about hidden influences in the input. We define this hint as a tilt upon the input $X$ as follows. ",
+        "bbox": [
+            112,
+            746,
+            880,
+            782
+        ],
+        "page_idx": 7
+    },
+    {
+        "type": "text",
+        "text": "Definition 5.1 (Effect of Latent Variable on Input). For an input $X$ , let $A ( X )$ be its target distribution. For a latent variable $Z$ associated with $X$ , let $Z _ { i }$ denote the states of this latent variable, ",
+        "bbox": [
+            114,
+            794,
+            880,
+            830
+        ],
+        "page_idx": 7
+    },
+    {
+        "type": "page_number",
+        "text": "8 ",
+        "bbox": [
+            491,
+            907,
+            504,
+            920
+        ],
+        "page_idx": 7
+    },
+    {
+        "type": "text",
+        "text": "and let $\\delta _ { i }$ denote a hint for the state $Z _ { i }$ for all $i \\in [ N ]$ , which satisfies ",
+        "bbox": [
+            114,
+            80,
+            658,
+            99
+        ],
+        "page_idx": 8
+    },
+    {
+        "type": "equation",
+        "text": "$$\nA (X + \\delta_ {i}) = A (X; Z = Z _ {i}), \\quad i \\in [ N ].\n$$",
+        "text_format": "latex",
+        "bbox": [
+            336,
+            114,
+            656,
+            133
+        ],
+        "page_idx": 8
+    },
+    {
+        "type": "text",
+        "text": "This means the target distribution of the tilted input is the posterior distribution when knowing $Z = Z _ { i }$ . ",
+        "bbox": [
+            114,
+            148,
+            879,
+            184
+        ],
+        "page_idx": 8
+    },
+    {
+        "type": "text",
+        "text": "Based on Definition 5.1, we show $\\delta$ -hallucination exists for tilted input under Lipschitzness regularity condition as follows. ",
+        "bbox": [
+            114,
+            196,
+            879,
+            231
+        ],
+        "page_idx": 8
+    },
+    {
+        "type": "text",
+        "text": "Theorem 5.3 (Existence of $\\delta$ -Hallucination at Tilted Input). Let $B _ { \\delta }$ denote the bound of all hints $\\delta _ { i } , i \\in [ N ]$ , defined as ",
+        "bbox": [
+            114,
+            243,
+            879,
+            280
+        ],
+        "page_idx": 8
+    },
+    {
+        "type": "equation",
+        "text": "$$\nB _ {\\delta} := \\sup  _ {i \\in [ N ]} \\| \\delta_ {i} \\| _ {2}.\n$$",
+        "text_format": "latex",
+        "bbox": [
+            426,
+            295,
+            568,
+            327
+        ],
+        "page_idx": 8
+    },
+    {
+        "type": "text",
+        "text": "For an $L$ -Lipschitz estimator $A ^ { * }$ satisfying Definition 3.2, there exists infinitely many distributions of $A ( X ; Z )$ such that $\\delta$ -Hallucination happens on all $X + \\delta _ { i }$ . That is, $A ^ { * } ( X + \\delta _ { i } )$ does not fall into the region where $f _ { A \\left( X ; Z _ { i } \\right) } \\geq \\delta$ for any $i \\in [ N ]$ by Definition 4.1. ",
+        "bbox": [
+            112,
+            340,
+            879,
+            396
+        ],
+        "page_idx": 8
+    },
+    {
+        "type": "text",
+        "text": "Proof. See Section B.4 for detailed proof. ",
+        "bbox": [
+            114,
+            411,
+            449,
+            429
+        ],
+        "page_idx": 8
+    },
+    {
+        "type": "image",
+        "img_path": "images/ee02f6401e8cd1be819ee629bfe91fa8df21ce580a7dea650bc59cca4fc90f20.jpg",
+        "image_caption": [],
+        "image_footnote": [],
+        "bbox": [
+            861,
+            412,
+            879,
+            426
+        ],
+        "page_idx": 8
+    },
+    {
+        "type": "text",
+        "text": "Thus, we show that hallucination is intrinsic to the probabilistic structure of estimation, across optimal and near-optimal estimators, multiple inputs, and even when the answers’ directions are hinted. ",
+        "bbox": [
+            112,
+            438,
+            879,
+            492
+        ],
+        "page_idx": 8
+    },
+    {
+        "type": "text",
+        "text": "6 6 Hallucination Probability Lower Bound ",
+        "text_level": 1,
+        "bbox": [
+            114,
+            521,
+            640,
+            545
+        ],
+        "page_idx": 8
+    },
+    {
+        "type": "text",
+        "text": "We extend our result beyond existence of $\\delta$ -hallucination in Section 6 and provide a lower bound on the probability of hallucination for optimal estimators satisfying certain conditions. ",
+        "bbox": [
+            114,
+            561,
+            879,
+            598
+        ],
+        "page_idx": 8
+    },
+    {
+        "type": "text",
+        "text": "We begin with the definition of means and variances for the variables of interest. ",
+        "bbox": [
+            114,
+            612,
+            746,
+            630
+        ],
+        "page_idx": 8
+    },
+    {
+        "type": "text",
+        "text": "Definition 6.1 (Means and Variances). Let $\\{ Z _ { i } \\} _ { i \\in [ N ] }$ denote the possible states of the latent variable $Z$ , with probabilities $p _ { i } : = \\mathrm { P r } [ Z = Z _ { i } ]$ . For each $i \\in [ N ]$ , define the conditional mean ",
+        "bbox": [
+            114,
+            642,
+            879,
+            680
+        ],
+        "page_idx": 8
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\mu_ {i} := \\mathbb {E} \\left[ A \\left(X; Z _ {i}\\right) \\right].\n$$",
+        "text_format": "latex",
+        "bbox": [
+            418,
+            694,
+            575,
+            714
+        ],
+        "page_idx": 8
+    },
+    {
+        "type": "text",
+        "text": "We regard $\\mu _ { i }$ as a realization of a random variable distributed according to $d _ { i } ^ { \\mu }$ . Let $\\mu _ { i } ^ { d } : = \\mathbb { E } _ { d _ { i } ^ { \\mu } } [ \\mu _ { i } ]$ and $\\sigma _ { i } ^ { d } : = \\operatorname { V a r } _ { d _ { i } ^ { \\mu } } [ \\mu _ { i } ]$ denote the mean and variance of this distribution, respectively. Let $d ^ { \\mu }$ denote the joint distribution of $( \\mu _ { 1 } , \\ldots , \\mu _ { N } )$ . We write $\\mu ^ { d } : = \\mathbb { E } _ { d ^ { \\mu } } [ \\mu _ { 1 } , \\dots , \\mu _ { N } ]$ for its mean vector and $\\begin{array} { r } { \\sigma ^ { d } : = \\mathbb { E } [ \\sum _ { i = 1 } ^ { N } ( \\mu _ { i } - \\mu _ { i } ^ { d } ) ^ { 2 } ] } \\end{array}$ as sum of variance. ",
+        "bbox": [
+            112,
+            728,
+            879,
+            806
+        ],
+        "page_idx": 8
+    },
+    {
+        "type": "text",
+        "text": "We then provide the following assumptions applied to $\\mu _ { i }$ and $d _ { i } ^ { \\mu }$ in Definition 6.1. In particular, we assume that the conditional means align around a common value and that the joint distributions of these conditional means are mutually independent. ",
+        "bbox": [
+            112,
+            818,
+            879,
+            873
+        ],
+        "page_idx": 8
+    },
+    {
+        "type": "page_number",
+        "text": "9 ",
+        "bbox": [
+            491,
+            907,
+            504,
+            920
+        ],
+        "page_idx": 8
+    },
+    {
+        "type": "text",
+        "text": "Assumption 6.1. We impose the following conditions on the distributions defined in Definition 6.1: ",
+        "bbox": [
+            114,
+            79,
+            879,
+            114
+        ],
+        "page_idx": 9
+    },
+    {
+        "type": "list",
+        "sub_type": "text",
+        "list_items": [
+            "1. Identical means: There exists a constant $\\mu _ { 0 } \\in \\mathbb { R }$ such that $\\mu _ { i } ^ { d } = \\mu _ { 0 }$ , for all $i \\in [ N ]$ . ",
+            "2. Independence: The distributions $\\{ d _ { i } ^ { \\mu } \\} _ { i = 1 } ^ { N }$ are mutually independent. "
+        ],
+        "bbox": [
+            138,
+            116,
+            815,
+            159
+        ],
+        "page_idx": 9
+    },
+    {
+        "type": "text",
+        "text": "We now characterize hallucination events in terms of output regions that correspond to high $( > \\delta )$ conditional probability under each latent state. ",
+        "bbox": [
+            114,
+            170,
+            879,
+            205
+        ],
+        "page_idx": 9
+    },
+    {
+        "type": "text",
+        "text": "Definition 6.2 (High Conditional Density Regions). We define $U _ { i } ^ { \\delta }$ to be ",
+        "bbox": [
+            114,
+            219,
+            694,
+            238
+        ],
+        "page_idx": 9
+    },
+    {
+        "type": "equation",
+        "text": "$$\nU _ {i} ^ {\\delta} := \\left\\{a \\mid f (a; Z _ {i}) > \\delta \\right\\},\n$$",
+        "text_format": "latex",
+        "bbox": [
+            392,
+            251,
+            602,
+            273
+        ],
+        "page_idx": 9
+    },
+    {
+        "type": "text",
+        "text": "which is the region with posterior probability of $Z = Z _ { i }$ larger than $\\delta$ ",
+        "bbox": [
+            114,
+            287,
+            666,
+            306
+        ],
+        "page_idx": 9
+    },
+    {
+        "type": "text",
+        "text": "Remark 6.1. By Definition 6.2, $\\delta$ -hallucination of $A ^ { * } ( X )$ is equivalent to ",
+        "bbox": [
+            114,
+            323,
+            710,
+            340
+        ],
+        "page_idx": 9
+    },
+    {
+        "type": "equation",
+        "text": "$$\nA ^ {*} (X) \\notin U _ {i} ^ {\\delta}, \\quad i \\in [ N ].\n$$",
+        "text_format": "latex",
+        "bbox": [
+            398,
+            354,
+            594,
+            377
+        ],
+        "page_idx": 9
+    },
+    {
+        "type": "text",
+        "text": "Remark 6.2. We highlight the relationship between Highest Conditional Density Regions (HC-DRs) and the classical Highest Density Regions (HDRs) [Caprio et al., 2024, Dahl et al., 2024]. When the latent variable $Z$ has only a single state, $\\delta$ -hallucination reduces to the event that the target distribution falls outside the HDR of a given mass, where the mass corresponds to a density threshold $\\delta$ . When $Z$ has multiple states, we generalize this idea by introducing HCDRs, which capture high-density regions conditioned on each latent state. See Section A for definitions and a detailed discussion. ",
+        "bbox": [
+            114,
+            387,
+            880,
+            516
+        ],
+        "page_idx": 9
+    },
+    {
+        "type": "text",
+        "text": "We then define the following spheres covering $U _ { i } ^ { \\delta }$ in Definition 6.2. Specifically, we enclose each $U _ { i } ^ { \\delta }$ within the smallest possible sphere centered at the corresponding mean $\\mu _ { i }$ . ",
+        "bbox": [
+            114,
+            526,
+            880,
+            565
+        ],
+        "page_idx": 9
+    },
+    {
+        "type": "text",
+        "text": "Definition 6.3 (Minimal Covering Spheres). For each $i \\in [ N ]$ , let $U _ { i } ^ { \\delta } \\subset \\mathbb { R } ^ { d _ { a } }$ denote the $\\delta$ -high density region associated with state $Z _ { i }$ . Define $B _ { i } ^ { \\delta } ( \\boldsymbol { r } )$ as the closed Euclidean ball of radius $r$ centered at $\\mu _ { i }$ . The minimal covering radius is ",
+        "bbox": [
+            114,
+            575,
+            879,
+            631
+        ],
+        "page_idx": 9
+    },
+    {
+        "type": "equation",
+        "text": "$$\nr _ {i} := \\inf  _ {r _ {i} \\in \\mathbb {R} ^ {+}} \\left\\{U _ {i} ^ {\\delta} \\subset B _ {i} ^ {\\delta} (r _ {i}) \\right\\}.\n$$",
+        "text_format": "latex",
+        "bbox": [
+            388,
+            645,
+            604,
+            675
+        ],
+        "page_idx": 9
+    },
+    {
+        "type": "text",
+        "text": "Thus $B _ { i } ^ { \\delta } ( r _ { i } )$ is the smallest sphere centered at $\\mu _ { i }$ that contains $U _ { i } ^ { \\delta }$ . Finally, define the uniform covering radius ",
+        "bbox": [
+            114,
+            689,
+            879,
+            727
+        ],
+        "page_idx": 9
+    },
+    {
+        "type": "equation",
+        "text": "$$\nr = \\max  _ {i \\in [ N ]} \\left\\{r _ {i} \\right\\}.\n$$",
+        "text_format": "latex",
+        "bbox": [
+            439,
+            741,
+            553,
+            770
+        ],
+        "page_idx": 9
+    },
+    {
+        "type": "text",
+        "text": "Remark 6.3. Geometrically, $r _ { i }$ measures the worst-case deviation of the $\\delta$ -high density region $U _ { i } ^ { \\delta }$ from its center $\\mu _ { i }$ . In other words, it is the maximum distance one must travel from $\\mu _ { i }$ to reach any point in $U _ { i } ^ { \\delta }$ . The uniform covering radius $r$ then gives a single bound that applies across all latent states, capturing the largest such deviation. This interpretation is useful for intuition: $r _ { i }$ quantifies how “spread out” the high-density region is around its mean, while $r$ aggregates the ",
+        "bbox": [
+            114,
+            787,
+            880,
+            881
+        ],
+        "page_idx": 9
+    },
+    {
+        "type": "page_number",
+        "text": "10 ",
+        "bbox": [
+            488,
+            907,
+            509,
+            921
+        ],
+        "page_idx": 9
+    },
+    {
+        "type": "text",
+        "text": "largest of these spreads across all $i$ ",
+        "bbox": [
+            114,
+            74,
+            393,
+            90
+        ],
+        "page_idx": 10
+    },
+    {
+        "type": "text",
+        "text": "With definitions and assumptions established, we now derive a lower bound on the probability of hallucination for any optimal estimator. ",
+        "bbox": [
+            114,
+            102,
+            880,
+            138
+        ],
+        "page_idx": 10
+    },
+    {
+        "type": "text",
+        "text": "Theorem 6.1 (Hallucination Probability Lower Bound). Let $( A ( X ) , Z )$ satisfy Assumption 6.1. For each $i \\in [ N ]$ , let $\\mu _ { i } , \\sigma _ { i } ^ { d }$ be as in Definition 6.1, let $\\mu _ { 0 }$ be as in Assumption 6.1, and let $r _ { x }$ be as in Definition 6.3. Define ",
+        "bbox": [
+            114,
+            150,
+            879,
+            204
+        ],
+        "page_idx": 10
+    },
+    {
+        "type": "equation",
+        "text": "$$\nd := (\\sum_ {j = 1} ^ {N} p _ {j} ^ {2} \\sigma_ {j} ^ {d}) ^ {1 / 2}, \\quad \\theta_ {i} (\\alpha) := \\frac {(\\alpha d + r _ {x}) ^ {2}}{\\sigma_ {i} ^ {d}}, \\quad \\alpha > 1, \\quad \\text {a n d} \\quad K _ {i} ^ {\\mu} := \\frac {(\\mathbb {E} [ (\\mu_ {i} - \\mu_ {0}) ^ {2} ]) ^ {2}}{\\mathbb {E} [ (\\mu_ {i} - \\mu_ {0}) ^ {4} ]}.\n$$",
+        "text_format": "latex",
+        "bbox": [
+            151,
+            215,
+            841,
+            267
+        ],
+        "page_idx": 10
+    },
+    {
+        "type": "text",
+        "text": "If for every $i \\in [ N ]$ there exists $\\alpha _ { i } > 1$ such that $\\theta _ { i } ( \\alpha _ { i } ) \\leq 1$ , then ",
+        "bbox": [
+            114,
+            280,
+            629,
+            299
+        ],
+        "page_idx": 10
+    },
+    {
+        "type": "equation",
+        "text": "$$\nP _ {H} ^ {\\delta} > \\prod_ {i = 1} ^ {N} (P _ {i} K _ {i} ^ {\\mu}),\n$$",
+        "text_format": "latex",
+        "bbox": [
+            419,
+            313,
+            576,
+            361
+        ],
+        "page_idx": 10
+    },
+    {
+        "type": "text",
+        "text": "where $P _ { H } ^ { \\delta }$ denotes the probability that the optimal estimator $A ^ { * } ~ \\delta$ -hallucinates at $X$ (equivalently, $A ^ { * } ( X ) \\notin U _ { i } ^ { \\delta }$ for all $i \\in [ N ]$ , with $U _ { i } ^ { \\delta }$ as in Definition 6.3). ",
+        "bbox": [
+            114,
+            376,
+            877,
+            412
+        ],
+        "page_idx": 10
+    },
+    {
+        "type": "text",
+        "text": "Proof. See Section B.5 for detailed proof. ",
+        "bbox": [
+            114,
+            428,
+            447,
+            446
+        ],
+        "page_idx": 10
+    },
+    {
+        "type": "image",
+        "img_path": "images/a167413e870791cc918c0ec15a66927f2c838729a4f31fba5bfd3ba205ef0b86.jpg",
+        "image_caption": [],
+        "image_footnote": [],
+        "bbox": [
+            861,
+            429,
+            879,
+            443
+        ],
+        "page_idx": 10
+    },
+    {
+        "type": "text",
+        "text": "7 Experiments ",
+        "text_level": 1,
+        "bbox": [
+            114,
+            468,
+            316,
+            493
+        ],
+        "page_idx": 10
+    },
+    {
+        "type": "text",
+        "text": "We validate our interpretations and claims with three complementary experiments. In particular, we first provide a synthetic coin-flipping problem (Section 7.1) where it demonstrates that models trained purely with likelihood objectives shows persistent $\\delta$ -hallucination. We then extend these insights to large-scale LLM (Section 7.2) and text-to-image generation (Section 7.2) settings. Both experiments validate our claim that a loss-minimizing optimal estimator $\\delta$ -hallucinates. ",
+        "bbox": [
+            114,
+            508,
+            879,
+            601
+        ],
+        "page_idx": 10
+    },
+    {
+        "type": "text",
+        "text": "7.1 Synthetic Coin Flipping Problem ",
+        "text_level": 1,
+        "bbox": [
+            114,
+            625,
+            503,
+            645
+        ],
+        "page_idx": 10
+    },
+    {
+        "type": "text",
+        "text": "Objective. We evaluate our claim that minimizing loss may not increase the conditional probability of estimated output with respect to input labels as in Theorem 5.1. ",
+        "bbox": [
+            114,
+            654,
+            877,
+            691
+        ],
+        "page_idx": 10
+    },
+    {
+        "type": "text",
+        "text": "Experiment Design. We design a controlled experiment based on the classical coin-flipping problem. We choose a subset of coins from a collection of coins (each with a distinct probability of landing heads), flip them, and record the total number of heads observed. The model receives the labels of the chosen coins as input. We then train the model to predict the recorded total. These labels do not explicitly reveal the head probabilities, and thus act as latent hints rather than explicit supervision. ",
+        "bbox": [
+            112,
+            712,
+            880,
+            823
+        ],
+        "page_idx": 10
+    },
+    {
+        "type": "text",
+        "text": "Data. We generate $2 N$ coins, each with a unique head probability, and perform $M$ flips to construct the dataset. We consider $N = 2 , 3$ , and 5, with $M$ ranging from 20000 to 40000. ",
+        "bbox": [
+            112,
+            845,
+            879,
+            881
+        ],
+        "page_idx": 10
+    },
+    {
+        "type": "page_number",
+        "text": "11 ",
+        "bbox": [
+            488,
+            907,
+            508,
+            920
+        ],
+        "page_idx": 10
+    },
+    {
+        "type": "text",
+        "text": "Model Architecture. We adopt an 8-layer transformer with 64 hidden dimensions and 256 feedforward dimensions for this experiment. ",
+        "bbox": [
+            114,
+            79,
+            880,
+            118
+        ],
+        "page_idx": 11
+    },
+    {
+        "type": "image",
+        "img_path": "images/ce26f23889fe2a57783f932fd84a5afc9ee5a027a2c11cbfda2635017158518a.jpg",
+        "image_caption": [
+            "(a) N = 2 "
+        ],
+        "image_footnote": [],
+        "bbox": [
+            119,
+            132,
+            370,
+            277
+        ],
+        "page_idx": 11
+    },
+    {
+        "type": "image",
+        "img_path": "images/6140bbfc6bc44a112bb4cd353762f6138acae1b0a75c9e228508fd49a016f4e1.jpg",
+        "image_caption": [
+            "(b) N = 3 "
+        ],
+        "image_footnote": [],
+        "bbox": [
+            375,
+            132,
+            620,
+            277
+        ],
+        "page_idx": 11
+    },
+    {
+        "type": "image",
+        "img_path": "images/99eb5fff588e2270a684f1401dc8c7620adfc3b34bb1d478706f53b6e2328381.jpg",
+        "image_caption": [
+            "(c) N = 5 ",
+            "Figure 3: We conducted 5 rounds of experiments on each of $N = 2 , 3$ and 5. The results show that training loss does not correlate with the conditional probability of the model estimation with respect to input labels. This aligns with our theoretical result in Theorem 5.1. "
+        ],
+        "image_footnote": [],
+        "bbox": [
+            629,
+            132,
+            875,
+            277
+        ],
+        "page_idx": 11
+    },
+    {
+        "type": "text",
+        "text": "Results. As shown in Figure 3, we observe that the descent of training losses does not correlate with the rise or drop of the conditional probability of the estimations generated on the validation set. This result aligns with our theoretical claim that minimizing the loss does not necessarily maximize the conditional probability (of a latent state) of the estimate. ",
+        "bbox": [
+            114,
+            391,
+            483,
+            537
+        ],
+        "page_idx": 11
+    },
+    {
+        "type": "text",
+        "text": "7.2 Open-Ended Text Questions ",
+        "text_level": 1,
+        "bbox": [
+            114,
+            561,
+            455,
+            583
+        ],
+        "page_idx": 11
+    },
+    {
+        "type": "text",
+        "text": "Objective. We evaluate hallucination in the LLM models by measruing the resemblance of model output to the commonly incorrect answers in TruthfulQA [Lin et al., 2021]. ",
+        "bbox": [
+            114,
+            592,
+            483,
+            667
+        ],
+        "page_idx": 11
+    },
+    {
+        "type": "text",
+        "text": "Experiment Design. We fine-tune pretrained language models on a dataset of open-ended questions and compare their ",
+        "bbox": [
+            114,
+            688,
+            483,
+            743
+        ],
+        "page_idx": 11
+    },
+    {
+        "type": "text",
+        "text": "outputs to those of the original models. We measure the the model’s tendency to resemble the commonly incorrect answers in TruthfulQA [Lin et al., 2021]. We use Gestalt Pattern Matching (difflib in Python) to measure resemblance. ",
+        "bbox": [
+            112,
+            744,
+            879,
+            797
+        ],
+        "page_idx": 11
+    },
+    {
+        "type": "text",
+        "text": "Data. We use GPT5, Gemini 2.5 Flash, and DeepSeek R1 to generate a dataset of 300 openended questions with 2 possible answers. This forms a dataset of 600 question-answer pairs. ",
+        "bbox": [
+            112,
+            820,
+            879,
+            858
+        ],
+        "page_idx": 11
+    },
+    {
+        "type": "image",
+        "img_path": "images/6677200727bef223111c75f04375da862dc85fad9a8a32e9b4dd16c1a489a8bb.jpg",
+        "image_caption": [
+            "Figure 4: Resemblance vs. Epochs. We fine-tune Qwen1.5-1.8B-Chat and Qwen2.5-7B-Instruct for 2, 3, and 4 epochs and test the answers’ resemblance to commonly incorrect answers in TruthfulQA. We repeat this process for 2 random seeds. Results validate that hallucination persists even as the model minimizes its predictive objective. "
+        ],
+        "image_footnote": [],
+        "bbox": [
+            501,
+            385,
+            859,
+            589
+        ],
+        "page_idx": 11
+    },
+    {
+        "type": "page_number",
+        "text": "12 ",
+        "bbox": [
+            488,
+            907,
+            509,
+            921
+        ],
+        "page_idx": 11
+    },
+    {
+        "type": "text",
+        "text": "Model Architecture. We fine-tune Qwen1.5- 1.8B-Chat and Qwen2.5-7B-Instruct on our open-ended question dataset using LLaMA-Factory with LoRA adapters. ",
+        "bbox": [
+            114,
+            78,
+            486,
+            154
+        ],
+        "page_idx": 12
+    },
+    {
+        "type": "text",
+        "text": "Results. As shown in Figure 4 and Table 1, both models show a consistent increase in resemblance over additional fine-tuning epochs. The results reveal that, though we fine-tune the models to obtain low predictive loss, both models become more aligned with commonly incorrect answers. This pattern is consistent across all seeds as shown in Table 1. The finding supports our theoretical claim that loss ",
+        "bbox": [
+            114,
+            166,
+            486,
+            332
+        ],
+        "page_idx": 12
+    },
+    {
+        "type": "text",
+        "text": "minimization alone is insufficient to eliminate $\\delta$ -hallucination. ",
+        "bbox": [
+            114,
+            333,
+            609,
+            349
+        ],
+        "page_idx": 12
+    },
+    {
+        "type": "text",
+        "text": "Table 1: Resemblance of Fine-Tuned Models’ Answers to Commonly Incorrect Answers in TruthfulQA. Each model is fine-tuned for 2, 3, and 4 epochs with 2 random seeds. The resemblance does not decrease with training, validating that hallucination persists in loss-minimizing optimal models. ",
+        "bbox": [
+            493,
+            82,
+            880,
+            186
+        ],
+        "page_idx": 12
+    },
+    {
+        "type": "table",
+        "img_path": "images/7dd3415e9664e6e3c16f5bc8742b209c3d0ca8852cf9ca9c7e94b982249ab8b4.jpg",
+        "table_caption": [],
+        "table_footnote": [],
+        "table_body": "<table><tr><td rowspan=\"2\">Epochs</td><td colspan=\"2\">Qwen1.5-1.8B-Chat</td><td colspan=\"2\">Qwen2.5-7B-Instruct</td></tr><tr><td>Seed 1</td><td>Seed 2</td><td>Seed 1</td><td>Seed 2</td></tr><tr><td>Original</td><td>0.1975</td><td>-</td><td>0.1868</td><td>-</td></tr><tr><td>2</td><td>0.2338</td><td>0.2431</td><td>0.2043</td><td>0.1997</td></tr><tr><td>3</td><td>0.2338</td><td>0.2486</td><td>0.2123</td><td>0.2028</td></tr><tr><td>4</td><td>0.2450</td><td>0.2539</td><td>0.2173</td><td>0.2099</td></tr></table>",
+        "bbox": [
+            496,
+            189,
+            898,
+            315
+        ],
+        "page_idx": 12
+    },
+    {
+        "type": "text",
+        "text": "7.3 Open-Ended Text-to-Image ",
+        "text_level": 1,
+        "bbox": [
+            114,
+            375,
+            450,
+            396
+        ],
+        "page_idx": 12
+    },
+    {
+        "type": "text",
+        "text": "Objective. We evaluate hallucination in a text-to-image setting where we detect generated samples falling outside a calibrated HCDR as in Definition B.2 and Remark 6.2. ",
+        "bbox": [
+            112,
+            405,
+            880,
+            443
+        ],
+        "page_idx": 12
+    },
+    {
+        "type": "text",
+        "text": "Experiment Design. We first construct HCDR from real AFHQ cat and dog images. We begin by extracting fixed CLIP embeddings from the images, which are then normalized, reduced in dimension via PCA, and standardized through z-scoring. For each class (cats, dogs), we fit a Gaussian Mixture Model (GMM) on an $8 0 \\%$ training split of the preprocessed embeddings to learn what cat or dog features look like. We then use the remaining $2 0 \\%$ testing data to obtain logdensities and compute a class-specific threshold at the $1 0 \\%$ percentile. This threshold corresponds to a cutoff such that the top $9 0 \\%$ of the testing images are included in the HDR for each class (See Figure 7 of Section A for a visualization of HDR for cats and dogs). In other words, a new embedding is considered to lie outside of HDR or a specific class if its log-likelihood under that class’s GMM exceeds the threshold. Finally, to form HCDR, we take the union of the per-class HDRs: a generated embedding is inside the HCDR if it lies in at least one class HDR, and outside otherwise. ",
+        "bbox": [
+            112,
+            455,
+            883,
+            678
+        ],
+        "page_idx": 12
+    },
+    {
+        "type": "text",
+        "text": "We then fine-tune a text-to-image generative model, with the text encoder frozen, on the training dataset for the model to mainly learn the image distribution (target). We evaluate the portion of generated images outside of HCDR for given prompts. ",
+        "bbox": [
+            112,
+            691,
+            883,
+            750
+        ],
+        "page_idx": 12
+    },
+    {
+        "type": "text",
+        "text": "Data. We use Animal Faces-HQ (AFHQ) [Choi et al., 2020]. We extract 5558 cat images and 5139 dog images. Each is 512 by 512 pixels. We construct 3 prompts for evaluation: \"a realistic photo of a friendly dog\", \"a fluffy cat sitting on a sofa\", and \"a cute pet animal\". ",
+        "bbox": [
+            112,
+            761,
+            880,
+            819
+        ],
+        "page_idx": 12
+    },
+    {
+        "type": "text",
+        "text": "Model Architecture. We use CLIP ViT-B/32 model model to extract image CLIP embeddings. For generation, we fine-tune the UNet component of Stable Diffusion v1.5, while keeping the text encoder and VAE frozen. ",
+        "bbox": [
+            112,
+            830,
+            880,
+            886
+        ],
+        "page_idx": 12
+    },
+    {
+        "type": "page_number",
+        "text": "13 ",
+        "bbox": [
+            488,
+            907,
+            509,
+            922
+        ],
+        "page_idx": 12
+    },
+    {
+        "type": "text",
+        "text": "Results. As shown in Figure 5, as we fine-tune the model, the training loss decreases, indicating that the model captures the distribution of the dataset, yet hallucination rate do not converge. It supports our theoretical claim that loss minimization alone is insufficient to eliminate $\\delta$ -hallucination. ",
+        "bbox": [
+            114,
+            79,
+            486,
+            205
+        ],
+        "page_idx": 13
+    },
+    {
+        "type": "text",
+        "text": "Ablation Study on Prompts. We further conduct studies on 3 types of prompts for the text-to-image generative model: one targeting the cat category (\"a fluffy cat sitting on a soft\"), one targeting the dog category (\"a realistic photo of a friendly dog\"), and one mixed prompt (“a cute pet animal”). We evaluate the hallucination rate for each prompt across training epochs. As shown in Figure 6, our results ",
+        "bbox": [
+            114,
+            229,
+            486,
+            393
+        ],
+        "page_idx": 13
+    },
+    {
+        "type": "text",
+        "text": "consistently show that, even under a loss-minimizing estimator, hallucinations persist and do not converge to zero. This indicates that even when prompts hint information about target category, hallucinations may still occur. ",
+        "bbox": [
+            112,
+            396,
+            880,
+            454
+        ],
+        "page_idx": 13
+    },
+    {
+        "type": "image",
+        "img_path": "images/f6345b330d299f184f3838b472da1a6b60d54651d0f37db8ffba8879395b42a5.jpg",
+        "image_caption": [
+            "Hallucination Rate and Training Loss ",
+            "Figure 5: Hallucination Rate and Training Loss. We plot hallucination rate (green, left axis) and training loss (blue, right axis) over epochs. While the training loss decreases, the hallucination rate does not converge and often fluctuates, showing that hallucination persists even as the model minimizes its predictive objective. "
+        ],
+        "image_footnote": [],
+        "bbox": [
+            498,
+            95,
+            875,
+            252
+        ],
+        "page_idx": 13
+    },
+    {
+        "type": "image",
+        "img_path": "images/fe5939024c033cf1b7db732b190a257cee09a40f139f6b8b15c5c7795b273786.jpg",
+        "image_caption": [],
+        "image_footnote": [],
+        "bbox": [
+            116,
+            468,
+            367,
+            580
+        ],
+        "page_idx": 13
+    },
+    {
+        "type": "image",
+        "img_path": "images/0c0dabfb64783b6e07b97614ab3d095e5212d77fbeed4fb702f76fb47661c621.jpg",
+        "image_caption": [],
+        "image_footnote": [],
+        "bbox": [
+            367,
+            468,
+            617,
+            580
+        ],
+        "page_idx": 13
+    },
+    {
+        "type": "image",
+        "img_path": "images/918f53b716f7ce16fb6fcdc10b59be3970c4b8e146c114ccba9584269ef2c68f.jpg",
+        "image_caption": [
+            "Figure 6: Prompts Analysis. We create 3 types of prompts and evaluate their hallucination rate respectively. All plots show even a loss-minimizing estimator hallucinates. "
+        ],
+        "image_footnote": [],
+        "bbox": [
+            620,
+            468,
+            870,
+            580
+        ],
+        "page_idx": 13
+    },
+    {
+        "type": "text",
+        "text": "8 Conclusion ",
+        "text_level": 1,
+        "bbox": [
+            114,
+            656,
+            299,
+            678
+        ],
+        "page_idx": 13
+    },
+    {
+        "type": "text",
+        "text": "In this work, we reframed hallucination in generative models as a fundamental misalignment between standard loss-based training objectives and human expectations. Under this view, we formalized $\\delta$ -hallucination to capture when an estimator’s output fails to match any plausible real-world outcome (Section 4). Crucially, we showed that no amount of model capacity or data can eliminate hallucinations: even an ideal Bayes-optimal estimator (one minimizing the true expected loss) may still generate implausible predictions on inputs with inherently diverse correct answers (Section 5). We derived general lower bounds on how frequently such hallucinations must occur for broad classes of target distributions (Section 6), and validated these predictions with both synthetic and real-world experiments (Section 6). Taken together, our findings establish that hallucination is a structural property of the estimation process itself rather than just a symptom ",
+        "bbox": [
+            112,
+            695,
+            882,
+            882
+        ],
+        "page_idx": 13
+    },
+    {
+        "type": "page_number",
+        "text": "14 ",
+        "bbox": [
+            488,
+            907,
+            509,
+            921
+        ],
+        "page_idx": 13
+    },
+    {
+        "type": "text",
+        "text": "of limited models or datasets. ",
+        "bbox": [
+            114,
+            79,
+            351,
+            95
+        ],
+        "page_idx": 14
+    },
+    {
+        "type": "text",
+        "text": "Limitations. While our theory offers a new perspective on hallucinations, it has a few limitations. The current lower bound for $\\delta$ -hallucination is relatively loose and relies on certain assumptions, leaving room for tighter bounds under more relaxed conditions. Additionally, our analysis focused on a general estimator. Examining specific model families or tasks might yield stronger guarantees or further insight into when and how hallucinations arise. ",
+        "bbox": [
+            114,
+            118,
+            882,
+            210
+        ],
+        "page_idx": 14
+    },
+    {
+        "type": "text",
+        "text": "Implications and Future Work. By identifying hallucination as arising from the core training objective, our results imply that simply scaling up model size or dataset coverage is insufficient to eliminate the problem. Effective mitigation may require rethinking generative model training, with objectives explicitly aligned to human standards of correctness. In practice, this could mean favoring more mode-seeking behavior —generating high-probability, consistent outputs — rather than minimizing average error across all possible outcomes. Future training methods may need to incorporate constraints or decision-theoretic criteria that push models to commit to a single plausible answer instead of blending incompatible modes. Several concrete directions follow from our findings: ",
+        "bbox": [
+            112,
+            232,
+            883,
+            398
+        ],
+        "page_idx": 14
+    },
+    {
+        "type": "list",
+        "sub_type": "text",
+        "list_items": [
+            "• Alternative Loss Functions. Extend our theoretical framework to other loss functions to investigate how the choice of training objective influences hallucination rates. ",
+            "• Alignment-Oriented Training Schemes. Design practical strategies that scale our insights, such as HDR-guided sampling or mixed-objective fine-tuning that explicitly penalizes implausible outputs. ",
+            "• Multimodal and Structured Outputs. Generalize the analysis to multimodal and structured tasks, where the space of valid outputs is richer, to uncover new alignment strategies tailored to complex domains. "
+        ],
+        "bbox": [
+            145,
+            406,
+            877,
+            559
+        ],
+        "page_idx": 14
+    },
+    {
+        "type": "text",
+        "text": "In summary, treating hallucination as a structural phenomenon calls for a shift away from naive average-case error minimization and toward objectives that explicitly prefer outputs aligned with one of the true modes, thereby better matching human standards of reliability. ",
+        "bbox": [
+            114,
+            571,
+            882,
+            625
+        ],
+        "page_idx": 14
+    },
+    {
+        "type": "page_number",
+        "text": "15 ",
+        "bbox": [
+            488,
+            907,
+            509,
+            921
+        ],
+        "page_idx": 14
+    },
+    {
+        "type": "text",
+        "text": "Acknowledgments ",
+        "text_level": 1,
+        "bbox": [
+            117,
+            78,
+            339,
+            102
+        ],
+        "page_idx": 15
+    },
+    {
+        "type": "text",
+        "text": "JH would like to thank Mehak Kawatra, Maojaing Su, Dino Feng and Andrew Chen for enlightening discussions on related topics, the Red Maple Family for support, and Jiayi Wang for facilitating experimental deployments. ",
+        "bbox": [
+            117,
+            118,
+            880,
+            172
+        ],
+        "page_idx": 15
+    },
+    {
+        "type": "text",
+        "text": "JH is partially supported by Ensemble AI and Northwestern University. Han Liu is partially supported by NIH R01LM1372201, NSF AST-2421845, Simons Foundation MPS-AI-00010513, AbbVie , Dolby and Chan Zuckerberg Biohub Chicago Spoke Award. This research was supported in part through the computational resources and staff contributions provided for the Quest high performance computing facility at Northwestern University which is jointly supported by the Office of the Provost, the Office for Research, and Northwestern University Information Technology. The content is solely the responsibility of the authors and does not necessarily represent the official views of the funding agencies. ",
+        "bbox": [
+            117,
+            188,
+            880,
+            335
+        ],
+        "page_idx": 15
+    },
+    {
+        "type": "text",
+        "text": "Typeset with a modified LaTeX template of 1712.09542 [hep-th] by Yuji Tachikawa [Tachikawa, 2020]. ",
+        "bbox": [
+            117,
+            351,
+            880,
+            387
+        ],
+        "page_idx": 15
+    },
+    {
+        "type": "page_number",
+        "text": "16 ",
+        "bbox": [
+            488,
+            907,
+            509,
+            920
+        ],
+        "page_idx": 15
+    },
+    {
+        "type": "text",
+        "text": "Appendix ",
+        "text_level": 1,
+        "bbox": [
+            114,
+            74,
+            292,
+            108
+        ],
+        "page_idx": 16
+    },
+    {
+        "type": "list",
+        "sub_type": "text",
+        "list_items": [
+            "A Highest Conditional Density Regions 17 ",
+            "B Proofs of Main Text 18 "
+        ],
+        "bbox": [
+            116,
+            126,
+            883,
+            164
+        ],
+        "page_idx": 16
+    },
+    {
+        "type": "list",
+        "sub_type": "text",
+        "list_items": [
+            "B.1 Proof of Theorem 5.1 18 ",
+            "B.2 Proof of Corollary 5.2.1 23 ",
+            "B.3 Proof of Section B.3 23 ",
+            "B.4 Proof of Theorem 5.3 25 ",
+            "B.5 Proof of Theorem 6.1 25 "
+        ],
+        "bbox": [
+            143,
+            166,
+            880,
+            256
+        ],
+        "page_idx": 16
+    },
+    {
+        "type": "text",
+        "text": "C Derivation to Cross-Entropy Loss 30 ",
+        "bbox": [
+            114,
+            261,
+            883,
+            280
+        ],
+        "page_idx": 16
+    },
+    {
+        "type": "text",
+        "text": "A Highest Conditional Density Regions ",
+        "text_level": 1,
+        "bbox": [
+            114,
+            306,
+            612,
+            330
+        ],
+        "page_idx": 16
+    },
+    {
+        "type": "text",
+        "text": "Highest Density Regions. [Hyndman, 1996] popularize the concept of Highest Density Regions (HDRs) as the smallest-volume set containing a given probability mass He provided practical algorithms for computing and visualizing HDRs for univariate and multivariate densities, showing their advantages over equal-tailed intervals in revealing multi-modal structure. [Samworth and Wand, 2010] developed a rigorous asymptotic theory for kernel-based HDR estimation, deriving uniform-in-bandwidth risk approximations and proposing optimal bandwidth selectors that minimize HDR estimation error. [Haselsteiner et al., 2017] introduced the idea of using HDRs to define environmental-contours—termed highest-density contours—in engineering design, demonstrating that HDR-based contours yield more compact, interpretable regions for multimodal environmental distributions. ",
+        "bbox": [
+            112,
+            345,
+            882,
+            529
+        ],
+        "page_idx": 16
+    },
+    {
+        "type": "text",
+        "text": "In a concrete example, we build calibration datasets for the categories of cats and dogs in AFHQ dataset [Choi et al., 2020] and estimate their log-densities under GMM model as shown in Figure 7. ",
+        "bbox": [
+            112,
+            544,
+            883,
+            597
+        ],
+        "page_idx": 16
+    },
+    {
+        "type": "text",
+        "text": "Highest Conditional Density Regions. We emphasize a connection between Highest Conditional Density Regions and HDRs. Specifically, when the latent variable $Z$ only has one latent state, the $\\delta$ -hallucination in this special occasion is the expectation of the target distribution falling out of the HDRs of a certain mass that induces a density bound of $\\delta$ . We then extend this concept to the distributions correlated with a latent variable with more than one states. Namely, we introduce the concept of Highest Conditional Density Regions (HCDRs) and define it as follows. ",
+        "bbox": [
+            112,
+            613,
+            880,
+            726
+        ],
+        "page_idx": 16
+    },
+    {
+        "type": "text",
+        "text": "Definition A.1 (Highest Conditional Density Regions). Let $d$ be a distribution and $Z$ a latent variable correlated with $d$ . Let $d _ { i }$ denote the conditional probability of $d$ when knowing $Z = Z _ { i }$ , here $Z _ { i }$ , $i \\in [ N ]$ is one of the $N$ states of $Z$ . This explicitly writes as ",
+        "bbox": [
+            114,
+            734,
+            880,
+            792
+        ],
+        "page_idx": 16
+    },
+    {
+        "type": "equation",
+        "text": "$$\nd _ {i} = d \\mid \\{Z = Z _ {i} \\}.\n$$",
+        "text_format": "latex",
+        "bbox": [
+            418,
+            805,
+            576,
+            825
+        ],
+        "page_idx": 16
+    },
+    {
+        "type": "text",
+        "text": "We define the Highest Conditional Density Regions $S _ { M }$ as the smallest region on which the integral of $d _ { i }$ is $M$ . ",
+        "bbox": [
+            114,
+            839,
+            880,
+            878
+        ],
+        "page_idx": 16
+    },
+    {
+        "type": "page_number",
+        "text": "17 ",
+        "bbox": [
+            488,
+            907,
+            509,
+            922
+        ],
+        "page_idx": 16
+    },
+    {
+        "type": "image",
+        "img_path": "images/9318ca6d28034a86b016ce94ada97db55c556bdfe29ad1ab0542807602ea078b.jpg",
+        "image_caption": [
+            "Figure 7: An Example of HDR. We shown an example of HDR for the class of cats and dogs. Dashed vertical lines mark the HDR thresholds at the $1 0 \\%$ quantile. Samples to the right of the threshold belong to the most probable $1 0 \\%$ of the calibration distribution for that class. Samples to the left of the threshold are deemed outside the HDR and treated as potential hallucinations. ",
+            "Figure 8 shows the difference of HCDR and HDR. "
+        ],
+        "image_footnote": [],
+        "bbox": [
+            127,
+            83,
+            870,
+            362
+        ],
+        "page_idx": 17
+    },
+    {
+        "type": "text",
+        "text": "B Proofs of Main Text ",
+        "text_level": 1,
+        "bbox": [
+            114,
+            523,
+            408,
+            546
+        ],
+        "page_idx": 17
+    },
+    {
+        "type": "text",
+        "text": "B.1 Proof of Theorem 5.1 ",
+        "text_level": 1,
+        "bbox": [
+            114,
+            568,
+            390,
+            588
+        ],
+        "page_idx": 17
+    },
+    {
+        "type": "text",
+        "text": "To prove the existence of $\\delta$ -hallucination, we state the following lemma. ",
+        "bbox": [
+            114,
+            599,
+            686,
+            617
+        ],
+        "page_idx": 17
+    },
+    {
+        "type": "text",
+        "text": "Lemma B.1. The estimator $A ^ { * } ( X )$ that minimizes the expected quadratic loss over $A ( X )$ is ",
+        "bbox": [
+            114,
+            633,
+            854,
+            652
+        ],
+        "page_idx": 17
+    },
+    {
+        "type": "equation",
+        "text": "$$\nA ^ {*} (X) = \\underset {A (X)} {\\mathbb {E}} [ A (X) ].\n$$",
+        "text_format": "latex",
+        "bbox": [
+            406,
+            667,
+            588,
+            696
+        ],
+        "page_idx": 17
+    },
+    {
+        "type": "text",
+        "text": "Proof. As defined in Definition 3.1, for $A ^ { * } ( X )$ , the loss over $A ( X )$ is ",
+        "bbox": [
+            114,
+            719,
+            666,
+            738
+        ],
+        "page_idx": 17
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\begin{array}{l} \\ell_ {A (X)} \\left(A ^ {*} (X)\\right) = \\underset {A (X)} {\\mathbb {E}} \\left[ \\| A ^ {*} (X) - a \\| _ {2} ^ {2} \\right] \\\\ = \\int_ {a \\in \\mathcal {A}} \\| A ^ {*} (X) - a \\| _ {2} ^ {2} \\cdot f _ {A (X)} (a) \\mathrm {d} a, \\tag {B.1} \\\\ \\end{array}\n$$",
+        "text_format": "latex",
+        "bbox": [
+            289,
+            750,
+            879,
+            821
+        ],
+        "page_idx": 17
+    },
+    {
+        "type": "text",
+        "text": "where $A$ is the output domain of $A ( X )$ (the set of all possible outputs). By our notation defined in Section 3, $f _ { A ( X ) }$ is the probability density function of $A ( X )$ . ",
+        "bbox": [
+            112,
+            835,
+            880,
+            872
+        ],
+        "page_idx": 17
+    },
+    {
+        "type": "page_number",
+        "text": "18 ",
+        "bbox": [
+            488,
+            907,
+            509,
+            920
+        ],
+        "page_idx": 17
+    },
+    {
+        "type": "image",
+        "img_path": "images/d2f35f10a93c41f44f47fddae4dbab86bbbe4ecc141f8a35b5732644d874c7ef.jpg",
+        "image_caption": [
+            "Figure 8: An Example of HCDR vs. HDR. We show the difference between HCDR and HDR for a mixture of two normal distributions. The blue region denotes HDR, whereas the green and blue region together denote HCDR. δ denotes the bound of the HDR $( 1 0 \\% )$ , and $\\delta _ { 1 }$ $( 5 \\% )$ denotes the bound for the conditional probabilities. Though HDR is encapsulated in HCDR in this example, HDR might contain regions outside HCDR in other cases, meaning HCDR is not simply an expansion of HDR. "
+        ],
+        "image_footnote": [],
+        "bbox": [
+            169,
+            102,
+            807,
+            424
+        ],
+        "page_idx": 18
+    },
+    {
+        "type": "text",
+        "text": "Now, for an $A ^ { * }$ that minimizes the loss at $X$ . We have its gradient at $A ( X )$ to be $0 _ { d _ { a } }$ $\\scriptstyle { \\dot { d } } _ { a }$ is the output dimension as in Definition 4.1). ",
+        "bbox": [
+            112,
+            569,
+            880,
+            606
+        ],
+        "page_idx": 18
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\nabla \\ell_ {A (X)} (A ^ {*} (X)) = 0.\n$$",
+        "text_format": "latex",
+        "bbox": [
+            410,
+            621,
+            584,
+            641
+        ],
+        "page_idx": 18
+    },
+    {
+        "type": "text",
+        "text": "Combine the above equation with (B.1) we have ",
+        "bbox": [
+            114,
+            656,
+            500,
+            672
+        ],
+        "page_idx": 18
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\nabla \\left(\\int_ {a \\in \\mathcal {A}} \\| A ^ {*} (X) - a \\| _ {2} ^ {2} \\cdot f _ {A (X)} (a) \\mathrm {d} a\\right) = 0. \\tag {B.2}\n$$",
+        "text_format": "latex",
+        "bbox": [
+            326,
+            686,
+            880,
+            724
+        ],
+        "page_idx": 18
+    },
+    {
+        "type": "text",
+        "text": "Since the $\\nabla$ here denotes the gradient of $A ^ { * } ( X )$ , we have ",
+        "bbox": [
+            114,
+            738,
+            570,
+            756
+        ],
+        "page_idx": 18
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\begin{array}{l} \\nabla \\left(\\int_ {a \\in \\mathcal {A}} \\| A ^ {*} (X) - a \\| _ {2} ^ {2} \\cdot f _ {A (X)} (a) \\mathrm {d} a\\right) \\\\ = \\int_ {a \\in \\mathcal {A}} \\nabla \\| A ^ {*} (X) - a \\| _ {2} ^ {2} \\cdot f _ {A (X)} (a) \\mathrm {d} a \\\\ = \\int_ {a \\in \\mathcal {A}} \\nabla \\left(\\left\\| A ^ {*} (X) \\right\\| _ {2} ^ {2} - 2 A ^ {*} (X) ^ {\\top} a\\right) \\cdot f _ {A (X)} (a) d a \\quad \\left(\\left\\| A (X) \\right\\| _ {2} ^ {2} \\text {i s e r a s e d w h e n t a k i n g t h e g r a d i e n t}\\right) \\\\ \\end{array}\n$$",
+        "text_format": "latex",
+        "bbox": [
+            148,
+            768,
+            877,
+            887
+        ],
+        "page_idx": 18
+    },
+    {
+        "type": "page_number",
+        "text": "19 ",
+        "bbox": [
+            488,
+            907,
+            509,
+            920
+        ],
+        "page_idx": 18
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\begin{array}{l} = \\int_ {a \\in \\mathcal {A}} (2 A ^ {*} (X) - 2 a) \\cdot f _ {A (X)} (a) d a \\\\ = 2 \\int_ {a \\in \\mathcal {A}} A ^ {*} (X) \\cdot f _ {A (X)} (a) \\mathrm {d} a - 2 \\int_ {a \\in \\mathcal {A}} A (X) \\cdot f _ {A (X)} (a) \\mathrm {d} a \\\\ = 2 A ^ {*} (X) - 2 \\int_ {a \\in \\mathcal {A}} a \\cdot f _ {A (X)} (a) \\mathrm {d} a. \\quad \\left(\\text {B y} \\int_ {\\mathcal {A}} f _ {A (X)} (a) d a = 1\\right) \\\\ \\end{array}\n$$",
+        "text_format": "latex",
+        "bbox": [
+            150,
+            75,
+            877,
+            191
+        ],
+        "page_idx": 19
+    },
+    {
+        "type": "text",
+        "text": "Combine the above result with (B.2), we have ",
+        "bbox": [
+            114,
+            220,
+            478,
+            236
+        ],
+        "page_idx": 19
+    },
+    {
+        "type": "equation",
+        "text": "$$\n2 A ^ {*} (X) - 2 \\int_ {a \\in \\mathcal {A}} A (X) \\cdot f _ {A (X)} (a) \\mathrm {d} a = 0.\n$$",
+        "text_format": "latex",
+        "bbox": [
+            326,
+            250,
+            666,
+            289
+        ],
+        "page_idx": 19
+    },
+    {
+        "type": "text",
+        "text": "Thus $A ^ { * }$ is ",
+        "bbox": [
+            114,
+            315,
+            205,
+            330
+        ],
+        "page_idx": 19
+    },
+    {
+        "type": "equation",
+        "text": "$$\nA ^ {*} (X) = \\int_ {a \\in A} a \\cdot f _ {A (X)} (a) \\mathrm {d} a = \\mathbb {E} [ A (X) ]. \\tag {B.3}\n$$",
+        "text_format": "latex",
+        "bbox": [
+            326,
+            343,
+            879,
+            380
+        ],
+        "page_idx": 19
+    },
+    {
+        "type": "text",
+        "text": "This completes the proof. ",
+        "bbox": [
+            114,
+            393,
+            320,
+            411
+        ],
+        "page_idx": 19
+    },
+    {
+        "type": "text",
+        "text": "Theorem B.1 (Existence of $\\delta$ -Hallucination under Single Input; Theorem 5.1 Restate). For an input $X$ , there exists infinitely many distributions of $A ( X )$ and $Z$ such that for an estimator $A ^ { * }$ that minimizes the expected quadratic loss defined in Definition 3.1 over $A ( X )$ , it is bound to $\\delta$ -hallucinate at $X$ . ",
+        "bbox": [
+            112,
+            416,
+            880,
+            489
+        ],
+        "page_idx": 19
+    },
+    {
+        "type": "text",
+        "text": "Proof. By Lemma B.1, we have ",
+        "bbox": [
+            114,
+            503,
+            372,
+            518
+        ],
+        "page_idx": 19
+    },
+    {
+        "type": "equation",
+        "text": "$$\nA ^ {*} (X) = \\underset {A (X)} {\\mathbb {E}} [ A (X) ].\n$$",
+        "text_format": "latex",
+        "bbox": [
+            406,
+            535,
+            588,
+            564
+        ],
+        "page_idx": 19
+    },
+    {
+        "type": "text",
+        "text": "We now construct a wide range of distribution of $A ( X )$ and $Z$ that satisfies ",
+        "bbox": [
+            114,
+            593,
+            707,
+            611
+        ],
+        "page_idx": 19
+    },
+    {
+        "type": "equation",
+        "text": "$$\nf (A ^ {*} (X); Z) \\leq \\delta .\n$$",
+        "text_format": "latex",
+        "bbox": [
+            423,
+            626,
+            571,
+            646
+        ],
+        "page_idx": 19
+    },
+    {
+        "type": "text",
+        "text": "Let $N$ (number of latent states) be any positive number. Then, let $A ( X ; Z _ { i } ) , i \\in [ N - 1 ]$ be a normal distribution of the form ",
+        "bbox": [
+            112,
+            675,
+            879,
+            710
+        ],
+        "page_idx": 19
+    },
+    {
+        "type": "equation",
+        "text": "$$\nf _ {A (X; Z _ {i})} (a) := (2 \\pi) ^ {\\frac {- d _ {a}}{2}} \\det (\\Sigma_ {i}) ^ {- \\frac {1}{2}} \\exp \\biggl (- \\frac {1}{2} (X - \\mu_ {i}) ^ {\\top} \\Sigma_ {i} ^ {- 1} (X - \\mu_ {i}) \\biggr).\n$$",
+        "text_format": "latex",
+        "bbox": [
+            217,
+            722,
+            777,
+            762
+        ],
+        "page_idx": 19
+    },
+    {
+        "type": "text",
+        "text": "By the requirements of normal distributions, $\\Sigma _ { i }$ are positive-definite matrices in $\\mathbb { R } ^ { d _ { a } \\times d _ { a } }$ , and $\\mu _ { i }$ are $d _ { a }$ -dimensional vectors. ",
+        "bbox": [
+            114,
+            776,
+            879,
+            811
+        ],
+        "page_idx": 19
+    },
+    {
+        "type": "text",
+        "text": "This is also denoted as ",
+        "bbox": [
+            114,
+            828,
+            297,
+            844
+        ],
+        "page_idx": 19
+    },
+    {
+        "type": "equation",
+        "text": "$$\nA (X; Z _ {i}) \\sim \\mathcal {N} (\\mu_ {i}, \\Sigma_ {i}),\n$$",
+        "text_format": "latex",
+        "bbox": [
+            403,
+            861,
+            593,
+            880
+        ],
+        "page_idx": 19
+    },
+    {
+        "type": "page_number",
+        "text": "20 ",
+        "bbox": [
+            486,
+            907,
+            509,
+            921
+        ],
+        "page_idx": 19
+    },
+    {
+        "type": "text",
+        "text": "where $\\textstyle { \\mathcal { N } } ( \\mu _ { i } , \\Sigma _ { i } )$ denotes a normal distribution of mean $\\mu _ { i }$ and covariance matrix $\\Sigma _ { i }$ by convention. ",
+        "bbox": [
+            114,
+            79,
+            879,
+            114
+        ],
+        "page_idx": 20
+    },
+    {
+        "type": "text",
+        "text": "Then, define $\\mu _ { i }$ to satisfy ",
+        "bbox": [
+            114,
+            130,
+            316,
+            148
+        ],
+        "page_idx": 20
+    },
+    {
+        "type": "equation",
+        "text": "$$\nf _ {A (X; Z _ {i})} (0 _ {d _ {a}}) = (2 \\pi) ^ {\\frac {- d _ {a}}{2}} \\det (\\Sigma_ {i}) ^ {- \\frac {1}{2}} \\exp \\left(- \\frac {1}{2} \\mu_ {i} ^ {\\top} \\Sigma_ {i} ^ {- 1} \\mu_ {i}\\right) \\leq \\delta\n$$",
+        "text_format": "latex",
+        "bbox": [
+            256,
+            161,
+            740,
+            200
+        ],
+        "page_idx": 20
+    },
+    {
+        "type": "text",
+        "text": "For any $\\delta > 0$ , this $\\mu _ { i }$ always exists. We give the following example. ",
+        "bbox": [
+            114,
+            228,
+            656,
+            247
+        ],
+        "page_idx": 20
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\mu_ {i} = m _ {i} 1 _ {d _ {a}},\n$$",
+        "text_format": "latex",
+        "bbox": [
+            447,
+            263,
+            547,
+            280
+        ],
+        "page_idx": 20
+    },
+    {
+        "type": "text",
+        "text": "where $m _ { i }$ is ",
+        "bbox": [
+            114,
+            296,
+            215,
+            313
+        ],
+        "page_idx": 20
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\sqrt {\\frac {- 2 \\ln (\\delta) - \\ln (\\det (\\Sigma_ {i}))}{1 _ {d _ {a}} ^ {\\top} \\Sigma_ {i} 1 _ {d _ {a}}}}. \\qquad \\qquad \\left(\\delta \\in (0, 1 ]\\right)\n$$",
+        "text_format": "latex",
+        "bbox": [
+            388,
+            325,
+            879,
+            375
+        ],
+        "page_idx": 20
+    },
+    {
+        "type": "text",
+        "text": "The probability density is ",
+        "bbox": [
+            114,
+            402,
+            321,
+            419
+        ],
+        "page_idx": 20
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\begin{array}{l} f _ {A (X; Z _ {i})} \\left(0 _ {d _ {a}}\\right) = \\left(2 \\pi\\right) ^ {\\frac {- d _ {a}}{2}} \\det  \\left(\\Sigma_ {i}\\right) ^ {- \\frac {1}{2}} \\exp \\left(- \\frac {1}{2} \\mu_ {i} ^ {\\top} \\Sigma_ {i} ^ {- 1} \\mu_ {i}\\right) \\\\ = (2 \\pi) ^ {\\frac {- d _ {a}}{2}} \\det (\\Sigma_ {i}) ^ {- \\frac {1}{2}} \\exp \\left(- \\frac {1}{2} m _ {i} ^ {2} 1 _ {d _ {a}} ^ {\\top} \\Sigma_ {i} 1 _ {d _ {a}}\\right) \\\\ = (2 \\pi) ^ {\\frac {- d _ {a}}{2}} \\det (\\Sigma_ {i}) ^ {- \\frac {1}{2}} \\exp \\left(- \\frac {1}{2} \\frac {- 2 \\ln (\\delta) - \\ln (\\det (\\Sigma_ {i}))}{1 _ {d _ {a}} ^ {\\top} \\Sigma_ {i} 1 _ {d _ {a}}} \\cdot 1 _ {d _ {a}} ^ {\\top} \\Sigma_ {i} 1 _ {d _ {a}}\\right) \\\\ = (2 \\pi) ^ {\\frac {- d _ {a}}{2}} \\det (\\Sigma_ {i}) ^ {- \\frac {1}{2}} \\exp \\left(\\ln (\\delta) + \\frac {1}{2} \\ln (\\det (\\Sigma_ {i}))\\right) \\\\ = (2 \\pi) ^ {- \\frac {d _ {a}}{2}} \\det  (\\Sigma_ {i}) ^ {- \\frac {1}{2}} \\cdot \\det  (\\Sigma_ {i}) ^ {\\frac {1}{2}} \\delta \\\\ = (2 \\pi) ^ {\\frac {- d _ {a}}{2}} \\delta \\\\ \\leq \\delta . \\tag {B.4} \\\\ \\end{array}\n$$",
+        "text_format": "latex",
+        "bbox": [
+            176,
+            433,
+            879,
+            671
+        ],
+        "page_idx": 20
+    },
+    {
+        "type": "text",
+        "text": "This means our definition of $\\mu _ { i }$ is valid. ",
+        "bbox": [
+            114,
+            702,
+            429,
+            719
+        ],
+        "page_idx": 20
+    },
+    {
+        "type": "text",
+        "text": "For simplicity, let $p _ { i }$ denote $\\mathrm { P r } [ Z = Z _ { i } ]$ ",
+        "bbox": [
+            114,
+            734,
+            434,
+            752
+        ],
+        "page_idx": 20
+    },
+    {
+        "type": "equation",
+        "text": "$$\np _ {i} := \\Pr [ Z = Z _ {i} ].\n$$",
+        "text_format": "latex",
+        "bbox": [
+            423,
+            768,
+            571,
+            787
+        ],
+        "page_idx": 20
+    },
+    {
+        "type": "text",
+        "text": "Now, define $A ( X ; Z _ { N } )$ to be ",
+        "bbox": [
+            114,
+            816,
+            346,
+            835
+        ],
+        "page_idx": 20
+    },
+    {
+        "type": "equation",
+        "text": "$$\nA (X; Z _ {N}) \\sim \\mathcal {N} \\left(- \\sum_ {i \\in [ N - 1 ]} \\frac {p _ {i}}{p _ {n}} \\mu_ {i}, \\Sigma_ {N}\\right). \\tag {B.5}\n$$",
+        "text_format": "latex",
+        "bbox": [
+            346,
+            848,
+            879,
+            888
+        ],
+        "page_idx": 20
+    },
+    {
+        "type": "page_number",
+        "text": "21 ",
+        "bbox": [
+            486,
+            907,
+            509,
+            921
+        ],
+        "page_idx": 20
+    },
+    {
+        "type": "text",
+        "text": "Let $\\mu _ { N }$ denote $\\begin{array} { r } { - \\sum _ { i \\in [ N - 1 ] } p _ { i } / p _ { n } \\cdot \\mu _ { i } . } \\end{array}$ ",
+        "bbox": [
+            114,
+            78,
+            413,
+            99
+        ],
+        "page_idx": 21
+    },
+    {
+        "type": "text",
+        "text": "Let $m _ { N } \\in \\mathbb { R }$ be ",
+        "bbox": [
+            114,
+            112,
+            243,
+            128
+        ],
+        "page_idx": 21
+    },
+    {
+        "type": "equation",
+        "text": "$$\nm _ {N} := \\delta^ {- \\frac {2}{d _ {a}}}.\n$$",
+        "text_format": "latex",
+        "bbox": [
+            442,
+            141,
+            552,
+            162
+        ],
+        "page_idx": 21
+    },
+    {
+        "type": "text",
+        "text": "Then let $\\Sigma _ { N }$ be defined as ",
+        "bbox": [
+            114,
+            195,
+            325,
+            210
+        ],
+        "page_idx": 21
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\Sigma_ {N} := \\frac {1}{m _ {N}} \\cdot I _ {d _ {a}},\n$$",
+        "text_format": "latex",
+        "bbox": [
+            426,
+            224,
+            568,
+            261
+        ],
+        "page_idx": 21
+    },
+    {
+        "type": "text",
+        "text": "which is positive definite. ",
+        "bbox": [
+            114,
+            273,
+            320,
+            290
+        ],
+        "page_idx": 21
+    },
+    {
+        "type": "text",
+        "text": "This means ",
+        "bbox": [
+            114,
+            306,
+            210,
+            321
+        ],
+        "page_idx": 21
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\Sigma_ {N} ^ {- 1} = m _ {N} \\cdot I _ {d _ {a}}\n$$",
+        "text_format": "latex",
+        "bbox": [
+            431,
+            338,
+            563,
+            359
+        ],
+        "page_idx": 21
+    },
+    {
+        "type": "text",
+        "text": "is also positive definite. ",
+        "bbox": [
+            114,
+            375,
+            303,
+            391
+        ],
+        "page_idx": 21
+    },
+    {
+        "type": "text",
+        "text": "Thus we have ",
+        "bbox": [
+            114,
+            407,
+            230,
+            422
+        ],
+        "page_idx": 21
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\exp \\left(- \\frac {1}{2} \\mu_ {N} ^ {\\top} \\Sigma_ {N} ^ {- 1} \\mu_ {N}\\right) \\leq \\exp (0) = 1.\n$$",
+        "text_format": "latex",
+        "bbox": [
+            349,
+            434,
+            643,
+            474
+        ],
+        "page_idx": 21
+    },
+    {
+        "type": "text",
+        "text": "Then along with (B.5) we have ",
+        "bbox": [
+            114,
+            502,
+            364,
+            518
+        ],
+        "page_idx": 21
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\begin{array}{l} f _ {A (X; Z _ {N})} \\left(0 _ {d _ {a}}\\right) = (2 \\pi) ^ {\\frac {- d _ {a}}{2}} \\det  \\left(\\Sigma_ {N}\\right) ^ {- \\frac {1}{2}} \\exp \\left(- \\frac {1}{2} \\mu_ {N} ^ {\\top} \\Sigma_ {N} ^ {- 1} \\mu_ {N}\\right) \\\\ \\leq \\det  (\\Sigma_ {N}) ^ {- \\frac {1}{2}} \\\\ = \\left(m _ {N} ^ {d _ {a}}\\right) ^ {- \\frac {1}{2}} \\\\ = \\delta^ {- \\frac {2}{d _ {a}} \\cdot \\frac {- d _ {a}}{2}} \\\\ = \\delta . \\tag {B.6} \\\\ \\end{array}\n$$",
+        "text_format": "latex",
+        "bbox": [
+            263,
+            532,
+            879,
+            671
+        ],
+        "page_idx": 21
+    },
+    {
+        "type": "text",
+        "text": "Recall in (B.3) we have proven $A ^ { * }$ to be the expectation of $A$ . This means for the distribution $A ( X )$ we’ve constructed here, we have ",
+        "bbox": [
+            114,
+            703,
+            880,
+            739
+        ],
+        "page_idx": 21
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\begin{array}{l} A ^ {*} (X) = \\mathbb {E} [ A (X) ] \\\\ = \\underset {Z} {\\mathbb {E}} [ \\underset {A} {\\mathbb {E}} [ A (X; Z) ] ] \\\\ = \\sum_ {i = 1} ^ {N} \\Pr [ Z = Z _ {i} ] \\mathbb {E} [ A (X; Z _ {i}) ] \\\\ \\end{array}\n$$",
+        "text_format": "latex",
+        "bbox": [
+            346,
+            753,
+            651,
+            853
+        ],
+        "page_idx": 21
+    },
+    {
+        "type": "page_number",
+        "text": "22 ",
+        "bbox": [
+            486,
+            907,
+            509,
+            921
+        ],
+        "page_idx": 21
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\begin{array}{l} = \\sum_ {i = 1} ^ {N} p _ {i} \\mu_ {i} \\\\ = \\sum_ {i = 1} ^ {N - 1} p _ {i} \\mu_ {i} + p _ {N} \\mu_ {N} \\\\ = \\sum_ {i = 1} ^ {N - 1} p _ {i} \\mu_ {i} + p _ {N} \\left(- \\sum_ {i = 1} ^ {N - 1} \\frac {p _ {i}}{p _ {N}} \\mu_ {i}\\right) \\\\ = 0. \\\\ \\end{array}\n$$",
+        "text_format": "latex",
+        "bbox": [
+            403,
+            75,
+            651,
+            244
+        ],
+        "page_idx": 22
+    },
+    {
+        "type": "text",
+        "text": "Combining the fact of $A ^ { * } ( X ) = 0$ with (B.4) and (B.6) satisfies the condition of $\\delta$ -hallucination defined in Definition 4.2. This completes the proof. ",
+        "bbox": [
+            112,
+            277,
+            880,
+            316
+        ],
+        "page_idx": 22
+    },
+    {
+        "type": "text",
+        "text": "B.2 Proof of Corollary 5.2.1 ",
+        "text_level": 1,
+        "bbox": [
+            114,
+            333,
+            413,
+            354
+        ],
+        "page_idx": 22
+    },
+    {
+        "type": "text",
+        "text": "Corollary B.1.1 (Existence of $\\delta$ -Hallucination under Multiple Inputs; Corollary 5.2.1 Restate). For a set of input $X _ { j } , j \\in [ S ]$ , there exists infinitely many distributions of $A ( X _ { j } )$ and $Z$ such that any estimator minimizing the expected quadratic loss defined in Definition 3.1 is bound to $\\delta$ -hallucinate at $X$ . ",
+        "bbox": [
+            112,
+            371,
+            880,
+            444
+        ],
+        "page_idx": 22
+    },
+    {
+        "type": "text",
+        "text": "Proof. Construct every $A ( x _ { j } )$ according to the construction of Section B.1. This makes every $A ^ { * } ( X _ { j } ) , j \\in [ S ]$ to fall out of the non-hallucinating region. This completes the proof. □ ",
+        "bbox": [
+            114,
+            458,
+            880,
+            496
+        ],
+        "page_idx": 22
+    },
+    {
+        "type": "text",
+        "text": "B.3 Proof of Section B.3 ",
+        "text_level": 1,
+        "bbox": [
+            114,
+            512,
+            375,
+            532
+        ],
+        "page_idx": 22
+    },
+    {
+        "type": "text",
+        "text": "Theorem B.2 (Existence of $\\delta$ -Hallucination on Semi-Optimal Estimators Under Single Input; Theorem 5.2 Restate). For an input $X$ , there exists infinitely many distributions of $A ( X )$ and $Z$ such that if an estimator $A ^ { \\prime }$ is within a distance of $\\epsilon$ to the optimal estimator $A ^ { * }$ , which writes as ",
+        "bbox": [
+            114,
+            550,
+            880,
+            606
+        ],
+        "page_idx": 22
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\left\\| A ^ {\\prime} (X) - A ^ {*} (X) \\right\\| _ {2} \\leq \\epsilon ,\n$$",
+        "text_format": "latex",
+        "bbox": [
+            397,
+            619,
+            598,
+            641
+        ],
+        "page_idx": 22
+    },
+    {
+        "type": "text",
+        "text": "then $A ^ { \\prime } ( X )$ is bound to $\\delta$ -hallucinate. ",
+        "bbox": [
+            114,
+            655,
+            413,
+            672
+        ],
+        "page_idx": 22
+    },
+    {
+        "type": "text",
+        "text": "Proof. By Lemma B.1, we have ",
+        "bbox": [
+            114,
+            689,
+            372,
+            705
+        ],
+        "page_idx": 22
+    },
+    {
+        "type": "equation",
+        "text": "$$\nA ^ {*} (X) = \\underset {A (X)} {\\mathbb {E}} [ A (X) ].\n$$",
+        "text_format": "latex",
+        "bbox": [
+            406,
+            720,
+            588,
+            750
+        ],
+        "page_idx": 22
+    },
+    {
+        "type": "text",
+        "text": "Thus we have ",
+        "bbox": [
+            114,
+            777,
+            230,
+            794
+        ],
+        "page_idx": 22
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\left\\| A ^ {\\prime} (X) - \\mathbb {E} [ A (X) ] \\right\\| _ {2} \\leq \\epsilon . \\tag {B.7}\n$$",
+        "text_format": "latex",
+        "bbox": [
+            388,
+            811,
+            879,
+            830
+        ],
+        "page_idx": 22
+    },
+    {
+        "type": "text",
+        "text": "Let $N$ be any even number in $N ^ { + }$ . ",
+        "bbox": [
+            114,
+            859,
+            388,
+            878
+        ],
+        "page_idx": 22
+    },
+    {
+        "type": "page_number",
+        "text": "23 ",
+        "bbox": [
+            486,
+            907,
+            509,
+            921
+        ],
+        "page_idx": 22
+    },
+    {
+        "type": "text",
+        "text": "Construct ",
+        "bbox": [
+            114,
+            79,
+            199,
+            94
+        ],
+        "page_idx": 23
+    },
+    {
+        "type": "equation",
+        "text": "$$\nA (X; Z _ {i}) \\sim \\mathcal {N} (\\mu_ {i}, I _ {d _ {a}}).\n$$",
+        "text_format": "latex",
+        "bbox": [
+            401,
+            112,
+            596,
+            132
+        ],
+        "page_idx": 23
+    },
+    {
+        "type": "text",
+        "text": "Let $\\begin{array} { r } { \\mathbb { E } [ A ( X ) ] = \\sum _ { i = 1 } ^ { N } p _ { i } \\mu _ { i } } \\end{array}$ be 0. Here $p _ { i } = \\mathrm { P r } [ Z = Z _ { i } ]$ . Then by (B.7), we have ",
+        "bbox": [
+            114,
+            161,
+            746,
+            184
+        ],
+        "page_idx": 23
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\left\\| A ^ {\\prime} (X) - 0 \\right\\| _ {2} \\leq \\epsilon .\n$$",
+        "text_format": "latex",
+        "bbox": [
+            419,
+            196,
+            576,
+            217
+        ],
+        "page_idx": 23
+    },
+    {
+        "type": "text",
+        "text": "Let $v _ { 0 }$ denote $A ^ { \\prime }$ . The probability of $v _ { 0 }$ in $A ( X ; Z _ { i } )$ is ",
+        "bbox": [
+            114,
+            246,
+            544,
+            266
+        ],
+        "page_idx": 23
+    },
+    {
+        "type": "equation",
+        "text": "$$\n(2 \\pi) ^ {\\frac {- d _ {a}}{2}} \\exp \\left(- \\frac {1}{2} (v _ {0} - \\mu_ {i}) ^ {\\top} (v _ {0} - \\mu_ {i})\\right) = (2 \\pi) ^ {\\frac {- d _ {a}}{2}} \\exp \\left(- \\frac {1}{2} \\| v _ {0} - \\mu_ {i} \\| _ {2} ^ {2}\\right).\n$$",
+        "text_format": "latex",
+        "bbox": [
+            204,
+            277,
+            790,
+            319
+        ],
+        "page_idx": 23
+    },
+    {
+        "type": "text",
+        "text": "Set $\\| \\mu _ { i } \\| _ { 2 } \\geq \\sqrt { - 2 \\ln \\delta } + \\epsilon$ , we have ",
+        "bbox": [
+            114,
+            345,
+            401,
+            367
+        ],
+        "page_idx": 23
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\begin{array}{l} (2 \\pi) ^ {\\frac {- d _ {a}}{2}} \\exp \\left(- \\frac {1}{2} \\| v _ {0} - \\mu_ {i} \\| _ {2} ^ {2}\\right) \\leq \\exp \\left(- \\frac {1}{2} \\| v _ {0} - \\mu_ {i} \\| _ {2} ^ {2}\\right) \\\\ \\leq \\exp \\left(- \\frac {1}{2} \\left(\\| v _ {0} - \\mu_ {i} \\| _ {2} - \\| v _ {0} \\| _ {2}\\right) ^ {2}\\right) \\\\ \\leq \\exp \\biggl (- \\frac {1}{2} (\\sqrt {- 2 \\ln \\delta} + \\epsilon - \\epsilon) ^ {2} \\biggr) \\\\ \\leq \\delta . \\\\ \\end{array}\n$$",
+        "text_format": "latex",
+        "bbox": [
+            228,
+            378,
+            761,
+            521
+        ],
+        "page_idx": 23
+    },
+    {
+        "type": "text",
+        "text": "Finally, let ",
+        "bbox": [
+            114,
+            553,
+            205,
+            571
+        ],
+        "page_idx": 23
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\mu_ {i} = - \\frac {p _ {N - i}}{p _ {i}} \\mu_ {N - i}. \\quad (N \\text {h a s b e e n s e t t o b e e v e n})\n$$",
+        "text_format": "latex",
+        "bbox": [
+            328,
+            584,
+            879,
+            619
+        ],
+        "page_idx": 23
+    },
+    {
+        "type": "text",
+        "text": "This ensures PNi=1 piµi to be 0. $\\textstyle \\sum _ { i = 1 } ^ { N } p _ { i } \\mu _ { i }$ ",
+        "bbox": [
+            114,
+            646,
+            367,
+            670
+        ],
+        "page_idx": 23
+    },
+    {
+        "type": "text",
+        "text": "The last constraint can coexist with √ $\\| \\mu _ { i } \\| _ { 2 } \\geq \\sqrt { - 2 \\ln \\delta } + \\epsilon$ in infinitely many constructions of $\\mu _ { i } , i \\in [ N ]$ (e.g., $\\mu _ { i } = C \\cdot i ( N - i ) ( \\sqrt { - 2 \\ln \\delta } + \\epsilon ) / p _ { N - i } \\cdot 1 _ { d _ { a } }$ for any $C > 1 \\AA$ ). This completes the proof. ",
+        "bbox": [
+            112,
+            681,
+            883,
+            737
+        ],
+        "page_idx": 23
+    },
+    {
+        "type": "image",
+        "img_path": "images/1e311b8094d49c44c452c53538abceb4b04b644435de6c08dc3b49ae8ec05d89.jpg",
+        "image_caption": [],
+        "image_footnote": [],
+        "bbox": [
+            861,
+            753,
+            879,
+            767
+        ],
+        "page_idx": 23
+    },
+    {
+        "type": "page_number",
+        "text": "",
+        "bbox": [
+            486,
+            907,
+            509,
+            921
+        ],
+        "page_idx": 23
+    },
+    {
+        "type": "text",
+        "text": "B.4 Proof of Theorem 5.3 ",
+        "text_level": 1,
+        "bbox": [
+            114,
+            77,
+            390,
+            95
+        ],
+        "page_idx": 24
+    },
+    {
+        "type": "text",
+        "text": "Theorem B.3 (Existence of $\\delta$ -Hallucination at Tilted Input; Theorem 5.3 Restate). Let $B _ { \\delta }$ denote the bound of all hints $\\delta _ { i } , i \\in [ N ]$ , defined as ",
+        "bbox": [
+            114,
+            114,
+            879,
+            152
+        ],
+        "page_idx": 24
+    },
+    {
+        "type": "equation",
+        "text": "$$\nB _ {\\delta} := \\sup  _ {i \\in [ N ]} \\| \\delta_ {i} \\| _ {2}.\n$$",
+        "text_format": "latex",
+        "bbox": [
+            426,
+            167,
+            568,
+            198
+        ],
+        "page_idx": 24
+    },
+    {
+        "type": "text",
+        "text": "For an $L$ -Lipschitz estimator $A ^ { * }$ satisfying Definition 3.2, there exists infinitely many distributions of $A ( X ; Z )$ such that $\\delta$ -Hallucination happens on all $X + \\delta _ { i }$ . That is, $A ^ { * } ( X + \\delta _ { i } )$ does not fall into the region where $f _ { A \\left( X ; Z _ { i } \\right) } \\geq \\delta$ for any $i \\in [ N ]$ by Definition 4.1. ",
+        "bbox": [
+            112,
+            210,
+            880,
+            267
+        ],
+        "page_idx": 24
+    },
+    {
+        "type": "text",
+        "text": "Construct Proof. Let $\\textstyle \\sum _ { i = 1 } ^ { N } p _ { i } \\mu _ { i } = 0 _ { d _ { a } }$ $A ( X ; Z _ { i } )$ be a normal distribution with a mean of , where $p _ { i } = \\mathrm { P r } [ Z = Z _ { i } ]$ . $\\mu _ { i }$ and a covariance matrix of $\\Sigma _ { i }$ ",
+        "bbox": [
+            112,
+            284,
+            879,
+            321
+        ],
+        "page_idx": 24
+    },
+    {
+        "type": "text",
+        "text": "Because $A ^ { * }$ is $L$ -Lipschitz, we have ",
+        "bbox": [
+            114,
+            335,
+            401,
+            353
+        ],
+        "page_idx": 24
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\left\\| A ^ {*} \\left(X + \\delta_ {i}\\right) - A ^ {*} (X) \\right\\| _ {2} \\leq L \\| X + \\delta_ {i} - X \\| _ {2} = L \\| \\delta_ {i} \\| _ {2} \\leq L B _ {\\delta}. \\tag {B.8}\n$$",
+        "text_format": "latex",
+        "bbox": [
+            241,
+            369,
+            879,
+            388
+        ],
+        "page_idx": 24
+    },
+    {
+        "type": "text",
+        "text": "See $L B _ { \\delta }$ as $\\epsilon$ , and $A ^ { * } ( X + \\delta _ { i } )$ as different $A ^ { \\prime }$ in Theorem 5.2. Apply Theorem 5.2 to every $A ( X + \\delta _ { i } )$ . Thus, there are infinitely many distributions for $A ^ { * } ( X + \\delta _ { i } )$ to $\\delta$ -hallucinate over $A ( X )$ . This completes the proof. ",
+        "bbox": [
+            114,
+            417,
+            880,
+            473
+        ],
+        "page_idx": 24
+    },
+    {
+        "type": "image",
+        "img_path": "images/6349e769147df49a08481503064aee2afe53d77361730e2eb7080831db28f3bb.jpg",
+        "image_caption": [],
+        "image_footnote": [],
+        "bbox": [
+            861,
+            489,
+            879,
+            503
+        ],
+        "page_idx": 24
+    },
+    {
+        "type": "text",
+        "text": "B.5 Proof of Theorem 6.1 ",
+        "text_level": 1,
+        "bbox": [
+            114,
+            525,
+            388,
+            542
+        ],
+        "page_idx": 24
+    },
+    {
+        "type": "text",
+        "text": "To prove Theorem 6.1, we state the following definitions amd assumptions. ",
+        "bbox": [
+            114,
+            556,
+            707,
+            573
+        ],
+        "page_idx": 24
+    },
+    {
+        "type": "text",
+        "text": "We begin with the definition of means and variances for the variables of interest. ",
+        "bbox": [
+            114,
+            589,
+            746,
+            606
+        ],
+        "page_idx": 24
+    },
+    {
+        "type": "text",
+        "text": "Definition B.1 (Means and Variances; Definition 6.1 Restate). Let $\\{ Z _ { i } \\} _ { i \\in [ N ] }$ denote the possible states of the latent variable $Z$ , with probabilities $p _ { i } : = \\mathrm { P r } [ Z = Z _ { i } ]$ . For each $i \\in [ N ]$ , define the conditional mean ",
+        "bbox": [
+            112,
+            618,
+            879,
+            672
+        ],
+        "page_idx": 24
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\mu_ {i} := \\mathbb {E} \\left[ A \\left(X; Z _ {i}\\right) \\right].\n$$",
+        "text_format": "latex",
+        "bbox": [
+            418,
+            689,
+            575,
+            709
+        ],
+        "page_idx": 24
+    },
+    {
+        "type": "text",
+        "text": "We regard $\\mu _ { i }$ as a realization of a random variable distributed according to $d _ { i } ^ { \\mu }$ . Let $\\mu _ { i } ^ { d } : = \\mathbb { E } _ { d _ { i } ^ { \\mu } } [ \\mu _ { i } ]$ and $\\sigma _ { i } ^ { d } : = \\operatorname { V a r } _ { d _ { i } ^ { \\mu } } [ \\mu _ { i } ]$ denote the mean and variance of this distribution, respectively. Let $d ^ { \\mu }$ denote the joint distribution of $( \\mu _ { 1 } , \\ldots , \\mu _ { N } )$ . We write $\\mu ^ { d } : = \\mathbb { E } _ { d ^ { \\mu } } [ \\mu _ { 1 } , \\dots , \\mu _ { N } ]$ for its mean vector and $\\begin{array} { r } { \\sigma ^ { d } : = \\mathbb { E } [ \\sum _ { i = 1 } ^ { N } ( \\mu _ { i } - \\mu _ { i } ^ { d } ) ^ { 2 } ] } \\end{array}$ as sum of variance. ",
+        "bbox": [
+            112,
+            723,
+            880,
+            801
+        ],
+        "page_idx": 24
+    },
+    {
+        "type": "text",
+        "text": "We then provide the following assumptions applied to $\\mu _ { i }$ and $d _ { i } ^ { \\mu }$ in Definition B.1. In particular, we assume that the conditional means align around a common value and that the joint distributions of these conditional means are mutually independent. ",
+        "bbox": [
+            112,
+            813,
+            880,
+            869
+        ],
+        "page_idx": 24
+    },
+    {
+        "type": "page_number",
+        "text": "25 ",
+        "bbox": [
+            486,
+            907,
+            509,
+            920
+        ],
+        "page_idx": 24
+    },
+    {
+        "type": "text",
+        "text": "Assumption B.1. We impose the following conditions on the distributions defined in Definition B.1: ",
+        "bbox": [
+            114,
+            79,
+            879,
+            114
+        ],
+        "page_idx": 25
+    },
+    {
+        "type": "list",
+        "sub_type": "text",
+        "list_items": [
+            "1. Identical means: There exists a constant $\\mu _ { 0 } \\in \\mathbb { R }$ such that $\\mu _ { i } ^ { d } = \\mu _ { 0 }$ , for all $i \\in [ N ]$ . ",
+            "2. Independence: The distributions $\\{ d _ { i } ^ { \\mu } \\} _ { i = 1 } ^ { N }$ are mutually independent. "
+        ],
+        "bbox": [
+            138,
+            116,
+            815,
+            159
+        ],
+        "page_idx": 25
+    },
+    {
+        "type": "text",
+        "text": "We now characterize hallucination events in terms of output regions that correspond to high $( > \\delta )$ conditional probability under each latent state. ",
+        "bbox": [
+            114,
+            170,
+            879,
+            205
+        ],
+        "page_idx": 25
+    },
+    {
+        "type": "text",
+        "text": "Definition B.2 (High Conditional Density Regions; Definition 6.2 Restate). We define $U _ { i } ^ { \\delta }$ to be ",
+        "bbox": [
+            114,
+            219,
+            879,
+            238
+        ],
+        "page_idx": 25
+    },
+    {
+        "type": "equation",
+        "text": "$$\nU _ {i} ^ {\\delta} := \\left\\{a \\mid f (a; Z _ {i}) > \\delta \\right\\},\n$$",
+        "text_format": "latex",
+        "bbox": [
+            392,
+            251,
+            602,
+            273
+        ],
+        "page_idx": 25
+    },
+    {
+        "type": "text",
+        "text": "which is the region with posterior probability of $Z = Z _ { i }$ larger than $\\delta$ ",
+        "bbox": [
+            114,
+            287,
+            666,
+            306
+        ],
+        "page_idx": 25
+    },
+    {
+        "type": "text",
+        "text": "Remark B.1 (Remark 6.2 Restate). By Definition B.2, $\\delta$ -hallucination of $A ^ { * } ( X )$ is equivalent to ",
+        "bbox": [
+            112,
+            323,
+            880,
+            357
+        ],
+        "page_idx": 25
+    },
+    {
+        "type": "equation",
+        "text": "$$\nA ^ {*} (X) \\notin U _ {i} ^ {\\delta}, \\quad i \\in [ N ].\n$$",
+        "text_format": "latex",
+        "bbox": [
+            398,
+            373,
+            596,
+            395
+        ],
+        "page_idx": 25
+    },
+    {
+        "type": "text",
+        "text": "We then define the following spheres covering $U _ { i } ^ { \\delta }$ in Definition B.2. Specifically, we enclose each $U _ { i } ^ { \\delta }$ within the smallest possible sphere centered at the corresponding mean $\\mu _ { i }$ . ",
+        "bbox": [
+            114,
+            407,
+            880,
+            446
+        ],
+        "page_idx": 25
+    },
+    {
+        "type": "text",
+        "text": "Definition B.3 (Minimal Covering Spheres; Definition 6.3 Restate). For each $i \\in [ N ]$ , let $U _ { i } ^ { \\delta } \\subset \\mathbb { R } ^ { d _ { a } }$ denote the $\\delta$ -high density region associated with state $Z _ { i }$ . Define $B _ { i } ^ { \\delta } ( \\boldsymbol { r } )$ as the closed Euclidean ball of radius $r$ centered at $\\mu _ { i }$ . The minimal covering radius is ",
+        "bbox": [
+            114,
+            455,
+            880,
+            513
+        ],
+        "page_idx": 25
+    },
+    {
+        "type": "equation",
+        "text": "$$\nr _ {i} := \\inf  _ {r _ {i} \\in \\mathbb {R} ^ {+}} \\left\\{U _ {i} ^ {\\delta} \\subset B _ {i} ^ {\\delta} (r _ {i}) \\right\\}.\n$$",
+        "text_format": "latex",
+        "bbox": [
+            388,
+            526,
+            604,
+            555
+        ],
+        "page_idx": 25
+    },
+    {
+        "type": "text",
+        "text": "Thus $B _ { i } ^ { \\delta } ( r _ { i } )$ is the smallest sphere centered at $\\mu _ { i }$ that contains $U _ { i } ^ { \\delta }$ . Finally, define the uniform covering radius ",
+        "bbox": [
+            114,
+            570,
+            879,
+            607
+        ],
+        "page_idx": 25
+    },
+    {
+        "type": "equation",
+        "text": "$$\nr = \\max  _ {i \\in [ N ]} \\{r _ {i} \\}.\n$$",
+        "text_format": "latex",
+        "bbox": [
+            439,
+            623,
+            553,
+            651
+        ],
+        "page_idx": 25
+    },
+    {
+        "type": "text",
+        "text": "Next, we state the following axillary lemmas. ",
+        "bbox": [
+            114,
+            662,
+            475,
+            681
+        ],
+        "page_idx": 25
+    },
+    {
+        "type": "text",
+        "text": "Lemma B.2 (Paley-Zygmund Inequality). For any non-negative random variable $T$ and any $\\theta \\in [ 0 , 1 ]$ , we have ",
+        "bbox": [
+            112,
+            698,
+            879,
+            734
+        ],
+        "page_idx": 25
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\Pr [ T > \\theta \\cdot \\mathbb {E} [ T ] ] \\geq (1 - \\theta) ^ {2} \\frac {(\\mathbb {E} [ Z ]) ^ {2}}{\\mathbb {E} [ Z ^ {2} ]}.\n$$",
+        "text_format": "latex",
+        "bbox": [
+            346,
+            748,
+            647,
+            789
+        ],
+        "page_idx": 25
+    },
+    {
+        "type": "page_number",
+        "text": "",
+        "bbox": [
+            486,
+            907,
+            509,
+            921
+        ],
+        "page_idx": 25
+    },
+    {
+        "type": "text",
+        "text": "Lemma B.3 (Chebyshev Inequality). For any random variable $T$ , we have ",
+        "bbox": [
+            114,
+            85,
+            715,
+            104
+        ],
+        "page_idx": 26
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\Pr \\left[ | T - \\mathbb {E} [ T ] | \\geq a \\right] \\leq \\frac {\\operatorname {V a r} [ T ]}{a ^ {2}}, \\quad \\text {f o r a l l c o n s t a n t} \\quad a,\n$$",
+        "text_format": "latex",
+        "bbox": [
+            285,
+            116,
+            709,
+            152
+        ],
+        "page_idx": 26
+    },
+    {
+        "type": "text",
+        "text": "where $\\mathrm { V a r } [ T ]$ is the variance of $T$ . ",
+        "bbox": [
+            114,
+            165,
+            388,
+            185
+        ],
+        "page_idx": 26
+    },
+    {
+        "type": "text",
+        "text": "Lemma B.4 (Cauchy Ineqaulity). For any $ { n _ { \\mathrm { ~ \\tiny ~  ~ } } } \\in  { \\mathbb { N } } ^ { + }$ along with two sets of variables $x _ { 1 } , x _ { 2 } , \\cdots , x _ { n }$ and $y _ { 1 } , y _ { 2 } , \\cdots , y _ { n }$ , they satisfy ",
+        "bbox": [
+            114,
+            215,
+            879,
+            253
+        ],
+        "page_idx": 26
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\left(\\sum_ {i = 1} ^ {n} x _ {i} y _ {i}\\right) ^ {2} \\leq \\left(\\sum_ {i = 1} ^ {n} x _ {i} ^ {2}\\right) \\left(\\sum_ {i = 1} ^ {n} y _ {i} ^ {2}\\right).\n$$",
+        "text_format": "latex",
+        "bbox": [
+            372,
+            265,
+            622,
+            313
+        ],
+        "page_idx": 26
+    },
+    {
+        "type": "text",
+        "text": "By Lemma B.3 and Lemma B.4, we derive a bound for the probability of distances between the loss minimizing estimator and the mean of $d ^ { \\mu }$ defined in Definition B.1 which is $\\mu _ { 0 }$ by Assumption B.1 as follows. ",
+        "bbox": [
+            114,
+            330,
+            880,
+            383
+        ],
+        "page_idx": 26
+    },
+    {
+        "type": "text",
+        "text": "Lemma B.5 (Probability Upper Bound of Distance between $A ^ { * } ( X )$ and $\\mu _ { 0 }$ in Assumption B.1). Let $A ^ { * }$ be the optimal estimator over $A$ . Then for any $d _ { 1 } > 0$ we have ",
+        "bbox": [
+            114,
+            400,
+            879,
+            436
+        ],
+        "page_idx": 26
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\Pr \\left[ \\| \\mu_ {0} - A ^ {*} (X) \\| _ {2} ^ {2} \\geq d _ {1} ^ {2} \\right] \\leq \\frac {\\left(\\sum_ {i = 1} ^ {N} p _ {i} ^ {2}\\right) \\sigma^ {d}}{d _ {1} ^ {2}}.\n$$",
+        "text_format": "latex",
+        "bbox": [
+            325,
+            450,
+            669,
+            492
+        ],
+        "page_idx": 26
+    },
+    {
+        "type": "text",
+        "text": "Proof. By Lemma B.3, we have ",
+        "bbox": [
+            114,
+            513,
+            372,
+            531
+        ],
+        "page_idx": 26
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\begin{array}{l} \\Pr \\left[ (A ^ {*} (X) - \\mu_ {0}) ^ {2} \\geq d _ {1} ^ {2} \\right] \\leq \\frac {\\mathbb {E} [ (A ^ {*} (X) - \\mu_ {0}) ^ {2} ]}{d _ {1} ^ {2}} \\\\ = \\frac {\\mathbb {E} \\left[ \\left(\\sum_ {i = 1} ^ {N} p _ {i} \\mu_ {i} - \\mu_ {0}\\right) ^ {2} \\right]}{d _ {1} ^ {2}} \\\\ = \\frac {\\mathbb {E} \\left[ \\left[ \\sum_ {i = 1} ^ {N} p _ {i} \\left(\\mu_ {i} - \\mu_ {0}\\right) \\right] ^ {2} \\right]}{d _ {1} ^ {2}} \\\\ \\leq \\frac {\\mathbb {E} \\left[ \\left(\\sum_ {i = 1} ^ {N} p _ {i} ^ {2}\\right) \\left[ \\sum_ {i = 1} ^ {N} \\left(\\mu_ {i} - \\mu_ {0}\\right) ^ {2} \\right] \\right]}{d _ {1} ^ {2}} \\quad (\\text {B y}) \\\\ = \\frac {\\left(\\sum_ {i = 1} ^ {N} p _ {i} ^ {2}\\right) \\mathbb {E} \\left[ \\sum_ {i = 1} ^ {N} \\left(\\mu_ {i} - \\mu_ {0}\\right) ^ {2} \\right]}{d _ {1} ^ {2}} \\\\ = \\frac {(\\sum_ {i = 1} ^ {N} p _ {i} ^ {2}) \\sigma^ {d}}{d _ {1} ^ {2}}. \\\\ \\end{array}\n$$",
+        "text_format": "latex",
+        "bbox": [
+            200,
+            542,
+            877,
+            801
+        ],
+        "page_idx": 26
+    },
+    {
+        "type": "text",
+        "text": "This completes the proof. ",
+        "bbox": [
+            114,
+            829,
+            320,
+            847
+        ],
+        "page_idx": 26
+    },
+    {
+        "type": "text",
+        "text": "In addition, by Lemma B.2, we derive a lower bound of the probability of distances between $\\mu _ { i }$ ",
+        "bbox": [
+            114,
+            856,
+            879,
+            875
+        ],
+        "page_idx": 26
+    },
+    {
+        "type": "page_number",
+        "text": "27 ",
+        "bbox": [
+            486,
+            907,
+            509,
+            921
+        ],
+        "page_idx": 26
+    },
+    {
+        "type": "text",
+        "text": "defined in Definition B.1 and $\\mu _ { 0 }$ defined in Assumption B.1. ",
+        "bbox": [
+            114,
+            79,
+            591,
+            97
+        ],
+        "page_idx": 27
+    },
+    {
+        "type": "text",
+        "text": "Lemma B.6 (Lower Bound on the Probability of Distance between $\\mu _ { i }$ in Definition B.1 and $\\mu _ { 0 }$ in Assumption B.1). For $i \\in [ N ]$ , let $\\mu _ { i }$ and $\\mu _ { 0 }$ be as defined in Definition B.1 and Assumption B.1. We have, for any $\\theta \\in [ 0 , 1 ]$ , ",
+        "bbox": [
+            114,
+            113,
+            879,
+            170
+        ],
+        "page_idx": 27
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\operatorname * {P r} \\big [ \\| \\mu_ {i} - \\mu_ {0} \\| _ {2} ^ {2} \\geq \\theta \\sigma_ {i} ^ {d} \\big ] \\geq (1 - \\theta) ^ {2} K _ {i} ^ {\\mu}.\n$$",
+        "text_format": "latex",
+        "bbox": [
+            341,
+            181,
+            651,
+            205
+        ],
+        "page_idx": 27
+    },
+    {
+        "type": "text",
+        "text": "Proof. Because $\\| \\mu _ { i } - \\mu _ { 0 } \\| _ { 2 } ^ { 2 } \\ge 0$ , by Lemma B.2, set $T$ in Lemma B.2 to be $\\| \\mu _ { i } - \\mu _ { 0 } \\| _ { 2 } ^ { 2 }$ , and we have ",
+        "bbox": [
+            112,
+            227,
+            880,
+            262
+        ],
+        "page_idx": 27
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\operatorname * {P r} \\big [ \\| \\mu_ {i} - \\mu_ {0} \\| _ {2} ^ {2} \\geq \\theta \\mathbb {E} [ \\| \\mu_ {i} - \\mu_ {0} \\| _ {2} ^ {2} ] \\big ] \\geq (1 - \\theta) ^ {2} \\frac {\\mathbb {E} [ (\\mu_ {i} - \\mu_ {0}) ^ {2} ] ^ {2}}{\\mathbb {E} [ \\| \\mu_ {i} - \\mu_ {0} \\| _ {2} ^ {4} ]} = (1 - \\theta) ^ {2} K _ {i} ^ {\\mu}.\n$$",
+        "text_format": "latex",
+        "bbox": [
+            189,
+            273,
+            805,
+            316
+        ],
+        "page_idx": 27
+    },
+    {
+        "type": "text",
+        "text": "Combining with ",
+        "bbox": [
+            114,
+            325,
+            250,
+            345
+        ],
+        "page_idx": 27
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\mathbb {E} [ \\| \\mu_ {i} - \\mu_ {0} \\| _ {2} ^ {2} ] = \\sigma_ {i} ^ {d},\n$$",
+        "text_format": "latex",
+        "bbox": [
+            413,
+            358,
+            583,
+            381
+        ],
+        "page_idx": 27
+    },
+    {
+        "type": "text",
+        "text": "we have ",
+        "bbox": [
+            114,
+            395,
+            186,
+            410
+        ],
+        "page_idx": 27
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\operatorname * {P r} \\left[ \\| \\mu_ {i} - \\mu_ {0} \\| _ {2} ^ {2} \\geq \\theta \\sigma_ {i} ^ {d} \\right] \\geq (1 - \\theta) ^ {2} K _ {i} ^ {\\mu}.\n$$",
+        "text_format": "latex",
+        "bbox": [
+            341,
+            425,
+            653,
+            450
+        ],
+        "page_idx": 27
+    },
+    {
+        "type": "text",
+        "text": "This completes the proof. ",
+        "bbox": [
+            114,
+            476,
+            321,
+            494
+        ],
+        "page_idx": 27
+    },
+    {
+        "type": "text",
+        "text": "Therefore, by Lemma B.5 and Lemma B.6, combined with Definition B.3, we prove the lower bound of the probability of hallucination. ",
+        "bbox": [
+            112,
+            503,
+            880,
+            541
+        ],
+        "page_idx": 27
+    },
+    {
+        "type": "text",
+        "text": "Theorem B.4 (Hallucination Probability Lower Bound; Theorem 6.1 Restate). Let $( A ( X ) , Z )$ satisfy Assumption 6.1. For each $i \\in [ N ]$ , let $\\mu _ { i } , \\sigma _ { i } ^ { d }$ be as in Definition 6.1, let $\\mu _ { 0 }$ be as in Assumption 6.1, and let $r _ { x }$ be as in Definition 6.3. Define ",
+        "bbox": [
+            114,
+            551,
+            879,
+            607
+        ],
+        "page_idx": 27
+    },
+    {
+        "type": "equation",
+        "text": "$$\nd := (\\sum_ {j = 1} ^ {N} p _ {j} ^ {2} \\sigma_ {j} ^ {d}) ^ {1 / 2}, \\quad \\theta_ {i} (\\alpha) := \\frac {(\\alpha d + r _ {x}) ^ {2}}{\\sigma_ {i} ^ {d}}, \\quad \\alpha > 1, \\quad \\mathrm {a n d} \\quad K _ {i} ^ {\\mu} := \\frac {(\\mathbb {E} [ (\\mu_ {i} - \\mu_ {0}) ^ {2} ]) ^ {2}}{\\mathbb {E} [ (\\mu_ {i} - \\mu_ {0}) ^ {4} ]}.\n$$",
+        "text_format": "latex",
+        "bbox": [
+            151,
+            621,
+            843,
+            672
+        ],
+        "page_idx": 27
+    },
+    {
+        "type": "text",
+        "text": "If for every $i \\in [ N ]$ there exists $\\alpha _ { i } > 1$ such that $\\theta _ { i } ( \\alpha _ { i } ) \\leq 1$ , then ",
+        "bbox": [
+            114,
+            685,
+            632,
+            705
+        ],
+        "page_idx": 27
+    },
+    {
+        "type": "equation",
+        "text": "$$\nP _ {H} ^ {\\delta} > \\prod_ {i = 1} ^ {N} (P _ {i} K _ {i} ^ {\\mu}),\n$$",
+        "text_format": "latex",
+        "bbox": [
+            419,
+            718,
+            578,
+            767
+        ],
+        "page_idx": 27
+    },
+    {
+        "type": "text",
+        "text": "where $P _ { H } ^ { \\delta }$ denotes the probability that the optimal estimator $A ^ { * } ~ \\delta$ -hallucinates at $X$ (equivalently, $A ^ { * } ( X ) \\notin U _ { i } ^ { \\delta }$ for all $i \\in [ N ]$ , with $U _ { i } ^ { \\delta }$ as in Definition 6.3). ",
+        "bbox": [
+            114,
+            781,
+            879,
+            820
+        ],
+        "page_idx": 27
+    },
+    {
+        "type": "page_number",
+        "text": "28 ",
+        "bbox": [
+            486,
+            907,
+            509,
+            921
+        ],
+        "page_idx": 27
+    },
+    {
+        "type": "text",
+        "text": "Proof. By Lemma B.5, for every $i \\in [ N ]$ , we have ",
+        "bbox": [
+            114,
+            79,
+            517,
+            97
+        ],
+        "page_idx": 28
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\operatorname * {P r} \\big [ \\| \\mu_ {0} - A ^ {*} (X) \\| _ {2} ^ {2} \\geq d _ {i} ^ {2} \\big ] \\leq \\frac {(\\sum_ {i = 1} ^ {N} p _ {i} ^ {2}) \\sigma^ {d}}{d _ {i} ^ {2}}.\n$$",
+        "text_format": "latex",
+        "bbox": [
+            325,
+            109,
+            671,
+            154
+        ],
+        "page_idx": 28
+    },
+    {
+        "type": "text",
+        "text": "This means ",
+        "bbox": [
+            114,
+            180,
+            210,
+            196
+        ],
+        "page_idx": 28
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\Pr \\left[ \\| \\mu_ {0} - A ^ {*} (X) \\| _ {2} ^ {2} \\leq d _ {1} ^ {2} \\right] \\geq 1 - \\frac {\\left(\\sum_ {i = 1} ^ {N} p _ {i} ^ {2}\\right) \\sigma^ {d}}{d _ {1} ^ {2}}. \\tag {B.9}\n$$",
+        "text_format": "latex",
+        "bbox": [
+            308,
+            207,
+            879,
+            251
+        ],
+        "page_idx": 28
+    },
+    {
+        "type": "text",
+        "text": "By Lemma B.6, we have, for every $i \\in [ n ]$ ",
+        "bbox": [
+            114,
+            276,
+            452,
+            296
+        ],
+        "page_idx": 28
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\Pr \\left[ \\| \\mu_ {i} - \\mu_ {0} \\| _ {2} ^ {2} \\geq \\theta_ {i} \\sigma_ {i} ^ {d} \\right] \\geq (1 - \\theta_ {i}) ^ {2} K _ {i} ^ {\\mu}. \\tag {B.10}\n$$",
+        "text_format": "latex",
+        "bbox": [
+            338,
+            308,
+            880,
+            330
+        ],
+        "page_idx": 28
+    },
+    {
+        "type": "text",
+        "text": "Then, Definition B.3, the probability for $A ^ { * }$ to fall out of the region with a conditioned probability of $A ( X ; Z _ { i } )$ no less than $\\delta$ is at least ",
+        "bbox": [
+            114,
+            359,
+            879,
+            395
+        ],
+        "page_idx": 28
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\begin{array}{l} \\operatorname * {P r} \\left[ A ^ {*} (X) \\notin U _ {i} ^ {\\delta} \\right] \\geq \\operatorname * {P r} \\left[ A ^ {*} (X) \\notin B _ {i} ^ {\\delta} (r _ {i}) \\right] \\\\ \\geq \\operatorname * {P r} [ \\| A ^ {*} (X) - \\mu_ {0} \\| _ {2} \\leq d _ {i} ] \\cdot \\operatorname * {P r} [ \\| \\mu_ {i} - \\mu_ {0} \\| _ {2} \\geq d _ {i} + r _ {x} ] \\\\ \\geq (1 - \\frac {(\\sum_ {i = 1} ^ {N} p _ {i} ^ {2}) \\sigma^ {d}}{d _ {i} ^ {2}}) ((1 - \\theta_ {i}) ^ {2} K _ {i} ^ {\\mu}) \\qquad \\mathrm {(B y (B . 9) a n d (B . 1 0))} \\\\ = (1 - \\frac {1}{\\alpha_ {i} ^ {2}}) (1 - \\theta_ {i}) ^ {2} K _ {i} ^ {\\mu}. \\\\ \\end{array}\n$$",
+        "text_format": "latex",
+        "bbox": [
+            205,
+            409,
+            877,
+            536
+        ],
+        "page_idx": 28
+    },
+    {
+        "type": "text",
+        "text": "Set $\\alpha _ { i }$ to maximize ",
+        "bbox": [
+            114,
+            563,
+            272,
+            579
+        ],
+        "page_idx": 28
+    },
+    {
+        "type": "equation",
+        "text": "$$\n(1 - \\frac {1}{\\alpha_ {i} ^ {2}}) (1 - \\theta_ {i}) ^ {2},\n$$",
+        "text_format": "latex",
+        "bbox": [
+            421,
+            592,
+            575,
+            630
+        ],
+        "page_idx": 28
+    },
+    {
+        "type": "text",
+        "text": "which is equivalent to maximizing $P _ { i }$ ",
+        "bbox": [
+            114,
+            643,
+            416,
+            660
+        ],
+        "page_idx": 28
+    },
+    {
+        "type": "text",
+        "text": "Then we have ",
+        "bbox": [
+            114,
+            676,
+            230,
+            691
+        ],
+        "page_idx": 28
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\Pr \\left[ A ^ {*} (X) \\notin U _ {i} ^ {\\delta} \\right] \\geq P _ {i} K _ {i} ^ {\\mu}.\n$$",
+        "text_format": "latex",
+        "bbox": [
+            387,
+            707,
+            607,
+            729
+        ],
+        "page_idx": 28
+    },
+    {
+        "type": "text",
+        "text": "Given $d _ { i } ^ { \\mu } , i \\in [ N ]$ are independent to each other, we have ",
+        "bbox": [
+            114,
+            757,
+            568,
+            776
+        ],
+        "page_idx": 28
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\Pr \\left[ A ^ {*} (X) \\notin U _ {i} ^ {\\delta}, i \\in [ N ] \\right] \\geq \\prod_ {i = 1} ^ {N} P _ {i} K _ {i} ^ {\\mu}.\n$$",
+        "text_format": "latex",
+        "bbox": [
+            339,
+            790,
+            653,
+            839
+        ],
+        "page_idx": 28
+    },
+    {
+        "type": "text",
+        "text": "The left-hand side is equivalent to $P _ { h } ^ { \\delta }$ (see Definition B.2 and Remark B.1). ",
+        "bbox": [
+            114,
+            867,
+            710,
+            886
+        ],
+        "page_idx": 28
+    },
+    {
+        "type": "page_number",
+        "text": "29 ",
+        "bbox": [
+            486,
+            907,
+            509,
+            921
+        ],
+        "page_idx": 28
+    },
+    {
+        "type": "text",
+        "text": "This completes the proof. ",
+        "bbox": [
+            114,
+            79,
+            320,
+            95
+        ],
+        "page_idx": 29
+    },
+    {
+        "type": "text",
+        "text": "C Derivation to Cross-Entropy Loss ",
+        "text_level": 1,
+        "bbox": [
+            114,
+            119,
+            576,
+            143
+        ],
+        "page_idx": 29
+    },
+    {
+        "type": "text",
+        "text": "In this section, we derive the cross-entropy loss version of our results in Section 5. ",
+        "bbox": [
+            114,
+            159,
+            764,
+            176
+        ],
+        "page_idx": 29
+    },
+    {
+        "type": "text",
+        "text": "Definition C.1 (Cross-Entropy Loss). For an input $X$ and an according possible output $a \\in { \\mathcal { A } }$ , given a target probability density $q _ { X } ^ { a } \\in [ 0 , 1 ] ^ { C }$ and a model-estimated distribution $p _ { X } \\in [ 0 , 1 ] ^ { C }$ over $C$ classes, let $q _ { X } ^ { a } ( t )$ and $p _ { X } ( t )$ denote their $t$ -th entry respectively. The cross-entropy loss at $X$ is defined as ",
+        "bbox": [
+            114,
+            186,
+            880,
+            260
+        ],
+        "page_idx": 29
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\mathcal {L} \\left(q _ {X} ^ {a}, p _ {X}\\right) = - \\sum_ {t \\in [ C ]} q _ {X} ^ {a} (t) \\log p _ {X} (t),\n$$",
+        "text_format": "latex",
+        "bbox": [
+            349,
+            273,
+            645,
+            314
+        ],
+        "page_idx": 29
+    },
+    {
+        "type": "text",
+        "text": "where $\\begin{array} { r } { q _ { X } ^ { a } ( t ) \\geq 0 , \\sum _ { t \\in [ C ] } q _ { X } ^ { a } ( t ) = 1 } \\end{array}$ , $p _ { X } ( t ) \\geq 0$ , and $\\begin{array} { r } { \\sum _ { t \\in [ C ] } p _ { X } ( t ) = 1 } \\end{array}$ . ",
+        "bbox": [
+            114,
+            327,
+            674,
+            348
+        ],
+        "page_idx": 29
+    },
+    {
+        "type": "text",
+        "text": "We define the total loss at $X$ as the expectation of loss over $A$ at all $a$ , that is ",
+        "bbox": [
+            114,
+            348,
+            720,
+            364
+        ],
+        "page_idx": 29
+    },
+    {
+        "type": "equation",
+        "text": "$$\nE _ {a} \\left(\\mathcal {L} \\left(q _ {X} ^ {a}, p _ {X}\\right)\\right).\n$$",
+        "text_format": "latex",
+        "bbox": [
+            433,
+            378,
+            560,
+            398
+        ],
+        "page_idx": 29
+    },
+    {
+        "type": "text",
+        "text": "Comparing to the notation in Section 5, the predictor $A ^ { * }$ at input $X$ outputs the predicted probabilities $A ^ { * } ( X )$ , which can be noted here as ",
+        "bbox": [
+            114,
+            411,
+            880,
+            446
+        ],
+        "page_idx": 29
+    },
+    {
+        "type": "equation",
+        "text": "$$\n[ A ^ {*} (X) ] (t) := p _ {X} (t), t \\in [ C ],\n$$",
+        "text_format": "latex",
+        "bbox": [
+            377,
+            462,
+            617,
+            483
+        ],
+        "page_idx": 29
+    },
+    {
+        "type": "text",
+        "text": "We now prove the existence of $\\delta$ -hallucination under cross-entropy loss. ",
+        "bbox": [
+            114,
+            512,
+            683,
+            531
+        ],
+        "page_idx": 29
+    },
+    {
+        "type": "text",
+        "text": "Theorem C.1 (Existence of $\\delta$ -Hallucination under Cross-Entropy Loss). For an input $X$ , there exists infinitely many target distributions $A ( X )$ such that the $A ^ { * }$ minimizing the cross-entropy loss defined in Definition C.1 at $X ~ \\delta$ -hallucinates. ",
+        "bbox": [
+            114,
+            541,
+            880,
+            595
+        ],
+        "page_idx": 29
+    },
+    {
+        "type": "text",
+        "text": "Proof. We first calculate the loss minimizing $A ^ { * }$ at $X$ . ",
+        "bbox": [
+            114,
+            608,
+            545,
+            626
+        ],
+        "page_idx": 29
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\begin{array}{l} E _ {a} (\\mathcal {L} (q _ {X} ^ {a}, p _ {X})) \\\\ = \\int_ {\\mathcal {A}} p (a) \\left[ - \\sum_ {t \\in [ C ]} q _ {X} ^ {a} (t) \\log p _ {X} (t) \\right] d a \\\\ = \\sum_ {t \\in [ C ]} (- \\log p _ {X} (t)) \\left[ \\int_ {\\mathcal {A}} q _ {X} ^ {a} (t) d a \\right] \\\\ = \\sum_ {t \\in [ C ]} (- \\log p _ {X} (t)) E _ {a} q _ {X} ^ {a} (t). \\\\ \\end{array}\n$$",
+        "text_format": "latex",
+        "bbox": [
+            352,
+            642,
+            647,
+            801
+        ],
+        "page_idx": 29
+    },
+    {
+        "type": "text",
+        "text": "Thus by Gibbs Inequality, we have the loss minimizing $p _ { X } ( t )$ of $E _ { a } ( \\mathcal { L } ( q _ { X } ^ { a } , p _ { X } ) )$ is ",
+        "bbox": [
+            114,
+            829,
+            764,
+            849
+        ],
+        "page_idx": 29
+    },
+    {
+        "type": "equation",
+        "text": "$$\np _ {X} (t) = E _ {a} q _ {X} ^ {a} (t), t \\in [ C ].\n$$",
+        "text_format": "latex",
+        "bbox": [
+            388,
+            863,
+            602,
+            883
+        ],
+        "page_idx": 29
+    },
+    {
+        "type": "page_number",
+        "text": "30 ",
+        "bbox": [
+            486,
+            907,
+            511,
+            921
+        ],
+        "page_idx": 29
+    },
+    {
+        "type": "text",
+        "text": "We then construct the latents that induce the $\\delta$ -hallucination at $X$ . ",
+        "bbox": [
+            114,
+            79,
+            633,
+            95
+        ],
+        "page_idx": 30
+    },
+    {
+        "type": "text",
+        "text": "Define the probability distribution under each $Z _ { i }$ as ",
+        "bbox": [
+            114,
+            112,
+            522,
+            128
+        ],
+        "page_idx": 30
+    },
+    {
+        "type": "equation",
+        "text": "$$\nA (q _ {X} ^ {a} | Z = Z _ {i}) \\sim \\mathcal {N} (q _ {i}, d), i \\in [ N ],\n$$",
+        "text_format": "latex",
+        "bbox": [
+            352,
+            145,
+            643,
+            165
+        ],
+        "page_idx": 30
+    },
+    {
+        "type": "text",
+        "text": "in which $q _ { i }$ is ",
+        "bbox": [
+            114,
+            180,
+            227,
+            196
+        ],
+        "page_idx": 30
+    },
+    {
+        "type": "equation",
+        "text": "$$\nq _ {i} (t) := e _ {t} ^ {(C)},\n$$",
+        "text_format": "latex",
+        "bbox": [
+            442,
+            209,
+            553,
+            233
+        ],
+        "page_idx": 30
+    },
+    {
+        "type": "text",
+        "text": "and ",
+        "bbox": [
+            114,
+            248,
+            151,
+            263
+        ],
+        "page_idx": 30
+    },
+    {
+        "type": "equation",
+        "text": "$$\nd \\leq - \\frac {N - 1}{N \\ln (\\delta^ {2})}.\n$$",
+        "text_format": "latex",
+        "bbox": [
+            429,
+            275,
+            566,
+            314
+        ],
+        "page_idx": 30
+    },
+    {
+        "type": "text",
+        "text": "Then let $P ( Z _ { i } ) = 1 / N$ , we have $p _ { X }$ equals ",
+        "bbox": [
+            114,
+            340,
+            457,
+            359
+        ],
+        "page_idx": 30
+    },
+    {
+        "type": "equation",
+        "text": "$$\np _ {X} := \\frac {\\sum_ {i = 1} ^ {N} e _ {i} ^ {(C)}}{N}.\n$$",
+        "text_format": "latex",
+        "bbox": [
+            423,
+            373,
+            571,
+            412
+        ],
+        "page_idx": 30
+    },
+    {
+        "type": "text",
+        "text": "Then ",
+        "bbox": [
+            114,
+            439,
+            161,
+            455
+        ],
+        "page_idx": 30
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\begin{array}{l} P (p _ {x} | Z = Z _ {i}) \\\\ = \\frac {1}{\\sqrt {2 \\pi d}} \\exp \\left(- \\frac {\\left(p _ {X} - q _ {i}\\right) ^ {2}}{2 d}\\right) \\\\ = \\frac {1}{\\sqrt {2 \\pi d}} \\exp \\left(- \\frac {N - 1}{2 d N}\\right) \\\\ \\leq \\frac {1}{\\sqrt {- 2 \\pi \\frac {N - 1}{N \\ln (\\delta^ {2})}}} \\exp \\left(- \\frac {N - 1}{- 2 \\frac {N - 1}{N \\ln (\\delta^ {2})} N}\\right) \\\\ \\leq \\frac {1}{\\sqrt {- \\pi \\frac {1}{\\ln (\\delta^ {2})}}} \\frac {\\delta^ {2}}{2} \\\\ \\leq \\frac {\\delta^ {2} \\ln (\\delta^ {- 1})}{\\sqrt {2 \\pi}} \\\\ \\leq \\frac {\\delta^ {2} (\\delta^ {- 1} - 1)}{\\sqrt {2 \\pi}} \\\\ \\leq \\delta , \\\\ \\end{array}\n$$",
+        "text_format": "latex",
+        "bbox": [
+            339,
+            473,
+            653,
+            790
+        ],
+        "page_idx": 30
+    },
+    {
+        "type": "text",
+        "text": "for every $i$ ",
+        "bbox": [
+            114,
+            806,
+            207,
+            824
+        ],
+        "page_idx": 30
+    },
+    {
+        "type": "text",
+        "text": "This completes the proof. ",
+        "bbox": [
+            114,
+            840,
+            320,
+            858
+        ],
+        "page_idx": 30
+    },
+    {
+        "type": "page_number",
+        "text": "31 ",
+        "bbox": [
+            486,
+            907,
+            509,
+            922
+        ],
+        "page_idx": 30
+    },
+    {
+        "type": "text",
+        "text": "References ",
+        "text_level": 1,
+        "bbox": [
+            116,
+            78,
+            254,
+            99
+        ],
+        "page_idx": 31
+    },
+    {
+        "type": "list",
+        "sub_type": "ref_text",
+        "list_items": [
+            "Sumukh K Aithal, Pratyush Maini, Zachary Lipton, and J Zico Kolter. Understanding hallucinations in diffusion models through mode interpolation. Advances in Neural Information Processing Systems, 37:134614–134644, 2024. ",
+            "Zechen Bai, Pichao Wang, Tianjun Xiao, Tong He, Zongbo Han, Zheng Zhang, and Mike Zheng Shou. Hallucination of multimodal large language models: A survey. arXiv preprint arXiv:2404.18930, 2024. ",
+            "Sourav Banerjee, Ayushi Agarwal, and Saloni Singla. Llms will always hallucinate, and we need to live with this. arXiv preprint arXiv:2409.05746, 2024. ",
+            "Michele Caprio, David Stutz, Shuo Li, and Arnaud Doucet. Conformalized credal regions for classification with ambiguous ground truth. arXiv preprint arXiv:2411.04852, 2024. ",
+            "Yunjey Choi, Youngjung Uh, Jaejun Yoo, and Jung-Woo Ha. Stargan v2: Diverse image synthesis for multiple domains. In Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition, 2020. ",
+            "Matthew Dahl, Varun Magesh, Mirac Suzgun, and Daniel E Ho. Large legal fictions: Profiling legal hallucinations in large language models. Journal of Legal Analysis, 16(1):64–93, 2024. ",
+            "Jacob Devlin, Ming-Wei Chang, Kenton Lee, and Kristina Toutanova. Bert: Pre-training of deep bidirectional transformers for language understanding. In Proceedings of the 2019 conference of the North American chapter of the association for computational linguistics: human language technologies, volume 1 (long and short papers), pages 4171–4186, 2019. ",
+            "Sebastian Farquhar, Jannik Kossen, Lorenz Kuhn, and Yarin Gal. Detecting hallucinations in large language models using semantic entropy. Nature, 630(8017):625–630, 2024. ",
+            "Andreas F Haselsteiner, Jan-Hendrik Ohlendorf, Werner Wosniok, and Klaus-Dieter Thoben. Deriving environmental contours from highest density regions. Coastal Engineering, 123:42–51, 2017. ",
+            "Lei Huang, Weijiang Yu, Weitao Ma, Weihong Zhong, Zhangyin Feng, Haotian Wang, Qianglong Chen, Weihua Peng, Xiaocheng Feng, Bing Qin, et al. A survey on hallucination in large language models: Principles, taxonomy, challenges, and open questions. ACM Transactions on Information Systems, 43(2):1–55, 2025. ",
+            "Rob J Hyndman. Computing and graphing highest density regions. The American Statistician, 50 (2):120–126, 1996. ",
+            "Ziwei Ji, Nayeon Lee, Rita Frieske, Tiezheng Yu, Dan Su, Yan Xu, Etsuko Ishii, Ye Jin Bang, Andrea Madotto, and Pascale Fung. Survey of hallucination in natural language generation. ACM computing surveys, 55(12):1–38, 2023. "
+        ],
+        "bbox": [
+            116,
+            117,
+            880,
+            886
+        ],
+        "page_idx": 31
+    },
+    {
+        "type": "page_number",
+        "text": "32 ",
+        "bbox": [
+            486,
+            907,
+            509,
+            921
+        ],
+        "page_idx": 31
+    },
+    {
+        "type": "list",
+        "sub_type": "ref_text",
+        "list_items": [
+            "Xuhui Jiang, Yuxing Tian, Fengrui Hua, Chengjin Xu, Yuanzhuo Wang, and Jian Guo. A survey on large language model hallucination via a creativity perspective. arXiv preprint arXiv:2402.06647, 2024. ",
+            "Adam Tauman Kalai and Santosh S Vempala. Calibrated language models must hallucinate. In Proceedings of the 56th Annual ACM Symposium on Theory of Computing, pages 160–171, 2024. ",
+            "Adam Tauman Kalai, Ofir Nachum, Santosh S Vempala, and Edwin Zhang. Why language models hallucinate. arXiv preprint arXiv:2509.04664, 2025. ",
+            "Junyi Li, Jie Chen, Ruiyang Ren, Xiaoxue Cheng, Wayne Xin Zhao, Jian-Yun Nie, and Ji-Rong Wen. The dawn after the dark: An empirical study on factuality hallucination in large language models. arXiv preprint arXiv:2401.03205, 2024. ",
+            "Stephanie Lin, Jacob Hilton, and Owain Evans. Truthfulqa: Measuring how models mimic human falsehoods. arXiv preprint arXiv:2109.07958, 2021. ",
+            "Hanchao Liu, Wenyuan Xue, Yifei Chen, Dapeng Chen, Xiutian Zhao, Ke Wang, Liping Hou, Rongjun Li, and Wei Peng. A survey on hallucination in large vision-language models. arXiv preprint arXiv:2402.00253, 2024. ",
+            "Alec Radford, Jong Wook Kim, Chris Hallacy, Aditya Ramesh, Gabriel Goh, Sandhini Agarwal, Girish Sastry, Amanda Askell, Pamela Mishkin, Jack Clark, et al. Learning transferable visual models from natural language supervision. In International conference on machine learning, pages 8748–8763. PmLR, 2021. ",
+            "RJ Samworth and MP Wand. Asymptotics and optimal bandwidth selection for highest density region estimation. 2010. ",
+            "Yuji Tachikawa. On gauging finite subgroups. SciPost Physics, 8(1):015, 2020. ",
+            "Ziwei Xu, Sanjay Jain, and Mohan Kankanhalli. Hallucination is inevitable: An innate limitation of large language models. arXiv preprint arXiv:2401.11817, 2024. ",
+            "Yue Zhang, Yafu Li, Leyang Cui, Deng Cai, Lemao Liu, Tingchen Fu, Xinting Huang, Enbo Zhao, Yu Zhang, Yulong Chen, et al. Siren’s song in the ai ocean: a survey on hallucination in large language models. arXiv preprint arXiv:2309.01219, 2023. "
+        ],
+        "bbox": [
+            114,
+            78,
+            883,
+            744
+        ],
+        "page_idx": 32
+    },
+    {
+        "type": "page_number",
+        "text": "33 ",
+        "bbox": [
+            486,
+            907,
+            509,
+            921
+        ],
+        "page_idx": 32
+    }
+]

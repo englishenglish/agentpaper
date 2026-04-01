@@ -13,9 +13,9 @@ from src.core.prompts import reading_agent_prompt, kg_extraction_prompt
 from src.core.model_client import create_reading_model_client
 from src.core.state_models import BackToFrontData, State, ExecutionState
 from src.core.embedding import get_shared_embedder
-from src.extraction.graph_builder import GraphBuilder, save_entity_graph, load_entity_graph
-from src.extraction.community_builder import CommunityBuilder
-from src.knowledge import knowledge_base
+from src.graphrag.graph_builder import GraphBuilder, save_entity_graph, load_entity_graph
+from src.graphrag.community_builder import CommunityBuilder
+from src.rag import knowledge_base
 
 logger = setup_logger(__name__)
 

@@ -1,0 +1,5309 @@
+[
+    [
+        {
+            "type": "title",
+            "content": {
+                "title_content": [
+                    {
+                        "type": "text",
+                        "content": "Detecting AI Hallucinations in Finance: An Information-Theoretic Method Cuts Hallucination Rate by "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "92 \\%"
+                    }
+                ],
+                "level": 1
+            },
+            "bbox": [
+                194,
+                122,
+                802,
+                198
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "Mainak Singha "
+                    }
+                ]
+            },
+            "bbox": [
+                433,
+                250,
+                565,
+                267
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "trophysics Science Division, NASA, Goddard Space Flight Center, 8800 Greenbelt Road, MD 20771 "
+                    }
+                ]
+            },
+            "bbox": [
+                295,
+                275,
+                727,
+                303
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "Department of Physics, The Catholic University of America, Washington, DC 20064 "
+                    }
+                ]
+            },
+            "bbox": [
+                220,
+                303,
+                774,
+                318
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "mainak.singha@nasa.gov, singham@cua.edu "
+                    }
+                ]
+            },
+            "bbox": [
+                328,
+                328,
+                666,
+                343
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "Abstract "
+                    }
+                ]
+            },
+            "bbox": [
+                459,
+                377,
+                537,
+                393
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "Large language models (LLMs) produce fluent but unsupported answers— hallucinations—limiting safe deployment in high-stakes domains. We propose ECLIPSE, a framework that treats hallucination as a mismatch between a model’s semantic entropy and the capacity of available evidence. We combine entropy estimation via multi-sample clustering with a novel perplexity decomposition that measures how models use retrieved evidence. We prove that under mild conditions, the resulting entropy–capacity objective is strictly convex with a unique stable optimum. We evaluate on a controlled financial question answering dataset with GPT-3.5-turbo "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "n = 2 0 0"
+                    },
+                    {
+                        "type": "text",
+                        "content": "balanced samples with synthetic hallucinations), where ECLIPSE achieves ROC AUC of 0.89 and average precision of 0.90, substantially outperforming a semantic entropy-only baseline (AUC 0.50). A controlled ablation with Claude-3-Haiku, which lacks token-level log probabilities, shows AUC dropping to 0.59 with coefficient magnitudes decreasing by "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "9 5 \\%"
+                    },
+                    {
+                        "type": "text",
+                        "content": "—demonstrating that ECLIPSE is a logprob-native mechanism whose effectiveness depends on calibrated token-level uncertainties. The perplexity decomposition features exhibit the largest learned coefficients, confirming that evidence utilization is central to hallucination detection. We position this work as a controlled mechanism study; broader validation across domains and naturally occurring hallucinations remains future work. "
+                    }
+                ]
+            },
+            "bbox": [
+                228,
+                412,
+                767,
+                674
+            ]
+        },
+        {
+            "type": "title",
+            "content": {
+                "title_content": [
+                    {
+                        "type": "text",
+                        "content": "1 Introduction "
+                    }
+                ],
+                "level": 1
+            },
+            "bbox": [
+                171,
+                707,
+                313,
+                722
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "Large language models have become integral to decision support in finance [27], healthcare [25], and law [2]. However, their tendency to produce confident but factually incorrect statements—commonly termed hallucinations—poses significant risks in these high-stakes domains [12, 10]. Hallucinations are particularly dangerous because models often express them with high apparent certainty, making them difficult to detect through simple confidence thresholds [28]. "
+                    }
+                ]
+            },
+            "bbox": [
+                169,
+                739,
+                823,
+                811
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "Existing hallucination detection methods primarily measure model uncertainty through semantic entropy [15] or self-consistency checks [19]. However, uncertainty alone provides an incomplete picture: a model may exhibit honest uncertainty when evidence is weak, or dangerous overconfidence when evidence is strong but ignored. We argue that hallucination risk depends fundamentally on the relationship between two quantities: the model’s expressed certainty and the quality of available evidence. "
+                    }
+                ]
+            },
+            "bbox": [
+                169,
+                816,
+                823,
+                898
+            ]
+        },
+        {
+            "type": "page_aside_text",
+            "content": {
+                "page_aside_text_content": [
+                    {
+                        "type": "text",
+                        "content": "arXiv:2512.03107v1 [cs.LG] 2 Dec 2025 "
+                    }
+                ]
+            },
+            "bbox": [
+                22,
+                282,
+                57,
+                715
+            ]
+        },
+        {
+            "type": "page_footer",
+            "content": {
+                "page_footer_content": [
+                    {
+                        "type": "text",
+                        "content": "38th Conference on Neural Information Processing Systems (NeurIPS 2024). "
+                    }
+                ]
+            },
+            "bbox": [
+                171,
+                922,
+                629,
+                936
+            ]
+        }
+    ],
+    [
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "We propose ECLIPSE (Entropy–Capacity Logprob-Native Inference for Predicting Spurious Emissions), a framework that makes this entropy–capacity trade-off explicit. We call a method logprob-native if its core signal relies directly on token-level log probabilities and degrades substantially when those probabilities are replaced by uninformative proxies. Unlike semantic entropy alone, which cannot distinguish honest uncertainty from evidence-ignoring behavior, ECLIPSE decomposes perplexity to measure how models use evidence. Unlike Semantic Entropy Probes (SEPs), which require white-box access to hidden states, ECLIPSE achieves comparable detection performance using only API-accessible log probabilities. Unlike SelfCheckGPT, which relies on self-consistency across generations, ECLIPSE directly measures the evidence–answer relationship through perplexity decomposition. "
+                    }
+                ]
+            },
+            "bbox": [
+                169,
+                90,
+                826,
+                231
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "Our contributions are: "
+                    }
+                ]
+            },
+            "bbox": [
+                171,
+                236,
+                320,
+                250
+            ]
+        },
+        {
+            "type": "list",
+            "content": {
+                "list_type": "text_list",
+                "list_items": [
+                    {
+                        "item_type": "text",
+                        "item_content": [
+                            {
+                                "type": "text",
+                                "content": "1. Theoretical framework: We introduce a joint objective over semantic entropy "
+                            },
+                            {
+                                "type": "equation_inline",
+                                "content": "H"
+                            },
+                            {
+                                "type": "text",
+                                "content": "and evidence capacity "
+                            },
+                            {
+                                "type": "equation_inline",
+                                "content": "C"
+                            },
+                            {
+                                "type": "text",
+                                "content": "and prove it is strictly convex under mild conditions (Theorem 4), providing a principled foundation for hallucination risk modeling and, in future work, control. "
+                            }
+                        ]
+                    },
+                    {
+                        "item_type": "text",
+                        "item_content": [
+                            {
+                                "type": "text",
+                                "content": "2. Perplexity decomposition: We extract features "
+                            },
+                            {
+                                "type": "equation_inline",
+                                "content": "( L _ { Q } , L _ { Q E } , \\Delta L )"
+                            },
+                            {
+                                "type": "text",
+                                "content": "that decompose how models use evidence, enabling fine-grained detection of evidence-ignoring behavior. "
+                            }
+                        ]
+                    },
+                    {
+                        "item_type": "text",
+                        "item_content": [
+                            {
+                                "type": "text",
+                                "content": "3. Empirical validation: On our controlled financial QA dataset ( "
+                            },
+                            {
+                                "type": "equation_inline",
+                                "content": "n = 2 0 0"
+                            },
+                            {
+                                "type": "text",
+                                "content": "), ECLIPSE achieves 0.89 AUC using only API access (Figure 1), indicating that logprob-native, greybox detectors can reach strong performance without hidden-state access. "
+                            }
+                        ]
+                    },
+                    {
+                        "item_type": "text",
+                        "item_content": [
+                            {
+                                "type": "text",
+                                "content": "4. Mechanism validation: We show through controlled ablation that ECLIPSE is logprobnative: without real log probabilities, performance drops from 0.89 to 0.59 AUC, only modestly above chance (Figure 5). "
+                            }
+                        ]
+                    }
+                ]
+            },
+            "bbox": [
+                207,
+                263,
+                823,
+                446
+            ]
+        },
+        {
+            "type": "title",
+            "content": {
+                "title_content": [
+                    {
+                        "type": "text",
+                        "content": "2 Related Work "
+                    }
+                ],
+                "level": 1
+            },
+            "bbox": [
+                171,
+                468,
+                321,
+                484
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "Hallucination in language models. The phenomenon of LLM hallucination has received substantial attention [12, 31, 10]. Hallucinations manifest in various forms: factual errors [21], entity confusion [3], and fabricated citations [18]. Maynez et al. [20] categorize hallucinations in abstractive summarization as intrinsic (contradicting source) or extrinsic (unverifiable from source). Our work focuses on the latter in retrieval-augmented settings. "
+                    }
+                ]
+            },
+            "bbox": [
+                169,
+                500,
+                826,
+                571
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "Uncertainty quantification in LLMs. Gal and Ghahramani [5] established dropout-based uncertainty estimation for neural networks. For LLMs, Kadavath et al. [13] demonstrated that models can partially assess their own uncertainty but degrade out-of-distribution. Kuhn et al. [15] introduced semantic entropy, which clusters sampled outputs by meaning and computes entropy over clusters. Lin et al. [17] extended this with conformal prediction for calibrated uncertainty sets. We build on semantic entropy but augment it with evidence capacity to distinguish honest uncertainty from hallucination. "
+                    }
+                ]
+            },
+            "bbox": [
+                169,
+                585,
+                826,
+                681
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "Hallucination detection methods. SelfCheckGPT [19] samples multiple responses and measures consistency, achieving strong results on biography generation. Semantic Entropy Probes (SEPs) [14] train linear classifiers on hidden states, reaching 0.85–0.90 AUC but requiring white-box model access. SAPLMA [1] similarly uses hidden state classifiers. Min et al. [21] decompose responses into atomic facts and verify each against knowledge sources. Unlike these approaches, ECLIPSE achieves comparable performance using only API access while providing interpretable coefficients. "
+                    }
+                ]
+            },
+            "bbox": [
+                169,
+                698,
+                823,
+                782
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "Retrieval-augmented generation. RAG systems [16, 8, 11] ground model outputs in retrieved documents but do not eliminate hallucinations [24]. Shi et al. [23] show that irrelevant context can degrade performance. Yoran et al. [30] propose filtering retrieved passages by relevance. Our perplexity decomposition specifically targets the failure mode where models ignore relevant evidence. "
+                    }
+                ]
+            },
+            "bbox": [
+                169,
+                797,
+                826,
+                854
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "Calibration and selective prediction. Guo et al. [7] demonstrated that modern neural networks are poorly calibrated. Temperature scaling [7] and Platt scaling [22] provide post-hoc calibration. Selective prediction frameworks [4, 6] enable models to abstain when uncertain. Varshney et al. [26] "
+                    }
+                ]
+            },
+            "bbox": [
+                169,
+                869,
+                826,
+                912
+            ]
+        },
+        {
+            "type": "page_number",
+            "content": {
+                "page_number_content": [
+                    {
+                        "type": "text",
+                        "content": "2 "
+                    }
+                ]
+            },
+            "bbox": [
+                493,
+                935,
+                504,
+                946
+            ]
+        }
+    ],
+    [
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "apply selective prediction to question answering. ECLIPSE provides a principled abstention signal based on both uncertainty and evidence quality. "
+                    }
+                ]
+            },
+            "bbox": [
+                169,
+                90,
+                823,
+                122
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "Information-theoretic approaches. Xu et al. [29] analyze neural text generation through the lens of information theory. Holtzman et al. [9] identify the “likelihood trap” where high-probability text is often degenerate. Our capacity measure draws on information-theoretic intuitions, quantifying mutual information between evidence and answer through log-likelihood differences. "
+                    }
+                ]
+            },
+            "bbox": [
+                169,
+                133,
+                825,
+                191
+            ]
+        },
+        {
+            "type": "title",
+            "content": {
+                "title_content": [
+                    {
+                        "type": "text",
+                        "content": "3 Method: ECLIPSE "
+                    }
+                ],
+                "level": 1
+            },
+            "bbox": [
+                171,
+                208,
+                369,
+                224
+            ]
+        },
+        {
+            "type": "title",
+            "content": {
+                "title_content": [
+                    {
+                        "type": "text",
+                        "content": "3.1 Problem Setup "
+                    }
+                ],
+                "level": 1
+            },
+            "bbox": [
+                171,
+                239,
+                316,
+                253
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "We consider a language model "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "p _ { \\theta } ( A \\mid Q , E )"
+                    },
+                    {
+                        "type": "text",
+                        "content": "that answers query "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "Q"
+                    },
+                    {
+                        "type": "text",
+                        "content": "given evidence "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "E"
+                    },
+                    {
+                        "type": "text",
+                        "content": ", producing answer "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "A"
+                    },
+                    {
+                        "type": "text",
+                        "content": ". We seek to estimate the probability that "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "A"
+                    },
+                    {
+                        "type": "text",
+                        "content": "is hallucinated—unsupported or contradicted by "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "E"
+                    },
+                    {
+                        "type": "text",
+                        "content": ". This setting captures retrieval-augmented generation, where "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "E"
+                    },
+                    {
+                        "type": "text",
+                        "content": "consists of retrieved documents, as well as grounded QA tasks where "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "E"
+                    },
+                    {
+                        "type": "text",
+                        "content": "is provided context. "
+                    }
+                ]
+            },
+            "bbox": [
+                169,
+                263,
+                826,
+                321
+            ]
+        },
+        {
+            "type": "title",
+            "content": {
+                "title_content": [
+                    {
+                        "type": "text",
+                        "content": "3.2 Entropy–Capacity Model "
+                    }
+                ],
+                "level": 1
+            },
+            "bbox": [
+                171,
+                335,
+                390,
+                351
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "We introduce four quantities that form the foundation of our framework. "
+                    }
+                ]
+            },
+            "bbox": [
+                169,
+                361,
+                645,
+                375
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "Definition 1 (Semantic entropy). Let "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "H \\geq 0"
+                    },
+                    {
+                        "type": "text",
+                        "content": "denote the model’s uncertainty over semantically distinct answers to "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "( Q , E )"
+                    },
+                    {
+                        "type": "text",
+                        "content": ", estimated via multi-sample clustering as described in Section 3.4. "
+                    }
+                ]
+            },
+            "bbox": [
+                169,
+                378,
+                823,
+                407
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "Definition 2 (Evidence capacity). Let "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "C"
+                    },
+                    {
+                        "type": "text",
+                        "content": "measure how informative the evidence "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "E"
+                    },
+                    {
+                        "type": "text",
+                        "content": "is about the answer. High capacity indicates that "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "E"
+                    },
+                    {
+                        "type": "text",
+                        "content": "strongly constrains the answer distribution; low or negative capacity indicates weak or misleading evidence. "
+                    }
+                ]
+            },
+            "bbox": [
+                169,
+                411,
+                825,
+                454
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "Definition 3 (Preferred entropy). Let "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "H _ { p r e f } ( C , Q )"
+                    },
+                    {
+                        "type": "text",
+                        "content": "denote the entropy level that would be optimal for task performance alone, encoding how concentrated the answer distribution should be given capacity "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "C"
+                    },
+                    {
+                        "type": "text",
+                        "content": ". "
+                    }
+                ]
+            },
+            "bbox": [
+                169,
+                455,
+                825,
+                498
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "We model hallucination probability through a logistic function that depends on the deviation of entropy from its preferred level: "
+                    }
+                ]
+            },
+            "bbox": [
+                169,
+                508,
+                823,
+                537
+            ]
+        },
+        {
+            "type": "equation_interline",
+            "content": {
+                "math_content": "p _ {\\text {h a l l}} (H, C) = \\sigma \\left(a \\left(H - H _ {\\text {p r e f}} (C, Q)\\right) - b C + c\\right), \\tag {1}",
+                "math_type": "latex",
+                "image_source": {
+                    "path": "images/af7167b7052ad85fe5fc02e0666299fe4bcf54626d39e462fa998c07f7297f9f.jpg"
+                }
+            },
+            "bbox": [
+                331,
+                541,
+                823,
+                560
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "where "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "a , b > 0"
+                    },
+                    {
+                        "type": "text",
+                        "content": ", "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "c \\in \\mathbb { R }"
+                    },
+                    {
+                        "type": "text",
+                        "content": ", and "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "\\sigma ( z ) = 1 / ( 1 + e ^ { - z } )"
+                    },
+                    {
+                        "type": "text",
+                        "content": "is the logistic function. The key insight is that risk depends on misalignment between actual and preferred entropy. Both overconfidence "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "( H \\ll H _ { \\mathrm { p r e f } } )"
+                    },
+                    {
+                        "type": "text",
+                        "content": "and underconfidence "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "( H \\gg H _ { \\mathrm { p r e f } } )"
+                    },
+                    {
+                        "type": "text",
+                        "content": "can indicate problems, but the nature of the problem differs. "
+                    }
+                ]
+            },
+            "bbox": [
+                169,
+                564,
+                826,
+                608
+            ]
+        },
+        {
+            "type": "title",
+            "content": {
+                "title_content": [
+                    {
+                        "type": "text",
+                        "content": "3.3 Joint Objective and Stability "
+                    }
+                ],
+                "level": 1
+            },
+            "bbox": [
+                171,
+                622,
+                413,
+                638
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "We define a joint objective that balances task performance against hallucination risk: "
+                    }
+                ]
+            },
+            "bbox": [
+                169,
+                648,
+                725,
+                662
+            ]
+        },
+        {
+            "type": "equation_interline",
+            "content": {
+                "math_content": "\\mathcal {L} _ {\\text {t o t a l}} (H \\mid C, Q) = \\alpha (H - H _ {\\text {p r e f}} (C, Q)) ^ {2} + \\lambda p _ {\\text {h a l l}} (H, C), \\tag {2}",
+                "math_type": "latex",
+                "image_source": {
+                    "path": "images/0c937c8cb9f285811053c4d649a3a0204c7e829c365af358f9b22a682525eb1c.jpg"
+                }
+            },
+            "bbox": [
+                303,
+                666,
+                823,
+                684
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "where "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "\\alpha > 0"
+                    },
+                    {
+                        "type": "text",
+                        "content": "controls preference for staying near the task-optimal entropy and "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "\\lambda > 0"
+                    },
+                    {
+                        "type": "text",
+                        "content": "scales the hallucination penalty. The following theorem establishes when this objective is well-behaved. "
+                    }
+                ]
+            },
+            "bbox": [
+                169,
+                686,
+                823,
+                715
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "Theorem 4 (Stability and convexity). If "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "\\alpha > \\lambda a ^ { 2 } / 8"
+                    },
+                    {
+                        "type": "text",
+                        "content": ", then "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "\\mathcal { L } _ { t o t a l } ( H \\mid C , Q )"
+                    },
+                    {
+                        "type": "text",
+                        "content": "is strictly convex in "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "H"
+                    },
+                    {
+                        "type": "text",
+                        "content": ", admits a unique global minimizer "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "H ^ { * } ( C , Q )"
+                    },
+                    {
+                        "type": "text",
+                        "content": ", and gradient descent converges from any initialization. "
+                    }
+                ]
+            },
+            "bbox": [
+                169,
+                719,
+                826,
+                750
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "We provide a complete proof in Appendix A. The condition "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "\\alpha > \\lambda a ^ { 2 } / 8"
+                    },
+                    {
+                        "type": "text",
+                        "content": "ensures that the quadratic task term dominates the curvature of the logistic penalty, preventing non-convexity. "
+                    }
+                ]
+            },
+            "bbox": [
+                169,
+                757,
+                823,
+                787
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "Relationship to implementation. The entropy–capacity objective (Eqs. (1)–(2)) and Theorem 4 provide a conceptual framework that establishes when an entropy controller would be stable and well-behaved. In this work, we do not directly optimize this objective during training. Instead, we use it as a design prior for feature engineering: the model predicts coefficient signs (e.g., "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "w _ { H } > 0"
+                    },
+                    {
+                        "type": "text",
+                        "content": ", "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "w _ { C _ { \\mathrm { e f f } } } < 0"
+                    },
+                    {
+                        "type": "text",
+                        "content": ", "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "w _ { \\Delta L } < 0"
+                    },
+                    {
+                        "type": "text",
+                        "content": ") that we verify empirically in Section 4. We estimate "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "H"
+                    },
+                    {
+                        "type": "text",
+                        "content": "and capacity-related features and learn a calibrated detector via logistic regression (Eq. (5)). The theoretical framework guides feature design and provides interpretability, while the empirical model delivers the operational detector. "
+                    }
+                ]
+            },
+            "bbox": [
+                169,
+                800,
+                825,
+                910
+            ]
+        },
+        {
+            "type": "page_number",
+            "content": {
+                "page_number_content": [
+                    {
+                        "type": "text",
+                        "content": "3 "
+                    }
+                ]
+            },
+            "bbox": [
+                493,
+                935,
+                503,
+                946
+            ]
+        }
+    ],
+    [
+        {
+            "type": "title",
+            "content": {
+                "title_content": [
+                    {
+                        "type": "text",
+                        "content": "3.4 Estimating Entropy and Capacity "
+                    }
+                ],
+                "level": 1
+            },
+            "bbox": [
+                171,
+                90,
+                447,
+                107
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "We implement both quantities using only API access (text generation and log probabilities). "
+                    }
+                ]
+            },
+            "bbox": [
+                169,
+                117,
+                774,
+                133
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "Semantic entropy. Following Kuhn et al. [15], we generate "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "K"
+                    },
+                    {
+                        "type": "text",
+                        "content": "answers "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "\\{ A _ { 1 } , \\dotsc , A _ { K } \\}"
+                    },
+                    {
+                        "type": "text",
+                        "content": "from "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "p _ { \\theta } ( \\cdot \\mid Q , E )"
+                    },
+                    {
+                        "type": "text",
+                        "content": "and cluster them by factual content. For financial QA, we extract (entity, attribute, value) triples using pattern matching and named entity recognition. We assign two answers to the same cluster if their extracted facts match within tolerance (numeric values within "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "1 \\%"
+                    },
+                    {
+                        "type": "text",
+                        "content": "relative error). This yields clusters "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "\\{ C _ { 1 } , \\ldots , C _ { m } \\}"
+                    },
+                    {
+                        "type": "text",
+                        "content": "with empirical probabilities "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "p _ { j } = | C _ { j } | / K"
+                    },
+                    {
+                        "type": "text",
+                        "content": ". We compute: "
+                    }
+                ]
+            },
+            "bbox": [
+                169,
+                148,
+                826,
+                220
+            ]
+        },
+        {
+            "type": "equation_interline",
+            "content": {
+                "math_content": "\\hat {H} = - \\sum_ {j = 1} ^ {m} p _ {j} \\log p _ {j}. \\tag {3}",
+                "math_type": "latex",
+                "image_source": {
+                    "path": "images/f54f0167327d0a63936ec5707938d0ae16deb72ba1749c5ecb53aa2c0439ff5a.jpg"
+                }
+            },
+            "bbox": [
+                424,
+                229,
+                825,
+                271
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "Perplexity-based capacity. We measure how evidence changes answer log-likelihood: "
+                    }
+                ]
+            },
+            "bbox": [
+                169,
+                287,
+                756,
+                304
+            ]
+        },
+        {
+            "type": "equation_interline",
+            "content": {
+                "math_content": "\\hat {C} _ {\\text {e f f}} = \\left[ \\log p _ {\\theta} \\left(A ^ {*} \\mid Q, E\\right) - \\log p _ {\\theta} \\left(A ^ {*} \\mid Q\\right) \\right] \\cdot w _ {\\text {c o n s}}, \\tag {4}",
+                "math_type": "latex",
+                "image_source": {
+                    "path": "images/f9bab683076cf1ca143cc34feaeb0b1d4c51efc732f87b26755aca41ffcef199.jpg"
+                }
+            },
+            "bbox": [
+                318,
+                311,
+                825,
+                333
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "where "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "A ^ { * }"
+                    },
+                    {
+                        "type": "text",
+                        "content": "is the model’s top answer and "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "w _ { \\mathrm { c o n s } } ~ \\in ~ [ 0 , 1 ]"
+                    },
+                    {
+                        "type": "text",
+                        "content": "penalizes contradictory evidence. This difference quantifies how much the evidence supports the answer—positive values indicate support, near-zero values suggest evidence is being ignored, and negative values indicate conflict. "
+                    }
+                ]
+            },
+            "bbox": [
+                169,
+                340,
+                826,
+                385
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "Perplexity decomposition. Beyond aggregate capacity, we extract features that decompose how models use evidence: "
+                    }
+                ]
+            },
+            "bbox": [
+                169,
+                401,
+                823,
+                429
+            ]
+        },
+        {
+            "type": "list",
+            "content": {
+                "list_type": "text_list",
+                "list_items": [
+                    {
+                        "item_type": "text",
+                        "item_content": [
+                            {
+                                "type": "text",
+                                "content": "• "
+                            },
+                            {
+                                "type": "equation_inline",
+                                "content": "L _ { Q } = \\log p _ { \\theta } ( A ^ { * } \\mid Q )"
+                            },
+                            {
+                                "type": "text",
+                                "content": ": Answer likelihood without evidence "
+                            }
+                        ]
+                    },
+                    {
+                        "item_type": "text",
+                        "item_content": [
+                            {
+                                "type": "text",
+                                "content": "• "
+                            },
+                            {
+                                "type": "equation_inline",
+                                "content": "L _ { Q E } = \\log p _ { \\theta } ( A ^ { * } \\mid Q , E )"
+                            },
+                            {
+                                "type": "text",
+                                "content": ": Answer likelihood with evidence "
+                            }
+                        ]
+                    },
+                    {
+                        "item_type": "text",
+                        "item_content": [
+                            {
+                                "type": "text",
+                                "content": "• "
+                            },
+                            {
+                                "type": "equation_inline",
+                                "content": "\\Delta L = L _ { Q E } - L _ { Q }"
+                            },
+                            {
+                                "type": "text",
+                                "content": ": Capacity lift (how much evidence helps) "
+                            }
+                        ]
+                    },
+                    {
+                        "item_type": "text",
+                        "item_content": [
+                            {
+                                "type": "text",
+                                "content": "• "
+                            },
+                            {
+                                "type": "equation_inline",
+                                "content": "\\mathrm { r a t i o } = L _ { Q E } / L _ { Q }"
+                            },
+                            {
+                                "type": "text",
+                                "content": ": Normalized capacity measure "
+                            }
+                        ]
+                    },
+                    {
+                        "item_type": "text",
+                        "item_content": [
+                            {
+                                "type": "text",
+                                "content": "• "
+                            },
+                            {
+                                "type": "equation_inline",
+                                "content": "p _ { \\mathrm { m a x } }"
+                            },
+                            {
+                                "type": "text",
+                                "content": ": Maximum token probability (model confidence) "
+                            }
+                        ]
+                    }
+                ]
+            },
+            "bbox": [
+                215,
+                441,
+                632,
+                542
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "These features enable the model to learn fine-grained patterns about evidence utilization that aggregate measures miss. "
+                    }
+                ]
+            },
+            "bbox": [
+                169,
+                554,
+                823,
+                582
+            ]
+        },
+        {
+            "type": "title",
+            "content": {
+                "title_content": [
+                    {
+                        "type": "text",
+                        "content": "3.5 Calibrated Hallucination Model "
+                    }
+                ],
+                "level": 1
+            },
+            "bbox": [
+                171,
+                601,
+                437,
+                616
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "Guided by the entropy–capacity design prior established above, we now define the operational detector. Given feature vector "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "\\begin{array} { r } { \\dot { \\mathbf { x } } = ( H , C _ { \\mathrm { e f f } } , L _ { Q } , L _ { Q E } , \\Delta L , \\mathrm { r a t i o } , p _ { \\mathrm { m a x } } ) ^ { \\top } } \\end{array}"
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "p _ { \\operatorname* { m a x } } ) ^ { \\top }"
+                    },
+                    {
+                        "type": "text",
+                        "content": "and labeled data, we fit a logistic regression model: "
+                    }
+                ]
+            },
+            "bbox": [
+                169,
+                628,
+                826,
+                671
+            ]
+        },
+        {
+            "type": "equation_interline",
+            "content": {
+                "math_content": "\\hat {p} _ {\\text {h a l l}} = \\sigma \\left(\\mathbf {w} ^ {\\top} \\mathbf {x} + \\beta\\right) \\tag {5}",
+                "math_type": "latex",
+                "image_source": {
+                    "path": "images/1789f3952dabcfb3e76b85953352cc197d4ffda81d1a8e8e3b3f5c8b2519777f.jpg"
+                }
+            },
+            "bbox": [
+                426,
+                672,
+                825,
+                691
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "with "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "L _ { 2 }"
+                    },
+                    {
+                        "type": "text",
+                        "content": "regularization and balanced class weights. "
+                    }
+                ]
+            },
+            "bbox": [
+                169,
+                696,
+                506,
+                713
+            ]
+        },
+        {
+            "type": "title",
+            "content": {
+                "title_content": [
+                    {
+                        "type": "text",
+                        "content": "4 Experiments "
+                    }
+                ],
+                "level": 1
+            },
+            "bbox": [
+                169,
+                734,
+                313,
+                752
+            ]
+        },
+        {
+            "type": "title",
+            "content": {
+                "title_content": [
+                    {
+                        "type": "text",
+                        "content": "4.1 Dataset Construction "
+                    }
+                ],
+                "level": 1
+            },
+            "bbox": [
+                169,
+                767,
+                362,
+                781
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "We construct 100 financial QA pairs from SEC filings (10-K, 10-Q) and earnings call transcripts. Each pair consists of a query, evidence passage, and answer. We create both grounded and hallucinated variants for each pair, yielding 200 balanced samples (100 hallucinated, 100 clean). "
+                    }
+                ]
+            },
+            "bbox": [
+                169,
+                792,
+                825,
+                837
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "We generate hallucinated answers through four perturbation types: (1) wrong numbers: changing numeric values by "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "10 { - } 5 0 \\%"
+                    },
+                    {
+                        "type": "text",
+                        "content": "; (2) entity swaps: substituting company or executive names; (3) contradictions: inverting directional claims (e.g., “increased” “decreased”); and (4) fabrications: introducing facts absent from evidence. We manually verify each example to ensure hallucinated answers are fluent but factually inconsistent with the evidence. "
+                    }
+                ]
+            },
+            "bbox": [
+                169,
+                840,
+                828,
+                912
+            ]
+        },
+        {
+            "type": "page_number",
+            "content": {
+                "page_number_content": [
+                    {
+                        "type": "text",
+                        "content": "4 "
+                    }
+                ]
+            },
+            "bbox": [
+                493,
+                935,
+                504,
+                946
+            ]
+        }
+    ],
+    [
+        {
+            "type": "table",
+            "content": {
+                "image_source": {
+                    "path": "images/1f74854bd98d0e7e9b8c11882964d8223248baf3b13948053d07fa2093d82521.jpg"
+                },
+                "table_caption": [
+                    {
+                        "type": "text",
+                        "content": "Table 1: ECLIPSE hallucination detection performance with GPT-3.5-turbo on financial QA "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "n = 2 0 0"
+                    },
+                    {
+                        "type": "text",
+                        "content": "balanced samples). Bootstrap confidence intervals computed from 1000 resamples. "
+                    }
+                ],
+                "table_footnote": [],
+                "html": "<table><tr><td>Metric</td><td>Value</td></tr><tr><td>ROC AUC</td><td>0.891 ± 0.023</td></tr><tr><td>Bootstrap 95% CI</td><td>[0.842, 0.933]</td></tr><tr><td>Average Precision</td><td>0.892 ± 0.018</td></tr><tr><td>Precision</td><td>0.809 ± 0.034</td></tr><tr><td>Recall</td><td>0.930 ± 0.029</td></tr><tr><td>F1 Score</td><td>0.865 ± 0.025</td></tr><tr><td colspan=\"2\">Entropy-only baseline</td></tr><tr><td>ROC AUC</td><td>0.501 ± 0.039</td></tr><tr><td>Bootstrap 95% CI</td><td>[0.423, 0.578]</td></tr></table>",
+                "table_type": "complex_table",
+                "table_nest_level": 1
+            },
+            "bbox": [
+                370,
+                126,
+                625,
+                286
+            ]
+        },
+        {
+            "type": "table",
+            "content": {
+                "image_source": {
+                    "path": "images/037e98c6d794bb917c7ed90e7fdc68ccfffac69b49ed1b781de271fab827de29.jpg"
+                },
+                "table_caption": [
+                    {
+                        "type": "text",
+                        "content": "Table 2: Learned coefficients for ECLIPSE with GPT-3.5-turbo. We indicate whether each coefficient matches the theoretically expected sign. Six of seven features match predictions. "
+                    }
+                ],
+                "table_footnote": [],
+                "html": "<table><tr><td>Feature</td><td>Coefficient</td><td>Expected Sign</td><td>Match</td></tr><tr><td>H(entropy)</td><td>+0.595</td><td>+</td><td>✓</td></tr><tr><td>Ceff(capacity)</td><td>-0.708</td><td>-</td><td>✓</td></tr><tr><td>LQ</td><td>+0.673</td><td>+</td><td>✓</td></tr><tr><td>LQE</td><td>+1.728</td><td>+</td><td>✓</td></tr><tr><td>ΔL(capacity lift)</td><td>-1.604</td><td>-</td><td>✓</td></tr><tr><td>ratio</td><td>-1.756</td><td>-</td><td>✓</td></tr><tr><td>pmax</td><td>+0.796</td><td>-</td><td>×</td></tr></table>",
+                "table_type": "simple_table",
+                "table_nest_level": 1
+            },
+            "bbox": [
+                305,
+                337,
+                691,
+                454
+            ]
+        },
+        {
+            "type": "title",
+            "content": {
+                "title_content": [
+                    {
+                        "type": "text",
+                        "content": "4.2 Primary Evaluation: GPT-3.5-turbo "
+                    }
+                ],
+                "level": 1
+            },
+            "bbox": [
+                171,
+                479,
+                464,
+                494
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "Setup. We compute "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "\\hat { H }"
+                    },
+                    {
+                        "type": "text",
+                        "content": "from "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "K = 1 0"
+                    },
+                    {
+                        "type": "text",
+                        "content": "samples at temperature 0.7 using the fact-clustering procedure. We extract perplexity features using OpenAI’s API with logprobs "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "="
+                    },
+                    {
+                        "type": "text",
+                        "content": "True. We evaluate using stratified 5-fold cross-validation, ensuring each fold preserves the 50/50 hallucinated/clean split. We train logistic regression with "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "L _ { 2 }"
+                    },
+                    {
+                        "type": "text",
+                        "content": "regularization "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "C = 1 . 0"
+                    },
+                    {
+                        "type": "text",
+                        "content": ") and balanced class weights. All model training and threshold selection (F1-optimizing threshold) is performed on training folds only; metrics are reported on held-out folds and averaged. For statistical significance, we use a bootstrap test (1000 iterations with replacement) over the full dataset to estimate AUC confidence intervals. "
+                    }
+                ]
+            },
+            "bbox": [
+                169,
+                508,
+                823,
+                604
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "Results. Table 1 reports detection performance. ECLIPSE achieves ROC AUC of 0.891 and average precision of 0.89. Bootstrap confidence intervals (1000 resamples) show ECLIPSE AUC of [0.842, 0.933] compared to entropy-only baseline [0.423, 0.578]. The intervals do not overlap, confirming statistically significant improvement "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "\\lceil p < 0 . 0 5 )"
+                    },
+                    {
+                        "type": "text",
+                        "content": ". Figure 1 compares ECLIPSE to baseline methods, showing substantial improvement over entropy-only approaches and competitive performance with methods requiring hidden state access. Figure 4 demonstrates that at "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "30 \\%"
+                    },
+                    {
+                        "type": "text",
+                        "content": "coverage, ECLIPSE reduces hallucination rate by "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "92 \\%"
+                    },
+                    {
+                        "type": "text",
+                        "content": "relative to entropy-only detection. "
+                    }
+                ]
+            },
+            "bbox": [
+                169,
+                621,
+                823,
+                719
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "Coefficient analysis. Table 2 shows learned coefficients with theoretical predictions. Six of seven features match expected signs. The perplexity decomposition features ( "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "L _ { Q E }"
+                    },
+                    {
+                        "type": "text",
+                        "content": ": "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "+ 1 . 7 3"
+                    },
+                    {
+                        "type": "text",
+                        "content": ", ∆L: −1.60, ratio: "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "- 1 . 7 6 )"
+                    },
+                    {
+                        "type": "text",
+                        "content": "exhibit the largest magnitudes, confirming they drive discrimination. Figure 2 visualizes these coefficients. "
+                    }
+                ]
+            },
+            "bbox": [
+                169,
+                734,
+                823,
+                789
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "The positive coefficient for "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "p _ { \\mathrm { m a x } }"
+                    },
+                    {
+                        "type": "text",
+                        "content": "(expected negative) reveals an interesting finding: high token confidence predicts increased hallucination risk in our data. This aligns with the “overconfidence” phenomenon noted by Xiong et al. [28], where models produce peaked distributions over memorized but contextually inappropriate content. "
+                    }
+                ]
+            },
+            "bbox": [
+                169,
+                797,
+                823,
+                853
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "Ablation study. Table 3 and Figure 3 decompose feature contributions. Entropy alone achieves AUC 0.50; adding capacity improves to 0.68 "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "( + 0 . 1 8 )"
+                    },
+                    {
+                        "type": "text",
+                        "content": "; adding perplexity decomposition reaches 0.89 "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "( + 0 . 2 1 )"
+                    },
+                    {
+                        "type": "text",
+                        "content": ". Each component provides meaningful lift. "
+                    }
+                ]
+            },
+            "bbox": [
+                169,
+                869,
+                823,
+                912
+            ]
+        },
+        {
+            "type": "page_number",
+            "content": {
+                "page_number_content": [
+                    {
+                        "type": "text",
+                        "content": "5 "
+                    }
+                ]
+            },
+            "bbox": [
+                493,
+                935,
+                503,
+                946
+            ]
+        }
+    ],
+    [
+        {
+            "type": "image",
+            "content": {
+                "image_source": {
+                    "path": "images/bad41f57ead5a2e61938fa3a7d76aa173df32c8e7585a4a09c95d1ecb6c57fcc.jpg"
+                },
+                "image_caption": [
+                    {
+                        "type": "text",
+                        "content": "Figure 1: ROC curves for ECLIPSE and entropy-only baseline on our financial QA dataset. ECLIPSE achieves AUC of 0.89, substantially outperforming the entropy-only baseline (0.50). The shaded region indicates the area under the ECLIPSE curve. "
+                    }
+                ],
+                "image_footnote": []
+            },
+            "bbox": [
+                289,
+                90,
+                707,
+                404
+            ]
+        },
+        {
+            "type": "image",
+            "content": {
+                "image_source": {
+                    "path": "images/1b82725a62795cb9b89c0d0f4b87609fd5f1b6d3c92ad6a6d793d19ba98cb254.jpg"
+                },
+                "image_caption": [
+                    {
+                        "type": "text",
+                        "content": "Figure 2: Learned coefficients sorted by absolute magnitude. Green bars indicate coefficients matching theoretical predictions; the red bar "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "( p _ { \\mathrm { m a x } } )"
+                    },
+                    {
+                        "type": "text",
+                        "content": "shows an unexpected positive sign. The perplexity decomposition features ( "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "L _ { Q E }"
+                    },
+                    {
+                        "type": "text",
+                        "content": ", ratio, "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "\\Delta L"
+                    },
+                    {
+                        "type": "text",
+                        "content": ") dominate, confirming that evidence utilization drives detection. "
+                    }
+                ],
+                "image_footnote": []
+            },
+            "bbox": [
+                274,
+                483,
+                723,
+                710
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "Coverage analysis. For deployment scenarios where models must abstain on uncertain predictions, we evaluate coverage versus hallucination rate trade-offs. Figure 4 shows that ECLIPSE substantially outperforms entropy-only detection across all coverage levels. At "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "30 \\%"
+                    },
+                    {
+                        "type": "text",
+                        "content": "coverage (accepting only the most confident "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "30 \\%"
+                    },
+                    {
+                        "type": "text",
+                        "content": "of predictions), ECLIPSE achieves "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "3 . 3 \\%"
+                    },
+                    {
+                        "type": "text",
+                        "content": "hallucination rate compared to entropy-only’s "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "4 3 . 3 \\%"
+                    },
+                    {
+                        "type": "text",
+                        "content": "—a "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "92 \\%"
+                    },
+                    {
+                        "type": "text",
+                        "content": "relative reduction. Even at "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "90 \\%"
+                    },
+                    {
+                        "type": "text",
+                        "content": "coverage, ECLIPSE maintains "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "4 4 . 4 \\%"
+                    },
+                    {
+                        "type": "text",
+                        "content": "hallucination rate versus "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "5 1 . 1 \\%"
+                    },
+                    {
+                        "type": "text",
+                        "content": "for entropy-only, demonstrating consistent improvement across the coverage spectrum. "
+                    }
+                ]
+            },
+            "bbox": [
+                169,
+                813,
+                823,
+                910
+            ]
+        },
+        {
+            "type": "page_number",
+            "content": {
+                "page_number_content": []
+            },
+            "bbox": [
+                493,
+                936,
+                503,
+                946
+            ]
+        }
+    ],
+    [
+        {
+            "type": "table",
+            "content": {
+                "image_source": {
+                    "path": "images/4be5406a306ae673a72b470deadbab6b7c9bcbdc4581656467ce60b711997a5f.jpg"
+                },
+                "table_caption": [
+                    {
+                        "type": "text",
+                        "content": "Table 3: Ablation study showing contribution of each feature group. Each row adds features to the previous configuration. Numbers from final model configuration with bootstrap validation. "
+                    }
+                ],
+                "table_footnote": [],
+                "html": "<table><tr><td>Features</td><td>AUC</td><td>Improvement</td></tr><tr><td>H only</td><td>0.50</td><td>—</td></tr><tr><td>+Ceff</td><td>0.68</td><td>+0.18</td></tr><tr><td>+LQ, LQE</td><td>0.81</td><td>+0.13</td></tr><tr><td>+ΔL, ratio, pmax (Full)</td><td>0.89</td><td>+0.08</td></tr></table>",
+                "table_type": "simple_table",
+                "table_nest_level": 1
+            },
+            "bbox": [
+                323,
+                125,
+                674,
+                210
+            ]
+        },
+        {
+            "type": "image",
+            "content": {
+                "image_source": {
+                    "path": "images/4392bb578c7fa98db10e9aaea4808938e458af1a8d6190b867d03412e14781ab.jpg"
+                },
+                "image_caption": [
+                    {
+                        "type": "text",
+                        "content": "Figure 3: Ablation study showing incremental AUC improvement as features are added. Entropy alone achieves 0.50; capacity adds "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "+ 0 . 1 8"
+                    },
+                    {
+                        "type": "text",
+                        "content": "; perplexity decomposition adds "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "+ 0 . 2 1"
+                    },
+                    {
+                        "type": "text",
+                        "content": "more. The full model achieves 0.89, representing a "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "78 \\%"
+                    },
+                    {
+                        "type": "text",
+                        "content": "relative improvement over entropy-only detection. "
+                    }
+                ],
+                "image_footnote": []
+            },
+            "bbox": [
+                287,
+                234,
+                709,
+                448
+            ]
+        },
+        {
+            "type": "title",
+            "content": {
+                "title_content": [
+                    {
+                        "type": "text",
+                        "content": "4.3 Mechanism Validation: Claude-3-Haiku Ablation "
+                    }
+                ],
+                "level": 1
+            },
+            "bbox": [
+                169,
+                536,
+                555,
+                550
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "To test whether ECLIPSE depends specifically on access to real log probabilities, we conduct an ablation using Claude-3-Haiku, which does not expose token-level log probabilities through its API. We estimate log probabilities heuristically based on answer properties, providing noisy proxies for true values. "
+                    }
+                ]
+            },
+            "bbox": [
+                169,
+                566,
+                823,
+                622
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "Table 4 reports results. AUC drops from 0.89 to 0.59—statistically above chance (bootstrap "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "\\mathrm { { \\mathbf { S } E } } \\approx"
+                    },
+                    {
+                        "type": "text",
+                        "content": "0.02) but operationally weak, representing only a modest improvement over random guessing. More revealing is the coefficient analysis in Table 5 and Figure 5: magnitudes collapse by "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "9 0 - 9 6 \\%"
+                    },
+                    {
+                        "type": "text",
+                        "content": ", and the key feature "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "\\Delta L"
+                    },
+                    {
+                        "type": "text",
+                        "content": "flips sign. "
+                    }
+                ]
+            },
+            "bbox": [
+                169,
+                628,
+                823,
+                686
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "This ablation provides strong evidence that ECLIPSE is logprob-native. The method exploits structured token-level uncertainty; when that signal degrades to noise, the learned “physics” disappears and the model reduces to near-random guessing. This validates our theoretical motivation: perplexity decomposition is not incidental but essential. "
+                    }
+                ]
+            },
+            "bbox": [
+                169,
+                691,
+                823,
+                748
+            ]
+        },
+        {
+            "type": "title",
+            "content": {
+                "title_content": [
+                    {
+                        "type": "text",
+                        "content": "4.4 Feature Visualization "
+                    }
+                ],
+                "level": 1
+            },
+            "bbox": [
+                171,
+                776,
+                361,
+                789
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "Figure 6 shows the distribution of key features for clean versus hallucinated samples. Hallucinated answers exhibit higher entropy, lower capacity, and smaller capacity lift—consistent with the theoretical model and learned coefficient signs. "
+                    }
+                ]
+            },
+            "bbox": [
+                169,
+                806,
+                823,
+                849
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "Figure 7 visualizes the joint distribution of entropy "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "H"
+                    },
+                    {
+                        "type": "text",
+                        "content": "and capacity lift "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "\\Delta L"
+                    },
+                    {
+                        "type": "text",
+                        "content": ", the two features with the largest coefficient magnitudes. Clean samples cluster in the upper-left (low entropy, high evidence use); hallucinated samples cluster in the lower-right (high entropy, low evidence use). The learned decision boundary achieves clean separation. "
+                    }
+                ]
+            },
+            "bbox": [
+                169,
+                854,
+                823,
+                912
+            ]
+        },
+        {
+            "type": "page_number",
+            "content": {
+                "page_number_content": [
+                    {
+                        "type": "text",
+                        "content": "7 "
+                    }
+                ]
+            },
+            "bbox": [
+                493,
+                935,
+                503,
+                946
+            ]
+        }
+    ],
+    [
+        {
+            "type": "image",
+            "content": {
+                "image_source": {
+                    "path": "images/16cb15a70ae70b014965538daae0f7a316a05d4869d436402b7a76a27804d5ec.jpg"
+                },
+                "image_caption": [
+                    {
+                        "type": "text",
+                        "content": "Figure 4: Coverage vs hallucination rate for ECLIPSE and entropy-only baseline. At any given coverage level, ECLIPSE achieves substantially lower hallucination rates. At "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "30 \\%"
+                    },
+                    {
+                        "type": "text",
+                        "content": "coverage, ECLIPSE reduces hallucination rate by "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "92 \\%"
+                    },
+                    {
+                        "type": "text",
+                        "content": "relative to entropy-only detection ( "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "3 . 3 \\%"
+                    },
+                    {
+                        "type": "text",
+                        "content": "vs "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "4 3 . 3 \\%"
+                    },
+                    {
+                        "type": "text",
+                        "content": "). "
+                    }
+                ],
+                "image_footnote": []
+            },
+            "bbox": [
+                292,
+                93,
+                704,
+                299
+            ]
+        },
+        {
+            "type": "table",
+            "content": {
+                "image_source": {
+                    "path": "images/d17ab19107dc106775a37b802c82c8f8649f011934aefc30dab8a741938c48c1.jpg"
+                },
+                "table_caption": [
+                    {
+                        "type": "text",
+                        "content": "Table 4: ECLIPSE performance with Claude-3-Haiku using estimated log probabilities "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "\\mathit { n } = 8 0 0"
+                    },
+                    {
+                        "type": "text",
+                        "content": "samples). Performance drops substantially compared to GPT-3.5-turbo with real log probabilities. "
+                    }
+                ],
+                "table_footnote": [],
+                "html": "<table><tr><td>Metric</td><td>Value</td></tr><tr><td>ROC AUC</td><td>0.593</td></tr><tr><td>Average Precision</td><td>0.604</td></tr><tr><td>F1 Score</td><td>0.595</td></tr></table>",
+                "table_type": "simple_table",
+                "table_nest_level": 1
+            },
+            "bbox": [
+                397,
+                407,
+                599,
+                479
+            ]
+        },
+        {
+            "type": "title",
+            "content": {
+                "title_content": [
+                    {
+                        "type": "text",
+                        "content": "4.5 Comparison to Prior Work "
+                    }
+                ],
+                "level": 1
+            },
+            "bbox": [
+                171,
+                505,
+                401,
+                520
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "Table 6 contextualizes ECLIPSE relative to published hallucination detection methods. Important caveat: These ranges come from different papers evaluated on different datasets; they are not direct comparisons on shared benchmarks. We do not claim to match or exceed these methods on standardized test sets. Our 0.89 AUC on financial QA suggests the logprob-native approach is promising, but establishing performance on common benchmarks (e.g., TruthfulQA, HaluEval) remains important future work. The primary contribution is the interpretable, logprob-native mechanism, not a claim of universal superiority. "
+                    }
+                ]
+            },
+            "bbox": [
+                169,
+                531,
+                826,
+                630
+            ]
+        },
+        {
+            "type": "title",
+            "content": {
+                "title_content": [
+                    {
+                        "type": "text",
+                        "content": "5 Discussion "
+                    }
+                ],
+                "level": 1
+            },
+            "bbox": [
+                171,
+                650,
+                294,
+                666
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "The overconfidence finding. The positive "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "p _ { \\mathrm { m a x } }"
+                    },
+                    {
+                        "type": "text",
+                        "content": "coefficient contradicts the naive expectation that high confidence indicates correctness. Instead, we find that high token-level confidence predicts increased hallucination risk. This aligns with observations that models are “confidently wrong” when hallucinating [28]—producing peaked distributions over memorized but contextually inappropriate content. For practitioners, this suggests treating raw confidence as a risk factor rather than a safety signal. "
+                    }
+                ]
+            },
+            "bbox": [
+                169,
+                681,
+                823,
+                767
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "Why perplexity decomposition works. The ablation in Table 3 shows that perplexity features contribute "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "+ 0 . 2 1"
+                    },
+                    {
+                        "type": "text",
+                        "content": "AUC beyond entropy and capacity alone "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "( 0 . 6 8  0 . 8 9 )"
+                    },
+                    {
+                        "type": "text",
+                        "content": "). These features capture whether the model actually uses evidence: a large positive "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "\\Delta L"
+                    },
+                    {
+                        "type": "text",
+                        "content": "indicates evidence improved answer likelihood (grounded); near-zero "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "\\Delta L"
+                    },
+                    {
+                        "type": "text",
+                        "content": "indicates evidence was ignored (hallucination risk). This is precisely the failure mode that plagues retrieval-augmented systems [23]. "
+                    }
+                ]
+            },
+            "bbox": [
+                169,
+                782,
+                823,
+                853
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "Logprob-native mechanism. The Claude ablation (Figure 5) demonstrates that ECLIPSE is not performing generic calibration. When log probabilities are estimated noise, coefficient magnitudes collapse "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "9 0 - 9 6 \\%"
+                    },
+                    {
+                        "type": "text",
+                        "content": "and key features flip sign. The method requires access to meaningful token-level "
+                    }
+                ]
+            },
+            "bbox": [
+                169,
+                869,
+                823,
+                912
+            ]
+        },
+        {
+            "type": "page_number",
+            "content": {
+                "page_number_content": [
+                    {
+                        "type": "text",
+                        "content": "8 "
+                    }
+                ]
+            },
+            "bbox": [
+                493,
+                935,
+                503,
+                946
+            ]
+        }
+    ],
+    [
+        {
+            "type": "table",
+            "content": {
+                "image_source": {
+                    "path": "images/983c41441e45d0a00f5ac0300a264a6d7caabac67e6cd42def4d6f909fb39634.jpg"
+                },
+                "table_caption": [
+                    {
+                        "type": "text",
+                        "content": "Table 5: Coefficient comparison between GPT-3.5-turbo (real log probabilities) and Claude-3-Haiku (estimated). The ratio column shows what fraction of the GPT coefficient magnitude is retained. Coefficients collapse dramatically when log probabilities are unavailable. "
+                    }
+                ],
+                "table_footnote": [],
+                "html": "<table><tr><td>Feature</td><td>GPT-3.5</td><td>Claude</td><td>Retained</td></tr><tr><td>H</td><td>+0.595</td><td>+0.051</td><td>9%</td></tr><tr><td>Ceff</td><td>-0.708</td><td>-0.335</td><td>47%</td></tr><tr><td>LQ</td><td>+0.673</td><td>+0.110</td><td>16%</td></tr><tr><td>LQE</td><td>+1.728</td><td>+0.070</td><td>4%</td></tr><tr><td>ΔL</td><td>-1.604</td><td>+0.070</td><td>(wrong sign)</td></tr><tr><td>ratio</td><td>-1.756</td><td>-0.129</td><td>7%</td></tr><tr><td>pmax</td><td>+0.796</td><td>+0.000</td><td>0%</td></tr></table>",
+                "table_type": "simple_table",
+                "table_nest_level": 1
+            },
+            "bbox": [
+                346,
+                138,
+                651,
+                256
+            ]
+        },
+        {
+            "type": "image",
+            "content": {
+                "image_source": {
+                    "path": "images/664713630fb2c3ae0d91fe7057b4755fe227de837d5f84bdfd6538e8f5d5019c.jpg"
+                },
+                "image_caption": [
+                    {
+                        "type": "text",
+                        "content": "Figure 5: Coefficient comparison between GPT-3.5-turbo (real log probabilities) and Claude-3-Haiku (estimated). Blue bars show GPT coefficients; orange bars show Claude coefficients. Red percentages indicate what fraction of the GPT magnitude is retained. Coefficients collapse by "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "9 0 - 9 6 \\%"
+                    },
+                    {
+                        "type": "text",
+                        "content": "when real log probabilities are unavailable, and "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "\\Delta L"
+                    },
+                    {
+                        "type": "text",
+                        "content": "flips sign, confirming that ECLIPSE is logprob-native. "
+                    }
+                ],
+                "image_footnote": []
+            },
+            "bbox": [
+                256,
+                270,
+                743,
+                506
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "uncertainty; it cannot extract signal from uninformative proxies. This has implications for API providers: exposing log probabilities enables substantially better hallucination detection. "
+                    }
+                ]
+            },
+            "bbox": [
+                169,
+                595,
+                823,
+                625
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "Cross-paper comparisons and benchmarking. Table 6 compares our results to prior work, but these numbers come from different papers on different datasets. We do not claim to match or exceed these methods on standardized benchmarks; such evaluation requires shared test sets and identical experimental protocols. Our 0.89 AUC on financial QA suggests the approach is promising, but establishing performance relative to baselines on common benchmarks (e.g., TruthfulQA, HaluEval) remains important future work. The primary contribution is the interpretable, logprob-native mechanism, not a claim of universal superiority. "
+                    }
+                ]
+            },
+            "bbox": [
+                169,
+                638,
+                826,
+                737
+            ]
+        },
+        {
+            "type": "title",
+            "content": {
+                "title_content": [
+                    {
+                        "type": "text",
+                        "content": "6 Limitations "
+                    }
+                ],
+                "level": 1
+            },
+            "bbox": [
+                171,
+                756,
+                303,
+                771
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "Scale and domain. We evaluate on 200 samples from financial QA with primarily synthetic hallucinations (constructed perturbations). While results are statistically significant (bootstrap "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "9 5 \\%"
+                    },
+                    {
+                        "type": "text",
+                        "content": "CI for AUC: [0.85, 0.93]), this represents a small, controlled case study in a single domain. The dataset does not include naturally occurring model hallucinations at scale, which may exhibit different characteristics. Broader validation requires: (1) naturally hallucinated responses from prompted models, (2) multiple domains beyond finance (medical, legal, open-domain QA), and (3) larger sample sizes "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "m \\geq 1 0 0 0 ,"
+                    },
+                    {
+                        "type": "text",
+                        "content": ") for tighter confidence intervals and more robust cross-validation. We position this work as a controlled mechanism study demonstrating the logprob-native detection principle, not as a comprehensive benchmark evaluation. "
+                    }
+                ]
+            },
+            "bbox": [
+                169,
+                786,
+                826,
+                912
+            ]
+        },
+        {
+            "type": "page_number",
+            "content": {
+                "page_number_content": [
+                    {
+                        "type": "text",
+                        "content": "9 "
+                    }
+                ]
+            },
+            "bbox": [
+                493,
+                935,
+                504,
+                946
+            ]
+        }
+    ],
+    [
+        {
+            "type": "image",
+            "content": {
+                "image_source": {
+                    "path": "images/3987e2fe074b24068751afb612edd85a51151c8b2db829e673fd6ae1b72f2ed5.jpg"
+                },
+                "image_caption": [],
+                "image_footnote": []
+            },
+            "bbox": [
+                174,
+                88,
+                387,
+                229
+            ]
+        },
+        {
+            "type": "image",
+            "content": {
+                "image_source": {
+                    "path": "images/d51e95d3accbd383a009d1a3fb5869ae949d154616661a66c49784e3f08b64cb.jpg"
+                },
+                "image_caption": [],
+                "image_footnote": []
+            },
+            "bbox": [
+                398,
+                88,
+                604,
+                229
+            ]
+        },
+        {
+            "type": "image",
+            "content": {
+                "image_source": {
+                    "path": "images/5fa35e6df42c05bf161382e0bd7f03cee3c04f8727c48d01629f3a863d3bfae6.jpg"
+                },
+                "image_caption": [
+                    {
+                        "type": "text",
+                        "content": "Figure 6: Feature distributions for clean (green) and hallucinated (red) samples. (a) Hallucinated answers show higher semantic entropy. (b) Hallucinated answers show lower effective capacity. (c) Hallucinated answers show smaller or negative capacity lift, indicating the model ignores evidence. "
+                    }
+                ],
+                "image_footnote": []
+            },
+            "bbox": [
+                609,
+                89,
+                821,
+                229
+            ]
+        },
+        {
+            "type": "image",
+            "content": {
+                "image_source": {
+                    "path": "images/e45fe7f1c7476ecde8d620601b4ba44f8299171f94e53095cfaf417047bc46d1.jpg"
+                },
+                "image_caption": [
+                    {
+                        "type": "text",
+                        "content": "Figure 7: Scatter plot of semantic entropy "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "( H )"
+                    },
+                    {
+                        "type": "text",
+                        "content": "versus capacity lift "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "( \\Delta L )"
+                    },
+                    {
+                        "type": "text",
+                        "content": "with fitted decision boundary. Clean samples (green) exhibit low entropy and high capacity lift; hallucinated samples (red) exhibit high entropy and low or negative capacity lift. The boundary achieves clear separation, illustrating the entropy–capacity trade-off. "
+                    }
+                ],
+                "image_footnote": []
+            },
+            "bbox": [
+                305,
+                297,
+                689,
+                566
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "API dependence. ECLIPSE requires log probability access, which some APIs (Claude, Gemini) do not expose. The Claude ablation quantifies this limitation: without real log probabilities, performance degrades substantially. This dependency is fundamental to our approach and cannot be circumvented through heuristic estimation. "
+                    }
+                ]
+            },
+            "bbox": [
+                169,
+                659,
+                823,
+                715
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "Entropy estimation limitations. We use "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "K = 1 0"
+                    },
+                    {
+                        "type": "text",
+                        "content": "samples at temperature 0.7 to estimate semantic entropy due to API cost constraints. This yields noisy entropy estimates that may miss multimodal structure; larger "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "K"
+                    },
+                    {
+                        "type": "text",
+                        "content": "(e.g., 50–100 samples) would likely yield more stable estimates and sharper discrimination. Additionally, our semantic clustering is heuristic (spaCy NER "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "^ +"
+                    },
+                    {
+                        "type": "text",
+                        "content": "regex + thresholds) and tailored to financial QA; more robust semantic coders (e.g., entailment models) would likely improve entropy quality. "
+                    }
+                ]
+            },
+            "bbox": [
+                169,
+                729,
+                823,
+                813
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "Feature design and potential circularity. Our capacity feature "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "( C _ { \\mathrm { e f f } } )"
+                    },
+                    {
+                        "type": "text",
+                        "content": "includes an explicit contradiction penalty "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "( w _ { \\mathrm { c o n s } } )"
+                    },
+                    {
+                        "type": "text",
+                        "content": "that is aligned with our labeling protocol (identifying synthetic contradictions). This may inflate performance on this controlled dataset compared to naturally occurring hallucinations. Additionally, features "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "( L _ { Q }"
+                    },
+                    {
+                        "type": "text",
+                        "content": ", LQE , ∆L, ratio) exhibit multicollinearity by construction; while coefficients remain qualitatively stable, absolute magnitudes may be less interpretable than in orthogonal feature sets. "
+                    }
+                ]
+            },
+            "bbox": [
+                169,
+                828,
+                826,
+                911
+            ]
+        },
+        {
+            "type": "page_number",
+            "content": {
+                "page_number_content": [
+                    {
+                        "type": "text",
+                        "content": "10 "
+                    }
+                ]
+            },
+            "bbox": [
+                490,
+                935,
+                508,
+                946
+            ]
+        }
+    ],
+    [
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "Table 6: Qualitative comparison to prior hallucination detection methods. Important: Numbers are from original publications evaluated on different datasets (SelfCheckGPT on WikiBio, Semantic Entropy on TriviaQA, SEPs on various benchmarks). These are not direct comparisons on shared test sets. Our results (0.89 AUC) are on the financial QA dataset described in Section 4. We include this table for orientation only; establishing performance on standardized benchmarks remains future work. "
+                    }
+                ]
+            },
+            "bbox": [
+                169,
+                97,
+                823,
+                178
+            ]
+        },
+        {
+            "type": "table",
+            "content": {
+                "image_source": {
+                    "path": "images/cb6158b3d0c98e6285f8102f7e9808c3b4c2525081e6d83d8708d40bf8f9b9e9.jpg"
+                },
+                "table_caption": [],
+                "table_footnote": [],
+                "html": "<table><tr><td>Method</td><td>Access</td><td>AUC Range</td><td>Source</td></tr><tr><td>SelfCheckGPT</td><td>Black-box</td><td>0.78–0.82</td><td>[19]</td></tr><tr><td>Semantic Entropy</td><td>Grey-box</td><td>0.80–0.85</td><td>[15]</td></tr><tr><td>SEPs</td><td>White-box</td><td>0.85–0.90</td><td>[14]</td></tr><tr><td>ECLIPSE (ours)</td><td>Grey-box</td><td>0.89</td><td>This work</td></tr></table>",
+                "table_type": "simple_table",
+                "table_nest_level": 1
+            },
+            "bbox": [
+                289,
+                180,
+                709,
+                273
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "Claude ablation confounds. Our Claude-3-Haiku ablation changes both the model family and the availability of log probabilities; the coefficient collapse is therefore a joint effect of noisy logprob proxies and model differences (training data, architecture, API behavior). In future work we plan to simulate logprob unavailability within a single model family to isolate the effect more cleanly. Nonetheless, the dramatic magnitude reduction "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "( 9 0 - 9 6 \\% )"
+                    },
+                    {
+                        "type": "text",
+                        "content": ") provides strong evidence that structured token-level uncertainty is essential. "
+                    }
+                ]
+            },
+            "bbox": [
+                169,
+                297,
+                826,
+                383
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "Adversarial robustness. Our capacity estimator measures evidence utilization but does not protect against coherent but globally false evidence. An adversary could craft internally consistent but factually incorrect context that receives high capacity scores. Integration with external fact verification [21] remains important for adversarial robustness. "
+                    }
+                ]
+            },
+            "bbox": [
+                169,
+                397,
+                823,
+                455
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "Detection versus control. We focus on hallucination detection. While Theorem 4 establishes properties for entropy control, we do not implement explicit control mechanisms (temperature scheduling, constrained decoding). Developing practical controllers that track optimal entropy remains future work. "
+                    }
+                ]
+            },
+            "bbox": [
+                169,
+                468,
+                823,
+                525
+            ]
+        },
+        {
+            "type": "title",
+            "content": {
+                "title_content": [
+                    {
+                        "type": "text",
+                        "content": "7 Conclusion "
+                    }
+                ],
+                "level": 1
+            },
+            "bbox": [
+                171,
+                544,
+                302,
+                560
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "We introduced ECLIPSE, a framework for hallucination detection that makes the entropy–capacity trade-off explicit. The key insight is that hallucination risk depends on the relationship between model uncertainty and evidence quality—not uncertainty alone. By decomposing perplexity into features capturing evidence utilization, ECLIPSE achieves 0.89 AUC on our financial QA dataset using only API access. "
+                    }
+                ]
+            },
+            "bbox": [
+                169,
+                575,
+                823,
+                647
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "The controlled Claude ablation validates ECLIPSE as logprob-native: without real log probabilities, performance drops from 0.89 to 0.59 AUC. This demonstrates that perplexity decomposition is essential, not incidental. The interpretable coefficients provide insight into model behavior, revealing that high token confidence paradoxically predicts increased hallucination risk. "
+                    }
+                ]
+            },
+            "bbox": [
+                169,
+                651,
+                826,
+                709
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "For practitioners, ECLIPSE can wrap existing LLMs without modification, providing calibrated hallucination probabilities for selective prediction. The framework offers a verification layer for autonomous systems where understanding when to trust model outputs is critical for safe deployment. "
+                    }
+                ]
+            },
+            "bbox": [
+                169,
+                713,
+                826,
+                757
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "Reproducibility. We plan to release the financial QA dataset, ECLIPSE implementation, and all experimental code upon acceptance to facilitate replication and extension of this work. "
+                    }
+                ]
+            },
+            "bbox": [
+                169,
+                771,
+                823,
+                801
+            ]
+        },
+        {
+            "type": "title",
+            "content": {
+                "title_content": [
+                    {
+                        "type": "text",
+                        "content": "References "
+                    }
+                ],
+                "level": 1
+            },
+            "bbox": [
+                171,
+                819,
+                269,
+                835
+            ]
+        },
+        {
+            "type": "list",
+            "content": {
+                "list_type": "reference_list",
+                "list_items": [
+                    {
+                        "item_type": "text",
+                        "item_content": [
+                            {
+                                "type": "text",
+                                "content": "[1] Amos Azaria and Tom Mitchell. The internal state of an LLM knows when it’s lying. In Findings of EMNLP, 2023. "
+                            }
+                        ]
+                    },
+                    {
+                        "item_type": "text",
+                        "item_content": [
+                            {
+                                "type": "text",
+                                "content": "[2] Jiaxi Cui et al. ChatLaw: Open-source legal large language model with integrated external knowledge bases. arXiv preprint arXiv:2306.16092, 2023. "
+                            }
+                        ]
+                    }
+                ]
+            },
+            "bbox": [
+                179,
+                844,
+                825,
+                912
+            ]
+        },
+        {
+            "type": "page_number",
+            "content": {
+                "page_number_content": []
+            },
+            "bbox": [
+                490,
+                935,
+                506,
+                946
+            ]
+        }
+    ],
+    [
+        {
+            "type": "list",
+            "content": {
+                "list_type": "reference_list",
+                "list_items": [
+                    {
+                        "item_type": "text",
+                        "item_content": [
+                            {
+                                "type": "text",
+                                "content": "[3] Nouha Dziri et al. On the origin of hallucinations in conversational models: Is it the datasets or the models? In NAACL, 2022. "
+                            }
+                        ]
+                    },
+                    {
+                        "item_type": "text",
+                        "item_content": [
+                            {
+                                "type": "text",
+                                "content": "[4] Ran El-Yaniv and Yair Wiener. On the foundations of noise-free selective classification. Journal of Machine Learning Research, 11:1605–1641, 2010. "
+                            }
+                        ]
+                    },
+                    {
+                        "item_type": "text",
+                        "item_content": [
+                            {
+                                "type": "text",
+                                "content": "[5] Yarin Gal and Zoubin Ghahramani. Dropout as a Bayesian approximation: Representing model uncertainty in deep learning. In ICML, 2016. "
+                            }
+                        ]
+                    },
+                    {
+                        "item_type": "text",
+                        "item_content": [
+                            {
+                                "type": "text",
+                                "content": "[6] Yonatan Geifman and Ran El-Yaniv. Selective classification for deep neural networks. In NeurIPS, 2017. "
+                            }
+                        ]
+                    },
+                    {
+                        "item_type": "text",
+                        "item_content": [
+                            {
+                                "type": "text",
+                                "content": "[7] Chuan Guo, Geoff Pleiss, Yu Sun, and Kilian Q Weinberger. On calibration of modern neural networks. In ICML, 2017. "
+                            }
+                        ]
+                    },
+                    {
+                        "item_type": "text",
+                        "item_content": [
+                            {
+                                "type": "text",
+                                "content": "[8] Kelvin Guu et al. REALM: Retrieval-augmented language model pre-training. In ICML, 2020. "
+                            }
+                        ]
+                    },
+                    {
+                        "item_type": "text",
+                        "item_content": [
+                            {
+                                "type": "text",
+                                "content": "[9] Ari Holtzman et al. The curious case of neural text degeneration. In ICLR, 2020. "
+                            }
+                        ]
+                    },
+                    {
+                        "item_type": "text",
+                        "item_content": [
+                            {
+                                "type": "text",
+                                "content": "[10] Lei Huang et al. A survey on hallucination in large language models: Principles, taxonomy, challenges, and open questions. arXiv preprint arXiv:2311.05232, 2023. "
+                            }
+                        ]
+                    },
+                    {
+                        "item_type": "text",
+                        "item_content": [
+                            {
+                                "type": "text",
+                                "content": "[11] Gautier Izacard et al. Atlas: Few-shot learning with retrieval augmented language models. Journal of Machine Learning Research, 24:1–43, 2023. "
+                            }
+                        ]
+                    },
+                    {
+                        "item_type": "text",
+                        "item_content": [
+                            {
+                                "type": "text",
+                                "content": "[12] Ziwei Ji et al. Survey of hallucination in natural language generation. ACM Computing Surveys, 55(12):1–38, 2023. "
+                            }
+                        ]
+                    },
+                    {
+                        "item_type": "text",
+                        "item_content": [
+                            {
+                                "type": "text",
+                                "content": "[13] Saurav Kadavath et al. Language models (mostly) know what they know. arXiv preprint arXiv:2207.05221, 2022. "
+                            }
+                        ]
+                    },
+                    {
+                        "item_type": "text",
+                        "item_content": [
+                            {
+                                "type": "text",
+                                "content": "[14] Jannik Kossen et al. Semantic entropy probes: Robust and cheap hallucination detection in LLMs. arXiv preprint arXiv:2406.15927, 2024. "
+                            }
+                        ]
+                    },
+                    {
+                        "item_type": "text",
+                        "item_content": [
+                            {
+                                "type": "text",
+                                "content": "[15] Lorenz Kuhn, Yarin Gal, and Sebastian Farquhar. Semantic uncertainty: Linguistic invariances for uncertainty estimation in natural language generation. In ICLR, 2023. "
+                            }
+                        ]
+                    },
+                    {
+                        "item_type": "text",
+                        "item_content": [
+                            {
+                                "type": "text",
+                                "content": "[16] Patrick Lewis et al. Retrieval-augmented generation for knowledge-intensive NLP tasks. In NeurIPS, 2020. "
+                            }
+                        ]
+                    },
+                    {
+                        "item_type": "text",
+                        "item_content": [
+                            {
+                                "type": "text",
+                                "content": "[17] Zhen Lin et al. Generating with confidence: Uncertainty quantification for black-box large language models. TMLR, 2024. "
+                            }
+                        ]
+                    },
+                    {
+                        "item_type": "text",
+                        "item_content": [
+                            {
+                                "type": "text",
+                                "content": "[18] Nelson Liu et al. Evaluating verifiability in generative search engines. In Findings of EMNLP, 2023. "
+                            }
+                        ]
+                    },
+                    {
+                        "item_type": "text",
+                        "item_content": [
+                            {
+                                "type": "text",
+                                "content": "[19] Potsawee Manakul, Adian Liusie, and Mark JF Gales. SelfCheckGPT: Zero-resource black-box hallucination detection for generative large language models. In EMNLP, 2023. "
+                            }
+                        ]
+                    },
+                    {
+                        "item_type": "text",
+                        "item_content": [
+                            {
+                                "type": "text",
+                                "content": "[20] Joshua Maynez et al. On faithfulness and factuality in abstractive summarization. In ACL, 2020. "
+                            }
+                        ]
+                    },
+                    {
+                        "item_type": "text",
+                        "item_content": [
+                            {
+                                "type": "text",
+                                "content": "[21] Sewon Min et al. FActScore: Fine-grained atomic evaluation of factual precision in long form text generation. In EMNLP, 2023. "
+                            }
+                        ]
+                    },
+                    {
+                        "item_type": "text",
+                        "item_content": [
+                            {
+                                "type": "text",
+                                "content": "[22] John Platt. Probabilistic outputs for support vector machines and comparisons to regularized likelihood methods. Advances in Large Margin Classifiers, 10(3):61–74, 1999. "
+                            }
+                        ]
+                    },
+                    {
+                        "item_type": "text",
+                        "item_content": [
+                            {
+                                "type": "text",
+                                "content": "[23] Freda Shi et al. Large language models can be easily distracted by irrelevant context. In ICML, 2023. "
+                            }
+                        ]
+                    },
+                    {
+                        "item_type": "text",
+                        "item_content": [
+                            {
+                                "type": "text",
+                                "content": "[24] Kurt Shuster et al. Retrieval augmentation reduces hallucination in conversation. In Findings of EMNLP, 2021. "
+                            }
+                        ]
+                    },
+                    {
+                        "item_type": "text",
+                        "item_content": [
+                            {
+                                "type": "text",
+                                "content": "[25] Karan Singhal et al. Large language models encode clinical knowledge. Nature, 620:172–180, 2023. "
+                            }
+                        ]
+                    }
+                ]
+            },
+            "bbox": [
+                173,
+                90,
+                826,
+                910
+            ]
+        },
+        {
+            "type": "page_number",
+            "content": {
+                "page_number_content": [
+                    {
+                        "type": "text",
+                        "content": "12 "
+                    }
+                ]
+            },
+            "bbox": [
+                490,
+                935,
+                508,
+                946
+            ]
+        }
+    ],
+    [
+        {
+            "type": "list",
+            "content": {
+                "list_type": "reference_list",
+                "list_items": [
+                    {
+                        "item_type": "text",
+                        "item_content": [
+                            {
+                                "type": "text",
+                                "content": "[26] Neeraj Varshney et al. Investigating selective prediction approaches across several tasks in IID, OOD, and adversarial settings. In Findings of ACL, 2022. "
+                            }
+                        ]
+                    },
+                    {
+                        "item_type": "text",
+                        "item_content": [
+                            {
+                                "type": "text",
+                                "content": "[27] Shijie Wu et al. BloombergGPT: A large language model for finance. arXiv preprint arXiv:2303.17564, 2023. "
+                            }
+                        ]
+                    },
+                    {
+                        "item_type": "text",
+                        "item_content": [
+                            {
+                                "type": "text",
+                                "content": "[28] Miao Xiong et al. Can LLMs express their uncertainty? an empirical evaluation of confidence elicitation in LLMs. In ICLR, 2024. "
+                            }
+                        ]
+                    },
+                    {
+                        "item_type": "text",
+                        "item_content": [
+                            {
+                                "type": "text",
+                                "content": "[29] Jiacheng Xu et al. A theory of usable information under computational constraints. arXiv preprint arXiv:2002.10689, 2020. "
+                            }
+                        ]
+                    },
+                    {
+                        "item_type": "text",
+                        "item_content": [
+                            {
+                                "type": "text",
+                                "content": "[30] Ori Yoran et al. Making retrieval-augmented language models robust to irrelevant context. In ICLR, 2024. "
+                            }
+                        ]
+                    },
+                    {
+                        "item_type": "text",
+                        "item_content": [
+                            {
+                                "type": "text",
+                                "content": "[31] Yue Zhang et al. Siren’s song in the AI ocean: A survey on hallucination in large language models. arXiv preprint arXiv:2309.01219, 2023. "
+                            }
+                        ]
+                    }
+                ]
+            },
+            "bbox": [
+                173,
+                90,
+                825,
+                308
+            ]
+        },
+        {
+            "type": "page_number",
+            "content": {
+                "page_number_content": [
+                    {
+                        "type": "text",
+                        "content": "13 "
+                    }
+                ]
+            },
+            "bbox": [
+                490,
+                935,
+                508,
+                946
+            ]
+        }
+    ],
+    [
+        {
+            "type": "title",
+            "content": {
+                "title_content": [
+                    {
+                        "type": "text",
+                        "content": "A Complete Proof of Theorem 4 "
+                    }
+                ],
+                "level": 1
+            },
+            "bbox": [
+                171,
+                89,
+                460,
+                107
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "We prove that under the condition "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "\\alpha > \\lambda a ^ { 2 } / 8"
+                    },
+                    {
+                        "type": "text",
+                        "content": ", the objective "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "\\mathcal { L } _ { \\mathrm { t o t a l } } ( H \\mid C , Q )"
+                    },
+                    {
+                        "type": "text",
+                        "content": "is strictly convex in "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "H"
+                    },
+                    {
+                        "type": "text",
+                        "content": ", admits a unique global minimizer, and gradient descent converges from any initialization. "
+                    }
+                ]
+            },
+            "bbox": [
+                169,
+                119,
+                826,
+                148
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "Setup. We write the objective as: "
+                    }
+                ]
+            },
+            "bbox": [
+                169,
+                162,
+                405,
+                176
+            ]
+        },
+        {
+            "type": "equation_interline",
+            "content": {
+                "math_content": "\\mathcal {L} _ {\\text {t o t a l}} (H) = \\alpha \\left(H - H _ {\\text {p r e f}}\\right) ^ {2} + \\lambda \\sigma (z (H)), \\tag {6}",
+                "math_type": "latex",
+                "image_source": {
+                    "path": "images/a227a083e8e9ed000910f9143bbb1792e658b8f6007b65f5dcfc6a88e78ae69b.jpg"
+                }
+            },
+            "bbox": [
+                359,
+                181,
+                825,
+                198
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "where we suppress the dependence on "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "( C , Q )"
+                    },
+                    {
+                        "type": "text",
+                        "content": "for clarity and define: "
+                    }
+                ]
+            },
+            "bbox": [
+                169,
+                202,
+                617,
+                218
+            ]
+        },
+        {
+            "type": "equation_interline",
+            "content": {
+                "math_content": "z (H) = a \\left(H - H _ {\\text {p r e f}}\\right) - b C + c. \\tag {7}",
+                "math_type": "latex",
+                "image_source": {
+                    "path": "images/d2d2b6c8a03bafd87b08b339454222dd00c060a633522f724731236ce8363ef6.jpg"
+                }
+            },
+            "bbox": [
+                385,
+                220,
+                825,
+                239
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "First derivative. We compute the first derivative of "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "\\mathcal { L } _ { \\mathrm { t o t a l } }"
+                    },
+                    {
+                        "type": "text",
+                        "content": "with respect to "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "H"
+                    },
+                    {
+                        "type": "text",
+                        "content": ". Using the chain rule and the identity "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "\\sigma ^ { \\prime } ( z ) = \\sigma ( z ) ( 1 - \\sigma ( z ) )"
+                    },
+                    {
+                        "type": "text",
+                        "content": ": "
+                    }
+                ]
+            },
+            "bbox": [
+                169,
+                250,
+                823,
+                279
+            ]
+        },
+        {
+            "type": "equation_interline",
+            "content": {
+                "math_content": "\\begin{array}{l} \\frac {d \\mathcal {L} _ {\\text {t o t a l}}}{d H} = \\frac {d}{d H} \\left[ \\alpha (H - H _ {\\text {p r e f}}) ^ {2} \\right] + \\frac {d}{d H} [ \\lambda \\sigma (z (H)) ] (8) \\\\ = 2 \\alpha \\left(H - H _ {\\text {p r e f}}\\right) + \\lambda \\sigma^ {\\prime} (z) \\cdot \\frac {d z}{d H} (9) \\\\ = 2 \\alpha \\left(H - H _ {\\text {p r e f}}\\right) + \\lambda a \\sigma (z) (1 - \\sigma (z)). (10) \\\\ \\end{array}",
+                "math_type": "latex",
+                "image_source": {
+                    "path": "images/f24a3897c0432d73bb782ac97d51a82ee046572d5a8bd9ee75c1e71a932f3fc1.jpg"
+                }
+            },
+            "bbox": [
+                328,
+                282,
+                825,
+                362
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "Second derivative. We differentiate again to obtain the second derivative: "
+                    }
+                ]
+            },
+            "bbox": [
+                169,
+                372,
+                671,
+                387
+            ]
+        },
+        {
+            "type": "equation_interline",
+            "content": {
+                "math_content": "\\begin{array}{l} \\frac {d ^ {2} \\mathcal {L} _ {\\text {t o t a l}}}{d H ^ {2}} = \\frac {d}{d H} [ 2 \\alpha (H - H _ {\\text {p r e f}}) ] + \\frac {d}{d H} [ \\lambda a \\sigma (z) (1 - \\sigma (z)) ] (11) \\\\ = 2 \\alpha + \\lambda a \\cdot \\frac {d}{d H} [ \\sigma (z) (1 - \\sigma (z)) ]. (12) \\\\ \\end{array}",
+                "math_type": "latex",
+                "image_source": {
+                    "path": "images/8b169d35f5aa2a95da67972d8b62f719c31709a21490ddfde7e5f14be9f1a86e.jpg"
+                }
+            },
+            "bbox": [
+                300,
+                391,
+                825,
+                454
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "We compute the derivative of "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "\\sigma ( z ) ( 1 - \\sigma ( z ) )"
+                    },
+                    {
+                        "type": "text",
+                        "content": "with respect to "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "H"
+                    },
+                    {
+                        "type": "text",
+                        "content": ". Let "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "u = \\sigma ( z )"
+                    },
+                    {
+                        "type": "text",
+                        "content": ". Then: "
+                    }
+                ]
+            },
+            "bbox": [
+                169,
+                464,
+                735,
+                479
+            ]
+        },
+        {
+            "type": "equation_interline",
+            "content": {
+                "math_content": "\\begin{array}{l} \\frac {d}{d H} [ u (1 - u) ] = \\frac {d u}{d H} (1 - u) + u \\frac {d (1 - u)}{d H} (13) \\\\ = \\frac {d u}{d H} (1 - u) - u \\frac {d u}{d H} (14) \\\\ = \\frac {d u}{d H} (1 - 2 u). (15) \\\\ \\end{array}",
+                "math_type": "latex",
+                "image_source": {
+                    "path": "images/85807be6f1cd2687de6fa3eee8f284f4f57fc526f72488f99c3f79d0f9a4e740.jpg"
+                }
+            },
+            "bbox": [
+                352,
+                484,
+                825,
+                575
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "Since "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "\\begin{array} { r } { \\frac { d u } { d H } = \\sigma ^ { \\prime } ( z ) \\cdot \\frac { d z } { d H } = a \\sigma ( z ) ( 1 - \\sigma ( z ) ) = a u ( 1 - u ) } \\end{array}"
+                    },
+                    {
+                        "type": "text",
+                        "content": ", we have: "
+                    }
+                ]
+            },
+            "bbox": [
+                169,
+                587,
+                619,
+                606
+            ]
+        },
+        {
+            "type": "equation_interline",
+            "content": {
+                "math_content": "\\frac {d}{d H} [ u (1 - u) ] = a u (1 - u) (1 - 2 u). \\tag {16}",
+                "math_type": "latex",
+                "image_source": {
+                    "path": "images/17b62486fc6cb5f6018277ad4d66f5e39587b5393c02d0664c65ec06aa397656.jpg"
+                }
+            },
+            "bbox": [
+                372,
+                611,
+                825,
+                640
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "Substituting back: "
+                    }
+                ]
+            },
+            "bbox": [
+                171,
+                648,
+                294,
+                664
+            ]
+        },
+        {
+            "type": "equation_interline",
+            "content": {
+                "math_content": "\\begin{array}{l} \\frac {d ^ {2} \\mathcal {L} _ {\\text {t o t a l}}}{d H ^ {2}} = 2 \\alpha + \\lambda a \\cdot a \\sigma (z) (1 - \\sigma (z)) (1 - 2 \\sigma (z)) (17) \\\\ = 2 \\alpha + \\lambda a ^ {2} \\sigma (z) (1 - \\sigma (z)) (1 - 2 \\sigma (z)). (18) \\\\ \\end{array}",
+                "math_type": "latex",
+                "image_source": {
+                    "path": "images/a917cdefd42dfba2d3f5d560312251000824d2607401d7265a5f463d1f651a72.jpg"
+                }
+            },
+            "bbox": [
+                328,
+                669,
+                825,
+                719
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "Bounding the nonlinear term. We establish a bound on "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "| \\sigma ( z ) ( 1 - \\sigma ( z ) ) ( 1 - 2 \\sigma ( z ) ) |"
+                    }
+                ]
+            },
+            "bbox": [
+                169,
+                729,
+                756,
+                744
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "Let "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "u = \\sigma ( z ) \\in ( 0 , 1 )"
+                    },
+                    {
+                        "type": "text",
+                        "content": ". We seek to bound "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "| f ( u ) |"
+                    },
+                    {
+                        "type": "text",
+                        "content": "where "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "f ( u ) = u ( 1 - u ) ( 1 - 2 u )"
+                    },
+                    {
+                        "type": "text",
+                        "content": ". "
+                    }
+                ]
+            },
+            "bbox": [
+                169,
+                750,
+                712,
+                766
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "First, we note that "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "u ( 1 - u ) \\in ( 0 , 0 . 2 5 ]"
+                    },
+                    {
+                        "type": "text",
+                        "content": "for "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "u \\in ( 0 , 1 )"
+                    },
+                    {
+                        "type": "text",
+                        "content": ", with maximum at "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "u = 0 . 5"
+                    },
+                    {
+                        "type": "text",
+                        "content": ". "
+                    }
+                ]
+            },
+            "bbox": [
+                169,
+                771,
+                707,
+                786
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "Second, "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "| 1 - 2 u | \\in [ 0 , 1 ]"
+                    },
+                    {
+                        "type": "text",
+                        "content": "for "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "u \\in [ 0 , 1 ]"
+                    },
+                    {
+                        "type": "text",
+                        "content": ", with maximum at "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "u \\in \\{ 0 , 1 \\}"
+                    },
+                    {
+                        "type": "text",
+                        "content": ". "
+                    }
+                ]
+            },
+            "bbox": [
+                169,
+                791,
+                629,
+                806
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "To find the maximum of "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "| f ( u ) |"
+                    },
+                    {
+                        "type": "text",
+                        "content": ", we take the derivative and set it to zero: "
+                    }
+                ]
+            },
+            "bbox": [
+                169,
+                813,
+                645,
+                828
+            ]
+        },
+        {
+            "type": "equation_interline",
+            "content": {
+                "math_content": "\\begin{array}{l} f (u) = u (1 - u) (1 - 2 u) (19) \\\\ = (u - u ^ {2}) (1 - 2 u) (20) \\\\ = u - 2 u ^ {2} - u ^ {2} + 2 u ^ {3} (21) \\\\ = u - 3 u ^ {2} + 2 u ^ {3}. (22) \\\\ \\end{array}",
+                "math_type": "latex",
+                "image_source": {
+                    "path": "images/9e8a8b0660c8ce389675f660e3df60524be60ed43de3abd479364c404624bfeb.jpg"
+                }
+            },
+            "bbox": [
+                400,
+                832,
+                825,
+                907
+            ]
+        },
+        {
+            "type": "page_number",
+            "content": {
+                "page_number_content": [
+                    {
+                        "type": "text",
+                        "content": "14 "
+                    }
+                ]
+            },
+            "bbox": [
+                490,
+                935,
+                509,
+                946
+            ]
+        }
+    ],
+    [
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "Taking the derivative: "
+                    }
+                ]
+            },
+            "bbox": [
+                171,
+                90,
+                316,
+                104
+            ]
+        },
+        {
+            "type": "equation_interline",
+            "content": {
+                "math_content": "\\begin{array}{l} f ^ {\\prime} (u) = 1 - 6 u + 6 u ^ {2} (23) \\\\ = 6 u ^ {2} - 6 u + 1. (24) \\\\ \\end{array}",
+                "math_type": "latex",
+                "image_source": {
+                    "path": "images/eef11ce1f30da5124a48cb3c38c8b25efdfb92908c8e664c9d8b6db968b3a75b.jpg"
+                }
+            },
+            "bbox": [
+                419,
+                109,
+                825,
+                146
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "Setting "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "f ^ { \\prime } ( u ) = 0"
+                    },
+                    {
+                        "type": "text",
+                        "content": "and solving via the quadratic formula: "
+                    }
+                ]
+            },
+            "bbox": [
+                171,
+                159,
+                545,
+                175
+            ]
+        },
+        {
+            "type": "equation_interline",
+            "content": {
+                "math_content": "u = \\frac {6 \\pm \\sqrt {3 6 - 2 4}}{1 2} = \\frac {6 \\pm \\sqrt {1 2}}{1 2} = \\frac {1}{2} \\pm \\frac {\\sqrt {3}}{6}. \\tag {25}",
+                "math_type": "latex",
+                "image_source": {
+                    "path": "images/16495bf95247fbfe4daf6778913b3a06d4817dd41adf8c25a1113f109e404781.jpg"
+                }
+            },
+            "bbox": [
+                346,
+                181,
+                825,
+                213
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "This yields "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "\\textstyle u _ { 1 } = { \\frac { 1 } { 2 } } - { \\frac { \\sqrt { 3 } } { 6 } } \\approx 0 . 2 1 1"
+                    },
+                    {
+                        "type": "text",
+                        "content": "and "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "\\begin{array} { r } { u _ { 2 } = \\frac { 1 } { 2 } + \\frac { \\sqrt { 3 } } { 6 } \\approx 0 . 7 8 9 . } \\end{array}"
+                    }
+                ]
+            },
+            "bbox": [
+                169,
+                224,
+                584,
+                246
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "Evaluating at "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "u _ { 1 }"
+                    }
+                ]
+            },
+            "bbox": [
+                171,
+                250,
+                287,
+                263
+            ]
+        },
+        {
+            "type": "equation_interline",
+            "content": {
+                "math_content": "f \\left(u _ {1}\\right) = u _ {1} \\left(1 - u _ {1}\\right) \\left(1 - 2 u _ {1}\\right) \\tag {26}",
+                "math_type": "latex",
+                "image_source": {
+                    "path": "images/28c7b94965805b1a79c928eb6cc7faed0dd490796b7460106eafd633b3fc8c90.jpg"
+                }
+            },
+            "bbox": [
+                395,
+                270,
+                825,
+                286
+            ]
+        },
+        {
+            "type": "equation_interline",
+            "content": {
+                "math_content": "\\approx 0. 2 1 1 \\cdot 0. 7 8 9 \\cdot 0. 5 7 8 \\tag {27}",
+                "math_type": "latex",
+                "image_source": {
+                    "path": "images/675f89afa453b4a0e5436d29171a75daba38f40e4766a45c8df66e359256cca3.jpg"
+                }
+            },
+            "bbox": [
+                439,
+                287,
+                825,
+                303
+            ]
+        },
+        {
+            "type": "equation_interline",
+            "content": {
+                "math_content": "\\approx 0. 0 9 6. \\tag {28}",
+                "math_type": "latex",
+                "image_source": {
+                    "path": "images/52d13185f8d71a308bbaa61db19fc7a52aa4fc006723cf08103356df5d55134d.jpg"
+                }
+            },
+            "bbox": [
+                439,
+                306,
+                825,
+                321
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "Evaluating at "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "u _ { 2 }"
+                    }
+                ]
+            },
+            "bbox": [
+                171,
+                334,
+                287,
+                349
+            ]
+        },
+        {
+            "type": "equation_interline",
+            "content": {
+                "math_content": "f \\left(u _ {2}\\right) = u _ {2} \\left(1 - u _ {2}\\right) \\left(1 - 2 u _ {2}\\right) \\tag {29}",
+                "math_type": "latex",
+                "image_source": {
+                    "path": "images/2789a543d8c6f5e843bda19c6a4dc31d53c359a77a743e9c72be128052de102d.jpg"
+                }
+            },
+            "bbox": [
+                383,
+                354,
+                825,
+                369
+            ]
+        },
+        {
+            "type": "equation_interline",
+            "content": {
+                "math_content": "\\approx 0. 7 8 9 \\cdot 0. 2 1 1 \\cdot (- 0. 5 7 8) \\tag {30}",
+                "math_type": "latex",
+                "image_source": {
+                    "path": "images/304794e86e39d525a9e3d5c4882f996b014f8e6de3ae3e735168d66677509b41.jpg"
+                }
+            },
+            "bbox": [
+                429,
+                372,
+                825,
+                387
+            ]
+        },
+        {
+            "type": "equation_interline",
+            "content": {
+                "math_content": "\\approx - 0. 0 9 6. \\tag {31}",
+                "math_type": "latex",
+                "image_source": {
+                    "path": "images/6680caf72791723764936baa03a662b9f55b9f2fdea42e9e317909f593de403b.jpg"
+                }
+            },
+            "bbox": [
+                429,
+                390,
+                825,
+                404
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "Therefore, "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "\\begin{array} { r } { | f ( u ) | \\le \\frac { 1 } { 6 \\sqrt { 3 } } \\approx 0 . 0 9 6 < 0 . 2 5 } \\end{array}"
+                    },
+                    {
+                        "type": "text",
+                        "content": "for all "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "u \\in ( 0 , 1 )"
+                    }
+                ]
+            },
+            "bbox": [
+                169,
+                419,
+                565,
+                439
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "For a simpler (though looser) bound sufficient for our purposes, we use: "
+                    }
+                ]
+            },
+            "bbox": [
+                169,
+                444,
+                645,
+                458
+            ]
+        },
+        {
+            "type": "equation_interline",
+            "content": {
+                "math_content": "| u (1 - u) (1 - 2 u) | \\leq u (1 - u) \\cdot | 1 - 2 u | \\leq 0. 2 5 \\cdot 1 = 0. 2 5. \\tag {32}",
+                "math_type": "latex",
+                "image_source": {
+                    "path": "images/2365fe535b4cb3083c7e1e78716c6021a48be7ebc1f6b0a965303e7cc2a3176e.jpg"
+                }
+            },
+            "bbox": [
+                295,
+                464,
+                825,
+                479
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "Establishing strict convexity. Using the bound "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "| \\sigma ( z ) ( 1 - \\sigma ( z ) ) ( 1 - 2 \\sigma ( z ) ) | \\le 0 . 2 5 "
+                    },
+                    {
+                        "type": "text",
+                        "content": ", we have: "
+                    }
+                ]
+            },
+            "bbox": [
+                169,
+                491,
+                810,
+                508
+            ]
+        },
+        {
+            "type": "equation_interline",
+            "content": {
+                "math_content": "\\frac {d ^ {2} \\mathcal {L} _ {\\text {t o t a l}}}{d H ^ {2}} \\geq 2 \\alpha - \\lambda a ^ {2} \\cdot 0. 2 5 = 2 \\alpha - \\frac {\\lambda a ^ {2}}{4}. \\tag {33}",
+                "math_type": "latex",
+                "image_source": {
+                    "path": "images/70bfe215b418cf20493841d553748c25d957ce360a115850b8e37826092c8d80.jpg"
+                }
+            },
+            "bbox": [
+                359,
+                513,
+                825,
+                544
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "For the second derivative to be strictly positive for all "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "H"
+                    },
+                    {
+                        "type": "text",
+                        "content": ", we require: "
+                    }
+                ]
+            },
+            "bbox": [
+                169,
+                555,
+                625,
+                570
+            ]
+        },
+        {
+            "type": "equation_interline",
+            "content": {
+                "math_content": "2 \\alpha - \\frac {\\lambda a ^ {2}}{4} > 0 \\quad \\Leftrightarrow \\quad \\alpha > \\frac {\\lambda a ^ {2}}{8}. \\tag {34}",
+                "math_type": "latex",
+                "image_source": {
+                    "path": "images/bad0615fc243d61dc6e8aafb954e838d0b028813fce1ee1da8a65b5419854d36.jpg"
+                }
+            },
+            "bbox": [
+                383,
+                575,
+                825,
+                607
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "Conclusions. Under the condition "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "\\alpha > \\lambda a ^ { 2 } / 8"
+                    },
+                    {
+                        "type": "text",
+                        "content": ": "
+                    }
+                ]
+            },
+            "bbox": [
+                169,
+                619,
+                493,
+                633
+            ]
+        },
+        {
+            "type": "list",
+            "content": {
+                "list_type": "text_list",
+                "list_items": [
+                    {
+                        "item_type": "text",
+                        "item_content": [
+                            {
+                                "type": "text",
+                                "content": "1. Strict convexity: Since "
+                            },
+                            {
+                                "type": "equation_inline",
+                                "content": "\\frac { d ^ { 2 } { \\mathcal { L } } _ { \\mathrm { t o t a l } } } { d H ^ { 2 } } > 0"
+                            },
+                            {
+                                "type": "text",
+                                "content": "for all "
+                            },
+                            {
+                                "type": "equation_inline",
+                                "content": "H \\in \\mathbb { R }"
+                            },
+                            {
+                                "type": "text",
+                                "content": ", the function "
+                            },
+                            {
+                                "type": "equation_inline",
+                                "content": "\\mathcal { L } _ { \\mathrm { t o t a l } }"
+                            },
+                            {
+                                "type": "text",
+                                "content": "is strictly convex in "
+                            },
+                            {
+                                "type": "equation_inline",
+                                "content": "H"
+                            },
+                            {
+                                "type": "text",
+                                "content": ". "
+                            }
+                        ]
+                    },
+                    {
+                        "item_type": "text",
+                        "item_content": [
+                            {
+                                "type": "text",
+                                "content": "2. Unique minimizer: A strictly convex function on "
+                            },
+                            {
+                                "type": "equation_inline",
+                                "content": "\\mathbb { R }"
+                            },
+                            {
+                                "type": "text",
+                                "content": "has at most one critical point, which must be a global minimum. Since "
+                            },
+                            {
+                                "type": "equation_inline",
+                                "content": "{ \\mathcal { L } } _ { \\mathrm { t o t a l } } ( H ) \\to \\infty"
+                            },
+                            {
+                                "type": "text",
+                                "content": "as "
+                            },
+                            {
+                                "type": "equation_inline",
+                                "content": "H  \\pm \\infty"
+                            },
+                            {
+                                "type": "text",
+                                "content": "(the quadratic term dominates), a global minimum exists and is unique. "
+                            }
+                        ]
+                    },
+                    {
+                        "item_type": "text",
+                        "item_content": [
+                            {
+                                "type": "text",
+                                "content": "3. Gradient descent convergence: For strictly convex functions with Lipschitz continuous gradients, gradient descent with appropriate step size converges to the unique global minimum from any initialization. "
+                            }
+                        ]
+                    }
+                ]
+            },
+            "bbox": [
+                207,
+                647,
+                826,
+                756
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "This completes the proof. "
+                    }
+                ]
+            },
+            "bbox": [
+                171,
+                767,
+                341,
+                782
+            ]
+        },
+        {
+            "type": "title",
+            "content": {
+                "title_content": [
+                    {
+                        "type": "text",
+                        "content": "B Hallucination Taxonomy "
+                    }
+                ],
+                "level": 1
+            },
+            "bbox": [
+                169,
+                801,
+                416,
+                819
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "We categorize hallucinations in our dataset into four types, with approximate frequencies: "
+                    }
+                ]
+            },
+            "bbox": [
+                169,
+                832,
+                759,
+                848
+            ]
+        },
+        {
+            "type": "title",
+            "content": {
+                "title_content": [
+                    {
+                        "type": "text",
+                        "content": "C Computational Cost "
+                    }
+                ],
+                "level": 1
+            },
+            "bbox": [
+                169,
+                864,
+                380,
+                883
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "We report the API cost breakdown for ECLIPSE feature extraction: "
+                    }
+                ]
+            },
+            "bbox": [
+                169,
+                896,
+                614,
+                912
+            ]
+        },
+        {
+            "type": "page_number",
+            "content": {
+                "page_number_content": [
+                    {
+                        "type": "text",
+                        "content": "15 "
+                    }
+                ]
+            },
+            "bbox": [
+                490,
+                935,
+                508,
+                946
+            ]
+        }
+    ],
+    [
+        {
+            "type": "table",
+            "content": {
+                "image_source": {
+                    "path": "images/088d8227ecb7ca6c8b3d6d64e2b3517022487bf58a6c559bf164bc0e0e593123.jpg"
+                },
+                "table_caption": [
+                    {
+                        "type": "text",
+                        "content": "Table 7: Hallucination types in our financial QA dataset. "
+                    }
+                ],
+                "table_footnote": [],
+                "html": "<table><tr><td>Type</td><td>Example</td><td>Frequency</td></tr><tr><td>Wrong number</td><td>Evidence states revenue of $81.8B; answer claims $94.2B</td><td>35%</td></tr><tr><td>Entity swap</td><td>Evidence discusses Satya Nadella; answer attributes to Sundar Pichai</td><td>25%</td></tr><tr><td>Contradiction</td><td>Evidence states “revenue decreased”; answer claims “revenue increased”</td><td>25%</td></tr><tr><td>Fabrication</td><td>Answer includes acquisition or metric not mentioned in evidence</td><td>15%</td></tr></table>",
+                "table_type": "simple_table",
+                "table_nest_level": 1
+            },
+            "bbox": [
+                228,
+                88,
+                771,
+                218
+            ]
+        },
+        {
+            "type": "table",
+            "content": {
+                "image_source": {
+                    "path": "images/cb881e866de1c72361bdff2cdd4bede2c6d67473ae1aebccc2bc97579da9ab40.jpg"
+                },
+                "table_caption": [
+                    {
+                        "type": "text",
+                        "content": "Table 8: API calls required per example. At approximately "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "\\overline { { \\$ 0.002 } }"
+                    },
+                    {
+                        "type": "text",
+                        "content": "per 1K tokens (GPT-3.5-turbo), total cost is roughly "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "\\$ 0.01"
+                    },
+                    {
+                        "type": "text",
+                        "content": "per example for feature extraction. "
+                    }
+                ],
+                "table_footnote": [],
+                "html": "<table><tr><td>Component</td><td>API Calls per Example</td></tr><tr><td>Semantic entropy (K=10 samples)</td><td>10</td></tr><tr><td>LQ scoring (no evidence)</td><td>1</td></tr><tr><td>LQE scoring (with evidence)</td><td>1</td></tr><tr><td>Total</td><td>12</td></tr></table>",
+                "table_type": "simple_table",
+                "table_nest_level": 1
+            },
+            "bbox": [
+                277,
+                253,
+                720,
+                344
+            ]
+        },
+        {
+            "type": "title",
+            "content": {
+                "title_content": [
+                    {
+                        "type": "text",
+                        "content": "D Hyperparameter Settings "
+                    }
+                ],
+                "level": 1
+            },
+            "bbox": [
+                171,
+                405,
+                421,
+                424
+            ]
+        },
+        {
+            "type": "title",
+            "content": {
+                "title_content": [
+                    {
+                        "type": "text",
+                        "content": "E Semantic Clustering Algorithm "
+                    }
+                ],
+                "level": 1
+            },
+            "bbox": [
+                171,
+                438,
+                472,
+                455
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "We provide a detailed specification of the semantic clustering procedure used to compute entropy "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "\\hat { H }"
+                    },
+                    {
+                        "type": "text",
+                        "content": ". "
+                    }
+                ]
+            },
+            "bbox": [
+                169,
+                470,
+                826,
+                488
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "Step 1: Fact extraction. For each generated answer "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "A _ { i }"
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "( i = 1 , \\ldots , K )"
+                    },
+                    {
+                        "type": "text",
+                        "content": ": "
+                    }
+                ]
+            },
+            "bbox": [
+                169,
+                500,
+                656,
+                516
+            ]
+        },
+        {
+            "type": "list",
+            "content": {
+                "list_type": "text_list",
+                "list_items": [
+                    {
+                        "item_type": "text",
+                        "item_content": [
+                            {
+                                "type": "text",
+                                "content": "1. Extract named entities (companies, people, locations) using spaCy v3.5 NER. "
+                            }
+                        ]
+                    },
+                    {
+                        "item_type": "text",
+                        "item_content": [
+                            {
+                                "type": "text",
+                                "content": "2. Identify numeric values and their associated units via regex patterns. "
+                            }
+                        ]
+                    },
+                    {
+                        "item_type": "text",
+                        "item_content": [
+                            {
+                                "type": "text",
+                                "content": "3. Extract (entity, attribute, value) triples. For example, from “Microsoft’s revenue increased to "
+                            },
+                            {
+                                "type": "equation_inline",
+                                "content": "\\$ 2118"
+                            },
+                            {
+                                "type": "text",
+                                "content": ",” we extract: (Microsoft, revenue, 211B). "
+                            }
+                        ]
+                    },
+                    {
+                        "item_type": "text",
+                        "item_content": [
+                            {
+                                "type": "text",
+                                "content": "4. Normalize numeric values to three significant figures. "
+                            }
+                        ]
+                    },
+                    {
+                        "item_type": "text",
+                        "item_content": [
+                            {
+                                "type": "text",
+                                "content": "5. Identify directional claims (increased, decreased, stable) via keyword matching. "
+                            }
+                        ]
+                    }
+                ]
+            },
+            "bbox": [
+                210,
+                525,
+                823,
+                630
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "Step 2: Cluster assignment. We assign answers "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "A _ { i }"
+                    },
+                    {
+                        "type": "text",
+                        "content": "and "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "A _ { j }"
+                    },
+                    {
+                        "type": "text",
+                        "content": "to the same cluster "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "C _ { k }"
+                    },
+                    {
+                        "type": "text",
+                        "content": "if: "
+                    }
+                ]
+            },
+            "bbox": [
+                169,
+                643,
+                746,
+                659
+            ]
+        },
+        {
+            "type": "list",
+            "content": {
+                "list_type": "text_list",
+                "list_items": [
+                    {
+                        "item_type": "text",
+                        "item_content": [
+                            {
+                                "type": "text",
+                                "content": "1. Entity sets overlap by "
+                            },
+                            {
+                                "type": "equation_inline",
+                                "content": "\\geq 5 0 \\%"
+                            },
+                            {
+                                "type": "text",
+                                "content": "(Jaccard similarity). "
+                            }
+                        ]
+                    },
+                    {
+                        "item_type": "text",
+                        "item_content": [
+                            {
+                                "type": "text",
+                                "content": "2. All numeric values match within "
+                            },
+                            {
+                                "type": "equation_inline",
+                                "content": "1 \\%"
+                            },
+                            {
+                                "type": "text",
+                                "content": "relative error. "
+                            }
+                        ]
+                    },
+                    {
+                        "item_type": "text",
+                        "item_content": [
+                            {
+                                "type": "text",
+                                "content": "3. Directional claims are consistent (both say “increased” or both say “decreased”). "
+                            }
+                        ]
+                    }
+                ]
+            },
+            "bbox": [
+                210,
+                667,
+                759,
+                720
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "Step 3: Entropy computation. Given clusters "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "\\{ C _ { 1 } , \\ldots , C _ { m } \\}"
+                    },
+                    {
+                        "type": "text",
+                        "content": ", we compute empirical probabilities "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "p _ { j } = | C _ { j } | / K"
+                    },
+                    {
+                        "type": "text",
+                        "content": "and semantic entropy: "
+                    }
+                ]
+            },
+            "bbox": [
+                169,
+                734,
+                823,
+                765
+            ]
+        },
+        {
+            "type": "equation_interline",
+            "content": {
+                "math_content": "\\hat {H} = - \\sum_ {j = 1} ^ {m} p _ {j} \\log p _ {j}. \\tag {35}",
+                "math_type": "latex",
+                "image_source": {
+                    "path": "images/bdd7d95bed49591964ceda8999d21847f3aef194dd13b68c58fbc2c203eacdc0.jpg"
+                }
+            },
+            "bbox": [
+                424,
+                771,
+                825,
+                813
+            ]
+        },
+        {
+            "type": "title",
+            "content": {
+                "title_content": [
+                    {
+                        "type": "text",
+                        "content": "Edge cases. "
+                    }
+                ],
+                "level": 1
+            },
+            "bbox": [
+                171,
+                825,
+                256,
+                840
+            ]
+        },
+        {
+            "type": "list",
+            "content": {
+                "list_type": "text_list",
+                "list_items": [
+                    {
+                        "item_type": "text",
+                        "item_content": [
+                            {
+                                "type": "text",
+                                "content": "• If an answer contains multiple conflicting facts, we split it into sub-answers and assign each to the appropriate cluster. "
+                            }
+                        ]
+                    },
+                    {
+                        "item_type": "text",
+                        "item_content": [
+                            {
+                                "type": "text",
+                                "content": "• If no numeric or entity facts are extracted (rare for financial QA), we fall back to exact string matching with case normalization. "
+                            }
+                        ]
+                    }
+                ]
+            },
+            "bbox": [
+                215,
+                849,
+                823,
+                912
+            ]
+        },
+        {
+            "type": "page_number",
+            "content": {
+                "page_number_content": [
+                    {
+                        "type": "text",
+                        "content": "16 "
+                    }
+                ]
+            },
+            "bbox": [
+                490,
+                935,
+                509,
+                946
+            ]
+        }
+    ],
+    [
+        {
+            "type": "table",
+            "content": {
+                "image_source": {
+                    "path": "images/df14bbdd81152c1022f94a2be7a1b8cf7c3ad4e11441b09c19007d9f07794ed7.jpg"
+                },
+                "table_caption": [],
+                "table_footnote": [
+                    {
+                        "type": "text",
+                        "content": "Table 9: Hyperparameter settings used in experiments. "
+                    }
+                ],
+                "html": "<table><tr><td>Parameter</td><td>Value</td></tr><tr><td>Number of samples K</td><td>10</td></tr><tr><td>Temperature for sampling</td><td>0.7</td></tr><tr><td>Numeric tolerance for clustering</td><td>1% relative error</td></tr><tr><td>Logistic regression regularization C</td><td>1.0</td></tr><tr><td>Class weight balancing</td><td>Enabled</td></tr><tr><td>Cross-validation folds</td><td>5</td></tr></table>",
+                "table_type": "simple_table",
+                "table_nest_level": 1
+            },
+            "bbox": [
+                305,
+                89,
+                692,
+                200
+            ]
+        },
+        {
+            "type": "title",
+            "content": {
+                "title_content": [
+                    {
+                        "type": "text",
+                        "content": "F Logistic Regression Details "
+                    }
+                ],
+                "level": 1
+            },
+            "bbox": [
+                169,
+                248,
+                433,
+                265
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "We fit the calibrated hallucination model using scikit-learn 1.3.0 with the following settings: "
+                    }
+                ]
+            },
+            "bbox": [
+                169,
+                279,
+                777,
+                295
+            ]
+        },
+        {
+            "type": "list",
+            "content": {
+                "list_type": "text_list",
+                "list_items": [
+                    {
+                        "item_type": "text",
+                        "item_content": [
+                            {
+                                "type": "text",
+                                "content": "• Solver: lbfgs (limited-memory BFGS) "
+                            }
+                        ]
+                    },
+                    {
+                        "item_type": "text",
+                        "item_content": [
+                            {
+                                "type": "text",
+                                "content": "• Regularization: "
+                            },
+                            {
+                                "type": "equation_inline",
+                                "content": "\\ell _ { 2 }"
+                            },
+                            {
+                                "type": "text",
+                                "content": "penalty with "
+                            },
+                            {
+                                "type": "equation_inline",
+                                "content": "C = 1 . 0"
+                            }
+                        ]
+                    },
+                    {
+                        "item_type": "text",
+                        "item_content": [
+                            {
+                                "type": "text",
+                                "content": "• Class weights: Balanced (inversely proportional to class frequencies) "
+                            }
+                        ]
+                    },
+                    {
+                        "item_type": "text",
+                        "item_content": [
+                            {
+                                "type": "text",
+                                "content": "• Maximum iterations: 1000 "
+                            }
+                        ]
+                    },
+                    {
+                        "item_type": "text",
+                        "item_content": [
+                            {
+                                "type": "text",
+                                "content": "• Feature scaling: StandardScaler (zero mean, unit variance) applied before regression "
+                            }
+                        ]
+                    }
+                ]
+            },
+            "bbox": [
+                215,
+                305,
+                790,
+                393
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "The "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "w _ { \\mathrm { c o n s } }"
+                    },
+                    {
+                        "type": "text",
+                        "content": "term in Eq. (4) is computed as: "
+                    }
+                ]
+            },
+            "bbox": [
+                169,
+                406,
+                444,
+                421
+            ]
+        },
+        {
+            "type": "equation_interline",
+            "content": {
+                "math_content": "w _ {\\text {c o n s}} = \\left\\{ \\begin{array}{l l} 1. 0 & \\text {i f n o f a c t s i n A ^ {*} c o n t r a d i c t E} \\\\ 0. 5 & \\text {i f s o m e f a c t s c o n t r a d i c t E} \\\\ 0. 0 & \\text {i f a l l f a c t s c o n t r a d i c t E} \\end{array} \\right. \\tag {36}",
+                "math_type": "latex",
+                "image_source": {
+                    "path": "images/3f9e39d6b8bdebdd50ba2e0493bf5ff6a78c44a935cc5a1e79ad0b939ab52647.jpg"
+                }
+            },
+            "bbox": [
+                344,
+                429,
+                825,
+                478
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "Contradiction detection uses the same fact extraction pipeline: we check whether extracted triples from "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "A ^ { * }"
+                    },
+                    {
+                        "type": "text",
+                        "content": "directly conflict with triples from "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "E"
+                    },
+                    {
+                        "type": "text",
+                        "content": "(e.g., opposite directional claims about the same entity-attribute pair). "
+                    }
+                ]
+            },
+            "bbox": [
+                169,
+                487,
+                823,
+                529
+            ]
+        },
+        {
+            "type": "page_number",
+            "content": {
+                "page_number_content": [
+                    {
+                        "type": "text",
+                        "content": "17 "
+                    }
+                ]
+            },
+            "bbox": [
+                490,
+                935,
+                508,
+                946
+            ]
+        }
+    ]
+]

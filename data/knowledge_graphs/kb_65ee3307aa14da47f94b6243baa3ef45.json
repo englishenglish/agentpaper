@@ -1,0 +1,1327 @@
+{
+  "db_id": "kb_65ee3307aa14da47f94b6243baa3ef45",
+  "nodes": {
+    "paper:physics 0004033v1": {
+      "id": "paper:physics 0004033v1",
+      "type": "Paper",
+      "label": "Efficiency of neutron detection of superheated drops of Freon-22",
+      "norm_label": "efficiency of neutron detection of superheated drops of freon-22"
+    },
+    "method:体积法": {
+      "id": "method:体积法",
+      "type": "Method",
+      "label": "体积法",
+      "norm_label": "体积法"
+    },
+    "task:尽管freon-22的沸点低于许多其他类似的液体，且预期其对中子更敏感，但尚未有关于freon-22的中子检测效率的报告。": {
+      "id": "task:尽管freon-22的沸点低于许多其他类似的液体，且预期其对中子更敏感，但尚未有关于freon-22的中子检测效率的报告。",
+      "type": "Task",
+      "label": "尽管Freon-22的沸点低于许多其他类似的液体，且预期其对中子更敏感，但尚未有关于Freon-22的中子检测效率的报告。",
+      "norm_label": "尽管freon-22的沸点低于许多其他类似的液体，且预期其对中子更敏感，但尚未有关于freon-22的中子检测效率的报告。"
+    },
+    "metric:效率": {
+      "id": "metric:效率",
+      "type": "Metric",
+      "label": "效率",
+      "norm_label": "效率"
+    },
+    "contribution:首次评估了freon-22作为超热液体对中子检测的敏感性。": {
+      "id": "contribution:首次评估了freon-22作为超热液体对中子检测的敏感性。",
+      "type": "Contribution",
+      "label": "首次评估了Freon-22作为超热液体对中子检测的敏感性。",
+      "norm_label": "首次评估了freon-22作为超热液体对中子检测的敏感性。"
+    },
+    "contribution:确定了freon-22在am-be中子源下的中子检测效率。": {
+      "id": "contribution:确定了freon-22在am-be中子源下的中子检测效率。",
+      "type": "Contribution",
+      "label": "确定了Freon-22在Am-Be中子源下的中子检测效率。",
+      "norm_label": "确定了freon-22在am-be中子源下的中子检测效率。"
+    },
+    "contribution:比较了freon-12和freon-22的超热液滴的寿命和中子检测效率。": {
+      "id": "contribution:比较了freon-12和freon-22的超热液滴的寿命和中子检测效率。",
+      "type": "Contribution",
+      "label": "比较了Freon-12和Freon-22的超热液滴的寿命和中子检测效率。",
+      "norm_label": "比较了freon-12和freon-22的超热液滴的寿命和中子检测效率。"
+    },
+    "paper:2206.04564v6": {
+      "id": "paper:2206.04564v6",
+      "type": "Paper",
+      "label": "TwiBot-22: Towards Graph-Based Twitter Bot Detection",
+      "norm_label": "twibot-22 towards graph-based twitter bot detection"
+    },
+    "task:尽管现有的twitter bot检测数据集规模较小且结构不完整，但该任务旨在加强twitter bot检测领域的研究进展。": {
+      "id": "task:尽管现有的twitter bot检测数据集规模较小且结构不完整，但该任务旨在加强twitter bot检测领域的研究进展。",
+      "type": "Task",
+      "label": "尽管现有的Twitter bot检测数据集规模较小且结构不完整，但该任务旨在加强Twitter bot检测领域的研究进展。",
+      "norm_label": "尽管现有的twitter bot检测数据集规模较小且结构不完整，但该任务旨在加强twitter bot检测领域的研究进展。"
+    },
+    "dataset:twibot-22": {
+      "id": "dataset:twibot-22",
+      "type": "Dataset",
+      "label": "TwiBot-22",
+      "norm_label": "twibot-22"
+    },
+    "contribution:提出了twibot-22，这是迄今为止最大的基于图的twitter bot检测基准。": {
+      "id": "contribution:提出了twibot-22，这是迄今为止最大的基于图的twitter bot检测基准。",
+      "type": "Contribution",
+      "label": "提出了TwiBot-22，这是迄今为止最大的基于图的Twitter bot检测基准。",
+      "norm_label": "提出了twibot-22，这是迄今为止最大的基于图的twitter bot检测基准。"
+    },
+    "contribution:为twitter网络提供了各种实体和关系。": {
+      "id": "contribution:为twitter网络提供了各种实体和关系。",
+      "type": "Contribution",
+      "label": "为Twitter网络提供了各种实体和关系。",
+      "norm_label": "为twitter网络提供了各种实体和关系。"
+    },
+    "contribution:质量比现有数据集更高。": {
+      "id": "contribution:质量比现有数据集更高。",
+      "type": "Contribution",
+      "label": "质量比现有数据集更高。",
+      "norm_label": "质量比现有数据集更高。"
+    },
+    "contribution:重实现了35个代表性的twitter bot检测基线并在9个数据集上进行了评估，以促进公平比较和研究理解。": {
+      "id": "contribution:重实现了35个代表性的twitter bot检测基线并在9个数据集上进行了评估，以促进公平比较和研究理解。",
+      "type": "Contribution",
+      "label": "重实现了35个代表性的Twitter bot检测基线并在9个数据集上进行了评估，以促进公平比较和研究理解。",
+      "norm_label": "重实现了35个代表性的twitter bot检测基线并在9个数据集上进行了评估，以促进公平比较和研究理解。"
+    },
+    "paper:astro-ph 0312404v1": {
+      "id": "paper:astro-ph 0312404v1",
+      "type": "Paper",
+      "label": "Reevaluation of the $^{22}$Na(p,$γ$) reaction rate: Implications for the detection of $^{22}$Na gamma rays from novae",
+      "norm_label": "reevaluation of the 22 na p γ reaction rate implications for the detection of 22 na gamma rays from novae"
+    },
+    "method:粒子束缚态的生成和放射性衰变分支的研究": {
+      "id": "method:粒子束缚态的生成和放射性衰变分支的研究",
+      "type": "Method",
+      "label": "粒子束缚态的生成和放射性衰变分支的研究",
+      "norm_label": "粒子束缚态的生成和放射性衰变分支的研究"
+    },
+    "task:尽管了解22na的生成和破坏过程对于诊断经典nova爆发很重要，但传统研究方法受放射性靶材的复杂性限制，本研究旨在通过研究粒子束缚态的方法重新评估22na p γ 反应速率，以影响对该事件的最大可探测": {
+      "id": "task:尽管了解22na的生成和破坏过程对于诊断经典nova爆发很重要，但传统研究方法受放射性靶材的复杂性限制，本研究旨在通过研究粒子束缚态的方法重新评估22na p γ 反应速率，以影响对该事件的最大可探测",
+      "type": "Task",
+      "label": "尽管了解22Na的生成和破坏过程对于诊断经典Nova爆发很重要，但传统研究方法受放射性靶材的复杂性限制，本研究旨在通过研究粒子束缚态的方法重新评估22Na(p,γ)反应速率，以影响对该事件的最大可探测",
+      "norm_label": "尽管了解22na的生成和破坏过程对于诊断经典nova爆发很重要，但传统研究方法受放射性靶材的复杂性限制，本研究旨在通过研究粒子束缚态的方法重新评估22na p γ 反应速率，以影响对该事件的最大可探测"
+    },
+    "contribution:改进了22na p γ 反应速率的评价": {
+      "id": "contribution:改进了22na p γ 反应速率的评价",
+      "type": "Contribution",
+      "label": "改进了22Na(p,γ)反应速率的评价",
+      "norm_label": "改进了22na p γ 反应速率的评价"
+    },
+    "contribution:提出了新的上限来减少最低温度的不确定性": {
+      "id": "contribution:提出了新的上限来减少最低温度的不确定性",
+      "type": "Contribution",
+      "label": "提出了新的上限来减少最低温度的不确定性",
+      "norm_label": "提出了新的上限来减少最低温度的不确定性"
+    },
+    "contribution:新确定的能级状态（如7623和7647 kev状态的固定性质）": {
+      "id": "contribution:新确定的能级状态（如7623和7647 kev状态的固定性质）",
+      "type": "Contribution",
+      "label": "新确定的能级状态（如7623和7647 keV状态的固定性质）",
+      "norm_label": "新确定的能级状态（如7623和7647 kev状态的固定性质）"
+    },
+    "contribution:提出了一种可应用于类似反应率确定的新方法": {
+      "id": "contribution:提出了一种可应用于类似反应率确定的新方法",
+      "type": "Contribution",
+      "label": "提出了一种可应用于类似反应率确定的新方法",
+      "norm_label": "提出了一种可应用于类似反应率确定的新方法"
+    },
+    "paper:2206.08029v1": {
+      "id": "paper:2206.08029v1",
+      "type": "Paper",
+      "label": "DIALOG-22 RuATD Generated Text Detection",
+      "norm_label": "dialog-22 ruatd generated text detection"
+    },
+    "method:ensemble method of different pre-trained models based on attention mechanism": {
+      "id": "method:ensemble method of different pre-trained models based on attention mechanism",
+      "type": "Method",
+      "label": "ensemble method of different pre-trained models based on attention mechanism",
+      "norm_label": "ensemble method of different pre-trained models based on attention mechanism"
+    },
+    "task:鉴于语言神经网生成文本的能力日益增强，鉴别人类写作和自动生成文本变得越来越困难，因此需要构建自动检测生成文本的系统。": {
+      "id": "task:鉴于语言神经网生成文本的能力日益增强，鉴别人类写作和自动生成文本变得越来越困难，因此需要构建自动检测生成文本的系统。",
+      "type": "Task",
+      "label": "鉴于语言神经网生成文本的能力日益增强，鉴别人类写作和自动生成文本变得越来越困难，因此需要构建自动检测生成文本的系统。",
+      "norm_label": "鉴于语言神经网生成文本的能力日益增强，鉴别人类写作和自动生成文本变得越来越困难，因此需要构建自动检测生成文本的系统。"
+    },
+    "dataset:ruatd train set automatic annotation by generative models": {
+      "id": "dataset:ruatd train set automatic annotation by generative models",
+      "type": "Dataset",
+      "label": "RuATD train set (automatic annotation by generative models)",
+      "norm_label": "ruatd train set automatic annotation by generative models"
+    },
+    "metric:accuracy": {
+      "id": "metric:accuracy",
+      "type": "Metric",
+      "label": "Accuracy",
+      "norm_label": "accuracy"
+    },
+    "contribution:实现二分类任务中使用集成模型获得最好准确率。": {
+      "id": "contribution:实现二分类任务中使用集成模型获得最好准确率。",
+      "type": "Contribution",
+      "label": "实现二分类任务中使用集成模型获得最好准确率。",
+      "norm_label": "实现二分类任务中使用集成模型获得最好准确率。"
+    },
+    "contribution:在多分类任务中，单个模型中使用最佳准确率的模型。": {
+      "id": "contribution:在多分类任务中，单个模型中使用最佳准确率的模型。",
+      "type": "Contribution",
+      "label": "在多分类任务中，单个模型中使用最佳准确率的模型。",
+      "norm_label": "在多分类任务中，单个模型中使用最佳准确率的模型。"
+    },
+    "contribution:提出了基于注意力机制的不同预训练模型的集成方法。": {
+      "id": "contribution:提出了基于注意力机制的不同预训练模型的集成方法。",
+      "type": "Contribution",
+      "label": "提出了基于注意力机制的不同预训练模型的集成方法。",
+      "norm_label": "提出了基于注意力机制的不同预训练模型的集成方法。"
+    },
+    "paper:1712.03746v1": {
+      "id": "paper:1712.03746v1",
+      "type": "Paper",
+      "label": "Simultaneous, Multi-Wavelength Variability Characterization of the Free-Floating Planetary Mass Object PSO J318.5-22",
+      "norm_label": "simultaneous multi-wavelength variability characterization of the free-floating planetary mass object pso j318.5-22"
+    },
+    "method:spitzer irac和hst wfc3同步观测": {
+      "id": "method:spitzer irac和hst wfc3同步观测",
+      "type": "Method",
+      "label": "Spitzer IRAC和HST WFC3同步观测",
+      "norm_label": "spitzer irac和hst wfc3同步观测"
+    },
+    "task:尽管pso j318.5-22是一个快速旋转的年轻天体，但其高幅度的多波段光变现象尚未得到充分解释。": {
+      "id": "task:尽管pso j318.5-22是一个快速旋转的年轻天体，但其高幅度的多波段光变现象尚未得到充分解释。",
+      "type": "Task",
+      "label": "尽管PSO J318.5-22是一个快速旋转的年轻天体，但其高幅度的多波段光变现象尚未得到充分解释。",
+      "norm_label": "尽管pso j318.5-22是一个快速旋转的年轻天体，但其高幅度的多波段光变现象尚未得到充分解释。"
+    },
+    "dataset:spectral observations from hubble space telescope wfc3": {
+      "id": "dataset:spectral observations from hubble space telescope wfc3",
+      "type": "Dataset",
+      "label": "Spectral observations from Hubble Space Telescope WFC3",
+      "norm_label": "spectral observations from hubble space telescope wfc3"
+    },
+    "dataset:infrared observations from spitzer space telescope irac": {
+      "id": "dataset:infrared observations from spitzer space telescope irac",
+      "type": "Dataset",
+      "label": "Infrared observations from Spitzer Space Telescope IRAC",
+      "norm_label": "infrared observations from spitzer space telescope irac"
+    },
+    "metric:amplitude": {
+      "id": "metric:amplitude",
+      "type": "Metric",
+      "label": "Amplitude",
+      "norm_label": "amplitude"
+    },
+    "metric:phase shift": {
+      "id": "metric:phase shift",
+      "type": "Metric",
+      "label": "Phase shift",
+      "norm_label": "phase shift"
+    },
+    "contribution:首次测量到低表面重力低质量天体的中红外光变幅度。": {
+      "id": "contribution:首次测量到低表面重力低质量天体的中红外光变幅度。",
+      "type": "Contribution",
+      "label": "首次测量到低表面重力低质量天体的中红外光变幅度。",
+      "norm_label": "首次测量到低表面重力低质量天体的中红外光变幅度。"
+    },
+    "contribution:提供了解释驱动不同波段光变机制的初步大气模型。": {
+      "id": "contribution:提供了解释驱动不同波段光变机制的初步大气模型。",
+      "type": "Contribution",
+      "label": "提供了解释驱动不同波段光变机制的初步大气模型。",
+      "norm_label": "提供了解释驱动不同波段光变机制的初步大气模型。"
+    },
+    "contribution:指出了大气复杂性及其与旋转周期的联系。": {
+      "id": "contribution:指出了大气复杂性及其与旋转周期的联系。",
+      "type": "Contribution",
+      "label": "指出了大气复杂性及其与旋转周期的联系。",
+      "norm_label": "指出了大气复杂性及其与旋转周期的联系。"
+    },
+    "method:volume method": {
+      "id": "method:volume method",
+      "type": "Method",
+      "label": "volume method",
+      "norm_label": "volume method",
+      "description": ""
+    },
+    "concept:freon-22": {
+      "id": "concept:freon-22",
+      "type": "Concept",
+      "label": "Freon-22",
+      "norm_label": "freon-22",
+      "description": ""
+    },
+    "concept:freon-12": {
+      "id": "concept:freon-12",
+      "type": "Concept",
+      "label": "Freon-12",
+      "norm_label": "freon-12",
+      "description": ""
+    },
+    "concept:am-be neutron source": {
+      "id": "concept:am-be neutron source",
+      "type": "Concept",
+      "label": "Am-Be neutron source",
+      "norm_label": "am-be neutron source",
+      "description": ""
+    },
+    "concept:nucleation rate": {
+      "id": "concept:nucleation rate",
+      "type": "Concept",
+      "label": "nucleation rate",
+      "norm_label": "nucleation rate",
+      "description": ""
+    },
+    "metric:neutron detection efficiency": {
+      "id": "metric:neutron detection efficiency",
+      "type": "Metric",
+      "label": "neutron detection efficiency",
+      "norm_label": "neutron detection efficiency",
+      "description": ""
+    },
+    "task:twitter bot detection": {
+      "id": "task:twitter bot detection",
+      "type": "Task",
+      "label": "Twitter bot detection",
+      "norm_label": "twitter bot detection",
+      "description": ""
+    },
+    "concept:graph-based": {
+      "id": "concept:graph-based",
+      "type": "Concept",
+      "label": "graph-based",
+      "norm_label": "graph-based",
+      "description": ""
+    },
+    "method:22na p γ": {
+      "id": "method:22na p γ",
+      "type": "Method",
+      "label": "22Na(p,γ)",
+      "norm_label": "22na p γ",
+      "description": ""
+    },
+    "method:12c 12c n 23mg": {
+      "id": "method:12c 12c n 23mg",
+      "type": "Method",
+      "label": "12C(12C,n)23Mg",
+      "norm_label": "12c 12c n 23mg",
+      "description": ""
+    },
+    "model:gammasphere": {
+      "id": "model:gammasphere",
+      "type": "Model",
+      "label": "Gammasphere",
+      "norm_label": "gammasphere",
+      "description": ""
+    },
+    "concept:spectroscopy": {
+      "id": "concept:spectroscopy",
+      "type": "Concept",
+      "label": "spectroscopy",
+      "norm_label": "spectroscopy",
+      "description": ""
+    },
+    "task:dialog-22 ruatd": {
+      "id": "task:dialog-22 ruatd",
+      "type": "Task",
+      "label": "DIALOG-22 RuATD",
+      "norm_label": "dialog-22 ruatd",
+      "description": ""
+    },
+    "task:binary task": {
+      "id": "task:binary task",
+      "type": "Task",
+      "label": "binary task",
+      "norm_label": "binary task",
+      "description": ""
+    },
+    "task:multiclass task": {
+      "id": "task:multiclass task",
+      "type": "Task",
+      "label": "multiclass task",
+      "norm_label": "multiclass task",
+      "description": ""
+    },
+    "dataset:ruatd train set": {
+      "id": "dataset:ruatd train set",
+      "type": "Dataset",
+      "label": "RuATD train set",
+      "norm_label": "ruatd train set",
+      "description": ""
+    },
+    "dataset:ruatd test set": {
+      "id": "dataset:ruatd test set",
+      "type": "Dataset",
+      "label": "RuATD test set",
+      "norm_label": "ruatd test set",
+      "description": ""
+    },
+    "method:spitzer irac": {
+      "id": "method:spitzer irac",
+      "type": "Method",
+      "label": "Spitzer IRAC",
+      "norm_label": "spitzer irac",
+      "description": ""
+    },
+    "method:hst wfc3": {
+      "id": "method:hst wfc3",
+      "type": "Method",
+      "label": "HST WFC3",
+      "norm_label": "hst wfc3",
+      "description": ""
+    },
+    "paper:pso j318.5-22": {
+      "id": "paper:pso j318.5-22",
+      "type": "Paper",
+      "label": "PSO J318.5-22",
+      "norm_label": "pso j318.5-22",
+      "description": ""
+    },
+    "method:hst wfc3 spitzer irac observations": {
+      "id": "method:hst wfc3 spitzer irac observations",
+      "type": "Method",
+      "label": "HST WFC3+Spitzer IRAC observations",
+      "norm_label": "hst wfc3 spitzer irac observations",
+      "description": ""
+    },
+    "dataset:near-ir lightcurves": {
+      "id": "dataset:near-ir lightcurves",
+      "type": "Dataset",
+      "label": "near-IR lightcurves",
+      "norm_label": "near-ir lightcurves",
+      "description": ""
+    },
+    "dataset:mid-ir lightcurve": {
+      "id": "dataset:mid-ir lightcurve",
+      "type": "Dataset",
+      "label": "mid-IR lightcurve",
+      "norm_label": "mid-ir lightcurve",
+      "description": ""
+    }
+  },
+  "edges": [
+    {
+      "source": "paper:physics 0004033v1",
+      "target": "method:体积法",
+      "type": "proposes",
+      "weight": 1.0
+    },
+    {
+      "source": "paper:physics 0004033v1",
+      "target": "task:尽管freon-22的沸点低于许多其他类似的液体，且预期其对中子更敏感，但尚未有关于freon-22的中子检测效率的报告。",
+      "type": "applied_to",
+      "weight": 0.8
+    },
+    {
+      "source": "method:体积法",
+      "target": "task:尽管freon-22的沸点低于许多其他类似的液体，且预期其对中子更敏感，但尚未有关于freon-22的中子检测效率的报告。",
+      "type": "solves",
+      "weight": 0.95
+    },
+    {
+      "source": "method:体积法",
+      "target": "metric:效率",
+      "type": "achieves",
+      "weight": 0.85
+    },
+    {
+      "source": "paper:physics 0004033v1",
+      "target": "contribution:首次评估了freon-22作为超热液体对中子检测的敏感性。",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "method:体积法",
+      "target": "contribution:首次评估了freon-22作为超热液体对中子检测的敏感性。",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:physics 0004033v1",
+      "target": "contribution:确定了freon-22在am-be中子源下的中子检测效率。",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "method:体积法",
+      "target": "contribution:确定了freon-22在am-be中子源下的中子检测效率。",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:physics 0004033v1",
+      "target": "contribution:比较了freon-12和freon-22的超热液滴的寿命和中子检测效率。",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "method:体积法",
+      "target": "contribution:比较了freon-12和freon-22的超热液滴的寿命和中子检测效率。",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:2206.04564v6",
+      "target": "task:尽管现有的twitter bot检测数据集规模较小且结构不完整，但该任务旨在加强twitter bot检测领域的研究进展。",
+      "type": "applied_to",
+      "weight": 0.8
+    },
+    {
+      "source": "paper:2206.04564v6",
+      "target": "dataset:twibot-22",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "paper:2206.04564v6",
+      "target": "contribution:提出了twibot-22，这是迄今为止最大的基于图的twitter bot检测基准。",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "paper:2206.04564v6",
+      "target": "contribution:为twitter网络提供了各种实体和关系。",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "paper:2206.04564v6",
+      "target": "contribution:质量比现有数据集更高。",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "paper:2206.04564v6",
+      "target": "contribution:重实现了35个代表性的twitter bot检测基线并在9个数据集上进行了评估，以促进公平比较和研究理解。",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "paper:astro-ph 0312404v1",
+      "target": "method:粒子束缚态的生成和放射性衰变分支的研究",
+      "type": "proposes",
+      "weight": 1.0
+    },
+    {
+      "source": "paper:astro-ph 0312404v1",
+      "target": "task:尽管了解22na的生成和破坏过程对于诊断经典nova爆发很重要，但传统研究方法受放射性靶材的复杂性限制，本研究旨在通过研究粒子束缚态的方法重新评估22na p γ 反应速率，以影响对该事件的最大可探测",
+      "type": "applied_to",
+      "weight": 0.8
+    },
+    {
+      "source": "method:粒子束缚态的生成和放射性衰变分支的研究",
+      "target": "task:尽管了解22na的生成和破坏过程对于诊断经典nova爆发很重要，但传统研究方法受放射性靶材的复杂性限制，本研究旨在通过研究粒子束缚态的方法重新评估22na p γ 反应速率，以影响对该事件的最大可探测",
+      "type": "solves",
+      "weight": 0.95
+    },
+    {
+      "source": "paper:astro-ph 0312404v1",
+      "target": "contribution:改进了22na p γ 反应速率的评价",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "method:粒子束缚态的生成和放射性衰变分支的研究",
+      "target": "contribution:改进了22na p γ 反应速率的评价",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:astro-ph 0312404v1",
+      "target": "contribution:提出了新的上限来减少最低温度的不确定性",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "method:粒子束缚态的生成和放射性衰变分支的研究",
+      "target": "contribution:提出了新的上限来减少最低温度的不确定性",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:astro-ph 0312404v1",
+      "target": "contribution:新确定的能级状态（如7623和7647 kev状态的固定性质）",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "method:粒子束缚态的生成和放射性衰变分支的研究",
+      "target": "contribution:新确定的能级状态（如7623和7647 kev状态的固定性质）",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:astro-ph 0312404v1",
+      "target": "contribution:提出了一种可应用于类似反应率确定的新方法",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "method:粒子束缚态的生成和放射性衰变分支的研究",
+      "target": "contribution:提出了一种可应用于类似反应率确定的新方法",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:2206.08029v1",
+      "target": "method:ensemble method of different pre-trained models based on attention mechanism",
+      "type": "proposes",
+      "weight": 1.0
+    },
+    {
+      "source": "paper:2206.08029v1",
+      "target": "task:鉴于语言神经网生成文本的能力日益增强，鉴别人类写作和自动生成文本变得越来越困难，因此需要构建自动检测生成文本的系统。",
+      "type": "applied_to",
+      "weight": 0.8
+    },
+    {
+      "source": "method:ensemble method of different pre-trained models based on attention mechanism",
+      "target": "task:鉴于语言神经网生成文本的能力日益增强，鉴别人类写作和自动生成文本变得越来越困难，因此需要构建自动检测生成文本的系统。",
+      "type": "solves",
+      "weight": 0.95
+    },
+    {
+      "source": "paper:2206.08029v1",
+      "target": "dataset:ruatd train set automatic annotation by generative models",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "method:ensemble method of different pre-trained models based on attention mechanism",
+      "target": "dataset:ruatd train set automatic annotation by generative models",
+      "type": "evaluates_on",
+      "weight": 0.9
+    },
+    {
+      "source": "method:ensemble method of different pre-trained models based on attention mechanism",
+      "target": "metric:accuracy",
+      "type": "achieves",
+      "weight": 0.85
+    },
+    {
+      "source": "paper:2206.08029v1",
+      "target": "contribution:实现二分类任务中使用集成模型获得最好准确率。",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "method:ensemble method of different pre-trained models based on attention mechanism",
+      "target": "contribution:实现二分类任务中使用集成模型获得最好准确率。",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:2206.08029v1",
+      "target": "contribution:在多分类任务中，单个模型中使用最佳准确率的模型。",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "method:ensemble method of different pre-trained models based on attention mechanism",
+      "target": "contribution:在多分类任务中，单个模型中使用最佳准确率的模型。",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:2206.08029v1",
+      "target": "contribution:提出了基于注意力机制的不同预训练模型的集成方法。",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "method:ensemble method of different pre-trained models based on attention mechanism",
+      "target": "contribution:提出了基于注意力机制的不同预训练模型的集成方法。",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:1712.03746v1",
+      "target": "method:spitzer irac和hst wfc3同步观测",
+      "type": "proposes",
+      "weight": 1.0
+    },
+    {
+      "source": "paper:1712.03746v1",
+      "target": "task:尽管pso j318.5-22是一个快速旋转的年轻天体，但其高幅度的多波段光变现象尚未得到充分解释。",
+      "type": "applied_to",
+      "weight": 0.8
+    },
+    {
+      "source": "method:spitzer irac和hst wfc3同步观测",
+      "target": "task:尽管pso j318.5-22是一个快速旋转的年轻天体，但其高幅度的多波段光变现象尚未得到充分解释。",
+      "type": "solves",
+      "weight": 0.95
+    },
+    {
+      "source": "paper:1712.03746v1",
+      "target": "dataset:spectral observations from hubble space telescope wfc3",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "method:spitzer irac和hst wfc3同步观测",
+      "target": "dataset:spectral observations from hubble space telescope wfc3",
+      "type": "evaluates_on",
+      "weight": 0.9
+    },
+    {
+      "source": "paper:1712.03746v1",
+      "target": "dataset:infrared observations from spitzer space telescope irac",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "method:spitzer irac和hst wfc3同步观测",
+      "target": "dataset:infrared observations from spitzer space telescope irac",
+      "type": "evaluates_on",
+      "weight": 0.9
+    },
+    {
+      "source": "method:spitzer irac和hst wfc3同步观测",
+      "target": "metric:amplitude",
+      "type": "achieves",
+      "weight": 0.85
+    },
+    {
+      "source": "method:spitzer irac和hst wfc3同步观测",
+      "target": "metric:phase shift",
+      "type": "achieves",
+      "weight": 0.85
+    },
+    {
+      "source": "paper:1712.03746v1",
+      "target": "contribution:首次测量到低表面重力低质量天体的中红外光变幅度。",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "method:spitzer irac和hst wfc3同步观测",
+      "target": "contribution:首次测量到低表面重力低质量天体的中红外光变幅度。",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:1712.03746v1",
+      "target": "contribution:提供了解释驱动不同波段光变机制的初步大气模型。",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "method:spitzer irac和hst wfc3同步观测",
+      "target": "contribution:提供了解释驱动不同波段光变机制的初步大气模型。",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "paper:1712.03746v1",
+      "target": "contribution:指出了大气复杂性及其与旋转周期的联系。",
+      "type": "has_contribution",
+      "weight": 1.0
+    },
+    {
+      "source": "method:spitzer irac和hst wfc3同步观测",
+      "target": "contribution:指出了大气复杂性及其与旋转周期的联系。",
+      "type": "related_to",
+      "weight": 0.5
+    },
+    {
+      "source": "concept:freon-22",
+      "target": "method:volume method",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "concept:freon-12",
+      "target": "method:volume method",
+      "type": "compared_with",
+      "weight": 0.7
+    },
+    {
+      "source": "method:volume method",
+      "target": "concept:am-be neutron source",
+      "type": "evaluates_on",
+      "weight": 0.9
+    },
+    {
+      "source": "method:volume method",
+      "target": "concept:nucleation rate",
+      "type": "applied_to",
+      "weight": 0.8
+    },
+    {
+      "source": "method:volume method",
+      "target": "metric:neutron detection efficiency",
+      "type": "achieves",
+      "weight": 0.85
+    },
+    {
+      "source": "concept:freon-22",
+      "target": "metric:neutron detection efficiency",
+      "type": "achieves",
+      "weight": 0.85
+    },
+    {
+      "source": "dataset:twibot-22",
+      "target": "task:twitter bot detection",
+      "type": "applied_to",
+      "weight": 0.8
+    },
+    {
+      "source": "dataset:twibot-22",
+      "target": "concept:graph-based",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "dataset:twibot-22",
+      "target": "task:twitter bot detection",
+      "type": "evaluates_on",
+      "weight": 0.9
+    },
+    {
+      "source": "method:22na p γ",
+      "target": "method:12c 12c n 23mg",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "method:22na p γ",
+      "target": "model:gammasphere",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "method:12c 12c n 23mg",
+      "target": "concept:spectroscopy",
+      "type": "evaluates_on",
+      "weight": 0.9
+    },
+    {
+      "source": "task:dialog-22 ruatd",
+      "target": "task:binary task",
+      "type": "applied_to",
+      "weight": 0.8
+    },
+    {
+      "source": "task:dialog-22 ruatd",
+      "target": "task:multiclass task",
+      "type": "applied_to",
+      "weight": 0.8
+    },
+    {
+      "source": "method:ensemble method of different pre-trained models based on attention mechanism",
+      "target": "task:dialog-22 ruatd",
+      "type": "proposes",
+      "weight": 1.0
+    },
+    {
+      "source": "method:ensemble method of different pre-trained models based on attention mechanism",
+      "target": "dataset:ruatd train set",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "method:ensemble method of different pre-trained models based on attention mechanism",
+      "target": "dataset:ruatd test set",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "method:hst wfc3 spitzer irac observations",
+      "target": "paper:pso j318.5-22",
+      "type": "evaluates_on",
+      "weight": 0.9
+    },
+    {
+      "source": "method:hst wfc3 spitzer irac observations",
+      "target": "dataset:near-ir lightcurves",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "method:hst wfc3 spitzer irac observations",
+      "target": "dataset:mid-ir lightcurve",
+      "type": "uses",
+      "weight": 0.8
+    },
+    {
+      "source": "method:hst wfc3 spitzer irac observations",
+      "target": "metric:amplitude",
+      "type": "achieves",
+      "weight": 0.85
+    },
+    {
+      "source": "method:hst wfc3 spitzer irac observations",
+      "target": "metric:phase shift",
+      "type": "achieves",
+      "weight": 0.85
+    }
+  ],
+  "paper_entities": {
+    "physics/0004033v1": [
+      "paper:physics 0004033v1",
+      "method:体积法",
+      "task:尽管freon-22的沸点低于许多其他类似的液体，且预期其对中子更敏感，但尚未有关于freon-22的中子检测效率的报告。",
+      "metric:效率",
+      "contribution:首次评估了freon-22作为超热液体对中子检测的敏感性。",
+      "contribution:确定了freon-22在am-be中子源下的中子检测效率。",
+      "contribution:比较了freon-12和freon-22的超热液滴的寿命和中子检测效率。",
+      "method:volume method",
+      "concept:freon-22",
+      "concept:freon-12",
+      "concept:am-be neutron source",
+      "concept:nucleation rate",
+      "metric:neutron detection efficiency"
+    ],
+    "2206.04564v6": [
+      "paper:2206.04564v6",
+      "task:尽管现有的twitter bot检测数据集规模较小且结构不完整，但该任务旨在加强twitter bot检测领域的研究进展。",
+      "dataset:twibot-22",
+      "contribution:提出了twibot-22，这是迄今为止最大的基于图的twitter bot检测基准。",
+      "contribution:为twitter网络提供了各种实体和关系。",
+      "contribution:质量比现有数据集更高。",
+      "contribution:重实现了35个代表性的twitter bot检测基线并在9个数据集上进行了评估，以促进公平比较和研究理解。",
+      "task:twitter bot detection",
+      "concept:graph-based"
+    ],
+    "astro-ph/0312404v1": [
+      "paper:astro-ph 0312404v1",
+      "method:粒子束缚态的生成和放射性衰变分支的研究",
+      "task:尽管了解22na的生成和破坏过程对于诊断经典nova爆发很重要，但传统研究方法受放射性靶材的复杂性限制，本研究旨在通过研究粒子束缚态的方法重新评估22na p γ 反应速率，以影响对该事件的最大可探测",
+      "contribution:改进了22na p γ 反应速率的评价",
+      "contribution:提出了新的上限来减少最低温度的不确定性",
+      "contribution:新确定的能级状态（如7623和7647 kev状态的固定性质）",
+      "contribution:提出了一种可应用于类似反应率确定的新方法",
+      "method:22na p γ",
+      "method:12c 12c n 23mg",
+      "model:gammasphere",
+      "concept:spectroscopy"
+    ],
+    "2206.08029v1": [
+      "paper:2206.08029v1",
+      "method:ensemble method of different pre-trained models based on attention mechanism",
+      "task:鉴于语言神经网生成文本的能力日益增强，鉴别人类写作和自动生成文本变得越来越困难，因此需要构建自动检测生成文本的系统。",
+      "dataset:ruatd train set automatic annotation by generative models",
+      "dataset:ruatd train set automatic annotation by generative models",
+      "metric:accuracy",
+      "contribution:实现二分类任务中使用集成模型获得最好准确率。",
+      "contribution:在多分类任务中，单个模型中使用最佳准确率的模型。",
+      "contribution:提出了基于注意力机制的不同预训练模型的集成方法。",
+      "task:dialog-22 ruatd",
+      "task:binary task",
+      "task:multiclass task",
+      "dataset:ruatd train set",
+      "dataset:ruatd test set"
+    ],
+    "1712.03746v1": [
+      "paper:1712.03746v1",
+      "method:spitzer irac和hst wfc3同步观测",
+      "task:尽管pso j318.5-22是一个快速旋转的年轻天体，但其高幅度的多波段光变现象尚未得到充分解释。",
+      "dataset:spectral observations from hubble space telescope wfc3",
+      "dataset:infrared observations from spitzer space telescope irac",
+      "metric:amplitude",
+      "metric:phase shift",
+      "contribution:首次测量到低表面重力低质量天体的中红外光变幅度。",
+      "contribution:提供了解释驱动不同波段光变机制的初步大气模型。",
+      "contribution:指出了大气复杂性及其与旋转周期的联系。",
+      "method:spitzer irac",
+      "method:hst wfc3",
+      "paper:pso j318.5-22",
+      "method:hst wfc3 spitzer irac observations",
+      "dataset:near-ir lightcurves",
+      "dataset:mid-ir lightcurve"
+    ]
+  },
+  "entity_aliases": {
+    "efficiency of neutron detection of superheated drops of freon-22": "paper:physics 0004033v1",
+    "体积法": "method:体积法",
+    "尽管freon-22的沸点低于许多其他类似的液体，且预期其对中子更敏感，但尚未有关于freon-22的中子检测效率的报告。": "task:尽管freon-22的沸点低于许多其他类似的液体，且预期其对中子更敏感，但尚未有关于freon-22的中子检测效率的报告。",
+    "效率": "metric:效率",
+    "首次评估了freon-22作为超热液体对中子检测的敏感性。": "contribution:首次评估了freon-22作为超热液体对中子检测的敏感性。",
+    "确定了freon-22在am-be中子源下的中子检测效率。": "contribution:确定了freon-22在am-be中子源下的中子检测效率。",
+    "比较了freon-12和freon-22的超热液滴的寿命和中子检测效率。": "contribution:比较了freon-12和freon-22的超热液滴的寿命和中子检测效率。",
+    "twibot-22 towards graph-based twitter bot detection": "paper:2206.04564v6",
+    "尽管现有的twitter bot检测数据集规模较小且结构不完整，但该任务旨在加强twitter bot检测领域的研究进展。": "task:尽管现有的twitter bot检测数据集规模较小且结构不完整，但该任务旨在加强twitter bot检测领域的研究进展。",
+    "twibot-22": "dataset:twibot-22",
+    "提出了twibot-22，这是迄今为止最大的基于图的twitter bot检测基准。": "contribution:提出了twibot-22，这是迄今为止最大的基于图的twitter bot检测基准。",
+    "为twitter网络提供了各种实体和关系。": "contribution:为twitter网络提供了各种实体和关系。",
+    "质量比现有数据集更高。": "contribution:质量比现有数据集更高。",
+    "重实现了35个代表性的twitter bot检测基线并在9个数据集上进行了评估，以促进公平比较和研究理解。": "contribution:重实现了35个代表性的twitter bot检测基线并在9个数据集上进行了评估，以促进公平比较和研究理解。",
+    "reevaluation of the 22 na p γ reaction rate implications for the detection of 22 na gamma rays from novae": "paper:astro-ph 0312404v1",
+    "粒子束缚态的生成和放射性衰变分支的研究": "method:粒子束缚态的生成和放射性衰变分支的研究",
+    "尽管了解22na的生成和破坏过程对于诊断经典nova爆发很重要，但传统研究方法受放射性靶材的复杂性限制，本研究旨在通过研究粒子束缚态的方法重新评估22na p γ 反应速率，以影响对该事件的最大可探测": "task:尽管了解22na的生成和破坏过程对于诊断经典nova爆发很重要，但传统研究方法受放射性靶材的复杂性限制，本研究旨在通过研究粒子束缚态的方法重新评估22na p γ 反应速率，以影响对该事件的最大可探测",
+    "改进了22na p γ 反应速率的评价": "contribution:改进了22na p γ 反应速率的评价",
+    "提出了新的上限来减少最低温度的不确定性": "contribution:提出了新的上限来减少最低温度的不确定性",
+    "新确定的能级状态（如7623和7647 kev状态的固定性质）": "contribution:新确定的能级状态（如7623和7647 kev状态的固定性质）",
+    "提出了一种可应用于类似反应率确定的新方法": "contribution:提出了一种可应用于类似反应率确定的新方法",
+    "dialog-22 ruatd generated text detection": "paper:2206.08029v1",
+    "ensemble method of different pre-trained models based on attention mechanism": "method:ensemble method of different pre-trained models based on attention mechanism",
+    "鉴于语言神经网生成文本的能力日益增强，鉴别人类写作和自动生成文本变得越来越困难，因此需要构建自动检测生成文本的系统。": "task:鉴于语言神经网生成文本的能力日益增强，鉴别人类写作和自动生成文本变得越来越困难，因此需要构建自动检测生成文本的系统。",
+    "ruatd train set automatic annotation by generative models": "dataset:ruatd train set automatic annotation by generative models",
+    "accuracy": "metric:accuracy",
+    "实现二分类任务中使用集成模型获得最好准确率。": "contribution:实现二分类任务中使用集成模型获得最好准确率。",
+    "在多分类任务中，单个模型中使用最佳准确率的模型。": "contribution:在多分类任务中，单个模型中使用最佳准确率的模型。",
+    "提出了基于注意力机制的不同预训练模型的集成方法。": "contribution:提出了基于注意力机制的不同预训练模型的集成方法。",
+    "simultaneous multi-wavelength variability characterization of the free-floating planetary mass object pso j318.5-22": "paper:1712.03746v1",
+    "spitzer irac和hst wfc3同步观测": "method:spitzer irac和hst wfc3同步观测",
+    "尽管pso j318.5-22是一个快速旋转的年轻天体，但其高幅度的多波段光变现象尚未得到充分解释。": "task:尽管pso j318.5-22是一个快速旋转的年轻天体，但其高幅度的多波段光变现象尚未得到充分解释。",
+    "spectral observations from hubble space telescope wfc3": "dataset:spectral observations from hubble space telescope wfc3",
+    "infrared observations from spitzer space telescope irac": "dataset:infrared observations from spitzer space telescope irac",
+    "amplitude": "metric:amplitude",
+    "phase shift": "metric:phase shift",
+    "首次测量到低表面重力低质量天体的中红外光变幅度。": "contribution:首次测量到低表面重力低质量天体的中红外光变幅度。",
+    "提供了解释驱动不同波段光变机制的初步大气模型。": "contribution:提供了解释驱动不同波段光变机制的初步大气模型。",
+    "指出了大气复杂性及其与旋转周期的联系。": "contribution:指出了大气复杂性及其与旋转周期的联系。",
+    "volume method": "method:volume method",
+    "freon-22": "concept:freon-22",
+    "freon-12": "concept:freon-12",
+    "am-be neutron source": "concept:am-be neutron source",
+    "nucleation rate": "concept:nucleation rate",
+    "neutron detection efficiency": "metric:neutron detection efficiency",
+    "twitter bot detection": "task:twitter bot detection",
+    "graph-based": "concept:graph-based",
+    "22na p γ": "method:22na p γ",
+    "12c 12c n 23mg": "method:12c 12c n 23mg",
+    "gammasphere": "model:gammasphere",
+    "spectroscopy": "concept:spectroscopy",
+    "dialog-22 ruatd": "task:dialog-22 ruatd",
+    "binary task": "task:binary task",
+    "multiclass task": "task:multiclass task",
+    "ruatd train set": "dataset:ruatd train set",
+    "ruatd test set": "dataset:ruatd test set",
+    "spitzer irac": "method:spitzer irac",
+    "hst wfc3": "method:hst wfc3",
+    "pso j318.5-22": "paper:pso j318.5-22",
+    "hst wfc3 spitzer irac observations": "method:hst wfc3 spitzer irac observations",
+    "near-ir lightcurves": "dataset:near-ir lightcurves",
+    "mid-ir lightcurve": "dataset:mid-ir lightcurve"
+  },
+  "communities": {
+    "0": {
+      "nodes": [
+        "paper:physics 0004033v1",
+        "method:体积法",
+        "task:尽管freon-22的沸点低于许多其他类似的液体，且预期其对中子更敏感，但尚未有关于freon-22的中子检测效率的报告。",
+        "metric:效率",
+        "contribution:首次评估了freon-22作为超热液体对中子检测的敏感性。",
+        "contribution:确定了freon-22在am-be中子源下的中子检测效率。",
+        "contribution:比较了freon-12和freon-22的超热液滴的寿命和中子检测效率。"
+      ],
+      "key_entities": [
+        "Efficiency of neutron detection of superheated drops of Freon-22",
+        "体积法",
+        "尽管Freon-22的沸点低于许多其他类似的液体，且预期其对中子更敏感，但尚未有关于Freon-22的中子检测效率的报告。",
+        "效率",
+        "首次评估了Freon-22作为超热液体对中子检测的敏感性。",
+        "确定了Freon-22在Am-Be中子源下的中子检测效率。",
+        "比较了Freon-12和Freon-22的超热液滴的寿命和中子检测效率。"
+      ],
+      "key_papers": [
+        "Efficiency of neutron detection of superheated drops of Freon-22"
+      ],
+      "dominant_types": [
+        "Contribution",
+        "Paper",
+        "Method"
+      ],
+      "semantic_tag": "Research Contributions Cluster",
+      "summary": "",
+      "community_name": "Research Contributions Cluster"
+    },
+    "1": {
+      "nodes": [
+        "paper:2206.04564v6",
+        "task:尽管现有的twitter bot检测数据集规模较小且结构不完整，但该任务旨在加强twitter bot检测领域的研究进展。",
+        "contribution:提出了twibot-22，这是迄今为止最大的基于图的twitter bot检测基准。",
+        "contribution:为twitter网络提供了各种实体和关系。",
+        "contribution:质量比现有数据集更高。",
+        "contribution:重实现了35个代表性的twitter bot检测基线并在9个数据集上进行了评估，以促进公平比较和研究理解。"
+      ],
+      "key_entities": [
+        "TwiBot-22: Towards Graph-Based Twitter Bot Detection",
+        "尽管现有的Twitter bot检测数据集规模较小且结构不完整，但该任务旨在加强Twitter bot检测领域的研究进展。",
+        "提出了TwiBot-22，这是迄今为止最大的基于图的Twitter bot检测基准。",
+        "为Twitter网络提供了各种实体和关系。",
+        "质量比现有数据集更高。",
+        "重实现了35个代表性的Twitter bot检测基线并在9个数据集上进行了评估，以促进公平比较和研究理解。"
+      ],
+      "key_papers": [
+        "TwiBot-22: Towards Graph-Based Twitter Bot Detection"
+      ],
+      "dominant_types": [
+        "Contribution",
+        "Paper",
+        "Task"
+      ],
+      "semantic_tag": "Research Contributions Cluster",
+      "summary": "",
+      "community_name": "Research Contributions Cluster"
+    },
+    "2": {
+      "nodes": [
+        "dataset:twibot-22",
+        "task:twitter bot detection",
+        "concept:graph-based"
+      ],
+      "key_entities": [
+        "TwiBot-22",
+        "Twitter bot detection",
+        "graph-based"
+      ],
+      "key_papers": [],
+      "dominant_types": [
+        "Dataset",
+        "Task",
+        "Concept"
+      ],
+      "semantic_tag": "Benchmark & Dataset Cluster",
+      "summary": "",
+      "community_name": "Benchmark & Dataset Cluster"
+    },
+    "3": {
+      "nodes": [
+        "paper:astro-ph 0312404v1",
+        "method:粒子束缚态的生成和放射性衰变分支的研究",
+        "task:尽管了解22na的生成和破坏过程对于诊断经典nova爆发很重要，但传统研究方法受放射性靶材的复杂性限制，本研究旨在通过研究粒子束缚态的方法重新评估22na p γ 反应速率，以影响对该事件的最大可探测",
+        "contribution:改进了22na p γ 反应速率的评价",
+        "contribution:提出了新的上限来减少最低温度的不确定性",
+        "contribution:新确定的能级状态（如7623和7647 kev状态的固定性质）",
+        "contribution:提出了一种可应用于类似反应率确定的新方法"
+      ],
+      "key_entities": [
+        "Reevaluation of the $^{22}$Na(p,$γ$) reaction rate: Implications for the detection of $^{22}$Na gamma rays from novae",
+        "粒子束缚态的生成和放射性衰变分支的研究",
+        "尽管了解22Na的生成和破坏过程对于诊断经典Nova爆发很重要，但传统研究方法受放射性靶材的复杂性限制，本研究旨在通过研究粒子束缚态的方法重新评估22Na(p,γ)反应速率，以影响对该事件的最大可探测",
+        "改进了22Na(p,γ)反应速率的评价",
+        "提出了新的上限来减少最低温度的不确定性",
+        "新确定的能级状态（如7623和7647 keV状态的固定性质）",
+        "提出了一种可应用于类似反应率确定的新方法"
+      ],
+      "key_papers": [
+        "Reevaluation of the $^{22}$Na(p,$γ$) reaction rate: Implications for the detection of $^{22}$Na gamma rays from novae"
+      ],
+      "dominant_types": [
+        "Contribution",
+        "Paper",
+        "Method"
+      ],
+      "semantic_tag": "Research Contributions Cluster",
+      "summary": "",
+      "community_name": "Research Contributions Cluster"
+    },
+    "4": {
+      "nodes": [
+        "paper:2206.08029v1",
+        "method:ensemble method of different pre-trained models based on attention mechanism",
+        "task:鉴于语言神经网生成文本的能力日益增强，鉴别人类写作和自动生成文本变得越来越困难，因此需要构建自动检测生成文本的系统。",
+        "dataset:ruatd train set automatic annotation by generative models",
+        "metric:accuracy",
+        "contribution:实现二分类任务中使用集成模型获得最好准确率。",
+        "contribution:在多分类任务中，单个模型中使用最佳准确率的模型。",
+        "contribution:提出了基于注意力机制的不同预训练模型的集成方法。",
+        "dataset:ruatd train set",
+        "dataset:ruatd test set",
+        "method:spitzer irac",
+        "method:hst wfc3"
+      ],
+      "key_entities": [
+        "DIALOG-22 RuATD Generated Text Detection",
+        "ensemble method of different pre-trained models based on attention mechanism",
+        "鉴于语言神经网生成文本的能力日益增强，鉴别人类写作和自动生成文本变得越来越困难，因此需要构建自动检测生成文本的系统。",
+        "RuATD train set (automatic annotation by generative models)",
+        "Accuracy",
+        "实现二分类任务中使用集成模型获得最好准确率。",
+        "在多分类任务中，单个模型中使用最佳准确率的模型。",
+        "提出了基于注意力机制的不同预训练模型的集成方法。",
+        "RuATD train set",
+        "RuATD test set",
+        "Spitzer IRAC",
+        "HST WFC3"
+      ],
+      "key_papers": [
+        "DIALOG-22 RuATD Generated Text Detection"
+      ],
+      "dominant_types": [
+        "Method",
+        "Dataset",
+        "Contribution"
+      ],
+      "semantic_tag": "Benchmark & Dataset Cluster",
+      "summary": "",
+      "community_name": "Benchmark & Dataset Cluster"
+    },
+    "5": {
+      "nodes": [
+        "paper:1712.03746v1",
+        "method:spitzer irac和hst wfc3同步观测",
+        "task:尽管pso j318.5-22是一个快速旋转的年轻天体，但其高幅度的多波段光变现象尚未得到充分解释。",
+        "dataset:spectral observations from hubble space telescope wfc3",
+        "dataset:infrared observations from spitzer space telescope irac",
+        "contribution:首次测量到低表面重力低质量天体的中红外光变幅度。",
+        "contribution:提供了解释驱动不同波段光变机制的初步大气模型。",
+        "contribution:指出了大气复杂性及其与旋转周期的联系。"
+      ],
+      "key_entities": [
+        "Simultaneous, Multi-Wavelength Variability Characterization of the Free-Floating Planetary Mass Object PSO J318.5-22",
+        "Spitzer IRAC和HST WFC3同步观测",
+        "尽管PSO J318.5-22是一个快速旋转的年轻天体，但其高幅度的多波段光变现象尚未得到充分解释。",
+        "Spectral observations from Hubble Space Telescope WFC3",
+        "Infrared observations from Spitzer Space Telescope IRAC",
+        "首次测量到低表面重力低质量天体的中红外光变幅度。",
+        "提供了解释驱动不同波段光变机制的初步大气模型。",
+        "指出了大气复杂性及其与旋转周期的联系。"
+      ],
+      "key_papers": [
+        "Simultaneous, Multi-Wavelength Variability Characterization of the Free-Floating Planetary Mass Object PSO J318.5-22"
+      ],
+      "dominant_types": [
+        "Contribution",
+        "Dataset",
+        "Paper"
+      ],
+      "semantic_tag": "Benchmark & Dataset Cluster",
+      "summary": "",
+      "community_name": "Benchmark & Dataset Cluster"
+    },
+    "6": {
+      "nodes": [
+        "metric:amplitude",
+        "metric:phase shift",
+        "paper:pso j318.5-22",
+        "method:hst wfc3 spitzer irac observations",
+        "dataset:near-ir lightcurves",
+        "dataset:mid-ir lightcurve"
+      ],
+      "key_entities": [
+        "Amplitude",
+        "Phase shift",
+        "PSO J318.5-22",
+        "HST WFC3+Spitzer IRAC observations",
+        "near-IR lightcurves",
+        "mid-IR lightcurve"
+      ],
+      "key_papers": [
+        "PSO J318.5-22"
+      ],
+      "dominant_types": [
+        "Metric",
+        "Dataset",
+        "Paper"
+      ],
+      "semantic_tag": "Benchmark & Dataset Cluster",
+      "summary": "",
+      "community_name": "Benchmark & Dataset Cluster"
+    },
+    "7": {
+      "nodes": [
+        "method:volume method",
+        "concept:freon-12",
+        "concept:am-be neutron source",
+        "concept:nucleation rate"
+      ],
+      "key_entities": [
+        "volume method",
+        "Freon-12",
+        "Am-Be neutron source",
+        "nucleation rate"
+      ],
+      "key_papers": [],
+      "dominant_types": [
+        "Concept",
+        "Method"
+      ],
+      "semantic_tag": "Research Topic Cluster",
+      "summary": "",
+      "community_name": "Research Topic Cluster"
+    },
+    "8": {
+      "nodes": [
+        "concept:freon-22",
+        "metric:neutron detection efficiency"
+      ],
+      "key_entities": [
+        "Freon-22",
+        "neutron detection efficiency"
+      ],
+      "key_papers": [],
+      "dominant_types": [
+        "Concept",
+        "Metric"
+      ],
+      "semantic_tag": "Evaluation Metrics Cluster",
+      "summary": "",
+      "community_name": "Evaluation Metrics Cluster"
+    },
+    "9": {
+      "nodes": [
+        "method:22na p γ",
+        "model:gammasphere"
+      ],
+      "key_entities": [
+        "22Na(p,γ)",
+        "Gammasphere"
+      ],
+      "key_papers": [],
+      "dominant_types": [
+        "Method",
+        "Model"
+      ],
+      "semantic_tag": "Research Topic Cluster",
+      "summary": "",
+      "community_name": "Research Topic Cluster"
+    },
+    "10": {
+      "nodes": [
+        "method:12c 12c n 23mg",
+        "concept:spectroscopy"
+      ],
+      "key_entities": [
+        "12C(12C,n)23Mg",
+        "spectroscopy"
+      ],
+      "key_papers": [],
+      "dominant_types": [
+        "Method",
+        "Concept"
+      ],
+      "semantic_tag": "Research Topic Cluster",
+      "summary": "",
+      "community_name": "Research Topic Cluster"
+    },
+    "11": {
+      "nodes": [
+        "task:dialog-22 ruatd",
+        "task:binary task",
+        "task:multiclass task"
+      ],
+      "key_entities": [
+        "DIALOG-22 RuATD",
+        "binary task",
+        "multiclass task"
+      ],
+      "key_papers": [],
+      "dominant_types": [
+        "Task"
+      ],
+      "semantic_tag": "Task & Application Cluster",
+      "summary": "",
+      "community_name": "Task & Application Cluster"
+    }
+  },
+  "citation_graph": {},
+  "stats": {
+    "node_count": 62,
+    "edge_count": 76,
+    "node_type_count": {
+      "Paper": 6,
+      "Method": 10,
+      "Task": 9,
+      "Metric": 5,
+      "Contribution": 17,
+      "Dataset": 8,
+      "Concept": 6,
+      "Model": 1
+    },
+    "paper_count": 5,
+    "community_count": 0,
+    "citation_edge_count": 0
+  }
+}

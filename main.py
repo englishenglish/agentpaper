@@ -14,8 +14,8 @@ configure_fitz_mupdf_console()
 
 from src.utils.tool_utils import handlerChunk
 from src.agents.userproxy_agent import WebUserProxyAgent, userProxyAgent
-from src.knowledge.router import knowledge
-from src.knowledge import knowledge_base
+from src.rag.router import knowledge
+from src.rag import knowledge_base
 from src.core.state_models import BackToFrontData, ExecutionState
 from src.agents.orchestrator import PaperAgentOrchestrator
 

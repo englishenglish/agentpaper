@@ -210,7 +210,7 @@ async def intent_node(state: State) -> State:
         if not c.get("bypass_to_qa") and c.get("kb_binding") != "manual":
             if not (c.get("selected_db_ids") or []):
                 try:
-                    from src.knowledge.session_kb import create_session_research_kb
+                    from src.rag.session_kb import create_session_research_kb
 
                     db_id = await create_session_research_kb(user_text)
                     c["selected_db_ids"] = [db_id]

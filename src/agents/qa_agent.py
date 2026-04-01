@@ -7,12 +7,12 @@ from src.utils.log_utils import setup_logger
 from src.core.model_client import create_qa_model_client
 from src.core.state_models import State, ExecutionState, BackToFrontData
 from src.core.prompts import qa_agent_prompt, graphrag_query_prompt, hybrid_query_prompt
-from src.services.retrieval_tool import retrieval_tool, normalize_retrieval_mode
+from src.rag.retrieval import retrieval_tool, normalize_retrieval_mode
 from src.core.embedding import get_shared_embedder
-from src.extraction.graph_builder import load_entity_graph
-from src.database.graphrag_retriever import GraphRAGRetriever
+from src.graphrag.graph_builder import load_entity_graph
+from src.retriever import GraphRAGRetriever
 from src.core.config import config
-from src.knowledge import knowledge_base as kb_manager
+from src.rag import knowledge_base as kb_manager
 from src.agents.streaming_utils import stream_assistant_to_queue
 
 logger = setup_logger(__name__)

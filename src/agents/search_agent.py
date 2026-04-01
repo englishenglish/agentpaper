@@ -6,7 +6,7 @@ from pydantic import BaseModel, Field
 from typing import Optional, List
 
 from src.utils.log_utils import setup_logger
-from src.services.paper_search import PaperSearcher
+from src.paper_search.paper_search import PaperSearcher
 from src.core.state_models import State, ExecutionState
 from src.core.prompts import search_agent_prompt
 from src.core.state_models import BackToFrontData
@@ -138,29 +138,32 @@ async def search_node(state: State) -> State:
             ))
             return {"value": current_state}
 
-        # 7. 下载 PDF 并提取全文（并行，最多 3 个并发）
+        # 7. 下载 PDF 并提取全文（串行，避免 MinerU 等云端 OCR 并发触发限流 / -60010）
         await state_queue.put(BackToFrontData(
             step=ExecutionState.SEARCHING,
             state="downloading",
-            data=f"找到 {len(results)} 篇论文，正在下载 PDF 并提取正文..."
+            data=f"找到 {len(results)} 篇论文，将依次下载 PDF 并提取正文..."
         ))
 
         save_dir = config.get("SAVE_DIR", "data")
         tmp_pdf_dir = os.path.join(save_dir, "tmp_papers")
 
-        sem = asyncio.Semaphore(3)
-
-        async def _fetch_one(paper: dict) -> dict:
-            async with sem:
-                pdf_path, full_text = await paper_searcher.download_and_extract(paper, tmp_pdf_dir)
+        enriched: list[dict] = []
+        for idx, paper in enumerate(results, start=1):
+            await state_queue.put(
+                BackToFrontData(
+                    step=ExecutionState.SEARCHING,
+                    state="downloading",
+                    data=f"正在处理第 {idx}/{len(results)} 篇：{paper.get('title', paper.get('paper_id', ''))[:80]}…",
+                )
+            )
+            pdf_path, full_text = await paper_searcher.download_and_extract(paper, tmp_pdf_dir)
             updated = dict(paper)
             if full_text:
                 updated["full_text"] = full_text
             if pdf_path:
                 updated["pdf_local_path"] = pdf_path
-            return updated
-
-        enriched = await asyncio.gather(*[_fetch_one(p) for p in results])
+            enriched.append(updated)
         success_count = sum(1 for p in enriched if p.get("full_text"))
         logger.info(f"PDF 下载完成：{success_count}/{len(enriched)} 篇成功提取全文")
 
